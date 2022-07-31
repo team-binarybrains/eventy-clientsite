@@ -1,0 +1,50 @@
+[
+    {
+        "id":"1",
+        "img": "./venues/1.jpg",
+        "star": "5",
+        "venueName": "a",
+        "seats": "2500",
+        "price": "65"
+    },
+    {
+        "id":"2",
+        "img": "./venues/2.jpg",
+        "star": "4",
+        "venueName": "b",
+        "seats": "2500",
+        "price": "52"
+    },
+    {
+        "id":"3",
+        "img": "./venues/3.jpg",
+        "star": "5",
+        "venueName": "c",
+        "seats": "2500",
+        "price": "60"
+    },
+    {
+        "id":"4",
+        "img": "./venues/4.jpg",
+        "star": "3",
+        "venueName": "d",
+        "seats": "2500",
+        "price": "40"
+    },
+    {
+        "id":"5",
+        "img": "./venues/5.jpg",
+        "star": "5",
+        "venueName": "e",
+        "seats": "2500",
+        "price": "55"
+    },
+    {
+        "id":"6",
+        "img": "./venues/6.jpg",
+        "star": "4",
+        "venueName": "f",
+        "seats": "2500",
+        "price": "50"
+    }
+]

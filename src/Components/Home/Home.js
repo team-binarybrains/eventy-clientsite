@@ -1,11 +1,16 @@
 import React from "react";
 import Staffs from "./Staffs/Staffs";
+import Venues from "./Venues/Venues";
+import AboutUs from "./AboutUs/AboutUs";
+import Gallery from "./Gallery/Gallery";
 
 const Home = () => {
   return (
     <div>
-      <h1>this is home</h1>
       <Staffs/>
+      <Venues/>
+      <AboutUs></AboutUs>
+      <Gallery></Gallery>
     </div>
   );
 };
