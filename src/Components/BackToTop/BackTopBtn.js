@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
+import { BiUpArrow } from "react-icons/bi";
+import { IoIosArrowUp } from "react-icons/io";
 // import link
 import { animateScroll as scroll } from "react-scroll";
 // import icon
-
+import "./Backtotop.css";
 const BackTopBtn = () => {
   const [show, setShow] = useState(false);
   useEffect(() => {
@@ -19,9 +21,12 @@ const BackTopBtn = () => {
       show && (
         <button
           onClick={() => scrollToTop()}
-          className="bg-accent hover:bg-accent-hover text-3xl text-black w-12 h-12 rounded-full fixed right-24 bottom-24 cursor-pointer flex justify-center items-center transition-all"
+          className="bounce  bg-gradient-to-r from-rose-600 to-red-600 hover:bg-accent-hover text-3xl  w-12 h-16 rounded-sm  fixed right-24 bottom-24 cursor-pointer flex justify-center items-center transition-all"
         >
-          <AiOutlineArrowUp></AiOutlineArrowUp>
+          <div className="text-white font-bold ">
+            <IoIosArrowUp></IoIosArrowUp>
+            <IoIosArrowUp className="-mt-10"></IoIosArrowUp>
+          </div>
         </button>
       )
     );
