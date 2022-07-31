@@ -1,12 +1,14 @@
 import React from "react";
 import Venues from "./Venues/Venues";
+import AboutUs from "./AboutUs/AboutUs";
+import Gallery from "./Gallery/Gallery";
 
 const Home = () => {
   return (
     <div>
-      <h1>this is home</h1>
-
       <Venues/>
+      <AboutUs></AboutUs>
+      <Gallery></Gallery>
     </div>
   );
 };
