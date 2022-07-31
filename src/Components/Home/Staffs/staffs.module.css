@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.openSans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.bg{
+    background-image: url('../../../staff_bg_image/staffs_bg_1.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;   
+}
+
+.bgLayer{
+    background-image: radial-gradient(rgba(255, 255, 255, 0.568),rgba(255, 255, 255, 0.483));
+}
