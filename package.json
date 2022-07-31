@@ -13,6 +13,7 @@
     "axios": "^0.27.2",
     "daisyui": "^2.20.0",
     "firebase": "^9.9.1",
+    "force": "^0.0.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.0.3",
@@ -22,8 +23,8 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-scroll-to-component": "^1.0.2",
-    "react-tabs": "^5.1.0",
     "react-slick": "^0.29.0",
+    "react-tabs": "^5.1.0",
     "react-toastify": "^9.0.7",
     "slick-carousel": "^1.8.1",
     "web-vitals": "^2.1.4"

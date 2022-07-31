@@ -1,0 +1,10 @@
+.backgroundImage{
+    background-image: url(https://i.ibb.co/6DKmmnX/special-offer-bg.png);
+    background-size:cover;
+    background-image: cover;
+    background-repeat: no-repeat;
+   height: 370px;
+    object-fit: cover;
+    background-image: center;
+
+}
