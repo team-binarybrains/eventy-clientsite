@@ -3,8 +3,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 const ConferenceEvent = () => {
   return (
-    <div className="mt-10 flex flex-col mx-auto justify-center lg:flex-row gap-5 ">
-      <div className="w-[300px] p-[15px] lg:w-[570px] flex flex-col items-center mx-auto   lg:flex lg:flex-row lg:justify-center lg:text-start border-2 border-base-100 shadow-md hover:border-2 hover:border-orange-400 transition-all lg:p-[15px]">
+    <div className=" mt-10 flex flex-col mx-auto justify-center lg:flex-row gap-5 ">
+      <div className="w-[90vw] p-[15px] lg:w-[570px] flex flex-col items-center mx-auto   lg:flex lg:flex-row lg:justify-center lg:text-start border-2 border-base-100 shadow-md hover:border-2 hover:border-orange-400 transition-all lg:p-[15px]">
         <div className="image ">
           <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-[70px] h-[70px] text-center font-extrabold z-10 absolute ">
             {" "}
@@ -44,7 +44,7 @@ const ConferenceEvent = () => {
           </div>
         </div>
       </div>
-      <div className="w-[300px] p-[15px] lg:w-[570px] flex flex-col items-center mx-auto   lg:flex lg:flex-row lg:justify-center lg:text-start border-2 border-base-100 shadow-md hover:border-2 hover:border-orange-400 transition-all lg:p-[15px]">
+      <div className="w-[90vw] p-[15px] lg:w-[570px] flex flex-col items-center mx-auto   lg:flex lg:flex-row lg:justify-center lg:text-start border-2 border-base-100 shadow-md hover:border-2 hover:border-orange-400 transition-all lg:p-[15px]">
         <div className="image ">
           <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-[70px] h-[70px] text-center font-extrabold z-10 absolute ">
             {" "}
