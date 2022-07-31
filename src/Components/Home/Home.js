@@ -9,12 +9,12 @@ import Gallery from "./Gallery/Gallery";
 const Home = () => {
   return (
     <div>
-      <EventListing></EventListing>
-      <Blogs></Blogs>
-      <Staffs/>
-      <Venues/>
       <AboutUs></AboutUs>
+      <Venues />
+      <EventListing></EventListing>
       <Gallery></Gallery>
+      <Staffs />
+      <Blogs></Blogs>
     </div>
   );
 };
