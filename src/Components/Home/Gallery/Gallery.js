@@ -21,7 +21,7 @@ function Gallery() {
                                     src="https://i.ibb.co/rbYNcgz/8.jpg" />
                             </div>
 
-                            <div className="w-full overflow-hidden cursor-pointer">
+                            <div className="w-full h-[360px] overflow-hidden cursor-pointer">
                                 <img alt="gallery" className="block object-cover object-center w-full h-full hover:scale-110 transition-all "
                                     src="https://i.ibb.co/5j9cdzD/5.jpg" />
                             </div>
@@ -30,7 +30,7 @@ function Gallery() {
 
                         <div className="flex flex-wrap w-1/2">
 
-                            <div className="w-full overflow-hidden cursor-pointer">
+                            <div className="w-full h-[360px] overflow-hidden cursor-pointer">
                                 <img alt="gallery" className="block object-cover object-center w-full h-full hover:scale-110 transition-all "
                                     src="https://i.ibb.co/ync0N3k/3.jpg" />
                             </div>
