@@ -1,0 +1,56 @@
+[
+    { 
+        "image": "./speakes-thumbnail.png", 
+        "name": "James", 
+        "profession": "Event Planner",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae illum atque labore! Dignissimos laboriosam non impedit molestiae voluptate nisi sequi. Sit, eveniet. A ex incidunt fugit accusantium quis tenetur?"
+    },
+    {
+        "image": "./speakes-thumbnail.png", 
+        "name": "Robert",
+        "profession": "Wedding Planner",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae illum atque labore! Dignissimos laboriosam non impedit molestiae voluptate nisi sequi. Sit, eveniet. A ex incidunt fugit accusantium quis tenetur?"
+    },
+    { 
+        "image": "./speakes-thumbnail.png", 
+        "name": "Mary", 
+        "profession": "Venue Manager",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae illum atque labore! Dignissimos laboriosam non impedit molestiae voluptate nisi sequi. Sit, eveniet. A ex incidunt fugit accusantium quis tenetur?"
+    },
+    {
+        "image": "./speakes-thumbnail.png", 
+        "name": "William",
+        "profession": "event Managers.",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae illum atque labore! Dignissimos laboriosam non impedit molestiae voluptate nisi sequi. Sit, eveniet. A ex incidunt fugit accusantium quis tenetur?"
+    },
+    { 
+        "image": "./speakes-thumbnail.png", 
+        "name": "Thomas", 
+        "profession": "speaker",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae illum atque labore! Dignissimos laboriosam non impedit molestiae voluptate nisi sequi. Sit, eveniet. A ex incidunt fugit accusantium quis tenetur?"
+    },
+    { 
+        "image": "./speakes-thumbnail.png", 
+        "name": "Liam", 
+        "profession": "Event specialist",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae illum atque labore! Dignissimos laboriosam non impedit molestiae voluptate nisi sequi. Sit, eveniet. A ex incidunt fugit accusantium quis tenetur?"
+    },
+    { 
+        "image": "./speakes-thumbnail.png", 
+        "name": "Niak", 
+        "profession": "Organize specialist",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae illum atque labore! Dignissimos laboriosam non impedit molestiae voluptate nisi sequi. Sit, eveniet. A ex incidunt fugit accusantium quis tenetur?"
+    },
+    { 
+        "image": "./speakes-thumbnail.png", 
+        "name": "Farin", 
+        "profession": "Event specialist",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae illum atque labore! Dignissimos laboriosam non impedit molestiae voluptate nisi sequi. Sit, eveniet. A ex incidunt fugit accusantium quis tenetur?"
+    },
+    { 
+        "image": "./speakes-thumbnail.png", 
+        "name": "Nasrim", 
+        "profession": "Motivational Speaker",
+        "details": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia recusandae illum atque labore! Dignissimos laboriosam non impedit molestiae voluptate nisi sequi. Sit, eveniet. A ex incidunt fugit accusantium quis tenetur?"
+    }
+]
