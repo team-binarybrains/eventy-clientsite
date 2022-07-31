@@ -1,9 +1,12 @@
 import React from "react";
+import AboutUs from "./AboutUs/AboutUs";
+import Gallery from "./Gallery/Gallery";
 
 const Home = () => {
   return (
     <div>
-      <h1>this is home</h1>
+      <AboutUs></AboutUs>
+      <Gallery></Gallery>
     </div>
   );
 };
