@@ -46,3 +46,8 @@
     right: -10px;
     transform: rotate(45deg);
 }
+
+.highlight:hover .child:not(:hover){
+    transition: filter 0.3s ;
+    filter: blur(3.5px);
+}
