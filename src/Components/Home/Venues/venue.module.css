@@ -49,7 +49,7 @@
 
 .highlight:hover .child:not(:hover){
     transition: filter 0.3s ;
-    filter: blur(3.5px);
+    filter: blur(2.5px);
 }
 
 .batch{
