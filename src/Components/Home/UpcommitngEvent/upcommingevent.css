@@ -8,7 +8,12 @@
   width: 400px;
   margin: 0 auto;
 }
-
+@media only screen and (max-width: 600px) {
+  .slide img {
+    width: 100px;
+    margin: 0 auto;
+  }
+}
 .slide {
   transform: scale(0.2);
   transition: transform 300ms;
