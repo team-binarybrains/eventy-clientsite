@@ -6,6 +6,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./Components/Home/Home";
 import NotFound from "./Components/Share/NOtFound/NotFound";
+import BackTopBtn from "./Components/BackToTop/BackTopBtn";
 function App() {
   return (
     <div className="">
@@ -13,6 +14,7 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <BackTopBtn></BackTopBtn>
       <ToastContainer />
     </div>
   );
