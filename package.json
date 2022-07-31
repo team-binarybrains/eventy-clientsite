@@ -22,7 +22,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-scroll-to-component": "^1.0.2",
-    "react-slick": "^0.27.13",
+    "react-slick": "^0.29.0",
     "react-tabs": "^5.1.0",
     "react-toastify": "^9.0.7",
     "slick-carousel": "^1.8.1",

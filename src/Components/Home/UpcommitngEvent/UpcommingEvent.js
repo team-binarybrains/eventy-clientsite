@@ -3,7 +3,8 @@ import Slider from "react-slick";
 import astronaut from "./Image/banner-1.jpg";
 import celebrating from "./Image/banner-2.jpg";
 import education from "./Image/banner-3.jpg";
-
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
 import "./upcommingevent.css";
 
@@ -32,16 +33,16 @@ const UpcommingEvent = () => {
     infinite: true,
     lazyLoad: true,
     speed: 300,
-    slidesToShow: 3,
+    slidesToShow: 2,
     centerMode: true,
-    centerPadding: 0,
+    centerPadding: 270,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     beforeChange: (current, next) => setImageIndex(next),
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <Slider {...settings}>
         {images.map((img, idx) => (
           <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
