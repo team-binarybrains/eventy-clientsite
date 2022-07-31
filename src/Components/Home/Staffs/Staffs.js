@@ -24,11 +24,11 @@ const Staffs = () => {
     return (
         <section className={`${styles.bg}`}>
             <div className={`${styles.bgLayer}`}>
-                <div className={`max-w-[720px] mx-auto pt-20`}>
+                <div className={`max-w-4xl mx-auto pt-20`}>
                     <Slider {...settings} className="sm:h-[500px]">
                         {
                             staffs.map((staff, i) => <div className='' key={i}>
-                                <div className='flex gap-2 sm:flex-row flex-col items-center px-3'>
+                                <div className='flex gap-5 sm:flex-row flex-col items-center px-3'>
                                     <img className='h-[250px] sm:h-[500px] max-w-xs block' src={staff.image} alt="" />
                                     <div className='space-y-4'>
                                         <div className='h-[4px] w-[70px] bg-gradient-to-r from-red-500 to-pink-500 mx-0 -mb-3 rounded-full' />
