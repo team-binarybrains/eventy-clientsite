@@ -44,7 +44,9 @@ const Venues = () => {
             </div>
             <div className={`h-[424px] sm:min-w-[500px] grow basis-[50%] shrink relative ${styles.highlight}`}>
                 <img src={select.img} alt="" className={`w-full h-[200px] sm:h-[424px] object-cover ${styles.child} opacity-80`}/>
-                <div className={`absolute`}></div>
+                <div className={`absolute top-0 left-0 ${styles.batch} flex justify-end pr-6`}>
+                    <p className='font-bold text-lg text-center rotate-90'>{select.star} ⭐ <br /> Hotel</p>
+                </div>
                 <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[48%] right-[41%] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}>Book Now</button>
             </div>
         </div>
