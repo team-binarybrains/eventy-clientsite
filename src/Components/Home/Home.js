@@ -17,6 +17,7 @@ const Home = () => {
       
       <Navbar></Navbar>
       <Banner></Banner>
+      <UpcommingEvent></UpcommingEvent>
       <AboutUs></AboutUs>
       <Venues />
       <EventListing></EventListing>
@@ -25,7 +26,6 @@ const Home = () => {
       <Staffs />
       <PurchaseEvent></PurchaseEvent>
       <Blogs></Blogs>
-      <UpcommingEvent></UpcommingEvent>
     </div>
   );
 };
