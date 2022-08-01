@@ -11,6 +11,7 @@ import BackTopBtn from "./Components/BackToTop/BackTopBtn";
 import Form from "./Components/Authentication/Form";
 import EventListDetails from "./Components/EventListDetails/EventListSearchhead";
 import EventListDetailsMain from "./Components/EventListDetails/EventListDetailsMain";
+import EventDetails from "./Components/EventDetails/EventDetails";
 function App() {
   return (
     <div className="overflow-x-hidden">
@@ -21,6 +22,7 @@ function App() {
           path="/eventlist"
           element={<EventListDetailsMain></EventListDetailsMain>}
         ></Route>
+        <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <BackTopBtn></BackTopBtn>
