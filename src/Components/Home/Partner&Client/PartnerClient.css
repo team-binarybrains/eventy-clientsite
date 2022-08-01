@@ -1,0 +1,22 @@
+.sponser-title {
+    position: absolute;
+    transform: rotate(-90deg);
+    left: -100px;
+    top: 110px;
+    font-size: 30px;
+    color: #dddddd;
+}
+
+.backgroundSet:hover {
+    background-image: linear-gradient(to bottom right, #ffbe30, #ff3e00);
+}
+
+.swiper-pagination-bullet-active {
+    background-color: white !important;
+}
+
+.swiper-pagination-bullet {
+    width: 10px !important;
+    height: 10px !important;
+    background-color: antiquewhite !important;
+}
