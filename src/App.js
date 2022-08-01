@@ -25,11 +25,11 @@ function App() {
         ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-      <BackTopBtn></BackTopBtn>
       <MessengerCustomerChat
         pageId="103025519179972"
         appId="1257335411675093"
       />
+      <BackTopBtn></BackTopBtn>
 
       <ToastContainer />
     </div>
