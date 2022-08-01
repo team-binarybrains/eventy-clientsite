@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Staffs from '../Home/Staffs/Staffs'
 import Advantage from './Advantage'
 import Awade from './Awade'
 
@@ -74,6 +75,7 @@ function AboutUs() {
 
         <Awade></Awade>
         <Advantage></Advantage>
+        <Staffs></Staffs>
 
         </div>
     )
