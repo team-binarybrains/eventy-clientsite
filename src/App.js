@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import logo from "./logo.svg";
 import "./App.css";
-
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes } from "react-router-dom";
@@ -10,9 +9,10 @@ import NotFound from "./Components/Share/NOtFound/NotFound";
 import BackTopBtn from "./Components/BackToTop/BackTopBtn";
 import Form from "./Components/Authentication/Form";
 import MessengerCustomerChat from "react-messenger-customer-chat";
-
 import EventListDetails from "./Components/EventListDetails/EventListSearchhead";
 import EventListDetailsMain from "./Components/EventListDetails/EventListDetailsMain";
+
+
 function App() {
   return (
     <div className="overflow-x-hidden">
