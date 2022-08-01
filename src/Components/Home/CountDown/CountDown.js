@@ -7,10 +7,10 @@ function calculateTimeLeft() {
 
   if (difference > 0) {
     timeLeft = {
-      Days: Math.floor(difference / (10000 * 60 * 60 * 24)),
-      HR: Math.floor((difference / (1000 * 60 * 60)) % 24),
-      MIN: Math.floor((difference / 1000 / 60) % 60),
-      SEC: Math.floor((difference / 1000) % 60),
+      DAYS: Math.floor(difference / (10000 * 60 * 60 * 24)),
+      HOURS: Math.floor((difference / (1000 * 60 * 60)) % 24),
+      MINS: Math.floor((difference / 1000 / 60) % 60),
+      SECO: Math.floor((difference / 1000) % 60),
     };
   }
 
@@ -36,16 +36,19 @@ export default function CountDown() {
     }
 
     return (
-      <span className="text-[#878787] text-xl lg:text-2xl md:text-xl mb-3  font-bold border   mx-1 mt-3 md:inline-block  rounded-3xl  md:px-3  py-4 justify-items-center">
-        {<span className=" text-center">{timeLeft[interval]}</span>}
-        {/* <br /> */}
-        <span className=" pl-1">{interval}</span>{" "}
-      </span>
+      <div className="text-[#777777] mb-3 font-bold border-2 border-[#777777] w-[80px] h-[80px] mx-1 mt-3 md:inline-block  rounded-lg md:px-3 py-2 justify-items-center justify-center">
+
+        <div className="grid justify-center ">
+        <span className="text-center text-4xl">{timeLeft[interval]}</span>
+        <span className="text-sm font-light text-center">{interval}</span>
+        </div>
+
+      </div>
     );
   });
 
   return (
-    <div>
+    <div className="mt-6">
       {CountDownComponents.length ? (                                                                              
         CountDownComponents
       ) : (

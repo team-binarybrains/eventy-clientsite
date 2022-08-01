@@ -6,14 +6,14 @@ import education from "./Image/banner-3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import {AiOutlineClockCircle } from "react-icons/ai";
-import {GoLocation } from "react-icons/go";
+import { AiOutlineClockCircle } from "react-icons/ai";
+import { GoLocation } from "react-icons/go";
 import "./upcommingevent.css";
 import CountDown from "../CountDown/CountDown";
 
 const UpcommingEvent = () => {
   // const images = [astronaut, celebrating, education];
-const [images, setImages] = useState([])
+  const [images, setImages] = useState([])
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
@@ -25,7 +25,7 @@ const [images, setImages] = useState([])
   const PrevArrow = ({ onClick }) => {
     return (
       <div className="arrow prev" onClick={onClick}>
-        <FaArrowLeft className="text-4xl"/>
+        <FaArrowLeft className="text-4xl" />
       </div>
     );
   };
@@ -34,10 +34,10 @@ const [images, setImages] = useState([])
 
   useEffect(() => {
     fetch('upcomingevent.json')
-    .then(res=>res.json())
-    .then(data =>setImages(data))
-  },[])
- 
+      .then(res => res.json())
+      .then(data => setImages(data))
+  }, [])
+
 
   const settings = {
     infinite: true,
@@ -45,7 +45,7 @@ const [images, setImages] = useState([])
     speed: 300,
     slidesToShow: 2,
     centerMode: true,
-    centerPadding: 150,
+    centerPadding: 270,
     responsive: [
       {
         breakpoint: 1024,
@@ -83,43 +83,47 @@ const [images, setImages] = useState([])
         {images.map((img, idx) => (
 
           <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-           <div className=' h-full'>
+            <div className='h-full'>
 
-           <CountDown></CountDown>
+              <div className="flex justify-center">
+                <CountDown></CountDown>
+              </div>
 
-           <div>
-           <img className="h-80" src={img.img} alt={img} />
+              <div>
+                <div className="h-[405px]">
+                  <img className="h-80 w-" src={img.img} alt={img} />
+                </div>
+
+                <div className="w-full flex justify-end mb-14">
+                  <div className='bg-white px-5 w-[300px] sdw mr-14 -mt-[350px]'>
+                    <div className=''>
+                      <h1 className="title-inline py-5">{img.title_line}</h1>
+                      <p className="text-[#ffbe30] text-xl ">{img.Tickets}</p>
+                      <p className="text-[#878787] text-xl py-3">
+                        <span className="bg-[#f7f7f7] p-3 rounded-full">
+                          <AiOutlineClockCircle className='inline-block  text-3xl  text-[#ffbe30] rounded-t-full' />
+                        </span>
+
+                        {img.Start}</p>
+                      <p className="text-[#878787] text-xl py-3">
+                        <span className=" bg-[#f7f7f7] p-3 rounded-full">
+                          <GoLocation className='inline-block text-3xl  text-[#ffbe30] ' />
+                        </span>
+                        {img.location}</p>
+                      <button className="custom-btn px-16 font-bold  py-4 mb-10 rounded-full text-white ">Tickets & details</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <h1 className="text-3xl font-black text-white text-center uppercase px-3 py-3 rounded b absolute top-[140px] left-10 upcomingbg" >
+                {img.date}
+                <br />
+                {img.month}
+              </h1>
 
 
-           <div className='bg-white px-5 -mt-20 w-[300px] shadow-lg   absolute top-[144px] left-[250px] right-0 flex justify-center  '>
-
-<div className=''>
-<h1 className="title-inline z-50  py-5">{img.title_line}</h1>
-<p className="text-[#ffbe30] text-xl ">{img.Tickets}</p>
-<p className="text-[#878787] text-xl py-3">
-  <span className="bg-[#f7f7f7] p-3 rounded-full">
-  <AiOutlineClockCircle className='inline-block  text-3xl  text-[#ffbe30] rounded-t-full'/>
-  </span>
-
-{img.Start}</p>
-<p className="text-[#878787] text-xl py-3">
-<span className=" bg-[#f7f7f7] p-3 rounded-full">
-<GoLocation className='inline-block text-3xl  text-[#ffbe30] '/>
-</span>
-  {img.location}</p>
-<button className="custom-btn px-16 font-bold  py-5 rounded-full text-white ">Tickets & details</button>
-</div>
-</div>
-           </div>
-           
-            <h1 className="text-3xl font-black text-white text-center uppercase px-3 py-3 rounded b absolute top-[140px] left-10 upcomingbg" >
-              {img.date}
-            <br />
-            {img.month}
-            </h1>
-
-           
-           </div>
+            </div>
           </div>
         ))}
       </Slider>
