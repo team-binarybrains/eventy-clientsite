@@ -12,7 +12,6 @@ import MessengerCustomerChat from "react-messenger-customer-chat";
 import EventListDetails from "./Components/EventListDetails/EventListSearchhead";
 import EventListDetailsMain from "./Components/EventListDetails/EventListDetailsMain";
 
-
 function App() {
   return (
     <div className="overflow-x-hidden">
@@ -25,10 +24,13 @@ function App() {
         ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-      <MessengerCustomerChat
-        pageId="103025519179972"
-        appId="1257335411675093"
-      />
+      <div className="mb-28 mr-24">
+        <MessengerCustomerChat
+          pageId="103025519179972"
+          appId="1257335411675093"
+        />
+      </div>
+
       {/* <BackTopBtn></BackTopBtn> */}
 
       <ToastContainer />
