@@ -202,7 +202,7 @@ const Navbar = () => {
               </Link>
               <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
                 <li>
-                  <Link className="uppercase" to={"/event-list"}>
+                  <Link className="uppercase" to={"/eventlist"}>
                     event list
                   </Link>
                 </li>

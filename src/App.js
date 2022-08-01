@@ -9,7 +9,7 @@ import Home from "./Components/Home/Home";
 import NotFound from "./Components/Share/NOtFound/NotFound";
 import BackTopBtn from "./Components/BackToTop/BackTopBtn";
 import Form from "./Components/Authentication/Form";
-import EventListDetails from "./Components/EventListDetails/EventListDetails";
+import EventListDetails from "./Components/EventListDetails/EventListSearchhead";
 function App() {
   return (
     <div className="overflow-x-hidden">
