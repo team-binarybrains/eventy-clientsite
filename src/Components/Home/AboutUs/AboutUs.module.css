@@ -1,0 +1,13 @@
+/* .textColor{
+background: -webkit-linear-gradient(#ff3e00, #ffbe30);
+  -webkit-background-clip: text;
+  color: transparent;
+} */
+
+.textColor{
+    /* background-image: linear-gradient(to right,#ff3e00, #ffbe30);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; */
+    color:  #ffbe30;
+}
