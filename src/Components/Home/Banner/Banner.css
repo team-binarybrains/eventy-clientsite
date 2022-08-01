@@ -15,13 +15,13 @@ body {
 
 .swiper {
   width: 100%;
-  height: 100vh;
+  height: 85vh;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background-color: rgba(8, 8, 8, 0.349) !important;
+  background-color: rgba(8, 8, 8, 0.349) ;
   /*Centerslidetextvertically*/
   display: -webkit-box;
   display: -ms-flexbox;
