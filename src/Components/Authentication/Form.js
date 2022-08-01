@@ -5,8 +5,8 @@ const Form = () => {
     const [activePanel,setActivePanel] = useState('right-panel-active');
 
     return (
-        <div className='h-screen flex justify-center items-center'>
-            <div className={`${style.container} ${activePanel}`} id="container">
+        <div className='h-screen flex justify-center items-center px-3'>
+            <div className={`${style.container} ${activePanel}`}>
                 <div className={`${style.formContainer} ${style.signUpContainer}`}>
                     <form className={style.form} action="#">
                         <h1 className={style.h1}>Create Account</h1>
