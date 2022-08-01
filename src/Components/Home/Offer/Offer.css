@@ -8,3 +8,14 @@
     background-image: center;
 
 }
+@media screen and (max-width: 576px) {
+    .backgroundImage{
+        background-image: url(https://i.ibb.co/6DKmmnX/special-offer-bg.png);
+        background-size:cover;
+        background-image: cover;
+        background-repeat: no-repeat;
+       height: 409px;
+        object-fit: cover;
+        background-image: center;
+        padding: 5px;
+    }}
