@@ -99,7 +99,16 @@ const FeaturedEvent = () => {
                     </div>
 
                     {/* <hr className=" my-7 bg-gray-200" /> */}
-                    <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iste accusantium exercitationem provident nesciunt, temporibus soluta maxime corporis veniam impedit. Corrupti, eos accusamus fugiat minima autem illo ntore quod dignissimos iure ut dolor officia laborum aut? Odio cum error suscipit dignissimos repellat laborum unde labore velit dolorum odit quo dolorem dolor molestiae alias minus, hic quae ipsam voluptates fugiat ut! Nobis, dolore, laboriosam ut deleniti veniam tempora, aliquam quisrum itaque cupiditate praesentium error eveniet suscipit voluptatum minus blanditiis totam.</h1>
+                    <div className="sitebanner flex  justify-center mt-32">
+                       <div className='text-center'>
+                         <h1 className='text-white text-[17px] mt-16'>26 DECEMBER 2018</h1>
+                         <h1 className='text-[30px] text-white mt-10'>AMSTERDAM
+                            <br />
+                            <strong className="text-[#ffbe30]">PHP CONFERENCE</strong>
+                         </h1>
+                         <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10'> Booking Ticket</button>
+                       </div>
+                    </div>
                 </div>
                 
             </div>
