@@ -6,16 +6,16 @@ import { MdCellWifi } from 'react-icons/md'
 
 function Address() {
     return (
-        <div className='py-20'>
-            <div className='bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] w-[500px]'>
+        <div className='py-20 flex justify-around -ml-72'>
+            <div className='bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] w-[550px] px-10 py-10 shadow-xl'>
                 <div>
                     <div className='flex justify-between'>
                         <div>
-                            <p>Eventy Event Management</p>
-                            <p>Apple Store, 112 Prince St New York, <br /> NY 10012, United States 80361, <br /> United States</p>
+                            <p className='text-2xl font-semibold text-white'>Eventy Event Management</p>
+                            <p className='text-gray-600'>Apple Store, 112 Prince St New York, <br /> NY 10012, United States 80361, <br /> United States</p>
                         </div>
 
-                        <div className='flex'>
+                        <div className='flex gap-x-3 '>
                             <div className='bg-[#ffbe30] bg-opacity-40 h-20 w-20 text-white grid justify-center items-center'>
                                 <p className='text-4xl'><GiDirectionSign /></p>
                                 <p className='-mt-6'>Direction</p>
@@ -29,7 +29,7 @@ function Address() {
 
                     </div>
 
-                    <div className='flex justify-between'>
+                    <div className='flex justify-between mt-6'>
                         <div>
                             <p className='flex items-center text-lg font-semibold text-white'>4.5 <span className='flex text-xl'>
                                 <AiTwotoneStar className='' />
@@ -47,6 +47,7 @@ function Address() {
                     </div>
                 </div>
             </div>
+                <div></div>
         </div>
     )
 }
