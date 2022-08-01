@@ -105,6 +105,7 @@ const FeaturedEvent = () => {
             </div>
 
         </div> 
+        
         </div>
     );
 };

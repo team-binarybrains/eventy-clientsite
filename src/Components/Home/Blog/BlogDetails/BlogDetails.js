@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import BlogComments from './BlogComments/BlogComments';
 import './BlogDetails.css'
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
 const BlogDetails = () => {
@@ -21,7 +22,10 @@ const BlogDetails = () => {
                 </div>
              </div>
             </div>
-            <FeaturedEvent></FeaturedEvent>
+           <div>
+           <FeaturedEvent></FeaturedEvent>
+            <BlogComments/>
+           </div>
         </div>
     );
 };
