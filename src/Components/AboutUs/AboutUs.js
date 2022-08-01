@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Advantage from './Advantage'
 import Awade from './Awade'
 
 function AboutUs() {
@@ -72,6 +73,7 @@ function AboutUs() {
 
 
         <Awade></Awade>
+        <Advantage></Advantage>
 
         </div>
     )
