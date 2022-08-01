@@ -1,11 +1,11 @@
 import React from 'react'
 
-function ourServices() {
+function OurServices() {
     return (
         <div>
-            
+
         </div>
     )
 }
 
-export default ourServices
+export default OurServices
