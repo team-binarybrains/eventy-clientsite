@@ -100,14 +100,14 @@ const UpcommingEvent = () => {
                       <h1 className="title-inline py-5">{img.title_line}</h1>
                       <p className="text-[#ffbe30] text-xl ">{img.Tickets}</p>
                       <p className="text-[#878787] text-xl py-3">
-                        <span className="bg-[#f7f7f7] p-3 rounded-full">
-                          <AiOutlineClockCircle className='inline-block  text-3xl  text-[#ffbe30] rounded-t-full' />
+                        <span className="bg-[#f7f7f7] p-1 text-center rounded-full">
+                          <AiOutlineClockCircle className='inline-block text-2xl -mt-1 text-[#ffbe30] rounded-t-full' />
                         </span>
 
                         {img.Start}</p>
                       <p className="text-[#878787] text-xl py-3">
-                        <span className=" bg-[#f7f7f7] p-3 rounded-full">
-                          <GoLocation className='inline-block text-3xl  text-[#ffbe30] ' />
+                        <span className=" bg-[#f7f7f7] p-1 text-center rounded-full">
+                          <GoLocation className='inline-block text-2xl -mt-1 text-[#ffbe30] ' />
                         </span>
                         {img.location}</p>
                       <button className="custom-btn px-16 font-bold  py-4 mb-10 rounded-full text-white ">Tickets & details</button>
