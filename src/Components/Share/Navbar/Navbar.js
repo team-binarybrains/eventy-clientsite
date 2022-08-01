@@ -152,12 +152,12 @@ const Navbar = () => {
               </li>
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl">Eventy</a>
+          <Link to="" class="btn btn-ghost normal-case text-xl">Eventy</Link>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
             <li>
-              <Link to="/home" className="uppercase">
+              <Link to="/" className="uppercase">
                 Home
               </Link>
             </li>
@@ -261,7 +261,7 @@ const Navbar = () => {
           </ul>
         </div>
         <div class="navbar-end">
-          <div className="profile">
+          <div className="profile ">
             {/* FaRegUserCircle */}
             {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
             <Link to={"/authentication"} className="text-3xl">
