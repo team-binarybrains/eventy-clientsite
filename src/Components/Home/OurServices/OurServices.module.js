@@ -24,7 +24,7 @@ export default function OurServices() {
     ]
 
     return (
-        <div className="px-80 pt-5 pb-32 bg-gray-100">
+        <div className={`px-80 pt-7 bg-gray-100`}>
 
             <div className="mt-6 mb-14">
                 <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]">our services</h1>
@@ -40,10 +40,10 @@ export default function OurServices() {
 
                 }}
                 modules={[FreeMode, Pagination]}
-                className='mySwiper'>
+                className={`mySwiper`}>
 
                 {
-                    serviceInfo.map((service, index) => <SwiperSlide key={index} >
+                    serviceInfo.map((service, index) => <SwiperSlide key={index} className={style.hit} >
 
                         <div>
                             <div className="">
@@ -51,7 +51,7 @@ export default function OurServices() {
                             </div>
 
                             <div className="flex justify-center -mt-16">
-                                <div className="bg-white w-72 h-24 grid items-center">
+                                <div className="bg-white w-72 h-28 grid items-center">
                                     <p className="font-bold">{service.name}</p>
                                     <p className="-mt-10 text-sm">
                                         <span className="tracking-wider">Start From</span>
