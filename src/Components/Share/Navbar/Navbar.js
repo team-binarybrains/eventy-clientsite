@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <div>
       {/* navbar bg-transparent fixed z-50 */}
-      <div class={navbarBg ? 'navbar active_nav fixed z-50' : 'navbar bg-transparent fixed z-50'} id='navbar'>
+      <div class={navbarBg ? 'navbar active_nav fixed z-50' : 'navbar bg-transparent fixed'} style={{zIndex:'111111'}} id='navbar'>
         <div class="navbar-start">
           <div class="dropdown">
             <label tabindex="0" class="btn btn-ghost lg:hidden">
