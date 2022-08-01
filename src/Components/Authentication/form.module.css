@@ -65,7 +65,7 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
-	padding: 0 50px;
+	padding: 0 25px;
 	height: 100%;
 	text-align: center;
 }
@@ -87,7 +87,7 @@
 	overflow: hidden;
 	width: 100%;
 	max-width: 900px;
-	min-height: 480px;
+	min-height: 500px;
 }
 
 .formContainer {
@@ -214,3 +214,9 @@
 	height: 40px;
 	width: 40px;
 }
+
+/*==============>(media query for mobile phone)<==============*/
+@media only screen and (max-width: 700px) {
+	
+}
+/*____________________________________________________________*/
