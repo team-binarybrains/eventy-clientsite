@@ -10,3 +10,10 @@
 .backgroundSet:hover {
     background-image: linear-gradient(to bottom right, #ffbe30, #ff3e00);
 }
+
+.myclass{
+    background-image: url("https://jthemes.net/themes/html/harmony-event/assets/images/1.testimonial-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
