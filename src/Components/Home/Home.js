@@ -1,6 +1,7 @@
 import React from "react";
 import Blogs from "./Blog/Blogs";
 import EventListing from "./EventListing/EventListing";
+import UpcommingEvent from "./UpcommitngEvent/UpcommingEvent";
 import Staffs from "./Staffs/Staffs";
 import Venues from "./Venues/Venues";
 import AboutUs from "./AboutUs/AboutUs";
@@ -24,6 +25,7 @@ const Home = () => {
       <Staffs />
       <PurchaseEvent></PurchaseEvent>
       <Blogs></Blogs>
+      <UpcommingEvent></UpcommingEvent>
     </div>
   );
 };
