@@ -52,26 +52,26 @@ const PartnerClient = () => {
                     <Slider {...settings} >
                         {sponserCount.map((sc) => <div className='grid grid-cols-1'>
                             <div className='flex'>
-                                <div className='px-7 2xl:px-20 py-12 2xl:py-16 border backgroundSet'>
+                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
                                     <img width="202px" height="56px" src={sponser} alt="" />
                                 </div>
-                                <div className='px-7 2xl:px-20 py-12 2xl:py-16 border backgroundSet'>
-                                    <img width="202px" height="56px" src={sponser} alt="" />
-                                </div>
-                            </div>
-                            <div className='flex'>
-                                <div className='px-7 2xl:px-20 py-12 2xl:py-16 border backgroundSet'>
-                                    <img width="202px" height="56px" src={sponser} alt="" />
-                                </div>
-                                <div className='px-7 2xl:px-20 py-12 2xl:py-16 border backgroundSet'>
+                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
                                     <img width="202px" height="56px" src={sponser} alt="" />
                                 </div>
                             </div>
                             <div className='flex'>
-                                <div className='px-7 2xl:px-20 py-12 2xl:py-16 border backgroundSet'>
+                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
                                     <img width="202px" height="56px" src={sponser} alt="" />
                                 </div>
-                                <div className='px-7 2xl:px-20 py-12 2xl:py-16 border backgroundSet'>
+                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
+                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                </div>
+                            </div>
+                            <div className='flex'>
+                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
+                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                </div>
+                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
                                     <img width="202px" height="56px" src={sponser} alt="" />
                                 </div>
                             </div>
@@ -80,12 +80,12 @@ const PartnerClient = () => {
 
                 </div>
                 <div className="myclass">
-                    <h4 style={{ letterSpacing: "4px" }} className='mt-10 2xl:mt-20 mb-4 text-lg 2xl:text-xl text-amber-400 text-center'>TESTIMONIAL</h4>
-                    <h1 className='text-center text-5xl 2xl:text-6xl text-white'>Client <span className='font-bold'>Says</span></h1>
+                    <h4 style={{ letterSpacing: "4px" }} className='mt-10 2xl:mt-16 mb-4 text-lg 2xl:text-2xl text-amber-400 text-center'>TESTIMONIAL</h4>
+                    <h1 className='text-center text-5xl 2xl:text-62xl text-white'>Client <span className='font-bold'>Says</span></h1>
                     <Slider {...settings1}>
                         {testimonial.map((t) =>
                             <div className='mt-16'>
-                                <p className='px-10 text-center text-white 2xl:text-xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime error quos modi quas voluptatibus. Necessitatibus, ipsa! Laborum facilis sed porro temporibus.</p>
+                                <p className='px-10 text-center text-white 2xl:text-2xl'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime error quos modi quas voluptatibus. Necessitatibus, ipsa! Laborum facilis sed porro temporibus.</p>
                                 <h2 className='text-center mt-7 text-amber-400 font-semibold text-lg 2xl:text-2xl'>Jenni Harnandas</h2>
                                 <h3 className='text-center mt-2 text-gray-300 mb-10 sm:mb-0 2xl:text-2xl'>Graphic Designer</h3>
                             </div>
