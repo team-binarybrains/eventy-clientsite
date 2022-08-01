@@ -24,7 +24,8 @@ const Home = () => {
       <OurServices></OurServices>
       <Staffs />
       <PurchaseEvent></PurchaseEvent>
-      <Blogs></Blogs>
+      <Blogs>
+      </Blogs>
       <UpcommingEvent></UpcommingEvent>
     </div>
   );
