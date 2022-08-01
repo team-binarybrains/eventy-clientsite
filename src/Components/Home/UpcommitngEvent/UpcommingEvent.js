@@ -83,19 +83,19 @@ const UpcommingEvent = () => {
         {images.map((img, idx) => (
 
           <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-            <div className='h-full'>
+            <div className='h-full w-full'>
 
-              <div className="flex justify-center">
+              <div className="flex justify-center w-[600px]">
                 <CountDown></CountDown>
               </div>
 
               <div>
-                <div className="h-[405px]">
-                  <img className="h-80 w-" src={img.img} alt={img} />
+                <div className="h-[405px] w-[600px]">
+                  <img className="h-80 w-[]" src={img.img} alt={img} />
                 </div>
 
                 <div className="w-full flex justify-end mb-14">
-                  <div className='bg-white px-5 w-[300px] sdw mr-14 -mt-[350px]'>
+                  <div className='bg-white px-5 w-[300px] sdw -mr-16 -mt-[350px]'>
                     <div className=''>
                       <h1 className="title-inline py-5">{img.title_line}</h1>
                       <p className="text-[#ffbe30] text-xl ">{img.Tickets}</p>
