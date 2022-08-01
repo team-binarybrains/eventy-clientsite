@@ -68,7 +68,7 @@ const Navbar = () => {
                 </Link>
                 <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
                   <li>
-                    <Link className="uppercase" to={"/about-us"}>
+                    <Link className="uppercase" to="/about">
                       About us
                     </Link>
                   </li>
@@ -176,7 +176,7 @@ const Navbar = () => {
               </Link>
               <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
                 <li>
-                  <Link className="uppercase" to={"/about-us"}>
+                  <Link className="uppercase" to="/about">
                     About us
                   </Link>
                 </li>

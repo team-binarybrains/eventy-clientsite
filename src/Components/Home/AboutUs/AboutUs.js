@@ -6,6 +6,7 @@ import { FiFilm } from 'react-icons/fi';
 import { FiPhoneCall } from 'react-icons/fi';
 import { HiLightBulb } from 'react-icons/hi';
 import style from './AboutUs.module.css'
+import { Link } from 'react-router-dom';
 
 function AboutUs() {
     return (
@@ -18,7 +19,7 @@ function AboutUs() {
                     <p className='text-lg'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint iste fugiat, repudiandae facere asperiores veniam, hic, deserunt in assumenda dignissimos nostrum excepturi incidunt quibusdam perferendis voluptatem facilis officia earum sed?</p>
 
                     <div className='flex justify-center mt-10 mb-8 lg:mb-0'>
-                        <button className='uppercase bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3 rounded-full text-white font-semibold tracking-widest'>about eventy</button>
+                        <Link to="/about" className='uppercase bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3 rounded-full text-white font-semibold tracking-widest'>about eventy</Link>
                     </div>
                 </div>
             </div>
