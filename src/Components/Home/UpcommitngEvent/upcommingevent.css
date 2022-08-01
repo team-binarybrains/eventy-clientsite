@@ -5,7 +5,7 @@
 }
 
 .slide img {
-  width: 400px;
+  width: 600px;
   margin: 0 auto;
 }
 @media only screen and (max-width: 600px) {
@@ -48,4 +48,7 @@
 .prev {
   left: 0%;
   top: 50%;
+}
+.upcomingbg{
+  background: linear-gradient(to bottom right, #ffbe30 , #ff3e00)!important;
 }
