@@ -1,0 +1,57 @@
+#usefulHover{
+   transition: all .6s ease-in-out;
+   -webkit-transition: all .6s ease-in-out;
+   -moz-transition: all .6s ease-in-out;
+   -ms-transition: all .6s ease-in-out;
+   -o-transition: all .6s ease-in-out;
+}
+#usefulHover:hover{
+   transform: translateX(10px);
+   color: #ffb730;
+   -webkit-transform: translateX(10px);
+   -moz-transform: translateX(10px);
+   -ms-transform: translateX(10px);
+   -o-transform: translateX(10px);
+}
+#usefulHover:hover svg{
+   color: #000;
+   background: #ffb730;
+}
+#image_wrapper{
+   position: relative;
+
+}
+/* #image_wrapper span{
+   position: absolute;
+   top: 0%;
+   left: 0%;
+   transform: translate(0%,0%);
+   -webkit-transform: translate(0%,0%);
+   -moz-transform: translate(0%,0%);
+   -ms-transform: translate(0%,0%);
+   -o-transform: translate(0%,0%);
+   width: 100%;
+   height: auto;
+   background-color: #000;
+   display: block;
+} */
+#image_wrapper svg{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%,-50%);
+   -webkit-transform: translate(-50%,-50%);
+   -moz-transform: translate(-50%,-50%);
+   -ms-transform: translate(-50%,-50%);
+   -o-transform: translate(-50%,-50%);
+   color: red;
+   z-index: 100000;
+   background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 62, 0, 0.9)), to(rgba(255, 190, 48, 0.9)));
+   width: 100%;
+   height: auto;
+   padding: 2.3rem;
+   display:none;
+}
+#image_wrapper:hover svg{
+   display: block;
+}
