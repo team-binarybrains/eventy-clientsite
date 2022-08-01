@@ -1,8 +1,10 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Staffs from '../Home/Staffs/Staffs'
+import Address from './Address'
 import Advantage from './Advantage'
 import Awade from './Awade'
+import Special from './Special'
 
 function AboutUs() {
     return (
@@ -76,6 +78,8 @@ function AboutUs() {
         <Awade></Awade>
         <Advantage></Advantage>
         <Staffs></Staffs>
+        <Special></Special>
+        <Address></Address>
 
         </div>
     )
