@@ -8,6 +8,7 @@ import Gallery from "./Gallery/Gallery";
 import PurchaseEvent from "./PurchaseEvent/PurchaseEvent";
 import Navbar from "../Share/Navbar/Navbar";
 import Banner from "./Banner/Banner";
+import OurServices from "./OurServices/OurServices.module";
 
 const Home = () => {
   return (
@@ -19,6 +20,7 @@ const Home = () => {
       <Venues />
       <EventListing></EventListing>
       <Gallery></Gallery>
+      <OurServices></OurServices>
       <Staffs />
       <PurchaseEvent></PurchaseEvent>
       <Blogs></Blogs>
