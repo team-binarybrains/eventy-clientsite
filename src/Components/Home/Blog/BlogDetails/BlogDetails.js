@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './BlogDetails.css'
+import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
 const BlogDetails = () => {
     return (
         <div>
@@ -20,6 +21,7 @@ const BlogDetails = () => {
                 </div>
              </div>
             </div>
+            <FeaturedEvent></FeaturedEvent>
         </div>
     );
 };
