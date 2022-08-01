@@ -7,14 +7,21 @@ import Venues from "./Venues/Venues";
 import AboutUs from "./AboutUs/AboutUs";
 import Gallery from "./Gallery/Gallery";
 import PurchaseEvent from "./PurchaseEvent/PurchaseEvent";
+import Navbar from "../Share/Navbar/Navbar";
+import Banner from "./Banner/Banner";
+import OurServices from "./OurServices/OurServices.module";
 
 const Home = () => {
   return (
     <div>
+      
+      <Navbar></Navbar>
+      <Banner></Banner>
       <AboutUs></AboutUs>
       <Venues />
       <EventListing></EventListing>
       <Gallery></Gallery>
+      <OurServices></OurServices>
       <Staffs />
       <PurchaseEvent></PurchaseEvent>
       <Blogs></Blogs>
