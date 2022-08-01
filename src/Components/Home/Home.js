@@ -8,7 +8,7 @@ import Gallery from "./Gallery/Gallery";
 import PurchaseEvent from "./PurchaseEvent/PurchaseEvent";
 import Navbar from "../Share/Navbar/Navbar";
 import Banner from "./Banner/Banner";
-import OurServices from "./OurServices/OurServices";
+import OurServices from "./OurServices/OurServices.module";
 
 const Home = () => {
   return (
