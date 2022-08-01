@@ -23,7 +23,7 @@ const EventListing = () => {
         </h1>
       </div>
       <div className="mt-5  lg:flex lg:justify-center  lg:text-center">
-        <Tabs className="  ">
+        <Tabs className=" border-none ">
           <TabList className=" border-none">
             <Tab>
               <h1 className="text-[18px] ">
