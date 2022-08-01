@@ -25,17 +25,14 @@ const EventListSearchhead = () => {
             </div>
             <div>
               <h1 className="text-[14px] text-white">EVENT CATEGORY</h1>
-              {/* <input
-                className="h-[50px] w-[253.141px] rounded-sm mt-3 focus:outline-0 p-5 font-semibold"
-                type="text"
-              /> */}
+
               <select class="select w-full h-[50px] lg:w-[253.141px] rounded-sm mt-3  text-black focus:outline-0">
                 <option>Conference</option>
                 <option>Greedo</option>
               </select>
             </div>
 
-            <button className="mt-4 h-[50px] lg:w-[253.141px] text-white lg:mt-9 rounded-sm  focus:outline-0  font-semibold bg-[#333333]">
+            <button className="mt-4 h-[50px] lg:w-[253.141px] text-white text-[19px] lg:mt-9 rounded-sm  focus:outline-0  font-semibold bg-[#333333]">
               Search Event Now
             </button>
           </div>
