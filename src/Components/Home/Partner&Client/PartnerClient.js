@@ -52,27 +52,27 @@ const PartnerClient = () => {
                     <Slider {...settings} >
                         {sponserCount.map((sc) => <div className='grid grid-cols-1'>
                             <div className='flex'>
-                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
-                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                <div className='px-8 xl:px-14 py-12 xl:py-14 border backgroundSet'>
+                                    <img className='w-52 2xl:w-64 h-14 2xl:h-20' src={sponser} alt="" />
                                 </div>
-                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
-                                    <img width="202px" height="56px" src={sponser} alt="" />
-                                </div>
-                            </div>
-                            <div className='flex'>
-                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
-                                    <img width="202px" height="56px" src={sponser} alt="" />
-                                </div>
-                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
-                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                <div className='px-8 xl:px-14 py-12 xl:py-14 border backgroundSet'>
+                                    <img className='w-52 2xl:w-64 h-14 2xl:h-20' src={sponser} alt="" />
                                 </div>
                             </div>
                             <div className='flex'>
-                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
-                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                <div className='px-8 xl:px-14 py-12 xl:py-14 border backgroundSet'>
+                                    <img className='w-52 2xl:w-64 h-14 2xl:h-20' src={sponser} alt="" />
                                 </div>
-                                <div className='px-7 2xl:px-24 py-12 2xl:py-16 border backgroundSet'>
-                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                <div className='px-8 xl:px-14 py-12 xl:py-14 border backgroundSet'>
+                                    <img className='w-52 2xl:w-64 h-14 2xl:h-20' src={sponser} alt="" />
+                                </div>
+                            </div>
+                            <div className='flex'>
+                                <div className='px-8 xl:px-14 py-12 xl:py-14 border backgroundSet'>
+                                    <img className='w-52 2xl:w-64 h-14 2xl:h-20' src={sponser} alt="" />
+                                </div>
+                                <div className='px-8 xl:px-14 py-12 xl:py-14 border backgroundSet'>
+                                    <img className='w-52 2xl:w-64 h-14 2xl:h-20' src={sponser} alt="" />
                                 </div>
                             </div>
                         </div>)}
