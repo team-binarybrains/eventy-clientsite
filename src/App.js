@@ -14,6 +14,7 @@ import MessengerCustomerChat from "react-messenger-customer-chat";
 import EventListDetails from "./Components/EventListDetails/EventListSearchhead";
 import EventListDetailsMain from "./Components/EventListDetails/EventListDetailsMain";
 import Footer from "./Components/Share/Footer/Footer";
+import EventDetails from "./Components/EventDetails/EventDetails";
 function App() {
   return (
     <div className="overflow-x-hidden">
@@ -24,6 +25,7 @@ function App() {
           path="/eventlist"
           element={<EventListDetailsMain></EventListDetailsMain>}
         ></Route>
+        <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
