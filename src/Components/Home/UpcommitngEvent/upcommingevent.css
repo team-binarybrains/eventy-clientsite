@@ -1,12 +1,13 @@
 .app {
-  width: 70%;
-  margin: 10rem auto;
+  width: 80%;
+  margin: 10px auto;
   height: 570px;
 }
 
 .slide img {
   width: 600px;
   margin: 0 auto;
+  
 }
 @media only screen and (max-width: 600px) {
   .slide img {
@@ -52,3 +53,19 @@
 .upcomingbg{
   background: linear-gradient(to bottom right, #ffbe30 , #ff3e00)!important;
 }
+.title-inline{
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+
+.custom-btn {
+  background: linear-gradient(to bottom right, #ff3e00 , #ffbe30)!important;
+  transition: 1.1s;
+}
+.custom-btn:hover {
+  background: linear-gradient(to right bottom , #ffbe30 ,  #ff3e00)!important;
+}
+
+
