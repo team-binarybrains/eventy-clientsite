@@ -10,7 +10,7 @@ import "swiper/css/pagination";
 import style from "./OurServices.module.css";
 
 // import required modules
-import { FreeMode, Pagination } from "swiper";
+import { Autoplay, FreeMode, Pagination } from "swiper";
 
 export default function OurServices() {
 
@@ -35,11 +35,10 @@ export default function OurServices() {
                 slidesPerView={3}
                 spaceBetween={30}
                 freeMode={true}
-                pagination={{
-                    clickable: true,
-
-                }}
-                modules={[FreeMode, Pagination]}
+                // pagination={{
+                //     clickable: true,
+                // }}
+                modules={[Autoplay, FreeMode, Pagination]}
                 className={`mySwiper`}>
 
                 {
@@ -47,7 +46,7 @@ export default function OurServices() {
 
                         <div>
                             <div className="">
-                                <img src={service.image} alt="" />
+                                <img src={service.image} alt="" className="" />
                             </div>
 
                             <div className="flex justify-center -mt-16">

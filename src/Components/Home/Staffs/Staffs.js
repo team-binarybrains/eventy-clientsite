@@ -22,7 +22,7 @@ const Staffs = () => {
     };
 
     return (
-        <section className={`${styles.bg} `}>
+        <section className={`${styles.bg} -mt-20`}>
             <div className={`${styles.bgLayer}`}>
                 <div className={`max-w-4xl mx-auto pt-20`}>
                     <Slider {...settings} className="sm:h-[500px]">
