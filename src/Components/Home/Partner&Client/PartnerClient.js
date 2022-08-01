@@ -1,19 +1,40 @@
 import React from 'react';
-import sponser from "../../../assets/Client/image1.png";
+import sponser from "../../../asset/Client/image1.png";
 import "./PartnerClient.css";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, Navigation, Pagination } from "swiper";
+// import { Swiper, SwiperSlide } from "swiper/react";
+// import { Autoplay, Navigation, Pagination } from "swiper";
 
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
+// import "swiper/css";
+// import "swiper/css/pagination";
+// import "swiper/css/navigation";
+import Slider from "react-slick";
 
 const PartnerClient = () => {
 
-    const sponserCount = [0, 1, 2, 3, 4, 5];
+    const sponserCount = [0, 1, 2];
     const testimonial = [0, 1, 2]
+    const settings = {
+        dots: true,
+        arrows:false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 5000,
+        autoplaySpeed: 5000,
+    };
+
+    const settings1 = {
+        dots: true,
+        arrows:false,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: true,
+        speed: 2000,
+        autoplaySpeed: 2000,
+    };
 
     return (
         <div className='mb-20'>
@@ -26,49 +47,50 @@ const PartnerClient = () => {
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-10 mx-3 sm:mx-20'>
                 <div className='relative pl-12'>
-                    <span className='sponser-title'>HARMONI <span className='font-semibold ml-1'>EVENTY</span></span>
-                    <Swiper
-                        spaceBetween={30}
-                        centeredSlides={true}
-                        autoplay={{
-                            delay: 4000,
-                            disableOnInteraction: false,
-                        }}
-                        navigation={true}
-                        modules={[Navigation,Autoplay]}
-                    >
-                        {sponserCount.map((spc) => <SwiperSlide>
-                            <div className='grid grid-cols-1 sm:grid-cols-2'>
-                                {sponserCount.map((sc, i) => <div className='px-7 py-12 border backgroundSet'>
+                    <span className='sponser-title'>HARMONI <span className='font-semibold ml-1 text-amber-400'>EVENTY</span></span>
+
+                    <Slider {...settings} >
+                        {sponserCount.map((sc) => <div className='grid grid-cols-1'>
+                            <div className='flex'>
+                                <div className='px-7 py-12 border backgroundSet'>
                                     <img width="202px" height="56px" src={sponser} alt="" />
-                                </div>)}
+                                </div>
+                                <div className='px-7 py-12 border backgroundSet'>
+                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                </div>
                             </div>
-                        </SwiperSlide>)}
-                    </Swiper>
+                            <div className='flex'>
+                                <div className='px-7 py-12 border backgroundSet'>
+                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                </div>
+                                <div className='px-7 py-12 border backgroundSet'>
+                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                </div>
+                            </div>
+                            <div className='flex'>
+                                <div className='px-7 py-12 border backgroundSet'>
+                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                </div>
+                                <div className='px-7 py-12 border backgroundSet'>
+                                    <img width="202px" height="56px" src={sponser} alt="" />
+                                </div>
+                            </div>
+                        </div>)}
+                    </Slider>
+
                 </div>
-                <div className="bg-[url('/src/assets/Client/1.testimonial-bg.jpg')] bg-repeat-round">
+                <div className="bg-[url('/src/asset/Client/1.testimonial-bg.jpg')] bg-repeat-round">
                     <h4 style={{ letterSpacing: "4px" }} className='mt-10 mb-4 text-lg text-amber-400 text-center'>TESTIMONIAL</h4>
                     <h1 className='text-center text-5xl text-white'>Client <span className='font-bold'>Says</span></h1>
-                    <Swiper
-                        spaceBetween={30}
-                        centeredSlides={true}
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false,
-                        }}
-                        modules={[Navigation, Pagination, Autoplay]}
-                        pagination={{ clickable: true }}
-                    >
-                        {testimonial.map((t) => <SwiperSlide>
+                    <Slider {...settings1}>
+                        {testimonial.map((t) =>
                             <div className='mt-16'>
                                 <p className='px-10 text-center text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime error quos modi quas voluptatibus. Necessitatibus, ipsa! Laborum facilis sed porro temporibus.</p>
                                 <h2 className='text-center mt-7 text-amber-400 font-semibold text-lg'>Jenni Harnandas</h2>
-                                <h3 className='text-center mt-2 text-gray-300'>Graphic Designer</h3>
+                                <h3 className='text-center mt-2 text-gray-300 mb-10 sm:mb-0'>Graphic Designer</h3>
                             </div>
-                        </SwiperSlide>)}
-                        <div className='w-full h-14 none'>
-                        </div>
-                    </Swiper>
+                        )}
+                    </Slider>
                 </div>
             </div>
         </div>
