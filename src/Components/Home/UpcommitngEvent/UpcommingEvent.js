@@ -80,7 +80,7 @@ const UpcommingEvent = () => {
   return (
     <div>
 
-      <div className="mt-20 mb-14">
+      <div className="mt-24 mb-14">
         <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]">UPCOMMING EVENTS</h1>
         <p className="text-5xl tracking-wider text-center">Latest <span className="font-bold">Awesome Events</span></p>
       </div>
