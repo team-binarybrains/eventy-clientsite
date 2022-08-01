@@ -8,6 +8,7 @@ import Gallery from "./Gallery/Gallery";
 import PurchaseEvent from "./PurchaseEvent/PurchaseEvent";
 import Navbar from "../Share/Navbar/Navbar";
 import Banner from "./Banner/Banner";
+import Footer from "../Share/Footer/Footer";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <Staffs />
       <PurchaseEvent></PurchaseEvent>
       <Blogs></Blogs>
+      <Footer></Footer>
     </div>
   );
 };
