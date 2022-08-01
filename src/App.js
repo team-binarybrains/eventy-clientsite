@@ -24,14 +24,11 @@ function App() {
         ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
-      <div className="mb-28 mr-24">
-        <MessengerCustomerChat
-          pageId="103025519179972"
-          appId="1257335411675093"
-        />
-      </div>
-
-      {/* <BackTopBtn></BackTopBtn> */}
+      <BackTopBtn></BackTopBtn>
+      <MessengerCustomerChat
+        pageId="103025519179972"
+        appId="1257335411675093"
+      />
 
       <ToastContainer />
     </div>

@@ -21,7 +21,7 @@ const BackTopBtn = () => {
       show && (
         <button
           onClick={() => scrollToTop()}
-          className="bounce  bg-gradient-to-r from-rose-600 to-red-600 hover:bg-accent-hover text-3xl  w-12 h-16 rounded-sm  fixed right-24 bottom-24 cursor-pointer flex justify-center items-center transition-all"
+          className="bounce  bg-gradient-to-r from-rose-600 to-red-600 hover:bg-accent-hover text-3xl  w-12 h-16 rounded-sm  fixed right-6 bottom-28 cursor-pointer flex justify-center items-center transition-all"
         >
           <div className="text-white font-bold ">
             <IoIosArrowUp></IoIosArrowUp>
