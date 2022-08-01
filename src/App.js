@@ -29,7 +29,7 @@ function App() {
         pageId="103025519179972"
         appId="1257335411675093"
       />
-      <BackTopBtn></BackTopBtn>
+      {/* <BackTopBtn></BackTopBtn> */}
 
       <ToastContainer />
     </div>
