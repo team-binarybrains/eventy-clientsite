@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Awade from './Awade'
 
 function AboutUs() {
     return (
@@ -68,6 +69,9 @@ function AboutUs() {
                 </div>
 
             </div>
+
+
+        <Awade></Awade>
 
         </div>
     )
