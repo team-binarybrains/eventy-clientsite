@@ -62,11 +62,11 @@ const Navbar = () => {
               <li><Link to='/contact'>CONTACT</Link></li>
             </ul>
           </div>
-          <a class="btn btn-ghost normal-case text-xl">Eventy</a>
+          <Link to="" class="btn btn-ghost normal-case text-xl">Eventy</Link>
         </div>
         <div class="navbar-center hidden lg:flex">
           <ul class="menu menu-horizontal p-0">
-            <li><Link to='/home' className='uppercase'>Home</Link></li>
+            <li><Link to='/' className='uppercase'>Home</Link></li>
             <li tabindex="0">
               <Link to='' className='uppercase'>
                 About
@@ -105,10 +105,10 @@ const Navbar = () => {
           </ul>
         </div>
         <div class="navbar-end">
-          <div className="profile">
+          <div className="profile ">
             {/* FaRegUserCircle */}
             {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
-            <Link to={'/authentication'} className='text-3xl'><BiUser></BiUser></Link>
+            <Link to={'/authentication'} className='text-3xl border border-slate-300 hover:border-[#FFBE30] hover:text-[#FFBE30] text-center rounded-full p-1 w-10 h-10 block'><BiUser></BiUser></Link>
           </div>
         </div>
       </div>
