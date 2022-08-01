@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import './FeaturedEvent.css'
 import { BsBookmarkFill } from "react-icons/bs";
+import DateAndCategory from './DateAndCategory/DateAndCategory';
 const FeaturedEvent = () => {
     const [show, setShow] = useState(false);
     const [show2, setShow2] = useState(false);
@@ -21,11 +22,15 @@ const FeaturedEvent = () => {
                     <h1 className="resent-post-section-title">Recent <span className="font-bold"> Post</span></h1>
                    
                 </div>
+
             </div>
             <div className=" flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
                 <div className=" md:w-7/12 lg:w-8/12 w-full ">
                     <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:block hidden" />
                     <img src="https://i.ibb.co/gZMfQJq/pexels-ron-lach-8128069-1-1.png" alt="Img of Glass bottle" className="w-full md:hidden block " />
+
+                    <DateAndCategory></DateAndCategory>
+
                 </div>
                 <div className=" md:w-5/12 lg:w-4/12 w-full md:mt-0 sm:mt-14 mt-10">
                     {/* <!-- Shipping Section --> */}
@@ -94,8 +99,11 @@ const FeaturedEvent = () => {
                     </div>
 
                     {/* <hr className=" my-7 bg-gray-200" /> */}
+                    <h1> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iste accusantium exercitationem provident nesciunt, temporibus soluta maxime corporis veniam impedit. Corrupti, eos accusamus fugiat minima autem illo ntore quod dignissimos iure ut dolor officia laborum aut? Odio cum error suscipit dignissimos repellat laborum unde labore velit dolorum odit quo dolorem dolor molestiae alias minus, hic quae ipsam voluptates fugiat ut! Nobis, dolore, laboriosam ut deleniti veniam tempora, aliquam quisrum itaque cupiditate praesentium error eveniet suscipit voluptatum minus blanditiis totam.</h1>
                 </div>
+                
             </div>
+
         </div> 
         </div>
     );
