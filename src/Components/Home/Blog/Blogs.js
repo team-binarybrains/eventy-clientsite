@@ -10,11 +10,18 @@ import {
   faClock,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
+import { BsPlusLg } from "react-icons/bs";
+import { useNavigate } from "react-router-dom";
 const Blogs = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
   const [show4, setShow4] = useState(false);
+  const navigate = useNavigate();
+  const handleblogs = () => {
+    navigate("/blogs-details");
+  };
+
   return (
     <div className="flex flex-col   lg:flex-row lg:ml-56  mt-10 mb-20">
       <div className="  2xl:mx-auto  px-4 lg:px-20  md:px-6 ">
@@ -269,12 +276,18 @@ const Blogs = () => {
         </div>
         <div className="lg:mt-16  mt-5">
           <div className="p-4  lg:p-5 lg:max-w-2xl shadow-md gap-4 flex flex-col items-center  lg:flex-row ">
-            <div className="blog-image   lg:w-[300px]">
+            <div className="blog-image   lg:w-[300px] relative hvr">
               <img
                 className="lg:h-[200px] lg:w-[300px] object-cover"
                 src="https://i.ibb.co/tPtrjMm/event-1.jpg"
                 alt=""
               />
+              <div
+                onClick={handleblogs}
+                className="absolute top-0 left-0 right-0 bottom-0 bg-transparent cld cursor-pointer"
+              >
+                <BsPlusLg className="text-6xl text-white absolute top-[calc(50%-30px)] left-[calc(50%-30px)] pls " />
+              </div>
             </div>
             <div className=" blog-details w-full ">
               <h1 className="text-center  text-[20px] font-bold lg:text-start lg:mx-0 lg:w-[310px]">

@@ -81,10 +81,10 @@ const UpcommingEvent = () => {
       </div>
 
       <div className="app">
-        <Slider {...upComingSettings} className='py-10 px-5 overflow-visible'>
+        <Slider {...upComingSettings} className='px-5 overflow-visible'>
           {images.map((img, idx) => (
 
-            <div className={`slide ${idx === imageIndex ? "activeSlide" : ""}`}>
+            <div className={`slide ${idx === imageIndex ? "activeSlide mt-10" : "mt-16"}`}>
               
               {
                 idx === imageIndex ?

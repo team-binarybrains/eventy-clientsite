@@ -8,14 +8,13 @@
 
 .hvr:hover .cld{
   background-image: linear-gradient(to bottom right, #ffbe30, #ff3e00);
-  opacity: 0.75;
-  transition: background-image 1.5s;
+  animation: hover 0.5s steps(100) forwards;
   /* color: white; */
 }
 
 .hvr:hover .cld2{
   color: #ffbe30;
-  transition: color 1.5s ;
+  transition: color 0.5s ;
 }
 
 .myArrow {
@@ -52,5 +51,16 @@
 
 .hvr:hover .pls{
 display: block;
-transition: display 1.5s;
+}
+
+@keyframes hover {
+  0%{
+    opacity: 0;
+  }
+  50%{
+    opacity: 0.38;
+  }
+  100%{
+    opacity: 0.75;
+  }
 }

@@ -11,8 +11,7 @@ function AboutUs() {
     return (
         <div>
 
-            <div className=" p-3 bg-image lg:h-[340px] h-[200px]"
-                style={{ backgroundImage: "url('https://i.ibb.co/LQr53RB/1-testimonial-bg-edited.jpg')", backgroundSize: 'cover' }} >
+            <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
 
                 <div className='flex justify-center items-center h-full lg:-mt-8'>
                     <div className='text-white'>
