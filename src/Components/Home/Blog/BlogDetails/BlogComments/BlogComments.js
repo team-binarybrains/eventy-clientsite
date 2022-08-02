@@ -5,8 +5,8 @@ import {FaShareSquare,FaReplyAll } from "react-icons/fa";
 import WriteAComment from '../../WriteAComment/WriteAComment';
 const BlogComments = () => {
     return (
-        <div className="md:pl-20">
-            <h1 className="text-7xl ">Blog <strong>Comments</strong></h1>
+        <div className="md:pl-20 p-5 ">
+            <h1 className="text-[36px] ">Blog <strong>Comments</strong></h1>
             <div className=" flex gap-6 mt-16 ">
             <img className="h-[82px] rounded-full" src="https://i.ibb.co/T44K8gh/admin.png" alt="" />
 

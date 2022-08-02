@@ -15,9 +15,9 @@ const BlogDetails = () => {
                 <strong className='text-[#ffbe30]'>BLOG DETAILS</strong>
                 </h1>
                 <div className='mt-3'>
-                    <Link to='/' className='text-2xl font-bold hover:text-[#ffbe30] text-white border-r-4 pr-3'>Home</Link>
-                    <Link to='/' className='text-2xl font-bold hover:text-[#ffbe30] text-white border-r-4 pl-3 pr-3'>Blogs</Link>
-                    <p className='text-3xl font-bold text-white inline-block  pl-2'>Blog Details</p>
+                    <Link to='/' className='text-[16px] font-bold hover:text-[#ffbe30] text-white border-r-4 pr-3'>Home</Link>
+                    <Link to='/' className='text-[16px] font-bold hover:text-[#ffbe30] text-white border-r-4 pl-3 pr-3'>Blogs</Link>
+                    <p className='text-[16px] font-bold text-white inline-block  pl-2'>Blog Details</p>
                 </div>
                 </div>
              </div>

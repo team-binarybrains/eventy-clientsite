@@ -27,7 +27,7 @@ const FeaturedEvent = () => {
             <div className=" flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
                 <div className=" md:w-7/12 lg:w-8/12 w-full ">
                     <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:block hidden" />
-                    <img src="https://i.ibb.co/gZMfQJq/pexels-ron-lach-8128069-1-1.png" alt="Img of Glass bottle" className="w-full md:hidden block " />
+                    <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:hidden block " />
 
                     <DateAndCategory></DateAndCategory>
 
@@ -35,8 +35,8 @@ const FeaturedEvent = () => {
                 <div className=" md:w-5/12 lg:w-4/12 w-full md:mt-0 sm:mt-14 mt-10">
                     {/* <!-- Shipping Section --> */}
                     <div>
-                        <div className="py-7 px-3 underline-none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md">
-                            <h3 className=" font-extrabold underline text-2xl leading-5 hover:text-[#ffbe30]  ">How to join this event?</h3>
+                        <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md">
+                            <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30]  ">How to join this event?</h3>
                             <button aria-label="too" className="cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onClick={() => setShow(!show)}>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path className={show ? "hidden" : "block"} d="M10 4.1665V15.8332" stroke="#1F2937" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -52,8 +52,8 @@ const FeaturedEvent = () => {
                     {/* <!-- Returns Section --> */}
 
                     <div>
-                        <div className="py-7 px-3 underline-none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md ">
-                            <h3 className=" font-extrabold underline text-2xl leading-5 hover:text-[#ffbe30] ">How to make new event?</h3>
+                        <div className="py-7 px-3  flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md ">
+                            <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30] ">How to make new event?</h3>
                             <button aria-label="too" className=" cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onClick={() => setShow2(!show2)}>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path className={show2 ? "hidden" : "block"} d="M10 4.1665V15.8332" stroke="#1F2937" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -69,8 +69,8 @@ const FeaturedEvent = () => {
                     {/* <!-- Exchange Section --> */}
 
                     <div>
-                        <div className="py-7 px-3 underline-none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md">
-                            <h3 className=" font-extrabold underline text-2xl leading-5 hover:text-[#ffbe30] ">Exchange</h3>
+                        <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md">
+                            <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30] ">Exchange</h3>
                             <button aria-label="too" className=" cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onClick={() => setShow3(!show3)}>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path className={show3 ? "hidden" : "block"} d="M10 4.1665V15.8332" stroke="#1F2937" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -79,15 +79,15 @@ const FeaturedEvent = () => {
                             </button>
                         </div>
                         <p className={"font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " + (show3 ? "block" : "hidden")}>We are covering every major country worldwide. The shipment leaves from US as it is our headquarter. Some extra information you probably need to add here so that the customer is clear of their wanted expectations.</p>
-                    </div>
+                    </div>        
 
                     {/* <hr className=" my-7 bg-gray-200" /> */}
 
                     {/* Tracking Section */}
 
                     <div>
-                        <div className="py-7 px-3 underline-none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md">
-                            <h3 className=" font-extrabold underline text-2xl leading-5 hover:text-[#ffbe30] ">Tracking</h3>
+                        <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md">
+                            <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30] ">Tracking</h3>
                             <button aria-label="too" className=" cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800" onClick={() => setShow4(!show4)}>
                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path className={show4 ? "hidden" : "block"} d="M10 4.1665V15.8332" stroke="#1F2937" strokeWidth="1.25" strokeLinecap="round" strokeLinejoin="round" />
@@ -99,7 +99,7 @@ const FeaturedEvent = () => {
                     </div>
 
                     {/* <hr className=" my-7 bg-gray-200" /> */}
-                    <div className="sitebanner flex  justify-center mt-32">
+                    <div className="sitebanner flex  justify-center mt-32 ">
                        <div className='text-center'>
                          <h1 className='text-white text-[17px] mt-16'>26 DECEMBER 2018</h1>
                          <h1 className='text-[30px] text-white mt-10'>AMSTERDAM
