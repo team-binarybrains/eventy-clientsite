@@ -31,7 +31,7 @@ const LocationFaq = () => {
                     <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> Istanbul, IS 240012</p>
                     <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> Thursday, December 26, 2018</p>
                     <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> From <b className='font-semibold'>15.00 PM</b> to <b className='font-semibold'>20.00 PM</b> (EST)</p>
-                    <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold`}>add to my calendar</button>
+                    <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold uppercase`}>add to my calendar</button>
                 </article>
             </div>
 
@@ -49,7 +49,7 @@ const LocationFaq = () => {
                     <button className='text-gray-900/90 text-sm font-bold openSans'><FaFacebookF className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2'/> facebook.com/eventy</button>
                     <button className='text-gray-900/90 text-sm font-bold openSans'><BsTwitter className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2'/> twitter.com@eventy</button>
                     <button className='text-gray-900/90 text-sm font-bold openSans'><HiLink className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2'/> https://eventy-bb.web.app</button>
-                    <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold`}>contact with us</button>
+                    <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold uppercase`}>contact with us</button>
                 </article>
             </div>
 
