@@ -16,10 +16,12 @@ import Footer from "./Components/Share/Footer/Footer";
 import EventDetails from "./Components/EventDetails/EventDetails";
 import EventBooking from "./Components/EventBooking/EventBooking";
 import Gallery from "./Components/Gallery/Gallery";
+import ScrollToTop from "./Components/Share/ScrolltoTop/ScrollToTop";
 
 function App() {
   return (
     <div className="overflow-x-hidden">
+      <ScrollToTop></ScrollToTop>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
@@ -29,9 +31,18 @@ function App() {
         ></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
-        <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
-        <Route path="/event-booking" element={<EventBooking></EventBooking>}></Route>
-        <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
+        <Route
+          path="/eventlist"
+          element={<EventListDetailsMain></EventListDetailsMain>}
+        ></Route>
+        <Route
+          path="/event-booking"
+          element={<EventBooking></EventBooking>}
+        ></Route>
+        <Route
+          path="/event-details"
+          element={<EventDetails></EventDetails>}
+        ></Route>
         <Route
           path="/event-details"
           element={<EventDetails></EventDetails>}
