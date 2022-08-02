@@ -6,21 +6,21 @@ import { MdCellWifi } from 'react-icons/md'
 
 function Address() {
     return (
-        <div className='py-20 flex justify-around -ml-72'>
-            <div className='bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] w-[550px] px-10 py-10 shadow-xl'>
+        <div className='lg:py-20 lg:flex justify-around lg:-ml-72'>
+            <div className='bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] lg:w-[550px] px-10 py-10 shadow-xl'>
                 <div>
-                    <div className='flex justify-between'>
+                    <div className='lg:flex justify-between'>
                         <div>
                             <p className='text-2xl font-semibold text-white'>Eventy Event Management</p>
                             <p className='text-gray-600'>Apple Store, 112 Prince St New York, <br /> NY 10012, United States 80361, <br /> United States</p>
                         </div>
 
-                        <div className='flex gap-x-3 '>
+                        <div className='flex justify-end gap-x-3'>
                             <div className='bg-[#ffbe30] bg-opacity-40 h-20 w-20 text-white grid justify-center items-center'>
                                 <p className='text-4xl'><GiDirectionSign /></p>
                                 <p className='-mt-6'>Direction</p>
                             </div>
-
+           
                             <div className='bg-[#ffbe30] bg-opacity-40 h-20 w-20 text-white grid justify-center items-center'>
                                 <p className='text-4xl'><MdCellWifi /></p>
                                 <p className='-mt-6'>save</p>

@@ -14,26 +14,26 @@ function Advantage() {
 
             <div className='pt-20'>
 
-                <div className='flex justify-around'>
+                <div className='flex lg:justify-around justify-center'>
                     <div className='border-t-4 w-[60px] lg:-ml-56  border-[#ffbe30] '><p className=''></p></div>
                     <div></div>
                 </div>
 
-                <div className='lg:-mt-12 flex justify-around'>
-                    <div className='mt-12 -ml-28'>
-                        <h1 className=' uppercase my-5 text-gray-400 text-[20px] tracking-[10px]'>WHY CHOOSE US</h1>
-                        <h1 className='text-4xl uppercase title_line'><span className='mr-4'>Eventy</span> <span className='font-bold -ml-2'>Advantages</span></h1>
+                <div className='lg:-mt-12 lg:flex lg:justify-around'>
+                    <div className='mt-12 lg:-ml-28 text-center lg:text-start'>
+                        <h1 className=' uppercase my-5 text-gray-400 lg:text-[20px] text-[15px] tracking-[10px]'>WHY CHOOSE US</h1>
+                        <h1 className='lg:text-4xl text-2xl  uppercase title_line'><span className='mr-4'>Eventy</span> <span className='font-bold -ml-2'>Advantages</span></h1>
                     </div>
 
-                    <div className='flex items-end -mr-28'>
+                    <div className='flex items-end justify-center lg:-mr-28 '>
                         <div className=''>
-                            <button className='uppercase bg-gradient-to-r from-[#ffbe30] to-amber-600 px-6 py-3 text-white font-semibold tracking-wider rounded-full -ml-40'>meet my team</button>
+                            <button className='uppercase bg-gradient-to-r from-[#ffbe30] to-amber-600 px-6 py-3 text-white font-semibold tracking-wider rounded-full lg:-ml-40 mt-10 lg:mt-0 mb-5 lg:mb-0'>meet my team</button>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <div className='grid justify-center py-20 lg:-mt-14'>
+            <div className='grid justify-center pb-10 lg:py-20 lg:-mt-14'>
                 <div className='lg:flex'>
                     <div className='h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00]'>
                         <p className={`flex justify-center`}><GiShakingHands className={`text-5xl text-[#ffbe30] hover:text-white `} /></p>
