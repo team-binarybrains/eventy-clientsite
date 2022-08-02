@@ -1,0 +1,21 @@
+.orderTableHeading{
+    color: #fbbf24;
+    font-weight: 700;
+    font-size: inherit;
+}
+
+.inputFontSize{
+    font-size: 17px;
+}
+
+.inputDegine{
+    width:100%;
+    border-radius: 0px;
+    border:1px solid rgb(226 232 240);
+    font-size: 17px;
+}
+
+.inputDegine:focus{
+    outline: none;
+    border:1px solid rgb(251 191 36);
+}

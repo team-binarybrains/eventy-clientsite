@@ -14,6 +14,7 @@ import BlogDetails from "./Components/Home/Blog/BlogDetails/BlogDetails";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Footer from "./Components/Share/Footer/Footer";
 import EventDetails from "./Components/EventDetails/EventDetails";
+import EventBooking from "./Components/EventBooking/EventBooking";
 import Gallery from "./Components/Gallery/Gallery";
 
 function App() {
@@ -28,16 +29,24 @@ function App() {
         ></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
-        <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
+        <Route
+          path="/eventlist"
+          element={<EventListDetailsMain></EventListDetailsMain>}
+        ></Route>
+        <Route path="/event-booking" element={<EventBooking></EventBooking>}></Route>
         <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
+        <Route
+          path="/event-details"
+          element={<EventDetails></EventDetails>}
+        ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
       <BackTopBtn></BackTopBtn>
       <MessengerCustomerChat
         pageId="103025519179972"
         appId="1257335411675093"
       />
-    
 
       <ToastContainer />
     </div>

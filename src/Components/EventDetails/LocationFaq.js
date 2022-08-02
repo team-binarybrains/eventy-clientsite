@@ -9,15 +9,15 @@ import { HiLink } from 'react-icons/hi';
 
 const LocationFaq = () => {
     return (
-        <section className='flex flex-wrap justify-center items-center px-3'>
+        <section className='flex flex-wrap items-center px-3'>
 
             {/* event location map */}
-            <div className={`py-5 px-2 border-2 h-[26rem] min-w-[12rem] w-full max-w-[19rem] grow`}>
+            <div className={`py-5 px-2 border-2 h-[26rem] min-w-[12rem] w-full max-w-[22rem] grow`}>
                 <h2 className='text-3xl roboto'>Event <span className='font-bold'>Location</span></h2>
             </div>
 
             {/* event location info */}
-            <div className={`pt-5 bg-slate-500/10 border h-[26rem] min-w-[12rem] w-full max-w-[19rem] grow`}>
+            <div className={`pt-5 bg-slate-500/10 border h-[26rem] min-w-[12rem] w-full max-w-[22rem] grow`}>
                 <div className='h-[6rem] px-5 border-b-2 flex gap-5 flex-wrap'>
                     <FontAwesomeIcon icon={faLocationDot} className='text-xl text-white px-5 py-4 rounded-full bg-amber-500' />
                     <div>
@@ -36,7 +36,7 @@ const LocationFaq = () => {
             </div>
 
             {/* contact info */}
-            <div className={`py-5 bg-slate-500/10 border h-[26rem] min-w-[12rem] w-full max-w-[19rem] grow`}>
+            <div className={`py-5 bg-slate-500/10 border h-[26rem] min-w-[12rem] w-full max-w-[22rem] grow`}>
                 <div className='h-[6rem] px-5 border-b-2 flex gap-5 flex-wrap'>
                     <FontAwesomeIcon icon={faLink} className='text-xl text-white px-4 py-4 rounded-full bg-amber-500' />
                     <div>
@@ -54,7 +54,7 @@ const LocationFaq = () => {
             </div>
 
             {/* ticket ad */}
-            <div className={`pt-2 h-[26rem] min-w-[12rem] w-full max-w-[19rem] grow`}>
+            <div className={`pt-2 h-[26rem] min-w-[12rem] w-full max-w-[22rem] grow`}>
                 <div className={`flex justify-center ${style.leftBgimage} p-10`}>
                     <div className="text-center ">
                         <h1 className="text-[18px] text-[#FFFFFF] uppercase">

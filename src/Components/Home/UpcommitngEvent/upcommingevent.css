@@ -1,28 +1,37 @@
 .app {
-  width: 80%;
-  margin: 10px auto;
-  height: 600px;
+  /* width: 80%; */
+  /* margin: 10px auto; */
+  /* height: 600px; */
 }
 
 .slide img {
-  width: 600px;
+  /* width: 600px; */
   margin: 0 auto;
-  
+  object-fit: cover;
+  width: 100%;
 }
 @media only screen and (max-width: 600px) {
   .slide img {
-    width: 100px;
+    width: 100%;
     margin: 0 auto;
+  }
+  .activeSlide {
+    transform: scale(0.8);
+    opacity: 1;
+  }
+  .arrow svg{
+    font-size: 15px;
   }
 }
 .slide {
-  transform: scale(0.2);
+  transform: scale(0.5);
+  height: 600px;
   transition: transform 300ms;
   opacity: 0.5;
 }
 
 .activeSlide {
-  transform: scale(1.1);
+  transform: scale(1);
   opacity: 1;
 }
 
@@ -73,5 +82,5 @@
 
 
 .sdw{
-  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 5px 30px 5px rgba(0, 0, 0, 0.227);
 }
