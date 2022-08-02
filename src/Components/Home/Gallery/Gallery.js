@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Gallery() {
     return (
@@ -53,7 +54,7 @@ function Gallery() {
             </section>
 
             <div className='flex justify-center py-20'>
-                <button className='uppercase bg-gradient-to-r from-rose-600 to-pink-600 px-8 py-4 text-white font-semibold tracking-wider rounded-full'>view all gallery</button>
+                <Link to='/gallery' className='uppercase bg-gradient-to-r from-rose-600 to-pink-600 px-8 py-4 text-white font-semibold tracking-wider rounded-full'>view all gallery</Link>
             </div>
         </div>
     )
