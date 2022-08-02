@@ -3,9 +3,10 @@ import { AiTwotoneStar } from "react-icons/ai";
 import { GiSelfLove } from "react-icons/gi";
 import { FaShareSquare, FaReplyAll } from "react-icons/fa";
 import WriteAComment from '../../WriteAComment/WriteAComment';
+import './BlogComment.s.css'
 const BlogComments = () => {
     return (
-        <div className="lg:pl-[280px] p-5 ">
+        <div className="max-w-7xl mx-auto px-12  ">
             <h1 className="text-[36px] ">Blog <strong>Comments</strong></h1>
             <div className=" flex gap-6 mt-16 ">
                 <img className="h-[82px] rounded-full" src="https://i.ibb.co/T44K8gh/admin.png" alt="" />
@@ -51,14 +52,17 @@ const BlogComments = () => {
                                 {/* <button>no</button> */}
                             </div>
                         </div>
+                        
                     </div>
-                    <hr className=" my-7 bg-gray-200" />
 
                     <div>
-                        <WriteAComment></WriteAComment>
                     </div>
+                    <hr className=" my-9 blog-hr bg-black" />
+
                 </div>
             </div>
+            <WriteAComment></WriteAComment>
+
         </div>
     );
 };
