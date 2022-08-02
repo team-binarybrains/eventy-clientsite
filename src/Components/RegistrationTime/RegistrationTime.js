@@ -3,27 +3,6 @@ import RegistrationCountDownTime from './RegistrationCountDownTime/RegistrationC
 
 const RegistrationTime = () => {
     return (
-<<<<<<< HEAD
-        <div className=" shadow-lg">
-         <div className="md:flex justify-around items-center">
-         <div className=" ">
-             <h1 className="text-[28px]">Please Complete Registration <strong className="text-[#ffbe30]">Within 12:00 Hours.</strong> </h1>
-             <p className="text-[16px] text-[#333333] mt-3">After 12:00 hours, the reservation we’re holding will be released to others.</p>
-           </div>
-            <RegistrationCountDownTime/>
-         </div>
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-         <br />
-=======
         <div className="bg-white py-12">
             <div className="md:flex justify-around items-center">
                 <div className=" ">
@@ -32,7 +11,6 @@ const RegistrationTime = () => {
                 </div>
                 <RegistrationCountDownTime />
             </div>
->>>>>>> 92a4bf865a904e99e62349ef13afc4ffe9f60283
         </div>
     );
 };
