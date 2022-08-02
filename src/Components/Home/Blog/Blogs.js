@@ -39,7 +39,7 @@ const Blogs = () => {
             <div className="lg:w-[550px]">
               <div className=" flex justify-between items-center cursor-pointer">
                 <h3 className=" font-semibold text-xl leading-5 text-gray-800">
-                  Shipping
+                  How to join Harmoni Event Management?
                 </h3>
                 <button
                   aria-label="too"
@@ -71,16 +71,20 @@ const Blogs = () => {
                   </svg>
                 </button>
               </div>
+
               <p
                 className={
                   "font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " +
                   (show ? "block" : "hidden")
                 }
               >
-                We are covering every major country worldwide. The shipment
-                leaves from US as it is our headquarter. Some extra information
-                you probably need to add here so that the customer is clear of
-                their wanted expectations.
+                <span className="font-bold text-[20px] text-[#ffbe30]">
+                  Answer:
+                </span>{" "}
+                <br />
+                Bring people together, or turn your passion into a business.
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
               </p>
             </div>
 
@@ -91,7 +95,7 @@ const Blogs = () => {
             <div className="lg:w-[550px]">
               <div className="  flex justify-between items-center cursor-pointer">
                 <h3 className=" font-semibold text-xl leading-5 text-gray-800">
-                  Returns
+                  How to make my own event?
                 </h3>
                 <button
                   aria-label="too"
@@ -129,10 +133,13 @@ const Blogs = () => {
                   (show2 ? "block" : "hidden")
                 }
               >
-                We are covering every major country worldwide. The shipment
-                leaves from US as it is our headquarter. Some extra information
-                you probably need to add here so that the customer is clear of
-                their wanted expectations.
+                <span className="font-bold text-[20px] text-[#ffbe30]">
+                  Answer:
+                </span>{" "}
+                <br />
+                Bring people together, or turn your passion into a business.
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
               </p>
             </div>
 
@@ -143,7 +150,7 @@ const Blogs = () => {
             <div className="lg:w-[550px]">
               <div className=" flex justify-between items-center cursor-pointer">
                 <h3 className=" font-semibold text-xl leading-5 text-gray-800">
-                  Exchange
+                  About the price to make new event?
                 </h3>
                 <button
                   aria-label="too"
@@ -181,10 +188,13 @@ const Blogs = () => {
                   (show3 ? "block" : "hidden")
                 }
               >
-                We are covering every major country worldwide. The shipment
-                leaves from US as it is our headquarter. Some extra information
-                you probably need to add here so that the customer is clear of
-                their wanted expectations.
+                <span className="font-bold text-[20px] text-[#ffbe30]">
+                  Answer:
+                </span>{" "}
+                <br />
+                Bring people together, or turn your passion into a business.
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
               </p>
             </div>
 
@@ -195,7 +205,7 @@ const Blogs = () => {
             <div className="lg:w-[550px]">
               <div className=" flex justify-between items-center cursor-pointer">
                 <h3 className=" font-semibold text-xl leading-5 text-gray-800">
-                  Tracking
+                  About the price to make new event?
                 </h3>
                 <button
                   aria-label="too"
@@ -233,10 +243,13 @@ const Blogs = () => {
                   (show4 ? "blcok" : "hidden")
                 }
               >
-                We are covering every major country worldwide. The shipment
-                leaves from US as it is our headquarter. Some extra information
-                you probably need to add here so that the customer is clear of
-                their wanted expectations.
+                <span className="font-bold text-[20px] text-[#ffbe30]">
+                  Answer:
+                </span>{" "}
+                <br />
+                Bring people together, or turn your passion into a business.
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
               </p>
             </div>
 
