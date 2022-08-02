@@ -52,8 +52,8 @@ const FeaturedEventSlider = () => {
          {/* <h2> Single Item</h2> */}
          <Slider {...settings} className='relative max-w-2xl'>
             {
-               photos.map(slide =>
-                  <div className="">
+               photos.map((slide,index) =>
+                  <div key={index} className="">
                      <div className="">
                         <div className="">
                            <img className="object-cover object-top rounded" src={slide.img} style={{ height: '400px' }} alt="" />
