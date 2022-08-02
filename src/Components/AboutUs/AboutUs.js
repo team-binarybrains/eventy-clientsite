@@ -7,6 +7,7 @@ import Address from './Address'
 import Advantage from './Advantage'
 import Awade from './Awade'
 import Special from './Special'
+import TestimonialClient from './TestimonialClient'
 
 function AboutUs() {
     return (
@@ -79,6 +80,7 @@ function AboutUs() {
 
         <Awade></Awade>
         <Advantage></Advantage>
+        <TestimonialClient></TestimonialClient>
         <Staffs></Staffs>
         <Special></Special>
         <Address></Address>
