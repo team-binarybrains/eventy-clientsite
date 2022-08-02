@@ -21,7 +21,9 @@ const Staffs = () => {
         autoplay: true,
         autoplaySpeed: 5000,
         pauseOnHover: false,
-        swipeToSlide: false
+        swipeToSlide: false,
+        arrows: false,
+        swipe: false,
     };
 
     return (
