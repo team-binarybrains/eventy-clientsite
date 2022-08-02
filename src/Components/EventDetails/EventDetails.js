@@ -4,6 +4,7 @@ import EventSchedule from './FeaturedEvent/EventSchedule/EventSchedule';
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
 import FeaturedEventDetails from './FeaturedEvent/FeaturedEventDetails/FeaturedEventDetails';
 import LocationFaq from './LocationFaq';
+import Pricing from './Pricing/Pricing';
 import TopBanner from './TopBanner';
 
 
@@ -23,6 +24,7 @@ const EventDetails = () => {
                         <FeaturedEvent></FeaturedEvent>
                         <FeaturedEventDetails/>
                         <EventSchedule/>
+                        <Pricing/>
                     </div>
 
                     {/* 2nd row : 2nd column */}
