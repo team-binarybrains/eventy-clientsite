@@ -20,7 +20,7 @@ const EventDetails = () => {
 
                 <section className='px-3 flex flex-wrap justify-center container mx-auto max-w-7xl lg:px-16'>
                     {/* 2nd row : 1st column (-----Rashid vai-------)*/}
-                    <div className='border-4 border-red-600 basis-[800px] shrink max-w-[52rem]'>
+                    <div className='border-4 border-red-600 basis-[800px] shrink grow max-w-[52rem]'>
                         <FeaturedEvent></FeaturedEvent>
                         <FeaturedEventDetails/>
                         <EventSchedule/>
@@ -28,7 +28,7 @@ const EventDetails = () => {
                     </div>
 
                     {/* 2nd row : 2nd column */}
-                    <div className='basis-[350px] grow shrink max-w-[59rem]'>
+                    <div className='basis-[300px] grow shrink max-w-[59rem]'>
                         <LocationFaq></LocationFaq>
                     </div>
                 </section>

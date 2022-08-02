@@ -5,14 +5,14 @@ import dayOne from '../../img/1.hall.png'
 
 const DayOne = () => {
    return (
-      <div className="flex flex-wrap-reverse gap-2 items-start">
+      <div className="flex flex-wrap-reverse gap-2">
          <div className='basis-[320px] grow '>
             <div className="">
                <h1 className='text-2xl text-slate-700 '>01. Greeting <strong>Welcome</strong></h1>
                <p className='text-slate-700 py-4'>Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit.</p>
             </div>
             <div className="">
-               <div className="flex  gap-4">
+               <div className="flex gap-4">
                   <div className="flex items-center gap-2">
                      <FaMicrophone  className='text-5xl p-3 rounded-full bg-yellow-400'/>
                      <div className="">
@@ -37,8 +37,8 @@ const DayOne = () => {
                </div>
             </div>
          </div>
-         <div className="grow-0 basis-[200px]">
-            <img src={dayOne} className='h-auto max-w-sm w-full mx-auto' alt="" />
+         <div className="grow-0 basis-[250px]">
+            <img src={dayOne} className='h-auto max-w-md w-full mx-auto' alt="" />
          </div>
       </div>
    );

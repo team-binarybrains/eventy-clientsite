@@ -18,10 +18,11 @@ const Blogs = () => {
   return (
     <div className="flex flex-col   lg:flex-row lg:ml-56  mt-10 mb-20">
       <div className="  2xl:mx-auto  px-4 lg:px-20  md:px-6 ">
-        <h2 className=" font-semibold lg:text-[18px] text-3xl lg:leading-9 md:leading-7 leading-9 text-[#878787]">
+        <div className="mx-auto lg:mx-0 h-[3px] w-[70px] bg-[#ffbe30] mb-5 pr-5"></div>
+        <h2 className=" font-semibold lg:text-[18px] text-3xl lg:ml-5 lg:leading-9 md:leading-7 leading-9 text-[#878787]">
           FIND YOUR ANSWER
         </h2>
-        <h2 className="mt-5 font-semibold lg:text-[48px] text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">
+        <h2 className="mt-5 font-semibold lg:text-[48px] text-3xl lg:ml-5 lg:leading-9 md:leading-7 leading-9 text-gray-800">
           Ask & Questions
         </h2>
         <div className="mt-4 flex md:justify-between md:items-start md:flex-row flex-col justify-start items-start">
@@ -38,7 +39,7 @@ const Blogs = () => {
             <div className="lg:w-[550px]">
               <div className=" flex justify-between items-center cursor-pointer">
                 <h3 className=" font-semibold text-xl leading-5 text-gray-800">
-                  Shipping
+                  How to join Eventy Event Management?
                 </h3>
                 <button
                   aria-label="too"
@@ -70,16 +71,20 @@ const Blogs = () => {
                   </svg>
                 </button>
               </div>
+
               <p
                 className={
                   "font-normal text-base leading-6 text-gray-600 mt-4 w-11/12 " +
                   (show ? "block" : "hidden")
                 }
               >
-                We are covering every major country worldwide. The shipment
-                leaves from US as it is our headquarter. Some extra information
-                you probably need to add here so that the customer is clear of
-                their wanted expectations.
+                <span className="font-bold text-[20px] text-[#ffbe30]">
+                  Answer:
+                </span>{" "}
+                <br />
+                Bring people together, or turn your passion into a business.
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
               </p>
             </div>
 
@@ -90,7 +95,7 @@ const Blogs = () => {
             <div className="lg:w-[550px]">
               <div className="  flex justify-between items-center cursor-pointer">
                 <h3 className=" font-semibold text-xl leading-5 text-gray-800">
-                  Returns
+                  How to make my own event?
                 </h3>
                 <button
                   aria-label="too"
@@ -128,10 +133,13 @@ const Blogs = () => {
                   (show2 ? "block" : "hidden")
                 }
               >
-                We are covering every major country worldwide. The shipment
-                leaves from US as it is our headquarter. Some extra information
-                you probably need to add here so that the customer is clear of
-                their wanted expectations.
+                <span className="font-bold text-[20px] text-[#ffbe30]">
+                  Answer:
+                </span>{" "}
+                <br />
+                Bring people together, or turn your passion into a business.
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
               </p>
             </div>
 
@@ -142,7 +150,7 @@ const Blogs = () => {
             <div className="lg:w-[550px]">
               <div className=" flex justify-between items-center cursor-pointer">
                 <h3 className=" font-semibold text-xl leading-5 text-gray-800">
-                  Exchange
+                  About the price to make new event?
                 </h3>
                 <button
                   aria-label="too"
@@ -180,10 +188,13 @@ const Blogs = () => {
                   (show3 ? "block" : "hidden")
                 }
               >
-                We are covering every major country worldwide. The shipment
-                leaves from US as it is our headquarter. Some extra information
-                you probably need to add here so that the customer is clear of
-                their wanted expectations.
+                <span className="font-bold text-[20px] text-[#ffbe30]">
+                  Answer:
+                </span>{" "}
+                <br />
+                Bring people together, or turn your passion into a business.
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
               </p>
             </div>
 
@@ -194,11 +205,11 @@ const Blogs = () => {
             <div className="lg:w-[550px]">
               <div className=" flex justify-between items-center cursor-pointer">
                 <h3 className=" font-semibold text-xl leading-5 text-gray-800">
-                  Tracking
+                  About the price to make new event?
                 </h3>
                 <button
                   aria-label="too"
-                  className=" cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
+                  className="  cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-800"
                   onClick={() => setShow4(!show4)}
                 >
                   <svg
@@ -232,10 +243,13 @@ const Blogs = () => {
                   (show4 ? "blcok" : "hidden")
                 }
               >
-                We are covering every major country worldwide. The shipment
-                leaves from US as it is our headquarter. Some extra information
-                you probably need to add here so that the customer is clear of
-                their wanted expectations.
+                <span className="font-bold text-[20px] text-[#ffbe30]">
+                  Answer:
+                </span>{" "}
+                <br />
+                Bring people together, or turn your passion into a business.
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
               </p>
             </div>
 
@@ -245,28 +259,35 @@ const Blogs = () => {
       </div>
       <div className=" md:w-5/12 lg:w-1/2 w-full lg:ml-20">
         <div>
-          <h2 className="text-center lg:text-start font-semibold lg:text-[18px] text-3xl lg:leading-9 md:leading-7 leading-9 text-[#878787]">
+          <div className="mx-auto lg:mx-0 h-[3px] w-[70px] bg-[#ffbe30] mb-5 lg:mr-[-6px]"></div>
+          <h2 className="text-center lg:text-start lg:ml-5 font-semibold lg:text-[18px] text-3xl lg:leading-9 md:leading-7 leading-9 text-[#878787]">
             OUR BLOG
           </h2>
-          <h2 className="text-center mt-5 font-semibold lg:text-start lg:text-[48px] text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">
+          <h2 className="text-center mt-5 font-semibold lg:ml-5 lg:text-start lg:text-[48px] text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">
             Latest News
           </h2>
         </div>
-        <div className="flex flex-col items-center  mt-5 lg:flex-row lg:mt-16">
-          <div className="blog-image ">
-            <img src="https://i.ibb.co/tPtrjMm/event-1.jpg" alt="" />
-          </div>
-          <div className="p-8 blog-details w-full lg:ml-5">
-            <h1 className="text-center  text-[20px] font-bold lg:text-start lg:mx-0 lg:w-[310px]">
-              Barcelona Friday Food Truck Festival 26 Mei 2019
-            </h1>
-            <h1 className="text-center text-[18px] lg:text-start text-red-400 mt-2 font-bold">
-              26 June 2018
-            </h1>
-            <p className="mt-5 text-center text-[17px] lg:text-start lg:text-[18px] lg:mx-0 text-[#333333] lg:w-[350px] lg:mt-7">
-              Harmoni gives you everything you need to host your best event yet.
-              lorem ipsum diamet.
-            </p>
+        <div className="lg:mt-16  mt-5">
+          <div className="p-4  lg:p-5 lg:max-w-2xl shadow-md gap-4 flex flex-col items-center  lg:flex-row ">
+            <div className="blog-image   lg:w-[300px]">
+              <img
+                className="lg:h-[200px] lg:w-[300px] object-cover"
+                src="https://i.ibb.co/tPtrjMm/event-1.jpg"
+                alt=""
+              />
+            </div>
+            <div className=" blog-details w-full ">
+              <h1 className="text-center  text-[20px] font-bold lg:text-start lg:mx-0 lg:w-[310px]">
+                Barcelona Friday Food Truck Festival 26 Mei 2019
+              </h1>
+              <h1 className="text-center text-[18px] lg:text-start text-[#ffbe30] mt-2 font-bold">
+                26 June 2018
+              </h1>
+              <p className="mt-5 text-center text-[17px] lg:text-start lg:text-[18px] lg:mx-0 text-[#333333] lg:w-[350px] lg:mt-5">
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
+              </p>
+            </div>
           </div>
         </div>
       </div>

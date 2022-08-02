@@ -5,15 +5,16 @@ import Address from './Address'
 import Advantage from './Advantage'
 import Awade from './Awade'
 import Special from './Special'
+import TestimonialClient from './TestimonialClient'
 
 function AboutUs() {
     return (
         <div>
 
-            <div className=" p-3 bg-image h-[340px]"
+            <div className=" p-3 bg-image lg:h-[340px] h-[200px]"
                 style={{ backgroundImage: "url('https://i.ibb.co/LQr53RB/1-testimonial-bg-edited.jpg')", backgroundSize: 'cover' }} >
 
-                <div className='flex justify-center items-center h-full -mt-8'>
+                <div className='flex justify-center items-center h-full lg:-mt-8'>
                     <div className='text-white'>
                         <p className='tracking-[8px]'>ALL YOU NEED TO KNOW</p>
                         <p className='text-4xl text-center font-bold my-3'>
@@ -23,7 +24,7 @@ function AboutUs() {
                     </div>
                 </div>
 
-                <div className='flex justify-center items-center gap-x-3 -mt-16 text-white '>
+                <div className='flex justify-center items-center gap-x-3 lg:-mt-16 -mt-10 text-white '>
                     <Link to='/' className='text-lg' >Home</Link>
                     <span>|</span>
                     <p className='text-lg'>About Us</p>
@@ -32,7 +33,7 @@ function AboutUs() {
             </div>
 
 
-            <div className=' grid lg:grid-cols-3 grid-cols-1 justify-around py-20 bg-gray-100 pl-36'>
+            <div className=' grid lg:grid-cols-3 grid-cols-1 justify-around py-20 bg-gray-100 lg:pl-36'>
             
                     <div className='lg:-mr-96 grid items-center lg:w-96 px-10 lg:px-0'>
                         <div className=''>
@@ -48,25 +49,25 @@ function AboutUs() {
                     </div>
                 
 
-                <div className='ml-16'>
-                    <div className='w-96 mt-10'>
+                <div className='lg:ml-16 px-5 lg:px-0'>
+                    <div className='lg:w-96 mt-10'>
                         <div className='flex items-baseline'>
                         <p className='text-3xl font-bold'>Our Mission</p>
                         <div className='border-b-4 w-12 ml-1 border-[#ffbe30]'></div>
                         </div>
-                        <p className='my-10'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem debitis consequuntur animi totam aliquam nisi magnam mollitia, non placeat ad voluptatum eos similique modi fugit maxime porro tempora praesentium sit!</p>
+                        <p className='lg:my-10 my-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem debitis consequuntur animi totam aliquam nisi magnam mollitia, non placeat ad voluptatum eos similique modi fugit maxime porro tempora praesentium sit!</p>
 
                         <p className='font-bold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo fugiat magni eos odit id placeat soluta quae sed eius accusamus.</p>
                     </div>
                 </div>
 
-                <div className='ml-16'>
-                    <div className='w-96 mt-10'>
+                <div className='lg:ml-16 px-5 lg:px-0'>
+                    <div className='lg:w-96 mt-10'>
                        <div className='flex items-baseline'>
                        <p className='text-3xl font-bold'>Our Vission </p>
                         <div className='border-b-4 w-12 ml-1 border-[#ffbe30]'></div>
                        </div>
-                        <p className='my-10'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem debitis consequuntur animi totam aliquam nisi magnam mollitia, non placeat ad voluptatum eos similique modi fugit maxime porro tempora praesentium sit!</p>
+                        <p className='lg:my-10 my-4'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem debitis consequuntur animi totam aliquam nisi magnam mollitia, non placeat ad voluptatum eos similique modi fugit maxime porro tempora praesentium sit!</p>
 
                         <p className='font-bold'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo fugiat magni eos odit id placeat soluta quae sed eius accusamus.</p>
                     </div>
@@ -77,10 +78,10 @@ function AboutUs() {
 
         <Awade></Awade>
         <Advantage></Advantage>
+        <TestimonialClient></TestimonialClient>
         <Staffs></Staffs>
         <Special></Special>
         <Address></Address>
-
         </div>
     )
 }
