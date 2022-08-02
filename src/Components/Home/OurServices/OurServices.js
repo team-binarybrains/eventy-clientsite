@@ -1,4 +1,8 @@
+/* eslint-disable no-unused-vars */
 import React, { useRef, useState } from "react";
+import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+import { BsPlusLg } from "react-icons/bs";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 
 import './OurServices.css'
@@ -14,6 +18,21 @@ export default function OurServices() {
         { image: "https://i.ibb.co/DDbg7n4/img2.jpg", name: "Birthday Party", Sprice: 500, ePrice: 2000 }
     ]
 
+    const NextArrow = ({ onClick }) => {
+        return (
+            <div className="myArrow right" onClick={onClick}>
+                <BiRightArrow className="text-4xl" />
+            </div>
+        );
+    };
+
+    const PrevArrow = ({ onClick }) => {
+        return (
+            <div className="myArrow left" onClick={onClick}>
+                <BiLeftArrow className="text-4xl" />
+            </div>
+        );
+    };
 
     const settings = {
         dots: true,
@@ -23,6 +42,8 @@ export default function OurServices() {
         slidesToScroll: 3,
         arrows: true,
         autoplay: true,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 644,
@@ -49,17 +70,19 @@ export default function OurServices() {
             <div>
                 <Slider {...settings} className='lg:h-[500px]' >
                     {
-                        serviceInfo.map((service, index) => <div key={service.index} className='relative hvr'>
+                        serviceInfo.map((service, index) => <div key={service.index} className='relative hvr '>
 
                             <div >
 
                                 <div className="flex justify-center relative">
                                     <img src={service.image} alt="" className="" />
-                                    <div className="absolute top-0 left-11 right-[2.6rem] bottom-0 bg-transparent cld"></div>
+                                    <div className="absolute top-0 left-11 right-[2.6rem] bottom-0 bg-transparent cld ">
+                                        <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls "/>
+                                    </div>
                                 </div>
 
-                                <div className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-10">
-                                    <div className="bg-white w-72 h-24 grid items-center justify-center">
+                                <div className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-3">
+                                    <div className="bg-white w-72 h-28 grid items-center justify-center">
                                         <div className="text-center">
                                             <p className="font-bold">{service.name}</p>
                                         </div>
@@ -71,7 +94,9 @@ export default function OurServices() {
                                 </div>
                             </div>
 
+                                <div className="mt-8">
                                 <p className="left-position uppercase text-gray-400 font-bold hover:text-[#ffbe30] tracking-[5px] cld2">eventy party events</p>
+                                </div>
                    
 
                         </div>
