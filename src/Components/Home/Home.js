@@ -29,7 +29,7 @@ const Home = () => {
       <Staffs />
       <PartnerClient></PartnerClient>
       <Blogs></Blogs>
-      <RegistrationTime/>
+      <RegistrationTime />
     </div>
   );
 };

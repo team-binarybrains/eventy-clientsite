@@ -1,4 +1,5 @@
 import React from 'react';
+import RegistrationTime from '../RegistrationTime/RegistrationTime';
 import OrderSummary from './OrderSummary';
 
 const EventBooking = () => {
@@ -10,16 +11,7 @@ const EventBooking = () => {
                 <p className='text-white mt-12 font-bold'><span className='pr-8 border-r-2'>Home</span><span className='pl-8'>Booking</span></p>
             </div>
             <div className='2xl:max-w-7xl mx-auto'>
-
-                <div className='grid grid-cols-1 sm:grid-cols-12 py-16 sm:py-20 px-8 sm:px-20'>
-                    <div className='col-span-8'>
-                        <h3 className='text-2xl sm:text-3xl'>Please Complete Registration <span className='font-bold'>Within 12:00 Hours.</span></h3>
-                        <p style={{ wordSpacing: "3px" }} className='mt-2 text-lg'>After 12:00 hours, the reservation we’re holding will be released to others.</p>
-                    </div>
-                    <div className='col-span-4'>
-
-                    </div>
-                </div>
+                <RegistrationTime />
             </div>
             <div style={{ background: "#f7f7f7" }} className='px-5 sm:px-20 py-16 sm:py-24 pb-52'>
                 <div className='2xl:max-w-7xl mx-auto'>
