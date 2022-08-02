@@ -49,7 +49,7 @@ export default function RegistrationCountDownTime() {
   });
 
   return (
-    <div className="mt-6">
+    <div className="">
       {CountDownComponents.length ? (                                                                              
         CountDownComponents
       ) : (
