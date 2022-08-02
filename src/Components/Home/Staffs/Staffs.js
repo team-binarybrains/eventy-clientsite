@@ -29,7 +29,7 @@ const Staffs = () => {
         <section className={`${styles.bg} -mt-20`}>
             <div className={`${styles.bgLayer}`}>
                 <div className={`max-w-4xl mx-auto pt-20`}>
-                    <Slider {...settings} className="h-[90vh]">
+                    <Slider {...settings} className="min-h-[90vh]">
                         {staffs.map((staff, i) => (
                             <div className="" key={i}>
                                 <div className="flex gap-5 sm:flex-row flex-col items-center px-3">
