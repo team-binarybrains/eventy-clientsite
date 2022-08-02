@@ -14,6 +14,7 @@ import EventListDetailsMain from "./Components/EventListDetails/EventListDetails
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Footer from "./Components/Share/Footer/Footer";
 import EventDetails from "./Components/EventDetails/EventDetails";
+import EventBooking from "./Components/EventBooking/EventBooking";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
           path="/eventlist"
           element={<EventListDetailsMain></EventListDetailsMain>}
         ></Route>
+        <Route path="/event-booking" element={<EventBooking></EventBooking>}></Route>
         <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
