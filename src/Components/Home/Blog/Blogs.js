@@ -267,25 +267,27 @@ const Blogs = () => {
             Latest News
           </h2>
         </div>
-        <div className="flex flex-col items-center  mt-5 lg:flex-row lg:mt-16">
-          <div className="blog-image   lg:w-[300px]">
-            <img
-              className="lg:h-[200px] lg:w-[300px]"
-              src="https://i.ibb.co/tPtrjMm/event-1.jpg"
-              alt=""
-            />
-          </div>
-          <div className="p-8 blog-details w-full ">
-            <h1 className="text-center  text-[20px] font-bold lg:text-start lg:mx-0 lg:w-[310px]">
-              Barcelona Friday Food Truck Festival 26 Mei 2019
-            </h1>
-            <h1 className="text-center text-[18px] lg:text-start text-[#ffbe30] mt-2 font-bold">
-              26 June 2018
-            </h1>
-            <p className="mt-5 text-center text-[17px] lg:text-start lg:text-[18px] lg:mx-0 text-[#333333] lg:w-[350px] lg:mt-5">
-              Harmoni gives you everything you need to host your best event yet.
-              lorem ipsum diamet.
-            </p>
+        <div className="lg:mt-16  mt-5">
+          <div className="p-4  lg:p-5 lg:max-w-2xl shadow-md gap-4 flex flex-col items-center  lg:flex-row ">
+            <div className="blog-image   lg:w-[300px]">
+              <img
+                className="lg:h-[200px] lg:w-[300px] object-cover"
+                src="https://i.ibb.co/tPtrjMm/event-1.jpg"
+                alt=""
+              />
+            </div>
+            <div className=" blog-details w-full ">
+              <h1 className="text-center  text-[20px] font-bold lg:text-start lg:mx-0 lg:w-[310px]">
+                Barcelona Friday Food Truck Festival 26 Mei 2019
+              </h1>
+              <h1 className="text-center text-[18px] lg:text-start text-[#ffbe30] mt-2 font-bold">
+                26 June 2018
+              </h1>
+              <p className="mt-5 text-center text-[17px] lg:text-start lg:text-[18px] lg:mx-0 text-[#333333] lg:w-[350px] lg:mt-5">
+                Harmoni gives you everything you need to host your best event
+                yet. lorem ipsum diamet.
+              </p>
+            </div>
           </div>
         </div>
       </div>
