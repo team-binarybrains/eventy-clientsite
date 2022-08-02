@@ -13,7 +13,7 @@ import CountDown from "../CountDown/CountDown";
 
 const UpcommingEvent = () => {
   // const images = [astronaut, celebrating, education];
-  const [images, setImages] = useState([])
+  const [images, setImages] = useState([]);
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
@@ -33,11 +33,10 @@ const UpcommingEvent = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    fetch('upcomingevent.json')
-      .then(res => res.json())
-      .then(data => setImages(data))
-  }, [])
-
+    fetch("upcomingevent.json")
+      .then((res) => res.json())
+      .then((data) => setImages(data));
+  }, []);
 
   const settings = {
     infinite: true,
@@ -79,19 +78,20 @@ const UpcommingEvent = () => {
 
   return (
     <div>
-
       <div className="mt-24 mb-14">
-        <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]">UPCOMMING EVENTS</h1>
-        <p className="text-5xl tracking-wider text-center">Latest <span className="font-bold">Awesome Events</span></p>
+        <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]">
+          UPCOMMING EVENTS
+        </h1>
+        <p className="text-5xl tracking-wider text-center">
+          Latest <span className="font-bold">Awesome Events</span>
+        </p>
       </div>
 
       <div className="app">
         <Slider {...settings}>
           {images.map((img, idx) => (
-
             <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-              <div className='h-full w-full'>
-
+              <div className="h-full w-full">
                 <div className="flex justify-center w-[600px]">
                   <CountDown></CountDown>
                 </div>
@@ -102,34 +102,36 @@ const UpcommingEvent = () => {
                   </div>
 
                   <div className="w-full flex justify-end mb-14">
-                    <div className='bg-white px-5 w-[300px] sdw -mr-16 -mt-[350px]'>
-                      <div className=''>
+                    <div className="bg-white px-5 w-[300px] sdw -mr-16 -mt-[350px]">
+                      <div className="">
                         <h1 className="title-inline py-5">{img.title_line}</h1>
                         <p className="text-[#ffbe30] text-xl ">{img.Tickets}</p>
                         <p className="text-[#878787] text-xl py-3">
                           <span className="bg-[#f7f7f7] p-1 text-center rounded-full">
-                            <AiOutlineClockCircle className='inline-block text-2xl -mt-1 text-[#ffbe30] rounded-t-full' />
+                            <AiOutlineClockCircle className="inline-block text-2xl -mt-1 text-[#ffbe30] rounded-t-full" />
                           </span>
 
-                          {img.Start}</p>
+                          {img.Start}
+                        </p>
                         <p className="text-[#878787] text-xl py-3">
                           <span className=" bg-[#f7f7f7] p-1 text-center rounded-full">
-                            <GoLocation className='inline-block text-2xl -mt-1 text-[#ffbe30] ' />
+                            <GoLocation className="inline-block text-2xl -mt-1 text-[#ffbe30] " />
                           </span>
-                          {img.location}</p>
-                        <button className="custom-btn px-16 font-bold  py-4 mb-10 rounded-full text-white ">Tickets & details</button>
+                          {img.location}
+                        </p>
+                        <button className="custom-btn px-16 font-bold  py-4 mb-10 rounded-full text-white ">
+                          Tickets & details
+                        </button>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <h1 className="text-3xl font-black text-white text-center uppercase px-3 py-3 rounded b absolute top-[140px] left-10 upcomingbg" >
+                <h1 className="text-3xl font-black text-white text-center uppercase px-3 py-3 rounded b absolute top-[140px] left-10 upcomingbg">
                   {img.date}
                   <br />
                   {img.month}
                 </h1>
-
-
               </div>
             </div>
           ))}
