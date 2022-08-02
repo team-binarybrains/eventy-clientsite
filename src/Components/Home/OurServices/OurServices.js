@@ -58,8 +58,8 @@ export default function OurServices() {
                                     <div className="absolute top-0 left-11 right-[2.6rem] bottom-0 bg-transparent cld"></div>
                                 </div>
 
-                                <div className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-10">
-                                    <div className="bg-white w-72 h-24 grid items-center justify-center">
+                                <div className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-3">
+                                    <div className="bg-white w-72 h-28 grid items-center justify-center">
                                         <div className="text-center">
                                             <p className="font-bold">{service.name}</p>
                                         </div>
@@ -71,7 +71,9 @@ export default function OurServices() {
                                 </div>
                             </div>
 
+                                <div className="mt-8">
                                 <p className="left-position uppercase text-gray-400 font-bold hover:text-[#ffbe30] tracking-[5px] cld2">eventy party events</p>
+                                </div>
                    
 
                         </div>
