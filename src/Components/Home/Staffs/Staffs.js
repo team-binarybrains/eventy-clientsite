@@ -26,19 +26,19 @@ const Staffs = () => {
     };
 
     return (
-        <section className={`${styles.bg} -mt-20`}>
-            <div className={`${styles.bgLayer}`}>
-                <div className={`max-w-4xl mx-auto pt-20`}>
-                    <Slider {...settings} className="min-h-[90vh]">
+        <section className={`${styles.bg}`}>
+            <div className={`${styles.bgLayer} pt-10`}>
+                <div className={`mx-auto`}>
+                    <Slider {...settings} className="min-h-[90vh] max-w-3xl mx-auto">
                         {staffs.map((staff, i) => (
                             <div className="" key={i}>
                                 <div className="flex gap-5 sm:flex-row flex-col items-center px-3">
                                     <img
-                                        className="h-[90vh] block object-cover"
+                                        className="max-h-[90vh] max-w-sm block object-cover"
                                         src={staff.image}
                                         alt=""
                                     />
-                                    <div className="space-y-4">
+                                    <div className="space-y-4 max-w-sm">
                                         <div className="h-[4px] w-[70px] bg-gradient-to-r from-red-500 to-pink-500 mx-0 -mb-3 rounded-full" />
                                         <h6
                                             className={`${styles.openSans} uppercase tracking-[5px] text-gray-500`}
