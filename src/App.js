@@ -9,8 +9,8 @@ import NotFound from "./Components/Share/NOtFound/NotFound";
 import BackTopBtn from "./Components/BackToTop/BackTopBtn";
 import Form from "./Components/Authentication/Form";
 import MessengerCustomerChat from "react-messenger-customer-chat";
-import EventListDetails from "./Components/EventListDetails/EventListSearchhead";
 import EventListDetailsMain from "./Components/EventListDetails/EventListDetailsMain";
+import BlogDetails from "./Components/Home/Blog/BlogDetails/BlogDetails";
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Footer from "./Components/Share/Footer/Footer";
 import EventDetails from "./Components/EventDetails/EventDetails";
@@ -22,7 +22,10 @@ function App() {
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
-        <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
+        <Route
+          path="/blogs-details"
+          element={<BlogDetails></BlogDetails>}
+        ></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
         <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
