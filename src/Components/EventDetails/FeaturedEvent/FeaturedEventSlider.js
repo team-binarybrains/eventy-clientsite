@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import Slider from "react-slick";
 import { AiOutlineArrowRight } from 'react-icons/ai';
@@ -43,46 +44,19 @@ const FeaturedEventSlider = () => {
       speed: 500,
       slidesToShow: 1,
       slidesToScroll: 1,
-      responsive: [
-         {
-            breakpoint: 1024,
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1,
-               infinite: true,
-               dots: false
-            }
-         },
-         {
-            breakpoint: 600,
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1,
-               initialSlide: 1
-            }
-         },
-         {
-            breakpoint: 480,
-            settings: {
-               slidesToShow: 1,
-               slidesToScroll: 1
-            }
-         }
-      ],
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
-
    };
    return (
-      <div className="py-6">
+      <div className="py-6 w-80 md:w-full">
          {/* <h2> Single Item</h2> */}
-         <Slider {...settings} className='relative'>
+         <Slider {...settings} className='relative max-w-2xl'>
             {
                photos.map(slide =>
-                  <div>
+                  <div className="">
                      <div className="">
                         <div className="">
-                           <img className="w-full object-cover object-top rounded" src={slide.img} style={{ height: '385px' }} alt="" />
+                           <img className="object-cover object-top rounded" src={slide.img} style={{ height: '400px' }} alt="" />
                         </div>
                      </div>
                   </div>
