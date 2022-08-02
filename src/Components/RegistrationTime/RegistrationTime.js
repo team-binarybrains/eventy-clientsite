@@ -3,7 +3,7 @@ import RegistrationCountDownTime from './RegistrationCountDownTime/RegistrationC
 
 const RegistrationTime = () => {
     return (
-        <div className="bg-white">
+        <div className=" shadow-lg">
          <div className="md:flex justify-around items-center">
          <div className=" ">
              <h1 className="text-[28px]">Please Complete Registration <strong className="text-[#ffbe30]">Within 12:00 Hours.</strong> </h1>
@@ -11,6 +11,17 @@ const RegistrationTime = () => {
            </div>
             <RegistrationCountDownTime/>
          </div>
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
+         <br />
         </div>
     );
 };
