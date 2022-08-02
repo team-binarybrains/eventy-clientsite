@@ -11,7 +11,7 @@ import Offer from "./Offer/Offer";
 import PartnerClient from "./Partner&Client/PartnerClient";
 import Navbar from "../Share/Navbar/Navbar";
 import Banner from "./Banner/Banner";
-import OurServices from "./OurServices/OurServices.module";
+import OurServices from "./OurServices/OurServices";
 
 const Home = () => {
   return (
