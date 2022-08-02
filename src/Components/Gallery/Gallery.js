@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom'
 import Address from '../AboutUs/Address'
 import Footer from '../Share/Footer/Footer'
 import Merories from './Merories'
+import SpecialOffer from './SpecialOffer'
 
 function Gallery() {
     return (
@@ -28,6 +29,7 @@ function Gallery() {
 
             </div>
             <Merories></Merories>
+            <SpecialOffer></SpecialOffer>
             <Address></Address>
             <Footer></Footer>
         </div>
