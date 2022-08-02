@@ -14,11 +14,14 @@ const Staffs = () => {
     },[])
 
     const settings = {
+        fade: true,
         dots: false,
         infinite: true,
         speed: 1000,
         autoplay: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 5000,
+        pauseOnHover: false,
+        swipeToSlide: false
     };
 
     return (
@@ -29,7 +32,7 @@ const Staffs = () => {
                         {
                             staffs.map((staff, i) => <div className='' key={i}>
                                 <div className='flex gap-5 sm:flex-row flex-col items-center px-3'>
-                                    <img className='h-[250px] sm:h-[500px] max-w-xs block' src={staff.image} alt="" />
+                                    <img className='h-[250px] sm:h-[500px] max-w-xs block object-cover' src={staff.image} alt="" />
                                     <div className='space-y-4'>
                                         <div className='h-[4px] w-[70px] bg-gradient-to-r from-red-500 to-pink-500 mx-0 -mb-3 rounded-full' />
                                         <h6 className={`${styles.openSans} uppercase tracking-[5px] text-gray-500`}>Eventy Staffs</h6>
