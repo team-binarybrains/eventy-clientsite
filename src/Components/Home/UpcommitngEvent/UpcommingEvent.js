@@ -102,23 +102,21 @@ const UpcommingEvent = () => {
 
                 {
                   idx === imageIndex &&
-                  <div className="w-full flex justify-end absolute -bottom-20 right-[10%]">
-                    <div className='bg-white p-2 w-[200px] sdw'>
-                      <div className='space-y-2'>
-                        <h1 className="title-inline pb-2">{img.title_line}</h1>
-                        <p className="text-[#ffbe30] font-bold">{img.Tickets}</p>
-                        <p className="text-[#878787] text-sm">
-                          <span className="bg-[#f7f7f7] p-1 text-center rounded-full">
-                            <AiOutlineClockCircle className='inline-block text-xl -mt-1 text-[#ffbe30] rounded-t-full' />
-                          </span>
-                          {img.Start}</p>
-                        <p className="text-[#878787] text-sm">
-                          <span className=" bg-[#f7f7f7] p-1 text-center rounded-full">
-                            <GoLocation className='inline-block text-xl -mt-1 text-[#ffbe30] ' />
-                          </span>
-                          {img.location}</p>
-                        <button className="custom-btn px-5 font-bold py-2 rounded-full text-white ">Tickets & details</button>
-                      </div>
+                  <div className='bg-white w-[250px] rounded sdw p-2 px-5 absolute -bottom-20 right-[10%]'>
+                    <div className='space-y-2'>
+                      <h1 className="title-inline pb-2">{img.title_line}</h1>
+                      <p className="text-[#ffbe30] font-bold">{img.Tickets}</p>
+                      <p className="text-[#878787] text-sm">
+                        <span className="bg-[#f7f7f7] p-1 text-center rounded-full">
+                          <AiOutlineClockCircle className='inline-block text-xl -mt-1 text-[#ffbe30] rounded-t-full' />
+                        </span>
+                        {img.Start}</p>
+                      <p className="text-[#878787] text-sm">
+                        <span className=" bg-[#f7f7f7] p-1 text-center rounded-full">
+                          <GoLocation className='inline-block text-xl -mt-1 text-[#ffbe30] ' />
+                        </span>
+                        {img.location}</p>
+                      <button className="custom-btn px-5 font-bold py-2 rounded-full text-white ">Tickets & details</button>
                     </div>
                   </div>
                 }
