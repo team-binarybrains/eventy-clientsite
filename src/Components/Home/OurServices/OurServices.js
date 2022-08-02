@@ -1,4 +1,6 @@
+/* eslint-disable no-unused-vars */
 import React, { useRef, useState } from "react";
+import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 
 import './OurServices.css'
@@ -14,6 +16,21 @@ export default function OurServices() {
         { image: "https://i.ibb.co/DDbg7n4/img2.jpg", name: "Birthday Party", Sprice: 500, ePrice: 2000 }
     ]
 
+    const NextArrow = ({ onClick }) => {
+        return (
+            <div className="myArrow right" onClick={onClick}>
+                <FaArrowRight className="text-4xl" />
+            </div>
+        );
+    };
+
+    const PrevArrow = ({ onClick }) => {
+        return (
+            <div className="myArrow left" onClick={onClick}>
+                <FaArrowLeft className="text-4xl" />
+            </div>
+        );
+    };
 
     const settings = {
         dots: true,
@@ -23,6 +40,8 @@ export default function OurServices() {
         slidesToScroll: 3,
         arrows: true,
         autoplay: true,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 644,
