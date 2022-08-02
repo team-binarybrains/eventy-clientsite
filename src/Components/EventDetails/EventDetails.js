@@ -1,8 +1,10 @@
 import React from 'react';
 import style from './EventDetails.module.css'
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
+import FeaturedEventDetails from './FeaturedEvent/FeaturedEventDetails/FeaturedEventDetails';
 import LocationFaq from './LocationFaq';
 import TopBanner from './TopBanner';
+
 
 const EventDetails = () => {
     return (
@@ -18,6 +20,7 @@ const EventDetails = () => {
                     {/* 2nd row : 1st column (-----Rashid vai-------)*/}
                     <div className='border-4 border-red-600 basis-[50%] grow min-w-[800px] min-h-[200px] shrink'>
                         <FeaturedEvent></FeaturedEvent>
+                        <FeaturedEventDetails/>
                     </div>
 
                     {/* 2nd row : 2nd column */}
