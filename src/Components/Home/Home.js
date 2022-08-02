@@ -11,13 +11,11 @@ import Offer from "./Offer/Offer";
 import PartnerClient from "./Partner&Client/PartnerClient";
 import Navbar from "../Share/Navbar/Navbar";
 import Banner from "./Banner/Banner";
-import Footer from "../Share/Footer/Footer";
 import OurServices from "./OurServices/OurServices.module";
 
 const Home = () => {
   return (
     <div>
-      
       <Navbar></Navbar>
       <Banner></Banner>
       <UpcommingEvent></UpcommingEvent>
@@ -28,10 +26,8 @@ const Home = () => {
       <Gallery></Gallery>
       <OurServices></OurServices>
       <Staffs />
-      <PurchaseEvent></PurchaseEvent>
       <PartnerClient></PartnerClient>
       <Blogs></Blogs>
-      <Footer></Footer>
     </div>
   );
 };
