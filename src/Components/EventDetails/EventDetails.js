@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './EventDetails.module.css'
+import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
 
 const EventDetails = () => {
     return (
@@ -13,7 +14,7 @@ const EventDetails = () => {
 
                 {/* 2nd row : 1st column */}
                 <div className='border-4 border-red-600 basis-[70%] grow'>
-
+                    <FeaturedEvent></FeaturedEvent>
                 </div>
 
                 {/* 2nd row : 2nd column */}
