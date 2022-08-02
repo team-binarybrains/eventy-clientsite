@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Merories from './Merories'
 
 function Gallery() {
     return (
@@ -24,6 +25,7 @@ function Gallery() {
                 </div>
 
             </div>
+            <Merories></Merories>
         </div>
     )
 }
