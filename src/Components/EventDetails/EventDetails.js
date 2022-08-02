@@ -10,7 +10,7 @@ const EventDetails = () => {
             <section className='min-h-screen'>
 
                 {/* 1st row */}
-                <div className={`basis-full ${style.topBanner} h-80`}>
+                <div className={`${style.topBanner} h-80`}>
                     <TopBanner></TopBanner>
                 </div>
 
