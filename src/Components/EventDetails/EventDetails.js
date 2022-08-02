@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './EventDetails.module.css'
+import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
 import LocationFaq from './LocationFaq';
 import TopBanner from './TopBanner';
 
@@ -13,14 +14,14 @@ const EventDetails = () => {
                     <TopBanner></TopBanner>
                 </div>
 
-                <section className='px-3 flex flex-wrap justify-center'>
+                <section className='px-3 flex flex-wrap justify-center container mx-auto max-w-7xl lg:px-16'>
                     {/* 2nd row : 1st column (-----Rashid vai-------)*/}
-                    <div className='border-4 border-red-600 basis-[70%] grow min-w-[900px] min-h-[200px] shrink'>
-
+                    <div className='border-4 border-red-600 basis-[800px] shrink max-w-[52rem]'>
+                        <FeaturedEvent></FeaturedEvent>
                     </div>
 
                     {/* 2nd row : 2nd column */}
-                    <div className='basis-[30%] grow min-w-[360px] min-h-[200px] shrink'>
+                    <div className='basis-[350px] grow shrink max-w-[59rem]'>
                         <LocationFaq></LocationFaq>
                     </div>
                 </section>
