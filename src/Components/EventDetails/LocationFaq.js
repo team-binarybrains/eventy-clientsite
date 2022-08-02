@@ -9,7 +9,7 @@ import { HiLink } from 'react-icons/hi';
 
 const LocationFaq = () => {
     return (
-        <section className='flex flex-wrap justify-center items-center px-3'>
+        <section className='flex flex-wrap items-center px-3'>
 
             {/* event location map */}
             <div className={`py-5 px-2 border-2 h-[26rem] min-w-[12rem] w-full max-w-[19rem] grow`}>
