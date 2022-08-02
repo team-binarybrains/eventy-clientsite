@@ -1,5 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useRef, useState } from "react";
+import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
+import { BsPlusLg } from "react-icons/bs";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
 
@@ -19,7 +21,7 @@ export default function OurServices() {
     const NextArrow = ({ onClick }) => {
         return (
             <div className="myArrow right" onClick={onClick}>
-                <FaArrowRight className="text-4xl" />
+                <BiRightArrow className="text-4xl" />
             </div>
         );
     };
@@ -27,7 +29,7 @@ export default function OurServices() {
     const PrevArrow = ({ onClick }) => {
         return (
             <div className="myArrow left" onClick={onClick}>
-                <FaArrowLeft className="text-4xl" />
+                <BiLeftArrow className="text-4xl" />
             </div>
         );
     };
@@ -68,13 +70,15 @@ export default function OurServices() {
             <div>
                 <Slider {...settings} className='lg:h-[500px]' >
                     {
-                        serviceInfo.map((service, index) => <div key={service.index} className='relative hvr'>
+                        serviceInfo.map((service, index) => <div key={service.index} className='relative hvr '>
 
                             <div >
 
                                 <div className="flex justify-center relative">
                                     <img src={service.image} alt="" className="" />
-                                    <div className="absolute top-0 left-11 right-[2.6rem] bottom-0 bg-transparent cld"></div>
+                                    <div className="absolute top-0 left-11 right-[2.6rem] bottom-0 bg-transparent cld ">
+                                        <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls "/>
+                                    </div>
                                 </div>
 
                                 <div className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-3">
