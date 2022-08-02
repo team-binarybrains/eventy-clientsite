@@ -1,5 +1,6 @@
 import React from 'react';
 import style from './EventDetails.module.css'
+import EventSchedule from './FeaturedEvent/EventSchedule/EventSchedule';
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
 import FeaturedEventDetails from './FeaturedEvent/FeaturedEventDetails/FeaturedEventDetails';
 import LocationFaq from './LocationFaq';
@@ -21,6 +22,7 @@ const EventDetails = () => {
                     <div className='border-4 border-red-600 basis-[800px] shrink max-w-[52rem]'>
                         <FeaturedEvent></FeaturedEvent>
                         <FeaturedEventDetails/>
+                        <EventSchedule/>
                     </div>
 
                     {/* 2nd row : 2nd column */}
