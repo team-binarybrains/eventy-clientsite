@@ -5,12 +5,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.openSans{
-    font-family: 'Open Sans', sans-serif;
+.openSans {
+  font-family: 'Open Sans', sans-serif;
 }
 
-.roboto{
-    font-family: 'Roboto', sans-serif;
+.roboto {
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -42,7 +42,14 @@ code {
 ::-webkit-scrollbar {
   width: 0px;
 }
+
 /* for selected color /added by rashid */
-::selection{
+::selection {
   color: #ff9900;
+}
+
+.text-color {
+  background: -webkit-linear-gradient(#ffbe30, #ff3e00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
