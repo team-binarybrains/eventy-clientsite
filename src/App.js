@@ -28,16 +28,22 @@ function App() {
         ></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
-        <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
-        <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
+        <Route
+          path="/eventlist"
+          element={<EventListDetailsMain></EventListDetailsMain>}
+        ></Route>
+        <Route
+          path="/event-details"
+          element={<EventDetails></EventDetails>}
+        ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
+      <Footer></Footer>
       <BackTopBtn></BackTopBtn>
       <MessengerCustomerChat
         pageId="103025519179972"
         appId="1257335411675093"
       />
-    
 
       <ToastContainer />
     </div>
