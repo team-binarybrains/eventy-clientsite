@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
 import astronaut from "./Image/banner-1.jpg";
@@ -39,15 +40,17 @@ const UpcommingEvent = () => {
   }, [])
 
 
-  const settings = {
+  const upComingSettings = {
+    className:"center",
     infinite: true,
     lazyLoad: true,
     speed: 300,
-    slidesToShow: 2,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     centerMode: true,
-    centerPadding: 270,
+    centerPadding: "0",
     responsive: [
-      {
+      /* {
         breakpoint: 1024,
         settings: {
           slidesToShow: 3,
@@ -55,17 +58,9 @@ const UpcommingEvent = () => {
           infinite: true,
           dots: true,
         },
-      },
+      }, */
       {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 2,
-        },
-      },
-      {
-        breakpoint: 480,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -78,58 +73,62 @@ const UpcommingEvent = () => {
   };
 
   return (
-    <div>
+    <div className="container mx-auto px-10 pt-16">
 
-      <div className="mt-24 mb-14">
-        <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]">UPCOMMING EVENTS</h1>
+      <div className="space-y-3">
+        <h1 className="text-center uppercase text-gray-400 text-[18px] tracking-[10px]">UPCOMMING EVENTS</h1>
         <p className="text-5xl tracking-wider text-center">Latest <span className="font-bold">Awesome Events</span></p>
       </div>
 
       <div className="app">
-        <Slider {...settings}>
+        <Slider {...upComingSettings} className='py-10 px-5 overflow-visible'>
           {images.map((img, idx) => (
 
-            <div className={idx === imageIndex ? "slide activeSlide" : "slide"}>
-              <div className='h-full w-full'>
-
-                <div className="flex justify-center w-[600px]">
+            <div className={`slide ${idx === imageIndex ? "activeSlide" : ""}`}>
+              
+              {
+                idx === imageIndex ?
+                <div className="scale-50 2xl:scale-100 flex justify-center min-w-[20rem] h-32">
                   <CountDown></CountDown>
-                </div>
+                </div> :
+                <div className="scale-50 2xl:scale-100 flex justify-center min-w-[20rem] h-32">
+                
+              </div>
+              }
+              
+              <div className="relative">
+                <img className="h-60" src={img.img} alt={img} />
 
-                <div>
-                  <div className="h-[405px] w-[600px]">
-                    <img className="h-80 w-[]" src={img.img} alt={img} />
-                  </div>
 
-                  <div className="w-full flex justify-end mb-14">
-                    <div className='bg-white px-5 w-[300px] sdw -mr-16 -mt-[350px]'>
-                      <div className=''>
-                        <h1 className="title-inline py-5">{img.title_line}</h1>
-                        <p className="text-[#ffbe30] text-xl ">{img.Tickets}</p>
-                        <p className="text-[#878787] text-xl py-3">
-                          <span className="bg-[#f7f7f7] p-1 text-center rounded-full">
-                            <AiOutlineClockCircle className='inline-block text-2xl -mt-1 text-[#ffbe30] rounded-t-full' />
-                          </span>
-
-                          {img.Start}</p>
-                        <p className="text-[#878787] text-xl py-3">
-                          <span className=" bg-[#f7f7f7] p-1 text-center rounded-full">
-                            <GoLocation className='inline-block text-2xl -mt-1 text-[#ffbe30] ' />
-                          </span>
-                          {img.location}</p>
-                        <button className="custom-btn px-16 font-bold  py-4 mb-10 rounded-full text-white ">Tickets & details</button>
-                      </div>
+                {
+                  idx === imageIndex &&
+                  <div className='bg-white w-[200px] sm:w-[250px] rounded sdw p-2 sm:px-5 absolute -bottom-20 right-[10%]'>
+                    <div className='space-y-2'>
+                      <h1 className="title-inline pb-2">{img.title_line}</h1>
+                      <p className="text-[#ffbe30] font-bold">{img.Tickets}</p>
+                      <p className="text-[#878787] text-sm">
+                        <span className="bg-[#f7f7f7] p-1 text-center rounded-full">
+                          <AiOutlineClockCircle className='inline-block text-xl -mt-1 text-[#ffbe30] rounded-t-full' />
+                        </span>
+                        {img.Start}</p>
+                      <p className="text-[#878787] text-sm">
+                        <span className=" bg-[#f7f7f7] p-1 text-center rounded-full">
+                          <GoLocation className='inline-block text-xl -mt-1 text-[#ffbe30] ' />
+                        </span>
+                        {img.location}</p>
+                      <button className="custom-btn px-5 font-bold py-2 rounded-full text-white ">Tickets & details</button>
                     </div>
                   </div>
-                </div>
+                }
 
-                <h1 className="text-3xl font-black text-white text-center uppercase px-3 py-3 rounded b absolute top-[140px] left-10 upcomingbg" >
-                  {img.date}
-                  <br />
-                  {img.month}
-                </h1>
-
-
+                {
+                  idx === imageIndex &&
+                  <h1 className="text-3xl font-black text-white text-center uppercase px-3 py-3 rounded absolute -top-2 left-[5%] upcomingbg " >
+                    {img.date}
+                    <br />
+                    {img.month}
+                  </h1>
+                }
               </div>
             </div>
           ))}

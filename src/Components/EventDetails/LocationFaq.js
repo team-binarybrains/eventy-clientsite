@@ -9,15 +9,15 @@ import { HiLink } from 'react-icons/hi';
 
 const LocationFaq = () => {
     return (
-        <section className='flex flex-wrap justify-center items-center px-3'>
+        <section className='flex flex-wrap items-center px-3'>
 
             {/* event location map */}
-            <div className={`py-5 px-2 border-2 h-[26rem] min-w-[12rem] w-full max-w-[19rem] grow`}>
+            <div className={`py-5 px-2 border-2 h-[26rem] min-w-[12rem] w-full max-w-[22rem] grow`}>
                 <h2 className='text-3xl roboto'>Event <span className='font-bold'>Location</span></h2>
             </div>
 
             {/* event location info */}
-            <div className={`pt-5 bg-slate-500/10 border h-[26rem] min-w-[12rem] w-full max-w-[19rem] grow`}>
+            <div className={`pt-5 bg-slate-500/10 border h-[26rem] min-w-[12rem] w-full max-w-[22rem] grow`}>
                 <div className='h-[6rem] px-5 border-b-2 flex gap-5 flex-wrap'>
                     <FontAwesomeIcon icon={faLocationDot} className='text-xl text-white px-5 py-4 rounded-full bg-amber-500' />
                     <div>
@@ -31,12 +31,12 @@ const LocationFaq = () => {
                     <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> Istanbul, IS 240012</p>
                     <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> Thursday, December 26, 2018</p>
                     <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> From <b className='font-semibold'>15.00 PM</b> to <b className='font-semibold'>20.00 PM</b> (EST)</p>
-                    <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold`}>add to my calendar</button>
+                    <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold uppercase`}>add to my calendar</button>
                 </article>
             </div>
 
             {/* contact info */}
-            <div className={`py-5 bg-slate-500/10 border h-[26rem] min-w-[12rem] w-full max-w-[19rem] grow`}>
+            <div className={`py-5 bg-slate-500/10 border h-[26rem] min-w-[12rem] w-full max-w-[22rem] grow`}>
                 <div className='h-[6rem] px-5 border-b-2 flex gap-5 flex-wrap'>
                     <FontAwesomeIcon icon={faLink} className='text-xl text-white px-4 py-4 rounded-full bg-amber-500' />
                     <div>
@@ -49,12 +49,12 @@ const LocationFaq = () => {
                     <button className='text-gray-900/90 text-sm font-bold openSans'><FaFacebookF className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2'/> facebook.com/eventy</button>
                     <button className='text-gray-900/90 text-sm font-bold openSans'><BsTwitter className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2'/> twitter.com@eventy</button>
                     <button className='text-gray-900/90 text-sm font-bold openSans'><HiLink className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2'/> https://eventy-bb.web.app</button>
-                    <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold`}>contact with us</button>
+                    <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold uppercase`}>contact with us</button>
                 </article>
             </div>
 
             {/* ticket ad */}
-            <div className={`pt-2 h-[26rem] min-w-[12rem] w-full max-w-[19rem] grow`}>
+            <div className={`pt-2 h-[26rem] min-w-[12rem] w-full max-w-[22rem] grow`}>
                 <div className={`flex justify-center ${style.leftBgimage} p-10`}>
                     <div className="text-center ">
                         <h1 className="text-[18px] text-[#FFFFFF] uppercase">
