@@ -7,6 +7,8 @@ import Venues from "./Venues/Venues";
 import AboutUs from "./AboutUs/AboutUs";
 import Gallery from "./Gallery/Gallery";
 import PurchaseEvent from "./PurchaseEvent/PurchaseEvent";
+import Offer from "./Offer/Offer";
+import PartnerClient from "./Partner&Client/PartnerClient";
 import Navbar from "../Share/Navbar/Navbar";
 import Banner from "./Banner/Banner";
 import OurServices from "./OurServices/OurServices.module";
@@ -14,19 +16,18 @@ import OurServices from "./OurServices/OurServices.module";
 const Home = () => {
   return (
     <div>
-      
       <Navbar></Navbar>
       <Banner></Banner>
+      <UpcommingEvent></UpcommingEvent>
       <AboutUs></AboutUs>
       <Venues />
+      <Offer></Offer>
       <EventListing></EventListing>
       <Gallery></Gallery>
       <OurServices></OurServices>
       <Staffs />
-      <PurchaseEvent></PurchaseEvent>
-      <Blogs>
-      </Blogs>
-      <UpcommingEvent></UpcommingEvent>
+      <PartnerClient></PartnerClient>
+      <Blogs></Blogs>
     </div>
   );
 };
