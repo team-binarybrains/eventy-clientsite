@@ -12,6 +12,7 @@ import PartnerClient from "./Partner&Client/PartnerClient";
 import Navbar from "../Share/Navbar/Navbar";
 import Banner from "./Banner/Banner";
 import OurServices from "./OurServices/OurServices.module";
+import RegistrationTime from "../RegistrationTime/RegistrationTime";
 
 const Home = () => {
   return (
@@ -28,6 +29,7 @@ const Home = () => {
       <Staffs />
       <PartnerClient></PartnerClient>
       <Blogs></Blogs>
+      <RegistrationTime />
     </div>
   );
 };
