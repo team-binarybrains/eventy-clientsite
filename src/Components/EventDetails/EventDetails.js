@@ -14,18 +14,14 @@ const EventDetails = () => {
                     <TopBanner></TopBanner>
                 </div>
 
-                {/* 2nd row : 1st column */}
-                <div className='border-4 border-red-600 basis-[70%] grow'>
-                    <FeaturedEvent></FeaturedEvent>
-                </div>
                 <section className='px-3 flex flex-wrap justify-center'>
                     {/* 2nd row : 1st column (-----Rashid vai-------)*/}
-                    <div className='border-4 border-red-600 basis-[70%] grow min-w-[900px] min-h-[200px] shrink'>
-
+                    <div className='border-4 border-red-600 basis-[50%] grow min-w-[800px] min-h-[200px] shrink'>
+                        <FeaturedEvent></FeaturedEvent>
                     </div>
 
                     {/* 2nd row : 2nd column */}
-                    <div className='basis-[30%] grow min-w-[360px] min-h-[200px] shrink'>
+                    <div className='basis-[30%] grow min-w-[350px] min-h-[200px] shrink'>
                         <LocationFaq></LocationFaq>
                     </div>
                 </section>
