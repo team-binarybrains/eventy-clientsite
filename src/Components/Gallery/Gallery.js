@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Address from '../AboutUs/Address'
+import Footer from '../Share/Footer/Footer'
 import Merories from './Merories'
 
 function Gallery() {
@@ -26,6 +28,8 @@ function Gallery() {
 
             </div>
             <Merories></Merories>
+            <Address></Address>
+            <Footer></Footer>
         </div>
     )
 }
