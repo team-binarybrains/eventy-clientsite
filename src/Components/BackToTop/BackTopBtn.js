@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { AiOutlineArrowUp } from "react-icons/ai";
 import { BiUpArrow } from "react-icons/bi";
@@ -20,7 +21,7 @@ const BackTopBtn = () => {
       show && (
         <button
           onClick={() => scrollToTop()}
-          className="bounce  bg-gradient-to-r from-rose-600 to-red-600 hover:bg-accent-hover text-3xl  w-12 h-16 rounded-sm  fixed right-9 bottom-[550px] cursor-pointer flex justify-center items-center transition-all"
+          className="bounce  bg-gradient-to-r from-rose-600 to-red-600 hover:bg-accent-hover text-3xl  w-12 h-16 rounded-sm fixed right-8 bottom-8 cursor-pointer flex justify-center items-center transition-all"
         >
           <div className="text-white font-bold ">
             <IoIosArrowUp></IoIosArrowUp>
