@@ -14,22 +14,27 @@ const Staffs = () => {
     },[])
 
     const settings = {
+        fade: true,
         dots: false,
         infinite: true,
         speed: 1000,
         autoplay: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 5000,
+        pauseOnHover: false,
+        swipeToSlide: false,
+        arrows: false,
+        swipe: false,
     };
 
     return (
-        <section className={`${styles.bg}`}>
+        <section className={`${styles.bg} -mt-20`}>
             <div className={`${styles.bgLayer}`}>
-                <div className={`max-w-[720px] mx-auto pt-20`}>
+                <div className={`max-w-4xl mx-auto pt-20`}>
                     <Slider {...settings} className="sm:h-[500px]">
                         {
                             staffs.map((staff, i) => <div className='' key={i}>
-                                <div className='flex gap-2 sm:flex-row flex-col items-center px-3'>
-                                    <img className='h-[250px] sm:h-[500px] max-w-xs block' src={staff.image} alt="" />
+                                <div className='flex gap-5 sm:flex-row flex-col items-center px-3'>
+                                    <img className='h-[250px] sm:h-[500px] max-w-xs block object-cover' src={staff.image} alt="" />
                                     <div className='space-y-4'>
                                         <div className='h-[4px] w-[70px] bg-gradient-to-r from-red-500 to-pink-500 mx-0 -mb-3 rounded-full' />
                                         <h6 className={`${styles.openSans} uppercase tracking-[5px] text-gray-500`}>Eventy Staffs</h6>
