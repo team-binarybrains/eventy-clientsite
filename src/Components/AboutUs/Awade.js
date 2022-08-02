@@ -45,7 +45,7 @@ function Awade() {
                                         </div>
                                     </div>
 
-                                    <div className='flex items-center -mt-16'>
+                                    <div className='flex items-center -mt-20'>
                                         <p className='text-8xl text-[#ffbe30] -mt-8 -ml-3'>.</p>
                                         <div>
                                             <p className='border-b-2 w-[100px] pl-5 -ml-2 font-semibold text-[#ffbe30]'>AUG 2022</p>
@@ -59,7 +59,7 @@ function Awade() {
                                         </div>
                                     </div>
 
-                                    <div className='flex items-center -mt-14'>
+                                    <div className='flex items-center -mt-20'>
                                         <p className='text-8xl text-[#ffbe30] -mt-8 -ml-3'>.</p>
                                         <div>
                                             <p className='border-b-2 w-[100px] pl-5 -ml-2 font-semibold text-[#ffbe30]'>AUG 2022</p>
