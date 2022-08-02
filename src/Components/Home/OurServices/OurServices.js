@@ -36,7 +36,7 @@ export default function OurServices() {
     };
 
     return (
-        <div className="lg:px-80 pt-5 pb-32 bg-gray-100">
+        <div className="lg:px-80 pt-20 pb-32 bg-gray-100">
 
 
             <div className="mt-6 mb-14">
