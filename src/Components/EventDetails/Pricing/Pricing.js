@@ -7,8 +7,8 @@ const Pricing = () => {
          <div className="">
             <h1 class="text-4xl pt-4 pl-2 font-medium text-slate-700 ">Event <strong>Pricing Plans</strong></h1>
          </div>
-         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-10">
-            <div class="shadow-lg rounded-lg w-64 bg-white dark:bg-gray-100 p-4 " >
+         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 my-10 items-center justify-items-center">
+            <div class="shadow-lg rounded-lg w-full bg-white dark:bg-gray-100 p-4 " >
                <p class="text-gray-800  text-xl font-semibold block mb-4">
                   STANDART
                </p>
@@ -58,7 +58,7 @@ const Pricing = () => {
                   Choose plan
                </button>
             </div>
-            <div class=" rounded-lg w-64 bg-white dark:bg-white p-4 shadow-2xl border" >
+            <div class=" rounded-lg w-full bg-white dark:bg-white p-4 shadow-2xl border" >
                <p class="text-gray-800  text-xl font-semibold block mb-4">
                PROFESSIONAL
                </p>
@@ -108,7 +108,7 @@ const Pricing = () => {
                   Choose plan
                </button>
             </div>
-            <div class="shadow-lg rounded-lg w-64 bg-white dark:bg-gray-100 p-4" >
+            <div class="shadow-lg rounded-lg w-full bg-white dark:bg-gray-100 p-4" >
                <p class="text-gray-800  text-xl font-semibold block mb-4">
                ENTERPRISE
                </p>
@@ -141,15 +141,15 @@ const Pricing = () => {
                      </svg>
                      <h2 className='text-lg text-slate-500 '>45 Minutes</h2>
                   </li>
-                  <li class="mb-3 flex items-center ">
+                  <li class="mb-3 flex items-center gap-4">
                      <span><ImCross className='bg-red-400 text-xl text-white p-1 rounded-full' /></span>
                      <h2 className='text-lg text-slate-500 '>10 Digital images</h2>
                   </li>
-                  <li class="mb-3 flex items-center ">
+                  <li class="mb-3 flex items-center gap-4">
                      <span><ImCross className='bg-red-400 text-xl text-white p-1 rounded-full' /></span>
                      <h2 className='text-lg text-slate-500 '>Print Release</h2>
                   </li>
-                  <li class="mb-3 flex items-center ">
+                  <li class="mb-3 flex items-center gap-4">
                      <span><ImCross className='bg-red-400 text-xl text-white p-1 rounded-full' /></span>
                      <h2 className='text-lg text-slate-500 '>Custom Album</h2>
                   </li>
