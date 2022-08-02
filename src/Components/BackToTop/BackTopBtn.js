@@ -17,19 +17,19 @@ const BackTopBtn = () => {
   const scrollToTop = () => {
     scroll.scrollToTop();
   };
-    return (
-      show && (
-        <button
-          onClick={() => scrollToTop()}
-          className="bounce  bg-gradient-to-r from-rose-600 to-red-600 hover:bg-accent-hover text-3xl  w-12 h-16 rounded-sm fixed right-8 top-28 cursor-pointer flex justify-center items-center transition-all z-[999]"
-        >
-          <div className="text-white font-bold ">
-            <IoIosArrowUp></IoIosArrowUp>
-            <IoIosArrowUp className="-mt-10"></IoIosArrowUp>
-          </div>
-        </button>
-      )
-    );
+  return (
+    show && (
+      <button
+        onClick={() => scrollToTop()}
+        className="bounce  bg-gradient-to-r from-rose-600 to-red-600 hover:bg-accent-hover text-3xl  w-12 h-16 rounded-sm fixed right-8 bottom-[530px] cursor-pointer flex justify-center items-center transition-all z-[999]"
+      >
+        <div className="text-white font-bold ">
+          <IoIosArrowUp></IoIosArrowUp>
+          <IoIosArrowUp className="-mt-10"></IoIosArrowUp>
+        </div>
+      </button>
+    )
+  );
 };
 
 export default BackTopBtn;
