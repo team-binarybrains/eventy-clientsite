@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Staffs from '../Home/Staffs/Staffs'
+import Footer from '../Share/Footer/Footer'
 import Address from './Address'
 import Advantage from './Advantage'
 import Awade from './Awade'
@@ -80,7 +81,7 @@ function AboutUs() {
         <Staffs></Staffs>
         <Special></Special>
         <Address></Address>
-
+        <Footer></Footer>
         </div>
     )
 }

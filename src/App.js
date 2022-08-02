@@ -14,6 +14,7 @@ import EventListDetailsMain from "./Components/EventListDetails/EventListDetails
 import AboutUs from "./Components/AboutUs/AboutUs";
 import Footer from "./Components/Share/Footer/Footer";
 import EventDetails from "./Components/EventDetails/EventDetails";
+import Gallery from "./Components/Gallery/Gallery";
 
 function App() {
   return (
@@ -23,10 +24,8 @@ function App() {
         <Route path="/authentication" element={<Form></Form>}></Route>
         <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
-        <Route
-          path="/eventlist"
-          element={<EventListDetailsMain></EventListDetailsMain>}
-        ></Route>
+        <Route path="/gallery" element={<Gallery></Gallery>}></Route>
+        <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
         <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
