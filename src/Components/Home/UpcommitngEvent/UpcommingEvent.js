@@ -102,7 +102,7 @@ const UpcommingEvent = () => {
 
                 {
                   idx === imageIndex &&
-                  <div className='bg-white w-[250px] rounded sdw p-2 px-5 absolute -bottom-20 right-[10%]'>
+                  <div className='bg-white w-[200px] sm:w-[250px] rounded sdw p-2 sm:px-5 absolute -bottom-20 right-[10%]'>
                     <div className='space-y-2'>
                       <h1 className="title-inline pb-2">{img.title_line}</h1>
                       <p className="text-[#ffbe30] font-bold">{img.Tickets}</p>
