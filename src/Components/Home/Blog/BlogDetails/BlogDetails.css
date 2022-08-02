@@ -1,5 +1,5 @@
 .banner-background{
-    background-image: url(https://i.ibb.co/5Rby3Rf/0-breadcrumb-bg.jpg);
+    background-image: url(https://i.ibb.co/6N7YvRF/0-breadcrumb-bg-1.jpg);
      background-size:cover;
      background-image: cover;
      background-repeat: no-repeat;
@@ -10,7 +10,7 @@
 
 @media screen and (max-width: 576px) {
     .banner-background{
-        background-image: url(https://i.ibb.co/5Rby3Rf/0-breadcrumb-bg.jpg);
+        background-image: url(https://i.ibb.co/6N7YvRF/0-breadcrumb-bg-1.jpg);
          background-size:cover;
          background-image: cover;
          background-repeat: no-repeat;
