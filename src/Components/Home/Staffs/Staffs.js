@@ -29,12 +29,12 @@ const Staffs = () => {
         <section className={`${styles.bg} -mt-20`}>
             <div className={`${styles.bgLayer}`}>
                 <div className={`max-w-4xl mx-auto pt-20`}>
-                    <Slider {...settings} className="sm:h-[530px]">
+                    <Slider {...settings} className="h-[90vh]">
                         {staffs.map((staff, i) => (
                             <div className="" key={i}>
                                 <div className="flex gap-5 sm:flex-row flex-col items-center px-3">
                                     <img
-                                        className=" sm:w-72 block object-cover"
+                                        className="h-[90vh] block object-cover"
                                         src={staff.image}
                                         alt=""
                                     />
