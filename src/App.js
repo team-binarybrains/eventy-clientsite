@@ -15,6 +15,7 @@ import AboutUs from "./Components/AboutUs/AboutUs";
 import Footer from "./Components/Share/Footer/Footer";
 import EventDetails from "./Components/EventDetails/EventDetails";
 import Gallery from "./Components/Gallery/Gallery";
+import MainBlogs from "./Components/MainBlogs/MainBlogs";
 
 function App() {
   return (
@@ -25,6 +26,10 @@ function App() {
         <Route
           path="/blogs-details"
           element={<BlogDetails></BlogDetails>}
+        ></Route>
+        <Route
+          path="/blogs"
+          element={<MainBlogs/>}
         ></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
