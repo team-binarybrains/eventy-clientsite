@@ -1,0 +1,19 @@
+.left-position {
+  position: absolute;
+  transform-origin: left;
+  transform: rotate(-90deg);
+  bottom: 20px;
+  left: 20px;
+}
+
+.hvr:hover .cld{
+  background-image: linear-gradient(to bottom right, #ffbe30, #ff3e00);
+  opacity: 0.75;
+  
+  /* color: white; */
+}
+
+.hvr:hover .cld2{
+  color: #ffbe30;
+}
+

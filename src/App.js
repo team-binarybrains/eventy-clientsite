@@ -29,10 +29,7 @@ function App() {
         ></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
-        <Route
-          path="/eventlist"
-          element={<EventListDetailsMain></EventListDetailsMain>}
-        ></Route>
+        <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
         <Route path="/event-booking" element={<EventBooking></EventBooking>}></Route>
         <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
         <Route
