@@ -39,7 +39,7 @@ const Blogs = () => {
             <div className="lg:w-[550px]">
               <div className=" flex justify-between items-center cursor-pointer">
                 <h3 className=" font-semibold text-xl leading-5 text-gray-800">
-                  How to join Harmoni Event Management?
+                  How to join Eventy Event Management?
                 </h3>
                 <button
                   aria-label="too"
