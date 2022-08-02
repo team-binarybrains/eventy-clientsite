@@ -46,6 +46,7 @@ code {
 /* for selected color /added by rashid */
 ::selection {
   color: #ff9900;
+  background-color: #00000038;
 }
 
 .text-color {

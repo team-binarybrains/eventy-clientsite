@@ -97,3 +97,9 @@ button {
 .active-content {
    display: block;
 }
+@media only screen and (max-width:644px){
+   .bloc-tabs{
+      display: grid;
+      justify-items: center;
+   }
+}
