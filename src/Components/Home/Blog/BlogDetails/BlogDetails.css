@@ -1,0 +1,36 @@
+.banner-background{
+    background-image: url(https://i.ibb.co/6N7YvRF/0-breadcrumb-bg-1.jpg);
+     background-size:cover;
+     background-image: cover;
+     background-repeat: no-repeat;
+    height: 378px;
+     object-fit: cover;
+     background-image: center;
+}
+
+@media screen and (max-width: 576px) {
+    .banner-background{
+        background-image: url(https://i.ibb.co/6N7YvRF/0-breadcrumb-bg-1.jpg);
+         background-size:cover;
+         background-image: cover;
+         background-repeat: no-repeat;
+           height: 378px;
+         object-fit: cover;
+         background-image: center;
+    }}
+
+
+    .breadcrumb-section {
+        color: #ffffff;
+        margin-bottom: 15px;
+        letter-spacing: 8px;
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+
+    .big-title {
+        margin: 0px;
+        font-size: 42px;
+        color: #ffffff;
+        text-transform: uppercase;
+    }

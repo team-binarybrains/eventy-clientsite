@@ -1,0 +1,52 @@
+.navbar{
+   /* background-color: rgba(29, 26, 26, 0) !important; */
+   
+}
+
+#megaMenu{
+   color: #fff;
+   z-index: 1111;
+   background-color:#333333;
+}
+/* for hover in mega menu */
+.divider::before,
+.divider::after {
+   background-color: #cacaca;
+}
+.menu :where(li) > :where(*:not(ul)) {
+   padding-left: 1rem;
+   padding-right: 1rem;
+   padding-top: 8px;
+   padding-bottom: 8px;
+}
+.hover\:bg-slate-300:hover {
+   --tw-bg-opacity: 1;
+   background-color: rgb(240, 240, 240);
+}
+.menu[class*=" p-"] li > *, .menu[class^="p-"] li > * {
+   border-radius:5px;
+   -webkit-border-radius:5px;
+   -moz-border-radius:5px;
+   -ms-border-radius:5px;
+   -o-border-radius:5px;
+}
+.menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active), .menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):active) {
+   --tw-bg-opacity: 1; 
+   background-color: transparent;
+   --tw-text-opacity: 1;
+   color: hsl(var(--pc) / var(--tw-text-opacity)); 
+}
+
+/* after scroll added class  */
+.active_nav {
+   transition: all 1s ease-in-out;
+   background-color:#333333 !important;
+   box-shadow: 0 0 .5rem rgba(0, 0, 0, 0.678);
+   -webkit-transition: all 1s ease-in-out;
+   -moz-transition: all 1s ease-in-out;
+   -ms-transition: all 1s ease-in-out;
+   -o-transition: all 1s ease-in-out;
+}
+.menu li a{
+   padding: 10px;
+}

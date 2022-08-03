@@ -13,27 +13,35 @@ const Staffs = () => {
   }, []);
 
   const settings = {
+    fade: true,
     dots: false,
     infinite: true,
-    speed: 1000,
+    speed: 2000,
     autoplay: true,
     autoplaySpeed: 5000,
+    pauseOnHover: false,
+    swipeToSlide: false,
+    arrows: false,
+    swipe: false,
   };
 
   return (
     <section className={`${styles.bg}`}>
-      <div className={`${styles.bgLayer}`}>
-        <div className={`max-w-4xl mx-auto pt-20`}>
-          <Slider {...settings} className="sm:h-[500px]">
+      <div className={`${styles.bgLayer} pt-10`}>
+        <div className={`mx-auto`}>
+          <Slider
+            {...settings}
+            className="min-h-[90vh] sm:h-[71.6vh] sm:min-h-0 max-w-3xl mx-auto"
+          >
             {staffs.map((staff, i) => (
               <div className="" key={i}>
                 <div className="flex gap-5 sm:flex-row flex-col items-center px-3">
                   <img
-                    className="h-[250px] sm:h-[500px] max-w-xs block"
+                    className="max-h-[90vh] max-w-sm block object-cover"
                     src={staff.image}
                     alt=""
                   />
-                  <div className="space-y-4">
+                  <div className="space-y-4 max-w-sm">
                     <div className="h-[4px] w-[70px] bg-gradient-to-r from-red-500 to-pink-500 mx-0 -mb-3 rounded-full" />
                     <h6
                       className={`${styles.openSans} uppercase tracking-[5px] text-gray-500`}

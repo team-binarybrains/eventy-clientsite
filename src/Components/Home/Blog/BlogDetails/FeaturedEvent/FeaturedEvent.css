@@ -1,0 +1,27 @@
+.resent-post-section-title{
+   
+    font-size: 36px;
+    font-weight: 400;
+    color: #333333;
+   
+}
+.sitebanner{
+    background-image: url(https://i.ibb.co/HKnXjsk/spacial-event-bg.jpg);
+     background-size:cover;
+     background-image: cover;
+     background-repeat: no-repeat;
+    height: 370px;
+     object-fit: cover;
+     background-image: center;
+}
+
+@media screen and (max-width: 576px) {
+    .sitebanner{
+        background-image: url(https://i.ibb.co/HKnXjsk/spacial-event-bg.jpg);
+         background-size:cover;
+         background-image: cover;
+         background-repeat: no-repeat;
+           height: 370px;
+         object-fit: cover;
+         background-image: center;
+    }}
