@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.6.2",
     "@fortawesome/fontawesome-svg-core": "^6.1.2",
     "@fortawesome/free-solid-svg-icons": "^6.1.2",
     "@fortawesome/react-fontawesome": "^0.2.0",
@@ -14,8 +15,8 @@
     "axios": "^0.27.2",
     "daisyui": "^2.20.0",
     "firebase": "^9.9.1",
-    "pure-react-carousel": "^1.29.0",
     "nuka-carousel": "^4.8.4",
+    "pure-react-carousel": "^1.29.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-firebase-hooks": "^5.0.3",

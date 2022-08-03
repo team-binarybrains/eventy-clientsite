@@ -16,6 +16,7 @@ import Footer from "./Components/Share/Footer/Footer";
 import EventDetails from "./Components/EventDetails/EventDetails";
 import EventBooking from "./Components/EventBooking/EventBooking";
 import Gallery from "./Components/Gallery/Gallery";
+import SingleService from "./Components/Home/OurServices/SingleService";
 import DayOne from "./Components/EventDetails/FeaturedEvent/EventSchedule/DayOne/DayOne";
 import MainBlogs from "./Components/MainBlogs/MainBlogs";
 import ScrollToTop from "./Components/Share/ScrolltoTop/ScrollToTop";
@@ -31,18 +32,38 @@ function App() {
 
   return (
     <div className="overflow-x-hidden">
-      <Navbar location ={location}></Navbar>
+      <Navbar location={location}></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
-        <Route path="/blogs-details" element={<BlogDetails></BlogDetails>}></Route>
-        <Route path="/blogs" element={<MainBlogs/>} ></Route>
+        <Route
+          path="/blogs-details/:blogId"
+          element={<BlogDetails></BlogDetails>}
+        ></Route>
+        <Route path="/blogs" element={<MainBlogs />}></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
-        <Route path="/event-booking" element={<EventBooking></EventBooking>}></Route>
-        <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
+        <Route
+          path="/event-booking"
+          element={<EventBooking></EventBooking>}
+        ></Route>
+        <Route
+          path="/eventlist"
+          element={<EventListDetailsMain></EventListDetailsMain>}
+        ></Route>
         <Route path="/event" element={<DayOne></DayOne>}></Route>
-        <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
+        <Route
+          path="/event-details"
+          element={<EventDetails></EventDetails>}
+        ></Route>
+        <Route
+          path="/service-details"
+          element={<SingleService></SingleService>}
+        ></Route>
+        <Route
+          path="/service-details/:id"
+          element={<SingleService></SingleService>}
+        ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

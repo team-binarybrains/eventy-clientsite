@@ -5,11 +5,10 @@ import "./Navbar.css";
 import { BiUser } from "react-icons/bi";
 import TopnavBar from "../TopBar/TopnavBar";
 
-const Navbar = ({location}) => {
-
-  const {pathname} = location;
-  const routeName = pathname.slice('1');
-  console.dir(location);
+const Navbar = ({ location }) => {
+  const { pathname } = location;
+  const routeName = pathname.slice("1");
+  // console.dir(location);
 
   const [navbarBg, setNavbar] = useState(false);
   const changeBg = () => {
@@ -21,11 +20,10 @@ const Navbar = ({location}) => {
   };
   window.addEventListener("scroll", changeBg);
 
-
   return (
     <div>
       {/* navbar bg-transparent fixed z-50 */}
-      {routeName ?
+      {routeName ? (
         // use in other route without home
         <section className="fixed left-0 right-0 top-0 z-50">
           <TopnavBar></TopnavBar>
@@ -160,7 +158,9 @@ const Navbar = ({location}) => {
                   </li>
                 </ul>
               </div>
-              <Link to="/" class="btn btn-ghost normal-case text-xl">Eventy</Link>
+              <Link to="/" class="btn btn-ghost normal-case text-xl">
+                Eventy
+              </Link>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal p-0">
@@ -277,9 +277,9 @@ const Navbar = ({location}) => {
                 </Link>
               </div>
             </div>
-          </div> 
+          </div>
         </section>
-        :
+      ) : (
         // use in home route
         <div
           class={
@@ -416,7 +416,9 @@ const Navbar = ({location}) => {
                 </li>
               </ul>
             </div>
-            <Link to="/" class="btn btn-ghost normal-case text-xl">Eventy</Link>
+            <Link to="/" class="btn btn-ghost normal-case text-xl">
+              Eventy
+            </Link>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
@@ -534,7 +536,7 @@ const Navbar = ({location}) => {
             </div>
           </div>
         </div>
-      }
+      )}
     </div>
   );
 };
