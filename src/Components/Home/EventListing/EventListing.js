@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,8 +9,12 @@ import {
   faCakeCandles,
   faMusic,
   faSquareCheck,
+  faShirt,
 } from "@fortawesome/free-solid-svg-icons";
 import ConferenceEvent from "./ConferenceEvent";
+import MusicEvent from "./MusicEvent";
+import { FaTshirt } from "react-icons/fa";
+import FashionEvent from "./FashionEvent";
 
 const EventListing = () => {
   return (
@@ -44,9 +48,9 @@ const EventListing = () => {
                 <span className="font-bold  ">
                   <FontAwesomeIcon
                     className="text-orange-500 mr-2"
-                    icon={faCakeCandles}
+                    icon={faShirt}
                   />
-                  Play Ground
+                  Fashion
                 </span>{" "}
                 <span className="text-gray-700 ">Event</span>
               </h1>
@@ -57,9 +61,9 @@ const EventListing = () => {
                 <span className="font-bold ">
                   <FontAwesomeIcon
                     className="text-orange-500 mr-2 "
-                    icon={faSquareCheck}
+                    icon={faMusic}
                   />
-                  Conference
+                  Music
                 </span>{" "}
                 <span className="text-gray-700 ">Event</span>
               </h1>
@@ -67,12 +71,20 @@ const EventListing = () => {
           </TabList>
 
           <TabPanel>
-            <ConferenceEvent></ConferenceEvent>
+            <div>
+              <ConferenceEvent></ConferenceEvent>
+            </div>
           </TabPanel>
 
-          <TabPanel></TabPanel>
+          <TabPanel>
+            <FashionEvent></FashionEvent>
+          </TabPanel>
 
-          <TabPanel></TabPanel>
+          <TabPanel>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+              <MusicEvent></MusicEvent>
+            </div>
+          </TabPanel>
         </Tabs>
       </div>
     </div>
