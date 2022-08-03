@@ -1,0 +1,92 @@
+[
+    {
+      "tittle": "Los Angeles Music Event",
+      "type": "music",
+      "image": "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
+      "date": "25,August,2022",
+      "ticketprice": "70",
+      "starttime": "2:00 PM",
+      "endtime": "9:00 PM",
+      "address": "763 Frost Street, Temperanceville, Rhode Island, 7369"
+    },
+    {
+      "tittle": "Barcelona Food Truck Festival 2018",
+      "type": "music",
+      "image": "https://i.ibb.co/TK9GvgT/event-1.jpg",
+      "date": "5,August,2022",
+      "ticketprice": "70",
+      "starttime": "3:00 PM",
+      "endtime": "10:00 PM",
+      "address": "970 Nixon Court, Nipinnawasee, Alabama, 4365"
+    },
+    {
+      "tittle": "Dhaka Wine Party 2022 ",
+      "type": "music",
+      "image": "https://i.ibb.co/sbZBrKS/event-4.jpg",
+      "date": "5,September,2022",
+      "ticketprice": "100",
+      "starttime": "3:00 PM",
+      "endtime": "10:00 PM",
+      "address": "734 Irvington Place, Newry, Montana, 300"
+    },
+    {
+      "tittle": "MK Conference Event",
+      "type": "conference",
+      "image": "https://i.ibb.co/m05Msqz/event-details-3.jpg",
+      "date": "10,September,2022",
+      "ticketprice": "50",
+      "starttime": "3:00 PM",
+      "endtime": "7:00 PM",
+      "address": "738 Bethel Loop, Rosine, Oklahoma, 4319"
+    },
+    {
+      "tittle": "Dhaka Music Event",
+      "type": "music",
+      "image": "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
+      "date": "10,September,2022",
+      "ticketprice": "50",
+      "starttime": "4:00 PM",
+      "endtime": "8:00 PM",
+      "address": "238 Maple Avenue, Rivers, Georgia, 5286"
+    },
+    {
+      "tittle": "Rangpur Music Event,2022",
+      "type": "music",
+      "image": "https://i.ibb.co/tH7hrhZ/5.jpg",
+      "date": "20,September,2022",
+      "ticketprice": "40",
+      "starttime": "4:00 PM",
+      "endtime": "8:00 PM",
+      "address": "877 Glenmore Avenue, Urbana, District Of Columbia, 8223"
+    },
+    {
+      "tittle": "USA Conference Event,2022",
+      "type": "conference",
+      "image": "https://i.ibb.co/ScjVJTD/event-details-1.jpg",
+      "date": "24,September,2022",
+      "ticketprice": "40",
+      "starttime": "4:00 PM",
+      "endtime": "8:00 PM",
+      "address": "173 Conklin Avenue, Stockwell, North Carolina, 1606"
+    },
+    {
+      "tittle": "Big Conference Event,2022",
+      "type": "conference",
+      "image": "https://i.ibb.co/HGPMDfq/event-6.jpg",
+      "date": "24,October,2022",
+      "ticketprice": "50",
+      "starttime": "4:00 PM",
+      "endtime": "6:00 PM",
+      "address": "220 Jardine Place, Herbster, Louisiana, 7184"
+    },
+    {
+      "tittle": "Dubai Music Event,2022",
+      "type": "music",
+      "image": "https://i.ibb.co/XjyGkvx/event-3-1.jpg",
+      "date": "27,October,2022",
+      "ticketprice": "100",
+      "starttime": "4:00 PM",
+      "endtime": "9:00 PM",
+      "address": "304 Elton Street, Calpine, Illinois, 6837"
+    }
+  ]
