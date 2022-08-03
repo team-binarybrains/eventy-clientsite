@@ -9,7 +9,7 @@ import TestimonialClient from './TestimonialClient'
 
 function AboutUs() {
     return (
-        <div>
+        <div className='route'>
 
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
 

@@ -6,7 +6,7 @@ const Form = () => {
     const [activePanel,setActivePanel] = useState('right-panel-active');
 
     return (
-        <div className='h-screen flex justify-center items-center px-3'>
+        <div className='h-screen flex justify-center items-center px-3 route'>
 
             {/* for large device */}
             <div className={`${styleLg.container} ${activePanel} hidden sm:block`}>

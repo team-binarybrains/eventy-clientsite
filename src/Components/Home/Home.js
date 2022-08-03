@@ -9,14 +9,12 @@ import Gallery from "./Gallery/Gallery";
 import PurchaseEvent from "./PurchaseEvent/PurchaseEvent";
 import Offer from "./Offer/Offer";
 import PartnerClient from "./Partner&Client/PartnerClient";
-import Navbar from "../Share/Navbar/Navbar";
 import Banner from "./Banner/Banner";
 import OurServices from "./OurServices/OurServices";
 
 const Home = () => {
   return (
     <div>
-      <Navbar></Navbar>
       <Banner></Banner>
       <UpcommingEvent></UpcommingEvent>
       <AboutUs></AboutUs>

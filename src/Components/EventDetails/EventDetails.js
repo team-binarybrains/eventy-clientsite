@@ -10,7 +10,7 @@ import TopBanner from './TopBanner';
 
 const EventDetails = () => {
     return (
-        <div>
+        <div className='route'>
             <section className='min-h-screen'>
 
                 {/* 1st row */}
