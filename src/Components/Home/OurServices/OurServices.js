@@ -82,8 +82,7 @@ export default function OurServices() {
                     {
                         serviceInfo.map((service, index) => <div key={service.index} className='relative hvr '>
 
-                            <div >
-
+                            <div className="cursor-pointer">
                                 <div className="flex justify-center relative">
                                     <img src={service.image} alt="" className="" />
                                     <div className="absolute top-0 left-11 right-[2.6rem] bottom-0 bg-transparent cld ">

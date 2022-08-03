@@ -18,7 +18,7 @@ function SingleService() {
     }, [id])
 
     return (
-        <div>
+        <div className='route'>
             <p className=''>{serviceDetails.eventName}</p>
         </div>
     )

@@ -28,7 +28,7 @@ const TopnavBar = () => {
                 icon={faPhone}
               ></FontAwesomeIcon>
               <h1 className="text-[14px] lg:text-[16px] text-white">
-                binarybrains@gmail.com
+                +8801XXXXXXXXX
               </h1>
             </div>
           </div>
