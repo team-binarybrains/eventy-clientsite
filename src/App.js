@@ -47,7 +47,7 @@ function App() {
           element={<EventBooking></EventBooking>}
         ></Route>
         <Route
-          path="/eventlist/:listId"
+          path="/eventlist"
           element={<EventListDetailsMain></EventListDetailsMain>}
         ></Route>
         <Route path="/event" element={<DayOne></DayOne>}></Route>
