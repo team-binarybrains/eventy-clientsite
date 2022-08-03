@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import sponser from "../../../asset/Client/image1.png";
 import "./PartnerClient.css";
 import Slider from "react-slick";
 
+
 const PartnerClient = () => {
 
+    const singleSponser = [0, 1, 2, 3, 4, 5]
     const sponserCount = [0, 1, 2];
-    const testimonial = [0, 1, 2]
+    const [testimonial, setTestimonial] = useState([]);
+
     const settings = {
         dots: true,
         arrows: false,
@@ -25,9 +28,15 @@ const PartnerClient = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 2000,
-        autoplaySpeed: 2000,
+        speed: 4000,
+        autoplaySpeed: 4000,
     };
+
+    useEffect(() => {
+        fetch("testimonial.json")
+            .then(res => res.json())
+            .then(data => setTestimonial(data))
+    }, [])
 
     return (
         <div className='mb-20 2xl:max-w-7xl mx-auto'>
@@ -39,48 +48,29 @@ const PartnerClient = () => {
                 </p>
             </div>
             <div className='grid grid-cols-1 sm:grid-cols-2 gap-8 mx-3 sm:mx-20'>
-                <div className='relative pl-12'>
+                <div className='relative pl-12 pb-16 sm:pb-0'>
                     <span className='sponser-title'>HARMONI <span className='font-semibold ml-1 text-amber-400'>EVENTY</span></span>
 
                     <Slider {...settings} >
                         {sponserCount.map((sc) => <div className='grid grid-cols-1'>
-                            <div className='flex'>
-                                <div className='px-8  py-10  border backgroundSet'>
+                            <div className='grid grid-cols-1 sm:grid-cols-2'>
+                                {singleSponser.map(h => <div className='px-8  py-10  border backgroundSet'>
                                     <img className='w-52  h-14 ' src={sponser} alt="" />
-                                </div>
-                                <div className='px-8  py-10  border backgroundSet'>
-                                    <img className='w-52  h-14 ' src={sponser} alt="" />
-                                </div>
-                            </div>
-                            <div className='flex'>
-                                <div className='px-8  py-10  border backgroundSet'>
-                                    <img className='w-52  h-14 ' src={sponser} alt="" />
-                                </div>
-                                <div className='px-8  py-10  border backgroundSet'>
-                                    <img className='w-52  h-14 ' src={sponser} alt="" />
-                                </div>
-                            </div>
-                            <div className='flex'>
-                                <div className='px-8  py-10  border backgroundSet'>
-                                    <img className='w-52  h-14 ' src={sponser} alt="" />
-                                </div>
-                                <div className='px-8  py-10  border backgroundSet'>
-                                    <img className='w-52  h-14 ' src={sponser} alt="" />
-                                </div>
+                                </div>)}
                             </div>
                         </div>)}
                     </Slider>
 
                 </div>
                 <div className="myclass">
-                    <h4 style={{ letterSpacing: "4px" }} className='mt-10 mb-4 text-lg text-amber-400 text-center'>TESTIMONIAL</h4>
+                    <h4 style={{ letterSpacing: "4px" }} className='mt-9 mb-4 text-lg text-amber-400 text-center'>TESTIMONIAL</h4>
                     <h1 className='text-center text-5xl text-white'>Client <span className='font-bold'>Says</span></h1>
                     <Slider {...settings1}>
                         {testimonial.map((t) =>
                             <div className='mt-16'>
-                                <p className='px-10 text-center text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime error quos modi quas voluptatibus. Necessitatibus, ipsa! Laborum facilis sed porro temporibus.</p>
-                                <h2 className='text-center mt-7 text-amber-400 font-semibold text-lg'>Jenni Harnandas</h2>
-                                <h3 className='text-center mt-2 text-gray-300 mb-10 sm:mb-0 '>Graphic Designer</h3>
+                                <p className='px-10 text-center text-white'>{t.description.slice(0, 180) + "..."}</p>
+                                <h2 className='text-center mt-7 text-amber-400 font-semibold text-lg'>{t.name}</h2>
+                                <h3 className='text-center mt-2 text-gray-300 mb-10 sm:mb-0 '>{t.profession}</h3>
                             </div>
                         )}
                     </Slider>
