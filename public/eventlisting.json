@@ -88,5 +88,15 @@
       "starttime": "4:00 PM",
       "endtime": "9:00 PM",
       "address": "304 Elton Street, Calpine, Illinois, 6837"
+    },
+    {
+      "tittle": "Dubai Fashion Event,2022",
+      "type": "fashion",
+      "image": "https://i.ibb.co/VD61crR/fashion.png",
+      "date": "27,October,2022",
+      "ticketprice": "100",
+      "starttime": "4:00 PM",
+      "endtime": "9:00 PM",
+      "address": "304 Elton Street, Calpine, Illinois, 6837"
     }
   ]

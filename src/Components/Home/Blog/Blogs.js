@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import {
@@ -12,16 +12,15 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { BsPlusLg } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import Singleblog from "./SingleBlog/Singleblog";
+import useBlogs from "../../Hooks/useBlogs";
 const Blogs = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
   const [show4, setShow4] = useState(false);
   const navigate = useNavigate();
-  const handleblogs = () => {
-    navigate("/blogs-details");
-  };
-
+  const [blogs] = useBlogs();
   return (
     <div className="flex flex-col   lg:flex-row lg:ml-56  mt-10 mb-20">
       <div className="  2xl:mx-auto  px-4 lg:px-20  md:px-6 ">
@@ -32,14 +31,7 @@ const Blogs = () => {
         <h2 className="mt-5 font-semibold lg:text-[48px] text-3xl lg:ml-5 lg:leading-9 md:leading-7 leading-9 text-gray-800">
           Ask & Questions
         </h2>
-        <div className="mt-4 flex md:justify-between md:items-start md:flex-row flex-col justify-start items-start">
-          {/* <div className=" ">
-            <p className=" font-normal text-base leading-6 text-gray-600 lg:w-8/12 md:w-9/12 ">
-              Here are few of the most frequently asked questions by our
-              valueable customers
-            </p>
-          </div> */}
-        </div>
+        <div className="mt-4 flex md:justify-between md:items-start md:flex-row flex-col justify-start items-start"></div>
         <div className=" flex justify-center md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
           <div className=" md:w-7/12 lg:w-6/12 w-full md:mt-0 sm:mt-14 mt-10">
             {/* <!-- Shipping Section --> */}
@@ -275,33 +267,9 @@ const Blogs = () => {
           </h2>
         </div>
         <div className="lg:mt-16  mt-5">
-          <div className="p-4  lg:p-5 lg:max-w-2xl shadow-md gap-4 flex flex-col items-center  lg:flex-row ">
-            <div className="blog-image   lg:w-[300px] relative hvr">
-              <img
-                className="lg:h-[200px] lg:w-[300px] object-cover"
-                src="https://i.ibb.co/tPtrjMm/event-1.jpg"
-                alt=""
-              />
-              <div
-                onClick={handleblogs}
-                className="absolute top-0 left-0 right-0 bottom-0 bg-transparent cld cursor-pointer"
-              >
-                <BsPlusLg className="text-6xl text-white absolute top-[calc(50%-30px)] left-[calc(50%-30px)] pls " />
-              </div>
-            </div>
-            <div className=" blog-details w-full ">
-              <h1 className="text-center  text-[20px] font-bold lg:text-start lg:mx-0 lg:w-[310px]">
-                Barcelona Friday Food Truck Festival 26 Mei 2019
-              </h1>
-              <h1 className="text-center text-[18px] lg:text-start text-[#ffbe30] mt-2 font-bold">
-                26 June 2018
-              </h1>
-              <p className="mt-5 text-center text-[17px] lg:text-start lg:text-[18px] lg:mx-0 text-[#333333] lg:w-[350px] lg:mt-5">
-                Harmoni gives you everything you need to host your best event
-                yet. lorem ipsum diamet.
-              </p>
-            </div>
-          </div>
+          {blogs?.slice(0, 2)?.map((item) => (
+            <Singleblog item={item} key={item._id}></Singleblog>
+          ))}
         </div>
       </div>
     </div>

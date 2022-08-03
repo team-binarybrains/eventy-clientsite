@@ -6,10 +6,10 @@ const Venues = () => {
     const [select,setSelect] = useState({});
     const [venues,setVenues] = useState([]);
     useEffect(()=> {
-        axios.get('venues.json')
+        axios.get(`http://localhost:5000/venues`)
         .then(res => {
-            setVenues(res.data);
-            setSelect(res.data[0]);
+            setVenues(res?.data);
+            setSelect(res?.data[0]);
         })
     },[])
 
@@ -31,12 +31,13 @@ const Venues = () => {
 
                             {
                                 venues.map((venue) => {
-                                    return <div className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-start gap-[10%] text-white whitespace-pre cursor-pointer ${venue.id === select.id && styles.selected} `} key={venue.id} onClick={() => selection(venue)}>
+                                    return <div className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${venue._id === select._id && styles.selected} `} key={venue.id} onClick={() => selection(venue)}>
                                         <img className='h-[80px] max-w-[80px] object-cover overflow-hidden' src={venue?.img} alt="" />
                                         <div className='space-y-1 shrink'>
-                                            <h5 className=''><span className='text-rose-500 font-bold'>{`${venue?.star} ⭐ ${venue?.venueName}`}</span>   Hotel</h5>
+                                            <h5 className=''><span className='text-rose-500 font-bold'>{`${venue?.star} ⭐ ${venue?.venueName}`}</span></h5>
                                             <h6 className='text-xs'>{`Party Room ${venue?.seats} seats`}</h6>
                                             <h6 className='text-rose-500 font-bold text-xs'>{`Price from $${venue?.price}/night`}</h6>
+                                            <h6 className='text-xs'>{`Venue Code : ${venue?.code}`}</h6>
                                         </div>
                                     </div>
                                 })
