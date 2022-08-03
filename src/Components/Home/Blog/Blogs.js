@@ -13,23 +13,14 @@ import {
 import { BsPlusLg } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import Singleblog from "./SingleBlog/Singleblog";
+import useBlogs from "../../Hooks/useBlogs";
 const Blogs = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
   const [show4, setShow4] = useState(false);
   const navigate = useNavigate();
-  const handleblogs = () => {
-    navigate("/blogs-details");
-  };
-
-  const [blogs, setBlogs] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:5000/blogs")
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, []);
-  console.log(blogs);
+  const [blogs] = useBlogs();
   return (
     <div className="flex flex-col   lg:flex-row lg:ml-56  mt-10 mb-20">
       <div className="  2xl:mx-auto  px-4 lg:px-20  md:px-6 ">
