@@ -28,24 +28,23 @@ function BookingContact() {
         e.target.reset();
     };
     return (
-        <div>
+        <div className='bg-gray-100'>
             <section className="py-10 px-5 main" id="contact">
                 <div className="container mx-auto">
                     <div data-aos="zoom-out-down" className="space-y-5 mb-8 text-center">
-                        <h2 className="text-2xl uppercase">Contact Us</h2>
+                        <h2 className="text-2xl uppercase">Place your booking here</h2>
                         <p className="text-base text-gray-600 text-paragraph max-w-lg mx-auto"></p>
                     </div>
                     <div className="flex flex-row justify-between sm:justify-center gap-x-10 gap-y-5 flex-wrap items-start ">
                         <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white">
-                            <div className="text-accent rounded-sm text-2xl bounce mt-0.5">
+                            <div className="text-[#ffbe30] rounded-sm text-2xl bounce mt-0.5">
                                 <FiMail />
                             </div>
                             <div className="space-y-1">
-                                <h4 className="font-body text-xl">Have a question?</h4>
-                                <p className="text-paragraph">I am here to help you.</p>
-                                <p className="text-accent font-normal">
-                                    Email us at binarybrains777@gmail.com
-                                </p>
+                                <h4 className="font-body text-xl">Add your information For place your booking.</h4>
+                                <p className="text-paragraph"></p>
+                                <p className=" font-normal"> We will contact with you for confirm your booking</p>
+                                <p className=" font-semibold"> As soon as possible. </p>
                             </div>
                         </div>
                         <form
@@ -83,8 +82,8 @@ function BookingContact() {
                             ></textarea>
                             <input
                                 type="submit"
-                                className="py-2 px-5 bg-green-500/70 hover:bg-green-500/90 font-medium text-white rounded-md transition-all cursor-pointer"
-                                value="submit"
+                                className='text-sm space-x-10 px-11 py-4 bg-amber-400 hover:bg-amber-500 rounded-full text-white uppercase font-bold mt-6 transition-all duration-500'
+                                value="PLACE YOUR ORDER"
                             ></input>
                         </form>
                     </div>
