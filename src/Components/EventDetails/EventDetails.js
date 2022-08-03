@@ -3,6 +3,7 @@ import style from './EventDetails.module.css'
 import EventSchedule from './FeaturedEvent/EventSchedule/EventSchedule';
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
 import FeaturedEventDetails from './FeaturedEvent/FeaturedEventDetails/FeaturedEventDetails';
+import RegisterEvent from './FeaturedEvent/RegisterEvent/RegisterEvent';
 import LocationFaq from './LocationFaq';
 import Pricing from './Pricing/Pricing';
 import TopBanner from './TopBanner';
@@ -10,7 +11,7 @@ import TopBanner from './TopBanner';
 
 const EventDetails = () => {
     return (
-        <div>
+        <div className='route'>
             <section className='min-h-screen'>
 
                 {/* 1st row */}
@@ -25,6 +26,7 @@ const EventDetails = () => {
                         <FeaturedEventDetails/>
                         <EventSchedule/>
                         <Pricing/>
+                        <RegisterEvent/>
                     </div>
 
                     {/* 2nd row : 2nd column */}

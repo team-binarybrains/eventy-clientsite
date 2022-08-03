@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import FrequentlyMainBlogs from './FrequentlyMainBlogs/FrequentlyMainBlogs';
 const MainBlogs = () => {
     return (
-        <div>
+        <div className='route'>
           <div>
 
           <div className="banner-background">
