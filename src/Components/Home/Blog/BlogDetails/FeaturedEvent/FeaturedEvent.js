@@ -19,7 +19,7 @@ const FeaturedEvent = () => {
 
                 <div className=" border-gray-200 pb-2 flex justify-center items-center md:mt-0 mt-10 md:w-auto w-full ">
                     {/* <input placeholder="Search" type="text" aria-label="Search" className="lg:w-96 md:w-72 w-full focus:outline-none placeholder-gray-600 text-base font-normal text-gray-600 leading-4 " /> */}
-                    <h1 className="resent-post-section-title pr-52">Recent <span className="font-bold"> Post</span></h1>
+                    <h1 className="resent-post-section-title pr-52 -mb-[48px]">Recent <span className="font-bold"> Post</span></h1>
                    
                 </div>
 

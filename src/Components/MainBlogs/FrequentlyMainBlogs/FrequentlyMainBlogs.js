@@ -19,7 +19,7 @@ const FrequentlyMainBlogs = () => {
 
                 <div className=" border-gray-200   md:w-auto w-full ">
                     {/* <input placeholder="Search" type="text" aria-label="Search" className="lg:w-96 md:w-72 w-full focus:outline-none placeholder-gray-600 text-base font-normal text-gray-600 leading-4 " /> */}
-                    <h1 className="resent-post-section-title pr-52 ">Recent <span className="font-bold"> Post</span></h1>
+                    <h1 className="resent-post-section-title pr-52 -mb-[48px]">Recent <span className="font-bold"> Post</span></h1>
                    
                 </div>
 
@@ -30,13 +30,14 @@ const FrequentlyMainBlogs = () => {
                     {/* <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:block hidden" /> */}
                       <div className="grid md:grid-cols-2 gap-7 p-5  ">
                            <div className="hover:border-amber-600">
-                            <div>
+                            <div className='relative' >
                         <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="-mt-[225px] pl-5 text-white font-semibold">26 MAY 2018 - 4.00 </p>
+
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
 
                             </div>
                         
-                               <div className=" mt-[200px] py-5 px-5 bg-[#f7f7f7]">
+                               <div className=" md: py-5 px-5 bg-[#f7f7f7]">
                                 <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
                                  
                                  <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
@@ -48,13 +49,13 @@ const FrequentlyMainBlogs = () => {
                         <div>
 
                         <div className="hover:border-amber-600">
-                            <div>
+                            <div className="relative">
                         <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="-mt-[225px]  pl-5 text-white text-[16px]">26 MAY 2018 - 4.00 </p>
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
 
                             </div>
                         
-                               <div className=" mt-[200px] py-5 px-5 bg-[#f7f7f7]">
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
                                 <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
                                  
                                  <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
@@ -67,13 +68,13 @@ const FrequentlyMainBlogs = () => {
                         </div>
 
                         <div className="hover:border-amber-600">
-                            <div>
+                            <div className="relative">
                         <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="-mt-[225px] pl-5 text-white font-semibold">26 MAY 2018 - 4.00 </p>
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
 
                             </div>
                         
-                               <div className=" mt-[200px] py-5 px-5 bg-[#f7f7f7]">
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
                                 <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
                                  
                                  <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
@@ -84,13 +85,13 @@ const FrequentlyMainBlogs = () => {
                            </div>
 
                            <div className="hover:border-amber-600">
-                            <div>
+                            <div className='relative'>
                         <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="-mt-[225px] pl-5 text-white font-semibold">26 MAY 2018 - 4.00 </p>
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
 
                             </div>
                         
-                               <div className=" mt-[200px] py-5 px-5 bg-[#f7f7f7]">
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
                                 <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
                                  
                                  <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
@@ -101,13 +102,13 @@ const FrequentlyMainBlogs = () => {
                            </div>
 
                            <div className="hover:border-amber-600">
-                            <div>
+                            <div className="relative">
                         <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="-mt-[225px] pl-5 text-white font-semibold">26 MAY 2018 - 4.00 </p>
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
 
                             </div>
                         
-                               <div className=" mt-[200px] py-5 px-5 bg-[#f7f7f7]">
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
                                 <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
                                  
                                  <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
@@ -117,13 +118,13 @@ const FrequentlyMainBlogs = () => {
                             
                            </div>
                            <div className="hover:border-amber-600">
-                            <div>
+                            <div className="relative">
                         <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="-mt-[225px] pl-5 text-white font-semibold">26 MAY 2018 - 4.00 </p>
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
 
                             </div>
                         
-                               <div className=" mt-[200px] py-5 px-5 bg-[#f7f7f7]">
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
                                 <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
                                  
                                  <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
