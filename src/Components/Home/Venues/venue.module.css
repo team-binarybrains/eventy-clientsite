@@ -9,7 +9,15 @@
     font-family: 'Roboto', sans-serif;
 }
 
-.section::-webkit-scrollbar {
+.bgImage{
+    background-image: url('../../../asset/brenda-alvarado-ruiz-m-i_e6c8gm8-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+img .section::-webkit-scrollbar {
     width: 5px;
     border-radius: 100rem;
 }

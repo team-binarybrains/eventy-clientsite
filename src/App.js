@@ -16,6 +16,7 @@ import Footer from "./Components/Share/Footer/Footer";
 import EventDetails from "./Components/EventDetails/EventDetails";
 import EventBooking from "./Components/EventBooking/EventBooking";
 import Gallery from "./Components/Gallery/Gallery";
+import SingleService from "./Components/Home/OurServices/SingleService";
 import DayOne from "./Components/EventDetails/FeaturedEvent/EventSchedule/DayOne/DayOne";
 import MainBlogs from "./Components/MainBlogs/MainBlogs";
 import ScrollToTop from "./Components/Share/ScrolltoTop/ScrollToTop";
@@ -54,6 +55,14 @@ function App() {
         <Route
           path="/event-details"
           element={<EventDetails></EventDetails>}
+        ></Route>
+        <Route
+          path="/service-details"
+          element={<SingleService></SingleService>}
+        ></Route>
+        <Route
+          path="/service-details/:id"
+          element={<SingleService></SingleService>}
         ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
