@@ -17,7 +17,7 @@
     background-attachment: fixed;
 }
 
-.section::-webkit-scrollbar {
+img .section::-webkit-scrollbar {
     width: 5px;
     border-radius: 100rem;
 }
