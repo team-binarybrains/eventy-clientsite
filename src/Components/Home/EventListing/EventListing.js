@@ -15,7 +15,7 @@ import ConferenceEvent from "./ConferenceEvent";
 import MusicEvent from "./MusicEvent";
 import FashionEvent from "./FashionEvent";
 import { useNavigate } from "react-router-dom";
-
+import TopBanner from "../../EventDetails/TopBanner";
 const EventListing = () => {
   const navigate = useNavigate();
   const handleEventListing = () => {
