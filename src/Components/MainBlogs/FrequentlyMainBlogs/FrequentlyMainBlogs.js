@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
-import './FeaturedEvent.css'
 import { BsBookmarkFill } from "react-icons/bs";
-import DateAndCategory from './DateAndCategory/DateAndCategory';
-const FeaturedEvent = () => {
+import './FrequentlyMainBlogs.css'
+const FrequentlyMainBlogs = () => {
     const [show, setShow] = useState(false);
     const [show2, setShow2] = useState(false);
     const [show3, setShow3] = useState(false);
     const [show4, setShow4] = useState(false);
     return (
         <div>
+            <div>
            <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
-            <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800"> <span className=" text-[#ffbe30]"><BsBookmarkFill className="inline-block"/></span> Featured Event</h2>
+
+          
             <div className="mt-4 flex md:justify-between md:items-start md:flex-row flex-col justify-start items-start">
                 <div className=" ">
-                    {/* <p className=" font-normal text-base leading-6 text-gray-600 lg:w-8/12 md:w-9/12 ">Here are few of the most frequently asked questions by our valueable customers</p> */}
-                    <h1 className='resent-post-section-title'>Istanbul <strong> Wine Party 2018</strong> </h1>
+                 
                 </div>
 
-                <div className=" border-gray-200 pb-2 flex justify-center items-center md:mt-0 mt-10 md:w-auto w-full ">
+                <div className=" border-gray-200   md:w-auto w-full ">
                     {/* <input placeholder="Search" type="text" aria-label="Search" className="lg:w-96 md:w-72 w-full focus:outline-none placeholder-gray-600 text-base font-normal text-gray-600 leading-4 " /> */}
                     <h1 className="resent-post-section-title pr-52 -mb-[48px]">Recent <span className="font-bold"> Post</span></h1>
                    
@@ -26,10 +26,119 @@ const FeaturedEvent = () => {
             </div>
             <div className=" flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
                 <div className=" md:w-7/12 lg:w-8/12 w-full ">
-                    <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:block hidden" />
-                    <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:hidden block " />
 
-                    <DateAndCategory></DateAndCategory>
+                    {/* <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:block hidden" /> */}
+                      <div className="grid md:grid-cols-2 gap-7 p-5  ">
+                           <div className="hover:border-amber-600">
+                            <div className='relative' >
+                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
+
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
+
+                            </div>
+                        
+                               <div className=" md: py-5 px-5 bg-[#f7f7f7]">
+                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
+                                 
+                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
+                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
+                               </div>
+                            
+                           </div>
+                        <div>
+
+                        <div className="hover:border-amber-600">
+                            <div className="relative">
+                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
+
+                            </div>
+                        
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
+                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
+                                 
+                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
+                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
+                               </div>
+                            
+                           </div>
+
+                        </div>
+
+                        <div className="hover:border-amber-600">
+                            <div className="relative">
+                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
+
+                            </div>
+                        
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
+                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
+                                 
+                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
+                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
+                               </div>
+                            
+                           </div>
+
+                           <div className="hover:border-amber-600">
+                            <div className='relative'>
+                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
+
+                            </div>
+                        
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
+                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
+                                 
+                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
+                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
+                               </div>
+                            
+                           </div>
+
+                           <div className="hover:border-amber-600">
+                            <div className="relative">
+                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
+
+                            </div>
+                        
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
+                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
+                                 
+                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
+                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
+                               </div>
+                            
+                           </div>
+                           <div className="hover:border-amber-600">
+                            <div className="relative">
+                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
+                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
+
+                            </div>
+                        
+                               <div className="  py-5 px-5 bg-[#f7f7f7]">
+                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
+                                 
+                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
+                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
+                               </div>
+                            
+                           </div>
+                      </div>
+
+
+                    {/* <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:hidden block " /> */}
+
+                    {/* <DateAndCategory></DateAndCategory> */}
 
                 </div>
                 <div className=" md:w-5/12 lg:w-4/12 w-full md:mt-0 sm:mt-14 mt-10">
@@ -116,7 +225,8 @@ const FeaturedEvent = () => {
         </div> 
         
         </div>
+        </div>
     );
 };
 
-export default FeaturedEvent;
+export default FrequentlyMainBlogs;

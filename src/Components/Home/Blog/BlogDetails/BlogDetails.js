@@ -5,9 +5,9 @@ import './BlogDetails.css'
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
 const BlogDetails = () => {
     return (
-        <div>
+        <div className='route'>
             <div className="banner-background">
-             <div className='flex justify-center items-center py-20'>
+            <div className='flex justify-center items-center py-20'>
                 <div className='text-center'>
                 <h1 className='breadcrumb-section font-bold'>BLOG SINGLE</h1>
                 <h1 className='big-title'>Eventy 

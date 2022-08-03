@@ -46,10 +46,15 @@ code {
 /* for selected color /added by rashid */
 ::selection {
   color: #ff9900;
+  background-color: #00000038;
 }
 
 .text-color {
   background: -webkit-linear-gradient(#ffbe30, #ff3e00);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.route{
+  margin-top: 126px;
 }

@@ -1,15 +1,15 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import Address from '../AboutUs/Address'
+import Offer from '../Home/Offer/Offer'
 import Footer from '../Share/Footer/Footer'
 import Merories from './Merories'
 import SpecialOffer from './SpecialOffer'
 
 function Gallery() {
     return (
-        <div>
-            <div className=" p-3 bg-image lg:h-[340px] h-[200px]"
-                style={{ backgroundImage: "url('https://i.ibb.co/LQr53RB/1-testimonial-bg-edited.jpg')", backgroundSize: 'cover' }} >
+        <div className='route'>
+            <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
 
                 <div className='flex justify-center items-center h-full lg:-mt-8'>
                     <div className='text-white text-center '>
@@ -30,8 +30,8 @@ function Gallery() {
             </div>
             <Merories></Merories>
             <SpecialOffer></SpecialOffer>
+            <Offer></Offer>
             <Address></Address>
-            <Footer></Footer>
         </div>
     )
 }
