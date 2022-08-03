@@ -1,6 +1,4 @@
-// import axios from 'axios'
-// import React, { useEffect, useState } from 'react'
-import { useEffect } from 'react'
+
 import { useParams } from 'react-router-dom'
 import Venues from '../Venues/Venues'
 import useFetch from './Hook/useFetch'
@@ -47,7 +45,7 @@ function SingleService() {
                 </div>
             </div>
 
-            
+            <Venues></Venues>
 
         </div>
     )
