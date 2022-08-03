@@ -23,15 +23,15 @@ import { useEffect } from "react";
 import Navbar from "./Components/Share/Navbar/Navbar";
 
 function App() {
-  const { pathname } = useLocation();
-
+  const location = useLocation();
+  const { pathname } = location;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
 
   return (
     <div className="overflow-x-hidden">
-      <Navbar pathname ={pathname}></Navbar>
+      <Navbar location ={location}></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>

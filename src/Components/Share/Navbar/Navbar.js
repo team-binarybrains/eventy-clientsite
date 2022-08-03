@@ -5,10 +5,11 @@ import "./Navbar.css";
 import { BiUser } from "react-icons/bi";
 import TopnavBar from "../TopBar/TopnavBar";
 
-const Navbar = ({pathname}) => {
+const Navbar = ({location}) => {
 
+  const {pathname} = location;
   const routeName = pathname.slice('1');
-  console.log(routeName);
+  console.dir(location);
 
   const [navbarBg, setNavbar] = useState(false);
   const changeBg = () => {
@@ -61,7 +62,7 @@ const Navbar = ({pathname}) => {
                     </Link>
                   </li>
                   <li tabindex="0">
-                    <Link to="" className="uppercase">
+                    <Link to={pathname} className="uppercase">
                       About
                       <svg
                         class="fill-current"
@@ -87,7 +88,7 @@ const Navbar = ({pathname}) => {
                     </ul>
                   </li>
                   <li tabindex="0">
-                    <Link to="" className="uppercase">
+                    <Link to={pathname} className="uppercase">
                       Event
                       <svg
                         class="fill-current"
@@ -123,7 +124,7 @@ const Navbar = ({pathname}) => {
                     </ul>
                   </li>
                   <li tabindex="0">
-                    <Link to="" className="uppercase">
+                    <Link to={pathname} className="uppercase">
                       Blogs
                       <svg
                         class="fill-current"
@@ -159,7 +160,7 @@ const Navbar = ({pathname}) => {
                   </li>
                 </ul>
               </div>
-              <Link to="" class="btn btn-ghost normal-case text-xl">Eventy</Link>
+              <Link to="/" class="btn btn-ghost normal-case text-xl">Eventy</Link>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal p-0">
@@ -169,7 +170,7 @@ const Navbar = ({pathname}) => {
                   </Link>
                 </li>
                 <li tabindex="0">
-                  <Link to="" className="uppercase">
+                  <Link to={pathname} className="uppercase">
                     About
                     <svg
                       class="fill-current"
@@ -195,7 +196,7 @@ const Navbar = ({pathname}) => {
                   </ul>
                 </li>
                 <li tabindex="0">
-                  <Link to="" className="uppercase">
+                  <Link to={pathname} className="uppercase">
                     Event
                     <svg
                       class="fill-current"
@@ -231,7 +232,7 @@ const Navbar = ({pathname}) => {
                   </ul>
                 </li>
                 <li tabindex="0">
-                  <Link to="" className="uppercase">
+                  <Link to={pathname} className="uppercase">
                     Blogs
                     <svg
                       class="fill-current"
@@ -317,7 +318,7 @@ const Navbar = ({pathname}) => {
                   </Link>
                 </li>
                 <li tabindex="0">
-                  <Link to="" className="uppercase">
+                  <Link to={pathname} className="uppercase">
                     About
                     <svg
                       class="fill-current"
@@ -343,7 +344,7 @@ const Navbar = ({pathname}) => {
                   </ul>
                 </li>
                 <li tabindex="0">
-                  <Link to="" className="uppercase">
+                  <Link to={pathname} className="uppercase">
                     Event
                     <svg
                       class="fill-current"
@@ -379,7 +380,7 @@ const Navbar = ({pathname}) => {
                   </ul>
                 </li>
                 <li tabindex="0">
-                  <Link to="" className="uppercase">
+                  <Link to={pathname} className="uppercase">
                     Blogs
                     <svg
                       class="fill-current"
@@ -415,7 +416,7 @@ const Navbar = ({pathname}) => {
                 </li>
               </ul>
             </div>
-            <Link to="" class="btn btn-ghost normal-case text-xl">Eventy</Link>
+            <Link to="/" class="btn btn-ghost normal-case text-xl">Eventy</Link>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
@@ -425,7 +426,7 @@ const Navbar = ({pathname}) => {
                 </Link>
               </li>
               <li tabindex="0">
-                <Link to="" className="uppercase">
+                <Link to={pathname} className="uppercase">
                   About
                   <svg
                     class="fill-current"
@@ -451,7 +452,7 @@ const Navbar = ({pathname}) => {
                 </ul>
               </li>
               <li tabindex="0">
-                <Link to="" className="uppercase">
+                <Link to={pathname} className="uppercase">
                   Event
                   <svg
                     class="fill-current"
@@ -487,7 +488,7 @@ const Navbar = ({pathname}) => {
                 </ul>
               </li>
               <li tabindex="0">
-                <Link to="" className="uppercase">
+                <Link to={pathname} className="uppercase">
                   Blogs
                   <svg
                     class="fill-current"
