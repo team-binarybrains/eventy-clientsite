@@ -1,6 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { useNavigate } from "react-router-dom";
 const SingleMusicEvent = ({ item }) => {
   const {
     tittle,
@@ -12,17 +13,22 @@ const SingleMusicEvent = ({ item }) => {
     endtime,
     address,
   } = item;
+  const [date2, month, year] = date?.split(",");
+  const navigate = useNavigate();
+  const handleeventList = () => {
+    navigate("/eventlist");
+  };
 
   return (
     <div className=" mt-10 flex flex-col mx-auto justify-center lg:justify-center lg:flex-row gap-5 ">
       <div className="w-[90vw] p-[15px] lg:w-[570px] flex flex-col items-center mx-auto   lg:flex lg:flex-row lg:justify-center lg:text-start  border-[1px] border-base-100 shadow-md hover:border-[1px] hover:border-orange-400 transition-all lg:p-[10px]">
         <div className="image ">
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-[70px] h-[70px] text-center font-extrabold z-10 absolute ">
+          <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-[70px] h-[70px] text-center  z-10 absolute ">
             {" "}
-            <h1 className="text-white text-center">
-              {/* <span className="text-[24px]"> 26</span> */}
-              {/* <br /> */}
-              <span className="text-[18px] w-[10px]">{date}</span>
+            <h1 className="text-white">
+              <span className="text-[24px] font-extrabold"> {date2}</span>
+              <br />
+              <span className="text-[14px] ">{month}</span>
             </h1>
           </div>
           <img className="h-[250px] w-[250px]" src={image} alt="" />

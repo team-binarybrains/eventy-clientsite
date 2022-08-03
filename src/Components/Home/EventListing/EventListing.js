@@ -13,12 +13,16 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import ConferenceEvent from "./ConferenceEvent";
 import MusicEvent from "./MusicEvent";
-import { FaTshirt } from "react-icons/fa";
 import FashionEvent from "./FashionEvent";
+import { useNavigate } from "react-router-dom";
 
 const EventListing = () => {
+  const navigate = useNavigate();
+  const handleEventListing = () => {
+    navigate("/eventlist");
+  };
   return (
-    <div className="mt-20">
+    <div className="mt-20 min-h-[50vh] bg-[#fff]">
       <div className=" mx-auto h-1 w-24 bg-[#FD1D1D]  lg:ml-[320px] lg:mb-6"></div>
       <div className=" text-center lg:text-start lg:ml-96 ">
         <h1 className="text-[20px] text-[#878787] uppercase">Eventy</h1>
@@ -81,11 +85,17 @@ const EventListing = () => {
           </TabPanel>
 
           <TabPanel>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-              <MusicEvent></MusicEvent>
-            </div>
+            <MusicEvent></MusicEvent>
           </TabPanel>
         </Tabs>
+      </div>
+      <div className="flex justify-center mt-10">
+        <button
+          onClick={handleEventListing}
+          className="custom-btn px-10 font-bold py-3 rounded-full text-white "
+        >
+          See More
+        </button>
       </div>
     </div>
   );
