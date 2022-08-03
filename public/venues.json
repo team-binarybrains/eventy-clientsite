@@ -1,50 +1,50 @@
 [
     {
-        "id":"1",
         "img": "./venues/1.jpg",
         "star": "5",
-        "venueName": "a",
+        "venueName": "The Avenue",
         "seats": "2500",
-        "price": "65"
+        "price": "65",
+        "code": "EV001"
     },
     {
-        "id":"2",
         "img": "./venues/2.jpg",
         "star": "4",
-        "venueName": "b",
+        "venueName": "Paradise Gardens",
         "seats": "2500",
-        "price": "52"
+        "price": "52",
+        "code": "EV002"
     },
     {
-        "id":"3",
         "img": "./venues/3.jpg",
         "star": "5",
-        "venueName": "c",
+        "venueName": "Atlantis",
         "seats": "2500",
-        "price": "60"
+        "price": "60",
+        "code": "EV003"
     },
     {
-        "id":"4",
         "img": "./venues/4.jpg",
         "star": "3",
-        "venueName": "d",
+        "venueName": "Big Orchid",
         "seats": "2500",
-        "price": "40"
+        "price": "40",
+        "code": "EV004"
     },
     {
-        "id":"5",
         "img": "./venues/5.jpg",
         "star": "5",
-        "venueName": "e",
+        "venueName": "Sapphire Palace",
         "seats": "2500",
-        "price": "55"
+        "price": "55",
+        "code": "EV005"
     },
     {
-        "id":"6",
         "img": "./venues/6.jpg",
         "star": "4",
-        "venueName": "f",
+        "venueName": "Nebula",
         "seats": "2500",
-        "price": "50"
+        "price": "50",
+        "code": "EV006"
     }
 ]
