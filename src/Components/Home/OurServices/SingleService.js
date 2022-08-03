@@ -1,6 +1,7 @@
 
 import { useParams } from 'react-router-dom'
 import Venues from '../Venues/Venues'
+import BookingContact from './BookingContact/BookingContact'
 import useFetch from './Hook/useFetch'
 
 function SingleService() {
@@ -46,6 +47,7 @@ function SingleService() {
             </div>
 
             <Venues></Venues>
+            <BookingContact></BookingContact>
 
         </div>
     )
