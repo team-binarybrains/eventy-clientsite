@@ -16,6 +16,7 @@ import Footer from "./Components/Share/Footer/Footer";
 import EventDetails from "./Components/EventDetails/EventDetails";
 import EventBooking from "./Components/EventBooking/EventBooking";
 import Gallery from "./Components/Gallery/Gallery";
+import SingleService from "./Components/Home/OurServices/SingleService";
 
 function App() {
   return (
@@ -32,10 +33,9 @@ function App() {
         <Route path="/eventlist" element={<EventListDetailsMain></EventListDetailsMain>}></Route>
         <Route path="/event-booking" element={<EventBooking></EventBooking>}></Route>
         <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
-        <Route
-          path="/event-details"
-          element={<EventDetails></EventDetails>}
-        ></Route>
+        <Route path="/event-details" element={<EventDetails></EventDetails>}></Route>
+        <Route path="/service-details" element={<SingleService></SingleService>}></Route>
+        <Route path="/service-details/:id" element={<SingleService></SingleService>}></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
