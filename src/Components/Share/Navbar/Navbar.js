@@ -9,7 +9,7 @@ const Navbar = ({location}) => {
 
   const {pathname} = location;
   const routeName = pathname.slice('1');
-  console.dir(location);
+  // console.dir(location);
 
   const [navbarBg, setNavbar] = useState(false);
   const changeBg = () => {

@@ -7,18 +7,21 @@ import Slider from "react-slick";
 import axios from 'axios'
 import './OurServices.css'
 import { useNavigate } from "react-router-dom";
+import useFetch from "./Hook/useFetch";
 
 export default function OurServices() {
 
 
-    const [serviceInfo, setServiceInfo] = useState([])
+    const serviceInfo = useFetch('http://localhost:5000/services-get')
     console.log(serviceInfo);
 
-    axios.get('http://localhost:5000/services-get')
-        .then(res => {
-            const { data } = res
-            setServiceInfo(data)
-        })
+    
+
+    // axios.get('http://localhost:5000/services-get')
+    //     .then(res => {
+    //         const { data } = res
+    //         setServiceInfo(data)
+    //     })
 
 
         const navigate = useNavigate()
