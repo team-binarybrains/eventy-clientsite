@@ -5,7 +5,7 @@ import dayOne from '../../img/1.hall.png'
 
 const DayOne = () => {
    return (
-      <div className="flex flex-wrap-reverse gap-2 my-8 route">
+      <div className="flex flex-wrap-reverse gap-2 route">
          <div className='basis-[320px] grow '>
             <div className="">
                <h1 className='text-2xl text-slate-700 '>01. Greeting <strong>Welcome</strong></h1>
