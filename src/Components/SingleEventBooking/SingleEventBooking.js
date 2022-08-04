@@ -108,7 +108,7 @@ const SingleEventBooking = () => {
                                     <div className="text-[#ffbe30] rounded-sm text-2xl bounce mt-0.5">
                                         <FiMail />
                                     </div>
-                                    <div className="space-y-1 py-2">
+                                    <div className="space-y-1  pt-3">
                                         <h4 className="font-body text-xl">For more information.</h4>
                                         <p className="text-paragraph"></p>
                                         <p className=" font-normal"> Contuct Us</p>

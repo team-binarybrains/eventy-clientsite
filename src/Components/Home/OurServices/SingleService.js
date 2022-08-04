@@ -170,12 +170,12 @@ function SingleService() {
                             <h2 className="text-2xl uppercase">Place your booking here</h2>
                             <p className="text-base text-gray-600 text-paragraph max-w-lg mx-auto"></p>
                         </div>
-                        <div className="flex flex-row justify-between sm:justify-center gap-x-10 gap-y-5 flex-wrap items-start ">
+                        <div className="flex flex-row justify-between sm:justify-center gap-x-10 gap-y-5 flex-wrap items-start">
                             <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white">
                                 <div className="text-[#ffbe30] rounded-sm text-2xl bounce mt-0.5">
                                     <FiMail />
                                 </div>
-                                <div className="space-y-1">
+                                <div className="space-y-1 pt-5">
                                     <h4 className="font-body text-xl">Add your information For place your booking.</h4>
                                     <p className="text-paragraph"></p>
                                     <p className=" font-normal"> We will contact with you for confirm your booking</p>
