@@ -6,6 +6,7 @@ import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
 import './SingleService.css'
+import axios, { Axios } from 'axios';
 
 function SingleService() {
 
@@ -21,21 +22,39 @@ function SingleService() {
     console.log(name);
 
 
+    // const handleBooking = () => {
+
+    // }
+
+
     const submission = (e) => {
         e.preventDefault();
 
-        // const bookingInfo = {
-        //     user_name: e.target.user_name.value,
-        //     user_email: e.target.user_email.value,
-        //     subject: e.target.subject.value,
-        //     phone: e.target.phone.value,
-        //     address: e.target.address.value,
-        //     message: e.target.message.value,
-        //     image: image,
-        //     eventName: eventName,
-        //     eventPrice: eventPrice
-        // }
-        // console.log(bookingInfo);
+        const bookingInfo = {
+            user_name: e.target.user_name.value,
+            user_email: e.target.user_email.value,
+            phone: e.target.phone.value,
+            address: e.target.address.value,
+            message: e.target.message.value,
+            image: image,
+            eventName: eventName,
+            eventPrice: eventPrice
+        }
+        console.log(bookingInfo);
+
+        axios.post('http://localhost:5000/service-booking', bookingInfo)
+        .then(res => {
+            const {data} = res
+            console.log(data);
+            if (data.insertedId) {
+                toast.success('Your order placed successfully. Go to dashboard for check your booking. ')
+            }
+            else {
+                toast.error('Faild to prossed booking. Please try again.')
+            }
+        })
+
+
 
         emailjs
             .sendForm(
@@ -46,7 +65,7 @@ function SingleService() {
             )
             .then(
                 (result) => {
-                    toast.success("Your booking successfully placed. We will contact you soon for confirm your booking", { theme: "dark" });
+                    toast.success("Your booking successfully placed. We will contact you soon for confirm your booking.", { theme: "dark" });
                 },
                 (error) => {
                     toast.error(error.text, { theme: "light" });
@@ -125,7 +144,7 @@ function SingleService() {
                                         name="user_email"
                                     />
                                 </div>
-                              
+
                                 <input
                                     required
                                     className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
