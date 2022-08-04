@@ -4,9 +4,11 @@ import useFetch from '../Home/OurServices/Hook/useFetch';
 import { FiMail } from 'react-icons/fi';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-
+import "./SingleEventBooking.css"
+import { MapContainer, TileLayer } from 'react-leaflet';
 
 const SingleEventBooking = () => {
+
     const { id } = useParams();
 
     const event = useFetch(`http://localhost:5000/venue/${id}`, {});
@@ -81,8 +83,13 @@ const SingleEventBooking = () => {
                             <p className='text-2xl font-semibold'>Location: {location}</p>
                             {/* <p className='flex items-center text-xl font-semibold'>Reating: {star} <span><AiFillStar className='text-yellow-500' /></span></p> */}
 
-                            <div>
-                                <p>location</p>
+                            <div className='mt-10'>
+                                <MapContainer center={[51.505, -0.09]} zoom={7} scrollWheelZoom={false}>
+                                    <TileLayer
+                                        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                                    />
+                                </MapContainer>
                             </div>
                         </div>
                     </div>

@@ -23,6 +23,7 @@ import ScrollToTop from "./Components/Share/ScrolltoTop/ScrollToTop";
 import { useEffect } from "react";
 import Navbar from "./Components/Share/Navbar/Navbar";
 import SingleEventBooking from "./Components/SingleEventBooking/SingleEventBooking";
+import Map from "./Components/AboutUs/Map";
 
 function App() {
   const location = useLocation();
@@ -48,6 +49,7 @@ function App() {
         <Route path="/blogs" element={<MainBlogs />}></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
+        <Route path="/map" element={<Map></Map>}></Route>
         <Route
           path="/event-booking"
           element={<EventBooking></EventBooking>}
