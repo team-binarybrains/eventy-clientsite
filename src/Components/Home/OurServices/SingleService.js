@@ -12,11 +12,11 @@ import './SingleService.css'
 function SingleService() {
 
     const { id } = useParams()
-    const [select,setSelect] = useState({});
-    const [venues,setVenues] = useState([]);
+    const [select, setSelect] = useState({});
+    const [venues, setVenues] = useState([]);
     // const [serviceDetails, setServiceDetails] = useState({})
     // console.log(serviceDetails);
-    const details = useFetch(`http://localhost:5000/single-service/${id}`, {})
+    const details = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/single-service/${id}`, {})
 
     const { eventName, image, description, eventPrice } = details
     // console.log(eventName.split(' '));
@@ -46,7 +46,7 @@ function SingleService() {
         }
         console.log(bookingInfo);
 
-        axios.post('http://localhost:5000/service-booking', bookingInfo)
+        axios.post('https://fathomless-hamlet-59180.herokuapp.com/service-booking', bookingInfo)
             .then(res => {
                 const { data } = res
                 console.log(data);
@@ -68,7 +68,7 @@ function SingleService() {
                 "o9Z3tWsWjPM6vPC1M",
             )
             .then(
-                (result) => {},
+                (result) => { },
                 (error) => {
                     toast.error(error.text, { theme: "light" });
                 }
@@ -79,15 +79,15 @@ function SingleService() {
 
 
     // const {venueCode} = venues
-    useEffect(()=> {
-        axios.get(`http://localhost:5000/venues`)
-        .then(res => {
-            setVenues(res?.data);
-            setSelect(res?.data[0]);
-        })
-    },[])
+    useEffect(() => {
+        axios.get(`https://fathomless-hamlet-59180.herokuapp.com/venues`)
+            .then(res => {
+                setVenues(res?.data);
+                setSelect(res?.data[0]);
+            })
+    }, [])
 
-    const selection = (venue)=> {
+    const selection = (venue) => {
         setSelect(venue);
     }
 
@@ -220,7 +220,7 @@ function SingleService() {
                                     />
                                 </div>
 
-                        
+
                                 <textarea
                                     required
                                     className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md h-[100px] focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"

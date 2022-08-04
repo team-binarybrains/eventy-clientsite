@@ -36,7 +36,7 @@ const UpcommingEvent = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:5000/alleventlisting')
+    fetch('https://fathomless-hamlet-59180.herokuapp.com/alleventlisting')
       .then(res => res.json())
       .then(data => setEvents(data))
   }, [])
@@ -45,7 +45,7 @@ const UpcommingEvent = () => {
   console.log(events);
 
   const upComingSettings = {
-    className:"center",
+    className: "center",
     infinite: true,
     lazyLoad: true,
     speed: 300,
@@ -86,7 +86,7 @@ const UpcommingEvent = () => {
 
       <div className="app">
         <Slider {...upComingSettings} className='px-5 overflow-visible'>
-          {events.map((event, idx) =>  <Event key={event._id} event={event} idx={idx} imageIndex={imageIndex}/>)}
+          {events.map((event, idx) => <Event key={event._id} event={event} idx={idx} imageIndex={imageIndex} />)}
         </Slider>
       </div>
     </div>
