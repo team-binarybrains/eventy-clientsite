@@ -37,7 +37,7 @@ const FrequentlyMainBlogs = () => {
 
             </div>
             <div className=" flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
-                <div className=" md:w-7/12 lg:w-8/12 w-full border-red-500 border-4">
+                <div className=" md:w-7/12 lg:w-8/12 w-full">
 
                     {/* <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:block hidden" /> */}
                     

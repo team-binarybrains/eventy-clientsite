@@ -39,11 +39,11 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
         <Route
-          path="/blogs-details/:blogId"
+          path="/blogs-details"
           element={<BlogDetails></BlogDetails>}
         ></Route>
         <Route
-          path="/blogs-details"
+          path="/blogs-details/:blogId"
           element={<BlogDetails></BlogDetails>}
         ></Route>
         <Route path="/blogs" element={<MainBlogs />}></Route>

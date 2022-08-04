@@ -21,7 +21,7 @@ const FeaturedEvent = ({ blog }) => {
           <div className=" ">
             {/* <p className=" font-normal text-base leading-6 text-gray-600 lg:w-8/12 md:w-9/12 ">Here are few of the most frequently asked questions by our valueable customers</p> */}
             <h1 className="resent-post-section-title">
-              <strong>{blog.tittle}</strong>{" "}
+              <strong>{blog?.tittle}</strong>{" "}
             </h1>
           </div>
 
