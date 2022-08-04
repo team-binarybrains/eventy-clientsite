@@ -22,6 +22,7 @@ import MainBlogs from "./Components/MainBlogs/MainBlogs";
 import ScrollToTop from "./Components/Share/ScrolltoTop/ScrollToTop";
 import { useEffect } from "react";
 import Navbar from "./Components/Share/Navbar/Navbar";
+import SingleEventBooking from "./Components/SingleEventBooking/SingleEventBooking";
 
 function App() {
   const location = useLocation();
@@ -51,6 +52,7 @@ function App() {
           path="/event-booking"
           element={<EventBooking></EventBooking>}
         ></Route>
+        <Route path='/event-booking/:id' element={<SingleEventBooking></SingleEventBooking>}></Route>
         <Route
           path="/eventlist"
           element={<EventListDetailsMain></EventListDetailsMain>}
