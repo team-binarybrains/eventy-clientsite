@@ -49,7 +49,7 @@ function SingleService() {
                 const { data } = res
                 console.log(data);
                 if (data.insertedId) {
-                    toast.success('Your order placed successfully. Go to dashboard for check your booking. ')
+                    toast.success('Your order placed successfully. We will contact you soon for confirm your booking. Check it up in your dashboard.')
                 }
                 else {
                     toast.error('Faild to prossed booking. Please try again.')
@@ -66,6 +66,7 @@ function SingleService() {
                 "o9Z3tWsWjPM6vPC1M",
             )
             .then(
+                (result) => {},
                 (error) => {
                     toast.error(error.text, { theme: "light" });
                 }
