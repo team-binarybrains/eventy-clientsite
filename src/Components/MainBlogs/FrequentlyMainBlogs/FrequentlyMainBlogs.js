@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BsBookmarkFill } from "react-icons/bs";
+import { useNavigate } from 'react-router-dom';
 import './FrequentlyMainBlogs.css'
 const FrequentlyMainBlogs = () => {
     const [show, setShow] = useState(false);
@@ -12,9 +13,11 @@ const FrequentlyMainBlogs = () => {
         .then(res=>res.json())
         .then(data=>setBlogs(data))
         
-
     },[])
-    console.log(blogs);
+    const navigete = useNavigate();
+    const handleBlogsDetails = (id) => {
+      navigete("/blogs-details/" + id);
+    };
     return (
         <div>
             <div>
@@ -45,20 +48,23 @@ const FrequentlyMainBlogs = () => {
                     blogs.map(blog=> 
                              <div blog={blog} className="hover:border-amber-600">
                             <div className='relative' >
-                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
+                        <img className='w-[359px] h-[202px]' src={blog.image} alt="" />
 
-                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
+                        <p className="absolute top-5 left-5  text-white font-semibold">
+                            {blog.date}
+                             </p>
 
                             </div>
                         
                                <div className=" md: py-5 px-5 bg-[#f7f7f7]">
                                 <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
                                  
-                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
+                                 <h1 className="text-[18px] font-bold py-5">{blog.tittle}</h1>
                                  <p className="text-[18px]">
-                                    {blog.details}
+                                    {blog.details.slice(0,50)}
                                  </p>
-                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
+                                 <button  onClick={() => handleBlogsDetails(blog._id)}
+                                  className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
                                </div>
                             
                            </div>
