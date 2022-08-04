@@ -39,12 +39,7 @@ const FeaturedEvent = ({ blog }) => {
               alt="Img of Glass bottle"
               className="w-full md:block hidden"
             />
-            {/* <img
-              src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg"
-              alt="Img of Glass bottle"
-              className="w-full md:hidden block "
-            /> */}
-
+          
             <DateAndCategory blog={blog}></DateAndCategory>
           </div>
           <div className=" md:w-5/12 lg:w-4/12 w-full md:mt-0 sm:mt-14 mt-10">
