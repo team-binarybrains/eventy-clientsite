@@ -4,9 +4,10 @@ import useFetch from './Hook/useFetch'
 import { FiMail } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
-
-import './SingleService.css'
 import axios, { Axios } from 'axios';
+import { useEffect, useState } from 'react';
+import './SingleService.css'
+// import style from '../Venues/venue.module.css'
 
 function SingleService() {
 
@@ -38,21 +39,22 @@ function SingleService() {
             message: e.target.message.value,
             image: image,
             eventName: eventName,
+            venueCode: venueCode,
             eventPrice: eventPrice
         }
         console.log(bookingInfo);
 
         axios.post('http://localhost:5000/service-booking', bookingInfo)
-        .then(res => {
-            const {data} = res
-            console.log(data);
-            if (data.insertedId) {
-                toast.success('Your order placed successfully. Go to dashboard for check your booking. ')
-            }
-            else {
-                toast.error('Faild to prossed booking. Please try again.')
-            }
-        })
+            .then(res => {
+                const { data } = res
+                console.log(data);
+                if (data.insertedId) {
+                    toast.success('Your order placed successfully. Go to dashboard for check your booking. ')
+                }
+                else {
+                    toast.error('Faild to prossed booking. Please try again.')
+                }
+            })
 
 
 
@@ -74,6 +76,23 @@ function SingleService() {
 
         e.target.reset();
     };
+
+
+    const [select,setSelect] = useState({});
+    const [venues,setVenues] = useState([]);
+
+    const {venueCode} = venues
+    useEffect(()=> {
+        axios.get(`http://localhost:5000/venues`)
+        .then(res => {
+            setVenues(res?.data);
+            setSelect(res?.data[0]);
+        })
+    },[])
+
+    const selection = (venue)=> {
+        setSelect(venue);
+    }
 
     return (
         <div className='route'>
@@ -104,7 +123,49 @@ function SingleService() {
                 </div>
             </div>
 
-            <Venues></Venues>
+
+
+            {/*---- venue ---- */}
+            <section className='bgImage'>
+                <section className='bg-[#333333c7]'>
+                    <div className='py-[100px] flex sm:flex-row flex-col sm:items-end sm:justify-center gap-x-[1%] gap-y-5 flex-wrap container mx-auto'>
+                        <div className='basis-[49%] shrink px-3'>
+                            <div className='max-w-[530px] ml-auto text-center sm:text-left'>
+                                <div className='h-[3px] w-[70px] bg-gradient-to-r from-red-500 to-pink-500 mx-auto sm:mx-0 mb-2' />
+                                <h4 className='openSans text-white uppercase tracking-[5px] mb-4'>Eventy Venues</h4>
+                                <h2 className='roboto text-4xl text-white'>Conference <span className='font-bold'>Rooms & Hotels</span></h2>
+                            </div>
+                            <div className={`h-[424px] max-w-[500px] overflow-y-scroll mt-10 section ml-auto`}>
+
+                                {
+                                    venues.map((venue) => {
+                                        return <div className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${venue._id === select._id && 'selected'}`} key={venue.id} onClick={() => selection(venue)}>
+                                            <img className='h-[80px] max-w-[80px] object-cover overflow-hidden' src={venue?.img} alt="" />
+                                            <div className='space-y-1 shrink'>
+                                                <h5 className=''><span className='text-rose-500 font-bold'>{`${venue?.star} ⭐ ${venue?.venueName}`}</span></h5>
+                                                <h6 className='text-xs'>{`Party Room ${venue?.seats} seats`}</h6>
+                                                <h6 className='text-rose-500 font-bold text-xs'>{`Price from $${venue?.price}/night`}</h6>
+                                                <h6 className='text-xs'>{`Venue Code : ${venue?.code}`}</h6>
+                                            </div>
+                                        </div>
+                                    })
+                                }
+
+                            </div>
+                        </div>
+                        <div className={`h-[424px] sm:min-w-[500px] grow basis-[50%] shrink relative highlight}`}>
+                            <img src={select.img} alt="" className={`w-full h-[200px] sm:h-[424px] object-cover child opacity-80 `} />
+                            <div className={`absolute top-0 left-0 batch flex justify-end pr-6`}>
+                                <p className='font-bold text-lg text-center rotate-90'>{select.star} ⭐ <br /> Hotel</p>
+                            </div>
+                            {/* <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}>Book Now</button> */}
+                        </div>
+                    </div>
+                </section>
+            </section>
+
+
+            {/* input section */}
             <div className='bg-gray-100'>
                 <section className="py-10 px-5 main" id="contact">
                     <div className="container mx-auto">
@@ -145,13 +206,24 @@ function SingleService() {
                                     />
                                 </div>
 
-                                <input
-                                    required
-                                    className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
-                                    type="text"
-                                    placeholder="Phone Number"
-                                    name="phone"
-                                />
+                                <div className="flex gap-8">
+                                    <input
+                                        required
+                                        className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
+                                        type="text"
+                                        placeholder="Venue Code"
+                                        name="venueCode"
+                                    />
+                                    <input
+                                        required
+                                        className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
+                                        type="email"
+                                        placeholder="Phone Number"
+                                        name="phone"
+                                    />
+                                </div>
+
+                        
                                 <textarea
                                     required
                                     className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md h-[100px] focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
