@@ -1,7 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import useFetch from '../Home/OurServices/Hook/useFetch';
-import { AiFillStar } from 'react-icons/ai';
 import { FiMail } from 'react-icons/fi';
 import { toast } from 'react-toastify';
 import axios from 'axios';
