@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import style from './EventDetails.module.css'
 import EventSchedule from './FeaturedEvent/EventSchedule/EventSchedule';
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
@@ -10,6 +11,14 @@ import TopBanner from './TopBanner';
 
 
 const EventDetails = () => {
+    const {id} = useParams()
+    const [eventDetailsData,setEventDetailsData] = useState([])
+    useEffect(() => {
+        fetch(`http://localhost:5000/event-details/${id}`)
+            .then(res => res.json())
+            .then(data => setEventDetailsData(data))
+    },[id])
+    // console.log(eventDetailsData);
     return (
         <div className='route'>
             <section className='min-h-screen'>
@@ -22,11 +31,11 @@ const EventDetails = () => {
                 <section className='px-3 flex flex-wrap justify-center container mx-auto max-w-7xl lg:px-16 my-16'>
                     {/* 2nd row : 1st column (-----Rashid vai-------)*/}
                     <div className=' basis-[800px] shrink grow max-w-[52rem]'>
-                        <FeaturedEvent></FeaturedEvent>
-                        <FeaturedEventDetails/>
-                        <EventSchedule/>
-                        <Pricing/>
-                        <RegisterEvent/>
+                        <FeaturedEvent eventDetailsData={eventDetailsData} key={eventDetailsData._id}></FeaturedEvent>
+                        <FeaturedEventDetails />
+                        <EventSchedule />
+                        <Pricing />
+                        <RegisterEvent />
                     </div>
 
                     {/* 2nd row : 2nd column */}

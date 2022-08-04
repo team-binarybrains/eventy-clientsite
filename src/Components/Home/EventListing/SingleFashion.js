@@ -1,8 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const SingleFashion = ({ item }) => {
   const {
+    _id,
     tittle,
     type,
     image,
@@ -45,9 +47,9 @@ const SingleFashion = ({ item }) => {
             <span className="text-center line"> {address}</span>
           </h1>
           <div className="flex justify-center w-full ">
-            <button className=" p-4  font-bold text-[#878787] mt-5 bg-[#F7F7F7] rounded-xl border-none hover:bg-gradient-to-r from-[#fd1d1d] to-[#833ab4] hover:text-white hover:transitionease-in-out">
+            <Link to={`/event-details/${_id}`} className=" p-4  font-bold text-[#878787] mt-5 bg-[#F7F7F7] rounded-xl border-none hover:bg-gradient-to-r from-[#fd1d1d] to-[#833ab4] hover:text-white hover:transitionease-in-out">
               TICKETS & DETAILS
-            </button>
+            </Link>
           </div>
         </div>
       </div>

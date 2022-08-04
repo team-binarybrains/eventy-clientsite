@@ -14,24 +14,24 @@ const DayOne = () => {
             <div className="">
                <div className="grid md:flex gap-4">
                   <div className="flex items-center gap-2">
-                     <FaMicrophone  className='text-5xl p-3 rounded-full bg-yellow-400'/>
+                     <FaMicrophone  className='text-5xl p-3 rounded-full bg-yellow-400 text-white'/>
                      <div className="">
                         <h1 className='text-base text-slate-600 font-semibold'>Speaker</h1>
                         <h1 className='text-lg font-semibold text-slate-700'>JENNY JUIS</h1>
                      </div>
                   </div>
                   <div className="flex items-center  gap-2">
-                     <FaTicketAlt className='text-5xl p-3 rounded-full bg-yellow-400'/>
+                     <FaTicketAlt className='text-5xl p-3 rounded-full bg-yellow-400 text-white'/>
                      <div className="">
-                        <h1 className='text-base text-slate-600 font-semibold'>Speaker</h1>
-                        <h1>JENNY JUIS</h1>
+                        <h1 className='text-base text-slate-600 font-semibold'>Max Seats</h1>
+                        <h1>2,250 SEATS</h1>
                      </div>
                   </div>
                   <div className="flex items-center  gap-2">
-                     <FaRegClock className='text-5xl p-3 rounded-full bg-yellow-400'/>
+                     <FaRegClock className='text-5xl p-3 rounded-full bg-yellow-400 text-white'/>
                      <div className="">
-                        <h1 className='text-base text-slate-600 font-semibold'>Speaker</h1>
-                        <h1 className='text-lg font-semibold text-slate-700'>JENNY JUIS</h1>
+                        <h1 className='text-base text-slate-600 font-semibold'>Event Time</h1>
+                        <h1 className='text-lg font-semibold text-slate-700'>15~16PM</h1>
                      </div>
                   </div>
                </div>

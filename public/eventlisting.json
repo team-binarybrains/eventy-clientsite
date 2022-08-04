@@ -2,7 +2,26 @@
     {
       "tittle": "Los Angeles Music Event",
       "type": "music",
-      "image": "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
+      "image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "25,August,2022",
       "ticketprice": "70",
       "starttime": "2:00 PM",
@@ -12,7 +31,26 @@
     {
       "tittle": "Barcelona Food Truck Festival 2018",
       "type": "music",
-      "image": "https://i.ibb.co/TK9GvgT/event-1.jpg",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
+      "image":"https://i.ibb.co/TK9GvgT/event-1.jpg",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "5,August,2022",
       "ticketprice": "70",
       "starttime": "3:00 PM",
@@ -22,7 +60,26 @@
     {
       "tittle": "Dhaka Wine Party 2022 ",
       "type": "music",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
       "image": "https://i.ibb.co/sbZBrKS/event-4.jpg",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "5,September,2022",
       "ticketprice": "100",
       "starttime": "3:00 PM",
@@ -32,7 +89,26 @@
     {
       "tittle": "MK Conference Event",
       "type": "conference",
-      "image": "https://i.ibb.co/m05Msqz/event-details-3.jpg",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
+      "image":"https://i.ibb.co/m05Msqz/event-details-3.jpg",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "10,September,2022",
       "ticketprice": "50",
       "starttime": "3:00 PM",
@@ -42,7 +118,26 @@
     {
       "tittle": "Dhaka Music Event",
       "type": "music",
-      "image": "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
+      "image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "10,September,2022",
       "ticketprice": "50",
       "starttime": "4:00 PM",
@@ -52,7 +147,26 @@
     {
       "tittle": "Rangpur Music Event,2022",
       "type": "music",
-      "image": "https://i.ibb.co/tH7hrhZ/5.jpg",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
+      "image":"https://i.ibb.co/tH7hrhZ/5.jpg",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "20,September,2022",
       "ticketprice": "40",
       "starttime": "4:00 PM",
@@ -62,7 +176,26 @@
     {
       "tittle": "USA Conference Event,2022",
       "type": "conference",
-      "image": "https://i.ibb.co/ScjVJTD/event-details-1.jpg",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
+      "image":"https://i.ibb.co/ScjVJTD/event-details-1.jpg",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "24,September,2022",
       "ticketprice": "40",
       "starttime": "4:00 PM",
@@ -72,7 +205,26 @@
     {
       "tittle": "Big Conference Event,2022",
       "type": "conference",
-      "image": "https://i.ibb.co/HGPMDfq/event-6.jpg",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
+      "image":"https://i.ibb.co/HGPMDfq/event-6.jpg",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "24,October,2022",
       "ticketprice": "50",
       "starttime": "4:00 PM",
@@ -82,7 +234,26 @@
     {
       "tittle": "Dubai Music Event,2022",
       "type": "music",
-      "image": "https://i.ibb.co/XjyGkvx/event-3-1.jpg",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
+      "image":"https://i.ibb.co/XjyGkvx/event-3-1.jpg",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "27,October,2022",
       "ticketprice": "100",
       "starttime": "4:00 PM",
@@ -92,7 +263,26 @@
     {
       "tittle": "Dubai Fashion Event,2022",
       "type": "fashion",
+      "img": [
+        {"image":"https://i.ibb.co/ncZc4Vr/musical-event1.jpg"},
+        {"image":"https://i.ibb.co/TK9GvgT/event-1.jpg"},
+        {"image":"https://i.ibb.co/sbZBrKS/event-4.jpg"}
+      ],
+      "day":[
+        {"dayOne":[
+          {"dayOneTitle":"Greeting Welcome"},
+          {"dayOneDisruption":"Lorem ipsum dollor site amet the best consectuer diam nerd adipiscing elites sed diam nonummy nibh the ebest uismod tincidunt ut laoreet dolore magna aliquam erat volutpat guild insignia the consectuer adipiscing elit."},
+          {"Speaker":"JENNY Juis"},
+          {"maxSeats":"2,250"},
+          {"eventStartTime":"11:00 pm"},
+          {"eventEndTime":"1:00 pm"}
+          ]
+        },
+        {"dayTwo":"day two"},
+        {"dayThere":"day there"}
+      ],
       "image": "https://i.ibb.co/VD61crR/fashion.png",
+      "disruption":"Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit. Lorem ipsum dollor site amet the best consectuer diam adipiscing elites sed diam nonummy nibh the euismod tincidunt ut laoreet dolore magna aliquam erat volutpat insignia the consectuer adipiscing elit.",
       "date": "27,October,2022",
       "ticketprice": "100",
       "starttime": "4:00 PM",
