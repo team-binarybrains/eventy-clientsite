@@ -10,7 +10,7 @@ const SingleEventBooking = () => {
 
     const { id } = useParams();
 
-    const event = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/venue/${id}`, {});
+    const event = useFetch(`http://localhost:5000/venue/${id}`, {});
     console.log(event);
 
     const { venueName, seats, price, code, star, img, location } = event
@@ -35,7 +35,7 @@ const SingleEventBooking = () => {
         }
         console.log(bookingInfo);
 
-        axios.post('https://fathomless-hamlet-59180.herokuapp.com/venue-booking', bookingInfo)
+        axios.post('http://localhost:5000/venue-booking', bookingInfo)
             .then(res => {
                 const { data } = res
                 console.log(data);
@@ -82,8 +82,8 @@ const SingleEventBooking = () => {
                             {/* <p className='flex items-center text-xl font-semibold'>Reating: {star} <span><AiFillStar className='text-yellow-500' /></span></p> */}
 
                             <div className='mt-6'>
-                            <p className='text-xl font-semibold '>Location: {location}</p>
-                                <MapContainer center={[51.505, -0.09]} zoom={7} scrollWheelZoom={true}  style={{ height: 256, width: 570 }}>
+                                <p className='text-xl font-semibold '>Location: {location}</p>
+                                <MapContainer center={[51.505, -0.09]} zoom={7} scrollWheelZoom={true} style={{ height: 256, width: 570 }}>
                                     <TileLayer
                                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
