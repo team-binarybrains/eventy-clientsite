@@ -140,9 +140,9 @@ function SingleService() {
                                             <img className='h-[80px] max-w-[80px] object-cover overflow-hidden' src={venue?.img} alt="" />
                                             <div className='space-y-1 shrink'>
                                                 <h5 className=''><span className='text-rose-500 font-bold'>{`${venue?.star} ⭐ ${venue?.venueName}`}</span></h5>
-                                                <h6 className='text-xs'>{`Party Room ${venue?.seats} seats`}</h6>
+                                                <h6 className='text-xs text-white'>{`Party Room ${venue?.seats} seats`}</h6>
                                                 <h6 className='text-rose-500 font-bold text-xs'>{`Price from $${venue?.price}/night`}</h6>
-                                                <h6 className='text-xs'>{`Venue Code : ${venue?.code}`}</h6>
+                                                <h6 className='text-xs text-white'>{`Venue Code : ${venue?.code}`}</h6>
                                             </div>
                                         </div>
                                     })
