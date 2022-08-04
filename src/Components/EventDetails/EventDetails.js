@@ -1,4 +1,6 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import useFetch from '../Home/OurServices/Hook/useFetch';
 import style from './EventDetails.module.css'
 import EventSchedule from './FeaturedEvent/EventSchedule/EventSchedule';
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
@@ -10,6 +12,9 @@ import TopBanner from './TopBanner';
 
 
 const EventDetails = () => {
+    
+
+
     return (
         <div className='route'>
             <section className='min-h-screen'>
