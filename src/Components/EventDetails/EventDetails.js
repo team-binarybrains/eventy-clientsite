@@ -19,7 +19,7 @@ const EventDetails = () => {
                     <TopBanner></TopBanner>
                 </div>
 
-                <section className='px-3 flex flex-wrap justify-center container mx-auto max-w-7xl lg:px-16'>
+                <section className='px-3 flex flex-wrap justify-center container mx-auto max-w-7xl lg:px-16 my-16'>
                     {/* 2nd row : 1st column (-----Rashid vai-------)*/}
                     <div className=' basis-[800px] shrink grow max-w-[52rem]'>
                         <FeaturedEvent></FeaturedEvent>
