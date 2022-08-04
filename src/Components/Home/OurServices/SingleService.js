@@ -37,9 +37,9 @@ function SingleService() {
             phone: e.target.phone.value,
             address: e.target.address.value,
             message: e.target.message.value,
+            code: e.target.code.value,
             image: image,
             eventName: eventName,
-            venueCode: venueCode,
             eventPrice: eventPrice
         }
         console.log(bookingInfo);
@@ -81,7 +81,7 @@ function SingleService() {
     const [select,setSelect] = useState({});
     const [venues,setVenues] = useState([]);
 
-    const {venueCode} = venues
+    // const {venueCode} = venues
     useEffect(()=> {
         axios.get(`http://localhost:5000/venues`)
         .then(res => {
@@ -212,12 +212,12 @@ function SingleService() {
                                         className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
                                         type="text"
                                         placeholder="Venue Code"
-                                        name="venueCode"
+                                        name="code"
                                     />
                                     <input
                                         required
                                         className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
-                                        type="email"
+                                        type="text"
                                         placeholder="Phone Number"
                                         name="phone"
                                     />
