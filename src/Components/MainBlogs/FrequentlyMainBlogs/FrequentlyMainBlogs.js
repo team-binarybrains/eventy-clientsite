@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { BsBookmarkFill } from "react-icons/bs";
 import './FrequentlyMainBlogs.css'
 const FrequentlyMainBlogs = () => {
@@ -6,6 +6,15 @@ const FrequentlyMainBlogs = () => {
     const [show2, setShow2] = useState(false);
     const [show3, setShow3] = useState(false);
     const [show4, setShow4] = useState(false);
+    const [blogs, setBlogs]=useState([]);
+    useEffect(() => {
+        fetch('http://localhost:5000/blogs')
+        .then(res=>res.json())
+        .then(data=>setBlogs(data))
+        
+
+    },[])
+    console.log(blogs);
     return (
         <div>
             <div>
@@ -25,11 +34,16 @@ const FrequentlyMainBlogs = () => {
 
             </div>
             <div className=" flex md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
-                <div className=" md:w-7/12 lg:w-8/12 w-full ">
+                <div className=" md:w-7/12 lg:w-8/12 w-full border-red-500 border-4">
 
                     {/* <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:block hidden" /> */}
-                      <div className="grid md:grid-cols-2 gap-7 p-5  ">
-                           <div className="hover:border-amber-600">
+                    
+                          
+                    
+                        <div  className="grid md:grid-cols-2 gap-7 p-5  ">
+                        {
+                    blogs.map(blog=> 
+                             <div blog={blog} className="hover:border-amber-600">
                             <div className='relative' >
                         <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
 
@@ -41,99 +55,19 @@ const FrequentlyMainBlogs = () => {
                                 <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
                                  
                                  <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
-                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+                                 <p className="text-[18px]">
+                                    {blog.details}
+                                 </p>
                                  <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
                                </div>
                             
                            </div>
-                        <div>
-
-                        <div className="hover:border-amber-600">
-                            <div className="relative">
-                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
-
-                            </div>
-                        
-                               <div className="  py-5 px-5 bg-[#f7f7f7]">
-                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
-                                 
-                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
-                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
-                               </div>
-                            
-                           </div>
-
+                                 )
+                                }
                         </div>
-
-                        <div className="hover:border-amber-600">
-                            <div className="relative">
-                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
-
-                            </div>
-                        
-                               <div className="  py-5 px-5 bg-[#f7f7f7]">
-                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
-                                 
-                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
-                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
-                               </div>
-                            
-                           </div>
-
-                           <div className="hover:border-amber-600">
-                            <div className='relative'>
-                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
-
-                            </div>
-                        
-                               <div className="  py-5 px-5 bg-[#f7f7f7]">
-                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
-                                 
-                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
-                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
-                               </div>
-                            
-                           </div>
-
-                           <div className="hover:border-amber-600">
-                            <div className="relative">
-                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
-
-                            </div>
-                        
-                               <div className="  py-5 px-5 bg-[#f7f7f7]">
-                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
-                                 
-                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
-                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
-                               </div>
-                            
-                           </div>
-                           <div className="hover:border-amber-600">
-                            <div className="relative">
-                        <img src="https://i.ibb.co/qRC1WZn/musical-event1-1.jpg" alt="" />
-                        <p className="absolute top-5 left-5  text-white font-semibold">26 MAY 2018 - 4.00 </p>
-
-                            </div>
-                        
-                               <div className="  py-5 px-5 bg-[#f7f7f7]">
-                                <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block'/> Musical Event</p>
-                                 
-                                 <h1 className="text-[18px] font-bold py-5">Biggest Musical Event</h1>
-                                 <p className="text-[18px]">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-                                 <button className='px-10 py-3 rounded-md mt-5  bg-white red-more '>Read More</button>
-                               </div>
-                            
-                           </div>
-                      </div>
+                  
+                    
+                     
 
 
                     {/* <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:hidden block " /> */}

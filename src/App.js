@@ -40,6 +40,10 @@ function App() {
           path="/blogs-details/:blogId"
           element={<BlogDetails></BlogDetails>}
         ></Route>
+        <Route
+          path="/blogs-details"
+          element={<BlogDetails></BlogDetails>}
+        ></Route>
         <Route path="/blogs" element={<MainBlogs />}></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
