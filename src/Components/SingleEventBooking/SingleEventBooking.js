@@ -5,7 +5,6 @@ import { FiMail } from 'react-icons/fi';
 import { toast } from 'react-toastify';
 import axios from 'axios';
 import { MapContainer, TileLayer } from 'react-leaflet';
-import "./SingleEventBooking.css"
 
 const SingleEventBooking = () => {
 
@@ -80,11 +79,11 @@ const SingleEventBooking = () => {
                             <p className='text-3xl font-semibold'>Price: ${price}</p>
                             <p className='text-2xl font-semibold'>Capacity: {seats} seats</p>
                             <p className='text-2xl font-semibold'>Venue code: {code}</p>
-                            <p className='text-2xl font-semibold'>Location: {location}</p>
                             {/* <p className='flex items-center text-xl font-semibold'>Reating: {star} <span><AiFillStar className='text-yellow-500' /></span></p> */}
 
-                            <div className='mt-10'>
-                                <MapContainer center={[51.505, -0.09]} zoom={7} scrollWheelZoom={false}>
+                            <div className='mt-6'>
+                            <p className='text-xl font-semibold '>Location: {location}</p>
+                                <MapContainer center={[51.505, -0.09]} zoom={7} scrollWheelZoom={true}  style={{ height: 256, width: 570 }}>
                                     <TileLayer
                                         attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
