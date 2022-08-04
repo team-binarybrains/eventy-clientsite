@@ -66,9 +66,6 @@ function SingleService() {
                 "o9Z3tWsWjPM6vPC1M",
             )
             .then(
-                (result) => {
-                    toast.success("Your booking successfully placed. We will contact you soon for confirm your booking.", { theme: "dark" });
-                },
                 (error) => {
                     toast.error(error.text, { theme: "light" });
                 }
