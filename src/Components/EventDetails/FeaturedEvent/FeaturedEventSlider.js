@@ -13,7 +13,13 @@ function SampleNextArrow(props) {
    return (
       <div
          className={`${className}`}
-         style={{ position: "absolute", top: "5%", right: "2%", fontSize: "2rem" }}
+         style={{ 
+            position: "absolute", 
+            top: "5%", 
+            right: "2%", 
+            fontSize: "2rem" ,
+            
+         }}
          onClick={onClick}
       >
          {/* <AiOutlineArrowRight></AiOutlineArrowRight> */}
@@ -26,7 +32,13 @@ function SamplePrevArrow(props) {
    return (
       <div
          className={className}
-         style={{ position: "absolute", top: "5%", left: "90%", fontSize: "2rem", zIndex: "11" }}
+         style={{ 
+            position: "absolute", 
+            top: "5%", 
+            left: "85%", 
+            fontSize: "2rem", 
+            zIndex: "11" 
+         }}
          onClick={onClick}
       />
    );
@@ -48,7 +60,7 @@ const FeaturedEventSlider = () => {
       prevArrow: <SamplePrevArrow />,
    };
    return (
-      <div className="py-6 w-80 md:w-full">
+      <div className="py-6 w-80 m-auto sm:w-11/12 md:w-full">
          {/* <h2> Single Item</h2> */}
          <Slider {...settings} className='relative max-w-2xl'>
             {
@@ -56,7 +68,7 @@ const FeaturedEventSlider = () => {
                   <div key={index} className="">
                      <div className="">
                         <div className="">
-                           <img className="object-cover object-top rounded" src={slide.img} style={{ height: '400px' }} alt="" />
+                           <img className="object-cover object-top rounded w-full" src={slide.img} style={{ height: '400px' }} alt="" />
                         </div>
                      </div>
                   </div>

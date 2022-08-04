@@ -1,3 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.openSans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.bgImage{
+    background-image: url('../../../asset/brenda-alvarado-ruiz-m-i_e6c8gm8-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 100rem;
+}
+
+.section::-webkit-scrollbar-track {
+    background-color:rgba(18, 18, 18, 0.391);
+}
+
+.section::-webkit-scrollbar-thumb {
+    background-image:linear-gradient(red,rgb(140, 33, 255));
+    width: 12px;
+    border-radius: 5px;
+}
+
+.section>div:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+}
+
+.selected{
+    background-color: rgb(34, 34, 34);
+    position: relative;
+    z-index: 99;
+}
+
+.selected::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: rgba(34, 34, 34);
+    z-index: 10;
+    top: 32%;
+    right: -10px;
+    transform: rotate(45deg);
+}
+
+.highlight:hover .child:not(:hover){
+    transition: filter 0.3s ;
+    filter: blur(2.5px);
+}
+
+.batch{
+    height: 90px;
+    width: 120px;
+    background-image: linear-gradient(-270deg,lightgreen,lightseagreen);
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 35% 50%, 0% 0%);
+    transform: rotate(-90deg);
+}
+
+
+/* ----------------- */
 h1,
 h2,
 h3,
@@ -114,3 +186,5 @@ h6 {
     transform: translateY(-15px);
   }
 }
+
+

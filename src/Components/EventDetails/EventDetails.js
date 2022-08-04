@@ -1,4 +1,6 @@
 import React from 'react';
+import { useParams } from 'react-router-dom';
+import useFetch from '../Home/OurServices/Hook/useFetch';
 import style from './EventDetails.module.css'
 import EventSchedule from './FeaturedEvent/EventSchedule/EventSchedule';
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
@@ -10,6 +12,9 @@ import TopBanner from './TopBanner';
 
 
 const EventDetails = () => {
+    
+
+
     return (
         <div className='route'>
             <section className='min-h-screen'>
@@ -19,7 +24,7 @@ const EventDetails = () => {
                     <TopBanner></TopBanner>
                 </div>
 
-                <section className='px-3 flex flex-wrap justify-center container mx-auto max-w-7xl lg:px-16'>
+                <section className='px-3 flex flex-wrap justify-center container mx-auto max-w-7xl lg:px-16 my-16'>
                     {/* 2nd row : 1st column (-----Rashid vai-------)*/}
                     <div className=' basis-[800px] shrink grow max-w-[52rem]'>
                         <FeaturedEvent></FeaturedEvent>

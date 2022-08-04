@@ -22,6 +22,7 @@ import MainBlogs from "./Components/MainBlogs/MainBlogs";
 import ScrollToTop from "./Components/Share/ScrolltoTop/ScrollToTop";
 import { useEffect } from "react";
 import Navbar from "./Components/Share/Navbar/Navbar";
+import SingleEventBooking from "./Components/SingleEventBooking/SingleEventBooking";
 
 function App() {
   const location = useLocation();
@@ -37,6 +38,10 @@ function App() {
         <Route path="/" element={<Home></Home>}></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
         <Route
+          path="/blogs-details"
+          element={<BlogDetails></BlogDetails>}
+        ></Route>
+        <Route
           path="/blogs-details/:blogId"
           element={<BlogDetails></BlogDetails>}
         ></Route>
@@ -47,6 +52,7 @@ function App() {
           path="/event-booking"
           element={<EventBooking></EventBooking>}
         ></Route>
+        <Route path='/event-booking/:id' element={<SingleEventBooking></SingleEventBooking>}></Route>
         <Route
           path="/eventlist"
           element={<EventListDetailsMain></EventListDetailsMain>}
@@ -54,6 +60,10 @@ function App() {
         <Route path="/event" element={<DayOne></DayOne>}></Route>
         <Route
           path="/event-details"
+          element={<EventDetails></EventDetails>}
+        ></Route>
+        <Route
+          path="/event-details/:id"
           element={<EventDetails></EventDetails>}
         ></Route>
         <Route
