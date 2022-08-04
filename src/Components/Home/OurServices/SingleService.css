@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.openSans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.bgImage{
+    background-image: url('../../../asset/brenda-alvarado-ruiz-m-i_e6c8gm8-unsplash.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.section::-webkit-scrollbar {
+    width: 5px;
+    border-radius: 100rem;
+}
+
+.section::-webkit-scrollbar-track {
+    background-color:rgba(18, 18, 18, 0.391);
+}
+
+.section::-webkit-scrollbar-thumb {
+    background-image:linear-gradient(red,rgb(140, 33, 255));
+    width: 12px;
+    border-radius: 5px;
+}
+
+.section>div:not(:last-child){
+    border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+}
+
+.selected{
+    background-color: rgb(34, 34, 34);
+    position: relative;
+    z-index: 99;
+}
+
+.selected::before{
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: rgba(34, 34, 34);
+    z-index: 10;
+    top: 32%;
+    right: -10px;
+    transform: rotate(45deg);
+}
+
+.highlight:hover .child:not(:hover){
+    transition: filter 0.3s ;
+    filter: blur(2.5px);
+}
+
+.batch{
+    height: 90px;
+    width: 120px;
+    background-image: linear-gradient(-270deg,lightgreen,lightseagreen);
+    clip-path: polygon(100% 0, 100% 50%, 100% 100%, 0% 100%, 35% 50%, 0% 0%);
+    transform: rotate(-90deg);
+}
+
+
+/* ----------------- */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  font-weight: 600;
+}
+/* .main {
+  padding-top: 10px;
+  background-image: url("../../image/png/register_bg_2.png");
+  background-size: cover;
+} */
+.button {
+  background: linear-gradient(180deg, #fdc50f 26.71%, #fb982f 99.36%);
+  box-shadow: 0px 20px 24px 3px rgba(251, 161, 40, 0.42);
+  border-radius: 34px;
+  border: none;
+  color: white;
+  font-size: 16px;
+  padding: 11px 26px 11px 26px;
+}
+
+.button:hover {
+  background: white;
+  cursor: pointer;
+
+  color: var(--orange);
+}
+
+.bounce {
+  animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
+}
+
+.bounce:hover {
+  animation: none;
+  -webkit-animation: none;
+  -moz-animation: none;
+  -o-animation: none;
+}
+
+@-webkit-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -webkit-transform: translateY(0);
+  }
+
+  40% {
+    -webkit-transform: translateY(-30px);
+  }
+
+  60% {
+    -webkit-transform: translateY(-15px);
+  }
+}
+
+@-moz-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+  }
+
+  40% {
+    -moz-transform: translateY(-30px);
+  }
+
+  60% {
+    -moz-transform: translateY(-15px);
+  }
+}
+
+@-o-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -o-transform: translateY(0);
+  }
+
+  40% {
+    -o-transform: translateY(-30px);
+  }
+
+  60% {
+    -o-transform: translateY(-15px);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+
+  40% {
+    transform: translateY(-30px);
+  }
+
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+

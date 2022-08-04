@@ -1,89 +1,42 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
+import useEventListing from "../../Hooks/useEventListing";
+import SingleConferenceEventList from "./SingleConferenceEventList";
 const ConferenceEvent = () => {
+  const type = "conference";
+  const [eventLists] = useEventListing(type);
+
   return (
-    <div className=" mt-10 flex flex-col mx-auto justify-center lg:flex-row gap-5 ">
-      <div className="w-[90vw] p-[15px] lg:w-[570px] flex flex-col items-center mx-auto   lg:flex lg:flex-row lg:justify-center lg:text-start  border-[1px] border-base-100 shadow-md hover:border-[1px] hover:border-orange-400 transition-all lg:p-[15px]">
-        <div className="image ">
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-[70px] h-[70px] text-center font-extrabold z-10 absolute ">
-            {" "}
-            <h1 className="text-white">
-              <span className="text-[24px]"> 26</span>
-              <br />
-              <span className="text-[18px]">June</span>
-            </h1>
-          </div>
-          <img
-            className="h-[250px] w-[250px]"
-            src="https://i.ibb.co/tPtrjMm/event-1.jpg"
-            alt=""
-          />
-        </div>
-        <div className="details flex flex-col  self-start mt-5 lg:ml-5 text-start">
-          <h1 className="text-[18px] font-bold">
-            Barcelona Food Truck <br /> Festival 2018
-          </h1>
-          <h1 className="text-[17px] text-[#FD1D1D] ">Tickets from $52</h1>
-          <h1 className="text-[14px] text-[#878787] mt-5">
-            <span className="mr-2 bg-[#F7F7F7] p-1 rounded-full text-[#FD1D1D]   ">
-              <FontAwesomeIcon icon={faClock} />
-            </span>{" "}
-            Start 20:00pm - 22:00pm
-          </h1>
-          <h1 className="text-[14px] text-[#878787] mt-4">
-            <span className="mr-2 bg-[#F7F7F7] p-1 rounded-full text-[#FD1D1D]   ">
-              <FontAwesomeIcon icon={faLocationDot} />
-            </span>{" "}
-            Manhattan, New York
-          </h1>
-          <div className="flex justify-center w-full ">
-            <button className=" p-4  font-bold text-[#878787] mt-5 bg-[#F7F7F7] rounded-xl border-none hover:bg-gradient-to-r from-[#fd1d1d] to-[#833ab4] hover:text-white hover:transitionease-in-out">
-              TICKETS & DETAILS
-            </button>
+    <div className=" min-h-[50vh]  relative grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {eventLists.length &&
+        eventLists?.map((item) => (
+          <SingleConferenceEventList
+            item={item}
+            key={item._id}
+          ></SingleConferenceEventList>
+        ))}
+      {!eventLists.length && (
+        <div class="  absolute top-[50%] left-[50%] ">
+          <div className="" role="status">
+            <svg
+              class="inline mr-2 w-16 h-16 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600"
+              viewBox="0 0 100 101"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z"
+                fill="currentColor"
+              />
+              <path
+                d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z"
+                fill="currentFill"
+              />
+            </svg>
           </div>
         </div>
-      </div>
-      <div className="w-[90vw] p-[15px] lg:w-[570px] flex flex-col items-center mx-auto   lg:flex lg:flex-row lg:justify-center lg:text-start border-[1px] border-base-100 shadow-md hover:border-[1px] hover:border-orange-400 transition-all lg:p-[15px]">
-        <div className="image ">
-          <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-[70px] h-[70px] text-center font-extrabold z-10 absolute ">
-            {" "}
-            <h1 className="text-white">
-              <span className="text-[24px]"> 26</span>
-              <br />
-              <span className="text-[18px]">June</span>
-            </h1>
-          </div>
-          <img
-            className="h-[250px] w-[250px]"
-            src="https://i.ibb.co/tPtrjMm/event-1.jpg"
-            alt=""
-          />
-        </div>
-        <div className="details flex flex-col  self-start mt-5 lg:ml-5 text-start">
-          <h1 className="text-[18px] font-bold">
-            Barcelona Food Truck <br /> Festival 2018
-          </h1>
-          <h1 className="text-[17px] text-[#FD1D1D] ">Tickets from $52</h1>
-          <h1 className="text-[14px] text-[#878787] mt-5">
-            <span className="mr-2 bg-[#F7F7F7] p-1 rounded-full text-[#FD1D1D]   ">
-              <FontAwesomeIcon icon={faClock} />
-            </span>{" "}
-            Start 20:00pm - 22:00pm
-          </h1>
-          <h1 className="text-[14px] text-[#878787] mt-4">
-            <span className="mr-2 bg-[#F7F7F7] p-1 rounded-full text-[#FD1D1D]   ">
-              <FontAwesomeIcon icon={faLocationDot} />
-            </span>{" "}
-            Manhattan, New York
-          </h1>
-          <div className="flex justify-center w-full ">
-            <button className=" p-4  font-bold text-[#878787] mt-5 bg-[#F7F7F7] rounded-xl border-none hover:bg-gradient-to-r from-[#fd1d1d] to-[#833ab4] hover:text-white hover:transitionease-in-out">
-              TICKETS & DETAILS
-            </button>
-          </div>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

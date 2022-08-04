@@ -1,0 +1,38 @@
+[
+    {
+        "eventName": "Wedding Party",
+        "image": "https://i.ibb.co/M2W5Hm9/img1.jpg",
+        "eventPrice": 2500,
+        "description": ""
+    },
+    {
+        "eventName": "Birthday Party",
+        "image": "https://i.ibb.co/DDbg7n4/img2.jpg",
+        "eventPrice": 550,
+        "description": ""
+    },
+    {
+        "eventName": "Business Meeting",
+        "image": "https://i.ibb.co/vB6cSjx/img3.jpg",
+        "eventPrice": 1200,
+        "description": ""
+    },
+    {
+        "eventName": "Fassion Show",
+        "image": "https://i.ibb.co/vqZ2qKw/fashion.webp",
+        "eventeventPrice": 6500,
+        "description": ""
+    },
+    {
+        "eventName": "Iftar Party",
+        "image": "https://i.ibb.co/t2pj2VC/iftar.jpg",
+        "eventPrice": 7000,
+        "description": ""
+    },
+    {
+        "eventName": "Christmas Party",
+        "image": "https://i.ibb.co/XVhFNcB/crits.jpg",
+        "eventPrice": 9500,
+        "description": ""
+    }
+]

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,12 +9,20 @@ import {
   faCakeCandles,
   faMusic,
   faSquareCheck,
+  faShirt,
 } from "@fortawesome/free-solid-svg-icons";
 import ConferenceEvent from "./ConferenceEvent";
-
+import MusicEvent from "./MusicEvent";
+import FashionEvent from "./FashionEvent";
+import { useNavigate } from "react-router-dom";
+import TopBanner from "../../EventDetails/TopBanner";
 const EventListing = () => {
+  const navigate = useNavigate();
+  const handleEventListing = () => {
+    navigate("/eventlist");
+  };
   return (
-    <div className="mt-20">
+    <div className="mt-20 min-h-[50vh] bg-[#fff]">
       <div className=" mx-auto h-1 w-24 bg-[#FD1D1D]  lg:ml-[320px] lg:mb-6"></div>
       <div className=" text-center lg:text-start lg:ml-96 ">
         <h1 className="text-[20px] text-[#878787] uppercase">Eventy</h1>
@@ -44,9 +52,9 @@ const EventListing = () => {
                 <span className="font-bold  ">
                   <FontAwesomeIcon
                     className="text-orange-500 mr-2"
-                    icon={faCakeCandles}
+                    icon={faShirt}
                   />
-                  Play Ground
+                  Fashion
                 </span>{" "}
                 <span className="text-gray-700 ">Event</span>
               </h1>
@@ -57,9 +65,9 @@ const EventListing = () => {
                 <span className="font-bold ">
                   <FontAwesomeIcon
                     className="text-orange-500 mr-2 "
-                    icon={faSquareCheck}
+                    icon={faMusic}
                   />
-                  Conference
+                  Music
                 </span>{" "}
                 <span className="text-gray-700 ">Event</span>
               </h1>
@@ -67,13 +75,27 @@ const EventListing = () => {
           </TabList>
 
           <TabPanel>
-            <ConferenceEvent></ConferenceEvent>
+            <div>
+              <ConferenceEvent></ConferenceEvent>
+            </div>
           </TabPanel>
 
-          <TabPanel></TabPanel>
+          <TabPanel>
+            <FashionEvent></FashionEvent>
+          </TabPanel>
 
-          <TabPanel></TabPanel>
+          <TabPanel>
+            <MusicEvent></MusicEvent>
+          </TabPanel>
         </Tabs>
+      </div>
+      <div className="flex justify-center mt-10">
+        <button
+          onClick={handleEventListing}
+          className="custom-btn px-10 font-bold py-3 rounded-full text-white "
+        >
+          See More
+        </button>
       </div>
     </div>
   );
