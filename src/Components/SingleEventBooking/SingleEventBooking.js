@@ -4,8 +4,8 @@ import useFetch from '../Home/OurServices/Hook/useFetch';
 import { FiMail } from 'react-icons/fi';
 import { toast } from 'react-toastify';
 import axios from 'axios';
-import "./SingleEventBooking.css"
 import { MapContainer, TileLayer } from 'react-leaflet';
+import "./SingleEventBooking.css"
 
 const SingleEventBooking = () => {
 
