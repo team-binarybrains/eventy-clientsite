@@ -1,0 +1,38 @@
+[
+    {
+        "name": "Winson Herry",
+        "profession": "Doctor",
+        "description": "Easy to use, love how you can duplicate events during set up and best part is choice of payment platform- as an event organizer getting paid within days of ticket sales is great.Thanks share wonderfull site all of us.",
+        "rating": 5
+    },
+    {
+        "name": "Alex Uran",
+        "profession": "Teacher",
+        "description": "System was easy to use, great customer support and the employees we dealt with would go out of their way to help us.I have worked with and genuinely care about our organization and what these events allow us to do beyond the event",
+        "rating": 5
+    },
+    {
+        "name": "Shafik Islam",
+        "profession": "Computer Engineer",
+        "description": "The people on the events.com team, are some of the best people I have worked with and genuinely care about our organization and what these events allow us to do beyond the event. This site Event ticket buy system is incredible.",
+        "rating": 4
+    },
+    {
+        "name": "Rafik Islam",
+        "profession": "Web Developer",
+        "description": "Events.com made our conference ticket purchasing process simple for our attendees and streamlined our check-in process with the use of tablets for ticket scanning. Their prices were better for us than the competing system we had previously used and the personalized service made working with them extremely simple and pleasing.",
+        "rating": 4
+    },
+    {
+        "name": "Rony Islam",
+        "profession": "Graphics Deginer",
+        "description": "I had a great balayage experience with Sebastian, he took his time, listened, and executed! I have burnette hair and i was scared of a brassy look, he toned my hair just right, and guided me and my virgin hair! Very happy and reasonably priced. Excellent service and front desk staff.",
+        "rating": 5
+    },
+    {
+        "name": "Taufik Islam",
+        "profession": "Software Engineer",
+        "description": "The system was not geared to endurance events and it limited us in what we could do in the endurance industry.Overall a very disappointing experience that has required far more work on our part than we were expecting.",
+        "rating": 3
+    }
+]
