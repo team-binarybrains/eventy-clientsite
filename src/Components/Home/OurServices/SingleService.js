@@ -12,6 +12,8 @@ import './SingleService.css'
 function SingleService() {
 
     const { id } = useParams()
+    const [select,setSelect] = useState({});
+    const [venues,setVenues] = useState([]);
     // const [serviceDetails, setServiceDetails] = useState({})
     // console.log(serviceDetails);
     const details = useFetch(`http://localhost:5000/single-service/${id}`, {})
@@ -75,9 +77,6 @@ function SingleService() {
         e.target.reset();
     };
 
-
-    const [select,setSelect] = useState({});
-    const [venues,setVenues] = useState([]);
 
     // const {venueCode} = venues
     useEffect(()=> {
