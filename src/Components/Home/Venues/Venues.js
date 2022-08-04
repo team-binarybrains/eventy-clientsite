@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import styles from './venue.module.css';
 
 const Venues = () => {
+    const navigate = useNavigate();
     const [select,setSelect] = useState({});
     const [venues,setVenues] = useState([]);
     useEffect(()=> {
@@ -35,9 +37,9 @@ const Venues = () => {
                                         <img className='h-[80px] max-w-[80px] object-cover overflow-hidden' src={venue?.img} alt="" />
                                         <div className='space-y-1 shrink'>
                                             <h5 className=''><span className='text-rose-500 font-bold'>{`${venue?.star} ⭐ ${venue?.venueName}`}</span></h5>
-                                            <h6 className='text-xs'>{`Party Room ${venue?.seats} seats`}</h6>
+                                            <h6 className='text-xs text-white'>{`Party Room ${venue?.seats} seats`}</h6>
                                             <h6 className='text-rose-500 font-bold text-xs'>{`Price from $${venue?.price}/night`}</h6>
-                                            <h6 className='text-xs'>{`Venue Code : ${venue?.code}`}</h6>
+                                            <h6 className='text-xs text-white'>{`Venue Code : ${venue?.code}`}</h6>
                                         </div>
                                     </div>
                                 })
@@ -50,7 +52,9 @@ const Venues = () => {
                         <div className={`absolute top-0 left-0 ${styles.batch} flex justify-end pr-6`}>
                             <p className='font-bold text-lg text-center rotate-90'>{select.star} ⭐ <br /> Hotel</p>
                         </div>
-                        <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}>Book Now</button>
+                        <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`} onClick={()=> {
+                            navigate(`/event-booking/${select?._id}`)
+                        }}>Book Now</button>
                     </div>
                 </div>
             </section>
