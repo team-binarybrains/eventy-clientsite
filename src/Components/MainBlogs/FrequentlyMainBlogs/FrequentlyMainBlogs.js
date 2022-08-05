@@ -43,7 +43,7 @@ const FrequentlyMainBlogs = () => {
 
 
 
-                            <div className="grid md:grid-cols-2 gap-7 p-5  ">
+                            <div className="grid lg:grid-cols-2 md:grid-cols-2 gap-7 p-5  ">
                                 {
                                     blogs.map(blog =>
                                         <div blog={blog} className="hover:border-amber-600 border bg-[#f7f7f7] h-[500px]">
