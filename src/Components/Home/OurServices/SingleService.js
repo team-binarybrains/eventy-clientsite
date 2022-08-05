@@ -16,7 +16,7 @@ function SingleService() {
     const [venues, setVenues] = useState([]);
     // const [serviceDetails, setServiceDetails] = useState({})
     // console.log(serviceDetails);
-    const details = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/single-service/${id}`, {})
+    const details = useFetch(`http://localhost:5000/single-service/${id}`, {})
 
     const { eventName, image, description, eventPrice } = details
     // console.log(eventName.split(' '));
@@ -46,7 +46,7 @@ function SingleService() {
         }
         console.log(bookingInfo);
 
-        axios.post('https://fathomless-hamlet-59180.herokuapp.com/service-booking', bookingInfo)
+        axios.post('http://localhost:5000/service-booking', bookingInfo)
             .then(res => {
                 const { data } = res
                 console.log(data);
@@ -78,9 +78,10 @@ function SingleService() {
     };
 
 
+
     // const {venueCode} = venues
     useEffect(() => {
-        axios.get(`https://fathomless-hamlet-59180.herokuapp.com/venues`)
+        axios.get(`http://localhost:5000/venues`)
             .then(res => {
                 setVenues(res?.data);
                 setSelect(res?.data[0]);
@@ -96,8 +97,8 @@ function SingleService() {
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
                 <div className="flex justify-center items-center h-full lg:-mt-8">
                     <div className="text-white">
-                        <p className="tracking-[8px] uppercase">ALL YOU NEED TO KNOW About this service</p>
-                        <p className="text-6xl text-center font-bold my-3">
+                        <p className="lg:tracking-[8px] uppercase">ALL YOU NEED TO KNOW About this service</p>
+                        <p className="lg:text-6xl text-3xl text-center font-bold my-3">
                             <span className="text-[#ffbe30] mr-4 uppercase">{name && name[0]}</span>
                             <span className="font-normal tracking-wide uppercase">{name && name[1]}</span>
                         </p>
@@ -106,16 +107,16 @@ function SingleService() {
             </div>
 
             <div className='bg-gray-200'>
-                <div class="lg:flex justify-around max-w-7xl mx-auto py-14 lg:flex-row-reverse">
+                <div class="lg:flex justify-around max-w-7xl mx-auto lg:py-14 py-5 lg:flex-row-reverse">
                     <div className='flex justify-center w-full'>
                         <img src={image} class=" shadow-2xl" alt='' />
                     </div>
                     <div className='grid justify-center items-center w-full '>
-                        <p class="text-xl w-[600px]">
+                        <p class="text-xl lg:w-[600px] px-7 lg:px-0">
                             <span className='text-4xl font-semibold font-serif -ml-2'>{description?.slice(0, 1)}</span>
                             <span className='-ml-1'>{description?.slice(1)}</span>
                         </p>
-                        <p className='text-3xl font-semibold'>Price: ${eventPrice}</p>
+                        <p className='text-3xl font-semibold pl-7 lg:pl-0 py-2'>Price: ${eventPrice}</p>
                     </div>
                 </div>
             </div>
@@ -170,7 +171,7 @@ function SingleService() {
                             <h2 className="text-2xl uppercase">Place your booking here</h2>
                             <p className="text-base text-gray-600 text-paragraph max-w-lg mx-auto"></p>
                         </div>
-                        <div className="flex flex-row justify-between sm:justify-center gap-x-10 gap-y-5 flex-wrap items-start">
+                        <div className="lg:flex flex-row justify-between sm:justify-center gap-x-10 gap-y-5 flex-wrap items-start">
                             <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white">
                                 <div className="text-[#ffbe30] rounded-sm text-2xl bounce mt-0.5">
                                     <FiMail />
@@ -184,9 +185,9 @@ function SingleService() {
                             </div>
                             <form
                                 onSubmit={submission}
-                                className="space-y-8 w-full max-w-[780px] mt-5"
+                                className="lg:space-y-8 w-full max-w-[780px] mt-5"
                             >
-                                <div className="flex gap-8">
+                                <div className="lg:flex lg:gap-8">
                                     <input
                                         required
                                         className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
@@ -196,14 +197,14 @@ function SingleService() {
                                     />
                                     <input
                                         required
-                                        className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
+                                        className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50 my-3 lg:my-0"
                                         type="email"
                                         placeholder="Your email"
                                         name="user_email"
                                     />
                                 </div>
 
-                                <div className="flex gap-8">
+                                <div className="lg:flex lg:gap-8">
                                     <input
                                         required
                                         className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
@@ -213,7 +214,7 @@ function SingleService() {
                                     />
                                     <input
                                         required
-                                        className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
+                                        className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50 my-3 lg:my-0"
                                         type="text"
                                         placeholder="Phone Number"
                                         name="phone"
@@ -221,15 +222,15 @@ function SingleService() {
                                 </div>
 
 
-                                <textarea
+                                <input
                                     required
                                     className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md h-[100px] focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
                                     placeholder="Your Address"
                                     name="address"
-                                ></textarea>
+                                ></input>
                                 <textarea
                                     required
-                                    className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md h-[200px] focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
+                                    className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md lg:h-[200px] focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
                                     placeholder="Your message"
                                     name="message"
                                 ></textarea>
@@ -260,11 +261,13 @@ function SingleService() {
                                 />
 
 
-                                <input
-                                    type="submit"
-                                    className='text-sm space-x-10 px-11 py-4 bg-amber-400 hover:bg-amber-500 rounded-full text-white uppercase font-bold mt-6 transition-all duration-500'
-                                    value="PLACE YOUR ORDER"
-                                ></input>
+                                <div className='flex justify-center lg:justify-start'>
+                                    <input
+                                        type="submit"
+                                        className='text-sm space-x-10 px-11 py-4 bg-amber-400 hover:bg-amber-500 rounded-full text-white uppercase font-bold mt-6 transition-all duration-500'
+                                        value="PLACE YOUR ORDER"
+                                    ></input>
+                                </div>
                             </form>
                         </div>
                     </div>

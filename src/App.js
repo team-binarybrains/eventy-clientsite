@@ -76,6 +76,10 @@ function App() {
           path="/service-details/:id"
           element={<SingleService></SingleService>}
         ></Route>
+        <Route
+          path="/event-details/:id"
+          element={<EventDetails></EventDetails>}
+        ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>

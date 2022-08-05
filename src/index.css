@@ -2,15 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
 .openSans {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .roboto {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
@@ -28,9 +28,15 @@ code {
 }
 
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 10px;
 }
-
+::-webkit-scrollbar-thumb {
+  background-color: #ff9900;
+  border-radius: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: whitesmoke;
+}
 /* for selected color /added by rashid */
 ::selection {
   color: #ff9900;
@@ -43,6 +49,6 @@ code {
   -webkit-text-fill-color: transparent;
 }
 
-.route{
+.route {
   margin-top: 126px;
 }
