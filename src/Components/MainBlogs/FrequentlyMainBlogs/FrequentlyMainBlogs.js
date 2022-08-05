@@ -2,6 +2,8 @@ import React, { useEffect, useState } from "react";
 import { BsBookmarkFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import "./FrequentlyMainBlogs.css";
+
+
 const FrequentlyMainBlogs = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
@@ -17,6 +19,8 @@ const FrequentlyMainBlogs = () => {
   const handleBlogsDetails = (id) => {
     navigete("/blogs-details/" + id);
   };
+
+
   return (
     <div>
       <div>
