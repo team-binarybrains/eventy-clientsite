@@ -24,8 +24,8 @@ const Footer = () => {
             <div>
                <div className="flex items-center">
                   <img className='ml-[-1rem]' src='https://i.ibb.co/Qb1N5CN/Eventy-Logo.png' alt="logo" />
-                  <div className="">
-                     <h2 className='text-3xl text-white'>Eventy</h2>
+                  <div className="uppercase">
+                     <h2 className='text-3xl text-white tracking-widest'>Eventy</h2>
                      <p className='text-[#FFBE30] text-lg'>Event Management</p>
                   </div>
                </div>
