@@ -10,8 +10,7 @@ import {
   faClock,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import
- { BsPlusLg } from "react-icons/bs";
+import { BsPlusLg } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import Singleblog from "./SingleBlog/Singleblog";
 import useBlogs from "../../Hooks/useBlogs";
@@ -23,7 +22,7 @@ const Blogs = () => {
   const navigate = useNavigate();
   const [blogs] = useBlogs();
   return (
-    <div className="flex flex-col   lg:flex-row lg:ml-56  mt-10 mb-20">
+    <div className=" flex flex-col lg:max-w-7xl lg:mx-auto lg:p-12    lg:flex-row lg:ml-56  mt-10 mb-20">
       <div className="  2xl:mx-auto  px-4 lg:px-20  md:px-6 ">
         <div className="mx-auto lg:mx-0 h-[3px] w-[70px] bg-[#ffbe30] mb-5 pr-5"></div>
         <h2 className=" font-semibold lg:text-[18px] text-3xl lg:ml-5 lg:leading-9 md:leading-7 leading-9 text-[#878787]">
