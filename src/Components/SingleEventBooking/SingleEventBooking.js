@@ -129,7 +129,7 @@ const SingleEventBooking = () => {
                                         />
                                         <input
                                             required
-                                            className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50 my-3"
+                                            className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50 my-3 lg:my-0"
                                             type="email"
                                             placeholder="Your email"
                                             name="user_email"
@@ -147,12 +147,12 @@ const SingleEventBooking = () => {
                                     </div>
 
 
-                                    <textarea
+                                    <input
                                         required
                                         className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md h-[70px] focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
                                         placeholder="Your Address"
                                         name="address"
-                                    ></textarea>
+                                    ></input>
                                     <textarea
                                         required
                                         className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md h-[100px] focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
