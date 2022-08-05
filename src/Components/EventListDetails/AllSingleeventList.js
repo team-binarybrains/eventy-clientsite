@@ -5,8 +5,10 @@ import {
   faMicrophone,
   faTicket,
 } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 const AllSingleeventList = ({ item }) => {
   const {
+    _id,
     tittle,
     type,
     image,
@@ -83,7 +85,7 @@ const AllSingleeventList = ({ item }) => {
               </div>
             </div>
           </div>
-          <button className="button1 lg:mt-5">Booking Ticket</button>
+          <Link to={`/event-details/${_id}`} className="button1 lg:mt-5">Booking Ticket</Link>
         </div>
       </div>
     </div>
