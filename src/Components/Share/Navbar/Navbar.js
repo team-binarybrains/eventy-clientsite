@@ -52,7 +52,7 @@ const Navbar = ({ location }) => {
                 </label>
                 <ul
                   tabindex="0"
-                  class="menu bg-[#333333] menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52"
+                  class="menu bg-white menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52"
                 >
                   <li>
                     <Link to="/" className="uppercase">
@@ -153,8 +153,8 @@ const Navbar = ({ location }) => {
                   </li>
                 </ul>
               </div>
-              <Link to="/" class="btn btn-ghost normal-case text-xl">
-                Eventy
+              <Link to="/" class="btn btn-ghost normal-case text-2xl tracking-widest">
+                EVENTY
               </Link>
             </div>
             <div class="navbar-center hidden lg:flex">
@@ -300,7 +300,7 @@ const Navbar = ({ location }) => {
               </label>
               <ul
                 tabindex="0"
-                class="menu bg-[#333333] menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52"
+                class="menu bg-gray-100 text-black menu-compact dropdown-content mt-3 p-2 shadow rounded-box w-52"
               >
                 <li>
                   <Link to="/" className="uppercase">
@@ -401,8 +401,8 @@ const Navbar = ({ location }) => {
                 </li>
               </ul>
             </div>
-            <Link to="/" class="btn btn-ghost normal-case text-xl">
-              Eventy
+            <Link to="/" class="btn btn-ghost normal-case text-2xl tracking-widest">
+              EVENTY
             </Link>
           </div>
           <div class="navbar-center hidden lg:flex">
