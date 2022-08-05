@@ -1,5 +1,6 @@
 import React from "react";
 import { MdDateRange } from "react-icons/md";
+import { GoLocation } from "react-icons/go";
 import "./DateAndCategory.css";
 const DateAndCategory = ({ blog }) => {
   return (
@@ -18,10 +19,10 @@ const DateAndCategory = ({ blog }) => {
 
           <div className="flex DateAndTime rounded-md ">
             <span className="text-2xl inline-block bg-[#ffbe30]   text-white p-3 rounded-full">
-              <MdDateRange className="" />{" "}
+              <GoLocation className="" />{" "}
             </span>
             <p className="pl-4 text-[#333333] text-[17px]">
-              <span className="block">Date</span>
+              <span className="block">Location</span>
               <strong>{blog.address}</strong>
             </p>
           </div>
