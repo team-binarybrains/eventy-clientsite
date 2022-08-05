@@ -61,10 +61,6 @@ function App() {
         ></Route>
         <Route path="/event" element={<DayOne></DayOne>}></Route>
         <Route
-          path="/event-details"
-          element={<EventDetails></EventDetails>}
-        ></Route>
-        <Route
           path="/event-details/:id"
           element={<EventDetails></EventDetails>}
         ></Route>
@@ -75,10 +71,6 @@ function App() {
         <Route
           path="/service-details/:id"
           element={<SingleService></SingleService>}
-        ></Route>
-        <Route
-          path="/event-details/:id"
-          element={<EventDetails></EventDetails>}
         ></Route>
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
