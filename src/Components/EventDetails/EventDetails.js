@@ -1,11 +1,6 @@
-<<<<<<< HEAD
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-=======
-import React from 'react';
-import { useParams } from 'react-router-dom';
 import useFetch from '../Home/OurServices/Hook/useFetch';
->>>>>>> 114a67cd43762b888918c2c996015e58cd870132
 import style from './EventDetails.module.css'
 import EventSchedule from './FeaturedEvent/EventSchedule/EventSchedule';
 import FeaturedEvent from './FeaturedEvent/FeaturedEvent';
@@ -14,10 +9,8 @@ import RegisterEvent from './FeaturedEvent/RegisterEvent/RegisterEvent';
 import LocationFaq from './LocationFaq';
 import Pricing from './Pricing/Pricing';
 import TopBanner from './TopBanner';
-
-
 const EventDetails = () => {
-<<<<<<< HEAD
+
     const { id } = useParams()
     const [eventDetailsData, setEventDetailsData] = useState([])
     useEffect(() => {
@@ -26,11 +19,11 @@ const EventDetails = () => {
             .then(data => setEventDetailsData(data))
     }, [id])
     // console.log(eventDetailsData);
-=======
+
     
 
 
->>>>>>> 114a67cd43762b888918c2c996015e58cd870132
+
     return (
         <div className='route'>
             <section className='min-h-screen'>
