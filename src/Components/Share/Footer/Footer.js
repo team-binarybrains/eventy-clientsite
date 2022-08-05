@@ -22,8 +22,12 @@ const Footer = () => {
       <>
          <footer class="footer p-10 bg-[#333333] text-white">
             <div>
-               <div className="">
-                  <img src={logo} alt="logo" />
+               <div className="flex items-center">
+                  <img className='ml-[-1rem]' src='https://i.ibb.co/Qb1N5CN/Eventy-Logo.png' alt="logo" />
+                  <div className="">
+                     <h2 className='text-3xl text-white'>Eventy</h2>
+                     <p className='text-[#FFBE30] text-lg'>Event Management</p>
+                  </div>
                </div>
                <div className="">
                   <ul className='py-10'>
@@ -33,7 +37,7 @@ const Footer = () => {
                   </ul>
                </div>
                <div className="">
-                  <h1 className='text-2xl font-bold'>Network</h1>
+                  <h1 className='text-2xl font-bold text-white'>Network</h1>
                   <ul className='flex gap-4 items-center text-base py-6'>
                      <li><Link to={'/facebook.com'} className='text-2xl cursor-pointer hover:text-sky-500'><BsFacebook /></Link></li>
                      <li><Link to={'/google.com'} className='text-4xl cursor-pointer hover:text-red-500'><AiOutlineGooglePlus /></Link></li>
@@ -46,11 +50,11 @@ const Footer = () => {
             <div>
                <div class="">
                   <div class="">
-                     <h3 class="footer-item-title text-3xl capitalize">
+                     <h3 class="footer-item-title text-3xl capitalize text-white">
                         useful <strong className='text-[#ff960d]'>links</strong>
                      </h3>
                      <ul className='py-6'>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> About Harmoni</Link></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/about' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> About Eventy</Link></li>
                         <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Disclaimer</Link></li>
                         <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Contact us</Link></li>
                         <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Events Schedule</Link></li>
@@ -66,8 +70,8 @@ const Footer = () => {
             <div>
                <div class="">
                   <div class="">
-                     <h3 class="footer-item-title capitalize text-3xl">
-                        harmoni <strong className='text-[#ff960d]'>instagram</strong>
+                     <h3 class="footer-item-title capitalize text-3xl text-white">
+                        Eventy <strong className='text-[#ff960d]'>instagram</strong>
                      </h3>
                      <ul className="py-10 grid grid-cols-3 gap-4 items-center">
                         <li id="image_wrapper">
@@ -105,8 +109,8 @@ const Footer = () => {
 
                         </li>
                      </ul>
-                     <h4 class="followus-link">
-                        Follow Our Instagram <a href="#!">#Harmoni</a>
+                     <h4 class="followus-link text-white">
+                        Follow Our Instagram <a href="#!"> Eventy</a>
                      </h4>
                   </div>
                </div>
@@ -114,7 +118,7 @@ const Footer = () => {
          </footer>
          <footer class="footer px-10 py-4  border-[#333333] bg-[#1d1d1d] text-white">
             <div class="items-center grid-flow-col">
-               <p class="m-0 text-base">©2022 <a href="#!" class="site-link">Harmoni.com</a> all right reserved, made with <i class="fas fa-heart"></i> by <a href="#!" class="author-link"><strong className='capitalize'> binary brains</strong></a></p>
+               <p class="m-0 text-base">©2022 <a href="#!" class="site-link">Eventy.com</a> all right reserved, made with <i class="fas fa-heart"></i> by <a href="#!" class="author-link"><strong className='capitalize'> binary brains</strong></a></p>
             </div>
             <div class="md:place-self-center md:justify-self-end">
                <div class="grid grid-flow-col gap-4">
