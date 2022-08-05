@@ -4,6 +4,12 @@
 	box-sizing: border-box;
 }
 
+.bg{
+	background-image: url('https://i.ibb.co/6N7YvRF/0-breadcrumb-bg-1.jpg');
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
 .h1 {
 	font-weight: bold;
 	margin: 0;
@@ -57,11 +63,10 @@
 	background-color: #ff442bad;
 	border-radius: 20px;
 	color: white;
-	border: 3px solid white;
 }
 
 .form {
-	background-color: #FFFFFF;
+	background-color: white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -72,15 +77,15 @@
 }
 
 .input {
-	background-color: #eee;
-	border: none;
+	background-color: transparent;
+	box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.586);
 	padding: 12px 15px;
 	margin: 8px 0;
 	width: 100%;
 }
 
 .container {
-	background-color: #fff;
+	background-color: transparent;
 	border-radius: 10px;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
 			0 10px 10px rgba(0,0,0,0.22);
@@ -150,8 +155,6 @@
 }
 
 .overlay {
-	background: -webkit-linear-gradient(to right, #FF4B2B, orange,orange,#FF4B2B);
-	background: linear-gradient(to right, #FF4B2B, orange,orange,#FF4B2B);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
