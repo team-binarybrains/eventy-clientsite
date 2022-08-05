@@ -14,9 +14,8 @@
 	position: relative;
 	width:100%;
 	height: 100%;
-    background: #FF416C;
-	background: -webkit-linear-gradient(to right, crimson, rgb(255, 72, 102));
-	background: linear-gradient(to right, crimson, rgb(255, 72, 102));
+    background: -webkit-linear-gradient( #FF4B2B, orange);
+	background: linear-gradient(90deg, #FF4B2B, orange);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -35,10 +34,10 @@
 
 .signup label{
     padding:50px 0 0;
-    margin: 0 0 50px;
+    margin: 0 0 0;
 }
 .login label{
-    margin: 100px 0 50px;
+    margin: 100px 0 10px;
     padding: 10px 0 0;
 }
 .signup input::placeholder{
@@ -58,25 +57,24 @@
     border: 2px solid #13131344;
 	justify-content: center;
 	display: flex;
-	margin: 20px auto;
+	margin: 10px auto;
 	padding: 20px 10px;
 	outline: none;
 	border-radius: 5px;
 }
 .button{
-	width: 60%;
+	width: 40%;
 	height: 40px;
 	margin: 10px auto;
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: linear-gradient(to right, crimson, rgb(255, 72, 102));
 	font-size: 1em;
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 10px;
 	outline: none;
 	border: 2px solid white;
-	border-radius: 5px;
+	border-radius: 15px;
 	transition: .2s ease-in;
 	cursor: pointer;
 }
@@ -90,7 +88,7 @@
 }
 .login .label{
 	font-size: 45px;
-    background: -webkit-linear-gradient(#FF4B2B, #FF416C);
+    background: -webkit-linear-gradient( #FF4B2B, orange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 	transform: scale(.6);
@@ -104,4 +102,12 @@
 }
 .chk:checked ~ .signup .label{
 	transform: scale(.6);
+}
+
+.social {
+	/* border: 1px solid #DDDDDD; */
+	border-radius: 50%;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
 }

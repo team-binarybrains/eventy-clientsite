@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 // import userIcon from '../../../asset/UserIcon/1946429.png'
 import { BiUser } from "react-icons/bi";
 import TopnavBar from "../TopBar/TopnavBar";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/firebase.init";
+import { signOut } from "firebase/auth";
 
 const Navbar = ({ location }) => {
+  const navigate = useNavigate();
   const { pathname } = location;
   const routeName = pathname.slice("1");
   // console.dir(location);
@@ -20,12 +24,18 @@ const Navbar = ({ location }) => {
   };
   window.addEventListener("scroll", changeBg);
 
+  const handleSignOut = () => {
+    signOut(auth);
+    navigate('/')
+  };
+  const [user] = useAuthState(auth)
+
   return (
     <div>
       {/* navbar bg-transparent fixed z-50 */}
       {routeName ? (
         // use in other route without home
-        <section className="fixed left-0 right-0 top-0 z-50">
+        <section className="fixed left-0 right-0 top-0 z-[999] shadow-lg">
           <TopnavBar></TopnavBar>
           <div
             class={"navbar bg-white text-black"}
@@ -262,9 +272,15 @@ const Navbar = ({ location }) => {
               <div className="profile ">
                 {/* FaRegUserCircle */}
                 {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
-                <Link to={"/authentication"} className="text-3xl">
+                { user?
+                  <button
+                    onClick={handleSignOut}
+                    className="uppercase btn-selection type-4 px-5">
+                    Sign out
+                  </button>:
+                  <Link to={"/authentication"} className="text-3xl">
                   <BiUser></BiUser>
-                </Link>
+                </Link>}
               </div>
             </div>
           </div>
@@ -274,7 +290,7 @@ const Navbar = ({ location }) => {
         <div
           class={
             navbarBg
-              ? "navbar active_nav fixed z-50 text-white"
+              ? "navbar active_nav fixed z-[999] text-white"
               : "navbar bg-transparent fixed text-white"
           }
           style={{ zIndex: "111111" }}
@@ -510,9 +526,15 @@ const Navbar = ({ location }) => {
             <div className="profile ">
               {/* FaRegUserCircle */}
               {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
-              <Link to={"/authentication"} className="text-3xl">
-                <BiUser></BiUser>
-              </Link>
+              { user?
+                  <button
+                    onClick={handleSignOut}
+                    className="uppercase btn-selection type-4 px-5">
+                    Sign out
+                  </button>:
+                  <Link to={"/authentication"} className="text-3xl">
+                  <BiUser></BiUser>
+                </Link>}
             </div>
           </div>
         </div>
