@@ -15,13 +15,13 @@ const EventDetails = () => {
     const { id } = useParams()
     const [eventDetailsData, setEventDetailsData] = useState([])
     useEffect(() => {
-        fetch(`http://localhost:5000/event-details/${id}`)
+        fetch(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${id}`)
             .then(res => res.json())
             .then(data => setEventDetailsData(data))
     }, [id])
     // console.log(eventDetailsData);
 
-    
+
 
 
 
@@ -41,7 +41,7 @@ const EventDetails = () => {
                         <FeaturedEventDetails eventDetailsData={eventDetailsData} key={eventDetailsData?._id} />
                         <EventSchedule eventDetailsData={eventDetailsData} key={eventDetailsData?._id} />
                         <Pricing />
-                        <RegisterEvent eventDetailsData={eventDetailsData} key={eventDetailsData?._id}/>
+                        <RegisterEvent eventDetailsData={eventDetailsData} key={eventDetailsData?._id} />
                     </div>
 
                     {/* 2nd row : 2nd column */}
@@ -52,7 +52,7 @@ const EventDetails = () => {
 
                 {/* 3rd row */}
                 <div className='basis-full container mx-auto'>
-                    <BlogComments/>
+                    <BlogComments />
                 </div>
             </section>
         </div>
