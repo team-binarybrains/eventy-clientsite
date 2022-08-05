@@ -56,8 +56,8 @@ const SingleEventBooking = () => {
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
                 <div className="flex justify-center items-center h-full lg:-mt-8">
                     <div className="text-white">
-                        <p className="tracking-[8px] uppercase">ALL YOU NEED TO KNOW About this venue</p>
-                        <p className="text-6xl text-center font-bold my-3">
+                        <p className="lg:tracking-[8px] uppercase">ALL YOU NEED TO KNOW About this venue</p>
+                        <p className="lg:text-6xl text-3xl text-center font-bold my-3">
                             <span className="text-[#ffbe30] mr-4 uppercase">{name && name[0]}</span>
                             <span className="font-normal tracking-wide uppercase">{name && name[1]}</span>
                         </p>
@@ -74,11 +74,11 @@ const SingleEventBooking = () => {
                             <p className='font-bold text-lg text-center rotate-90'>{star} ⭐ <br /> Hotel</p>
                         </div>
                     </div>
-                    <div className='grid justify-center items-center w-full'>
-                        <div class="text-xl w-[600px]">
-                            <p className='text-3xl font-semibold'>Price: ${price}</p>
-                            <p className='text-2xl font-semibold'>Capacity: {seats} seats</p>
-                            <p className='text-2xl font-semibold'>Venue code: {code}</p>
+                    <div className='grid justify-center items-center lg:w-full'>
+                        <div class="text-xl lg:w-[600px]">
+                            <p className='lg:text-3xl font-semibold'>Price: ${price}</p>
+                            <p className='lg:text-2xl font-semibold'>Capacity: {seats} seats</p>
+                            <p className='lg:text-2xl font-semibold'>Venue code: {code}</p>
                             {/* <p className='flex items-center text-xl font-semibold'>Reating: {star} <span><AiFillStar className='text-yellow-500' /></span></p> */}
 
                             <div className='mt-6'>
@@ -119,7 +119,7 @@ const SingleEventBooking = () => {
                                     onSubmit={submission}
                                     className="space-y-8 w-full max-w-[780px] mt-5"
                                 >
-                                    <div className="flex gap-8">
+                                    <div className="lg:flex lg:gap-8">
                                         <input
                                             required
                                             className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
@@ -129,14 +129,14 @@ const SingleEventBooking = () => {
                                         />
                                         <input
                                             required
-                                            className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
+                                            className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50 my-3"
                                             type="email"
                                             placeholder="Your email"
                                             name="user_email"
                                         />
                                     </div>
 
-                                    <div className="flex gap-8">
+                                    <div className="flex lg:gap-8">
                                         <input
                                             required
                                             className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-accent placeholder:text-gray-900/50"
@@ -194,11 +194,13 @@ const SingleEventBooking = () => {
                                     />
 
 
-                                    <input
-                                        type="submit"
-                                        className='text-sm space-x-10 px-11 py-4 bg-amber-400 hover:bg-amber-500 rounded-full text-white uppercase font-bold mt-6 transition-all duration-500'
-                                        value="PLACE YOUR ORDER"
-                                    ></input>
+                                    <div className='flex justify-center lg:justify-start'>
+                                        <input
+                                            type="submit"
+                                            className='text-sm space-x-10 px-11 py-4 bg-amber-400 hover:bg-amber-500 rounded-full text-white uppercase font-bold mt-6 transition-all duration-500'
+                                            value="PLACE YOUR ORDER"
+                                        ></input>
+                                    </div>
                                 </form>
                             </div>
                         </div>
