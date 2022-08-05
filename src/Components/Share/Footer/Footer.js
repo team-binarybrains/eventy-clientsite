@@ -54,7 +54,7 @@ const Footer = () => {
                         useful <strong className='text-[#ff960d]'>links</strong>
                      </h3>
                      <ul className='py-6'>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> About Eventy</Link></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/about' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> About Eventy</Link></li>
                         <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Disclaimer</Link></li>
                         <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Contact us</Link></li>
                         <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Events Schedule</Link></li>
