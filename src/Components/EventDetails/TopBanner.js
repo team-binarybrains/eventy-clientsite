@@ -8,8 +8,8 @@ const TopBanner = () => {
       <h5 className={`${style.openSans} text-white uppercase tracking-[8px]`}>
         Event Single
       </h5>
-      <h3 className={`text-4xl`}>Harmoni</h3>
-      <h3 className={`text-4xl font-bold ${style.highlight}`}>Event Details</h3>
+      <h3 className={`text-4xl text-white uppercase roboto`}>Eventy</h3>
+      <h3 className={`text-4xl font-bold uppercase roboto  ${style.highlight}`}>Event Details</h3>
       <div className={`flex justify-center items-center mt-8`}>
         <Link to="/">
           <button className={`${style.child}`}>Home</button>
