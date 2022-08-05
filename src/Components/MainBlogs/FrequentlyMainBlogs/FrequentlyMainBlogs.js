@@ -46,7 +46,7 @@ const FrequentlyMainBlogs = () => {
                             <div className="grid md:grid-cols-2 gap-7 p-5  ">
                                 {
                                     blogs.map(blog =>
-                                        <div blog={blog} className="hover:border-amber-600 h-[500px]">
+                                        <div blog={blog} className="hover:border-amber-600 border bg-[#f7f7f7] h-[500px]">
                                             <div className='relative' >
                                                 <img className='w-[359px] h-[202px]' src={blog.image} alt="" />
 
@@ -56,7 +56,7 @@ const FrequentlyMainBlogs = () => {
 
                                             </div>
 
-                                            <div className=" md: py-5 px-5 bg-[#f7f7f7]">
+                                            <div className=" md: py-5 px-5 ">
                                                 <p className="text-[#ffbe30] text-[14px]"><BsBookmarkFill className='inline-block' /> Musical Event</p>
 
                                                 <h1 className="text-[18px] font-bold py-5">{blog.tittle}</h1>
