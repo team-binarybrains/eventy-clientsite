@@ -15,7 +15,7 @@ const EventDetails = () => {
     const { id } = useParams()
     const [eventDetailsData, setEventDetailsData] = useState([])
     useEffect(() => {
-        fetch(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${id}`)
+        fetch(`http://localhost:5000/event-details/${id}`)
             .then(res => res.json())
             .then(data => setEventDetailsData(data))
     }, [id])
