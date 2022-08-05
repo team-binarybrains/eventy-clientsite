@@ -23,7 +23,7 @@ const Blogs = () => {
   const [blogs] = useBlogs();
   return (
     <div className="bg-gray-100">
-      <div className=" lg:max-w-7xl lg:mx-auto  mb-20 lg:pt-20  ">
+      <div className=" lg:max-w-7xl lg:mx-auto   lg:pt-20  ">
         <div className=" flex flex-col lg:max-w-7xl lg:mx-auto lg:gap-x-20   lg:flex-row   pb-20">
           <div className="  2xl:mx-auto  px-4 lg:px-20  md:px-6 ">
             <div className="mx-auto lg:mx-0 h-[3px] w-[70px] bg-[#ffbe30] mb-5 pr-5"></div>
