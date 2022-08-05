@@ -46,7 +46,7 @@ const FrequentlyMainBlogs = () => {
                             <div className="grid md:grid-cols-2 gap-7 p-5  ">
                                 {
                                     blogs.map(blog =>
-                                        <div blog={blog} className="hover:border-amber-600">
+                                        <div blog={blog} className="hover:border-amber-600 h-[500px]">
                                             <div className='relative' >
                                                 <img className='w-[359px] h-[202px]' src={blog.image} alt="" />
 
