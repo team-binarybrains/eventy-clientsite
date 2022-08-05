@@ -8,7 +8,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Event = ({event, idx, imageIndex}) => {
     const navigate = useNavigate();
-    const {address, date, starttime, endtime, ticketprice, title, type, image} = event;
+    const {address, date, starttime, endtime, ticketprice, tittle, type, image} = event;
     const [day,month,year] = date.split(',');
 
     return (
@@ -26,14 +26,14 @@ const Event = ({event, idx, imageIndex}) => {
                 }
 
                 <div className="relative">
-                    <img className="h-60" src={image} alt={title} />
+                    <img className="h-60" src={image} alt={tittle} />
 
 
                     {
                         idx === imageIndex &&
                         <div className='bg-white w-[200px] sm:w-[250px] rounded sdw p-2 sm:px-5 absolute -bottom-20 right-[10%]'>
                             <div className='space-y-2'>
-                                <h1 className="title-inline pb-2">{title}</h1>
+                                <h1 className="title-inline pb-2">{tittle}</h1>
                                 <p className="text-[#ffbe30] font-bold">Ticket from ${ticketprice}</p>
                                 <p className="text-[#878787] text-sm">
                                     <span className="bg-[#f7f7f7] p-1 text-center rounded-full">
