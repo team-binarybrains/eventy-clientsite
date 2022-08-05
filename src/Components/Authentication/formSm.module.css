@@ -34,10 +34,10 @@
 
 .signup label{
     padding:50px 0 0;
-    margin: 0 0 50px;
+    margin: 0 0 0;
 }
 .login label{
-    margin: 100px 0 50px;
+    margin: 100px 0 10px;
     padding: 10px 0 0;
 }
 .signup input::placeholder{
@@ -57,7 +57,7 @@
     border: 2px solid #13131344;
 	justify-content: center;
 	display: flex;
-	margin: 20px auto;
+	margin: 10px auto;
 	padding: 20px 10px;
 	outline: none;
 	border-radius: 5px;
@@ -71,7 +71,7 @@
 	color: #fff;
 	font-size: 1em;
 	font-weight: bold;
-	margin-top: 20px;
+	margin-top: 10px;
 	outline: none;
 	border: 2px solid white;
 	border-radius: 15px;
@@ -102,4 +102,12 @@
 }
 .chk:checked ~ .signup .label{
 	transform: scale(.6);
+}
+
+.social {
+	/* border: 1px solid #DDDDDD; */
+	border-radius: 50%;
+	margin: 0 5px;
+	height: 40px;
+	width: 40px;
 }

@@ -1,11 +1,15 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 // import userIcon from '../../../asset/UserIcon/1946429.png'
 import { BiUser } from "react-icons/bi";
 import TopnavBar from "../TopBar/TopnavBar";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/firebase.init";
+import { signOut } from "firebase/auth";
 
 const Navbar = ({ location }) => {
+  const navigate = useNavigate();
   const { pathname } = location;
   const routeName = pathname.slice("1");
   // console.dir(location);
@@ -19,6 +23,12 @@ const Navbar = ({ location }) => {
     }
   };
   window.addEventListener("scroll", changeBg);
+
+  const handleSignOut = () => {
+    signOut(auth);
+    navigate('/')
+  };
+  const [user] = useAuthState(auth)
 
   return (
     <div>
@@ -262,9 +272,15 @@ const Navbar = ({ location }) => {
               <div className="profile ">
                 {/* FaRegUserCircle */}
                 {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
-                <Link to={"/authentication"} className="text-3xl">
+                { user?
+                  <button
+                    onClick={handleSignOut}
+                    className="uppercase btn-selection type-4 px-5">
+                    Sign out
+                  </button>:
+                  <Link to={"/authentication"} className="text-3xl">
                   <BiUser></BiUser>
-                </Link>
+                </Link>}
               </div>
             </div>
           </div>
@@ -510,9 +526,15 @@ const Navbar = ({ location }) => {
             <div className="profile ">
               {/* FaRegUserCircle */}
               {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
-              <Link to={"/authentication"} className="text-3xl">
-                <BiUser></BiUser>
-              </Link>
+              { user?
+                  <button
+                    onClick={handleSignOut}
+                    className="uppercase btn-selection type-4 px-5">
+                    Sign out
+                  </button>:
+                  <Link to={"/authentication"} className="text-3xl">
+                  <BiUser></BiUser>
+                </Link>}
             </div>
           </div>
         </div>
