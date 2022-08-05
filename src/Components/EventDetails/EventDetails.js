@@ -11,13 +11,13 @@ import TopBanner from './TopBanner';
 
 
 const EventDetails = () => {
-    const {id} = useParams()
-    const [eventDetailsData,setEventDetailsData] = useState([])
+    const { id } = useParams()
+    const [eventDetailsData, setEventDetailsData] = useState([])
     useEffect(() => {
         fetch(`http://localhost:5000/event-details/${id}`)
             .then(res => res.json())
             .then(data => setEventDetailsData(data))
-    },[id])
+    }, [id])
     // console.log(eventDetailsData);
     return (
         <div className='route'>
@@ -31,11 +31,11 @@ const EventDetails = () => {
                 <section className='px-3 flex flex-wrap justify-center container mx-auto max-w-7xl lg:px-16 my-16'>
                     {/* 2nd row : 1st column (-----Rashid vai-------)*/}
                     <div className=' basis-[800px] shrink grow max-w-[52rem]'>
-                        <FeaturedEvent eventDetailsData={eventDetailsData} key={eventDetailsData._id}></FeaturedEvent>
-                        <FeaturedEventDetails />
-                        <EventSchedule />
+                        <FeaturedEvent eventDetailsData={eventDetailsData} key={eventDetailsData?._id}></FeaturedEvent>
+                        <FeaturedEventDetails eventDetailsData={eventDetailsData} key={eventDetailsData?._id} />
+                        <EventSchedule eventDetailsData={eventDetailsData} key={eventDetailsData?._id} />
                         <Pricing />
-                        <RegisterEvent />
+                        <RegisterEvent eventDetailsData={eventDetailsData} key={eventDetailsData?._id}/>
                     </div>
 
                     {/* 2nd row : 2nd column */}

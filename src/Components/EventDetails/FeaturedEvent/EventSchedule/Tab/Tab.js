@@ -2,13 +2,12 @@ import { useState } from "react";
 import DayOne from "../DayOne/DayOne";
 import "./Tab.css";
 
-function Tabs() {
+function Tabs({ eventDetailsData }) {
    const [toggleState, setToggleState] = useState(1);
 
    const toggleTab = (index) => {
       setToggleState(index);
    };
-
    return (
       <div className="tabContainer">
          <div className="bloc-tabs">
@@ -17,21 +16,21 @@ function Tabs() {
                onClick={() => toggleTab(1)}
             >
                <p className="text-2xl font-semibold block uppercase"> Day 1</p>
-               <p className=" font-semibold">26 December 2022</p>
+               <p className=" font-semibold">{eventDetailsData?.date}</p>
             </button>
             <button
                className={toggleState === 2 ? "eventTabs active-tabs" : "eventTabs"}
                onClick={() => toggleTab(2)}
             >
                <p className="text-2xl font-semibold block uppercase"> Day 2</p>
-               <p className=" font-semibold">26 December 2022</p>
+               <p className=" font-semibold">{eventDetailsData?.date + 1}</p>
             </button>
             <button
                className={toggleState === 3 ? "eventTabs active-tabs" : "eventTabs"}
                onClick={() => toggleTab(3)}
             >
                <p className="text-2xl font-semibold block  uppercase"> Day 3</p>
-               <p className=" font-semibold">26 December 2022</p>
+               <p className=" font-semibold">{eventDetailsData?.date + 2}</p>
             </button>
          </div>
 
@@ -40,7 +39,7 @@ function Tabs() {
                className={toggleState === 1 ? "content  active-content" : "content"}
             >
                <div className="">
-                  <DayOne/>
+                  <DayOne data={eventDetailsData?.dayOne} />
                </div>
             </div>
 

@@ -59,20 +59,19 @@ const FeaturedEventSlider = ({eventDetailsData}) => {
       nextArrow: <SampleNextArrow />,
       prevArrow: <SamplePrevArrow />,
    };
-   console.log(eventDetailsData?.img);
    return (
       <div className="py-6 w-80 m-auto sm:w-11/12 md:w-full">
          {/* <h2> Single Item</h2> */}
          <Slider {...settings} className='relative max-w-2xl'>
             {
-               eventDetailsData?.img.map((slide,index) =>
-                  <div key={index} className="">
-                     <div className="">
-                        <div className="">
-                           <img className="object-cover object-top rounded w-full" src={slide.image} style={{ height: '400px' }} alt="" />
-                        </div>
-                     </div>
+               eventDetailsData?.img?.map((img,index)=>
+               <div key={index} className="">
+               <div className="">
+                  <div className="">
+                     <img className="object-cover object-top rounded w-full" src={img?.image} style={{ height: '400px' }} alt="" />
                   </div>
+               </div>
+               </div>
                )
             }
          </Slider>
