@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
+import BlogComments from '../Home/Blog/BlogDetails/BlogComments/BlogComments';
 import useFetch from '../Home/OurServices/Hook/useFetch';
 import style from './EventDetails.module.css'
 import EventSchedule from './FeaturedEvent/EventSchedule/EventSchedule';
@@ -50,8 +51,8 @@ const EventDetails = () => {
                 </section>
 
                 {/* 3rd row */}
-                <div className='border-4 border-black basis-full container mx-auto min-h-[200px]'>
-
+                <div className='basis-full container mx-auto'>
+                    <BlogComments/>
                 </div>
             </section>
         </div>

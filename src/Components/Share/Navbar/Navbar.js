@@ -25,7 +25,7 @@ const Navbar = ({ location }) => {
       {/* navbar bg-transparent fixed z-50 */}
       {routeName ? (
         // use in other route without home
-        <section className="fixed left-0 right-0 top-0 z-50">
+        <section className="fixed left-0 right-0 top-0 z-[999] shadow-lg">
           <TopnavBar></TopnavBar>
           <div
             class={"navbar bg-white text-black"}
@@ -284,7 +284,7 @@ const Navbar = ({ location }) => {
         <div
           class={
             navbarBg
-              ? "navbar active_nav fixed z-50 text-white"
+              ? "navbar active_nav fixed z-[999] text-white"
               : "navbar bg-transparent fixed text-white"
           }
           style={{ zIndex: "111111" }}

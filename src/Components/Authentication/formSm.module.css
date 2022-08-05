@@ -14,9 +14,8 @@
 	position: relative;
 	width:100%;
 	height: 100%;
-    background: #FF416C;
-	background: -webkit-linear-gradient(to right, crimson, rgb(255, 72, 102));
-	background: linear-gradient(to right, crimson, rgb(255, 72, 102));
+    background: -webkit-linear-gradient( #FF4B2B, orange);
+	background: linear-gradient(90deg, #FF4B2B, orange);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 0 0;
@@ -64,19 +63,18 @@
 	border-radius: 5px;
 }
 .button{
-	width: 60%;
+	width: 40%;
 	height: 40px;
 	margin: 10px auto;
 	justify-content: center;
 	display: block;
 	color: #fff;
-	background: linear-gradient(to right, crimson, rgb(255, 72, 102));
 	font-size: 1em;
 	font-weight: bold;
 	margin-top: 20px;
 	outline: none;
 	border: 2px solid white;
-	border-radius: 5px;
+	border-radius: 15px;
 	transition: .2s ease-in;
 	cursor: pointer;
 }
@@ -90,7 +88,7 @@
 }
 .login .label{
 	font-size: 45px;
-    background: -webkit-linear-gradient(#FF4B2B, #FF416C);
+    background: -webkit-linear-gradient( #FF4B2B, orange);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 	transform: scale(.6);
