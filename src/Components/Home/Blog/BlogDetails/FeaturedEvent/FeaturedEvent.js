@@ -21,7 +21,7 @@ const FeaturedEvent = ({ blog }) => {
           <div className=" ">
             {/* <p className=" font-normal text-base leading-6 text-gray-600 lg:w-8/12 md:w-9/12 ">Here are few of the most frequently asked questions by our valueable customers</p> */}
             <h1 className="resent-post-section-title">
-              <strong>{blog.tittle}</strong>{" "}
+              <strong>{blog?.tittle}</strong>{" "}
             </h1>
           </div>
 
@@ -39,12 +39,7 @@ const FeaturedEvent = ({ blog }) => {
               alt="Img of Glass bottle"
               className="w-full md:block hidden"
             />
-            {/* <img
-              src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg"
-              alt="Img of Glass bottle"
-              className="w-full md:hidden block "
-            /> */}
-
+          
             <DateAndCategory blog={blog}></DateAndCategory>
           </div>
           <div className=" md:w-5/12 lg:w-4/12 w-full md:mt-0 sm:mt-14 mt-10">

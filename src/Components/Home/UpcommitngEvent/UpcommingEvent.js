@@ -11,10 +11,12 @@ import { AiOutlineClockCircle } from "react-icons/ai";
 import { GoLocation } from "react-icons/go";
 import "./upcommingevent.css";
 import CountDown from "../CountDown/CountDown";
+import Address from "../../AboutUs/Address";
+import Event from "./Event";
 
 const UpcommingEvent = () => {
-  // const images = [astronaut, celebrating, education];
-  const [images, setImages] = useState([])
+  // const events = [astronaut, celebrating, education];
+  const [events, setEvents] = useState([])
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
@@ -34,14 +36,16 @@ const UpcommingEvent = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    fetch('upcomingevent.json')
+    fetch('http://localhost:5000/alleventlisting')
       .then(res => res.json())
-      .then(data => setImages(data))
+      .then(data => setEvents(data))
   }, [])
 
 
+  console.log(events);
+
   const upComingSettings = {
-    className:"center",
+    className: "center",
     infinite: true,
     lazyLoad: true,
     speed: 300,
@@ -82,56 +86,7 @@ const UpcommingEvent = () => {
 
       <div className="app">
         <Slider {...upComingSettings} className='px-5 overflow-visible'>
-          {images.map((img, idx) => (
-
-            <div className={`slide ${idx === imageIndex ? "activeSlide mt-10" : "mt-16"}`}>
-              
-              {
-                idx === imageIndex ?
-                <div className="scale-50 2xl:scale-100 flex justify-center min-w-[20rem] h-32">
-                  <CountDown></CountDown>
-                </div> :
-                <div className="scale-50 2xl:scale-100 flex justify-center min-w-[20rem] h-32">
-                
-              </div>
-              }
-              
-              <div className="relative">
-                <img className="h-60" src={img.img} alt={img} />
-
-
-                {
-                  idx === imageIndex &&
-                  <div className='bg-white w-[200px] sm:w-[250px] rounded sdw p-2 sm:px-5 absolute -bottom-20 right-[10%]'>
-                    <div className='space-y-2'>
-                      <h1 className="title-inline pb-2">{img.title_line}</h1>
-                      <p className="text-[#ffbe30] font-bold">{img.Tickets}</p>
-                      <p className="text-[#878787] text-sm">
-                        <span className="bg-[#f7f7f7] p-1 text-center rounded-full">
-                          <AiOutlineClockCircle className='inline-block text-xl -mt-1 text-[#ffbe30] rounded-t-full' />
-                        </span>
-                        {img.Start}</p>
-                      <p className="text-[#878787] text-sm">
-                        <span className=" bg-[#f7f7f7] p-1 text-center rounded-full">
-                          <GoLocation className='inline-block text-xl -mt-1 text-[#ffbe30] ' />
-                        </span>
-                        {img.location}</p>
-                      <button className="custom-btn px-5 font-bold py-2 rounded-full text-white ">Tickets & details</button>
-                    </div>
-                  </div>
-                }
-
-                {
-                  idx === imageIndex &&
-                  <h1 className="text-3xl font-black text-white text-center uppercase px-3 py-3 rounded absolute -top-2 left-[5%] upcomingbg " >
-                    {img.date}
-                    <br />
-                    {img.month}
-                  </h1>
-                }
-              </div>
-            </div>
-          ))}
+          {events.map((event, idx) => <Event key={event._id} event={event} idx={idx} imageIndex={imageIndex} />)}
         </Slider>
       </div>
     </div>

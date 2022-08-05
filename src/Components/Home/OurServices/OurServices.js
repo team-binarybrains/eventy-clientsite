@@ -15,7 +15,7 @@ export default function OurServices() {
     const serviceInfo = useFetch('http://localhost:5000/services-get')
     console.log(serviceInfo);
 
-    
+
 
     // axios.get('http://localhost:5000/services-get')
     //     .then(res => {
@@ -24,10 +24,10 @@ export default function OurServices() {
     //     })
 
 
-        const navigate = useNavigate()
-        const navigateToDetails = id => {
-            navigate(`/service-details/${id}`)
-        }
+    const navigate = useNavigate()
+    const navigateToDetails = id => {
+        navigate(`/service-details/${id}`)
+    }
 
 
     const NextArrow = ({ onClick }) => {

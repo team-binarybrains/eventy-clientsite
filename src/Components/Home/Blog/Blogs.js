@@ -10,7 +10,8 @@ import {
   faClock,
   faLocationDot,
 } from "@fortawesome/free-solid-svg-icons";
-import { BsPlusLg } from "react-icons/bs";
+import
+ { BsPlusLg } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import Singleblog from "./SingleBlog/Singleblog";
 import useBlogs from "../../Hooks/useBlogs";
