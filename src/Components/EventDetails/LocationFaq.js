@@ -2,10 +2,12 @@
 import React from 'react';
 import style from './EventDetails.module.css';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faCircleArrowRight,faLocationDot,faLink } from "@fortawesome/free-solid-svg-icons";
-import { BsTwitter} from 'react-icons/bs';
+import { faCircleArrowRight, faLocationDot, faLink } from "@fortawesome/free-solid-svg-icons";
+import { BsTwitter } from 'react-icons/bs';
 import { FaFacebookF } from 'react-icons/fa';
 import { HiLink } from 'react-icons/hi';
+import { MapContainer, TileLayer } from 'react-leaflet';
+
 
 const LocationFaq = () => {
     return (
@@ -14,6 +16,14 @@ const LocationFaq = () => {
             {/* event location map */}
             <div className={`py-5 px-2 border-2 h-[26rem] min-w-[12rem] w-full max-w-[22rem] grow`}>
                 <h2 className='text-3xl roboto'>Event <span className='font-bold'>Location</span></h2>
+                <div className='mt-2'>
+                    <MapContainer style={{ width: 280, height: 340 }} center={[51.505, -0.09]} zoom={7} scrollWheelZoom={true}>
+                        <TileLayer
+                            attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                        />
+                    </MapContainer>
+                </div>
             </div>
 
             {/* event location info */}
@@ -27,10 +37,10 @@ const LocationFaq = () => {
                 </div>
                 <article className='py-5 px-5 h-[calc(100%-6rem)] space-y-3'>
                     <span className={`inline-block px-5 py-3 mb-2 bg-white rounded-sm text-amber-500 font-bold tracking-wider`}>Istanbul Turkey</span>
-                    <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> Bayezid II Mosque and Beyazid Square</p>
-                    <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> Istanbul, IS 240012</p>
-                    <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> Thursday, December 26, 2018</p>
-                    <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500'/> From <b className='font-semibold'>15.00 PM</b> to <b className='font-semibold'>20.00 PM</b> (EST)</p>
+                    <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500' /> Bayezid II Mosque and Beyazid Square</p>
+                    <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500' /> Istanbul, IS 240012</p>
+                    <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500' /> Thursday, December 26, 2018</p>
+                    <p className='text-sm font-light '><FontAwesomeIcon icon={faCircleArrowRight} className='text-amber-500' /> From <b className='font-semibold'>15.00 PM</b> to <b className='font-semibold'>20.00 PM</b> (EST)</p>
                     <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold uppercase`}>add to my calendar</button>
                 </article>
             </div>
@@ -46,9 +56,9 @@ const LocationFaq = () => {
                 </div>
                 <article className='py-5 px-5 h-[calc(100%-6rem)] space-y-2'>
                     <p className='text-gray-900/70 text-sm font-light openSans tracking-wide'>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant. Proin gravida nibh vel velit auctor aliquet. sollicitudin, lorem quis</p>
-                    <button className='text-gray-900/90 text-sm font-bold openSans'><FaFacebookF className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2'/> facebook.com/eventy</button>
-                    <button className='text-gray-900/90 text-sm font-bold openSans'><BsTwitter className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2'/> twitter.com@eventy</button>
-                    <button className='text-gray-900/90 text-sm font-bold openSans'><HiLink className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2'/> https://eventy-bb.web.app</button>
+                    <button className='text-gray-900/90 text-sm font-bold openSans'><FaFacebookF className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2' /> facebook.com/eventy</button>
+                    <button className='text-gray-900/90 text-sm font-bold openSans'><BsTwitter className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2' /> twitter.com@eventy</button>
+                    <button className='text-gray-900/90 text-sm font-bold openSans'><HiLink className='text-white bg-amber-500 h-7 w-7 rounded-full p-2 inline-block mr-2' /> https://eventy-bb.web.app</button>
                     <button className={`bg-gradient-to-r from-orange-500 to-amber-400 px-6 py-3 rounded-full text-white font-bold uppercase`}>contact with us</button>
                 </article>
             </div>
