@@ -135,11 +135,11 @@ const Navbar = ({ location }) => {
                           blogs
                         </Link>
                       </li>
-                      <li>
+                      {/* <li>
                         <Link className="uppercase" to={"/blogs-details"}>
                           blogs details
                         </Link>
-                      </li>
+                      </li> */}
                     </ul>
                   </li>
                   <li>
@@ -240,11 +240,11 @@ const Navbar = ({ location }) => {
                         blogs
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="uppercase" to={"/blogs-details"}>
                         blogs details
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <li>
@@ -383,11 +383,11 @@ const Navbar = ({ location }) => {
                         blogs
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="uppercase" to={"/blogs-details"}>
                         blogs details
                       </Link>
-                    </li>
+                    </li> */}
                   </ul>
                 </li>
                 <li>
@@ -488,11 +488,11 @@ const Navbar = ({ location }) => {
                       blogs
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link className="uppercase" to={"/blogs-details"}>
                       blogs details
                     </Link>
-                  </li>
+                  </li> */}
                 </ul>
               </li>
               <li>
