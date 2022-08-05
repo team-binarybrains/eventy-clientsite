@@ -13,6 +13,7 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 import banner1 from '../../../asset/Banner/slider-bg1.jpg'
 import banner2 from '../../../asset/Banner/slider-bg2.jpg'
 import banner3 from '../../../asset/Banner/slider-bg3.jpg'
+import { Link } from "react-router-dom";
 
 const Banner = () => {
 	const pagination = {
@@ -63,7 +64,7 @@ const Banner = () => {
 											</div>
 
 											<div className="banner_button pt-14">
-												<button className="text-white  text-xs md:text-base py-3 px-6 md:px-14 capitalize font-semibold rounded-full transition-all ease-in-out duration-500" id="bannerAboutBtn">{banner?.aboutBtn}</button>
+												<Link to='/about' className="text-white  text-xs md:text-base py-3 px-6 md:px-14 capitalize font-semibold rounded-full transition-all ease-in-out duration-500" id="bannerAboutBtn">{banner?.aboutBtn}</Link>
 												<button id="bannerStartedBtn" className="text-white text-xs md:text-base outline outline-[#FFBE30] ml-6 p-2  rounded-full px-2 md:px-8 hover:bg-[#FFBE30] transition-all ease-in-out duration-300 text-center capitalize font-semibold">{banner?.startedBtn}</button>
 											</div>
 										</div>
