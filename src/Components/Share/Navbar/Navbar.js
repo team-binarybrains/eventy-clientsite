@@ -110,11 +110,6 @@ const Navbar = ({ location }) => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="uppercase" to="/event-details">
-                          event details
-                        </Link>
-                      </li>
-                      <li>
                         <Link className="uppercase" to="/event-booking">
                           event Booking
                         </Link>
@@ -217,11 +212,6 @@ const Navbar = ({ location }) => {
                     <li>
                       <Link className="uppercase" to="/event-grid">
                         event grid
-                      </Link>
-                    </li>
-                    <li>
-                      <Link className="uppercase" to="/event-details">
-                        event details
                       </Link>
                     </li>
                     <li>
@@ -368,11 +358,6 @@ const Navbar = ({ location }) => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/event-details">
-                        event details
-                      </Link>
-                    </li>
-                    <li>
                       <Link className="uppercase" to="/event-booking">
                         event Booking
                       </Link>
@@ -475,11 +460,6 @@ const Navbar = ({ location }) => {
                   <li>
                     <Link className="uppercase" to="/event-grid">
                       event grid
-                    </Link>
-                  </li>
-                  <li>
-                    <Link className="uppercase" to="/event-details">
-                      event details
                     </Link>
                   </li>
                   <li>
