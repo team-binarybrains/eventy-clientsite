@@ -162,7 +162,7 @@ const Navbar = ({ location }) => {
                     <Link to="/speaker">SPEAKER</Link>
                   </li>
                   <li>
-                    <Link to="/contact">CONTACT</Link>
+                    <Link to="/contact-us">CONTACT</Link>
                   </li>
                 </ul>
               </div>
@@ -270,7 +270,7 @@ const Navbar = ({ location }) => {
                   <Link to="/speaker">SPEAKER</Link>
                 </li>
                 <li>
-                  <Link to="/contact">CONTACT</Link>
+                  <Link to="/contact-us">CONTACT</Link>
                 </li>
               </ul>
             </div>
@@ -487,7 +487,7 @@ const Navbar = ({ location }) => {
                   <Link to="/speaker">SPEAKER</Link>
                 </li>
                 <li>
-                  <Link to="/contact">CONTACT</Link>
+                  <Link to="/contact-us">CONTACT</Link>
                 </li>
               </ul>
             </div>
@@ -595,7 +595,7 @@ const Navbar = ({ location }) => {
                 <Link to="/speaker">SPEAKER</Link>
               </li>
               <li>
-                <Link to="/contact">CONTACT</Link>
+                <Link to="/contact-us">CONTACT</Link>
               </li>
             </ul>
           </div>
