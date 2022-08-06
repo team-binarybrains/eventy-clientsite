@@ -24,6 +24,7 @@ import { useEffect } from "react";
 import Navbar from "./Components/Share/Navbar/Navbar";
 import SingleEventBooking from "./Components/SingleEventBooking/SingleEventBooking";
 import Map from "./Components/AboutUs/Map";
+import ContactUs from "./Components/ContactUs/ContactUs";
 
 function App() {
   const location = useLocation();
@@ -80,6 +81,12 @@ function App() {
           path="/event-details/:id"
           element={<EventDetails></EventDetails>}
         ></Route>
+
+        <Route 
+        path="/contact-us"
+        element={<ContactUs></ContactUs>}
+        ></Route>
+
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
       <Footer></Footer>
