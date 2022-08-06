@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 // import userIcon from '../../../asset/UserIcon/1946429.png'
 import { BiUser } from "react-icons/bi";
+import { AiOutlineUser } from "react-icons/ai";
 import TopnavBar from "../TopBar/TopnavBar";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/firebase.init";
@@ -30,6 +31,8 @@ const Navbar = ({ location }) => {
   };
   const [user] = useAuthState(auth)
 
+  const [show, setShow] = useState("hidden");
+
   return (
     <div>
       {/* navbar bg-transparent fixed z-50 */}
@@ -43,11 +46,11 @@ const Navbar = ({ location }) => {
             id="navbar"
           >
             <div class="navbar-start">
-              <div class="dropdown">
+              <div class="dropdown w-full">
                 <label tabindex="0" class="btn btn-ghost lg:hidden">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    class="h-5 w-5"
+                    class="h-7 w-7"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -163,9 +166,12 @@ const Navbar = ({ location }) => {
                   </li>
                 </ul>
               </div>
-              <Link to="/" class="btn btn-ghost normal-case text-2xl tracking-widest">
+              <div className="w-[85px] lg:w-full flex items-end">
+              <img src="https://i.ibb.co/Qb1N5CN/Eventy-Logo.png" alt="" className="w-9 h-9" />
+              <Link to="/" class=" text-3xl tracking-widest">
                 EVENTY
               </Link>
+              </div>
             </div>
             <div class="navbar-center hidden lg:flex">
               <ul class="menu menu-horizontal p-0">
@@ -272,15 +278,80 @@ const Navbar = ({ location }) => {
               <div className="profile ">
                 {/* FaRegUserCircle */}
                 {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
-                { user?
-                  <button
-                    onClick={handleSignOut}
-                    className="uppercase btn-selection type-4 px-5">
-                    Sign out
-                  </button>:
+                {!user ?
                   <Link to={"/authentication"} className="text-3xl">
-                  <BiUser></BiUser>
-                </Link>}
+                    <BiUser></BiUser>
+                  </Link>
+
+                  :
+                  <>
+                    <div className="dropdown dropdown-end">
+                      <div
+                        tabIndex="0"
+                        className=" m-1"
+                        onClick={() => {
+                          show === "hidden" ? setShow("block") : setShow("hidden");
+                        }}
+                      >
+                        {user?.photoURL && (
+                          <img
+                            src={user?.photoURL}
+                            className="w-10 h-10 rounded-full"
+                            alt=""
+                          />
+                        )}
+
+                        {user?.photoURL === null && (
+                          <span className="">
+                            <AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full" />
+                          </span>
+                        )}
+                      </div>
+
+                      <ul
+                        tabIndex="0"
+                        class={`dropdown-content menu p-2 shadow border-2 bg-white rounded-sm w-60 ${show} text-black text-center mt-5 -mr-`}
+                      >
+                        <div className="grid gap-y-3 pt-7 pb-3">
+                          <div className="bg-gray-200 grid justify-center p-4 rounded-sm">
+                            <div className="flex justify-center -mt-11">
+                              {user?.photoURL && (
+                                <img
+                                  src={user?.photoURL}
+                                  className="w-14 h-14 rounded-full"
+                                  alt=""
+                                />
+                              )}
+
+                              {user?.photoURL === null && (
+                                <span className="">
+                                  <AiOutlineUser className="text-black border-2 border-black bg-white text-5xl rounded-full" />
+                                </span>
+                              )}
+                            </div>
+                            <div>
+                              <p className="pt-3 ">{user?.email}</p>
+                            </div>
+                          </div>
+
+                          <Link
+                            to={`/manage-profile`}
+                            className="uppercase hover:text-gray-600"
+                          >
+                            Manage profile
+                          </Link>
+
+                          <button
+                            onClick={handleSignOut}
+                            className="uppercase hover:text-gray-600"
+                          >
+                            Sign out
+                          </button>
+                        </div>
+                      </ul>
+                    </div>
+                  </>
+                }
               </div>
             </div>
           </div>
@@ -297,11 +368,11 @@ const Navbar = ({ location }) => {
           id="navbar"
         >
           <div class="navbar-start">
-            <div class="dropdown">
-              <label tabindex="0" class="btn btn-ghost lg:hidden">
+            <div class="dropdown w-full">
+              <label tabindex="0" class="lg:hidden">
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
+                  class="h-7 w-7"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -417,9 +488,12 @@ const Navbar = ({ location }) => {
                 </li>
               </ul>
             </div>
-            <Link to="/" class="btn btn-ghost normal-case text-2xl tracking-widest">
-              EVENTY
-            </Link>
+            <div className="w-[85px] lg:w-full flex items-end">
+              <img src="https://i.ibb.co/Qb1N5CN/Eventy-Logo.png" alt="" className="w-9 h-9" />
+              <Link to="/" class=" text-3xl tracking-widest">
+                EVENTY
+              </Link>
+            </div>
           </div>
           <div class="navbar-center hidden lg:flex">
             <ul class="menu menu-horizontal p-0">
@@ -526,15 +600,80 @@ const Navbar = ({ location }) => {
             <div className="profile ">
               {/* FaRegUserCircle */}
               {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
-              { user?
-                  <button
-                    onClick={handleSignOut}
-                    className="uppercase btn-selection type-4 px-5">
-                    Sign out
-                  </button>:
-                  <Link to={"/authentication"} className="text-3xl">
+              {!user ?
+                <Link to={"/authentication"} className="text-3xl">
                   <BiUser></BiUser>
-                </Link>}
+                </Link>
+
+                :
+                <>
+                  <div className="dropdown dropdown-end">
+                    <div
+                      tabIndex="0"
+                      className=" m-1"
+                      onClick={() => {
+                        show === "hidden" ? setShow("block") : setShow("hidden");
+                      }}
+                    >
+                      {user?.photoURL && (
+                        <img
+                          src={user?.photoURL}
+                          className="w-10 h-10 rounded-full"
+                          alt=""
+                        />
+                      )}
+
+                      {user?.photoURL === null && (
+                        <span className="">
+                          <AiOutlineUser className="border-[2px] border-yellow-400 text-white text-4xl p-1 rounded-full" />
+                        </span>
+                      )}
+                    </div>
+
+                    <ul
+                      tabIndex="0"
+                      class={`dropdown-content menu p-2 shadow border-2 bg-white rounded-sm w-60 ${show} text-black text-center mt-5 -mr-`}
+                    >
+                      <div className="grid gap-y-3 pt-7 pb-3">
+                        <div className="bg-gray-200 grid justify-center p-4 rounded-sm">
+                          <div className="flex justify-center -mt-11">
+                            {user?.photoURL && (
+                              <img
+                                src={user?.photoURL}
+                                className="w-14 h-14 rounded-full"
+                                alt=""
+                              />
+                            )}
+
+                            {user?.photoURL === null && (
+                              <span className="">
+                                <AiOutlineUser className="text-black border-2 border-black bg-white text-5xl rounded-full" />
+                              </span>
+                            )}
+                          </div>
+                          <div>
+                            <p className="pt-3 ">{user?.email}</p>
+                          </div>
+                        </div>
+
+                        <Link
+                          to={`/manage-profile`}
+                          className="uppercase hover:text-gray-600"
+                        >
+                          Manage profile
+                        </Link>
+
+                        <button
+                          onClick={handleSignOut}
+                          className="uppercase hover:text-gray-600"
+                        >
+                          Sign out
+                        </button>
+                      </div>
+                    </ul>
+                  </div>
+                </>
+              }
             </div>
           </div>
         </div>
