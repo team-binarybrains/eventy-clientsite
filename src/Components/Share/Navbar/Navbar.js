@@ -27,9 +27,9 @@ const Navbar = ({ location }) => {
 
   const handleSignOut = () => {
     signOut(auth);
-    navigate('/')
+    navigate("/");
   };
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
 
   const [show, setShow] = useState("hidden");
 
@@ -162,12 +162,19 @@ const Navbar = ({ location }) => {
                     <Link to="/speaker">SPEAKER</Link>
                   </li>
                   <li>
+                    <Link to="/dashboard">DASHBOARD</Link>
+                  </li>
+                  <li>
                     <Link to="/contact-us">CONTACT</Link>
                   </li>
                 </ul>
               </div>
               <div className="w-[85px] lg:w-full flex items-end">
-                <img src="https://i.ibb.co/Qb1N5CN/Eventy-Logo.png" alt="" className="w-9 h-9" />
+                <img
+                  src="https://i.ibb.co/Qb1N5CN/Eventy-Logo.png"
+                  alt=""
+                  className="w-9 h-9"
+                />
                 <Link to="/" class=" text-3xl tracking-widest">
                   EVENTY
                 </Link>
@@ -270,6 +277,9 @@ const Navbar = ({ location }) => {
                   <Link to="/speaker">SPEAKER</Link>
                 </li>
                 <li>
+                  <Link to="/dashboard">DASHBOARD</Link>
+                </li>
+                <li>
                   <Link to="/contact-us">CONTACT</Link>
                 </li>
               </ul>
@@ -279,19 +289,20 @@ const Navbar = ({ location }) => {
                 {/* FaRegUserCircle */}
                 {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
                 <div>
-                  {!user ?
+                  {!user ? (
                     <Link to={"/authentication"} className="text-3xl">
                       <BiUser></BiUser>
                     </Link>
-
-                    :
+                  ) : (
                     <>
                       <div className="dropdown dropdown-end">
                         <div
                           tabIndex="0"
                           className=" m-1"
                           onClick={() => {
-                            show === "hidden" ? setShow("block") : setShow("hidden");
+                            show === "hidden"
+                              ? setShow("block")
+                              : setShow("hidden");
                           }}
                         >
                           {user?.photoURL && (
@@ -352,7 +363,7 @@ const Navbar = ({ location }) => {
                         </ul>
                       </div>
                     </>
-                  }
+                  )}
                 </div>
                 <div></div>
               </div>
@@ -487,12 +498,19 @@ const Navbar = ({ location }) => {
                   <Link to="/speaker">SPEAKER</Link>
                 </li>
                 <li>
+                  <Link to="/dashboard">DASHBOARD</Link>
+                </li>
+                <li>
                   <Link to="/contact-us">CONTACT</Link>
                 </li>
               </ul>
             </div>
             <div className="w-[85px] lg:w-full flex items-end">
-              <img src="https://i.ibb.co/Qb1N5CN/Eventy-Logo.png" alt="" className="w-9 h-9" />
+              <img
+                src="https://i.ibb.co/Qb1N5CN/Eventy-Logo.png"
+                alt=""
+                className="w-9 h-9"
+              />
               <Link to="/" class=" text-3xl tracking-widest">
                 EVENTY
               </Link>
@@ -595,92 +613,96 @@ const Navbar = ({ location }) => {
                 <Link to="/speaker">SPEAKER</Link>
               </li>
               <li>
+                <Link to="/dashboard">DASHBOARD</Link>
+              </li>
+              <li>
                 <Link to="/contact-us">CONTACT</Link>
               </li>
             </ul>
           </div>
           <div class="navbar-start">
-          <div className="profile w-full flex lg:justify-around justify-end">
-                {/* FaRegUserCircle */}
-                {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
-                <div>
-                  {!user ?
-                    <Link to={"/authentication"} className="text-3xl">
-                      <BiUser></BiUser>
-                    </Link>
+            <div className="profile w-full flex lg:justify-around justify-end">
+              {/* FaRegUserCircle */}
+              {/* <img className='w-10 h-10' src={userIcon} alt="" /> */}
+              <div>
+                {!user ? (
+                  <Link to={"/authentication"} className="text-3xl">
+                    <BiUser></BiUser>
+                  </Link>
+                ) : (
+                  <>
+                    <div className="dropdown dropdown-end">
+                      <div
+                        tabIndex="0"
+                        className=" m-1"
+                        onClick={() => {
+                          show === "hidden"
+                            ? setShow("block")
+                            : setShow("hidden");
+                        }}
+                      >
+                        {user?.photoURL && (
+                          <img
+                            src={user?.photoURL}
+                            className="w-10 h-10 rounded-full"
+                            alt=""
+                          />
+                        )}
 
-                    :
-                    <>
-                      <div className="dropdown dropdown-end">
-                        <div
-                          tabIndex="0"
-                          className=" m-1"
-                          onClick={() => {
-                            show === "hidden" ? setShow("block") : setShow("hidden");
-                          }}
-                        >
-                          {user?.photoURL && (
-                            <img
-                              src={user?.photoURL}
-                              className="w-10 h-10 rounded-full"
-                              alt=""
-                            />
-                          )}
-
-                          {user?.photoURL === null && (
-                            <span className="">
-                              <AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full" />
-                            </span>
-                          )}
-                        </div>
-
-                        <ul
-                          tabIndex="0"
-                          class={`dropdown-content menu p-2 shadow border-2 bg-white rounded-sm w-60 ${show} text-black text-center mt-5 -mr-`}
-                        >
-                          <div className="grid gap-y-3 pt-7 pb-3">
-                            <div className="bg-gray-200 grid justify-center p-4 rounded-sm">
-                              <div className="flex justify-center -mt-11">
-                                {user?.photoURL && (
-                                  <img
-                                    src={user?.photoURL}
-                                    className="w-14 h-14 rounded-full"
-                                    alt=""
-                                  />
-                                )}
-
-                                {user?.photoURL === null && (
-                                  <span className="">
-                                    <AiOutlineUser className="text-black border-2 border-black bg-white text-5xl rounded-full" />
-                                  </span>
-                                )}
-                              </div>
-                              <div>
-                                <p className="pt-3 ">{user?.email}</p>
-                              </div>
-                            </div>
-
-                            <Link
-                              to={`/manage-profile`}
-                              className="uppercase hover:text-gray-600"
-                            >
-                              Manage profile
-                            </Link>
-
-                            <button
-                              onClick={handleSignOut}
-                              className="uppercase hover:text-gray-600"
-                            >
-                              Sign out
-                            </button>
-                          </div>
-                        </ul>
+                        {user?.photoURL === null && (
+                          <span className="">
+                            <AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full" />
+                          </span>
+                        )}
                       </div>
-                    </>
-                  }
-                </div>
-                <div></div>
+
+                      <ul
+                        tabIndex="0"
+                        class={`dropdown-content menu p-2 shadow border-2 bg-white rounded-sm w-60 ${show} text-black text-center mt-5 -mr-`}
+                      >
+                        <div className="grid gap-y-3 pt-7 pb-3">
+                          <div className="bg-gray-200 grid justify-center p-4 rounded-sm">
+                            <div className="flex justify-center -mt-11">
+                              {user?.photoURL && (
+                                <img
+                                  src={user?.photoURL}
+                                  className="w-14 h-14 rounded-full"
+                                  alt=""
+                                />
+                              )}
+
+                              {user?.photoURL === null && (
+                                <span className="">
+                                  <AiOutlineUser className="text-black border-2 border-black bg-white text-5xl rounded-full" />
+                                </span>
+                              )}
+                            </div>
+                            <div>
+                              <p className="pt-3 ">{user?.email}</p>
+                            </div>
+                          </div>
+
+                          <Link
+                            to={`/manage-profile`}
+                            className="uppercase hover:text-gray-600"
+                          >
+                            Manage profile
+                          </Link>
+
+                          <button
+                            onClick={handleSignOut}
+                            className="uppercase hover:text-gray-600"
+                          >
+                            Sign out
+                          </button>
+                        </div>
+                      </ul>
+                    </div>
+                  </>
+                )}
               </div>
+              <div></div>
+            </div>
           </div>
         </div>
       )}
