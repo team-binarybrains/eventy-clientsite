@@ -12,12 +12,12 @@ import useFetch from "./Hook/useFetch";
 export default function OurServices() {
 
 
-    const serviceInfo = useFetch('http://localhost:5000/services-get')
+    const serviceInfo = useFetch('https://fathomless-hamlet-59180.herokuapp.com/services-get')
     console.log(serviceInfo);
 
 
 
-    // axios.get('http://localhost:5000/services-get')
+    // axios.get('https://fathomless-hamlet-59180.herokuapp.com/services-get')
     //     .then(res => {
     //         const { data } = res
     //         setServiceInfo(data)

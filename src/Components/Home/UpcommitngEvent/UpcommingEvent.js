@@ -36,7 +36,7 @@ const UpcommingEvent = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    fetch('http://localhost:5000/alleventlisting')
+    fetch('https://fathomless-hamlet-59180.herokuapp.com/alleventlisting')
       .then(res => res.json())
       .then(data => setEvents(data))
   }, [])
