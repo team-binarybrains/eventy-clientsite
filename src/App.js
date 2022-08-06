@@ -25,6 +25,9 @@ import Navbar from "./Components/Share/Navbar/Navbar";
 import SingleEventBooking from "./Components/SingleEventBooking/SingleEventBooking";
 import Map from "./Components/AboutUs/Map";
 import ContactUs from "./Components/ContactUs/ContactUs";
+import Dashboard from "./Components/Dashboard/Dashboard";
+import Chart from "./Components/Dashboard/Chart/Chart";
+import MainChart from "./Components/Dashboard/Chart/MainChart/MainChart";
 
 function App() {
   const location = useLocation();
@@ -38,6 +41,9 @@ function App() {
       <Navbar location={location}></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/dashboard" element={<Dashboard></Dashboard>}>
+          <Route index path="/dashboard" element={<MainChart />}></Route>
+        </Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
         <Route
           path="/blogs-details"
@@ -55,7 +61,10 @@ function App() {
           path="/event-booking"
           element={<EventBooking></EventBooking>}
         ></Route>
-        <Route path='/event-booking/:id' element={<SingleEventBooking></SingleEventBooking>}></Route>
+        <Route
+          path="/event-booking/:id"
+          element={<SingleEventBooking></SingleEventBooking>}
+        ></Route>
         <Route
           path="/eventlist"
           element={<EventListDetailsMain></EventListDetailsMain>}
@@ -82,10 +91,7 @@ function App() {
           element={<EventDetails></EventDetails>}
         ></Route>
 
-        <Route 
-        path="/contact-us"
-        element={<ContactUs></ContactUs>}
-        ></Route>
+        <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
 
         <Route path="*" element={<NotFound></NotFound>}></Route>
       </Routes>
