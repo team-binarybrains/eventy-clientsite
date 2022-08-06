@@ -16,7 +16,7 @@ import Event from "./Event";
 
 const UpcommingEvent = () => {
   // const events = [astronaut, celebrating, education];
-  const [events, setEvents] = useState([])
+  const [events, setEvents] = useState([]);
   const NextArrow = ({ onClick }) => {
     return (
       <div className="arrow next" onClick={onClick}>
@@ -36,11 +36,10 @@ const UpcommingEvent = () => {
   const [imageIndex, setImageIndex] = useState(0);
 
   useEffect(() => {
-    fetch('https://fathomless-hamlet-59180.herokuapp.com/alleventlisting')
-      .then(res => res.json())
-      .then(data => setEvents(data))
-  }, [])
-
+    fetch("http://localhost:5000/alleventlisting")
+      .then((res) => res.json())
+      .then((data) => setEvents(data));
+  }, []);
 
   console.log(events);
 
@@ -78,15 +77,25 @@ const UpcommingEvent = () => {
 
   return (
     <div className="container mx-auto px-10 pt-16">
-
       <div className="space-y-3">
-        <h1 className="text-center uppercase text-gray-400 text-[18px] tracking-[10px]">UPCOMMING EVENTS</h1>
-        <p className="text-5xl tracking-wider text-center">Latest <span className="font-bold">Awesome Events</span></p>
+        <h1 className="text-center uppercase text-gray-400 text-[18px] tracking-[10px]">
+          UPCOMMING EVENTS
+        </h1>
+        <p className="text-5xl tracking-wider text-center">
+          Latest <span className="font-bold">Awesome Events</span>
+        </p>
       </div>
 
       <div className="app">
-        <Slider {...upComingSettings} className='px-5 overflow-visible'>
-          {events.map((event, idx) => <Event key={event._id} event={event} idx={idx} imageIndex={imageIndex} />)}
+        <Slider {...upComingSettings} className="px-5 overflow-visible">
+          {events.map((event, idx) => (
+            <Event
+              key={event._id}
+              event={event}
+              idx={idx}
+              imageIndex={imageIndex}
+            />
+          ))}
         </Slider>
       </div>
     </div>

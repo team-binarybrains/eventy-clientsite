@@ -3,7 +3,6 @@ import { BsBookmarkFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
 import "./FrequentlyMainBlogs.css";
 
-
 const FrequentlyMainBlogs = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
@@ -11,7 +10,7 @@ const FrequentlyMainBlogs = () => {
   const [show4, setShow4] = useState(false);
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    fetch("https://fathomless-hamlet-59180.herokuapp.com/blogs")
+    fetch("http://localhost:5000/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
@@ -19,7 +18,6 @@ const FrequentlyMainBlogs = () => {
   const handleBlogsDetails = (id) => {
     navigete("/blogs-details/" + id);
   };
-
 
   return (
     <div>
