@@ -129,6 +129,38 @@ const Navbar = ({ location }) => {
                       </li>
                     </ul>
                   </li>
+                  {/* HERE THE SERVICES  */}
+                  <li tabindex="0">
+                    <Link to={pathname} className="uppercase">
+                      SERVICES
+                      <svg
+                        class="fill-current"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                      </svg>
+                    </Link>
+                    <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
+                      <li>
+                        <Link className="uppercase" to="/eventlist">
+                          event list
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="uppercase" to="/event-grid">
+                          event grid
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="uppercase" to="/event-booking">
+                          event Booking
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
                   <li tabindex="0">
                     <Link to={pathname} className="uppercase">
                       Blogs
@@ -229,6 +261,38 @@ const Navbar = ({ location }) => {
                   <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
                     <li>
                       <Link className="uppercase" to={"/eventlist"}>
+                        event list
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="uppercase" to="/event-grid">
+                        event grid
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="uppercase" to="/event-booking">
+                        event Booking
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                {/* HERE THE SERVICES */}
+                <li tabindex="0">
+                  <Link to={pathname} className="uppercase">
+                    SERVICES
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                    </svg>
+                  </Link>
+                  <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
+                    <li>
+                      <Link className="uppercase" to="/eventlist">
                         event list
                       </Link>
                     </li>
@@ -467,6 +531,37 @@ const Navbar = ({ location }) => {
                 </li>
                 <li tabindex="0">
                   <Link to={pathname} className="uppercase">
+                    Event
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                    </svg>
+                  </Link>
+                  <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
+                    <li>
+                      <Link className="uppercase" to="/eventlist">
+                        event list
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="uppercase" to="/event-grid">
+                        event grid
+                      </Link>
+                    </li>
+                    <li>
+                      <Link className="uppercase" to="/event-booking">
+                        event Booking
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li tabindex="0">
+                  <Link to={pathname} className="uppercase">
                     Blogs
                     <svg
                       class="fill-current"
@@ -565,6 +660,38 @@ const Navbar = ({ location }) => {
                 <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
                   <li>
                     <Link className="uppercase" to={"/eventlist"}>
+                      event list
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/event-grid">
+                      event grid
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/event-booking">
+                      event Booking
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              {/* SERVICES DROPDOWN */}
+              <li tabindex="0">
+                <Link to={pathname} className="uppercase">
+                  SERVICES
+                  <svg
+                    class="fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                  </svg>
+                </Link>
+                <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
+                  <li>
+                    <Link className="uppercase" to="/eventlist">
                       event list
                     </Link>
                   </li>

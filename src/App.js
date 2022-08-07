@@ -28,6 +28,7 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Chart from "./Components/Dashboard/Chart/Chart";
 import MainChart from "./Components/Dashboard/Chart/MainChart/MainChart";
+import Services from "./Components/Services/Services";
 
 function App() {
   const location = useLocation();
@@ -41,6 +42,7 @@ function App() {
       <Navbar location={location}></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/services" element={<Services></Services>}></Route>
         <Route path="/dashboard" element={<Dashboard></Dashboard>}>
           <Route index path="/dashboard" element={<MainChart />}></Route>
         </Route>
