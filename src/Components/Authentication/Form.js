@@ -17,6 +17,7 @@ import { BsFacebook } from "react-icons/bs";
 import { IoLogoGoogle } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import useToken from "../Hooks/useToken";
+import { useNavigate } from "react-router-dom";
 
 const errorMssg = (error = "") => {
   return error ? error?.code?.split("/")[1].split("-").join(" ") : "";
@@ -87,6 +88,10 @@ const Form = () => {
 
     e.target.reset();
   };
+  const navigate = useNavigate();
+  if (googleUser || facebookUser || signUpUser) {
+    navigate("/");
+  }
 
   return (
     <section className={`${styleLg.bg}`}>
