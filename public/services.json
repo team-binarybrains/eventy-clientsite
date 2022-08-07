@@ -1,0 +1,75 @@
+[
+    {
+        "name": "SPECIAL NEEDS DIETS",
+        "img": "https://i.ibb.co/19sb9LZ/280x150-Catering4.jpg",
+        "details": {
+            "a": "Diabetic",
+            "b": "Portion Control",
+            "c": "Fat-Free, Low-Sodium"
+        }
+    },
+    {
+        "name": "FULL SERVICE CATERING",
+        "img": "https://i.ibb.co/VBKbH92/280x150-Catering1.jpg",
+        "details": {
+            "a": "Tailored Menus",
+            "b": "Reliable Vendors",
+            "c": "Artisan Crafted Displays"
+        }
+    },
+    {
+        "name": "BUFFET STATIONS",
+        "img": "https://i.ibb.co/VqfP9pt/280x150-Lighting-Deor-CBD-E1.jpg",
+        "details": {
+            "a": "Servers",
+            "b": "Custom Desserts",
+            "c": "Carving Stations",
+            "d": "DC’s Top Mixologists"
+        }
+    },
+    {
+        "name": "VEGETARIAN / VEGAN MEALS",
+        "img": "https://i.ibb.co/zhz7gm5/280x150-Catering5.jpg",
+        "details": {
+            "a": "Vegetarian",
+            "b": "Vegan Menus ",
+            "c": "Organic Ingredients"
+        }
+    },
+    {
+        "name": "HORS D'OEUVRE STATIONS",
+        "img": "https://i.ibb.co/PzNNx3p/280x150-Catering2.jpg",
+        "details": {
+            "a": "Mini Desserts",
+            "b": "Mini Soups and More",
+            "c": "Meat and/or Fish Skewers"
+        }
+    },
+    {
+        "name": "FOOD PRESENTATION EXPERTS",
+        "img": "https://i.ibb.co/Vq9H7wG/280x150-Catering.jpg",
+        "details": {
+            "a": "Menu Cards and Centerpieces",
+            "b": "Fine China and Custom Linens",
+            "c": "Florals and Decor are designed to compliment the cuisine"
+        }
+    },
+    {
+        "name": "ETHNIC CUISINE",
+        "img": "https://i.ibb.co/yQs3Gkh/280x150-Catering9.jpg",
+        "details": {
+            "a": "American, Japanese",
+            "b": "Portugese, Brazilian, Spanish",
+            "c": "Asian Fusion, Moroccon and More"
+        }
+    },
+    {
+        "name": "PASSED HOR D'OEUVRES",
+        "img": "https://i.ibb.co/PzNNx3p/280x150-Catering2.jpg",
+        "details": {
+            "a": "Platters",
+            "b": "Hot Displays",
+            "c": "For Large or small Cocktail Receptions"
+        }
+    }
+]

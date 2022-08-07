@@ -1,7 +1,15 @@
 import React from 'react'
+import { BsPlusLg } from 'react-icons/bs';
 import { Link } from 'react-router-dom'
+import useFetch from '../../Home/OurServices/Hook/useFetch'
+import '../Services.css'
 
 function Catering() {
+
+    const catering = useFetch('http://localhost:5000/get-catering')
+    console.log(catering);
+
+
     return (
         <div className='route'>
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
@@ -27,7 +35,39 @@ function Catering() {
             </div>
 
 
+            <div className='grid lg:grid-cols-4 grid-cols-1 gap-y-20 lg:py-20 py-6 lg:mx-40'>
+                {catering.map((service, index) => <div key={index} className='flex justify-center relative hvr'>
 
+                    <div class="w-72 max-w-full bg-white cursor-pointer">
+                        <div class="w-full h-48">
+                            <img src={service.img} class="w-full  object-cover" alt='' />
+                        </div>
+                        <div class="-mt-5">
+                            <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
+                            <div className='text-gray-500'>
+                                <p class="mt-2">● {service.details.a}</p>
+                                <p class="mt-2">● {service.details.b}</p>
+                                <p class="mt-2">● {service.details.c}</p>
+                                {service.details?.d &&
+                                    <p class="mt-2">● {service.details?.d}</p>
+                                }
+                            </div>
+
+                            <div className="absolute top-0 left-[3.4rem] right-[3.4rem] bottom-0 bg-transparent cld">
+                                <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* <div className="mt-8">
+                        <p className="left-position uppercase text-gray-400 font-bold hover:text-[#ffbe30] tracking-[5px] cld2">
+                            eventy catering
+                        </p>
+                    </div> */}
+
+                </div>
+                )}
+            </div>
 
         </div>
     )
