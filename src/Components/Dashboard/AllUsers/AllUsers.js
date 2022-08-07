@@ -28,7 +28,7 @@ const AllUsers = () => {
   };
 
   return (
-    <div class="mt-2">
+    <div class="mt-10">
       <table class="max-w-5xl mx-auto table-auto">
         <thead class="justify-between">
           <tr class="bg-green-600">

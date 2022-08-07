@@ -1,6 +1,10 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChartBar,
+  faChevronRight,
+  faUser,
+} from "@fortawesome/free-solid-svg-icons";
 import "./Dashboard.css";
 import { Outlet } from "react-router-dom";
 import CustomLink from "./Chart/CustomLink/CustomLink";
@@ -43,10 +47,13 @@ const Dashboard = () => {
             {/* <!-- Sidebar content here --> */}
             {
               <li className="py-1 text-lg hover:bg-[#0f172a]  rounded">
-                <CustomLink className="" to={"/dashboard"}>
+                <CustomLink
+                  className="flex justify-center items-center gap-2 "
+                  to={"/dashboard"}
+                >
                   <FontAwesomeIcon
-                    className="bg-black"
-                    icon={FaChartLine}
+                    className="text-white"
+                    icon={faChartBar}
                   ></FontAwesomeIcon>{" "}
                   <span className="text-white font-bold"> OVERVIEW</span>
                 </CustomLink>
@@ -54,10 +61,13 @@ const Dashboard = () => {
             }
             {
               <li className="py-1 text-lg hover:bg-[#0f172a]  rounded">
-                <CustomLink className="" to={"/dashboard/allusers"}>
+                <CustomLink
+                  className="flex justify-center items-center gap-2"
+                  to={"/dashboard/allusers"}
+                >
                   <FontAwesomeIcon
-                    className="bg-black"
-                    icon={FaChartLine}
+                    className="text-white"
+                    icon={faUser}
                   ></FontAwesomeIcon>{" "}
                   <span className="text-white font-bold"> ALLUSERS</span>
                 </CustomLink>
