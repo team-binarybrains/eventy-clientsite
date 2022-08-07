@@ -12,6 +12,7 @@ function Catering() {
 
     return (
         <div className='route'>
+            {/* catering banner */}
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
                 <div className="flex justify-center items-center h-full lg:-mt-8">
                     <div className="text-white text-center">
@@ -34,7 +35,7 @@ function Catering() {
                 </div>
             </div>
 
-
+            {/* catering services */}
             <div className='grid lg:grid-cols-4 grid-cols-1 gap-y-20 lg:py-20 py-6 lg:mx-40'>
                 {catering.map((service, index) => <div key={index} className='flex justify-center relative hvr'>
 
@@ -67,6 +68,28 @@ function Catering() {
 
                 </div>
                 )}
+            </div>
+
+            {/* catering speciality */}
+            <div className='py-20 bg-gray-100 '>
+
+                <div className='flex justify-center gap-x-6'>
+
+                    <div className='w-4/12 flex justify-center items-center'>
+                        <img src="https://i.ibb.co/kmPhM6S/ct.jpg" alt="" className='h-80' />
+                    </div>
+
+                    <div className='w-4/12 '>
+                        <p className='uppercase text-3xl font-semibold'> <span className='text-amber-400'>eventy</span> SPECIALTY CATERING</p>
+                        <p className='py-8'>
+                            We use Fine China, Specialty Linens,  and other expertise to deliver a top notch event catering. Passed Hors D’oeuvres, plated dinners and buffets are one of many options we offer our clients. We incorporate client branding throughout the catered cuisine. Our caterers use only the freshest ingredients and offerings include Vegetarian Catering, Vegan Catering and other specialty catering services. CBD menus can also be customized to accommodate international, indigenous cuisine.
+                        </p>
+                       <div className='flex justify-end'>
+                       <img src="https://i.ibb.co/MRXgQwx/eventy-signature.png" alt="" className=''/>
+                       </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
