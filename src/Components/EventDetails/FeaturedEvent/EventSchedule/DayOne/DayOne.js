@@ -12,7 +12,7 @@ const showMoreClick =( data)=>{
       <div className="flex flex-wrap-reverse gap-2 route">
          <div className='basis-[320px] grow '>
             <div className="">
-               <h1 className='text-2xl text-slate-700 '>{data?.dayOneTitle}</h1>
+               <h1 className='text-2xl text-slate-700 '>{data?.title}</h1>
                <p className='text-slate-700 py-4'></p>
             </div>
             <div className="">
@@ -21,7 +21,7 @@ const showMoreClick =( data)=>{
                      <FaMicrophone className='text-5xl p-3 rounded-full bg-yellow-400 text-white' />
                      <div className="">
                         <h1 className='text-sm text-slate-600 font-semibold'>Speaker</h1>
-                        <h1 className='text-base font-semibold text-slate-700'>{data?.Speaker}</h1>
+                        <h1 className='text-base font-semibold text-slate-700'>{data?.speaker}</h1>
                      </div>
                   </div>
                   <div className="flex items-center  gap-2">
@@ -39,9 +39,9 @@ const showMoreClick =( data)=>{
                      </div>
                   </div>
                </div>
-               {/* <p className='py-6 text-slate-700 text-base' >{data?.dayOneDisruption.slice(0,300)}</p> */}
+               {/* <p className='py-6 text-slate-700 text-base' >{data?.description.slice(0,300)}</p> */}
                {
-                  data?.dayOneDisruption.length > 300 ? <p className='py-6 text-slate-700 text-base' >{data?.dayOneDisruption.slice(0,300)} <button onClick={()=>showMoreClick(true)} className='text-black font-semibold  underline'>see more</button></p> : <p className='py-6 text-slate-700 text-base' >{data?.dayOneDisruption} <button onClick={()=>showMoreClick(false)} className='text-black font-semibold  underline'>see less</button></p>
+                  data?.description.length > 300 ? <p className='py-6 text-slate-700 text-base' >{data?.description.slice(0,300)} <button onClick={()=>showMoreClick(true)} className='text-black font-semibold  underline'>see more</button></p> : <p className='py-6 text-slate-700 text-base' >{data?.description} <button onClick={()=>showMoreClick(false)} className='text-black font-semibold  underline'>see less</button></p>
                }
             </div>
          </div>

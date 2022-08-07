@@ -86,10 +86,10 @@ function App() {
           path="/service-details/:id"
           element={<SingleService></SingleService>}
         ></Route>
-        <Route
+        {/* <Route
           path="/event-details/:id"
           element={<EventDetails></EventDetails>}
-        ></Route>
+        ></Route> */}
 
         <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
 
