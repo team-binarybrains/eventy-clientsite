@@ -52,6 +52,17 @@ const Dashboard = () => {
                 </CustomLink>
               </li>
             }
+            {
+              <li className="py-1 text-lg hover:bg-[#0f172a]  rounded">
+                <CustomLink className="" to={"/dashboard/allusers"}>
+                  <FontAwesomeIcon
+                    className="bg-black"
+                    icon={FaChartLine}
+                  ></FontAwesomeIcon>{" "}
+                  <span className="text-white font-bold"> ALLUSERS</span>
+                </CustomLink>
+              </li>
+            }
           </ul>
         </div>
       </div>
