@@ -93,6 +93,40 @@ function App() {
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
         <Route path="/map" element={<Map></Map>}></Route>
+        <Route
+          path="/event-booking"
+          element={<EventBooking></EventBooking>}
+        ></Route>
+        <Route
+          path="/event-booking/:id"
+          element={<SingleEventBooking></SingleEventBooking>}
+        ></Route>
+        <Route
+          path="/eventlist"
+          element={<EventListDetailsMain></EventListDetailsMain>}
+        ></Route>
+        <Route path="/event" element={<DayOne></DayOne>}></Route>
+        <Route
+          path="/event-details"
+          element={<EventDetails></EventDetails>}
+        ></Route>
+        <Route
+          path="/event-details/:id"
+          element={<EventDetails></EventDetails>}
+        ></Route>
+        <Route
+          path="/service-details"
+          element={<SingleService></SingleService>}
+        ></Route>
+        <Route
+          path="/service-details/:id"
+          element={<SingleService></SingleService>}
+        ></Route>
+        {/* <Route
+          path="/event-details/:id"
+          element={<EventDetails></EventDetails>}
+        ></Route> */}
+
         <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
 
         {/* not found */}

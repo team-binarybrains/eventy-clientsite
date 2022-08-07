@@ -4,7 +4,7 @@ import { faClock, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 const SingleConferenceEventList = ({ item }) => {
-  const {_id, image, tittle, date, ticketprice, starttime, endtime, address } =
+  const {_id, image, title, date, ticketprice, starttime, endtime, address } =
     item;
   const [date2, month, year] = date?.split(",");
   const navigate = useNavigate();
@@ -27,7 +27,7 @@ const SingleConferenceEventList = ({ item }) => {
           <img className="h-[250px] w-[250px]" src={image} alt="" />
         </div>
         <div className="details flex flex-col  self-start mt-5 lg:ml-5 text-start">
-          <h1 className="text-[18px] font-bold">{tittle}</h1>
+          <h1 className="text-[18px] font-bold">{title}</h1>
           <h1 className="text-[17px] text-[#FD1D1D] ">
             Tickets from ${ticketprice}
           </h1>
