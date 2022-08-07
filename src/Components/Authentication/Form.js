@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import styleLg from './form.module.css';
 import styleSm from './formSm.module.css';
