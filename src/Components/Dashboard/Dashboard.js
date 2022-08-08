@@ -6,9 +6,10 @@ import {
   faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Dashboard.css";
-import { Outlet } from "react-router-dom";
-import CustomLink from "./Chart/CustomLink/CustomLink";
+import { Link, Outlet } from "react-router-dom";
 import { FaChartBar, FaChartLine } from "react-icons/fa";
+import "./Dashboard.css"
+import CustomLink from "../Share/CustomLink/CustomLink";
 const Dashboard = () => {
   return (
     <div className="mx-auto px-2 lg:px-0 lg:mt-[119px] route ">
@@ -43,33 +44,33 @@ const Dashboard = () => {
             htmlFor="open-dashboard-menu"
             className="drawer-overlay"
           ></label>
-          <ul className="menu p-4 overflow-y-auto  bg-[#1e293b] border-r-1 shadow-lg  ">
+          <ul className="menu px-2 overflow-y-auto  bg-[#1e293b] border-r-1 shadow-lg  ">
             {/* <!-- Sidebar content here --> */}
             {
-              <li className="py-1 text-lg hover:bg-[#0f172a]  rounded">
+              <li className="text-lg hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2 "
                   to={"/dashboard"}
                 >
                   <FontAwesomeIcon
-                    className="text-white"
+                    className=""
                     icon={faChartBar}
                   ></FontAwesomeIcon>{" "}
-                  <span className="text-white font-bold"> OVERVIEW</span>
+                  <span className="font-bold"> OVERVIEW</span>
                 </CustomLink>
               </li>
             }
             {
-              <li className="py-1 text-lg hover:bg-[#0f172a]  rounded">
+              <li className="text-lg hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2"
                   to={"/dashboard/allusers"}
                 >
                   <FontAwesomeIcon
-                    className="text-white"
+                    className=""
                     icon={faUser}
                   ></FontAwesomeIcon>{" "}
-                  <span className="text-white font-bold"> ALLUSERS</span>
+                  <span className=" font-bold"> ALLUSERS</span>
                 </CustomLink>
               </li>
             }
