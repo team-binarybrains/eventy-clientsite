@@ -37,9 +37,9 @@ const FrequentlyMainBlogs = () => {
             <div className=" md:w-7/12 lg:w-8/12 w-full">
               {/* <img src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg" alt="Img of Glass bottle" className="w-full md:block hidden" /> */}
 
-              <div className="grid md:grid-cols-2 gap-7 p-5  ">
+              <div className="grid md:grid-cols-2 gap-7 p-5  lg:grid-cols-2 ">
                 {blogs.map((blog) => (
-                  <div blog={blog} className="hover:border-amber-600 h-[500px]">
+                  <div blog={blog} className="hover:border-amber-600 border h-[500px] bg-[#f7f7f7]">
                     <div className="relative">
                       <img
                         className="w-[359px] h-[202px]"
@@ -52,7 +52,7 @@ const FrequentlyMainBlogs = () => {
                       </p>
                     </div>
 
-                    <div className=" md: py-5 px-5 bg-[#f7f7f7]">
+                    <div className=" md: py-5 px-5 ">
                       <p className="text-[#ffbe30] text-[14px]">
                         <BsBookmarkFill className="inline-block" /> Musical
                         Event
@@ -64,7 +64,7 @@ const FrequentlyMainBlogs = () => {
                       <p className="text-[18px]">{blog.details.slice(0, 50)}</p>
                       <button
                         onClick={() => handleBlogsDetails(blog._id)}
-                        className="px-10 py-3 rounded-md mt-5  bg-white red-more "
+                        className="px-10 py-3 rounded-md mt-7  bg-white red-more "
                       >
                         Read More
                       </button>
