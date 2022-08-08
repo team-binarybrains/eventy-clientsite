@@ -15,7 +15,7 @@ function SingleService() {
   const [venues, setVenues] = useState([]);
   // const [serviceDetails, setServiceDetails] = useState({})
   // console.log(serviceDetails);
-  const details = useFetch(`http://localhost:5000/single-service/${id}`, {});
+  const details = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
   // console.log(eventName.split(' '));
@@ -44,7 +44,7 @@ function SingleService() {
     console.log(bookingInfo);
 
     axios
-      .post("http://localhost:5000/service-booking", bookingInfo)
+      .post("https://fathomless-hamlet-59180.herokuapp.com/service-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);
@@ -65,7 +65,7 @@ function SingleService() {
         "o9Z3tWsWjPM6vPC1M"
       )
       .then(
-        (result) => {},
+        (result) => { },
         (error) => {
           toast.error(error.text, { theme: "light" });
         }
@@ -76,7 +76,7 @@ function SingleService() {
 
   // const {venueCode} = venues
   useEffect(() => {
-    axios.get(`http://localhost:5000/venues`).then((res) => {
+    axios.get(`https://fathomless-hamlet-59180.herokuapp.com/venues`).then((res) => {
       setVenues(res?.data);
       setSelect(res?.data[0]);
     });
@@ -145,9 +145,8 @@ function SingleService() {
                 {venues.map((venue) => {
                   return (
                     <div
-                      className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${
-                        venue._id === select._id && "selected"
-                      }`}
+                      className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${venue._id === select._id && "selected"
+                        }`}
                       key={venue.id}
                       onClick={() => selection(venue)}
                     >

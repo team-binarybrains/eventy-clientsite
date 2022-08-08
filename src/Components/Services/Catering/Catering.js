@@ -6,7 +6,7 @@ import '../Services.css'
 
 function Catering() {
 
-    const catering = useFetch('http://localhost:5000/get-catering')
+    const catering = useFetch('https://fathomless-hamlet-59180.herokuapp.com/get-catering')
     console.log(catering);
 
 

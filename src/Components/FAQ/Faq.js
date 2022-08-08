@@ -7,7 +7,7 @@ const Faq = () => {
     const [question, setQuestion] = useState("");
 
     useEffect(() => {
-        fetch("http://localhost:5000/allQuestion")
+        fetch("https://fathomless-hamlet-59180.herokuapp.com/allQuestion")
             .then(res => res.json())
             .then(data => setFirstAccountQuestion(data))
     }, [question])

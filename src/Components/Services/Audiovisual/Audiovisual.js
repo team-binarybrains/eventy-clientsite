@@ -5,7 +5,7 @@ import useFetch from '../../Home/OurServices/Hook/useFetch'
 
 function Audiovisual() {
 
-    const visual = useFetch('http://localhost:5000/get-audiovisual')
+    const visual = useFetch('https://fathomless-hamlet-59180.herokuapp.com/get-audiovisual')
 
     return (
         <div className='route'>
@@ -57,7 +57,7 @@ function Audiovisual() {
                     <p className='text-3xl font-bold '>
                         <span className='text-amber-400 tracking-widest mr-2'>EVENTY</span>
                         AUDIOVISUAL SERVICES
-                       
+
                     </p>
 
                 </div>
