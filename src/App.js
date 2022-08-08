@@ -28,6 +28,7 @@ import ContactUs from "./Components/ContactUs/ContactUs";
 import Dashboard from "./Components/Dashboard/Dashboard";
 import Chart from "./Components/Dashboard/Chart/Chart";
 import MainChart from "./Components/Dashboard/Chart/MainChart/MainChart";
+import Faq from "./Components/FAQ/Faq";
 import Services from "./Components/Services/Services";
 import Catering from "./Components/Services/Catering/Catering";
 import Audiovisual from "./Components/Services/Audiovisual/Audiovisual";
@@ -180,6 +181,8 @@ function App() {
           path="/event-details/:id"
           element={<EventDetails></EventDetails>}
         ></Route> */}
+
+        <Route path="faq" element={<Faq></Faq>}></Route>
 
         <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
 
