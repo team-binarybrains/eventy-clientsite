@@ -71,7 +71,7 @@ function Audiovisual() {
                                     <img src={service.img} class="w-full h-40 object-cover" alt='' />
                                 </div>
                                 <div class="-mt-5">
-                                    <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
+                                    {/* <h5 class="text-lg font-medium text-amber-500">{service.name}</h5> */}
                                     <div className='text-gray-500'>
                                         <p class="mt-2">● {service.details.a}</p>
                                         <p class="mt-2">● {service.details.b}</p>
