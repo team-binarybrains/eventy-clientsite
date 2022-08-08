@@ -129,6 +129,63 @@ const Navbar = ({ location }) => {
                       </li>
                     </ul>
                   </li>
+                  {/* HERE THE SERVICES  */}
+                  <li tabindex="0">
+                    <Link to={pathname} className="uppercase">
+                      SERVICES
+                      <svg
+                        class="fill-current"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="20"
+                        height="20"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                      </svg>
+                    </Link>
+                    <ul class="p-2 -ml-24" id="megaMenu" style={{ zIndex: "11111" }}>
+                  <li>
+                    <Link className="uppercase" to="/catering">
+                      CATERING
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/audiovisual">
+                      AUDIOVISUAL
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/sound-lighting">
+                      SOUND AND LIGHTING
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/event-linen">
+                      EVENT LINEN RENTALS
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/destination">
+                      DESTINATION MANAGEMENT
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/logistics-registration">
+                      LOGISTICS AND REGISTRATION
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/venue-facility">
+                      VENUE & FACILITY NEGOTIATION
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/photography">
+                      VIDEOGRAPHY & PHOTOGRAPHY
+                    </Link>
+                  </li>
+                </ul>
+                  </li>
                   <li tabindex="0">
                     <Link to={pathname} className="uppercase">
                       Blogs
@@ -243,6 +300,63 @@ const Navbar = ({ location }) => {
                       </Link>
                     </li>
                   </ul>
+                </li>
+                {/* HERE THE SERVICES */}
+                <li tabindex="0">
+                  <Link to={pathname} className="uppercase">
+                    SERVICES
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                    </svg>
+                  </Link>
+                  <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
+                  <li>
+                    <Link className="uppercase" to="/catering">
+                      CATERING
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/audiovisual">
+                      AUDIOVISUAL
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/sound-lighting">
+                      SOUND AND LIGHTING
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/event-linen">
+                      EVENT LINEN RENTALS
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/destination">
+                      DESTINATION MANAGEMENT
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/logistics-registration">
+                      LOGISTICS AND REGISTRATION
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/venue-facility">
+                      VENUE & FACILITY NEGOTIATION
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/photography">
+                      VIDEOGRAPHY & PHOTOGRAPHY
+                    </Link>
+                  </li>
+                </ul>
                 </li>
                 <li tabindex="0">
                   <Link to={pathname} className="uppercase">
@@ -467,6 +581,62 @@ const Navbar = ({ location }) => {
                 </li>
                 <li tabindex="0">
                   <Link to={pathname} className="uppercase">
+                    SERVICES
+                    <svg
+                      class="fill-current"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="20"
+                      height="20"
+                      viewBox="0 0 24 24"
+                    >
+                      <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                    </svg>
+                  </Link>
+                  <ul class="p-2 -ml-24" id="megaMenu" style={{ zIndex: "11111" }}>
+                  <li>
+                    <Link className="uppercase" to="/catering">
+                      CATERING
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/audiovisual">
+                      AUDIOVISUAL
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/sound-lighting">
+                      SOUND AND LIGHTING
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/event-linen">
+                      EVENT LINEN RENTALS
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/destination">
+                      DESTINATION MANAGEMENT
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/logistics-registration">
+                      LOGISTICS AND REGISTRATION
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/venue-facility">
+                      VENUE & FACILITY NEGOTIATION
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/photography">
+                      VIDEOGRAPHY & PHOTOGRAPHY
+                    </Link>
+                  </li>
+                </ul>
+                </li>
+                <li tabindex="0">
+                  <Link to={pathname} className="uppercase">
                     Blogs
                     <svg
                       class="fill-current"
@@ -576,6 +746,63 @@ const Navbar = ({ location }) => {
                   <li>
                     <Link className="uppercase" to="/event-booking">
                       event Booking
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              {/* SERVICES DROPDOWN */}
+              <li tabindex="0">
+                <Link to={pathname} className="uppercase">
+                  SERVICES
+                  <svg
+                    class="fill-current"
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
+                  </svg>
+                </Link>
+                <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
+                  <li>
+                    <Link className="uppercase" to="/catering">
+                      CATERING
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/audiovisual">
+                      AUDIOVISUAL
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/sound-lighting">
+                      SOUND AND LIGHTING
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/event-linen">
+                      EVENT LINEN RENTALS
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/destination">
+                      DESTINATION MANAGEMENT
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/logistics-registration">
+                      LOGISTICS AND REGISTRATION
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/venue-facility">
+                      VENUE & FACILITY NEGOTIATION
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="uppercase" to="/photography">
+                      VIDEOGRAPHY & PHOTOGRAPHY
                     </Link>
                   </li>
                 </ul>
