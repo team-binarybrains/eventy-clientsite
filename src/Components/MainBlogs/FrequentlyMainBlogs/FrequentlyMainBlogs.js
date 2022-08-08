@@ -39,10 +39,10 @@ const FrequentlyMainBlogs = () => {
 
               <div className="grid md:grid-cols-2 gap-7 p-5  lg:grid-cols-2 ">
                 {blogs.map((blog) => (
-                  <div blog={blog} className="hover:border-amber-600 border h-[500px] bg-[#f7f7f7]">
+                  <div blog={blog} className="hover:border-amber-600 border h-[500px] flex flex-col pb-5  bg-[#f7f7f7]">
                     <div className="relative">
                       <img
-                        className="w-[359px] h-[202px]"
+                        className="w-full h-[202px]"
                         src={blog.image}
                         alt=""
                       />
@@ -52,23 +52,26 @@ const FrequentlyMainBlogs = () => {
                       </p>
                     </div>
 
-                    <div className=" md: py-5 px-5 ">
-                      <p className="text-[#ffbe30] text-[14px]">
+                    {/* <div className=" md:py-5 px-5 "> */}
+                      <p className="text-[#ffbe30] text-[14px] px-5 mt-5">
                         <BsBookmarkFill className="inline-block" /> Musical
                         Event
                       </p>
 
-                      <h1 className="text-[18px] font-bold py-5">
+                      <h1 className="text-[18px] font-bold py-5 px-5">
                         {blog.tittle}
                       </h1>
-                      <p className="text-[18px]">{blog.details.slice(0, 50)}</p>
+                      <p className="text-[18px] px-5">{blog.details.slice(0, 50)}</p>
+                      
+                      <div className="self-start grow flex px-5">
                       <button
                         onClick={() => handleBlogsDetails(blog._id)}
-                        className="px-10 py-3 rounded-md mt-7  bg-white red-more "
+                        className="px-10 py-3 rounded-md font-bold text-[#878787]   hover:text-white bg-white red-more self-end"
                       >
                         Read More
                       </button>
-                    </div>
+                      </div>
+                    {/* </div> */}
                   </div>
                 ))}
               </div>
