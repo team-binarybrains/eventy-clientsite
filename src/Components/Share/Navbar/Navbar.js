@@ -92,8 +92,8 @@ const Navbar = ({ location }) => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="uppercase" to="/blogs">
-                          blogs
+                        <Link className="uppercase" to="/faq">
+                          faq
                         </Link>
                       </li>
                     </ul>
@@ -207,8 +207,8 @@ const Navbar = ({ location }) => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/blogs">
-                        blogs
+                      <Link className="uppercase" to="/faq">
+                        faq
                       </Link>
                     </li>
                   </ul>
@@ -428,8 +428,8 @@ const Navbar = ({ location }) => {
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/blogs">
-                        blogs
+                      <Link className="uppercase" to="/faq">
+                        faq
                       </Link>
                     </li>
                   </ul>
@@ -543,8 +543,8 @@ const Navbar = ({ location }) => {
                     </Link>
                   </li>
                   <li>
-                    <Link className="uppercase" to="/blogs">
-                      blogs
+                    <Link className="uppercase" to="/faq">
+                      faq
                     </Link>
                   </li>
                 </ul>
