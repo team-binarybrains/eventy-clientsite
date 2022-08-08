@@ -6,10 +6,14 @@ import {
   faTicket,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+
 const AllSingleeventList = ({ item }) => {
+
+  console.log(item);
+
   const {
     _id,
-    tittle,
+    title,
     type,
     image,
     date,
@@ -44,7 +48,7 @@ const AllSingleeventList = ({ item }) => {
       </div>
       <div className="event-details ">
         <h1 className="text-start w-[305px] lg:w-full text-[22px] lg:text-[25px]">
-          <span className="font-bold">{tittle}</span>
+          <span className="font-bold">{title}</span>
         </h1>
         <h1 className="text-[18px] text-red-400">
           {" "}

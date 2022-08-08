@@ -8,6 +8,8 @@ function Tabs({ eventDetailsData }) {
    const toggleTab = (index) => {
       setToggleState(index);
    };
+
+   console.log(eventDetailsData);
    return (
       <div className="tabContainer">
          <div className="bloc-tabs">
@@ -39,7 +41,7 @@ function Tabs({ eventDetailsData }) {
                className={toggleState === 1 ? "content  active-content" : "content"}
             >
                <div className="">
-                  <DayOne data={eventDetailsData?.dayOne} />
+                  <DayOne data={eventDetailsData?.day?.[0]} />
                </div>
             </div>
 

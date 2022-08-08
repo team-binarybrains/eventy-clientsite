@@ -7,7 +7,7 @@ const EventBooking = () => {
         <div className='route'>
             <div className="py-20 bg-[url('/src/asset/12tmag-switzerland-slide-E5KB-superJumbo.jpg')] bg-fixed bg-no-repeat bg-cover text-center">
                 <h4 style={{ wordSpacing: "4px", letterSpacing: "5px" }} className='font-semibold text-lg text-white'>TICKET BOOKING</h4>
-                <h2 className='text-5xl font-semibold mt-5 text-white'>HARMONI <span className='font-bold text-amber-400'>BOOKING</span></h2>
+                <h2 className='text-5xl font-semibold mt-5 text-white'>EVENTY <span className='font-bold text-amber-400'>BOOKING</span></h2>
                 <p className='text-white mt-12 font-bold'><span className='pr-8 border-r-2'>Home</span><span className='pl-8'>Booking</span></p>
             </div>
             <div className='2xl:max-w-7xl mx-auto'>

@@ -3,7 +3,9 @@ import { AiOutlineCalendar } from 'react-icons/ai';
 import { MdLocationOn } from 'react-icons/md';
 import { FiClock } from 'react-icons/fi';
 import './FeaturedEventDetails.css'
+
 const FeaturedEventDetails = ({eventDetailsData}) => {
+
    return (
       <section className='container m-auto px-4'>
          <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
@@ -36,7 +38,7 @@ const FeaturedEventDetails = ({eventDetailsData}) => {
             </div>
          </div>
          <div className="py-10 ">
-            <h2 className='text-slate-600'>{eventDetailsData?.disruption}</h2>
+            <h2 className='text-slate-600'>{eventDetailsData?.description}</h2>
          </div>
       </section>
    );

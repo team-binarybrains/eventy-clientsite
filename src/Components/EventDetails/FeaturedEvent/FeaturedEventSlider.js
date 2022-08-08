@@ -4,10 +4,6 @@ import Slider from "react-slick";
 import { AiOutlineArrowRight } from 'react-icons/ai';
 
 
-import img1 from './img/event-details-1.jpg'
-import img2 from './img/event-details-2.jpg'
-import img3 from './img/event-details-3.jpg'
-
 function SampleNextArrow(props) {
    const { className, onClick } = props;
    return (
@@ -45,11 +41,7 @@ function SamplePrevArrow(props) {
 }
 
 const FeaturedEventSlider = ({eventDetailsData}) => {
-   const photos = [
-      { img: img1 },
-      { img: img2 },
-      { img: img3 },
-   ]
+
    const settings = {
       dots: false,
       infinite: true,
@@ -68,7 +60,7 @@ const FeaturedEventSlider = ({eventDetailsData}) => {
                <div key={index} className="">
                <div className="">
                   <div className="">
-                     <img className="object-cover object-top rounded w-full" src={img?.image} style={{ height: '400px' }} alt="" />
+                     <img className="object-cover object-top rounded w-full" src={img} style={{ height: '400px' }} alt="" />
                   </div>
                </div>
                </div>

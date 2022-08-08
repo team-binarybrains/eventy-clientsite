@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-scroll';
 import './RegisterEvent.css'
 import paymentCards from '../img/payment-cards.png'
+
 const RegisterEvent = ({eventDetailsData}) => {
    console.log(eventDetailsData);
    return (

@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import axios from "axios";
+import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import BlogComments from "../Home/Blog/BlogDetails/BlogComments/BlogComments";
 import useFetch from "../Home/OurServices/Hook/useFetch";
@@ -10,14 +11,16 @@ import RegisterEvent from "./FeaturedEvent/RegisterEvent/RegisterEvent";
 import LocationFaq from "./LocationFaq";
 import Pricing from "./Pricing/Pricing";
 import TopBanner from "./TopBanner";
+
+
 const EventDetails = () => {
   const { id } = useParams();
-  const [eventDetailsData, setEventDetailsData] = useState([]);
-  useEffect(() => {
-    fetch(`http://localhost:5000/event-details/${id}`)
-      .then((res) => res.json())
-      .then((data) => setEventDetailsData(data));
-  }, [id]);
+  // console.log(id);
+  const [eventDetailsData, setEventDetailsData] = useState({});
+  axios.get(`http://localhost:5000/event-details/${id}`)
+      .then((data) => setEventDetailsData(data.data));
+  // const eventDetailsData = useFetch(`http://localhost:5000/event-details/${id}`,{})
+  // setEventDetailsData({name:'noName'})
   // console.log(eventDetailsData);
 
   return (
