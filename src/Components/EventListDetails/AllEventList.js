@@ -22,7 +22,7 @@ const AllEventList = () => {
             <FontAwesomeIcon icon={faCalendar}></FontAwesomeIcon> Add to
             Calender
           </button>
-          <div className="mt-20  flex justify-center  lg:mt-[400px] left-bgimage">
+          <div className=" mt-20 flex justify-center  lg:mt-[100px] left-bgimage">
             <div className="text-center ">
               <h1 className="mt-16 text-[18px] text-[#FFFFFF] uppercase">
                 26 December,2022
