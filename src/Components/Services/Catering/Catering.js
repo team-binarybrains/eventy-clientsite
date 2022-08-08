@@ -73,14 +73,14 @@ function Catering() {
             </div>
 
             {/* catering speciality */}
-            <div className='py-20 bg-gray-100 '>
-                <div className='flex justify-center gap-x-6'>
+            <div className='lg:py-20 bg-gray-100 '>
+                <div className='grid lg:flex justify-center gap-x-6'>
 
-                    <div className='w-4/12 flex justify-center items-center'>
+                    <div className='lg:w-4/12 flex justify-center items-center'>
                         <img src="https://i.ibb.co/kmPhM6S/ct.jpg" alt="" className='h-80' />
                     </div>
 
-                    <div className='w-4/12 '>
+                    <div className='lg:w-4/12 px-3 lg:px-0 py-10 lg:py-0'>
                         <p className='uppercase text-3xl font-semibold'> <span className='text-amber-400 tracking-widest'>eventy</span> SPECIALTY CATERING</p>
                         <p className='py-8'>
                             We use Fine China, Specialty Linens,  and other expertise to deliver a top notch event catering. Passed Hors D’oeuvres, plated dinners and buffets are one of many options we offer our clients. We incorporate client branding throughout the catered cuisine. Our caterers use only the freshest ingredients and offerings include Vegetarian Catering, Vegan Catering and other specialty catering services. CBD menus can also be customized to accommodate international, indigenous cuisine.
