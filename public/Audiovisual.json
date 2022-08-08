@@ -1,0 +1,29 @@
+[
+    {
+        "img":"https://i.ibb.co/TRf6t6F/280x150-Audiovisual-CBD-Eve.jpg",
+        "details":{
+            "a":"Stadium Events",
+            "b":"Reliable Vendors",
+            "c":"Special Events Audio Visual",
+            "d":"The Latest On-Site Technology"
+        }
+    },
+    {
+        "img":"https://i.ibb.co/TRf6t6F/280x150-Audiovisual-CBD-Eve.jpg",
+        "details":{
+            "a":"Symposiums",
+            "b":"Product Launches",
+            "c":"Formal Presentations",
+            "d":"Hotel Meeting Support"
+        }
+    },
+    {
+        "img":"https://i.ibb.co/KGsPpP0/280x150-Speakers-CBD-Events.jpg",
+        "details":{
+            "a":"Live Marketing",
+            "b":"Sporting Events",
+            "c":"Press Conferences",
+            "d":"Support for Meetings and Galas"
+        }
+    }
+]
