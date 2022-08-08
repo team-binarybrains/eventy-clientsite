@@ -92,6 +92,19 @@ function Catering() {
                 </div>
             </div>
 
+
+            {/* confession */}
+            <div className='lg:flex justify-center items-center gap-x-7 lg:h-80'>
+                <div className='lg:w-4/12'>
+                    <p className='tracking-[5px] font-semibold'>VEGETARIAN AND VEGAN MEAL PREPARATION</p>
+                    <p className='mt-5'>Sometimes it is difficult to be at a swanky event and the only meal available to vegetarians and vegans are steamed veggies. We can prepare flavorful vegetarian meals with 3 – 4 options. We can even provide certified organic ingredients for a nominal fee.</p>
+                </div>
+                <div className=''>
+                    <p>Vegan Menus (No Animal Flesh, Milk, Wheat or Eggs)</p>
+                    <p>Vegetarian (No Meat, Vegetables, Eggs, Milk, Wheat or Soy)</p>
+                </div>
+            </div>
+
         </div>
     )
 }
