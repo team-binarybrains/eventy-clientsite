@@ -45,7 +45,7 @@ function Advantage() {
 
       <div className="grid justify-center pb-10 lg:py-20 lg:-mt-14">
         <div className="lg:flex">
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00]">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
             <p className={`flex justify-center`}>
               <GiShakingHands
                 className={`text-5xl text-[#ffbe30] hover:text-white `}
@@ -53,41 +53,41 @@ function Advantage() {
             </p>
             <div className="-mt-16 px-3">
               <p className={`text-center text-lg font-bold`}>Friendly Team</p>
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-500 hover:text-white">
                 More than 200 teams
               </p>
             </div>
           </div>
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00]">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
             <p className="flex justify-center">
               <GiBalloons className="text-5xl text-[#ffbe30]" />
             </p>
-            <div className="-mt-16 px-3 bg-white">
+            <div className="-mt-16 px-3 ">
               <p className="text-center text-lg font-bold">Perfact Vanues</p>
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-500 hover:text-white">
                 Perfact Vanues
               </p>
             </div>
           </div>
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00]">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
             <p className="flex justify-center">
               <FaGlassCheers className="text-5xl text-[#ffbe30]" />
             </p>
             <div className="-mt-16 px-3">
               <p className="text-center text-lg font-bold">Unique Scenario</p>
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-500 hover:text-white">
                 We thinking out of the box
               </p>
             </div>
           </div>
 
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00]">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
             <p className="flex justify-center">
               <BsLayoutTextWindowReverse className="text-5xl text-[#ffbe30]" />
             </p>
             <div className="-mt-16 px-3">
               <p className="text-center text-lg font-bold">Planing Support</p>
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-500 hover:text-white">
                 Get event planing support
               </p>
             </div>
@@ -95,51 +95,51 @@ function Advantage() {
         </div>
 
         <div className="lg:flex">
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00]">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
             <p className="flex justify-center">
-              <FiFilm className="text-5xl text-[#ffbe30]" />
+              <FiFilm className="text-5xl text-[#ffbe30] hover:text-white" />
             </p>
             <div className="-mt-16 px-3">
               <p className="text-center text-lg font-bold">
                 Unforgettable Time
               </p>
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-500 hover:text-white">
                 We make you perfect event
               </p>
             </div>
           </div>
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00]">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
             <p className=" flex justify-center">
-              <FiPhoneCall className="text-5xl text-[#ffbe30]" />
+              <FiPhoneCall className="text-5xl text-[#ffbe30] hover:text-white" />
             </p>
             <div className="-mt-16 px-3">
               <p className="text-center text-lg font-bold">
                 24/7 Hours Support
               </p>
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-500 hover:text-white">
                 Anytime anywhere
               </p>
             </div>
           </div>
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00]">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
             <p className="flex justify-center">
-              <HiLightBulb className="text-5xl text-[#ffbe30]" />
+              <HiLightBulb className="text-5xl text-[#ffbe30] hover:text-white" />
             </p>
             <div className="-mt-16 px-3">
               <p className="text-center text-lg font-bold">Briliant Idea</p>
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-500 hover:text-white">
                 We have million idea
               </p>
             </div>
           </div>
 
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00]">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
             <p className="flex justify-center">
               <FaUserFriends className="text-5xl text-[#ffbe30]" />
             </p>
             <div className="-mt-16 px-3">
               <p className="text-center text-lg font-bold">Best Management</p>
-              <p className="text-center text-sm text-gray-500">
+              <p className="text-center text-sm text-gray-500 hover:text-white">
                 anytime anywhere
               </p>
             </div>

@@ -49,14 +49,6 @@ function AboutUs() {
               perferendis voluptatem facilis officia earum sed?
             </p>
 
-            <div className="flex justify-center mt-10 mb-8 lg:mb-0">
-              <Link
-                to="/about"
-                className="uppercase bg-gradient-to-r from-rose-600 to-pink-600 px-6 py-3 rounded-full text-white font-semibold tracking-widest"
-              >
-                about eventy
-              </Link>
-            </div>
           </div>
         </div>
 
@@ -98,6 +90,10 @@ function AboutUs() {
               fugiat magni eos odit id placeat soluta quae sed eius accusamus.
             </p>
           </div>
+        </div>
+
+        <div className="flex justify-end mt-10 lg:mt-20 lg:mb-0">
+          <img src="https://i.ibb.co/MRXgQwx/eventy-signature.png" alt="" />
         </div>
       </div>
 

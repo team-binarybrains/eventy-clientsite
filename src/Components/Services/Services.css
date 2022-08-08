@@ -1,0 +1,40 @@
+/* .left-position {
+    position: absolute;
+    opacity: 0.4;
+    transform-origin: right;
+    transform: rotate(90deg);
+    bottom: -140px;
+    right: 40px;
+  } */
+
+.hvr:hover .cld{
+    background-image: linear-gradient(to bottom right, #ffbe30, #ff3e00);
+    animation: hover 0.5s steps(100) forwards;
+    /* color: white; */
+  }
+  
+  .hvr:hover .cld2{
+    color: #ffbe30;
+    transition: color 0.5s ;
+  }
+  
+  .pls{
+    display: none;
+  }
+  
+  .hvr:hover .pls{
+  display: block;
+  }
+
+  
+  @keyframes hover {
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.38;
+    }
+    100%{
+      opacity: 0.60;
+    }
+  }
