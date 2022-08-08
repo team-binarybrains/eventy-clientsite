@@ -39,6 +39,7 @@ import Logistics from "./Components/Services/Logistics/Logistics";
 import VenueFacility from "./Components/Services/VenueFacility/VenueFacility";
 import Photography from "./Components/Services/Photography/Photography";
 import AllUsers from "./Components/Dashboard/AllUsers/AllUsers";
+import OurTeam from "./Components/OurTeam/OurTeam";
 
 function App() {
   const location = useLocation();
@@ -145,6 +146,7 @@ function App() {
         {/* nornal routes */}
 
         <Route path="/authentication" element={<Form></Form>}></Route>
+        <Route path="/ourteam" element={<OurTeam />}></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
         <Route path="/gallery" element={<Gallery></Gallery>}></Route>
         <Route path="/map" element={<Map></Map>}></Route>
