@@ -9,7 +9,7 @@ import { MapContainer, TileLayer } from "react-leaflet";
 const SingleEventBooking = () => {
   const { id } = useParams();
 
-  const event = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/venue/${id}`, {});
+  const event = useFetch(`http://localhost:5000/venue/${id}`, {});
   console.log(event);
 
   const { venueName, seats, price, code, star, img, location } = event;
@@ -34,7 +34,7 @@ const SingleEventBooking = () => {
     console.log(bookingInfo);
 
     axios
-      .post("https://fathomless-hamlet-59180.herokuapp.com/venue-booking", bookingInfo)
+      .post("http://localhost:5000/venue-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);

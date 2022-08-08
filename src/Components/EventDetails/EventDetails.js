@@ -17,9 +17,9 @@ const EventDetails = () => {
   const { id } = useParams();
   // console.log(id);
   const [eventDetailsData, setEventDetailsData] = useState({});
-  axios.get(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${id}`)
+  axios.get(`http://localhost:5000/event-details/${id}`)
     .then((data) => setEventDetailsData(data.data));
-  // const eventDetailsData = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${id}`,{})
+  // const eventDetailsData = useFetch(`http://localhost:5000/event-details/${id}`,{})
   // setEventDetailsData({name:'noName'})
   // console.log(eventDetailsData);
 

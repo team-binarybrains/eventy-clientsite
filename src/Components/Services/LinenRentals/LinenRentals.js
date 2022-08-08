@@ -5,7 +5,7 @@ import useFetch from '../../Home/OurServices/Hook/useFetch'
 
 function LinenRentals() {
 
-    const linen = useFetch('https://fathomless-hamlet-59180.herokuapp.com/get-linen')
+    const linen = useFetch('http://localhost:5000/get-linen')
 
     return (
         <div className='route'>
