@@ -94,14 +94,27 @@ function Catering() {
 
 
             {/* confession */}
-            <div className='lg:flex justify-center items-center gap-x-7 lg:h-80'>
-                <div className='lg:w-4/12'>
-                    <p className='tracking-[5px] font-semibold'>VEGETARIAN AND VEGAN MEAL PREPARATION</p>
-                    <p className='mt-5'>Sometimes it is difficult to be at a swanky event and the only meal available to vegetarians and vegans are steamed veggies. We can prepare flavorful vegetarian meals with 3 – 4 options. We can even provide certified organic ingredients for a nominal fee.</p>
+            <div className='py-10 lg:pt-24'>
+
+                <div className='flex justify-center lg:-mb-5'>
+                    <p className='text-3xl font-bold '>
+                        <span className='text-amber-400 tracking-widest mr-2'>HEALTHY</span>
+                        EATING AND
+                        <span className='text-amber-400 tracking-widest mr-2'> VEGETARIAN</span>
+                        OPTIONS
+                    </p>
+
                 </div>
-                <div className=''>
-                    <p>Vegan Menus (No Animal Flesh, Milk, Wheat or Eggs)</p>
-                    <p>Vegetarian (No Meat, Vegetables, Eggs, Milk, Wheat or Soy)</p>
+
+                <div className='lg:flex justify-center items-center gap-x-7 lg:h-80'>
+                    <div className='lg:w-4/12 px-3 lg:px-0'>
+                        <p className='lg:tracking-[5px] font-semibold'>VEGETARIAN AND VEGAN MEAL PREPARATION</p>
+                        <p className='mt-5'>Sometimes it is difficult to be at a swanky event and the only meal available to vegetarians and vegans are steamed veggies. We can prepare flavorful vegetarian meals with 3 – 4 options. We can even provide certified organic ingredients for a nominal fee.</p>
+                    </div>
+                    <div className='grid gap-y-3 lg:w-4/12 mt-6 lg:mt-0 px-3 lg:px-0'>
+                        <p className='bg-amber-400 p-2 text-gray-600'>Vegan Menus (No Animal Flesh, Milk, Wheat or Eggs)</p>
+                        <p className='bg-amber-400 p-2 text-gray-600'>Vegetarian (No Meat, Vegetables, Eggs, Milk, Wheat or Soy)</p>
+                    </div>
                 </div>
             </div>
 
