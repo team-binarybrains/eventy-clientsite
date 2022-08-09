@@ -52,29 +52,30 @@ const Form = () => {
     await updateProfile({ displayName: e.target.name.value });
 
     // for name send backend
+    const email = e.target.email.value
     const currentUser = {
       displayName: e.target.name.value,
-      email: e.target.email.value,
+      email:email,
     };
 
-    /* await fetch(``, {
-            method: "PUT",
-            headers: {
-                "content-type": "application/json",
-                // authorization: `Bearer ${localStorage.getItem('token')}`
-            },
-            body: JSON.stringify(currentUser),
-        })
-            .then((res) => res.json())
-            .then((inserted) => {
-                if (inserted.acknowledged) {
-                    // toast.success("name update Successfully");
-                }
-            }); */
+    await fetch(`http://localhost:5000/user/${email}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        authorization: `authHeader ${localStorage.getItem('token')}`
+      },
+      body: JSON.stringify(currentUser),
+    })
+      .then((res) => res.json())
+      .then((inserted) => {
+        if (inserted.acknowledged) {
+          // toast.success("name update Successfully");
+        }
+      });
 
     e.target.reset();
   };
-  const [token] = useToken(signUpUser);
+  // const [token] = useToken(signUpUser);
 
   // sign In funcitonality below
   const [signInWithEmailAndPassword, signInUser, signInLoading, signInError] =
@@ -89,7 +90,7 @@ const Form = () => {
     e.target.reset();
   };
   const navigate = useNavigate();
-  if (googleUser || facebookUser || signUpUser) {
+  if (googleUser || facebookUser || signUpUser ) {
     navigate("/");
   }
 
