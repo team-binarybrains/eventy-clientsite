@@ -1,5 +1,7 @@
 import React from "react";
-import userIcon from "../../../asset/UserIcon/1946429.png";
+import { BiUserCircle } from 'react-icons/bi';
+
+
 const SingleUser = ({ allUser, handleDeleteUser }) => {
   const { _id, email } = allUser;
   return (
@@ -12,20 +14,21 @@ const SingleUser = ({ allUser, handleDeleteUser }) => {
             alt=""
           />
         ) : (
-          <img
-            class="h-8 w-8 rounded-full object-cover "
-            src={userIcon}
-            alt="f"
-          />
+          // <img
+          //   class=" w-7 h-7 rounded-full object-cover "
+          //   src={userIcon}
+          //   alt="f"
+          // />
+          <BiUserCircle className="text-3xl text-slate-600"></BiUserCircle>
         )}
       </td>
       <td>
-        <span class="text-center ml-2 font-semibold">
+        <span class="text-start block ml-2 font-medium text-slate-600 capitalize">
           {allUser?.displayName}
         </span>
       </td>
 
-      <td class="px-16 py-2">{email}</td>
+      <td class="px-16 py-2 font-medium text-slate-600">{email}</td>
 
       <td class="px-16 py-2 ">
         <span class="text-yellow-500 flex justify-end">
@@ -45,7 +48,7 @@ const SingleUser = ({ allUser, handleDeleteUser }) => {
           <button onClick={() => handleDeleteUser(_id)}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              class="h-5 w-5 text-red-700"
+              class="h-5 w-5 text-red-600"
               viewBox="0 0 20 20"
               fill="currentColor"
             >
