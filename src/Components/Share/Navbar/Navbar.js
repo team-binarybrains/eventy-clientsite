@@ -27,7 +27,7 @@ const Navbar = ({ location }) => {
 
   const handleSignOut = () => {
     signOut(auth);
-    navigate("/");
+    localStorage.removeItem('accessToken')
   };
   const [user] = useAuthState(auth);
 
