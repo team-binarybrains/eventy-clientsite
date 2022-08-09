@@ -436,7 +436,7 @@ const Navbar = ({ location }) => {
 
                         <ul
                           tabIndex="0"
-                          class={`dropdown-content menu p-2 shadow border-2 bg-white rounded-sm w-60 ${show} text-black text-center mt-5 -mr-`}
+                          class={`dropdown-content menu p-2 shadow border-2 bg-white rounded-sm ${show} text-black text-center mt-5 -mr-`}
                         >
                           <div className="grid gap-y-3 pt-7 pb-3">
                             <div className="bg-gray-200 grid justify-center p-4 rounded-sm">
@@ -885,7 +885,7 @@ const Navbar = ({ location }) => {
 
                       <ul
                         tabIndex="0"
-                        class={`dropdown-content menu p-2 shadow border-2 bg-white rounded-sm w-60 ${show} text-black text-center mt-5 -mr-`}
+                        class={`dropdown-content menu p-2 shadow border-2 bg-white rounded-sm ${show} text-black text-center mt-5`}
                       >
                         <div className="grid gap-y-3 pt-7 pb-3">
                           <div className="bg-gray-200 grid justify-center p-4 rounded-sm">
