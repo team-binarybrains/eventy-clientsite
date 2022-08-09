@@ -27,6 +27,26 @@ function VenueFacility() {
             </div>
 
 
+            {/* -------------- */}
+
+            <div className='lg:py-20 bg-gray-100 '>
+                <div className='grid lg:flex justify-center gap-x-6'>
+
+                    <div className='lg:w-4/12 flex justify-center items-center'>
+                        <img src="https://i.ibb.co/nb9pD6G/venues-slide-2.jpg" alt="" className='h-96' />
+                    </div>
+
+                    <div className='lg:w-4/12 px-3 lg:px-0 py-10 lg:py-0'>
+                        <p className='uppercase text-3xl font-semibold'>EVENT <span className='text-amber-400 tracking-widest'>VENUE & FACILITY</span></p>
+                        <p className='py-8'>
+                            At EVENTY, we are snoots when it comes to our venues. We deal in luxury and our venues are no different. Although we work with many venues around the world, we must admit, we have favorites. Look at our very best venues in Washington below. Venues are ranked based on our 120 pts of customer services. We believe each client should be treated with respect, dignity and greeted with impeccable hospitality. We select our venues based on a number of factors, but most importantly, our top concern is hospitality. We use several museums and private venues.
+                        </p>
+                        <div className='flex justify-end'>
+                            <img src="https://i.ibb.co/MRXgQwx/eventy-signature.png" alt="" className='' />
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
         </div>
