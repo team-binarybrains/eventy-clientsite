@@ -40,6 +40,8 @@ import VenueFacility from "./Components/Services/VenueFacility/VenueFacility";
 import Photography from "./Components/Services/Photography/Photography";
 import AllUsers from "./Components/Dashboard/AllUsers/AllUsers";
 import OurTeam from "./Components/OurTeam/OurTeam";
+import RequireAdmin from "./Components/Authentication/RequireAdmin/RequireAdmin";
+import RequireAuth from "./Components/Authentication/RequireAuth/RequireAuth";
 
 function App() {
   const location = useLocation();
@@ -84,12 +86,12 @@ function App() {
         ></Route>
 
         {/* dashboard */}
-        <Route path="/dashboard" element={<Dashboard></Dashboard>}>
+        <Route path="/dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
           <Route index path="/dashboard" element={<MainChart />}></Route>
           <Route
             index
             path="/dashboard/allusers"
-            element={<AllUsers />}
+            element={<RequireAdmin><AllUsers /></RequireAdmin>}
           ></Route>
         </Route>
 
