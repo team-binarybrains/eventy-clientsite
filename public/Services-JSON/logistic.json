@@ -1,0 +1,62 @@
+[
+    {
+        "name":"PRE EVENT GUEST MANAGEMENT",
+        "img":"https://i.ibb.co/wdFC8gf/280x150-Register-Now.jpg",
+        "details":{
+            "a":"Latest Onsite Technology",
+            "b":"Guest Services Management",
+            "c":"Complete Data Management Services",
+            "d":"Online and Onsite Attendee Registration"
+        }
+    },
+    {
+        "name":"ONSITE MANAGEMENT",
+        "img":"https://i.ibb.co/NWHKhyZ/280x150-Registration-CBD-Ev.jpg",
+        "details":{
+            "a":"Event Set Up",
+            "b":"Financial Management",
+            "c":"Onsite Attendee Management",
+            "d":"Registration and Project Manager Staffing"
+        }
+    },
+    {
+        "name":"DESTINATION MANAGEMENT",
+        "img":"https://i.ibb.co/rbmxPN6/280x150-Attendee-Registrati.jpg",
+        "details":{
+            "a":"Venue Walk-Throughs",
+            "b":"Vendor Load-in/load-out",
+            "c":"Meet and Greet Services",
+            "d":"Hotel Reservations & Rooming Lists"
+        }
+    },
+    {
+        "name":"EVENT COSTING ANALYSIS",
+        "img":"https://i.ibb.co/7KdVSNV/280x150-Guest-Registration.jpg",
+        "details":{
+            "a":"Budget Preparation",
+            "b":"Financial Management",
+            "c":"Project Manager Staffing",
+            "d":"Transportation & Parking"
+        }
+    },
+    {
+        "name":"LISTS MANAGEMENT",
+        "img":"https://i.ibb.co/5nDRkvR/280x150-Registration-Helen-CBD-Events-Washington.jpg",
+        "details":{
+            "a":"Database & Guest List Management",
+            "b":"In-house Video, PSA and Film Production",
+            "c":"Generate venue primary Point of Contact lists",
+            "d":"Design security, parking and guest check-in procedures"
+        }
+    },
+    {
+        "name":"VENUE COORDINATION SERVICES",
+        "img":"https://i.ibb.co/f470mYF/280x150-Audiovisual-Speaker.jpg",
+        "details":{
+            "a":"Budget Preparation",
+            "b":"Site inspections and pre-event walk-throughs",
+            "c":"Transportation and Meet and Greet Services",
+            "d":"Coordinate vendor load-in and load-out and delivery schedules"
+        }
+    }
+]
