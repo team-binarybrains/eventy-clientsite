@@ -70,6 +70,8 @@ function Destination() {
 
                 </div>
 
+                {/* ----------------------- */}
+
                 <div className='grid lg:grid-cols-3 grid-cols-1 gap-y-20 lg:py-20 py-6 lg:mx-40'>
                     {
                         destinationServics.map((service, index) => <div key={index} className='flex justify-center relative hvr'>
