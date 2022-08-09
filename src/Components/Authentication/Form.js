@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
 import styleLg from "./form.module.css";
 import styleSm from "./formSm.module.css";
@@ -17,13 +18,21 @@ import { BsFacebook } from "react-icons/bs";
 import { IoLogoGoogle } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import useToken from "../Hooks/useToken";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const errorMssg = (error = "") => {
   return error ? error?.code?.split("/")[1].split("-").join(" ") : "";
 };
 
 const Form = () => {
+  const location = useLocation();
+  const [user] = useAuthState(auth);
+  const navigate = useNavigate();
+  
+  if(user){
+    navigate(location?.state?.from?.pathname || '/');
+  }
+
   const [activePanel, setActivePanel] = useState("right-panel-active");
 
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -92,10 +101,6 @@ const Form = () => {
 
     e.target.reset();
   };
-  const navigate = useNavigate();
-  if (googleUser || facebookUser || signUpUser ) {
-    navigate("/");
-  }
 
   return (
     <section className={`${styleLg.bg}`}>

@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
@@ -10,7 +11,13 @@ import { Link, Outlet } from "react-router-dom";
 import { FaChartBar, FaChartLine } from "react-icons/fa";
 import "./Dashboard.css"
 import CustomLink from "../Share/CustomLink/CustomLink";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../Firebase/firebase.init";
+import useAdmin from "../Hooks/useAdmin";
 const Dashboard = () => {
+  const [user, loading] = useAuthState(auth);
+  const [admin, adminLoading] = useAdmin(user);
+  
   return (
     <div className="mx-auto px-2 lg:px-0 lg:mt-[119px] route ">
       <div class="drawer drawer-mobile">
@@ -46,7 +53,7 @@ const Dashboard = () => {
           ></label>
           <ul className="menu px-2 overflow-y-auto  bg-[#1e293b] border-r-1 shadow-lg  ">
             {/* <!-- Sidebar content here --> */}
-            {
+            { admin ||
               <li className="text-lg hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2 "
@@ -60,7 +67,7 @@ const Dashboard = () => {
                 </CustomLink>
               </li>
             }
-            {
+            { admin &&
               <li className="text-lg hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2"
