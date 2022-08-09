@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 // import userIcon from '../../../asset/UserIcon/1946429.png'
 import { BiUser } from "react-icons/bi";
@@ -38,6 +38,10 @@ const Navbar = ({ location }) => {
     : "navbar bg-transparent fixed text-white flex items-center z-[999]"
 
   const anotherRoute = `fixed left-0 right-0 top-0 z-[999] shadow-lg`
+
+  const navStyle = ({isActive})=> {
+      return isActive && 'btnActive';
+  }
 
   return (
     <div>
@@ -248,15 +252,15 @@ const Navbar = ({ location }) => {
           </div>
 
           {/* children */}
-          <div class=" hidden lg:flex ">
+          <div class=" hidden lg:flex font-bold uppercase">
             <ul class="menu menu-horizontal p-0">
               <li>
-                <Link to="/" className="uppercase">
+                <NavLink to="/" className={navStyle}>
                   Home
-                </Link>
+                </NavLink>
               </li>
               <li tabindex="0">
-                <Link to={pathname} className="uppercase">
+                <Link to={pathname} className={` `}>
                   About
                   <svg
                     class="fill-current"
@@ -282,7 +286,7 @@ const Navbar = ({ location }) => {
                 </ul>
               </li>
               <li tabindex="0">
-                <Link to={pathname} className="uppercase">
+                <Link to={pathname} className={` `}>
                   Event
                   <svg
                     class="fill-current"
@@ -314,7 +318,7 @@ const Navbar = ({ location }) => {
               </li>
               {/* HERE THE SERVICES */}
               <li tabindex="0">
-                <Link to={pathname} className="uppercase">
+                <Link to={pathname} className={` `}>
                   SERVICES
                   <svg
                     class="fill-current"
@@ -370,7 +374,7 @@ const Navbar = ({ location }) => {
                 </ul>
               </li>
               <li tabindex="0">
-                <Link to={pathname} className="uppercase">
+                <Link to={pathname} className={` `}>
                   Blogs
                   <svg
                     class="fill-current"
@@ -396,16 +400,16 @@ const Navbar = ({ location }) => {
                 </ul>
               </li>
               <li>
-                <Link to="/gallery">GALLERY</Link>
+                <NavLink to="/gallery" className={navStyle}>GALLERY</NavLink>
               </li>
               <li>
-                <Link to="/speaker">SPEAKER</Link>
+                <NavLink to="/speaker" className={navStyle}>SPEAKER</NavLink>
               </li>
               <li>
-                <Link to="/dashboard">DASHBOARD</Link>
+                <NavLink to="/dashboard" className={navStyle}>DASHBOARD</NavLink>
               </li>
               <li>
-                <Link to="/contact-us">CONTACT</Link>
+                <NavLink to="/contact-us" className={navStyle}>CONTACT</NavLink>
               </li>
             </ul>
           </div>

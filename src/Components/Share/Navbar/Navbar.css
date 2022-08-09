@@ -50,3 +50,9 @@
 .menu li a{
    padding: 10px;
 }
+
+.btnActive {
+   background: linear-gradient(to bottom right, #ffbe30, #ff3e00) !important;
+   color: white !important;
+}
+

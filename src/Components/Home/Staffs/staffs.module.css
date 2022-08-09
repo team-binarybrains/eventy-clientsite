@@ -1,17 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
-.openSans{
-    font-family: 'Open Sans', sans-serif;
-}
-
-.roboto{
-    font-family: 'Roboto', sans-serif;
-}
-
 .bg{
     background-image: url('../../../staff_bg_image/staffs_bg_1.jpg');
-    background-position: 100% -300px;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -20,4 +12,11 @@
 .bgLayer{
     background-image: radial-gradient(rgba(255, 255, 255, 0.302),rgba(255, 255, 255, 0.805),rgb(255, 255, 255));
     /* background-image: linear-gradient(transparent,transparent); */
+}
+
+.slide{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
