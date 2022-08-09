@@ -46,10 +46,11 @@ const UserProfile = () => {
                   !updateUser[0]?.image && <span className=""><AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full w-52 h-52 rounded-full mt-[-95%]" /></span>
                 } */}
                 {
-                  user?.photoURL ?
+                  user?.photoURL || currentUser?.image 
+                  ?
                     <img
                       className="w-52 h-52 rounded-full mt-[-50%]"
-                      src={user?.photoURL}
+                      src={user?.photoURL || currentUser?.image}
                       alt=""
                     />
                     :
