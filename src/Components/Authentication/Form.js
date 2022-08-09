@@ -19,6 +19,7 @@ import { IoLogoGoogle } from "react-icons/io";
 import { FcGoogle } from "react-icons/fc";
 import useToken from "../Hooks/useToken";
 import { useLocation, useNavigate } from "react-router-dom";
+import { signOut } from "firebase/auth";
 
 const errorMssg = (error = "") => {
   return error ? error?.code?.split("/")[1].split("-").join(" ") : "";
@@ -28,10 +29,6 @@ const Form = () => {
   const location = useLocation();
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
-  
-  if(user){
-    navigate(location?.state?.from?.pathname || '/');
-  }
 
   const [activePanel, setActivePanel] = useState("right-panel-active");
 
@@ -61,17 +58,17 @@ const Form = () => {
     await updateProfile({ displayName: e.target.name.value });
 
     // for name send backend
-    const email = e.target.email.value
+    const email = e.target.email.value;
     const currentUser = {
       displayName: e.target.name.value,
-      email:email,
+      email: email,
     };
 
     await fetch(`http://localhost:5000/user/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",
-        authorization: `authHeader ${localStorage.getItem('token')}`
+        authorization: `authHeader ${localStorage.getItem("token")}`,
       },
       body: JSON.stringify(currentUser),
     })
@@ -84,7 +81,10 @@ const Form = () => {
 
     e.target.reset();
   };
-  // const [token] = useToken(signUpUser);
+  const [token] = useToken(signUpUser || googleUser || facebookUser);
+  if (token) {
+    navigate(location?.state?.from?.pathname || "/");
+  }
 
   // sign In funcitonality below
   const [signInWithEmailAndPassword, signInUser, signInLoading, signInError] =

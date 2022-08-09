@@ -27,7 +27,7 @@ const Navbar = ({ location }) => {
 
   const handleSignOut = () => {
     signOut(auth);
-    navigate("/");
+    localStorage.removeItem('accessToken')
   };
   const [user] = useAuthState(auth);
 
@@ -35,24 +35,24 @@ const Navbar = ({ location }) => {
 
   const homeRoute = navbarBg
     ? "navbar active_nav fixed z-[999] text-white"
-    : "navbar bg-transparent fixed text-white flex items-center z-[999]"
+    : "navbar bg-transparent fixed text-white flex items-center z-[999]";
 
-  const anotherRoute = `fixed left-0 right-0 top-0 z-[999] shadow-lg`
+  const anotherRoute = `fixed left-0 right-0 top-0 z-[999] shadow-lg`;
 
-  const navStyle = ({isActive})=> {
-      return isActive && 'btnActive';
-  }
+  const navStyle = ({ isActive }) => {
+    return isActive && "btnActive";
+  };
 
   return (
     <div>
       <section className={`${routeName ? anotherRoute : homeRoute} bg-white`}>
-        {routeName &&
-          <TopnavBar></TopnavBar>
-        }
+        {routeName && <TopnavBar></TopnavBar>}
         <div
-          className={` ${routeName ? 'bg-white text-black' : 'bg-transparent text-white'}  flex items-center justify-around flex-wrap grow-0 h-[69px] gap-x-10 z-[999] container mx-auto`}
-          id="navbar">
-
+          className={` ${
+            routeName ? "bg-white text-black" : "bg-transparent text-white"
+          }  flex items-center justify-around flex-wrap grow-0 h-[69px] gap-x-10 z-[999] container mx-auto`}
+          id="navbar"
+        >
           {/* navbar icons and logo */}
           <div class="flex lg:grow-0 md:grow md:justify-start">
             {/* for mobile */}
@@ -153,7 +153,11 @@ const Navbar = ({ location }) => {
                       <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
                     </svg>
                   </Link>
-                  <ul class="p-2 -ml-24" id="megaMenu" style={{ zIndex: "11111" }}>
+                  <ul
+                    class="p-2 -ml-24"
+                    id="megaMenu"
+                    style={{ zIndex: "11111" }}
+                  >
                     <li>
                       <Link className="uppercase" to="/catering">
                         CATERING
@@ -248,7 +252,6 @@ const Navbar = ({ location }) => {
                 EVENTY
               </Link>
             </div>
-
           </div>
 
           {/* children */}
@@ -400,16 +403,24 @@ const Navbar = ({ location }) => {
                 </ul>
               </li>
               <li>
-                <NavLink to="/gallery" className={navStyle}>GALLERY</NavLink>
+                <NavLink to="/gallery" className={navStyle}>
+                  GALLERY
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/speaker" className={navStyle}>SPEAKER</NavLink>
+                <NavLink to="/speaker" className={navStyle}>
+                  SPEAKER
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/dashboard" className={navStyle}>DASHBOARD</NavLink>
+                <NavLink to="/dashboard" className={navStyle}>
+                  DASHBOARD
+                </NavLink>
               </li>
               <li>
-                <NavLink to="/contact-us" className={navStyle}>CONTACT</NavLink>
+                <NavLink to="/contact-us" className={navStyle}>
+                  CONTACT
+                </NavLink>
               </li>
             </ul>
           </div>
@@ -499,7 +510,6 @@ const Navbar = ({ location }) => {
               <div></div>
             </div>
           </div>
-
         </div>
       </section>
     </div>
