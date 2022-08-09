@@ -40,6 +40,8 @@ import VenueFacility from "./Components/Services/VenueFacility/VenueFacility";
 import Photography from "./Components/Services/Photography/Photography";
 import AllUsers from "./Components/Dashboard/AllUsers/AllUsers";
 import OurTeam from "./Components/OurTeam/OurTeam";
+import UserProfile from "./Components/Dashboard/UserProfile/UserProfile";
+import UpdateUser from "./Components/Dashboard/UserProfile/UpdateUser/UpdateUser";
 
 function App() {
   const location = useLocation();
@@ -90,6 +92,16 @@ function App() {
             index
             path="/dashboard/allusers"
             element={<AllUsers />}
+          ></Route>
+          <Route
+            index
+            path="/dashboard/profile"
+            element={<UserProfile />}
+          ></Route>
+          <Route
+            index
+            path="/dashboard/update-profile"
+            element={<UpdateUser />}
           ></Route>
         </Route>
 

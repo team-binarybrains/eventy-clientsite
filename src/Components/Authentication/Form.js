@@ -52,7 +52,9 @@ const Form = () => {
     await updateProfile({ displayName: e.target.name.value });
 
     // for name send backend
+    
     const email = e.target.email.value
+    console.log(signUpUser);
     const currentUser = {
       displayName: e.target.name.value,
       email:email,
@@ -75,6 +77,7 @@ const Form = () => {
 
     e.target.reset();
   };
+  
   // const [token] = useToken(signUpUser);
 
   // sign In funcitonality below
