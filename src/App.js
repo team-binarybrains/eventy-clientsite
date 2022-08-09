@@ -40,13 +40,10 @@ import VenueFacility from "./Components/Services/VenueFacility/VenueFacility";
 import Photography from "./Components/Services/Photography/Photography";
 import AllUsers from "./Components/Dashboard/AllUsers/AllUsers";
 import OurTeam from "./Components/OurTeam/OurTeam";
-<<<<<<< HEAD
 import UserProfile from "./Components/Dashboard/UserProfile/UserProfile";
 import UpdateUser from "./Components/Dashboard/UserProfile/UpdateUser/UpdateUser";
-=======
 import RequireAdmin from "./Components/Authentication/RequireAdmin/RequireAdmin";
 import RequireAuth from "./Components/Authentication/RequireAuth/RequireAuth";
->>>>>>> 4a65d7f75094d9f573ae0727fee6c19443b65bca
 
 function App() {
   const location = useLocation();
