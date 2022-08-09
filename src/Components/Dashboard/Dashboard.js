@@ -19,7 +19,7 @@ const Dashboard = () => {
   const [admin, adminLoading] = useAdmin(user);
   
   return (
-    <div className="mx-auto px-2 lg:px-0 lg:mt-[119px] route ">
+    <div className="mx-auto px-2 lg:px-0 route">
       <div class="drawer drawer-mobile">
         <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
         <div class="drawer-content  flex flex-col" id="drawer">
@@ -77,7 +77,7 @@ const Dashboard = () => {
                     className=""
                     icon={faUser}
                   ></FontAwesomeIcon>{" "}
-                  <span className=" font-bold"> ALLUSERS</span>
+                  <span className=" font-bold"> ALL USERS</span>
                 </CustomLink>
               </li>
             }

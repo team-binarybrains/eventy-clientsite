@@ -29,21 +29,21 @@ const AllUsers = () => {
 
   return (
     <div class="mt-10">
-      <table class="max-w-5xl mx-auto table-auto">
+      <table class="max-w-5xl mx-auto table-auto border">
         <thead class="justify-between">
           <tr class="bg-green-600">
-            <th class="px-16 py-2">
+            <th class="text-center py-2">
               <span class="text-gray-100 font-semibold">Avatar</span>
             </th>
-            <th class="px-16 py-2">
+            <th class="text-center py-2 ">
               <span class="text-gray-100 font-semibold">Name</span>
             </th>
 
-            <th class="px-16 py-2">
+            <th class="text-center py-2">
               <span class="text-gray-100 font-semibold">Email</span>
             </th>
 
-            <th class="px-16 py-2">
+            <th class="text-center py-2">
               <span class="text-gray-100 font-semibold">Setting</span>
             </th>
           </tr>
