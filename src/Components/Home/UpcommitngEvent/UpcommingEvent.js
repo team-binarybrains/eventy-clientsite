@@ -41,7 +41,7 @@ const UpcommingEvent = () => {
       .then((data) => setEvents(data));
   }, []);
 
-  console.log(events);
+  // console.log(events);
 
   const upComingSettings = {
     className: "center",
