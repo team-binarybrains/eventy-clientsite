@@ -55,7 +55,7 @@ function Catering() {
                                     }
                                 </div>
 
-                                <div className="absolute top-0 left-[3.4rem] right-[3.4rem] bottom-0 bg-transparent cld">
+                                <div className="absolute top-0 left-[2rem] right-[2rem] bottom-0 bg-transparent cld">
                                     <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
                                 </div>
                             </div>

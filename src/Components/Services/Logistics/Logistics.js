@@ -91,7 +91,7 @@ function Logistics() {
                                                 }
                                             </div>
 
-                                            <div className="absolute top-0 left-[7.5rem] right-[7.5rem] bottom-0 bg-transparent cld">
+                                            <div className="absolute top-0 left-[5.6rem] right-[5.6rem] bottom-0 bg-transparent cld">
                                                 <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
                                             </div>
                                         </div>
@@ -141,7 +141,7 @@ function Logistics() {
                                     <div class="-mt-5">
                                         <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
 
-                                        <div className="absolute top-0 left-[7.5rem] right-[7.5rem] bottom-0 bg-transparent cld">
+                                        <div className="absolute top-0 left-[5.6rem] right-[5.6rem] bottom-0 bg-transparent cld">
                                             <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
                                         </div>
                                     </div>

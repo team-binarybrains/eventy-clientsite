@@ -65,7 +65,7 @@ function Photography() {
             {/* --------- */}
             <div className='py-10'>
                 <div className='grid lg:flex lg:justify-around justify-center lg:mx-40'>
-                    <div>
+                    <div className=''>
                         <div>
                             <p className='text-3xl font-semibold'>
                                 EVENTY <br />
