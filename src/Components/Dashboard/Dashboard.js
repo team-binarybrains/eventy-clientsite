@@ -81,20 +81,6 @@ const Dashboard = () => {
                 </CustomLink>
               </li>
             }
-            {
-              <li className="text-lg hover:bg-[#0f172a]  rounded">
-                <CustomLink
-                  className="flex justify-center items-center gap-2"
-                  to={"/dashboard/manage-profile"}
-                >
-                  <FontAwesomeIcon
-                    className=""
-                    icon={faUser}
-                  ></FontAwesomeIcon>{" "}
-                  <span className=" font-bold"> PROFILE</span>
-                </CustomLink>
-              </li>
-            }
           </ul>
         </div>
       </div>
