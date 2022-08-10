@@ -6,7 +6,7 @@ import '../Services.css'
 
 function Catering() {
 
-    const catering = useFetch('http://localhost:5000/get-catering')
+    const catering = useFetch('http://localhost:5000/get-sub-services')
     console.log(catering);
 
 
@@ -40,26 +40,28 @@ function Catering() {
                 {
                     catering.map((service, index) => <div key={index} className='flex justify-center relative hvr'>
 
-                        <div class="w-72 max-w-full bg-white cursor-pointer">
-                            <div class="w-full h-48">
-                                <img src={service.img} class="w-full  object-cover" alt='' />
-                            </div>
-                            <div class="-mt-5">
-                                <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
-                                <div className='text-gray-500'>
-                                    <p class="mt-2">● {service.details.a}</p>
-                                    <p class="mt-2">● {service.details.b}</p>
-                                    <p class="mt-2">● {service.details.c}</p>
-                                    {service.details?.d &&
-                                        <p class="mt-2">● {service.details?.d}</p>
-                                    }
+                        {service.type === 'catering' &&
+                            <div class="w-72 max-w-full bg-white cursor-pointer">
+                                <div class="w-full h-48">
+                                    <img src={service.img} class="w-full  object-cover" alt='' />
                                 </div>
+                                <div class="-mt-5">
+                                    <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
+                                    <div className='text-gray-500'>
+                                        <p class="mt-2">● {service.details.a}</p>
+                                        <p class="mt-2">● {service.details.b}</p>
+                                        <p class="mt-2">● {service.details.c}</p>
+                                        {service.details?.d &&
+                                            <p class="mt-2">● {service.details?.d}</p>
+                                        }
+                                    </div>
 
-                                <div className="absolute top-0 left-[2rem] right-[2rem] bottom-0 bg-transparent cld">
-                                    <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
+                                    <div className="absolute top-0 left-[2rem] right-[2rem] bottom-0 bg-transparent cld">
+                                        <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        }
 
                         {/* <div className="mt-8">
                         <p className="left-position uppercase text-gray-400 font-bold hover:text-[#ffbe30] tracking-[5px] cld2">

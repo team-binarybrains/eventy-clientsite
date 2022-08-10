@@ -5,7 +5,7 @@ import useFetch from '../../Home/OurServices/Hook/useFetch'
 
 function Logistics() {
 
-    const logisticServices = useFetch('http://localhost:5000/get-logistic')
+    const logisticServices = useFetch('http://localhost:5000/get-sub-services')
 
     return (
         <div className='route'>

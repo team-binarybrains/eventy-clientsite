@@ -1,6 +1,7 @@
 [
     {
         "name":"HOSPITALITY STAFF MEET & GREETS",
+        "type":"destination",
         "img":"https://i.ibb.co/JBkjsJ9/event.jpg",
         "details":{
             "a":"OFFSITE MEETINGS",
@@ -11,6 +12,7 @@
     },
     {
         "name":"TOURS & PLANNED OUTINGS",
+        "type":"destination",
         "img":"https://i.ibb.co/yfTfvrj/TRENO-DA.jpg",
         "details":{
             "a":"SIGHTSEEING",
@@ -21,6 +23,7 @@
     },
     {
         "name":"DAY EXCURSIONS & TOURS",
+        "type":"destination",
         "img":"https://i.ibb.co/9HFq2cj/Washington-DC-Fireworks.jpg",
         "details":{
             "a":"DINNER CRUISE",
