@@ -3,6 +3,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { FiEdit } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { BiUserCircle } from 'react-icons/bi';
+import { AiOutlineUser } from 'react-icons/ai';
 import auth from "../../../Firebase/firebase.init";
 import Loading from "../../Share/Loading/Loading";
 import axios from "axios";
@@ -35,32 +36,33 @@ const UserProfile = () => {
           <div className="flex flex-wrap justify-center">
             <div className="w-full px-4 flex justify-center">
               <div className="relative">
-                {/* {user &&
-                  <img
-                    className="w-52 h-52 rounded-full mt-[-50%]"
-                    src={updateUser[0]?.image}
-                    alt=""
-                  />
+
+                {currentUser?.image ? <img
+                  src={currentUser?.image}
+                  className="w-44 h-44  rounded-full mt-[-50%]"
+                  alt=""
+                />
+                  :
+                  // <img
+                  //   src={user?.photoURL}
+                  //   className="w-44 h-44 rounded-full mt-[-50%]"
+                  //   alt=""
+                  // />
+                  <span className="">
+                    <BiUserCircle className="w-44 h-44 mt-[-50%] border-2 text-slate-700 bg-slate-200 bg-opacity-100 text-4xl rounded-full" />
+                  </span>
                 }
-                {
-                  !updateUser[0]?.image && <span className=""><AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full w-52 h-52 rounded-full mt-[-95%]" /></span>
-                } */}
-                {
-                  currentUser?.image 
-                  ?
-                    <img
-                      className="w-52 h-52 rounded-full mt-[-50%]"
-                      src={currentUser?.image}
-                      alt=""
-                    />
-                    :
-                    //   <img
-                    //     className="w-5 h-5 rounded-full mt-[-50%]"
-                    //     src={userIcon}
-                    //     alt=""
-                    //   />
-                    <BiUserCircle className="w-[200px] h-[200px]  mt-[-50%] text-slate-600"></BiUserCircle>
-                }
+                {/* {user?.photoURL && (
+                    
+                  )} */}
+
+                {/* {user?.photoURL === null && currentUser?.image === null(
+                  <span className="">
+                    <AiOutlineUser className="w-44 h-44 mt-[-50%] border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full" />
+                  </span>
+                )} */}
+                {/* <BiUserCircle className="w-[200px] h-[200px]  mt-[-50%] text-slate-600"></BiUserCircle> */}
+
               </div>
             </div>
             <div className="w-full px-4 text-start mt-[-5%]">
@@ -118,7 +120,7 @@ const UserProfile = () => {
               </div>
 
               <div className="mb-2 text-gray-600 mt-0">
-                <p className="text-base font-semibold leading-normal text-slate-700 mb-1 capitalize">Address : 
+                <p className="text-base font-semibold leading-normal text-slate-700 mb-1 capitalize">Address :
                   {currentUser?.address ? currentUser?.address : " Set Your Address"}
                 </p>
               </div>
@@ -131,13 +133,13 @@ const UserProfile = () => {
                     {currentUser?.aboutMe ? currentUser?.aboutMe : "Set Your About "}
                   </p>
                   {
-                    currentUser?.aboutMe?.length > 200 
+                    currentUser?.aboutMe?.length > 200
                     &&
                     <a
-                    href="#!"
-                    className="font-normal text-lightBlue-500"
-                    onClick={(e) => e.preventDefault()}
-                  > Show more lorem205</a> 
+                      href="#!"
+                      className="font-normal text-lightBlue-500"
+                      onClick={(e) => e.preventDefault()}
+                    > Show more lorem205</a>
                   }
                 </div>
               </div>

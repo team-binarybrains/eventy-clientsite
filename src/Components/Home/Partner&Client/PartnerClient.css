@@ -16,4 +16,45 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    /* filter: contrast(0.8); */
+}
+
+.noSkew{
+    opacity: 0;
+    animation: stopSkew 0.7s steps(100) forwards;
+}
+.skew{
+    animation: opacity 0.2s steps(100) forwards;
+}
+
+@keyframes stopSkew {
+    0% {
+        transform: translateX(100%) skewX(15deg);
+        opacity: 0;
+    }
+
+    85% {
+        transform: translateX(0%) skewX(15deg);
+        opacity: 1;
+    }
+
+    95% {
+        transform: translateX(0%) skewX(-2deg);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateX(0%) skewX(0deg);
+        opacity: 1;
+    }
+}
+
+
+@keyframes opacity {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
 }

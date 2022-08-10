@@ -3,12 +3,12 @@ import sponser from "../../../asset/Client/image1.png";
 import "./PartnerClient.css";
 import Slider from "react-slick";
 
-
 const PartnerClient = () => {
 
     const singleSponser = [0, 1, 2, 3, 4, 5]
     const sponserCount = [0, 1, 2];
     const [testimonial, setTestimonial] = useState([]);
+    const [current, setCurrent] = useState([]);
 
     const settings = {
         dots: true,
@@ -28,9 +28,15 @@ const PartnerClient = () => {
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: true,
-        speed: 4000,
-        autoplaySpeed: 4000,
+        speed: 500,
+        autoplaySpeed: 3000,
+        beforeChange: (a,e)=> {
+            console.log(a,e);
+            setCurrent(e);
+        }
     };
+
+    // console.log(current);
 
     useEffect(() => {
         fetch("testimonial.json")
@@ -66,8 +72,8 @@ const PartnerClient = () => {
                     <h4 style={{ letterSpacing: "4px" }} className='mt-9 mb-4 text-lg text-amber-400 text-center'>TESTIMONIAL</h4>
                     <h1 className='text-center text-5xl text-white'>Client <span className='font-bold'>Says</span></h1>
                     <Slider {...settings1}>
-                        {testimonial.map((t) =>
-                            <div className='mt-16'>
+                        {testimonial.map((t,i) =>
+                            <div className={`mt-16 ${current===i?'noSkew':'skew'}`}>
                                 <p className='px-10 text-center text-white'>{t.description.slice(0, 180) + "..."}</p>
                                 <h2 className='text-center mt-7 text-amber-400 font-semibold text-lg'>{t.name}</h2>
                                 <h3 className='text-center mt-2 text-gray-300 mb-10 sm:mb-0 '>{t.profession}</h3>

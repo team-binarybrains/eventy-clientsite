@@ -2,7 +2,6 @@ import React, { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
-import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import auth from "../../../../Firebase/firebase.init";
 import Loading from "../../../Share/Loading/Loading";
@@ -58,12 +57,11 @@ const UpdateUser = () => {
                   },
                   body: JSON.stringify(user),
                })
-
                   .then((res) => res.json())
                   .then((inserted) => {
-                     if (inserted.acknowledged) {
+                     if (inserted.result) {
                         toast.success("updated");
-                        navigate('/dashboard/profile')
+                        navigate('/manage-profile')
                         reset();
                      }
                   });
@@ -81,7 +79,7 @@ const UpdateUser = () => {
    }
    
    return (
-      <section className="my-20 container mx-auto px-4">
+      <section className="route my-10 container mx-auto px-4">
          <div className="rounded bg-white shadow-2xl" id="profile_container">
             <div className="text-start">
                <h1 className="text-2xl pt-4 font-semibold py-6 text-slate-700 pl-9">
@@ -294,6 +292,7 @@ const UpdateUser = () => {
                            Update Photos
                         </label>
                         <input
+                        
                            id="image"
                            name="image"
                            type="file"
