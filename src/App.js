@@ -40,6 +40,8 @@ import VenueFacility from "./Components/Services/VenueFacility/VenueFacility";
 import Photography from "./Components/Services/Photography/Photography";
 import AllUsers from "./Components/Dashboard/AllUsers/AllUsers";
 import OurTeam from "./Components/OurTeam/OurTeam";
+import UserProfile from "./Components/Dashboard/UserProfile/UserProfile";
+import UpdateUser from "./Components/Dashboard/UserProfile/UpdateUser/UpdateUser";
 import RequireAdmin from "./Components/Authentication/RequireAdmin/RequireAdmin";
 import RequireAuth from "./Components/Authentication/RequireAuth/RequireAuth";
 import { signOut } from "firebase/auth";
@@ -161,7 +163,8 @@ function App() {
         ></Route>
 
         {/* nornal routes */}
-
+        <Route path="/manage-profile" element={<UserProfile />} ></Route>
+        <Route path="/update/user-profile" element={<UpdateUser />} ></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
         <Route path="/ourteam" element={<OurTeam />}></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
