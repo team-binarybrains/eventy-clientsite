@@ -26,7 +26,7 @@ const UserProfile = () => {
     return <Loading />;
   }
   return (
-    <section className="my-40 container mx-auto px-4">
+    <section className="mt-64 mb-20 container mx-auto px-4 ">
       <div
         className="relative flex flex-col min-w-0 break-words border-2 bg-white w-full  mb-6 shadow-xl rounded-lg mt-16 "
         id="profileSection"
@@ -91,7 +91,7 @@ const UserProfile = () => {
             {/* className="sm:absolute flex w-full justify-center md:justify-end md:top-28 lg:top-20 xl:top-16"  */}
             <div className="sm:absolute sm:top-32 sm:right-0 md:top-28 md:right-4 lg:top-28 lg:right-4 xl:top-20 xl:right-4 ">
               <Link
-                to={`/dashboard/update/user-profile`}
+                to={`/update/user-profile`}
                 className="px-8 py-2 rounded text-black font-bold text-xl flex items-center gap-3 hover:text-gray-600"
               >
                 <FiEdit></FiEdit> Edit Profile
