@@ -50,5 +50,11 @@ code {
 }
 
 .route {
-  margin-top: 126px;
+  margin-top: 123px;
+}
+
+@layer components{
+  .bdr{
+    @apply  border-4 border-black;
+  }
 }

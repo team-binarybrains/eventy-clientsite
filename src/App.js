@@ -44,6 +44,10 @@ import UserProfile from "./Components/Dashboard/UserProfile/UserProfile";
 import UpdateUser from "./Components/Dashboard/UserProfile/UpdateUser/UpdateUser";
 import RequireAdmin from "./Components/Authentication/RequireAdmin/RequireAdmin";
 import RequireAuth from "./Components/Authentication/RequireAuth/RequireAuth";
+import { signOut } from "firebase/auth";
+import useToken from "./Components/Hooks/useToken";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "./Firebase/firebase.init";
 
 function App() {
   const location = useLocation();
@@ -88,12 +92,23 @@ function App() {
         ></Route>
 
         {/* dashboard */}
-        <Route path="/dashboard" element={<RequireAuth><Dashboard></Dashboard></RequireAuth>}>
+        <Route
+          path="/dashboard"
+          element={
+            <RequireAuth>
+              <Dashboard></Dashboard>
+            </RequireAuth>
+          }
+        >
           <Route index path="/dashboard" element={<MainChart />}></Route>
           <Route
             index
             path="/dashboard/allusers"
-            element={<RequireAdmin><AllUsers /></RequireAdmin>}
+            element={
+              <RequireAdmin>
+                <AllUsers />
+              </RequireAdmin>
+            }
           ></Route>
           <Route
             index
