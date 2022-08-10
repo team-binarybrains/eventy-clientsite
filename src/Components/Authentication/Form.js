@@ -29,7 +29,9 @@ const Form = () => {
   const location = useLocation();
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
-
+  if (user) {
+    navigate(location?.state?.from?.pathname || '/');
+  }
   const [activePanel, setActivePanel] = useState("right-panel-active");
 
   const [signInWithGoogle, googleUser, googleLoading, googleError] =
@@ -57,8 +59,10 @@ const Form = () => {
     );
     await updateProfile({ displayName: e.target.name.value });
 
-    // for name send backend
-    const email = e.target.email.value;
+
+    // // for name send backend
+    const email = e.target.email.value
+    // console.log(signUpUser);
     const currentUser = {
       displayName: e.target.name.value,
       email: email,
@@ -68,19 +72,21 @@ const Form = () => {
       method: "PUT",
       headers: {
         "content-type": "application/json",
-        authorization: `authHeader ${localStorage.getItem("token")}`,
+        authorization: `authHeader ${localStorage.getItem('token')}`
       },
       body: JSON.stringify(currentUser),
     })
       .then((res) => res.json())
       .then((inserted) => {
         if (inserted.acknowledged) {
-          // toast.success("name update Successfully");
+          toast.success("Successfully Sign In");
         }
       });
 
     e.target.reset();
   };
+
+
   const [token] = useToken(signUpUser || googleUser || facebookUser);
   if (token) {
     navigate(location?.state?.from?.pathname || "/");
