@@ -4,7 +4,7 @@ import './RegisterEvent.css'
 import paymentCards from '../img/payment-cards.png'
 
 const RegisterEvent = ({eventDetailsData}) => {
-   console.log(eventDetailsData);
+
    return (
       <section className='container mx-auto px-2 my-10'>
          <div class="">

@@ -1,5 +1,6 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import BlogComments from "../Home/Blog/BlogDetails/BlogComments/BlogComments";
 import useFetch from "../Home/OurServices/Hook/useFetch";
@@ -17,8 +18,10 @@ const EventDetails = () => {
   const { id } = useParams();
   // console.log(id);
   const [eventDetailsData, setEventDetailsData] = useState({});
-  axios.get(`http://localhost:5000/event-details/${id}`)
-      .then((data) => setEventDetailsData(data.data));
+  useEffect(()=> {
+    axios.get(`http://localhost:5000/event-details/${id}`)
+    .then((data) => setEventDetailsData(data.data));
+  },[id])
   // const eventDetailsData = useFetch(`http://localhost:5000/event-details/${id}`,{})
   // setEventDetailsData({name:'noName'})
   // console.log(eventDetailsData);
@@ -36,26 +39,22 @@ const EventDetails = () => {
           <div className=" basis-[800px] shrink grow max-w-[52rem]">
             <FeaturedEvent
               eventDetailsData={eventDetailsData}
-              key={eventDetailsData?._id}
             ></FeaturedEvent>
             <FeaturedEventDetails
               eventDetailsData={eventDetailsData}
-              key={eventDetailsData?._id}
             />
             <EventSchedule
               eventDetailsData={eventDetailsData}
-              key={eventDetailsData?._id}
             />
             <Pricing />
             <RegisterEvent
               eventDetailsData={eventDetailsData}
-              key={eventDetailsData?._id}
             />
           </div>
 
           {/* 2nd row : 2nd column */}
           <div className="basis-[300px] grow shrink max-w-[59rem]">
-            <LocationFaq></LocationFaq>
+            <LocationFaq eventDetailsData={eventDetailsData}></LocationFaq>
           </div>
         </section>
 
