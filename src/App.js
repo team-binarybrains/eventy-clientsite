@@ -163,8 +163,8 @@ function App() {
         ></Route>
 
         {/* nornal routes */}
-        <Route path="/manage-profile" element={<UserProfile />} ></Route>
-        <Route path="/update/user-profile" element={<UpdateUser />} ></Route>
+        <Route path="/manage-profile" element={ <RequireAuth><UserProfile /></RequireAuth>} ></Route>
+        <Route path="/update/user-profile" element={<RequireAuth><UpdateUser /></RequireAuth>} ></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
         <Route path="/ourteam" element={<OurTeam />}></Route>
         <Route path="/about" element={<AboutUs></AboutUs>}></Route>
