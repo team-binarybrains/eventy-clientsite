@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Venues from '../../Home/Venues/Venues'
 
 function VenueFacility() {
     return (
@@ -48,6 +49,61 @@ function VenueFacility() {
                 </div>
             </div>
 
+            <div className='lg:py-20 py-6 lg:mx-40 flex justify-center'>
+                <div className='grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 '>
+
+                    <div className="w-72 max-w-full bg-white cursor-pointer">
+                        <div>
+                            <h5 class="text-lg font-medium text-amber-500">VENUE SELECTION</h5>
+                            <div className='text-gray-500'>
+                                <p class="mt-2">● Venue Pricing</p>
+                                <p class="mt-2">● Venue Location</p>
+                                <p class="mt-2">● Amenities Review</p>
+                                <p class="mt-2">● Floor Plan Packages</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-72 max-w-full bg-white cursor-pointer">
+                        <div>
+                            <h5 class="text-lg font-medium text-amber-500">LOGISTICS</h5>
+                            <div className='text-gray-500'>
+                                <p class="mt-2">● Decor</p>
+                                <p class="mt-2">● Venue Setup</p>
+                                <p class="mt-2">● Run of Show</p>
+                                <p class="mt-2">● Audiovisual and Sound Setup</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-72 max-w-full bg-white cursor-pointer">
+                        <div>
+                            <h5 class="text-lg font-medium text-amber-500">VENDOR FACILITATION</h5>
+                            <div className='text-gray-500'>
+                                <p class="mt-2">● Financing</p>
+                                <p class="mt-2">● Process Planning</p>
+                                <p class="mt-2">● Venue Management</p>
+                                <p class="mt-2">● Proposal Development</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="w-72 max-w-full bg-white cursor-pointer">
+                        <div>
+                            <h5 class="text-lg font-medium text-amber-500">CONTRACTING</h5>
+                            <div className='text-gray-500'>
+                                <p class="mt-2">● Cost Analysis</p>
+                                <p class="mt-2">● Negotiate Fees</p>
+                                <p class="mt-2">● Contract Reviews</p>
+                                <p class="mt-2">● Contract Management</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            
+                <Venues></Venues>
 
         </div>
     )
