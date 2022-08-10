@@ -97,12 +97,12 @@ function App() {
           ></Route>
           <Route
             index
-            path="/dashboard/profile"
+            path="/dashboard/manage-profile"
             element={<UserProfile />}
           ></Route>
           <Route
             index
-            path="/dashboard/update-profile"
+            path="/dashboard/update/user-profile"
             element={<UpdateUser />}
           ></Route>
         </Route>

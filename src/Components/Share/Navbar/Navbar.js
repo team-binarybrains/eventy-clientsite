@@ -32,7 +32,6 @@ const Navbar = ({ location }) => {
   const [user] = useAuthState(auth);
 
   const [show, setShow] = useState("hidden");
-
   return (
     <div>
       {/* navbar bg-transparent fixed z-50 */}
@@ -461,7 +460,7 @@ const Navbar = ({ location }) => {
                             </div>
 
                             <Link
-                              to={`/manage-profile`}
+                              to={`/dashboard/manage-profile`}
                               className="uppercase hover:text-gray-600"
                             >
                               Manage profile
@@ -910,7 +909,7 @@ const Navbar = ({ location }) => {
                           </div>
 
                           <Link
-                            to={`/manage-profile`}
+                            to={`/dashboard/manage-profile`}
                             className="uppercase hover:text-gray-600"
                           >
                             Manage profile

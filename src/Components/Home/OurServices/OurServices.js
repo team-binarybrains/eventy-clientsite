@@ -11,7 +11,7 @@ import useFetch from "./Hook/useFetch";
 
 export default function OurServices() {
   const serviceInfo = useFetch("http://localhost:5000/services-get");
-  console.log(serviceInfo);
+  // console.log(serviceInfo);
 
   // axios.get('http://localhost:5000/services-get')
   //     .then(res => {

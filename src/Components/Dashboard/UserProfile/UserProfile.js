@@ -46,11 +46,11 @@ const UserProfile = () => {
                   !updateUser[0]?.image && <span className=""><AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full w-52 h-52 rounded-full mt-[-95%]" /></span>
                 } */}
                 {
-                  user?.photoURL || currentUser?.image 
+                  currentUser?.image 
                   ?
                     <img
                       className="w-52 h-52 rounded-full mt-[-50%]"
-                      src={user?.photoURL || currentUser?.image}
+                      src={currentUser?.image}
                       alt=""
                     />
                     :
@@ -91,7 +91,7 @@ const UserProfile = () => {
             {/* className="sm:absolute flex w-full justify-center md:justify-end md:top-28 lg:top-20 xl:top-16"  */}
             <div className="sm:absolute sm:top-32 sm:right-0 md:top-28 md:right-4 lg:top-28 lg:right-4 xl:top-20 xl:right-4 ">
               <Link
-                to={`/dashboard/update-profile`}
+                to={`/dashboard/update/user-profile`}
                 className="px-8 py-2 rounded text-black font-bold text-xl flex items-center gap-3 hover:text-gray-600"
               >
                 <FiEdit></FiEdit> Edit Profile
