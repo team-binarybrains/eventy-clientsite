@@ -63,7 +63,7 @@ export default function OurServices() {
   };
 
   return (
-    <div className="lg:px-80 pt-20 pb-32 bg-gray-100">
+    <div className="lg:px-[270px] pt-20 pb-32 bg-gray-100">
       <div className="mt-6 mb-14">
         <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]">
           our services
@@ -80,7 +80,7 @@ export default function OurServices() {
               <div className="cursor-pointer">
                 <div className="flex justify-center relative">
                   <img src={service.image} alt="" className="" />
-                  <div className="absolute top-0 left-11 right-[2.6rem] bottom-0 bg-transparent cld ">
+                  <div className="absolute top-0 left-[1.8rem] right-[1.8rem] bottom-0 bg-transparent cld ">
                     <BsPlusLg
                       onClick={() => navigateToDetails(service?._id)}
                       className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls "

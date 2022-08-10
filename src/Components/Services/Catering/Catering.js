@@ -36,30 +36,33 @@ function Catering() {
             </div>
 
             {/* catering services */}
-            <div className='grid lg:grid-cols-4 grid-cols-1 gap-y-20 lg:py-20 py-6 lg:mx-40'>
+            <div className='grid lg:grid-cols-4 grid-cols-1 lg:gap-y-5 gap-y-2  lg:py-20 py-6 lg:mx-40'>
                 {
-                    catering.map((service, index) => <div key={index} className='flex justify-center relative hvr'>
-
+                    catering.map((service, index) => <div key={index} className=' relative hvr'>
                         {service.type === 'catering' &&
-                            <div class="w-72 max-w-full bg-white cursor-pointer">
-                                <div class="w-full h-48">
-                                    <img src={service.img} class="w-full  object-cover" alt='' />
-                                </div>
-                                <div class="-mt-5">
-                                    <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
-                                    <div className='text-gray-500'>
-                                        <p class="mt-2">● {service.details.a}</p>
-                                        <p class="mt-2">● {service.details.b}</p>
-                                        <p class="mt-2">● {service.details.c}</p>
-                                        {service.details?.d &&
-                                            <p class="mt-2">● {service.details?.d}</p>
-                                        }
-                                    </div>
 
-                                    <div className="absolute top-0 left-[2rem] right-[2rem] bottom-0 bg-transparent cld">
-                                        <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
+                            <div className='flex justify-center'>
+                                <div class="w-72 max-w-full bg-white cursor-pointer">
+                                    <div class="w-full h-48">
+                                        <img src={service.img} class="w-full  object-cover" alt='' />
+                                    </div>
+                                    <div class="-mt-5">
+                                        <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
+                                        <div className='text-gray-500'>
+                                            <p class="mt-2">● {service.details.a}</p>
+                                            <p class="mt-2">● {service.details.b}</p>
+                                            <p class="mt-2">● {service.details.c}</p>
+                                            {service.details?.d &&
+                                                <p class="mt-2">● {service.details?.d}</p>
+                                            }
+                                        </div>
+
+                                        <div className="absolute top-0 left-[2rem] right-[2rem] bottom-0 bg-transparent cld">
+                                            <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
+                                        </div>
                                     </div>
                                 </div>
+
                             </div>
                         }
 
@@ -99,7 +102,7 @@ function Catering() {
             <div className='py-10 lg:pt-24'>
 
                 <div className='flex justify-center lg:-mb-5'>
-                    <p className='text-3xl font-bold '>
+                    <p className='lg:text-3xl font-bold px-2 text-center'>
                         <span className='text-amber-400 tracking-widest mr-2'>HEALTHY</span>
                         EATING AND
                         <span className='text-amber-400 tracking-widest mr-2'> VEGETARIAN</span>
@@ -108,7 +111,7 @@ function Catering() {
 
                 </div>
 
-                <div className='lg:flex justify-center items-center gap-x-7 lg:h-80'>
+                <div className='lg:flex justify-center items-center gap-x-7 lg:h-80 pt-5 lg:pt-0'>
                     <div className='lg:w-4/12 px-3 lg:px-0'>
                         <p className='lg:tracking-[5px] font-semibold'>VEGETARIAN AND VEGAN MEAL PREPARATION</p>
                         <p className='mt-5'>Sometimes it is difficult to be at a swanky event and the only meal available to vegetarians and vegans are steamed veggies. We can prepare flavorful vegetarian meals with 3 – 4 options. We can even provide certified organic ingredients for a nominal fee.</p>
