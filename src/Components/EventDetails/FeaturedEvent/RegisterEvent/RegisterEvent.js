@@ -19,6 +19,7 @@ const RegisterEvent = ({eventDetailsData}) => {
       professional:0,
       enterprise:0
    });
+
    const selecting = ({enterprise,professional,standard})=> {
       const enterOption =  enterpriseSelection.current.children;
       const profOption =  professionalSelection.current.children;
@@ -58,20 +59,27 @@ const RegisterEvent = ({eventDetailsData}) => {
       .then(data=> {
          setBooking(data?.data);
          selecting(data?.data);
+         setTicket({
+            enterprise: (data?.data?.enterprise?.ticket || 0),
+            professional: (data?.data?.professional?.ticket || 0),
+            standard: (data?.data?.standard?.ticket || 0),
+         });
       })
    },[fetchCount,user?.uid]);
 
    const enterprise = (e)=> {
-      // console.dir(e.target.children[booking?.enterprise?.ticket || 0].selected = true);
-      const enterprise = (parseInt(e.target.value) || 0) - (booking?.enterprise?.ticket || 0);
+      const enterprise = (parseInt(e.target.value) || 0)
+      //  - (booking?.enterprise?.ticket || 0);
       setTicket({...ticket,enterprise});
    }
    const professional = (e)=> {
-      const professional = (parseInt(e.target.value) || 0) - (booking?.professional?.ticket || 0);
+      const professional = (parseInt(e.target.value) || 0)
+      //  - (booking?.professional?.ticket || 0);
       setTicket({...ticket,professional});
    }
    const standard = (e)=> {
-      const standard = (parseInt(e.target.value) || 0) - (booking?.standard?.ticket || 0);
+      const standard = (parseInt(e.target.value) || 0)
+      //  - (booking?.standard?.ticket || 0);
       setTicket({...ticket,standard});
    }
 
@@ -105,7 +113,9 @@ const RegisterEvent = ({eventDetailsData}) => {
          });
       });
    }
-
+   
+   // console.log(ticket);
+   
    return (
       <section className='container mx-auto px-2 my-10'>
          <div class="">
@@ -123,7 +133,7 @@ const RegisterEvent = ({eventDetailsData}) => {
                      <div class="flex py-2 border-b items-center justify-between ">
                         <div class="">
                            <h3 class="ticket-title text-xl md:text-2xl font-semibold text-slate-600">ENTERPRISE</h3>
-                           <h4 class="ticket-price text-slate-500 text-base font-semibold">$ {ticket.enterprise*99 + (booking?.enterprise?.price || 0)}</h4>
+                           <h4 class="ticket-price text-slate-500 text-base font-semibold">$ {ticket.enterprise*99}</h4>
                         </div>
                         <div class="">
                            <div class="ticket-select">
@@ -138,7 +148,7 @@ const RegisterEvent = ({eventDetailsData}) => {
                      <div class="flex py-2 border-b items-center justify-between">
                         <div class="">
                            <h3 class="ticket-title text-xl md:text-2xl font-semibold text-slate-600">PROFESSIONAL</h3>
-                           <h4 class="ticket-price text-slate-500 font-semibold">$ {ticket.professional*59 + (booking?.professional?.price || 0)}</h4>
+                           <h4 class="ticket-price text-slate-500 font-semibold">$ {ticket.professional*59}</h4>
                         </div>
                         <div class="">
                            <div class="ticket-select">
@@ -155,7 +165,7 @@ const RegisterEvent = ({eventDetailsData}) => {
                      <div class="flex py-2 border-b items-center justify-between">
                         <div class="">
                            <h3 class="ticket-title text-xl md:text-2xl font-semibold text-slate-600">STANDARD</h3>
-                           <h4 class="ticket-price text-slate-500 font-semibold">$ {ticket.standard*19 + (booking?.standard?.price || 0)}</h4>
+                           <h4 class="ticket-price text-slate-500 font-semibold">$ {ticket.standard*19}</h4>
                         </div>
                         <div class="">
                            <div class="ticket-select">
@@ -176,7 +186,7 @@ const RegisterEvent = ({eventDetailsData}) => {
                         <span class="payment-card">
                            <img src={paymentCards} alt="payment Cards Not Found" />
                         </span>
-                        <span class="total-price text-slate-600 font-medium">TOTAL PRICE :  ${(ticket.enterprise*99)+(ticket.professional*59)+(ticket.standard*19)+(booking?.total || 0)}</span>
+                        <span class="total-price text-slate-600 font-medium">TOTAL PRICE :  ${(ticket.enterprise*99)+(ticket.professional*59)+(ticket.standard*19)}</span>
                      </div>
                      <div class="">
                         <button onClick={bookings} class="custom-btn text-base w-full md:text-lg px-6 uppercase cursor-pointer text-white rounded py-2 ">order now</button>
