@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function DisplayMyBooking({ booking, handleBookingCancle }) {
 
@@ -43,7 +44,7 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
 
                     <div class="card-actions justify-center lg:my-4">
                             <button onClick={() => handleBookingCancle(_id)} class="px-6 py-2 rounded-full bg bg-amber-400">Cancle</button>
-                            <button class="px-6 py-2 rounded-full bg bg-amber-400">Pay</button>
+                            <Link to='/dashboard/payment/${_id}' class="px-6 py-2 rounded-full bg bg-amber-400">Pay</Link>
                     </div>
                 </div>
             </div>

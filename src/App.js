@@ -50,6 +50,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./Firebase/firebase.init";
 import MyBooking from "./Components/Dashboard/MyBooking/MyBooking";
 import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
+import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
 
 function App() {
   const location = useLocation();
@@ -117,6 +118,13 @@ function App() {
             path="/dashboard/my-booking"
             element={
               <MyBooking />
+            }
+          ></Route>
+
+          <Route
+            path="/dashboard/payment/:_id"
+            element={
+              <Payment />
             }
           ></Route>
 
