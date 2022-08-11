@@ -257,7 +257,8 @@ function SingleService() {
 
                 <input
                   required
-                  className="resize-none w-full outline-none p-6 rounded-md h-[70px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
+                  className="resize-none w-full outline-none p-6 rounded-md h-[7
+                    0px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
                   placeholder="Your Address"
                   name="address"
                 ></input>
