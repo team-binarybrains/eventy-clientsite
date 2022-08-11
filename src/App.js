@@ -49,6 +49,7 @@ import useToken from "./Components/Hooks/useToken";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./Firebase/firebase.init";
 import MyBooking from "./Components/Dashboard/MyBooking/MyBooking";
+import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
 
 function App() {
   const location = useLocation();
@@ -113,14 +114,21 @@ function App() {
           ></Route>
 
           <Route
-            // index
             path="/dashboard/my-booking"
             element={
+              <MyBooking />
+            }
+          ></Route>
+
+          <Route
+            path="/dashboard/all-booking"
+            element={
               <RequireAdmin>
-                <MyBooking/>
+                <AllBookings />
               </RequireAdmin>
             }
           ></Route>
+
         </Route>
 
         {/* blog */}

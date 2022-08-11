@@ -82,7 +82,19 @@ const Dashboard = () => {
               </li>
             }
 
-            {/* for user */}
+            {/* booking info for admin */}
+            {admin &&
+              <li className="text-lg hover:bg-[#0f172a]  rounded">
+                <CustomLink
+                  className="flex justify-center items-center gap-2"
+                  to={"/dashboard/all-booking"}
+                >
+                  <span className=" font-bold"> ALL BOOKINGS</span>
+                </CustomLink>
+              </li>
+            }
+
+            {/* booking info for user */}
             {!admin &&
               <li className="text-lg hover:bg-[#0f172a]  rounded">
                 <CustomLink
