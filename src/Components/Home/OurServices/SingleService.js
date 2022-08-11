@@ -5,17 +5,21 @@ import { FiMail } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import axios, { Axios } from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./SingleService.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/firebase.init";
 // import style from '../Venues/venue.module.css'
 
 function SingleService() {
-  const [user]=useAuthState(auth)
+
+  const venueForm = useRef()
+
+  const [user] = useAuthState(auth)
   const { id } = useParams();
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
+  const [selectVenue, setSelectVenue] = useState('')
   // const [serviceDetails, setServiceDetails] = useState({})
   // console.log(serviceDetails);
   const details = useFetch(`http://localhost:5000/single-service/${id}`, {});
@@ -43,6 +47,7 @@ function SingleService() {
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,
+      ...selectVenue
     };
     console.log(bookingInfo);
 
@@ -90,7 +95,7 @@ function SingleService() {
   };
 
   return (
-    <div className="route">
+    <div className="route scroll-smooth">
       <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
         <div className="flex justify-center items-center h-full lg:-mt-8">
           <div className="text-white">
@@ -186,7 +191,13 @@ function SingleService() {
                   {select.star} ⭐ <br /> Hotel
                 </p>
               </div>
-              {/* <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}>Book Now</button> */}
+              <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}
+                onClick={() => {
+                  setSelectVenue(select)
+                  venueForm.current.scrollIntoView(0, 20)
+                }}
+
+              >SELECT</button>
             </div>
           </div>
         </section>
@@ -223,6 +234,7 @@ function SingleService() {
               <form
                 onSubmit={submission}
                 className="lg:space-y-8 w-full max-w-[780px] mt-5"
+                ref={venueForm}
               >
                 <div className="lg:flex lg:gap-8">
                   <input
@@ -236,7 +248,7 @@ function SingleService() {
                     required
                     className=" text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] text-gray-500 rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
                     readOnly
-                    value={user.email}
+                    value={user?.email}
                     type="email"
                     placeholder="Your email"
                     name="user_email"
@@ -247,8 +259,10 @@ function SingleService() {
                   <input
                     required
                     className="text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
+                    readOnly
+                    value={`${selectVenue?.venueName ? selectVenue?.venueName + ' : ' : ''}${selectVenue?.code || ''}`}
                     type="text"
-                    placeholder="Venue Code"
+                    placeholder="Venue"
                     name="code"
                   />
                   <input
