@@ -48,6 +48,7 @@ import { signOut } from "firebase/auth";
 import useToken from "./Components/Hooks/useToken";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "./Firebase/firebase.init";
+import MyBooking from "./Components/Dashboard/MyBooking/MyBooking";
 
 function App() {
   const location = useLocation();
@@ -110,6 +111,16 @@ function App() {
               </RequireAdmin>
             }
           ></Route>
+
+          <Route
+            // index
+            path="/dashboard/my-booking"
+            element={
+              <RequireAdmin>
+                <MyBooking/>
+              </RequireAdmin>
+            }
+          ></Route>
         </Route>
 
         {/* blog */}
@@ -163,7 +174,7 @@ function App() {
         ></Route>
 
         {/* nornal routes */}
-        <Route path="/manage-profile" element={ <RequireAuth><UserProfile /></RequireAuth>} ></Route>
+        <Route path="/manage-profile" element={<RequireAuth><UserProfile /></RequireAuth>} ></Route>
         <Route path="/update/user-profile" element={<RequireAuth><UpdateUser /></RequireAuth>} ></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
         <Route path="/ourteam" element={<OurTeam />}></Route>
