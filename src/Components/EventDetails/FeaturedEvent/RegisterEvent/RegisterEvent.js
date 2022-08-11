@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Link } from 'react-scroll';
 import './RegisterEvent.css'
 import paymentCards from '../img/payment-cards.png'
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -13,7 +12,6 @@ const RegisterEvent = ({eventDetailsData}) => {
 
    const [user] = useAuthState(auth);
    const [fetchCount,setFetchCount]=useState(true);
-   const [booking,setBooking] = useState({});
    const [ticket,setTicket] = useState({
       standard:0,
       professional:0,
@@ -57,7 +55,6 @@ const RegisterEvent = ({eventDetailsData}) => {
    useEffect(()=> {
       axios.get(`http://localhost:5000/ticket-booking/${user?.uid}`)
       .then(data=> {
-         setBooking(data?.data);
          selecting(data?.data);
          setTicket({
             enterprise: (data?.data?.enterprise?.ticket || 0),
