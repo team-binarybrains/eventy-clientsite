@@ -1,14 +1,17 @@
 [
     {
         "img":"https://i.ibb.co/wzm7WY5/Linens-Header.jpg",
+        "type":"linen",
         "name":"SUPERB LINEN SELECTION"
     },
     {
         "img":"https://i.ibb.co/TmtQPDG/Shiny-Linens.jpg",
+        "type":"linen",
         "name":"EVENT DECOR"
     },
     {
         "img":"https://i.ibb.co/d2XYT3D/938x462-Rental-Linens.jpg",
+        "type":"linen",
         "name":"TABLE SETTING"
     }
 ]

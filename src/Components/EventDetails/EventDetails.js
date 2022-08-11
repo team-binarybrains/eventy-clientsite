@@ -18,7 +18,7 @@ const EventDetails = () => {
   // console.log(id);
   const [eventDetailsData, setEventDetailsData] = useState({});
   axios.get(`http://localhost:5000/event-details/${id}`)
-      .then((data) => setEventDetailsData(data.data));
+    .then((data) => setEventDetailsData(data.data));
   // const eventDetailsData = useFetch(`http://localhost:5000/event-details/${id}`,{})
   // setEventDetailsData({name:'noName'})
   // console.log(eventDetailsData);

@@ -1,0 +1,35 @@
+[
+    {
+        "name":"HOSPITALITY STAFF MEET & GREETS",
+        "type":"destination",
+        "img":"https://i.ibb.co/JBkjsJ9/event.jpg",
+        "details":{
+            "a":"OFFSITE MEETINGS",
+            "b":"HOSPITALITY STAFF",
+            "c":"LUXURY & SPECIAL OCCASIONS",
+            "d":"THEATRE & ENTERTAINMENT OPTIONS"
+        }
+    },
+    {
+        "name":"TOURS & PLANNED OUTINGS",
+        "type":"destination",
+        "img":"https://i.ibb.co/yfTfvrj/TRENO-DA.jpg",
+        "details":{
+            "a":"SIGHTSEEING",
+            "b":"MUSEUM TOURS",
+            "c":"NIGHT TOURS OF WASHINGTON AND VA",
+            "d":"PRIVATE DINING FOR SMALL MEETINGS"
+        }
+    },
+    {
+        "name":"DAY EXCURSIONS & TOURS",
+        "type":"destination",
+        "img":"https://i.ibb.co/9HFq2cj/Washington-DC-Fireworks.jpg",
+        "details":{
+            "a":"DINNER CRUISE",
+            "b":"SEGWAY AND BIKING",
+            "c":"GETTYSBURG DAY TRIPS",
+            "d":"CULTURAL & THEME TOURS"
+        }
+    }
+]
