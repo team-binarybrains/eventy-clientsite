@@ -17,10 +17,12 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
                             </div>
                             <div>
                                 <p className='lg:mt-3 text-xl font-semibold'>User Information</p>
-                                <p className=''>
-                                    <span>Address : {address}</span> <br />
-                                    <span>Phone : {phone}</span> <br />
-                                </p>
+                                <p className='grid'>
+                                <span>Name : {user_name}</span>
+                                <span>Phone : {phone}</span> 
+                                <span>Email : {user_email}</span>
+                                <span>Address : {address}</span>
+                            </p>
                             </div>
                         </div>
 
