@@ -31,7 +31,6 @@ const PartnerClient = () => {
         speed: 500,
         autoplaySpeed: 3000,
         beforeChange: (a,e)=> {
-            console.log(a,e);
             setCurrent(e);
         }
     };

@@ -1,6 +1,7 @@
 [
   {
     "title": "Barcelona Food Truck Festival 2018",
+    "venue":"Camp Nuo Stadium",
     "type": "music",
     "img": [
       "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
@@ -10,6 +11,7 @@
     "day": [
       {
         "title": "Greeting Welcome",
+        "date": "5,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -19,6 +21,7 @@
       },
       {
         "title": "Day two tittle",
+        "date": "6,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -28,52 +31,7 @@
       },
       {
         "title": "Day there tittle",
-        "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-        "speaker": "JENNY Juis",
-        "maxSeats": "2,250",
-        "eventStartTime": "11:00 pm",
-        "eventEndTime": "1:00 pm",
-        "image": "https://i.ibb.co/sbZBrKS/event-4.jpg"
-      }
-    ],
-    "image": "https://i.ibb.co/TK9GvgT/event-1.jpg",
-    "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-    "date": "5,August,2022",
-    "endDate": "8,August,2022",
-    "ticketprice": "70",
-    "starttime": "3:00 PM",
-    "endtime": "10:00 PM",
-    "address": "970 Nixon Court, Nipinnawasee, Alabama, 4365"
-  },
-  {
-    "title": "Barcelona Food Truck Festival 2018",
-    "type": "music",
-    "img": [
-      "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
-      "https://i.ibb.co/TK9GvgT/event-1.jpg",
-      "https://i.ibb.co/sbZBrKS/event-4.jpg"
-    ],
-    "day": [
-      {
-        "title": "Greeting Welcome",
-        "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-        "speaker": "JENNY Juis",
-        "maxSeats": "2,250",
-        "eventStartTime": "11:00 pm",
-        "eventEndTime": "1:00 pm",
-        "image": "https://i.ibb.co/sbZBrKS/event-4.jpg"
-      },
-      {
-        "title": "Day two tittle",
-        "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-        "speaker": "JENNY Juis",
-        "maxSeats": "2,250",
-        "eventStartTime": "11:00 pm",
-        "eventEndTime": "1:00 pm",
-        "image": "https://i.ibb.co/sbZBrKS/event-4.jpg"
-      },
-      {
-        "title": "Day there tittle",
+        "date": "8,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -93,6 +51,7 @@
   },
   {
     "title": "Dhaka Wine Party 2022 ",
+    "venue":"Pan Pacific Sonargaon Dhaka",
     "type": "music",
     "img": [
       "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
@@ -102,6 +61,7 @@
     "day": [
       {
         "title": "Greeting Welcome",
+        "date": "15,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -111,6 +71,7 @@
       },
       {
         "title": "Day two tittle",
+        "date": "17,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -120,6 +81,7 @@
       },
       {
         "title": "Day there tittle",
+        "date": "18,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -130,8 +92,8 @@
     ],
     "image": "https://i.ibb.co/sbZBrKS/event-4.jpg",
     "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-    "date": "5,August,2022",
-    "endDate": "8,August,2022",
+    "date": "15,August,2022",
+    "endDate": "18,August,2022",
     "ticketprice": "100",
     "starttime": "3:00 PM",
     "endtime": "10:00 PM",
@@ -139,6 +101,7 @@
   },
   {
     "title": "MK Conference Event",
+    "venue":"Radisson Blue",
     "type": "conference",
     "img": [
       "https://i.ibb.co/55Qn5mq/i-Stock-1054785410.jpg",
@@ -148,6 +111,7 @@
     "day": [
       {
         "title": "Greeting Welcome",
+        "date": "20,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -157,6 +121,7 @@
       },
       {
         "title": "Day two tittle",
+        "date": "21,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -166,6 +131,7 @@
       },
       {
         "title": "Day there tittle",
+        "date": "23,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -176,8 +142,8 @@
     ],
     "image": "https://i.ibb.co/m05Msqz/event-details-3.jpg",
     "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-    "date": "5,August,2022",
-    "endDate": "8,August,2022",
+    "date": "20,August,2022",
+    "endDate": "23,August,2022",
     "ticketprice": "50",
     "starttime": "3:00 PM",
     "endtime": "7:00 PM",
@@ -185,6 +151,7 @@
   },
   {
     "title": "Dhaka Music Event",
+    "venue":"Army Stadium Dhaka",
     "type": "music",
     "img": [
       "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
@@ -194,6 +161,7 @@
     "day": [
       {
         "title": "Greeting Welcome",
+        "date": "25,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -203,6 +171,7 @@
       },
       {
         "title": "Day two tittle",
+        "date": "27,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -212,6 +181,7 @@
       },
       {
         "title": "Day there tittle",
+        "date": "28,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -222,8 +192,8 @@
     ],
     "image": "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
     "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-    "date": "5,August,2022",
-    "endDate": "8,August,2022",
+    "date": "25,August,2022",
+    "endDate": "28,August,2022",
     "ticketprice": "50",
     "starttime": "4:00 PM",
     "endtime": "8:00 PM",
@@ -231,6 +201,7 @@
   },
   {
     "title": "Rangpur Music Event,2022",
+    "venue":"Rangpur College Field",
     "type": "music",
     "img": [
       "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
@@ -240,6 +211,7 @@
     "day": [
       {
         "title": "Greeting Welcome",
+        "date": "30,August,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -249,6 +221,7 @@
       },
       {
         "title": "Day two tittle",
+        "date": "1,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -258,6 +231,7 @@
       },
       {
         "title": "Day there tittle",
+        "date": "3,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -268,8 +242,8 @@
     ],
     "image": "https://i.ibb.co/tH7hrhZ/5.jpg",
     "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-    "date": "5,August,2022",
-    "endDate": "8,August,2022",
+    "date": "30,August,2022",
+    "endDate": "3,September,2022",
     "ticketprice": "40",
     "starttime": "4:00 PM",
     "endtime": "8:00 PM",
@@ -277,6 +251,7 @@
   },
   {
     "title": "USA Conference Event,2022",
+    "venue":"The Times Hotel",
     "type": "conference",
     "img": [
       "https://i.ibb.co/55Qn5mq/i-Stock-1054785410.jpg",
@@ -286,6 +261,7 @@
     "day": [
       {
         "title": "Greeting Welcome",
+        "date": "5,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -295,6 +271,7 @@
       },
       {
         "title": "Day two tittle",
+        "date": "6,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -304,6 +281,7 @@
       },
       {
         "title": "Day there tittle",
+        "date": "8,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -314,8 +292,8 @@
     ],
     "image": "https://i.ibb.co/ScjVJTD/event-details-1.jpg",
     "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-    "date": "5,August,2022",
-    "endDate": "8,August,2022",
+    "date": "5,September,2022",
+    "endDate": "8,September,2022",
     "ticketprice": "40",
     "starttime": "4:00 PM",
     "endtime": "8:00 PM",
@@ -323,6 +301,7 @@
   },
   {
     "title": "Big Conference Event,2022",
+    "venue":"Paninsula Chittagong",
     "type": "conference",
     "img": [
       "https://i.ibb.co/55Qn5mq/i-Stock-1054785410.jpg",
@@ -332,6 +311,7 @@
     "day": [
       {
         "title": "Greeting Welcome",
+        "date": "10,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -341,6 +321,7 @@
       },
       {
         "title": "Day two tittle",
+        "date": "12,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -350,6 +331,7 @@
       },
       {
         "title": "Day there tittle",
+        "date": "13,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -360,8 +342,8 @@
     ],
     "image": "https://i.ibb.co/HGPMDfq/event-6.jpg",
     "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-    "date": "5,August,2022",
-    "endDate": "8,August,2022",
+    "date": "10,September,2022",
+    "endDate": "13,September,2022",
     "ticketprice": "50",
     "starttime": "4:00 PM",
     "endtime": "6:00 PM",
@@ -369,6 +351,7 @@
   },
   {
     "title": "Dubai Music Event,2022",
+    "venue":"Atlantis Hotel",
     "type": "music",
     "img": [
       "https://i.ibb.co/ncZc4Vr/musical-event1.jpg",
@@ -378,6 +361,7 @@
     "day": [
       {
         "title": "Greeting Welcome",
+        "date": "15,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -387,6 +371,7 @@
       },
       {
         "title": "Day two tittle",
+        "date": "17,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -396,6 +381,7 @@
       },
       {
         "title": "Day there tittle",
+        "date": "18,September,2022",
         "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -406,8 +392,8 @@
     ],
     "image": "https://i.ibb.co/XjyGkvx/event-3-1.jpg",
     "description": "Drama Advisor Set Painter (HS Musical) -Show Choir Advisor - Lois Mann6.5.1.1.3 Honor Society AdvisorsArt Honor Society - Amy Pettit Music Honor Society - Lois MannSenior National Honor Society - Philomena Reduzzi Junior National Honor Society -6.5.1.1.4 Newspaper / Yearbook AdvisorsHS Newspaper- The Bear Facts - Jacqueline Ludka MS Newspaper-P.",
-    "date": "5,August,2022",
-    "endDate": "8,August,2022",
+    "date": "15,September,2022",
+    "endDate": "18,September,2022",
     "ticketprice": "100",
     "starttime": "4:00 PM",
     "endtime": "9:00 PM",
@@ -415,6 +401,7 @@
   },
   {
     "title": "Dubai Fashion Event,2022",
+    "venue":"Atlantis Hotel",
     "type": "fashion",
     "img": [
       "https://i.ibb.co/FDG1mcP/20160630-2021.jpg",
@@ -424,6 +411,7 @@
     "day": [
       {
         "title": "Greeting Welcome",
+        "date": "20,September,2022",
         "description": "The Mulleavys dug deep into their core for this collection. Ballet has been a long time reference for them, the fury of dancers’s fragility and power vibrating in most Rodarte collections. They, of course, famously explored this in their costumes for Black Swan, and the film reconates abstractly in their blush-to-black palette this season. In between, they make pit stops in bright fuchsia and teal, resurrecting their famous spiderweb knits from fall 2008. “They are practical in a sense that they mold to your body and impractical in the most amazing way,” says Kate of the signature knits. The original versions—mini tube dresses and long cardigans—are back to the sure joy of many fans, but the sisters aren’t just playing to archive-mania. They’ve also made bustiers and capes in the knit, the latter worn by Lana Condor in a blue look trimmed in feathers. “The cape,” Kate says, “is practical and whimsical.” And sometimes you need fashion to be just that, equal parts a slip dress and a fantasia. It’s that kind magic that makes so many celebrities show up for a Rodarte photoshoot: The girls who get it, get it.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -433,6 +421,7 @@
       },
       {
         "title": "Day two tittle",
+        "date": "21,September,2022",
         "description": "The Mulleavys dug deep into their core for this collection. Ballet has been a long time reference for them, the fury of dancers’s fragility and power vibrating in most Rodarte collections. They, of course, famously explored this in their costumes for Black Swan, and the film reconates abstractly in their blush-to-black palette this season. In between, they make pit stops in bright fuchsia and teal, resurrecting their famous spiderweb knits from fall 2008. “They are practical in a sense that they mold to your body and impractical in the most amazing way,” says Kate of the signature knits. The original versions—mini tube dresses and long cardigans—are back to the sure joy of many fans, but the sisters aren’t just playing to archive-mania. They’ve also made bustiers and capes in the knit, the latter worn by Lana Condor in a blue look trimmed in feathers. “The cape,” Kate says, “is practical and whimsical.” And sometimes you need fashion to be just that, equal parts a slip dress and a fantasia. It’s that kind magic that makes so many celebrities show up for a Rodarte photoshoot: The girls who get it, get it.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -442,6 +431,7 @@
       },
       {
         "title": "Day there tittle",
+        "date": "23,September,2022",
         "description": "The Mulleavys dug deep into their core for this collection. Ballet has been a long time reference for them, the fury of dancers’s fragility and power vibrating in most Rodarte collections. They, of course, famously explored this in their costumes for Black Swan, and the film reconates abstractly in their blush-to-black palette this season. In between, they make pit stops in bright fuchsia and teal, resurrecting their famous spiderweb knits from fall 2008. “They are practical in a sense that they mold to your body and impractical in the most amazing way,” says Kate of the signature knits. The original versions—mini tube dresses and long cardigans—are back to the sure joy of many fans, but the sisters aren’t just playing to archive-mania. They’ve also made bustiers and capes in the knit, the latter worn by Lana Condor in a blue look trimmed in feathers. “The cape,” Kate says, “is practical and whimsical.” And sometimes you need fashion to be just that, equal parts a slip dress and a fantasia. It’s that kind magic that makes so many celebrities show up for a Rodarte photoshoot: The girls who get it, get it.",
         "speaker": "JENNY Juis",
         "maxSeats": "2,250",
@@ -452,8 +442,8 @@
     ],
     "image": "https://i.ibb.co/VD61crR/fashion.png",
     "description": "The Mulleavys dug deep into their core for this collection. Ballet has been a long time reference for them, the fury of dancers’s fragility and power vibrating in most Rodarte collections. They, of course, famously explored this in their costumes for Black Swan, and the film reconates abstractly in their blush-to-black palette this season. In between, they make pit stops in bright fuchsia and teal, resurrecting their famous spiderweb knits from fall 2008. “They are practical in a sense that they mold to your body and impractical in the most amazing way,” says Kate of the signature knits. The original versions—mini tube dresses and long cardigans—are back to the sure joy of many fans, but the sisters aren’t just playing to archive-mania. They’ve also made bustiers and capes in the knit, the latter worn by Lana Condor in a blue look trimmed in feathers. “The cape,” Kate says, “is practical and whimsical.” And sometimes you need fashion to be just that, equal parts a slip dress and a fantasia. It’s that kind magic that makes so many celebrities show up for a Rodarte photoshoot: The girls who get it, get it.",
-    "date": "5,August,2022",
-    "endDate": "8,August,2022",
+    "date": "20,September,2022",
+    "endDate": "23,September,2022",
     "ticketprice": "100",
     "starttime": "4:00 PM",
     "endtime": "9:00 PM",

@@ -1,7 +1,7 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
-// import userIcon from '../../../asset/UserIcon/1946429.png'
 import { BiUser } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
 import TopnavBar from "../TopBar/TopnavBar";
@@ -10,7 +10,6 @@ import auth from "../../../Firebase/firebase.init";
 import { signOut } from "firebase/auth";
 
 const Navbar = ({ location }) => {
-  const navigate = useNavigate();
   const { pathname } = location;
   const routeName = pathname.slice("1");
   // console.dir(location);

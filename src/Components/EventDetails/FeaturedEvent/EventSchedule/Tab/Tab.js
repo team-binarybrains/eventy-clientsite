@@ -1,15 +1,19 @@
+/* eslint-disable no-unused-vars */
 import { useState } from "react";
 import DayOne from "../DayOne/DayOne";
 import "./Tab.css";
 
 function Tabs({ eventDetailsData }) {
+   const {day} = eventDetailsData;
+
+   console.log(day);
+
    const [toggleState, setToggleState] = useState(1);
 
    const toggleTab = (index) => {
       setToggleState(index);
    };
-
-   console.log(eventDetailsData);
+   
    return (
       <div className="tabContainer">
          <div className="bloc-tabs">
@@ -18,21 +22,21 @@ function Tabs({ eventDetailsData }) {
                onClick={() => toggleTab(1)}
             >
                <p className="text-2xl font-semibold block uppercase"> Day 1</p>
-               <p className=" font-semibold">{eventDetailsData?.date}</p>
+               <p className=" font-semibold">{day?.[0]?.date?.split(',')?.join(' ')}</p>
             </button>
             <button
                className={toggleState === 2 ? "eventTabs active-tabs" : "eventTabs"}
                onClick={() => toggleTab(2)}
             >
                <p className="text-2xl font-semibold block uppercase"> Day 2</p>
-               <p className=" font-semibold">{eventDetailsData?.date + 1}</p>
+               <p className=" font-semibold">{day?.[1]?.date?.split(',')?.join(' ')}</p>
             </button>
             <button
                className={toggleState === 3 ? "eventTabs active-tabs" : "eventTabs"}
                onClick={() => toggleTab(3)}
             >
                <p className="text-2xl font-semibold block  uppercase"> Day 3</p>
-               <p className=" font-semibold">{eventDetailsData?.date + 2}</p>
+               <p className=" font-semibold">{day?.[2]?.date?.split(',')?.join(' ')}</p>
             </button>
          </div>
 
@@ -41,32 +45,24 @@ function Tabs({ eventDetailsData }) {
                className={toggleState === 1 ? "content  active-content" : "content"}
             >
                <div className="">
-                  <DayOne data={eventDetailsData?.day?.[0]} />
+                  <DayOne data={day?.[0]} />
                </div>
             </div>
 
             <div
                className={toggleState === 2 ? "content  active-content" : "content"}
             >
-               {/* <h2>Content 2</h2> */}
-               <p>
-                  {/* Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente
-                  voluptatum qui adipisci. */}
-               </p>
+               <div className="">
+                  <DayOne data={day?.[1]} />
+               </div>
             </div>
 
             <div
                className={toggleState === 3 ? "content  active-content" : "content"}
             >
-               {/* <h2>Content 3</h2> */}
-               <p>
-                  {/* Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos sed
-                  nostrum rerum laudantium totam unde adipisci incidunt modi alias!
-                  Accusamus in quia odit aspernatur provident et ad vel distinctio
-                  recusandae totam quidem repudiandae omnis veritatis nostrum
-                  laboriosam architecto optio rem, dignissimos voluptatum beatae
-                  aperiam voluptatem atque. Beatae rerum dolores sunt. */}
-               </p>
+               <div className="">
+                  <DayOne data={day?.[2]} />
+               </div>
             </div>
          </div>
       </div>
