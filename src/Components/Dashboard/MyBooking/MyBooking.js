@@ -50,7 +50,7 @@ function MyBooking() {
     return (
         <div className='grid lg:grid-cols-2 grid-rows-none grid-cols-none gap-x-20 lg:p-20'>
             {
-                myBookingServices.map(booking => <DisplayMyBooking
+                [...myBookingServices].reverse().map(booking => <DisplayMyBooking
                     key={booking._id}
                     booking={booking}
                     handleBookingCancle={handleBookingCancle}

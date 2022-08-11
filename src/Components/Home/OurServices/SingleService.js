@@ -7,9 +7,12 @@ import { toast } from "react-toastify";
 import axios, { Axios } from "axios";
 import { useEffect, useState } from "react";
 import "./SingleService.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/firebase.init";
 // import style from '../Venues/venue.module.css'
 
 function SingleService() {
+  const [user]=useAuthState(auth)
   const { id } = useParams();
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
@@ -231,7 +234,9 @@ function SingleService() {
                   />
                   <input
                     required
-                    className=" text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
+                    className=" text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] text-gray-500 rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
+                    readOnly
+                    value={user.email}
                     type="email"
                     placeholder="Your email"
                     name="user_email"
