@@ -2,12 +2,16 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../Firebase/firebase.init';
+import useRefetch from '../../Hooks/useRefetch';
 import DisplayMyBooking from './DisplayMyBooking';
+import DisplayMyTickets from './DisplayMyTickets';
 
 function MyBooking() {
 
     const [user] = useAuthState(auth);
-    const [myBookingServices, setMyBookingServices] = useState([])
+    const [myBookingServices, setMyBookingServices] = useState([]);
+
+    const [tickets,loading,refetch] = useRefetch(`http://localhost:5000/user-booked-ticket/${user?.uid}`,[])
 
     useEffect(() => {
         const email = user.email;
@@ -68,6 +72,11 @@ function MyBooking() {
                         booking={booking}
                         handleBookingCancle={handleBookingCancle}
                     />)
+                }
+            </div>
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-5 gap-x-10 lg:p-10 items-stretch'>
+                {
+                    tickets?.map((ticket) => <DisplayMyTickets key={ticket?.eventId} ticket={ticket} refetch={refetch} />)
                 }
             </div>
         </div>
