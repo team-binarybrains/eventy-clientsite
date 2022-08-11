@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function DisplayMyBooking({ booking, handleBookingCancle }) {
 
@@ -17,10 +18,12 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
                             </div>
                             <div>
                                 <p className='lg:mt-3 text-xl font-semibold'>User Information</p>
-                                <p className=''>
-                                    <span>Address : {address}</span> <br />
-                                    <span>Phone : {phone}</span> <br />
-                                </p>
+                                <p className='grid'>
+                                <span>Name : {user_name}</span>
+                                <span>Phone : {phone}</span> 
+                                <span>Email : {user_email}</span>
+                                <span>Address : {address}</span>
+                            </p>
                             </div>
                         </div>
 
@@ -41,7 +44,7 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
 
                     <div class="card-actions justify-center lg:my-4">
                             <button onClick={() => handleBookingCancle(_id)} class="px-6 py-2 rounded-full bg bg-amber-400">Cancle</button>
-                            <button class="px-6 py-2 rounded-full bg bg-amber-400">Pay</button>
+                            <Link to='/dashboard/payment/${_id}' class="px-6 py-2 rounded-full bg bg-amber-400">Pay</Link>
                     </div>
                 </div>
             </div>
