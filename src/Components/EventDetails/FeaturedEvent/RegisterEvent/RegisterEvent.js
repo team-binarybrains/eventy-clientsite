@@ -1,3 +1,4 @@
+/* eslint-disable eqeqeq */
 import React, { useEffect, useRef, useState } from 'react';
 import './RegisterEvent.css'
 import paymentCards from '../img/payment-cards.png'
