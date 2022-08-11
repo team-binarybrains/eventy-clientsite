@@ -116,7 +116,7 @@ function SingleService() {
               <span className="text-4xl font-semibold font-serif -ml-2">
                 {description?.slice(0, 1)}
               </span>
-              <span className="-ml-1">{description?.slice(1)}</span>
+              <span>{description?.slice(1)}</span>
             </p>
             <p className="text-3xl font-semibold pl-7 lg:pl-0 py-2">
               Price: ${eventPrice}
@@ -224,14 +224,14 @@ function SingleService() {
                 <div className="lg:flex lg:gap-8">
                   <input
                     required
-                    className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
+                    className=" text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
                     type="text"
                     placeholder="Your name"
                     name="user_name"
                   />
                   <input
                     required
-                    className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
+                    className=" text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
                     type="email"
                     placeholder="Your email"
                     name="user_email"
@@ -241,14 +241,14 @@ function SingleService() {
                 <div className="lg:flex lg:gap-8">
                   <input
                     required
-                    className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
+                    className="text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
                     type="text"
                     placeholder="Venue Code"
                     name="code"
                   />
                   <input
                     required
-                    className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
+                    className="text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
                     type="text"
                     placeholder="Phone Number"
                     name="phone"
@@ -257,13 +257,13 @@ function SingleService() {
 
                 <input
                   required
-                  className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md h-[100px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
+                  className="resize-none w-full outline-none p-6 rounded-md h-[70px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
                   placeholder="Your Address"
                   name="address"
                 ></input>
                 <textarea
                   required
-                  className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md lg:h-[200px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
+                  className="resize-none w-full outline-none p-6 rounded-md lg:h-[150px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
                   placeholder="Your message"
                   name="message"
                 ></textarea>
