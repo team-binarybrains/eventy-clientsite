@@ -16,7 +16,7 @@ import TopBanner from "./TopBanner";
 
 const EventDetails = () => {
   const { id } = useParams();
-  // console.log(id);
+  console.log(id);
   const [eventDetailsData, setEventDetailsData] = useState({});
   useEffect(()=> {
     axios.get(`http://localhost:5000/event-details/${id}`)

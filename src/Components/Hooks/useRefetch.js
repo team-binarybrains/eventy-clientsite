@@ -10,8 +10,8 @@ const useRefetch = (url,initialValue=[],callback=()=>0)=> {
     useEffect(()=> {
         axios.get(url).then(({data}) => {
             setData(data);
-            setLoading(false);
             callback(data);
+            setLoading(false);
         })
     },[refetch,url]);
 
