@@ -13,30 +13,31 @@ const WriteAComment = () => {
     
       const [user] = useAuthState(auth);
     
-      const handleAddReview = (data) => {
-        const inputReview = {
+      const handleAdddetail = (data) => {
+        const inputdetail = {
           
           name:data?.name,
           phoneNumber:data?.phoneNumber,
-          review: data.review,
+          detail: data.detail,
+          email: data.email,
         };
     
-        fetch("https://enigmatic-dawn-06088.herokuapp.com/review", {
+        fetch("http://localhost:5000/comment", {
           method: "POST",
           headers: {
             "content-type": "application/json",
             // authorization: Bearer ${localStorage.getItem('accessToken')}
           },
-          body: JSON.stringify(inputReview),
+          body: JSON.stringify(inputdetail),
         })
           .then((res) => res.json())
-          .then((addedReview) => {
-            console.log(addedReview);
-            if (addedReview.insertedId) {
-              toast.success("Your review added successfully");
+          .then((addeddetail) => {
+            console.log(addeddetail);
+            if (addeddetail.insertedId) {
+              toast.success("Your detail added successfully");
               reset();
             } else {
-              toast.error("Faild to add your review. Please try again.");
+              toast.error("Faild to add your detail. Please try again.");
             }
           });
       };
@@ -45,7 +46,7 @@ const WriteAComment = () => {
         <div>
             <h1 className="text-[36px]">Write A <strong>Comment</strong></h1>
             <div>
-               <form onSubmit={handleSubmit(handleAddReview)}>
+               <form onSubmit={handleSubmit(handleAdddetail)}>
                 <div className=" md:flex gap-5 ">
                     
               
@@ -61,7 +62,7 @@ const WriteAComment = () => {
                         message: "name is required",
                       },
                       pattern: {
-                        value: /[0-9]/,
+                        value: /[A-z]/,
                         message: "your name is required",
                       },
                     })}
@@ -94,7 +95,7 @@ const WriteAComment = () => {
                         message: "email is required",
                       },
                       pattern: {
-                        value: /[A-Za-z]{3}/,
+                        value: /[A-Za-z]/,
                         message: "your email is required",
                       },
                     })}
@@ -146,48 +147,50 @@ const WriteAComment = () => {
                   </label>
                 </div>
 
-              
-
-
-                 {/* <input type="text" placeholder="Name" className="md:w-[280px]  w-full h-[52px] px-5  py-4 outline-amber-300 block mt-5  bg-[#f7f7f7]"/> 
-                <input type="email" placeholder="Email" className="md:w-[280px] w-full h-[52px] px-5 py-4 outline-amber-300 block mt-5  bg-[#f7f7f7]"/> 
-              <input type="text" placeholder="YOur Phone Number" className="md:w-[234px] w-full h-[52px] px-5 py-4 outline-amber-300 block mt-5  bg-[#f7f7f7]"/> */}
-
                 </div>
                 {/* <textarea className='w-full md:w-[760px] mt-5 h-[150px] outline-amber-300 bg-[#f7f7f7]'></textarea> */}
+                <div className="form-control md:w-[880px] lg:w-[880px]">
+               
+                <textarea
+                  type="text"
+                  placeholder="detail"
+                  name="detail"
+                  className="outline-amber-300 h-[150px] px-5 bg-[#f7f7f7] w-full "
+                  {...register("detail", {
+                    required: {
+                      value: true,
+                      message: "your detail is required",
+                    },
+                    minLength: {
+                      value: /A-z/,
+                      message: "your your detail  must be 20 character",
+                    },
+                  })}
+                />
+                <label className="label">
+                  {errors.detail?.type === "required" && (
+                    <span className="label-text-alt text-red-500">
+                      {errors.detail.message}
+                    </span>
+                  )}
+                  {errors.detail?.type === "minLength" && (
+                    <span className="label-text-alt text-red-500">
+                      {errors.detail.message}
+                    </span>
+                  )}
+                </label>
+              </div>
+              <p className="font-bold py-3">reding</p>
+              <div class=" rating">
+                
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+</div>
 
-                <div className="form-control  md:w-[900px] max-w-xs">
-                  <textarea
-                    type="text"
-                    placeholder="detail"
-                    name="detail"
-                    className="  w-full max-w-xs  mt-5 h-[150px] bg-[#f7f7f7] py-3 px-3 outline-amber-300"
-                    {...register("detail", {
-                      required: {
-                        value: true,
-                        message: "detail is required",
-                      },
-                      pattern: {
-                        value: /[0-9]/,
-                        message: "your detail is required",
-                      },
-                    })}
-                  />
-                  <label className="label">
-                    {errors.detail?.type === "required" && (
-                      <span className="label-text-alt text-red-500">
-                        {errors.detail.message}
-                      </span>
-                    )}
-                    {errors.detail?.type === "pattern" && (
-                      <span className="label-text-alt text-red-500">
-                        {errors.detail.message}
-                      </span>
-                    )}
-                  </label>
-                </div>
-
-<br />
+              <br />
                 <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10'> Submit Now</button>
                </form>
             </div>

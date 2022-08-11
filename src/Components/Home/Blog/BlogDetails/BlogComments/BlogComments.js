@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { AiTwotoneStar } from "react-icons/ai";
 import { GiSelfLove } from "react-icons/gi";
 import { FaShareSquare, FaReplyAll } from "react-icons/fa";
 import WriteAComment from "../../WriteAComment/WriteAComment";
 import "./BlogComment.s.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../../../Firebase/firebase.init";
 const BlogComments = () => {
+  const [comments, setComment] = useState([]);
+  const [user] = useAuthState(auth);
+  console.log(user);
+  useEffect(() => {
+    fetch("http://localhost:5000/comment")
+      .then((res) => res.json())
+      .then((data) => setComment(data));
+  }, []);
+
   return (
     <div className="max-w-7xl mx-auto px-5  ">
       <h1 className="text-[36px] ">
@@ -13,7 +24,11 @@ const BlogComments = () => {
       <div className=" flex gap-6 mt-16 ">
         <div className="mt-6 md:w-[892px] lg:w-[892px]  ">
           <div>
-            <div className="">
+          {[...comments]
+            .reverse()
+            .slice(0, 6)
+            .map((comment) => (
+              <div comment={comment} className="">
               <div className="flex gap-6">
                 <img
                   className="h-[82px] rounded-full"
@@ -28,16 +43,16 @@ const BlogComments = () => {
                     <AiTwotoneStar className="text-xl" />
                     <AiTwotoneStar className="text-xl" />
                   </div>
-                  <h1 className="text-4xl font-bold">John Doe</h1>
+                  <h1 className="text-4xl font-bold">{comment.name}</h1>
                 </div>
               </div>
+               
+
               <p className="text-[20px] md:ml-20 lg:ml-20 py-10">
-                Brilliant production. Enjoyed this as it captured so many
-                emotions and being Irish some bits resonated with Irish
-                families, the craic, singing. Fantastic acting and so many
-                surprises.
+               {comment.detail}
               </p>
             </div>
+            ))}
           </div>
 
           <div className=" md:flex justify-around">
