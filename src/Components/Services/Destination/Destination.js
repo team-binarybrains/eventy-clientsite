@@ -5,7 +5,7 @@ import useFetch from '../../Home/OurServices/Hook/useFetch'
 
 function Destination() {
 
-    const destinationServics = useFetch('http://localhost:5000/get-sub-services')
+    const destinationServics = useFetch(`http://localhost:5000/get-sub-services/destination`)
 
     return (
         <div className='route'>
@@ -76,10 +76,9 @@ function Destination() {
                     {
                         destinationServics.map((service, index) => <div key={index} className='flex justify-center relative hvr'>
 
-                            {service.type === 'destination' &&
                                 <div class="w-72 max-w-full bg-white cursor-pointer">
                                     <div class="w-full h-48">
-                                        <img src={service.img} class="w-full h-40 object-cover" alt='' />
+                                        <img src={service.img} class="w-full h-40 object-cover hover:scale-110 duration-500" alt='' />
                                     </div>
                                     <div class="-mt-5">
                                         <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
@@ -92,12 +91,11 @@ function Destination() {
                                             }
                                         </div>
 
-                                        <div className="absolute top-0 left-[5.6rem] right-[5.6rem] bottom-0 bg-transparent cld">
+                                        {/* <div className="absolute top-0 left-[5.6rem] right-[5.6rem] bottom-0 bg-transparent cld">
                                             <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
-                            }
 
                             {/* <div className="mt-8">
                         <p className="left-position uppercase text-gray-400 font-bold hover:text-[#ffbe30] tracking-[5px] cld2">
