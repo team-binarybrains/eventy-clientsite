@@ -5,7 +5,9 @@ import useFetch from '../../Home/OurServices/Hook/useFetch'
 
 function Logistics() {
 
-    const logisticServices = useFetch('http://localhost:5000/get-sub-services')
+    const logisticServices = useFetch(`http://localhost:5000/get-sub-services/logistic`)
+
+    const promotionServices = useFetch(`http://localhost:5000/get-sub-services/promotion`)
 
     return (
         <div className='route'>
@@ -59,7 +61,7 @@ function Logistics() {
 
 
             {/* ----------------------- */}
-            <div className='lg:pt-20 lg:-mb-24'>
+            <div className='lg:pt-20'>
                 <div className='flex justify-center lg:-mb-5'>
                     <p className='text-3xl font-bold '>
                         EVENTY
@@ -75,10 +77,9 @@ function Logistics() {
 
                             <div key={index} className='flex justify-center relative hvr'>
 
-                                {service?.type === 'logistic' &&
                                     <div class="w-72 max-w-full bg-white cursor-pointer">
                                         <div class="w-full h-48">
-                                            <img src={service.img} class="w-full h-40 object-cover" alt='' />
+                                            <img src={service.img} class="w-full h-40 object-cover hover:scale-110 duration-500" alt='' />
                                         </div>
                                         <div class="-mt-5">
                                             <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
@@ -91,12 +92,12 @@ function Logistics() {
                                                 }
                                             </div>
 
-                                            <div className="absolute top-0 left-[5.6rem] right-[5.6rem] bottom-0 bg-transparent cld">
+                                            {/* <div className="absolute top-0 left-[5.6rem] right-[5.6rem] bottom-0 bg-transparent cld">
                                                 <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
-                                            </div>
+                                            </div> */}
                                         </div>
                                     </div>
-                                }
+                               
 
                                 {/* <div className="mt-8">
                         <p className="left-position uppercase text-gray-400 font-bold hover:text-[#ffbe30] tracking-[5px] cld2">
@@ -114,7 +115,7 @@ function Logistics() {
 
             {/* ------------------ */}
             <div className='bg-gray-100 py-20'>
-                <div className='grid justify-center lg:-mb-5 '>
+                <div className='grid justify-center '>
                     <p className='text-3xl font-bold text-center'>
                         <span className='text-amber-400 tracking-widest mx-2'> PROMOTING YOUR BRAND </span>
                         IS OUR BUSINESS
@@ -129,24 +130,24 @@ function Logistics() {
             {/* ------------- */}
 
             <div>
-                <div className='grid lg:grid-cols-3 grid-cols-1 gap-y-20 lg:py-10 py-6 lg:mx-40'>
+                <div className='grid lg:grid-cols-4 grid-cols-1 gap-y-20 lg:py-10 py-6 lg:mx-40'>
                     {
-                        logisticServices.map((service, index) => <div key={index} className='flex justify-center items-center relative hvr'>
+                        promotionServices.map((service, index) => <div key={index} className='flex justify-center items-center relative hvr'>
 
-                            {service?.type === 'promotion' &&
+                        
                                 <div class="w-72 max-w-full bg-white cursor-pointer">
                                     <div class="w-full h-48">
-                                        <img src={service.img} class="w-full h-40 object-cover" alt='' />
+                                        <img src={service.img} class="w-full h-40 object-cover hover:scale-110 duration-500" alt='' />
                                     </div>
                                     <div class="-mt-5">
                                         <h5 class="text-lg font-medium text-amber-500">{service.name}</h5>
 
-                                        <div className="absolute top-0 left-[5.6rem] right-[5.6rem] bottom-0 bg-transparent cld">
+                                        {/* <div className="absolute top-0 left-[5.6rem] right-[5.6rem] bottom-0 bg-transparent cld">
                                             <BsPlusLg className="text-8xl text-white absolute top-[calc(50%-48px)] left-[calc(50%-48px)] pls" />
-                                        </div>
+                                        </div> */}
                                     </div>
                                 </div>
-                            }
+                          
 
                             {/* <div className="mt-8">
                         <p className="left-position uppercase text-gray-400 font-bold hover:text-[#ffbe30] tracking-[5px] cld2">

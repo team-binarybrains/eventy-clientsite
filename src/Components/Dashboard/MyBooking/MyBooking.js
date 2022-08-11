@@ -48,9 +48,9 @@ function MyBooking() {
 
 
     return (
-        <div className='grid lg:grid-cols-1 grid-rows-none grid-cols-none gap-y-5 gap-x-20 lg:p-20'>
+        <div>
 
-            <div className='flex justify-center border-b-2 lg:mb-5'>
+            <div className='flex justify-center border-b-2 lg:mb-5 lg:mt-10 mt-5'>
                 <p className='text-3xl font-bold '>
                     YOUR
                     <span className='text-amber-400 tracking-widest mx-2'>BOOKING</span>
@@ -60,13 +60,16 @@ function MyBooking() {
 
             </div>
 
-            {
-                [...myBookingServices].reverse().map(booking => <DisplayMyBooking
-                    key={booking._id}
-                    booking={booking}
-                    handleBookingCancle={handleBookingCancle}
-                />)
-            }
+            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-5 gap-x-10 lg:p-10'>
+
+                {
+                    [...myBookingServices].reverse().map(booking => <DisplayMyBooking
+                        key={booking._id}
+                        booking={booking}
+                        handleBookingCancle={handleBookingCancle}
+                    />)
+                }
+            </div>
         </div>
     )
 }
