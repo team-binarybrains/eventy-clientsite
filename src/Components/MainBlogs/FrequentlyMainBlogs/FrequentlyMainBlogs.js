@@ -53,24 +53,24 @@ const FrequentlyMainBlogs = () => {
                     </div>
 
                     {/* <div className=" md:py-5 px-5 "> */}
-                      <p className="text-[#ffbe30] text-[14px] px-5 mt-5">
-                        <BsBookmarkFill className="inline-block" /> Musical
-                        Event
-                      </p>
+                    <p className="text-[#ffbe30] text-[14px] px-5 mt-5">
+                      <BsBookmarkFill className="inline-block" /> Musical
+                      Event
+                    </p>
 
-                      <h1 className="text-[18px] font-bold py-5 px-5">
-                        {blog.tittle}
-                      </h1>
-                      <p className="text-[18px] px-5">{blog.details.slice(0, 50)}</p>
-                      
-                      <div className="self-start grow flex px-5">
+                    <h1 className="text-[18px] font-bold py-5 px-5">
+                      {blog.tittle}
+                    </h1>
+                    <p className="text-[18px] px-5">{blog.details.slice(0, 50)}</p>
+
+                    <div className="self-start grow flex px-5">
                       <button
                         onClick={() => handleBlogsDetails(blog._id)}
                         className="px-10 py-3 rounded-md font-bold text-[#878787]   hover:text-white bg-white red-more self-end"
                       >
                         Read More
                       </button>
-                      </div>
+                    </div>
                     {/* </div> */}
                   </div>
                 ))}

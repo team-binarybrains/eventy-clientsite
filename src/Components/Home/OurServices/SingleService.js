@@ -65,7 +65,7 @@ function SingleService() {
         "o9Z3tWsWjPM6vPC1M"
       )
       .then(
-        (result) => {},
+        (result) => { },
         (error) => {
           toast.error(error.text, { theme: "light" });
         }
@@ -145,9 +145,8 @@ function SingleService() {
                 {venues.map((venue) => {
                   return (
                     <div
-                      className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${
-                        venue._id === select._id && "selected"
-                      }`}
+                      className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${venue._id === select._id && "selected"
+                        }`}
                       key={venue.id}
                       onClick={() => selection(venue)}
                     >

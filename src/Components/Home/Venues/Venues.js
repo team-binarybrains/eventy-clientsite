@@ -40,9 +40,8 @@ const Venues = () => {
               {venues.map((venue) => {
                 return (
                   <div
-                    className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${
-                      venue._id === select._id && styles.selected
-                    } `}
+                    className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${venue._id === select._id && styles.selected
+                      } `}
                     key={venue.id}
                     onClick={() => selection(venue)}
                   >
