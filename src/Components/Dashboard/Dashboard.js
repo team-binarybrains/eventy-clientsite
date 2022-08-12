@@ -106,6 +106,17 @@ const Dashboard = () => {
                 </CustomLink>
               </li>
             }
+            {!admin &&
+              <li className="text-lg hover:bg-[#0f172a]  rounded">
+                <CustomLink
+                  className="flex justify-center items-center gap-2 "
+                  to={"/dashboard/add-event"}
+                >
+
+                  <span className="font-bold">ADD EVENT</span>
+                </CustomLink>
+              </li>
+            }
           </ul> 
         </div>
       </div>
