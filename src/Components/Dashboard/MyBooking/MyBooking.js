@@ -115,7 +115,7 @@ function MyBooking() {
                 <div
                     className={toggleState === 2 ? "content  active-content" : "content"}
                 >
-                    <div className='flex flex-wrap gap-5 p-10'>
+                    <div className='flex flex-wrap gap-5 p-3 lg:p-10'>
                         {
                             tickets?.map((ticket) => <DisplayMyTickets key={ticket?.eventId} ticket={ticket} refetch={refetch} />)
                         }
