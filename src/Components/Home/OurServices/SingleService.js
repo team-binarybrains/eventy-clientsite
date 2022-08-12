@@ -196,7 +196,7 @@ function SingleService() {
               <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}
                 onClick={() => {
                   setSelectVenue(select)
-                  venueForm.current.scrollIntoView(0, 20)
+                  venueForm.current.scrollIntoView()
                 }}
 
               >SELECT</button>
@@ -235,7 +235,7 @@ function SingleService() {
               </div>
               <form
                 onSubmit={submission}
-                className="lg:space-y-8 w-full max-w-[780px] mt-5"
+                className="lg:space-y-8 w-full max-w-[780px] mt-5 scroll-mt-52"
                 ref={venueForm}
               >
                 <div className="lg:flex lg:gap-8">
