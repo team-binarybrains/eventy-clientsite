@@ -21,53 +21,45 @@ const DisplayMyTickets = ({ticket,refetch}) => {
                 .then(({data}) => data?.acknowledged && refetch())
         }
     }
+
     return (
-        <div>
-            <div class="card-side bg-base-100 shadow-xl ">
-                {/* <figure><img src={image} alt="" className='h-80' /></figure> */}
-                <div class="card-body">
-                    <div className='grid gap-y-6'>
-                        <div className='flex lg:flex-col flex-col-reverse'>
+        <div class={`shadow-xl py-10 px-3 rounded-md bg-slate-200 basis-96 shrink`}>
 
-                            <div>
-                                <p className=' text-2xl operator italic'>User Information</p>
-                                <p className='grid'>
-                                    <span>Name : {user?.displayName}</span>
-                                    {/* <span>Phone : {phone}</span> */}
-                                    <span>Email : {user?.email}</span>
-                                    {/* <span>Address : {address}</span> */}
-                                </p>
-                            </div>
+            <div className='h-32 space-y-2'>
+                <span className='font-medium text-gray-500'>{event?.date}</span> <br />
+                <h3 class=" text-2xl openSans">{event?.title}</h3>
+                <span className='font-medium text-gray-500'>{event?.address}</span><br />
+            </div>
+            <div className='space-y-2 mt-5'>
+                <p class="text-xl openSans font-bold text-gray-700 mb-2">Ticket & Type</p>
+                <div className='grid grid-cols-3 gap-2'>
+                    <span className='font-bold'>Type</span>
+                    <span className='font-bold justify-self-center'>Ticket</span>
+                    <span className='font-bold justify-self-center'>Price</span>
+                    
+                    <span>Enterprise</span>
+                    <span className='justify-self-center'>{enterprise?.ticket}</span>
+                    <span className='justify-self-center'>${enterprise?.price}</span>
 
-                            <div className='mt-4 lg:mt-3'>
-                                <p class=" text-2xl operator italic"> Event : {event?.title}</p>
-                                <span>date : {event?.date}</span> <br />
-                                <span>Location : {event?.address}</span><br />
-                            </div>
+                    <span>Professional</span>
+                    <span className='justify-self-center'>{professional?.ticket}</span>
+                    <span className='justify-self-center'>${professional?.price}</span>
 
-                        </div>
+                    <span>Standard</span>
+                    <span className='justify-self-center'>{standard?.ticket}</span>
+                    <span className='justify-self-center'>${standard?.price}</span>
 
-                        <div className=''>
-                            <p class="text-2xl operator italic">Ticket & Type</p>
-                            <p className=''>
-                                <span>Enterprise({enterprise?.ticket}) : ${enterprise?.price}</span> <br />
-                                <span>Professional({professional?.ticket}) : ${professional?.price}</span> <br />
-                                <span>Standard({standard?.ticket}) : {standard?.price}</span> <br />
-                            </p>
-                        </div>
-                    </div>
-
-<hr />
-
-                    <div className='text-start'>
-                        <p className='uppercase text-lg font-semibold'>Total Amount = ${total} </p>
-                    </div>
-
-                    <div class="card-actions justify-end ">
-                        <button onClick={() => handleBookingCancle(eventId)} class="px-6 py-2 rounded-full bg bg-amber-400">Cancle</button>
-                        <Link to=' ' class="px-6 py-2 rounded-full bg bg-amber-400">Pay</Link>
-                    </div>
+                    <hr className='col-span-full '/>
+                    <span className='uppercase text-lg font-semibold col-span-2'>Total Amount =</span>
+                    <span className='uppercase text-lg font-semibold justify-self-center'>${total}</span>
                 </div>
+            </div>
+
+            
+
+            <div class="flex justify-end gap-5 px-5 pt-5">
+                <button onClick={() => handleBookingCancle(eventId)} class="btn btn-error text-white">Cancle</button>
+                <Link to=' ' class="btn btn-success text-white">Pay</Link>
             </div>
         </div>
     )

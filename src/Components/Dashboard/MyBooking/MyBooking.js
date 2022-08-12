@@ -74,7 +74,9 @@ function MyBooking() {
                     />)
                 }
             </div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-5 gap-x-10 lg:p-10 items-stretch'>
+            <hr />
+            <h1 className='text-center text-2xl text-black font-bold underline mt-5 openSans'>Your Booked Ticket of Public events</h1>
+            <div className='flex flex-wrap gap-5 p-10 max-w-7xl mx-auto'>
                 {
                     tickets?.map((ticket) => <DisplayMyTickets key={ticket?.eventId} ticket={ticket} refetch={refetch} />)
                 }
