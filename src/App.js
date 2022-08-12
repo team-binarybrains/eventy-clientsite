@@ -122,7 +122,7 @@ function App() {
           ></Route>
 
           <Route
-            path="/dashboard/payment/:_id"
+            path="/dashboard/payment/:Id"
             element={
               <Payment />
             }
