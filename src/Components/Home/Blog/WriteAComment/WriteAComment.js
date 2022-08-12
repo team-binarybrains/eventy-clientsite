@@ -50,7 +50,7 @@ const WriteAComment = () => {
                 <div className=" md:flex gap-5 ">
                     
               
-                <div className="form-control w-full md:w-[280px] lg:w-[280px] max-w-xs">
+                {/* <div className="form-control w-full md:w-[280px] lg:w-[280px] max-w-xs">
                   <input
                     type="text"
                     placeholder="Name"
@@ -79,11 +79,11 @@ const WriteAComment = () => {
                       </span>
                     )}
                   </label>
-                </div>
+                </div> */}
 
               
               
-                <div className="form-control w-full md:w-[280px] lg:w-[280px] max-w-xs">
+                {/* <div className="form-control w-full md:w-[280px] lg:w-[280px] max-w-xs">
                   <input
                     type="email"
                     placeholder="Email"
@@ -114,9 +114,9 @@ const WriteAComment = () => {
                   </label>
                 </div>
 
+               */}
               
-              
-                <div className="form-control w-full md:w-[280px] lg:w-[280px] max-w-xs">
+                {/* <div className="form-control w-full md:w-[280px] lg:w-[280px] max-w-xs">
                   <input
                     type="text"
                     placeholder="Phone Number"
@@ -145,7 +145,7 @@ const WriteAComment = () => {
                       </span>
                     )}
                   </label>
-                </div>
+                </div> */}
 
                 </div>
                 {/* <textarea className='w-full md:w-[760px] mt-5 h-[150px] outline-amber-300 bg-[#f7f7f7]'></textarea> */}
@@ -180,7 +180,7 @@ const WriteAComment = () => {
                   )}
                 </label>
               </div>
-              <p className="font-bold py-3">reding</p>
+              <p className="font-bold py-3">Reting</p>
               <div class=" rating">
                 
   <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
