@@ -10,10 +10,10 @@ import auth from "../../Firebase/firebase.init";
 
 const SingleEventBooking = () => {
 
-  const [user]=useAuthState(auth)
+  const [user] = useAuthState(auth)
   const { id } = useParams();
 
-  const event = useFetch(`http://localhost:5000/venue/${id}`, {});
+  const event = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/venue/${id}`, {});
   console.log(event);
 
   const { venueName, seats, price, code, star, img, location } = event;
@@ -38,7 +38,7 @@ const SingleEventBooking = () => {
     console.log(bookingInfo);
 
     axios
-      .post("http://localhost:5000/venue-booking", bookingInfo)
+      .post("https://fathomless-hamlet-59180.herokuapp.com/venue-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);

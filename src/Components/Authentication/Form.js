@@ -48,9 +48,9 @@ const Form = () => {
     signUpError,
   ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-   // sign In funcitonality below
-   const [signInWithEmailAndPassword, signInUser, signInLoading, signInError] =
-   useSignInWithEmailAndPassword(auth);
+  // sign In funcitonality below
+  const [signInWithEmailAndPassword, signInUser, signInLoading, signInError] =
+    useSignInWithEmailAndPassword(auth);
 
   const [updateProfile, updating, updateerror] = useUpdateProfile(auth);
 
@@ -72,7 +72,7 @@ const Form = () => {
       email: email,
     };
 
-    await fetch(`http://localhost:5000/user/${email}`, {
+    await fetch(`https://fathomless-hamlet-59180.herokuapp.com/user/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

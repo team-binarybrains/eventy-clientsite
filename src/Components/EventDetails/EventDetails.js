@@ -18,11 +18,11 @@ const EventDetails = () => {
   const { id } = useParams();
   console.log(id);
   const [eventDetailsData, setEventDetailsData] = useState({});
-  useEffect(()=> {
-    axios.get(`http://localhost:5000/event-details/${id}`)
-    .then((data) => setEventDetailsData(data.data));
-  },[id])
-  // const eventDetailsData = useFetch(`http://localhost:5000/event-details/${id}`,{})
+  useEffect(() => {
+    axios.get(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${id}`)
+      .then((data) => setEventDetailsData(data.data));
+  }, [id])
+  // const eventDetailsData = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${id}`,{})
   // setEventDetailsData({name:'noName'})
   // console.log(eventDetailsData);
 

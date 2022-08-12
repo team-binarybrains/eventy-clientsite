@@ -11,7 +11,7 @@ const BlogComments = () => {
   const [user] = useAuthState(auth);
   console.log(user);
   useEffect(() => {
-    fetch("http://localhost:5000/comment")
+    fetch("https://fathomless-hamlet-59180.herokuapp.com/comment")
       .then((res) => res.json())
       .then((data) => setComment(data));
   }, []);
@@ -24,35 +24,35 @@ const BlogComments = () => {
       <div className=" flex gap-6 mt-16 ">
         <div className="mt-6 md:w-[892px] lg:w-[892px]  ">
           <div>
-          {[...comments]
-            .reverse()
-            .slice(0, 6)
-            .map((comment) => (
-              <div comment={comment} className="">
-              <div className="flex gap-6">
-                <img
-                  className="h-[82px] rounded-full"
-                  src="https://i.ibb.co/T44K8gh/admin.png"
-                  alt=""
-                />
-                <div>
-                  <div className="flex text-[#ffbe30]">
-                    <AiTwotoneStar className="text-xl" />
-                    <AiTwotoneStar className="text-xl" />
-                    <AiTwotoneStar className="text-xl" />
-                    <AiTwotoneStar className="text-xl" />
-                    <AiTwotoneStar className="text-xl" />
+            {[...comments]
+              .reverse()
+              .slice(0, 6)
+              .map((comment) => (
+                <div comment={comment} className="">
+                  <div className="flex gap-6">
+                    <img
+                      className="h-[82px] rounded-full"
+                      src="https://i.ibb.co/T44K8gh/admin.png"
+                      alt=""
+                    />
+                    <div>
+                      <div className="flex text-[#ffbe30]">
+                        <AiTwotoneStar className="text-xl" />
+                        <AiTwotoneStar className="text-xl" />
+                        <AiTwotoneStar className="text-xl" />
+                        <AiTwotoneStar className="text-xl" />
+                        <AiTwotoneStar className="text-xl" />
+                      </div>
+                      <h1 className="text-4xl font-bold">{comment.name}</h1>
+                    </div>
                   </div>
-                  <h1 className="text-4xl font-bold">{comment.name}</h1>
-                </div>
-              </div>
-               
 
-              <p className="text-[20px] md:ml-20 lg:ml-20 py-10">
-               {comment.detail}
-              </p>
-            </div>
-            ))}
+
+                  <p className="text-[20px] md:ml-20 lg:ml-20 py-10">
+                    {comment.detail}
+                  </p>
+                </div>
+              ))}
           </div>
 
           <div className=" md:flex justify-around">

@@ -46,8 +46,8 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
                     </div>
 
                     <div class="card-actions justify-end ">
-                        <button onClick={() => handleBookingCancle(_id)} class="px-6 py-2 rounded-full bg bg-amber-400">Cancle</button>
-                        <Link to={`/dashboard/payment/${_id}`} class="px-6 py-2 rounded-full bg bg-amber-400">Pay</Link>
+                        <button onClick={() => handleBookingCancle(_id)} class="btn btn-error text-white">Cancle</button>
+                        <Link to={`/dashboard/payment/${_id}`} class="btn btn-success">Pay</Link>
                     </div>
                 </div>
             </div>

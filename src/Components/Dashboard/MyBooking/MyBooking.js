@@ -20,12 +20,12 @@ function MyBooking() {
     const [user] = useAuthState(auth);
     const [myBookingServices, setMyBookingServices] = useState([]);
 
-    const [tickets, loading, refetch] = useRefetch(`http://localhost:5000/user-booked-ticket/${user?.uid}`, [])
+    const [tickets, loading, refetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/user-booked-ticket/${user?.uid}`, [])
 
     useEffect(() => {
         const email = user.email;
 
-        axios.get(`http://localhost:5000/booking-info/${email}`, {
+        axios.get(`https://fathomless-hamlet-59180.herokuapp.com/booking-info/${email}`, {
             headers: {
                 authorization: ` Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -45,7 +45,7 @@ function MyBooking() {
         const proceed = window.confirm("Are you sure?");
 
         if (proceed) {
-            fetch(`http://localhost:5000/delete-booking/${id}`, {
+            fetch(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -67,7 +67,7 @@ function MyBooking() {
                     onClick={() => toggleTab(1)}
                 >
                     <p className="text-xl font-semibold block uppercase">Booked
-                        <span className={`mx-2 ${toggleState === 1? 'text-gray-700':'text-amber-500'}`}>Event</span>
+                        <span className={`mx-2 ${toggleState === 1 ? 'text-gray-700' : 'text-amber-500'}`}>Event</span>
                     </p>
                 </button>
 
@@ -75,8 +75,8 @@ function MyBooking() {
                     className={toggleState === 2 ? "eventTabs active-tabs" : "eventTabs"}
                     onClick={() => toggleTab(2)}
                 >
-                    <p className="text-xl font-semibold block uppercase">Booked 
-                        <span className={`mx-2 ${toggleState === 2? 'text-gray-700':'text-amber-500'}`}>Ticket</span>
+                    <p className="text-xl font-semibold block uppercase">Booked
+                        <span className={`mx-2 ${toggleState === 2 ? 'text-gray-700' : 'text-amber-500'}`}>Ticket</span>
                     </p>
                 </button>
 

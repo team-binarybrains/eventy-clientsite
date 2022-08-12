@@ -14,7 +14,7 @@ const Payment = () => {
 
   // const [product, setProduct] = useState({})
 
-  const url = `http://localhost:5000/payment/${Id}`
+  const url = `https://fathomless-hamlet-59180.herokuapp.com/payment/${Id}`
 
   // axios.get(url)
   // .then(res =>{

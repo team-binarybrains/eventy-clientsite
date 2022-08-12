@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 import auth from '../../../Firebase/firebase.init';
 import useRefetch from '../../Hooks/useRefetch';
 
-const DisplayMyTickets = ({ticket,refetch}) => {
+const DisplayMyTickets = ({ ticket, refetch }) => {
     const [user] = useAuthState(auth);
-    const { _id, enterprise, eventId, professional, standard, total, userId, bookingId} = ticket;
+    const { _id, enterprise, eventId, professional, standard, total, userId, bookingId } = ticket;
 
-    const [event] = useRefetch(`http://localhost:5000/event-details/${ticket?.eventId}`,{})
+    const [event] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${ticket?.eventId}`, {})
     // cancle order
     const handleBookingCancle = id => {
         console.log(id);
@@ -17,22 +17,22 @@ const DisplayMyTickets = ({ticket,refetch}) => {
         const proceed = window.confirm("Are you sure?");
 
         if (proceed) {
-            axios.delete(`http://localhost:5000/delete-booked-ticket/${id}`)
-                .then(({data}) => data?.acknowledged && refetch())
+            axios.delete(`https://fathomless-hamlet-59180.herokuapp.com/delete-booked-ticket/${id}`)
+                .then(({ data }) => data?.acknowledged && refetch())
         }
     }
 
-    const addressing = (e)=> {
+    const addressing = (e) => {
         const address = e?.split(',');
         const length = parseInt(address?.length / 2);
-        console.log([address?.slice(0,length+1)?.join(' '),address?.slice(length+1)?.join(' ')]);
-        return [address?.slice(0,length)?.join(' '),address?.slice(length)?.join(' ')];
+        console.log([address?.slice(0, length + 1)?.join(' '), address?.slice(length + 1)?.join(' ')]);
+        return [address?.slice(0, length)?.join(' '), address?.slice(length)?.join(' ')];
     }
-    const naming = (e)=> {
+    const naming = (e) => {
         const address = e?.split(' ');
         const length = parseInt(address?.length / 2);
-        console.log([address?.slice(0,length+1)?.join(' '),address?.slice(length+1)?.join(' ')]);
-        return [address?.slice(0,length)?.join(' '),address?.slice(length)?.join(' ')];
+        console.log([address?.slice(0, length + 1)?.join(' '), address?.slice(length + 1)?.join(' ')]);
+        return [address?.slice(0, length)?.join(' '), address?.slice(length)?.join(' ')];
     }
 
     return (
@@ -50,7 +50,7 @@ const DisplayMyTickets = ({ticket,refetch}) => {
                     <span className='font-bold'>Type</span>
                     <span className='font-bold justify-self-center'>Ticket</span>
                     <span className='font-bold justify-self-center'>Price</span>
-                    
+
                     <span>Enterprise</span>
                     <span className='justify-self-center'>{enterprise?.ticket}</span>
                     <span className='justify-self-center'>${enterprise?.price}</span>
@@ -63,15 +63,15 @@ const DisplayMyTickets = ({ticket,refetch}) => {
                     <span className='justify-self-center'>{standard?.ticket}</span>
                     <span className='justify-self-center'>${standard?.price}</span>
 
-                    <hr className='col-span-full '/>
+                    <hr className='col-span-full ' />
                     <span className='uppercase text-lg font-semibold col-span-2'>Total Amount =</span>
                     <span className='uppercase text-lg font-semibold justify-self-center'>${total}</span>
                 </div>
 
                 <div class="flex justify-end gap-5 px-5 pt-5">
-                <button onClick={() => handleBookingCancle(eventId)} class="btn btn-error text-white">Cancle</button>
-                <Link to=' ' class="btn btn-success text-white">Pay</Link>
-            </div>
+                    <button onClick={() => handleBookingCancle(eventId)} class="btn btn-error text-white">Cancle</button>
+                    <Link to=' ' class="btn btn-success text-white">Pay</Link>
+                </div>
             </div>
         </div>
     )

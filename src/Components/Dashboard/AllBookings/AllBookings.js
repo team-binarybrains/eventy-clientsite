@@ -8,7 +8,7 @@ function AllBookings() {
 
     useEffect(() => {
 
-        axios.get('http://localhost:5000/get-all-booking-info')
+        axios.get('https://fathomless-hamlet-59180.herokuapp.com/get-all-booking-info')
             .then(res => {
                 const { data } = res
                 setAllBooking(data)
@@ -18,14 +18,14 @@ function AllBookings() {
     }, [])
 
 
-     // cancle order
-     const handleBookingCancle = id => {
+    // cancle order
+    const handleBookingCancle = id => {
         console.log(id);
 
         const proceed = window.confirm("Are you sure?");
 
         if (proceed) {
-            fetch(`http://localhost:5000/delete-booking/${id}`, {
+            fetch(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
