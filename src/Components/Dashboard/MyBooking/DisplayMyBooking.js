@@ -10,38 +10,36 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
             <div class="card card-side bg-base-100 shadow-xl">
                 {/* <figure><img src={image} alt="" className='h-80' /></figure> */}
                 <div class="card-body">
-                    <div className='grid gap-y-6'>
-                        <div className='flex lg:flex-col flex-col-reverse'>
+                    <div className=''>
+                        <div className=''>
 
-                            <div>
-                                <p className=' text-2xl operator italic'>User Information</p>
-                                <p className='grid'>
-                                    <span>Name : {user_name}</span>
-                                    {/* <span>Phone : {phone}</span> */}
-                                    <span>Email : {user_email}</span>
-                                    {/* <span>Address : {address}</span> */}
-                                </p>
-                            </div>
+                            {/* <div>
+                                <p className=' text-2xl openSans'>User Information</p>
+                                <div className=''>
+                                    <p>Name : {user_name}</p>
+                                    <p>Phone : {phone}</p>
+                                    <p>Email : {user_email}</p>
+                                    <p>Address : {address}</p>
+                                </div>
+                            </div> */}
 
-                            <div className='mt-4 lg:mt-3'>
-                                <p class=" text-2xl operator italic"> Event : {eventName}</p>
-                                <span>Price : ${eventPrice}</span>
+                            <div className='mt-y lg:my-5'>
+                                <p class=" text-2xl openSans"> Event : {eventName}</p>
+                                <p>Price : ${eventPrice}</p>
                             </div>
 
                         </div>
 
                         <div className=''>
-                            <p class="text-2xl operator italic">Venue : {venueName}</p>
-                            <p className=''>
-                                <span>Price : ${price}</span> <br />
-                                <span>Venue code : {code}</span> <br />
-                                <span>Capacity : {seats} Seats</span> <br />
-                                <span>Location : {location}</span><br />
-                            </p>
+                            <p class="text-2xl openSans">Venue : {venueName}</p>
+                                <p>Price : ${price}</p>
+                                <p>Venue code : {code}</p> 
+                                <p>Capacity : {seats} Seats</p> 
+                                <p>Location : {location}</p>
                         </div>
                     </div>
 
-<hr />
+                    <hr />
 
                     <div className='text-start'>
                         <p className='uppercase text-lg font-semibold'>Total Amount = ${parseInt(eventPrice) + parseInt(price)} </p>
