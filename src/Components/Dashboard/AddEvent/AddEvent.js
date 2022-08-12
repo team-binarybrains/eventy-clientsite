@@ -35,7 +35,7 @@ const AddEvent = () => {
         const price = e.target.price.value;
         const description = e.target.description.value;
         const newService = { name, price, description, image: userImage };
-        
+
         // fetch(`https://morning-brushlands-93158.herokuapp.com/services?name=${name}`, {
         //     method: 'POST',
         //     headers: {
