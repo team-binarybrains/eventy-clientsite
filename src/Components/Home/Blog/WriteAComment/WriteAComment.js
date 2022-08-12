@@ -1,9 +1,16 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import auth from "../../../../Firebase/firebase.init";
+
+
 const WriteAComment = () => {
+  const [stars, setStars] = useState(5);
+  const countStars = (e) => {
+    setStars(e.target.value);
+  }
   const {
     register,
     formState: { errors },
@@ -20,6 +27,7 @@ const WriteAComment = () => {
       phoneNumber: data?.phoneNumber,
       detail: data.detail,
       email: data.email,
+      rating: stars
     };
 
     fetch("http://localhost:5000/comment", {
@@ -181,13 +189,13 @@ const WriteAComment = () => {
             </label>
           </div>
           <p className="font-bold py-3">reding</p>
-          <div class=" rating">
 
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+          <div onClick={countStars} class=" rating">
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={1} />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={2} />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={3} />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={4} />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={5} />
           </div>
 
           <br />
