@@ -53,8 +53,7 @@ function SingleService() {
     };
     console.log(bookingInfo);
 
-    axios
-      .post("http://localhost:5000/service-booking", bookingInfo)
+    axios.post("http://localhost:5000/service-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);
