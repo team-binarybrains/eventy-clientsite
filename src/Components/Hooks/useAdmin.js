@@ -9,7 +9,7 @@ const useAdmin = (user) => {
         // console.log(email);
         if (email) {
             axios
-                .get(`https://fathomless-hamlet-59180.herokuapp.com/admin/${email}`, {
+                .get(`http://localhost:5000/admin/${email}`, {
                     headers: {
                         authorization: `Bearer ${localStorage.getItem("accessToken")}`,
                     },

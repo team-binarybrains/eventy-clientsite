@@ -7,7 +7,7 @@ const AllUsers = () => {
   // console.log(allUsers);
 
   useEffect(() => {
-    axios.get("https://fathomless-hamlet-59180.herokuapp.com/allusers").then((res) => {
+    axios.get("http://localhost:5000/allusers").then((res) => {
       const { data } = res;
       setAllUsers(data);
     });
@@ -15,7 +15,7 @@ const AllUsers = () => {
   const handleDeleteUser = (id) => {
     const proceed = window.confirm("Are you sure?");
     if (proceed) {
-      const url = `https://fathomless-hamlet-59180.herokuapp.com/delete-user/${id}`;
+      const url = `http://localhost:5000/delete-user/${id}`;
       fetch(url, {
         method: "DELETE",
       })

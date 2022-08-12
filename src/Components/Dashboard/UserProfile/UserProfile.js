@@ -19,7 +19,7 @@ const UserProfile = () => {
     //   const { data } = res;
     //   setUpdateUser(data);
     // });
-    fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`)
+    fetch(`http://localhost:5000/single-user/${email}`)
       .then(res => res.json())
       .then(data => setCurrentUser(data))
   }, [email]);

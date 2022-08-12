@@ -10,7 +10,7 @@ import AllSingleeventList from "./AllSingleeventList";
 const AllEventList = () => {
   const [eventLists, setEventLists] = useState([]);
   useEffect(() => {
-    fetch("https://fathomless-hamlet-59180.herokuapp.com/alleventlisting")
+    fetch("http://localhost:5000/alleventlisting")
       .then((res) => res.json())
       .then((data) => setEventLists(data));
   }, []);

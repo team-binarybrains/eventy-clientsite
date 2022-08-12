@@ -22,7 +22,7 @@ const WriteAComment = () => {
       email: data.email,
     };
 
-    fetch("https://fathomless-hamlet-59180.herokuapp.com/comment", {
+    fetch("http://localhost:5000/comment", {
       method: "POST",
       headers: {
         "content-type": "application/json",

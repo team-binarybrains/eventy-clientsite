@@ -5,7 +5,7 @@ import useFetch from '../../Home/OurServices/Hook/useFetch'
 
 function Lighting() {
 
-    const soundLighting = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/get-sub-services/lighting`)
+    const soundLighting = useFetch(`http://localhost:5000/get-sub-services/lighting`)
 
     return (
         <div className='route'>

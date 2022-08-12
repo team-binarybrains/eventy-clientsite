@@ -22,7 +22,7 @@ function SingleService() {
   const [selectVenue, setSelectVenue] = useState('')
   // const [serviceDetails, setServiceDetails] = useState({})
   // console.log(serviceDetails);
-  const details = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/single-service/${id}`, {});
+  const details = useFetch(`http://localhost:5000/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
   const { price } = venues
@@ -53,7 +53,7 @@ function SingleService() {
     };
     console.log(bookingInfo);
 
-    axios.post("https://fathomless-hamlet-59180.herokuapp.com/service-booking", bookingInfo)
+    axios.post("http://localhost:5000/service-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);
@@ -87,7 +87,7 @@ function SingleService() {
 
   // const {venueCode} = venues
   useEffect(() => {
-    axios.get(`https://fathomless-hamlet-59180.herokuapp.com/venues`).then((res) => {
+    axios.get(`http://localhost:5000/venues`).then((res) => {
       setVenues(res?.data);
       setSelect(res?.data[0]);
     });

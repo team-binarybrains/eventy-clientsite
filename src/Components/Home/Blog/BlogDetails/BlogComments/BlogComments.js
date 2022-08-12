@@ -11,7 +11,7 @@ const BlogComments = () => {
   const [user] = useAuthState(auth);
   console.log(user);
   useEffect(() => {
-    fetch("https://fathomless-hamlet-59180.herokuapp.com/comment")
+    fetch("http://localhost:5000/comment")
       .then((res) => res.json())
       .then((data) => setComment(data));
   }, []);
