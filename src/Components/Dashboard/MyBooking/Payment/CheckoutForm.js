@@ -16,7 +16,7 @@ const CheckoutForm = ({ product }) => {
 
     // console.log(clientSecret);
 
-    const { _id, eventPrice, email, name } = product
+    const { _id, eventPrice, email, name, price } = product
     console.log(eventPrice)
 
     useEffect(() => {
