@@ -1,9 +1,11 @@
+/* eslint-disable eqeqeq */
 import React, { useEffect, useRef, useState } from 'react';
 import './RegisterEvent.css'
 import paymentCards from '../img/payment-cards.png'
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../Firebase/firebase.init';
 import axios from 'axios';
+import useRefetch from '../../../Hooks/useRefetch';
 
 const RegisterEvent = ({eventDetailsData}) => {
    const enterpriseSelection = useRef();
@@ -46,13 +48,9 @@ const RegisterEvent = ({eventDetailsData}) => {
          }
       }
 
-
-      /* console.log(enterpriseSelection.current.children[enterprise?.ticket || 0]);
-      console.log(professionalSelection.current.children[professional?.ticket || 0]);
-      console.log(standardSelection.current.children[standard?.ticket || 0]); */
    }
 
-   useEffect(()=> {
+   /* useEffect(()=> {
       axios.get(`http://localhost:5000/ticket-booking/${user?.uid}`)
       .then(data=> {
          selecting(data?.data);
@@ -62,28 +60,36 @@ const RegisterEvent = ({eventDetailsData}) => {
             standard: (data?.data?.standard?.ticket || 0),
          });
       })
-   },[fetchCount,user?.uid]);
+   },[fetchCount,user?.uid]); */
+
+   const [data,loading,refetch] = useRefetch(`http://localhost:5000/ticket-booking/${user?.uid+':'+eventDetailsData?._id}`,{},(data)=> {
+      selecting(data);
+      setTicket({
+         enterprise: (data?.enterprise?.ticket || 0),
+         professional: (data?.professional?.ticket || 0),
+         standard: (data?.standard?.ticket || 0),
+      });
+   })
 
    const enterprise = (e)=> {
       const enterprise = (parseInt(e.target.value) || 0)
-      //  - (booking?.enterprise?.ticket || 0);
       setTicket({...ticket,enterprise});
    }
    const professional = (e)=> {
       const professional = (parseInt(e.target.value) || 0)
-      //  - (booking?.professional?.ticket || 0);
       setTicket({...ticket,professional});
    }
    const standard = (e)=> {
       const standard = (parseInt(e.target.value) || 0)
-      //  - (booking?.standard?.ticket || 0);
       setTicket({...ticket,standard});
    }
 
    const bookings = ()=> {
       const {enterprise,professional,standard} = ticket;
       const booked = {
+         bookingId:user?.uid+':'+eventDetailsData?._id,
          userId:user?.uid,
+         eventId:eventDetailsData?._id,
          enterprise:{
             ticket:enterprise,
             price:parseInt(enterprise)*99
@@ -99,10 +105,10 @@ const RegisterEvent = ({eventDetailsData}) => {
          total:enterprise*99+professional*59+standard*19
       }
 
-      axios.put(`http://localhost:5000/ticket-booking/${user?.uid}`,{
+      axios.put(`http://localhost:5000/ticket-booking/${user?.uid+':'+eventDetailsData?._id}`,{
          booking:booked,
-      }).then(data => {
-         data?.data?.success && setFetchCount((previous)=> !previous);
+      }).then(({data}) => {
+         data?.success && refetch();
          setTicket({
             standard:0,
             professional:0,

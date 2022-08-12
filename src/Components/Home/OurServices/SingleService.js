@@ -25,6 +25,7 @@ function SingleService() {
   const details = useFetch(`http://localhost:5000/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
+  const {price} = venues
   // console.log(eventName.split(' '));
 
   const name = eventName?.split(" ");
@@ -44,6 +45,7 @@ function SingleService() {
       address: e.target.address.value,
       message: e.target.message.value,
       code: e.target.code.value,
+      // totalPrice: eventPrice + parseInt(price),
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,
@@ -295,6 +297,14 @@ function SingleService() {
                   value={image}
                   name="image"
                 />
+                
+                {/* <input
+                  required
+                  className="hidden"
+                  type="text"
+                  value={}
+                  name="totalPrice"
+                /> */}
 
                 <input
                   required
