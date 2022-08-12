@@ -22,15 +22,23 @@ const DisplayMyTickets = ({ticket,refetch}) => {
         }
     }
 
-    return (
-        <div class={`shadow-xl py-10 px-3 rounded-md bg-slate-200 basis-96 shrink`}>
+    const addressing = (e)=> {
+        const address = e?.split(',');
+        const length = parseInt(address?.length / 2);
+        console.log([address?.slice(0,length+1)?.join(' '),address?.slice(length+1)?.join(' ')]);
+        return [address?.slice(0,length)?.join(' '),address?.slice(length)?.join(' ')];
+    }
 
-            <div className='h-32 space-y-2'>
+    return (
+        <div class={`shadow-xl py-10 px-3 rounded-md bg-slate-200 basis-[43rem] gap-x-3 gap-y-3 shrink flex flex-wrap items-center justify-center `}>
+
+            <div className='h-32 space-y-2 basis-[20rem] shrink'>
                 <span className='font-medium text-gray-500'>{event?.date}</span> <br />
                 <h3 class=" text-2xl openSans">{event?.title}</h3>
-                <span className='font-medium text-gray-500'>{event?.address}</span><br />
+                <p className='font-medium text-gray-500'>{addressing(event?.address)[0]} <br /> {addressing(event?.address)[1]}</p><br />
             </div>
-            <div className='space-y-2 mt-5'>
+
+            <div className='space-y-2 basis-[20rem] shrink'>
                 <p class="text-xl openSans font-bold text-gray-700 mb-2">Ticket & Type</p>
                 <div className='grid grid-cols-3 gap-2'>
                     <span className='font-bold'>Type</span>
@@ -53,13 +61,11 @@ const DisplayMyTickets = ({ticket,refetch}) => {
                     <span className='uppercase text-lg font-semibold col-span-2'>Total Amount =</span>
                     <span className='uppercase text-lg font-semibold justify-self-center'>${total}</span>
                 </div>
-            </div>
 
-            
-
-            <div class="flex justify-end gap-5 px-5 pt-5">
+                <div class="flex justify-end gap-5 px-5 pt-5">
                 <button onClick={() => handleBookingCancle(eventId)} class="btn btn-error text-white">Cancle</button>
                 <Link to=' ' class="btn btn-success text-white">Pay</Link>
+            </div>
             </div>
         </div>
     )

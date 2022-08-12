@@ -6,7 +6,7 @@ import "./Tab.css";
 function Tabs({ eventDetailsData }) {
    const {day} = eventDetailsData;
 
-   console.log(day);
+   // console.log(day);
 
    const [toggleState, setToggleState] = useState(1);
 

@@ -1,12 +1,21 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react'
-import { useAuthState } from 'react-firebase-hooks/auth';
-import auth from '../../../Firebase/firebase.init';
-import useRefetch from '../../Hooks/useRefetch';
-import DisplayMyBooking from './DisplayMyBooking';
-import DisplayMyTickets from './DisplayMyTickets';
+/* eslint-disable no-unused-vars */
+import { useEffect, useState } from "react";
+import "../../EventDetails/FeaturedEvent/EventSchedule/Tab/Tab.css";
+import useRefetch from "../../Hooks/useRefetch";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/firebase.init";
+import axios from "axios";
+import DisplayMyBooking from "./DisplayMyBooking";
+import DisplayMyTickets from "./DisplayMyTickets";
 
 function MyBooking() {
+
+    const [toggleState, setToggleState] = useState(1);
+
+    const toggleTab = (index) => {
+        setToggleState(index);
+    };
+
 
     const [user] = useAuthState(auth);
     const [myBookingServices, setMyBookingServices] = useState([]);
@@ -29,7 +38,6 @@ function MyBooking() {
 
     }, [user])
 
-
     // cancle order
     const handleBookingCancle = id => {
         console.log(id);
@@ -50,39 +58,84 @@ function MyBooking() {
         }
     }
 
-
     return (
-        <div>
+        <div className="tabContainer">
+            <div className="bloc-tabs flex flex-col sm:flex-row">
 
-            <div className='flex justify-center border-b-2 lg:mb-5 lg:mt-10 mt-5'>
-                <p className='text-3xl font-bold '>
-                    YOUR
-                    <span className='text-amber-400 tracking-widest mx-2'>BOOKING</span>
-                    INFORMATION
+                <button
+                    className={toggleState === 1 ? "eventTabs active-tabs" : "eventTabs"}
+                    onClick={() => toggleTab(1)}
+                >
+                    <p className="text-xl font-semibold block uppercase">YOUR
+                        <span className={`mx-2 ${toggleState === 1? 'text-gray-700':'text-amber-500'}`}>BOOKING</span>
+                        INFORMATION</p>
+                </button>
 
-                </p>
+                <button
+                    className={toggleState === 2 ? "eventTabs active-tabs" : "eventTabs"}
+                    onClick={() => toggleTab(2)}
+                >
+                    <p className="text-xl font-semibold block uppercase">Your <span className={`mx-2 ${toggleState === 2? 'text-gray-700':'text-amber-500'}`}>Booked Ticket</span> Information</p>
+                </button>
+
+                <button
+                    className={`${toggleState === 3 ? "eventTabs active-tabs" : "eventTabs"} invisible`}
+                    onClick={() => toggleTab(3)}
+                >
+                    <p className="text-2xl font-semibold block  uppercase"></p>
+                    <p className=" font-semibold"> </p>
+                </button>
+                
+                <button
+                    className={`${toggleState === 4 ? "eventTabs active-tabs" : "eventTabs"} invisible`}
+                    onClick={() => toggleTab(4)}
+                >
+                    <p className="text-2xl font-semibold block  uppercase"></p>
+                    <p className=" font-semibold"> </p>
+                </button>
 
             </div>
 
-            <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-5 gap-x-10 lg:p-10'>
+            <div className="content-tabs">
+                <div
+                    className={toggleState === 1 ? "content  active-content" : "content"}
+                >
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-5 gap-x-10 lg:p-10'>
 
-                {
-                    [...myBookingServices].reverse().map(booking => <DisplayMyBooking
-                        key={booking._id}
-                        booking={booking}
-                        handleBookingCancle={handleBookingCancle}
-                    />)
-                }
-            </div>
-            <hr />
-            <h1 className='text-center text-2xl text-black font-bold underline mt-5 openSans'>Your Booked Ticket of Public events</h1>
-            <div className='flex flex-wrap gap-5 p-10 max-w-7xl mx-auto'>
-                {
-                    tickets?.map((ticket) => <DisplayMyTickets key={ticket?.eventId} ticket={ticket} refetch={refetch} />)
-                }
+                        {
+                            [...myBookingServices].reverse().map(booking => <DisplayMyBooking
+                                key={booking._id}
+                                booking={booking}
+                                handleBookingCancle={handleBookingCancle}
+                            />)
+                        }
+                    </div>
+                </div>
+
+                <div
+                    className={toggleState === 2 ? "content  active-content" : "content"}
+                >
+                    <div className='flex flex-wrap gap-5 p-10'>
+                        {
+                            tickets?.map((ticket) => <DisplayMyTickets key={ticket?.eventId} ticket={ticket} refetch={refetch} />)
+                        }
+                    </div>
+                </div>
+
+                {/* <div
+                    className={toggleState === 3 ? "content  active-content" : "content"}
+                >
+                    
+                </div> */}
+                
+                {/* <div
+                    className={toggleState === 4 ? "content  active-content" : "content"}
+                >
+                    
+                </div> */}
             </div>
         </div>
-    )
+    );
 }
 
-export default MyBooking
+export default MyBooking;
