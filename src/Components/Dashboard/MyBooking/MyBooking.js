@@ -20,7 +20,7 @@ function MyBooking() {
     const [user] = useAuthState(auth);
     const [myBookingServices, setMyBookingServices] = useState([]);
 
-    const [tickets,loading,refetch] = useRefetch(`http://localhost:5000/user-booked-ticket/${user?.uid}`,[])
+    const [tickets, loading, refetch] = useRefetch(`http://localhost:5000/user-booked-ticket/${user?.uid}`, [])
 
     useEffect(() => {
         const email = user.email;
@@ -67,7 +67,7 @@ function MyBooking() {
                     onClick={() => toggleTab(1)}
                 >
                     <p className="text-xl font-semibold block uppercase">YOUR
-                        <span className={`mx-2 ${toggleState === 1? 'text-gray-700':'text-amber-500'}`}>BOOKING</span>
+                        <span className={`mx-2 ${toggleState === 1 ? 'text-gray-700' : 'text-amber-500'}`}>BOOKING</span>
                         INFORMATION</p>
                 </button>
 
@@ -75,7 +75,7 @@ function MyBooking() {
                     className={toggleState === 2 ? "eventTabs active-tabs" : "eventTabs"}
                     onClick={() => toggleTab(2)}
                 >
-                    <p className="text-xl font-semibold block uppercase">Your <span className={`mx-2 ${toggleState === 2? 'text-gray-700':'text-amber-500'}`}>Booked Ticket</span> Information</p>
+                    <p className="text-xl font-semibold block uppercase">Your <span className={`mx-2 ${toggleState === 2 ? 'text-gray-700' : 'text-amber-500'}`}>Booked Ticket</span> Information</p>
                 </button>
 
                 <button
@@ -85,7 +85,7 @@ function MyBooking() {
                     <p className="text-2xl font-semibold block  uppercase"></p>
                     <p className=" font-semibold"> </p>
                 </button>
-                
+
                 <button
                     className={`${toggleState === 4 ? "eventTabs active-tabs" : "eventTabs"} invisible`}
                     onClick={() => toggleTab(4)}
@@ -96,6 +96,7 @@ function MyBooking() {
 
             </div>
 
+            {/* booked event array map */}
             <div className="content-tabs">
                 <div
                     className={toggleState === 1 ? "content  active-content" : "content"}
@@ -112,6 +113,7 @@ function MyBooking() {
                     </div>
                 </div>
 
+                {/* booked ticket array map */}
                 <div
                     className={toggleState === 2 ? "content  active-content" : "content"}
                 >
@@ -127,7 +129,7 @@ function MyBooking() {
                 >
                     
                 </div> */}
-                
+
                 {/* <div
                     className={toggleState === 4 ? "content  active-content" : "content"}
                 >
