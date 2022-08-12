@@ -2,26 +2,32 @@
 .divider::after {
    background-color: #cacaca;
 }
-.menu :where(li) > :where(*:not(ul)) {
+
+.menu :where(li)> :where(*:not(ul)) {
    padding-left: 0px;
    padding-right: 0px;
    padding-top: 0px;
    padding-bottom: 0px;
 }
+
 .hover\:bg-slate-300:hover {
    --tw-bg-opacity: 1;
    background-color: rgb(240, 240, 240);
 }
-.menu[class*=" p-"] li > *, .menu[class^="p-"] li > * {
-   border-radius:5px;
-   -webkit-border-radius:5px;
-   -moz-border-radius:5px;
-   -ms-border-radius:5px;
-   -o-border-radius:5px;
+
+.menu[class*=" p-"] li>*,
+.menu[class^="p-"] li>* {
+   border-radius: 5px;
+   -webkit-border-radius: 5px;
+   -moz-border-radius: 5px;
+   -ms-border-radius: 5px;
+   -o-border-radius: 5px;
 }
-.menu :where(li:not(.menu-title):not(:empty)) > :where(:not(ul).active), .menu :where(li:not(.menu-title):not(:empty)) > :where(*:not(ul):active) {
-   --tw-bg-opacity: 1; 
+
+.menu :where(li:not(.menu-title):not(:empty))> :where(:not(ul).active),
+.menu :where(li:not(.menu-title):not(:empty))> :where(*:not(ul):active) {
+   --tw-bg-opacity: 1;
    background-color: transparent;
    --tw-text-opacity: 1;
-   color: hsl(var(--pc) / var(--tw-text-opacity)); 
+   color: hsl(var(--pc) / var(--tw-text-opacity));
 }
