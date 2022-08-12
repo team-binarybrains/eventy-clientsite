@@ -66,16 +66,18 @@ function MyBooking() {
                     className={toggleState === 1 ? "eventTabs active-tabs" : "eventTabs"}
                     onClick={() => toggleTab(1)}
                 >
-                    <p className="text-xl font-semibold block uppercase">YOUR
-                        <span className={`mx-2 ${toggleState === 1? 'text-gray-700':'text-amber-500'}`}>BOOKING</span>
-                        INFORMATION</p>
+                    <p className="text-xl font-semibold block uppercase">Booked
+                        <span className={`mx-2 ${toggleState === 1? 'text-gray-700':'text-amber-500'}`}>Event</span>
+                    </p>
                 </button>
 
                 <button
                     className={toggleState === 2 ? "eventTabs active-tabs" : "eventTabs"}
                     onClick={() => toggleTab(2)}
                 >
-                    <p className="text-xl font-semibold block uppercase">Your <span className={`mx-2 ${toggleState === 2? 'text-gray-700':'text-amber-500'}`}>Booked Ticket</span> Information</p>
+                    <p className="text-xl font-semibold block uppercase">Booked 
+                        <span className={`mx-2 ${toggleState === 2? 'text-gray-700':'text-amber-500'}`}>Ticket</span>
+                    </p>
                 </button>
 
                 <button
