@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsBookmarkFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
+import style from './blog.module.css'
 
 const FrequentlyMainBlogs = () => {
   const [show, setShow] = useState(false);
@@ -38,10 +39,10 @@ const FrequentlyMainBlogs = () => {
 
               <div className="grid md:grid-cols-2 gap-7 p-5  lg:grid-cols-2 ">
                 {blogs.map((blog) => (
-                  <div blog={blog} className="hover:border-amber-600 border h-[500px] flex flex-col pb-5  bg-[#f7f7f7]">
+                  <div blog={blog} className={`h-[500px] flex flex-col pb-5  bg-[#f7f7f7] transition-transform ${style.blogCard}`}>
                     <div className="relative">
                       <img
-                        className="w-full h-[202px] object-cover"
+                        className={`w-full h-[202px] object-cover ${style.blogImg} overflow-hidden`}
                         src={blog?.image}
                         alt=""
                       />
