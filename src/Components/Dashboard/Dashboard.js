@@ -17,7 +17,7 @@ import useAdmin from "../Hooks/useAdmin";
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
   const [admin, adminLoading] = useAdmin(user);
-  
+
   return (
     <div className="mx-auto px-2 lg:px-0 route">
       <div class="drawer drawer-mobile">
@@ -53,7 +53,7 @@ const Dashboard = () => {
           ></label>
           <ul className="menu px-2 overflow-y-auto  bg-[#1e293b] border-r-1 shadow-lg  ">
             {/* <!-- Sidebar content here --> */}
-            { admin ||
+            {admin ||
               <li className="text-lg hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2 "
@@ -67,7 +67,7 @@ const Dashboard = () => {
                 </CustomLink>
               </li>
             }
-            { admin &&
+            {admin &&
               <li className="text-lg hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2"
@@ -81,7 +81,43 @@ const Dashboard = () => {
                 </CustomLink>
               </li>
             }
-          </ul>
+
+            {/* booking info for admin */}
+            {admin &&
+              <li className="text-lg hover:bg-[#0f172a]  rounded">
+                <CustomLink
+                  className="flex justify-center items-center gap-2"
+                  to={"/dashboard/all-booking"}
+                >
+                  <span className=" font-bold"> ALL BOOKINGS</span>
+                </CustomLink>
+              </li>
+            }
+
+            {/* booking info for user */}
+            {!admin &&
+              <li className="text-lg hover:bg-[#0f172a]  rounded">
+                <CustomLink
+                  className="flex justify-center items-center gap-2 "
+                  to={"/dashboard/my-booking"}
+                >
+
+                  <span className="font-bold">MY BOOKING</span>
+                </CustomLink>
+              </li>
+            }
+            {!admin &&
+              <li className="text-lg hover:bg-[#0f172a]  rounded">
+                <CustomLink
+                  className="flex justify-center items-center gap-2 "
+                  to={"/dashboard/add-event"}
+                >
+
+                  <span className="font-bold">ADD EVENT</span>
+                </CustomLink>
+              </li>
+            }
+          </ul> 
         </div>
       </div>
     </div>

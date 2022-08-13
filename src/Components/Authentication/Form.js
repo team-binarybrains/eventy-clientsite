@@ -48,6 +48,10 @@ const Form = () => {
     signUpError,
   ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+  // sign In funcitonality below
+  const [signInWithEmailAndPassword, signInUser, signInLoading, signInError] =
+    useSignInWithEmailAndPassword(auth);
+
   const [updateProfile, updating, updateerror] = useUpdateProfile(auth);
 
   const signUp = async (e) => {
@@ -87,14 +91,11 @@ const Form = () => {
   };
 
 
-  const [token] = useToken(signUpUser || googleUser || facebookUser);
+  const [token] = useToken(signUpUser || signInUser || googleUser || facebookUser);
   if (token) {
     navigate(location?.state?.from?.pathname || "/");
   }
 
-  // sign In funcitonality below
-  const [signInWithEmailAndPassword, signInUser, signInLoading, signInError] =
-    useSignInWithEmailAndPassword(auth);
 
   const signIn = (e) => {
     e.preventDefault();

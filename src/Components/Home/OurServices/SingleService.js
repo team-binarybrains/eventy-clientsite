@@ -5,19 +5,27 @@ import { FiMail } from "react-icons/fi";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 import axios, { Axios } from "axios";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./SingleService.css";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../../Firebase/firebase.init";
 // import style from '../Venues/venue.module.css'
 
 function SingleService() {
+
+  const venueForm = useRef()
+
+  const [user] = useAuthState(auth)
   const { id } = useParams();
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
+  const [selectVenue, setSelectVenue] = useState('')
   // const [serviceDetails, setServiceDetails] = useState({})
   // console.log(serviceDetails);
   const details = useFetch(`http://localhost:5000/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
+  const { price } = venues
   // console.log(eventName.split(' '));
 
   const name = eventName?.split(" ");
@@ -37,14 +45,15 @@ function SingleService() {
       address: e.target.address.value,
       message: e.target.message.value,
       code: e.target.code.value,
+      // totalPrice: eventPrice + parseInt(price),
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,
+      ...selectVenue
     };
     console.log(bookingInfo);
 
-    axios
-      .post("http://localhost:5000/service-booking", bookingInfo)
+    axios.post("http://localhost:5000/service-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);
@@ -56,6 +65,7 @@ function SingleService() {
           toast.error("Faild to prossed booking. Please try again.");
         }
       });
+
 
     emailjs
       .sendForm(
@@ -71,6 +81,7 @@ function SingleService() {
         }
       );
 
+    setSelectVenue(null)
     e.target.reset();
   };
 
@@ -87,7 +98,7 @@ function SingleService() {
   };
 
   return (
-    <div className="route">
+    <div className="route scroll-smooth">
       <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
         <div className="flex justify-center items-center h-full lg:-mt-8">
           <div className="text-white">
@@ -116,7 +127,7 @@ function SingleService() {
               <span className="text-4xl font-semibold font-serif -ml-2">
                 {description?.slice(0, 1)}
               </span>
-              <span className="-ml-1">{description?.slice(1)}</span>
+              <span>{description?.slice(1)}</span>
             </p>
             <p className="text-3xl font-semibold pl-7 lg:pl-0 py-2">
               Price: ${eventPrice}
@@ -183,7 +194,13 @@ function SingleService() {
                   {select.star} ⭐ <br /> Hotel
                 </p>
               </div>
-              {/* <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}>Book Now</button> */}
+              <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}
+                onClick={() => {
+                  setSelectVenue(select)
+                  venueForm.current.scrollIntoView()
+                }}
+
+              >SELECT</button>
             </div>
           </div>
         </section>
@@ -219,19 +236,22 @@ function SingleService() {
               </div>
               <form
                 onSubmit={submission}
-                className="lg:space-y-8 w-full max-w-[780px] mt-5"
+                className="lg:space-y-8 w-full max-w-[780px] mt-5 scroll-mt-52"
+                ref={venueForm}
               >
                 <div className="lg:flex lg:gap-8">
                   <input
                     required
-                    className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
+                    className=" text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
                     type="text"
                     placeholder="Your name"
                     name="user_name"
                   />
                   <input
                     required
-                    className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
+                    className=" text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] text-gray-500 rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
+                    readOnly
+                    value={user?.email}
                     type="email"
                     placeholder="Your email"
                     name="user_email"
@@ -241,14 +261,16 @@ function SingleService() {
                 <div className="lg:flex lg:gap-8">
                   <input
                     required
-                    className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
+                    className="text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
+                    readOnly
+                    value={`${selectVenue?.venueName ? selectVenue?.venueName + ' : ' : ''}${selectVenue?.code || ''}`}
                     type="text"
-                    placeholder="Venue Code"
+                    placeholder="Venue"
                     name="code"
                   />
                   <input
                     required
-                    className="border border-gray-900/30 text-paragraph h-[60px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
+                    className="text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
                     type="text"
                     placeholder="Phone Number"
                     name="phone"
@@ -257,13 +279,14 @@ function SingleService() {
 
                 <input
                   required
-                  className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md h-[100px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
+                  className="resize-none w-full outline-none p-6 rounded-md h-[7
+                    0px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
                   placeholder="Your Address"
                   name="address"
                 ></input>
                 <textarea
                   required
-                  className="border border-gray-900/30 resize-none w-full outline-none p-6 rounded-md lg:h-[200px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
+                  className="resize-none w-full outline-none p-6 rounded-md lg:h-[150px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
                   placeholder="Your message"
                   name="message"
                 ></textarea>
@@ -275,6 +298,14 @@ function SingleService() {
                   value={image}
                   name="image"
                 />
+
+                {/* <input
+                  required
+                  className="hidden"
+                  type="text"
+                  value={}
+                  name="totalPrice"
+                /> */}
 
                 <input
                   required

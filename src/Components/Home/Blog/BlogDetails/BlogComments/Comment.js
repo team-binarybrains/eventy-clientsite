@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { AiTwotoneStar } from "react-icons/ai";
+import { AiOutlineUser, AiTwotoneStar } from "react-icons/ai";
 import { GiSelfLove } from "react-icons/gi";
 import { FaShareSquare, FaReplyAll } from "react-icons/fa";
 
@@ -20,12 +20,25 @@ const Comment = ({ comment }) => {
       <div>
         <div className="">
           <div className="flex gap-6">
-            <img
-              className="h-[82px] rounded-full"
-              src={comment.img}
-              alt="img not available"
-            />
+            
+         <>
+         {comment.img && (
+                          <img
+                            src={comment.img}
+                            className="w-10 h-10 rounded-full"
+                            alt=""
+                          />
+                        )}
+
+                        {comment.img === null && (
+                          <span className="">
+                            <AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full" /> </span>)}
+         </>
+
+
             <div>
+            
+              <h1 className="text-xl font-bold">{comment.name}</h1>
               <div className="flex text-[#ffbe30]">
                 <AiTwotoneStar className="text-xl" />
                 <AiTwotoneStar className="text-xl" />
@@ -33,7 +46,6 @@ const Comment = ({ comment }) => {
                 <AiTwotoneStar className="text-xl" />
                 <AiTwotoneStar className="text-xl" />
               </div>
-              <h1 className="text-4xl font-bold">{comment.name}</h1>
             </div>
           </div>
 
@@ -42,7 +54,6 @@ const Comment = ({ comment }) => {
           </p>
         </div>
 
-        {/* // ))} */}
       </div>
 
       <div className=" md:flex justify-around">

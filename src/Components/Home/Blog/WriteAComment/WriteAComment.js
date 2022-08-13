@@ -18,9 +18,8 @@ const WriteAComment = () => {
           
           name:user?.displayName,
           img:user?.photoURL,
-          phoneNumber:data?.phoneNumber,
-          detail: data.detail,
-          email: data.email,
+          detail: data?.detail,
+          email: user?.email,
         };
     
         fetch("http://localhost:5000/comment", {
@@ -43,69 +42,63 @@ const WriteAComment = () => {
           });
       };
 
-    return (
-        <div>
-            <h1 className="text-[36px]">Write A <strong>Comment</strong></h1>
-            <div>
-               <form onSubmit={handleSubmit(handleAdddetail)}>
-                <div className=" md:flex gap-5 ">
 
-                </div>
-                <div className="form-control md:w-[880px] lg:w-[880px]">
-               
-                <textarea
-                  type="text"
-                  placeholder="detail"
-                  name="detail"
-                  className="outline-amber-300 h-[150px] px-5 bg-[#f7f7f7] w-full "
-                  {...register("detail", {
-                    required: {
-                      value: true,
-                      message: "your detail is required",
-                    },
-                    minLength: {
-                      value: /A-z/,
-                      message: "your your detail  must be 20 character",
-                    },
-                  })}
-                />
-                <label className="label">
-                  {errors.detail?.type === "required" && (
-                    <span className="label-text-alt text-red-500">
-                      {errors.detail.message}
-                    </span>
-                  )}
-                  {errors.detail?.type === "minLength" && (
-                    <span className="label-text-alt text-red-500">
-                      {errors.detail.message}
-                    </span>
-                  )}
-                </label>
-              </div>
-              <p className="font-bold py-3">Reting</p>
-              <div class=" rating">
-                
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-  <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-</div>
+  return (
+    <div className="mb-5">
+      <h1 className="text-[36px]">Write A <strong>Comment</strong></h1>
+      <div>
+        <form onSubmit={handleSubmit(handleAdddetail)}>
+          <div className=" md:flex gap-5 ">
 
-              <br />
-                <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10'> Submit Now</button>
-               </form>
-            </div>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-        
-        </div>
-    );
+          </div>
+          <div className="form-control md:w-[880px] lg:w-[880px]">
+            <textarea
+              type="text"
+              placeholder="detail"
+              name="detail"
+              className="outline-amber-300 h-[150px] px-5 bg-[#f7f7f7] w-full "
+              {...register("detail", {
+                required: {
+                  value: true,
+                  message: "your detail is required",
+                },
+                minLength: {
+                  value: /A-z/,
+                  message: "your your detail  must be 20 character",
+                },
+              })}
+            />
+            <label className="label">
+              {errors.detail?.type === "required" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.detail.message}
+                </span>
+              )}
+              {errors.detail?.type === "minLength" && (
+                <span className="label-text-alt text-red-500">
+                  {errors.detail.message}
+                </span>
+              )}
+            </label>
+          </div>
+          <p className="font-bold py-3">reding</p>
+          <div class=" rating">
+
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
+          </div>
+
+          <br />
+          <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10'> Submit Now</button>
+        </form>
+      </div>
+     
+
+    </div>
+  );
 };
 
 export default WriteAComment;

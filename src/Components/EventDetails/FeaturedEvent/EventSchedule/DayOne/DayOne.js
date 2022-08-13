@@ -1,13 +1,12 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react';
 import { FaMicrophone, FaTicketAlt, FaRegClock } from 'react-icons/fa';
 import payment from '../../img/1.hall.png'
 
 
 const DayOne = ({ data }) => {
-   const [showMore , setShowMore] = useState(false);
-const showMoreClick =( data)=>{
-   
-}
+   const [showMore, setShowMore] = useState(false);
+
    return (
       <div className="flex flex-wrap-reverse gap-2 route">
          <div className='basis-[320px] grow '>
@@ -40,19 +39,15 @@ const showMoreClick =( data)=>{
                   </div>
                </div>
                {/* <p className='py-6 text-slate-700 text-base' >{data?.description.slice(0,300)}</p> */}
-               {
-                  data?.description.length > 300 ? <p className='py-6 text-slate-700 text-base' >{data?.description.slice(0,300)} <button onClick={()=>showMoreClick(true)} className='text-black font-semibold  underline'>see more</button></p> : <p className='py-6 text-slate-700 text-base' >{data?.description} <button onClick={()=>showMoreClick(false)} className='text-black font-semibold  underline'>see less</button></p>
-               }
+               <p className='py-6 text-slate-700 text-base' >{showMore ? data?.description : data?.description?.slice(0, 200)} <button onClick={()=>setShowMore((previous) => !previous)} className='text-black font-semibold underline'>{showMore ? 'see less' : 'see more'}</button></p>
             </div>
          </div>
          <div className="md:grow-0 grow basis-[250px]">
-            <img src={payment} className='h-auto max-w-md w-full mx-auto' alt="" />
+            <img src={data?.image} className='h-auto max-w-md w-full mx-auto' alt="" />
          </div>
-         
+
       </div>
    );
 };
 
 export default DayOne;
-
-

@@ -44,10 +44,10 @@ import UserProfile from "./Components/Dashboard/UserProfile/UserProfile";
 import UpdateUser from "./Components/Dashboard/UserProfile/UpdateUser/UpdateUser";
 import RequireAdmin from "./Components/Authentication/RequireAdmin/RequireAdmin";
 import RequireAuth from "./Components/Authentication/RequireAuth/RequireAuth";
-import { signOut } from "firebase/auth";
-import useToken from "./Components/Hooks/useToken";
-import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "./Firebase/firebase.init";
+import MyBooking from "./Components/Dashboard/MyBooking/MyBooking";
+import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
+import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
+import AddEvent from "./Components/Dashboard/AddEvent/AddEvent";
 
 function App() {
   const location = useLocation();
@@ -110,6 +110,37 @@ function App() {
               </RequireAdmin>
             }
           ></Route>
+
+          <Route
+            path="/dashboard/my-booking"
+            element={
+              <MyBooking />
+            }
+          ></Route>
+
+          <Route
+            path="/dashboard/payment/:Id"
+            element={
+              <Payment />
+            }
+          ></Route>
+
+          <Route
+            path="/dashboard/all-booking"
+            element={
+              <RequireAdmin>
+                <AllBookings />
+              </RequireAdmin>
+            }
+          ></Route>
+
+          <Route
+            path="/dashboard/add-event"
+            element={
+              <AddEvent></AddEvent>
+            }
+          ></Route>
+
         </Route>
 
         {/* blog */}
@@ -163,7 +194,7 @@ function App() {
         ></Route>
 
         {/* nornal routes */}
-        <Route path="/manage-profile" element={ <RequireAuth><UserProfile /></RequireAuth>} ></Route>
+        <Route path="/manage-profile" element={<RequireAuth><UserProfile /></RequireAuth>} ></Route>
         <Route path="/update/user-profile" element={<RequireAuth><UpdateUser /></RequireAuth>} ></Route>
         <Route path="/authentication" element={<Form></Form>}></Route>
         <Route path="/ourteam" element={<OurTeam />}></Route>

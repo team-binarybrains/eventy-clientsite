@@ -15,7 +15,7 @@ const FeaturedEventDetails = ({eventDetailsData}) => {
                </div>
                <div className="">
                   <h3 className='text-slate-500 font-semibold text-base'>Event Date</h3>
-                  <h1 className='text-lg text-slate-700 font-semibold'>{eventDetailsData?.date}</h1>
+                  <h1 className='text-lg text-slate-700 font-semibold'>{eventDetailsData?.date?.split(',')?.join(' ')}</h1>
                </div>
             </div>
             <div className="flex items-center gap-4 bg-slate-200 py-3 rounded px-2 justify-center">
@@ -33,7 +33,7 @@ const FeaturedEventDetails = ({eventDetailsData}) => {
                </div>
                <div className="">
                   <h3 className='text-slate-500 font-semibold text-base'>Event Location</h3>
-                  <h1 className='text-lg text-slate-700 font-semibold'>{eventDetailsData?.address}</h1>
+                  <h1 className='text-sm text-slate-700 font-semibold'>{eventDetailsData?.address}</h1>
                </div>
             </div>
          </div>
