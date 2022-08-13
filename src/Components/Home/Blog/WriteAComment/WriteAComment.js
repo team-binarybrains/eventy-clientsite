@@ -6,7 +6,7 @@ import { toast } from "react-toastify";
 import auth from "../../../../Firebase/firebase.init";
 
 
-const WriteAComment = ({refetch}) => {
+const WriteAComment = ({refetch,blogId}) => {
   const [stars, setStars] = useState(5);
 
   const countStars = (e) => {
@@ -26,6 +26,8 @@ const WriteAComment = ({refetch}) => {
 
       const handleAdddetail = (data) => {
         const inputdetail = {
+          commentId:`${user?.uid}:${blogId}`,
+          blogId:blogId,
           uid:user?.uid,
           name:user?.displayName,
           img:user?.photoURL,

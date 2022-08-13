@@ -5,8 +5,8 @@ import Loading from '../../../../Share/Loading/Loading'
 import "./BlogComment.s.css";
 import Comment from "./Comment";
 
-const BlogComments = () => {
-  const [comments,loading,refetch] = useRefetch("http://localhost:5000/comment",[]);
+const BlogComments = ({blogId}) => {
+  const [comments,loading,refetch] = useRefetch(`http://localhost:5000/comment/${blogId}`,[]);
 
   return (
     <section className="max-w-7xl mx-auto px-5  ">
@@ -27,7 +27,7 @@ const BlogComments = () => {
             <Comment comment={comment}></Comment>
           ))}
       </div>
-      <WriteAComment refetch={refetch}></WriteAComment>
+      <WriteAComment refetch={refetch} blogId={blogId}></WriteAComment>
     </section>
   );
 };
