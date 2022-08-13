@@ -12,11 +12,12 @@ const WriteAComment = () => {
       } = useForm();
     
       const [user] = useAuthState(auth);
-    
+    console.log(user);
       const handleAdddetail = (data) => {
         const inputdetail = {
           
-          name:data?.name,
+          name:user?.displayName,
+          img:user?.photoURL,
           phoneNumber:data?.phoneNumber,
           detail: data.detail,
           email: data.email,
