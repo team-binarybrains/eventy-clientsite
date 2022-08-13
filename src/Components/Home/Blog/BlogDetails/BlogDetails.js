@@ -16,7 +16,6 @@ const BlogDetails = () => {
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [blogId]);
-  console.log(blog);
 
   return (
     <div className="route">
