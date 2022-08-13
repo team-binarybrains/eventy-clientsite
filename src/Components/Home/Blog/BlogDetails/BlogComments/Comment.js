@@ -30,7 +30,7 @@ const Comment = ({ comment }) => {
 
   return (
     <>
-    <div className="py-10 flex gap-3">
+    <div className="py-10 flex gap-3 flex-col sm:flex-row items-center sm:items-stretch">
 
       {/* user image */}
         <section className="w-10">
@@ -51,7 +51,7 @@ const Comment = ({ comment }) => {
       <section className="space-y-3 flex flex-wrap grow">
 
           {/* user name with rating */}
-          <div className="basis-full">
+          <div className="basis-full flex flex-col items-center sm:block">
             <h1 className="text-lg font-bold">{comment.name}</h1>
             <div className="flex text-[#ffbe30]">
               {showStars(comment?.rating)}
@@ -74,7 +74,7 @@ const Comment = ({ comment }) => {
                 <h1 className=" font-bold text-lg">Helpful?</h1>
               </div>
 
-              <div className="">
+              <div className="flex flex-col sm:flex-row">
                 <button
                   onClick={yes}
                   className={`${helpful === "helpful"
@@ -98,7 +98,7 @@ const Comment = ({ comment }) => {
             </div>
 
             {/* reply and share btn */}
-            <div className="">
+            <div className="flex flex-col sm:flex-row">
 
               <button className="py-3 w-28 border-2 border-r text-[#878787] font-bold hover:text-gray-700">
                   <FaReplyAll className="inline-block mr-2" />
