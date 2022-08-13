@@ -16,13 +16,6 @@ const Payment = () => {
 
   const url = `https://fathomless-hamlet-59180.herokuapp.com/payment/${Id}`
 
-  // axios.get(url)
-  // .then(res =>{
-  //   const {data} = res
-  //   console.log(data);
-  //   setProduct(data)
-  // })
-
 
   const { data: product, isLoading } = useQuery(['payment', Id], () => fetch(url, {
     method: 'GET',
