@@ -7,28 +7,17 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
 
     return (
         <div>
-            <div class="card card-side bg-base-100 shadow-xl">
-                {/* <figure><img src={image} alt="" className='h-80' /></figure> */}
-                <div class="card-body">
+            <div class=" bg-slate-200 shadow-xl">
+    
+                <div class="p-5 ">
                     <div className=''>
-                        <div className=''>
-
-                            {/* <div>
-                                <p className=' text-2xl openSans'>User Information</p>
-                                <div className=''>
-                                    <p>Name : {user_name}</p>
-                                    <p>Phone : {phone}</p>
-                                    <p>Email : {user_email}</p>
-                                    <p>Address : {address}</p>
-                                </div>
-                            </div> */}
-
-                            <div className='mt-y lg:my-5'>
+                        
+                            <div className='lg:my-5 flex items-center justify-around'>
                                 <p class=" text-2xl openSans"> Event : {eventName}</p>
                                 <p>Price : ${eventPrice}</p>
                             </div>
 
-                        </div>
+                      
 
                         <div className=''>
                             <p class="text-2xl openSans">Venue : {venueName}</p>
@@ -52,6 +41,45 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
                 </div>
             </div>
         </div>
+
+    //     <div class={`shadow-xl py-10 px-3 rounded-md bg-slate-200 basis-[43rem] gap-x-3 gap-y-3 shrink flex flex-wrap items-center justify-center `}>
+
+    //     <div className='h-32 space-y-2 basis-[20rem] shrink'>
+    //         <span className='font-medium text-gray-500'>{}</span> <br />
+    //         <h3 class=" text-2xl openSans">{} <br />{}</h3>
+    //         <p className='font-medium text-gray-500'>{} <br /> {}</p><br />
+    //     </div>
+
+    //     <div className='space-y-2 basis-[20rem] shrink'>
+    //         <p class="text-xl openSans font-bold text-gray-700 mb-2">Ticket & Type</p>
+    //         <div className='grid grid-cols-3 gap-2'>
+    //             <span className='font-bold'>Type</span>
+    //             <span className='font-bold justify-self-center'>Ticket</span>
+    //             <span className='font-bold justify-self-center'>Price</span>
+
+    //             <span>Enterprise</span>
+    //             <span className='justify-self-center'>{}</span>
+    //             <span className='justify-self-center'>${}</span>
+
+    //             <span>Professional</span>
+    //             <span className='justify-self-center'>{}</span>
+    //             <span className='justify-self-center'>${}</span>
+
+    //             <span>Standard</span>
+    //             <span className='justify-self-center'>{}</span>
+    //             <span className='justify-self-center'>${}</span>
+
+    //             <hr className='col-span-full ' />
+    //             <span className='uppercase text-lg font-semibold col-span-2'>Total Amount =</span>
+    //             <span className='uppercase text-lg font-semibold justify-self-center'>${}</span>
+    //         </div>
+
+    //         <div class="flex justify-end gap-5 px-5 pt-5">
+    //             <button onClick={() => handleBookingCancle()} class="btn btn-error text-white">Cancle</button>
+    //             <Link to=' ' class="btn btn-success text-white">Pay</Link>
+    //         </div>
+    //     </div>
+    // </div>
     )
 }
 
