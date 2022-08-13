@@ -36,43 +36,46 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
     }
 
     return (
-        <div class={`shadow-xl py-10 px-3 rounded-md bg-slate-200 basis-[43rem] gap-x-3 gap-y-3 shrink flex flex-wrap items-center justify-center `}>
-
-            <div className='h-32 space-y-2 basis-[20rem] shrink'>
-                <span className='font-medium text-gray-500'>{event?.date?.split(',')?.join(' ')}</span> <br />
-                <h3 class=" text-2xl openSans">{naming(event?.title)[0]} <br />{naming(event?.title)[1]}</h3>
-                <p className='font-medium text-gray-500'>{addressing(event?.address)[0]} <br /> {addressing(event?.address)[1]}</p><br />
-            </div>
-
-            <div className='space-y-2 basis-[20rem] shrink'>
-                <p class="text-xl openSans font-bold text-gray-700 mb-2">Ticket & Type</p>
-                <div className='grid grid-cols-3 gap-2'>
-                    <span className='font-bold'>Type</span>
-                    <span className='font-bold justify-self-center'>Ticket</span>
-                    <span className='font-bold justify-self-center'>Price</span>
-
-                    <span>Enterprise</span>
-                    <span className='justify-self-center'>{enterprise?.ticket}</span>
-                    <span className='justify-self-center'>${enterprise?.price}</span>
-
-                    <span>Professional</span>
-                    <span className='justify-self-center'>{professional?.ticket}</span>
-                    <span className='justify-self-center'>${professional?.price}</span>
-
-                    <span>Standard</span>
-                    <span className='justify-self-center'>{standard?.ticket}</span>
-                    <span className='justify-self-center'>${standard?.price}</span>
-
-                    <hr className='col-span-full ' />
-                    <span className='uppercase text-lg font-semibold col-span-2'>Total Amount =</span>
-                    <span className='uppercase text-lg font-semibold justify-self-center'>${total}</span>
+        <div className={`shadow-xl rounded-md bg-slate-200 basis-[43rem] shrink relative overflow-hidden bg-no-repeat bg-center bg-cover`} style={{
+            backgroundImage:`url(${event?.image})`
+        }}>
+            <section className='py-5 px-3 gap-x-3 gap-y-10 flex flex-wrap items-center justify-center text-white backdrop-blur-[3px] bg-black/60'>
+                <div className='space-y-2 basis-[20rem] shrink flex flex-col justify-center items-center'>
+                    <h3 className='font-medium text-white'>{event?.date?.split(',')?.join(' ')}</h3>
+                    <h3 class=" text-2xl openSans text-amber-500">{naming(event?.title)[0]} <br />{naming(event?.title)[1]}</h3>
+                    <h3 className='font-medium text-white'>{addressing(event?.address)[0]} <br /> {addressing(event?.address)[1]}</h3>
                 </div>
 
-                <div class="flex justify-end gap-5 px-5 pt-5">
-                    <button onClick={() => handleBookingCancle(eventId)} class="btn btn-error text-white">Cancle</button>
-                    <Link to=' ' class="btn btn-success text-white">Pay</Link>
+                <div className='space-y-2 basis-[20rem] shrink'>
+                    <p class="text-xl openSans font-bold mb-2 text-amber-600">Ticket & Type</p>
+                    <div className='grid grid-cols-3 gap-2'>
+                        <span className='font-bold'>Type</span>
+                        <span className='font-bold justify-self-center'>Ticket</span>
+                        <span className='font-bold justify-self-center'>Price</span>
+
+                        <span>Enterprise</span>
+                        <span className='justify-self-center'>{enterprise?.ticket}</span>
+                        <span className='justify-self-center'>${enterprise?.price}</span>
+
+                        <span>Professional</span>
+                        <span className='justify-self-center'>{professional?.ticket}</span>
+                        <span className='justify-self-center'>${professional?.price}</span>
+
+                        <span>Standard</span>
+                        <span className='justify-self-center'>{standard?.ticket}</span>
+                        <span className='justify-self-center'>${standard?.price}</span>
+
+                        <hr className='col-span-full ' />
+                        <span className='uppercase text-lg font-semibold col-span-2'>Total Amount =</span>
+                        <span className='uppercase text-lg font-semibold justify-self-center'>${total}</span>
+                    </div>
+
+                    <div class="flex justify-end gap-5 px-5 pt-5">
+                        <button onClick={() => handleBookingCancle(eventId)} class="btn btn-error text-white">Cancle</button>
+                        <Link to=' ' class="btn btn-success text-white">Pay</Link>
+                    </div>
                 </div>
-            </div>
+            </section>
         </div>
     )
 };
