@@ -4,6 +4,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import auth from "../../../../Firebase/firebase.init";
+import useRefetch from '../../../Hooks/useRefetch'
 
 
 const WriteAComment = ({refetch,blogId}) => {
@@ -14,7 +15,6 @@ const WriteAComment = ({refetch,blogId}) => {
       // console.log(parseInt(e.target.value));
   }
 
-
     const {
         register,
         formState: { errors },
@@ -23,6 +23,8 @@ const WriteAComment = ({refetch,blogId}) => {
       } = useForm();
     
       const [user] = useAuthState(auth);
+
+      const [userComment,,userCommentRefetch] = useRefetch(`http://localhost:5000/my-comment/${user?.uid+':'+blogId}`)
 
       const handleAdddetail = (data) => {
         const inputdetail = {
@@ -36,6 +38,8 @@ const WriteAComment = ({refetch,blogId}) => {
           rating: stars
         };
     
+
+
         fetch("http://localhost:5000/comment", {
           method: "PUT",
           headers: {
@@ -50,6 +54,7 @@ const WriteAComment = ({refetch,blogId}) => {
             if (success) {
               toast.success("Your detail added successfully");
               refetch();
+              userCommentRefetch();
               reset();
               setStars(5);
             } else {
@@ -57,7 +62,6 @@ const WriteAComment = ({refetch,blogId}) => {
             }
           });
       };
-
 
   return (
     <div className="mb-5">
@@ -111,7 +115,9 @@ const WriteAComment = ({refetch,blogId}) => {
           </section>
 
           <br />
-          <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10'> Submit Now</button>
+          {userComment?.length > 0?
+          <button className='bg-gradient-to-r from-red-500 to-amber-600 opacity-60 px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer' disabled> Submit Now</button>:
+          <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer'> Submit Now</button>}
         </form>
       </div>
     
