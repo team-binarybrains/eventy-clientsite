@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 function DisplayMyBooking({ booking, handleBookingCancle }) {
 
-    const { _id, user_name, user_email, phone, address, message, code, eventName, eventPrice, image, img, venueName, seats, price, location } = booking
+    const { _id, user_name, user_email, phone, address, message, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
 
     return (
         <div>
@@ -42,7 +42,7 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
                     <hr />
 
                     <div className='text-start'>
-                        <p className='uppercase text-lg font-semibold'>Total Amount = ${parseInt(eventPrice) + parseInt(price)} </p>
+                        <p className='uppercase text-lg font-semibold'>Total Amount = ${totalPrice} </p>
                     </div>
 
                     <div class="card-actions justify-end ">
