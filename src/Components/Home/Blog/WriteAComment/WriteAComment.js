@@ -72,7 +72,7 @@ const WriteAComment = ({refetch,blogId}) => {
               type="text"
               placeholder="Detail"
               name="detail"
-              className="outline-amber-300 h-[150px] p-2 bg-[#f7f7f7] w-full placeholder:tracking-wide"
+              className="outline-amber-300 overflow-auto min-h-[150px] max-h-[150px] p-2 bg-[#f7f7f7] w-full placeholder:tracking-wide"
               {...register("detail", {
                 required: {
                   value: true,

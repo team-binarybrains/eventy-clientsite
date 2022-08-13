@@ -78,7 +78,7 @@ const Comment = ({ comment }) => {
                 <button
                   onClick={yes}
                   className={`${helpful === "helpful"
-                    ? "text-white bg-green-500"
+                    ? "text-white bg-gradient-to-b from-amber-300 to-amber-500"
                     : "bg-white text-[#878787]"
                     } py-3 w-20 font-bold rounded-sm border-2 border-r hover:text-gray-700`}
                 >
@@ -87,7 +87,7 @@ const Comment = ({ comment }) => {
                 <button
                   onClick={no}
                   className={`${helpful === "notHelpful"
-                    ? "text-white bg-red-500"
+                    ? "text-white bg-gradient-to-b from-amber-300 to-amber-500"
                     : "bg-white text-[#878787]"
                     } py-3 w-20 font-bold rounded-sm border-2 border-l hover:text-gray-700`}
                 >
