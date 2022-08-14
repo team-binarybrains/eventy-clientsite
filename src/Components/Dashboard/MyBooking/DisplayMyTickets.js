@@ -1,7 +1,6 @@
 import axios from 'axios';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
-import { Link } from 'react-router-dom';
 import auth from '../../../Firebase/firebase.init';
 import useRefetch from '../../Hooks/useRefetch';
 
@@ -36,17 +35,21 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
     }
 
     return (
-        <div className={`shadow-xl rounded-md bg-slate-200 basis-[43rem] shrink relative overflow-hidden bg-no-repeat bg-center bg-cover`} style={{
+        <div className={`shadow-xl rounded-md bg-slate-200 basis-[35rem] shrink relative overflow-hidden bg-no-repeat bg-center bg-cover`} style={{
             backgroundImage:`url(${event?.image})`
         }}>
-            <section className='py-5 px-3 gap-x-3 gap-y-10 flex flex-wrap items-center justify-center text-white backdrop-blur-[3px] bg-black/60'>
-                <div className='space-y-2 basis-[20rem] shrink flex flex-col justify-center items-center'>
+            <section className='py-5 px-3 gap-x-3 gap-y-10 flex flex-wrap items-center justify-center text-white backdrop-blur-[3px] bg-black/80'>
+                <div className='space-y-2 basis-[15rem] shrink flex flex-col justify-center items-center'>
                     <h3 className='font-medium text-white'>{event?.date?.split(',')?.join(' ')}</h3>
-                    <h3 class=" text-2xl openSans text-amber-500">{naming(event?.title)[0]} <br />{naming(event?.title)[1]}</h3>
-                    <h3 className='font-medium text-white'>{addressing(event?.address)[0]} <br /> {addressing(event?.address)[1]}</h3>
+
+                    <h3 class=" text-2xl openSans text-amber-500">{naming(event?.title)[0]}</h3>
+                    <h3 class=" text-2xl openSans text-amber-500">{naming(event?.title)[1]}</h3>
+                    
+                    <h3 className='font-medium text-white'>{addressing(event?.address)[0]}</h3>
+                    <h3 className='font-medium text-white'>{addressing(event?.address)[1]}</h3>
                 </div>
 
-                <div className='space-y-2 basis-[20rem] shrink'>
+                <div className='space-y-2 basis-[15rem] shrink'>
                     <p class="text-xl openSans font-bold mb-2 text-amber-600">Ticket & Type</p>
                     <div className='grid grid-cols-3 gap-2'>
                         <span className='font-bold'>Type</span>
@@ -71,8 +74,8 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
                     </div>
 
                     <div class="flex justify-end gap-5 px-5 pt-5">
-                        <button onClick={() => handleBookingCancle(eventId)} class="btn btn-error text-white">Cancle</button>
-                        <Link to=' ' class="btn btn-success text-white">Pay</Link>
+                        <button onClick={() => handleBookingCancle(eventId)} class={`border-4 border-red-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-red-500 font-extrabold hover:shadow-[0_0_35px_rgb(236,68,68)] hover:bg-red-500 hover:text-gray-900 text-lg duration-300`}>Cancel</button>
+                        <button to=' ' class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
                     </div>
                 </div>
             </section>
