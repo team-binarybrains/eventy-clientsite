@@ -104,7 +104,7 @@ const UserProfile = () => {
           <div className="text-center mt-6">
             <div className="">
               <div className="">
-                <h3 className="text-lg font-semibold leading-normal text-slate-700 mb-1">
+                <h3 className="text-lg font-semibold leading-normal text-slate-700 mb-1 capitalize">
                   Name: {currentUser?.displayName}
                 </h3>
               </div>
@@ -112,10 +112,10 @@ const UserProfile = () => {
                 <span className="">Email : </span> {currentUser?.email}
               </div>
               <div className="">
-                <p className="text-base font-semibold leading-normal text-slate-700 mb-1">City : {currentUser?.city ? currentUser?.city : "Set Your City Name"}</p>
+                <p className="text-base font-semibold leading-normal text-slate-700 mb-1 capitalize">City : {currentUser?.city ? currentUser?.city : "Set Your City Name"}</p>
               </div>
               <div className="mb-2 text-gray-600 mt-0">
-                <p className="text-base font-semibold leading-normal text-slate-700 mb-1">Country : {
+                <p className="text-base font-semibold leading-normal text-slate-700 mb-1 capitalize">Country : {
                   currentUser?.country ? currentUser?.country : "Set Your City Name"
                 } </p>{" "}
               </div>
