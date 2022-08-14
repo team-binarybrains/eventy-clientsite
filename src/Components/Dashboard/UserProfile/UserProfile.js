@@ -26,6 +26,7 @@ const UserProfile = () => {
   if (loading) {
     return <Loading />;
   }
+  console.log(currentUser);
   return (
     <section className="mt-64 mb-20 container mx-auto px-4 ">
       <div
