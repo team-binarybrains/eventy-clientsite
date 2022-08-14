@@ -18,8 +18,8 @@ function AllBookings() {
     }, [])
 
 
-     // cancle order
-     const handleBookingCancle = id => {
+    // cancle order
+    const handleBookingCancle = id => {
         console.log(id);
 
         const proceed = window.confirm("Are you sure?");

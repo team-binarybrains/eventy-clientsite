@@ -26,7 +26,7 @@ const Navbar = ({ location }) => {
 
   const handleSignOut = () => {
     signOut(auth);
-    localStorage.removeItem('accessToken')
+    localStorage.removeItem("accessToken");
   };
   const [user] = useAuthState(auth);
 
@@ -47,9 +47,8 @@ const Navbar = ({ location }) => {
       <section className={`${routeName ? anotherRoute : homeRoute} bg-white`}>
         {routeName && <TopnavBar></TopnavBar>}
         <div
-          className={` ${
-            routeName ? "bg-white text-black" : "bg-transparent text-white"
-          }  flex items-center justify-around flex-wrap grow-0 h-[69px] gap-x-10 z-[999] container mx-auto`}
+          className={` ${routeName ? "bg-white text-black" : "bg-transparent text-white"
+            }  flex items-center justify-around flex-wrap grow-0 h-[69px] gap-x-10 z-[999] container mx-auto`}
           id="navbar"
         >
           {/* navbar icons and logo */}
@@ -140,7 +139,7 @@ const Navbar = ({ location }) => {
                 </li>
                 {/* HERE THE SERVICES  */}
                 <li tabindex="0">
-                  <Link to={pathname} className="uppercase">
+                  <Link to={pathname} className="">
                     SERVICES
                     <svg
                       class="fill-current"
@@ -158,73 +157,54 @@ const Navbar = ({ location }) => {
                     style={{ zIndex: "11111" }}
                   >
                     <li>
-                      <Link className="uppercase" to="/catering">
-                        CATERING
+                      <Link className="" to="/catering">
+                        Catering
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/audiovisual">
-                        AUDIOVISUAL
+                      <Link className="" to="/audiovisual">
+                        Audiovisual
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/sound-lighting">
-                        SOUND AND LIGHTING
+                      <Link className="" to="/sound-lighting">
+                        Sound And Lighting
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/event-linen">
-                        EVENT LINEN RENTALS
+                      <Link className="" to="/event-linen">
+                        Event Linen Rentals
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/destination">
-                        DESTINATION MANAGEMENT
+                      <Link className="" to="/destination">
+                        Destination Management
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/logistics-registration">
-                        LOGISTICS AND REGISTRATION
+                      <Link className="" to="/logistics-registration">
+                        Logistic And Registration
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/venue-facility">
-                        VENUE & FACILITY NEGOTIATION
+                      <Link className="" to="/venue-facility">
+                        Venue & Facility Negotiation
                       </Link>
                     </li>
                     <li>
-                      <Link className="uppercase" to="/photography">
-                        VIDEOGRAPHY & PHOTOGRAPHY
+                      <Link className="" to="/photography">
+                        Videography & Photography
                       </Link>
                     </li>
                   </ul>
                 </li>
-                <li tabindex="0">
-                  <Link to={pathname} className="uppercase">
-                    Blogs
-                    <svg
-                      class="fill-current"
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                    </svg>
+
+                <li>
+                  <Link to="/blogs" className={navStyle}>
+                    BLOGS
                   </Link>
-                  <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
-                    <li>
-                      <Link className="uppercase" to="/blogs">
-                        blogs
-                      </Link>
-                    </li>
-                    {/* <li>
-                        <Link className="uppercase" to={"/blogs-details"}>
-                          blogs details
-                        </Link>
-                      </li> */}
-                  </ul>
                 </li>
+
                 <li>
                   <Link to="/gallery">GALLERY</Link>
                 </li>
@@ -254,16 +234,16 @@ const Navbar = ({ location }) => {
           </div>
 
           {/* children */}
-          <div class=" hidden lg:flex font-bold uppercase">
+          <div class=" hidden lg:flex font-bold">
             <ul class="menu menu-horizontal p-0">
               <li>
                 <NavLink to="/" className={navStyle}>
-                  Home
+                  HOME
                 </NavLink>
               </li>
               <li tabindex="0">
                 <Link to={pathname} className={` `}>
-                  About
+                  ABOUT
                   <svg
                     class="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -289,7 +269,7 @@ const Navbar = ({ location }) => {
               </li>
               <li tabindex="0">
                 <Link to={pathname} className={` `}>
-                  Event
+                  EVENT
                   <svg
                     class="fill-current"
                     xmlns="http://www.w3.org/2000/svg"
@@ -334,73 +314,54 @@ const Navbar = ({ location }) => {
                 </Link>
                 <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
                   <li>
-                    <Link className="uppercase" to="/catering">
-                      CATERING
+                    <Link className="" to="/catering">
+                      Catering
                     </Link>
                   </li>
                   <li>
-                    <Link className="uppercase" to="/audiovisual">
-                      AUDIOVISUAL
+                    <Link className="" to="/audiovisual">
+                      Audiovisual
                     </Link>
                   </li>
                   <li>
-                    <Link className="uppercase" to="/sound-lighting">
-                      SOUND AND LIGHTING
+                    <Link className="" to="/sound-lighting">
+                      Sound And Lighting
                     </Link>
                   </li>
                   <li>
-                    <Link className="uppercase" to="/event-linen">
-                      EVENT LINEN RENTALS
+                    <Link className="" to="/event-linen">
+                      Event Linen Rentals
                     </Link>
                   </li>
                   <li>
-                    <Link className="uppercase" to="/destination">
-                      DESTINATION MANAGEMENT
+                    <Link className="" to="/destination">
+                      Destination Management
                     </Link>
                   </li>
                   <li>
-                    <Link className="uppercase" to="/logistics-registration">
-                      LOGISTICS AND REGISTRATION
+                    <Link className="" to="/logistics-registration">
+                      Logistics And Registration
                     </Link>
                   </li>
                   <li>
-                    <Link className="uppercase" to="/venue-facility">
-                      VENUE & FACILITY NEGOTIATION
+                    <Link className="" to="/venue-facility">
+                      Venue & Facility Negotiation
                     </Link>
                   </li>
                   <li>
-                    <Link className="uppercase" to="/photography">
-                      VIDEOGRAPHY & PHOTOGRAPHY
+                    <Link className="" to="/photography">
+                      Videography & Photography
                     </Link>
                   </li>
                 </ul>
               </li>
-              <li tabindex="0">
-                <Link to={pathname} className={` `}>
-                  Blogs
-                  <svg
-                    class="fill-current"
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 24 24"
-                  >
-                    <path d="M7.41,8.58L12,13.17L16.59,8.58L18,10L12,16L6,10L7.41,8.58Z" />
-                  </svg>
-                </Link>
-                <ul class="p-2" id="megaMenu" style={{ zIndex: "11111" }}>
-                  <li>
-                    <Link className="uppercase" to="/blogs">
-                      blogs
-                    </Link>
-                  </li>
-                  {/* <li>
-                      <Link className="uppercase" to={"/blogs-details"}>
-                        blogs details
-                      </Link>
-                    </li> */}
-                </ul>
+
+              <li>
+                <NavLink to="/blogs" className={navStyle}>
+                  BLOGS
+                </NavLink>
               </li>
+
               <li>
                 <NavLink to="/gallery" className={navStyle}>
                   GALLERY

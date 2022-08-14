@@ -44,10 +44,6 @@ import UserProfile from "./Components/Dashboard/UserProfile/UserProfile";
 import UpdateUser from "./Components/Dashboard/UserProfile/UpdateUser/UpdateUser";
 import RequireAdmin from "./Components/Authentication/RequireAdmin/RequireAdmin";
 import RequireAuth from "./Components/Authentication/RequireAuth/RequireAuth";
-import { signOut } from "firebase/auth";
-import useToken from "./Components/Hooks/useToken";
-import { useAuthState } from "react-firebase-hooks/auth";
-import auth from "./Firebase/firebase.init";
 import MyBooking from "./Components/Dashboard/MyBooking/MyBooking";
 import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
 import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
@@ -123,7 +119,7 @@ function App() {
           ></Route>
 
           <Route
-            path="/dashboard/payment/:_id"
+            path="/dashboard/payment/:Id"
             element={
               <Payment />
             }

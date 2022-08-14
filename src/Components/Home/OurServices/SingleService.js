@@ -25,6 +25,8 @@ function SingleService() {
   const details = useFetch(`http://localhost:5000/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
+  // const { price } = venues
+  // console.log(price);
   // console.log(eventName.split(' '));
 
   const name = eventName?.split(" ");
@@ -44,6 +46,7 @@ function SingleService() {
       address: e.target.address.value,
       message: e.target.message.value,
       code: e.target.code.value,
+      totalPrice:e.target.totalPrice.value,
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,
@@ -51,8 +54,7 @@ function SingleService() {
     };
     console.log(bookingInfo);
 
-    axios
-      .post("http://localhost:5000/service-booking", bookingInfo)
+    axios.post("http://localhost:5000/service-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);
@@ -64,6 +66,7 @@ function SingleService() {
           toast.error("Faild to prossed booking. Please try again.");
         }
       });
+
 
     emailjs
       .sendForm(
@@ -79,6 +82,7 @@ function SingleService() {
         }
       );
 
+    setSelectVenue(null)
     e.target.reset();
   };
 
@@ -194,7 +198,7 @@ function SingleService() {
               <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}
                 onClick={() => {
                   setSelectVenue(select)
-                  venueForm.current.scrollIntoView(0, 20)
+                  venueForm.current.scrollIntoView()
                 }}
 
               >SELECT</button>
@@ -233,7 +237,7 @@ function SingleService() {
               </div>
               <form
                 onSubmit={submission}
-                className="lg:space-y-8 w-full max-w-[780px] mt-5"
+                className="lg:space-y-8 w-full max-w-[780px] mt-5 scroll-mt-52"
                 ref={venueForm}
               >
                 <div className="lg:flex lg:gap-8">
@@ -294,6 +298,14 @@ function SingleService() {
                   type="text"
                   value={image}
                   name="image"
+                />
+
+                <input
+                  required
+                  className="hidden"
+                  type="number"
+                  value={parseInt(eventPrice) + parseInt(selectVenue?.price)}
+                  name="totalPrice"
                 />
 
                 <input
