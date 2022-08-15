@@ -3,30 +3,91 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import { FiEdit } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import { BiUserCircle } from 'react-icons/bi';
-import { AiOutlineUser } from 'react-icons/ai';
+import { BsFillCameraFill } from 'react-icons/bs';
+import { FileUploader } from "react-drag-drop-files";
+import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+import { toast } from "react-toastify";
+
 import auth from "../../../Firebase/firebase.init";
 import Loading from "../../Share/Loading/Loading";
-import axios from "axios";
 import "./UserProfile.css";
 
+const fileTypes = ["JPG", "PNG", "GIF"];
 const UserProfile = () => {
-  const [currentUser, setCurrentUser] = useState([]);
   const [user, loading, error] = useAuthState(auth);
+  const [currentUser, setCurrentUser] = useState([]);
+  const [open, SetOpen] = useState(false);
+  const navigate = useNavigate();
   const email = user?.email;
+  // upload photo drag in drop
+
+  const [file, setFile] = useState(null);
+  const handleChange = (file) => {
+    setFile(file);
+  };
+  // for profile photo uploaded
+  const {
+    register,
+    handleSubmit,
+    reset,
+    formState: { errors },
+  } = useForm();
+  const onSubmit = (data) => {
+    const imgbbAPIKey = "e32b2607a3f00cb963832ebb13d8a672";
+    // const image = data.file[0];
+    const image = file[0];
+    const formData = new FormData();
+    formData.append("image", image);
+    const url = `https://api.imgbb.com/1/upload?key=${imgbbAPIKey}`;
+    fetch(url, {
+      method: "POST",
+      body: formData,
+    })
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.success) {
+          const img = result?.data?.url;
+          const user = {
+            image: img,
+          };
+
+          fetch(`http://localhost:5000/user-update/${email}`, {
+            method: "PUT",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(user),
+          })
+            .then((res) => res.json())
+            .then((inserted) => {
+              if (inserted) {
+                reset();
+                setFile(null)
+                navigate('/manage-profile')
+                toast.success("Profile Picture Updated Successfully");
+                SetOpen(false)
+              }
+            });
+        }
+      });
+  }
   // 
   useEffect(() => {
-    // axios.get(`https://powerful-cove-50894.herokuapp.com/single-user/${email}`).then((res) => {
-    //   const { data } = res;
-    //   setUpdateUser(data);
-    // });
     fetch(`http://localhost:5000/single-user/${email}`)
       .then(res => res.json())
       .then(data => setCurrentUser(data))
-  }, [email]);
+  }, [file, email]);
+
   if (loading) {
     return <Loading />;
   }
-  console.log(currentUser);
+  if (error) {
+    console.log(error);
+  }
+  const openPopup = () => {
+    SetOpen(true)
+  }
   return (
     <section className="mt-64 mb-20 container mx-auto px-4 ">
       <div
@@ -36,22 +97,63 @@ const UserProfile = () => {
         <div className="px-6">
           <div className="flex flex-wrap justify-center">
             <div className="w-full px-4 flex justify-center">
-              <div className="relative">
+              <div id="user_profile" >
 
-                {currentUser?.image ? <img
-                  src={currentUser?.image}
-                  className="w-44 h-44  rounded-full mt-[-50%]"
-                  alt=""
-                />
+                {currentUser?.image ? <>
+                  <img
+                    src={currentUser?.image}
+                    className="w-44 h-44  rounded-full mt-[-50%]"
+                    alt=""
+                  />
+                  <label for="profile_picture" id="profile_picture_change_btn" onClick={openPopup}>
+                    <BsFillCameraFill className="text-2xl"></BsFillCameraFill>
+                  </label>
+                  <input type="checkbox" id="profile_picture" class="modal-toggle" />
+                  {
+                    open && <div class="modal">
+                      <div class="modal-box rounded">
+                        <form id="profile_photo_upload" onSubmit={handleSubmit(onSubmit)}>
+                          <label for="profile_picture" class="btn btn-sm btn-circle bg-red-500 hover:bg-red-600 border-none absolute right-2 top-2">✕</label>
+                          <div className='mt-10'>
+                            <FileUploader
+                              handleChange={handleChange}
+                              multiple={true}
+                              name="file"
+                              types={fileTypes}
+                            />
+                            {
+                              file && <p className={`pt-4 text-sm font-medium text-slate-700`}>{file && `Selected File Name: ${file[0].name}`}</p>
+                            }
+                            {
+                              !file && <p className={`pt-4 text-sm text-red-600 font-medium`}>{!file && "No File Uploaded Yet !"}</p>
+                            }
+
+                          </div>
+                          <div class="modal-action">
+                            {
+                              file ?
+                                <label for="profile_picture" class="w-full">
+                                  <input  className="block w-full bg-blue-700 hover:bg-blue-600 text-white text-center py-2 rounded cursor-pointer" type="submit" value="SAVE" />
+                                </label>
+                                :
+                                <label aria-disabled aria-readonly for="" class="block w-full bg-blue-200 text-white text-center py-2 rounded" >SAVE</label>
+                            }
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  }
+
+                </>
                   :
                   // <img
                   //   src={user?.photoURL}
                   //   className="w-44 h-44 rounded-full mt-[-50%]"
                   //   alt=""
                   // />
-                  <span className="">
+                  <div className="">
                     <BiUserCircle className="w-44 h-44 mt-[-50%] border-2 text-slate-700 bg-slate-200 bg-opacity-100 text-4xl rounded-full" />
-                  </span>
+                  </div>
                 }
                 {/* {user?.photoURL && (
                     
@@ -140,7 +242,7 @@ const UserProfile = () => {
                       href="#!"
                       className="font-normal text-lightBlue-500"
                       onClick={(e) => e.preventDefault()}
-                    > Show more lorem205</a>
+                    > Show more</a>
                   }
                 </div>
               </div>
