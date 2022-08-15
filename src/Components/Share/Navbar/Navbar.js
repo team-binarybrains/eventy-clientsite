@@ -8,6 +8,7 @@ import TopnavBar from "../TopBar/TopnavBar";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/firebase.init";
 import { signOut } from "firebase/auth";
+import { useEffect } from "react";
 
 const Navbar = ({ location }) => {
   const { pathname } = location;
@@ -42,6 +43,14 @@ const Navbar = ({ location }) => {
     return isActive && "btnActive";
   };
 
+  // profile photos load
+  const [currentUser , setCurrentUser] = useState([]); 
+  const email = user?.email
+  useEffect(() => {
+    fetch(`http://localhost:5000/single-user/${email}`)
+      .then(res => res.json())
+      .then(data => setCurrentUser(data))
+  }, [email]);
   return (
     <div>
       <section className={`${routeName ? anotherRoute : homeRoute} bg-white`}>
@@ -407,15 +416,15 @@ const Navbar = ({ location }) => {
                             : setShow("hidden");
                         }}
                       >
-                        {user?.photoURL && (
+                        {currentUser?.image && (
                           <img
-                            src={user?.photoURL}
+                            src={currentUser?.image}
                             className="w-10 h-10 rounded-full"
                             alt=""
                           />
                         )}
 
-                        {user?.photoURL === null && (
+                        {!currentUser?.image  && (
                           <span className="">
                             <AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full" />
                           </span>
@@ -429,15 +438,15 @@ const Navbar = ({ location }) => {
                         <div className="grid gap-y-3 pt-7 pb-3">
                           <div className="bg-gray-200 grid justify-center p-4 rounded-sm">
                             <div className="flex justify-center -mt-11">
-                              {user?.photoURL && (
+                              {currentUser?.image && (
                                 <img
-                                  src={user?.photoURL}
-                                  className="w-14 h-14 rounded-full"
+                                  src={currentUser?.image}
+                                  className="w-14 h-14 rounded-full bg-slate-100"
                                   alt=""
                                 />
                               )}
 
-                              {user?.photoURL === null && (
+                              {!currentUser?.image  && (
                                 <span className="">
                                   <AiOutlineUser className="text-black border-2 border-black bg-white text-5xl rounded-full" />
                                 </span>
