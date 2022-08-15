@@ -1,0 +1,26 @@
+#user_profile {
+   position: relative;
+}
+
+#user_profile #profile_picture_change_btn {
+   position: absolute;
+   bottom: 8%;
+   right: 5%;
+   padding: .5rem;
+   background-color: #4e4f50b7;
+   color: #fff;
+   border-radius: 50%;
+   -webkit-border-radius: 50%;
+   -moz-border-radius: 50%;
+   -ms-border-radius: 50%;
+   -o-border-radius: 50%;
+}
+
+#user_profile #profile_picture_change_btn:hover {
+   background-color: #797979a4;
+   cursor: pointer;
+}
+#profile_photo_upload .kiHXWb {
+   width: 100%;
+   height: 100px;
+}
