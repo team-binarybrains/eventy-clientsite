@@ -102,7 +102,7 @@ const UserProfile = () => {
                 {currentUser?.image ? <>
                   <img
                     src={currentUser?.image}
-                    className="w-44 h-44  rounded-full mt-[-50%]"
+                    className="w-44 h-44  rounded-full mt-[-50%] bg-slate-50"
                     alt=""
                   />
                   <label for="profile_picture" id="profile_picture_change_btn" onClick={openPopup}>
@@ -133,7 +133,7 @@ const UserProfile = () => {
                             {
                               file ?
                                 <label for="profile_picture" class="w-full">
-                                  <input  className="block w-full bg-blue-700 hover:bg-blue-600 text-white text-center py-2 rounded cursor-pointer" type="submit" value="SAVE" />
+                                  <input className="block w-full bg-blue-700 hover:bg-blue-600 text-white text-center py-2 rounded cursor-pointer" type="submit" value="SAVE" />
                                 </label>
                                 :
                                 <label aria-disabled aria-readonly for="" class="block w-full bg-blue-200 text-white text-center py-2 rounded" >SAVE</label>
@@ -153,6 +153,44 @@ const UserProfile = () => {
                   // />
                   <div className="">
                     <BiUserCircle className="w-44 h-44 mt-[-50%] border-2 text-slate-700 bg-slate-200 bg-opacity-100 text-4xl rounded-full" />
+                    <label for="profile_picture" id="profile_picture_change_btn" onClick={openPopup}>
+                      <BsFillCameraFill className="text-2xl"></BsFillCameraFill>
+                    </label>
+                    <input type="checkbox" id="profile_picture" class="modal-toggle" />
+                    {
+                      open && <div class="modal">
+                        <div class="modal-box rounded">
+                          <form id="profile_photo_upload" onSubmit={handleSubmit(onSubmit)}>
+                            <label for="profile_picture" class="btn btn-sm btn-circle bg-red-500 hover:bg-red-600 border-none absolute right-2 top-2">✕</label>
+                            <div className='mt-10'>
+                              <FileUploader
+                                handleChange={handleChange}
+                                multiple={true}
+                                name="file"
+                                types={fileTypes}
+                              />
+                              {
+                                file && <p className={`pt-4 text-sm font-medium text-slate-700`}>{file && `Selected File Name: ${file[0].name}`}</p>
+                              }
+                              {
+                                !file && <p className={`pt-4 text-sm text-red-600 font-medium`}>{!file && "No File Uploaded Yet !"}</p>
+                              }
+
+                            </div>
+                            <div class="modal-action">
+                              {
+                                file ?
+                                  <label for="profile_picture" class="w-full">
+                                    <input className="block w-full bg-blue-700 hover:bg-blue-600 text-white text-center py-2 rounded cursor-pointer" type="submit" value="SAVE" />
+                                  </label>
+                                  :
+                                  <label aria-disabled aria-readonly for="" class="block w-full bg-blue-200 text-white text-center py-2 rounded" >SAVE</label>
+                              }
+                            </div>
+                          </form>
+                        </div>
+                      </div>
+                    }
                   </div>
                 }
                 {/* {user?.photoURL && (
