@@ -8,7 +8,7 @@ function Awade() {
                 <div className='lg:flex justify-center gap-x-14 lg:my-40'>
                     <div>
                         <img src="https://i.ibb.co/zFHhCR5/login-modal-bg.jpg" alt="" className='lg:h-[620px] h-[400px] lg:w-[570px] w-full' />
-                        <img src="https://i.ibb.co/YfrRjpY/company-banner.png" alt="" className='lg:ml-[90px] ml-10 lg:-mt-[530px] -mt-[360px] lg:h-[430px] h-[320px] ' />
+                        <img src="https://i.ibb.co/xY8fsW1/company-banner.png" alt="" className='lg:ml-[90px] ml-10 lg:-mt-[530px] -mt-[360px] lg:h-[430px] h-[320px] ' />
                     </div>
 
                     <div>
