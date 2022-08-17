@@ -15,7 +15,7 @@ const useRefetch = (url,initialValue=[],callback=()=>0)=> {
         })
     },[refetch,url]);
 
-    return [data,loading,()=>{setRefetch(previous=>!previous)}]
+    return [data,loading,()=>{setLoading(true);setRefetch(previous=>!previous)}]
 }
 
 export default useRefetch;

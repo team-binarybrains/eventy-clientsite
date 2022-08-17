@@ -16,7 +16,6 @@ const Payment = () => {
 
   const url = `https://fathomless-hamlet-59180.herokuapp.com/payment/${Id}`
 
-
   const { data: product, isLoading } = useQuery(['payment', Id], () => fetch(url, {
     method: 'GET',
     // headers: {
@@ -38,7 +37,7 @@ const Payment = () => {
           <div className="card shadow-2xl bg-transparent">
             <div className="card-body ">
               <h2 className="card-title">Please pay for : {product?.eventName}</h2>
-              <p> Please Pay : ${product.eventPrice + parseInt(product.price)}</p>
+              <p> Please Pay : ${product.totalPrice}</p>
               {/* <p> Delivery Address : {product.address}</p> */}
             </div>
           </div>

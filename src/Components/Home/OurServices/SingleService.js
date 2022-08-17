@@ -25,7 +25,8 @@ function SingleService() {
   const details = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
-  const { price } = venues
+  // const { price } = venues
+  // console.log(price);
   // console.log(eventName.split(' '));
 
   const name = eventName?.split(" ");
@@ -45,7 +46,7 @@ function SingleService() {
       address: e.target.address.value,
       message: e.target.message.value,
       code: e.target.code.value,
-      // totalPrice: eventPrice + parseInt(price),
+      totalPrice: e.target.totalPrice.value,
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,
@@ -299,13 +300,13 @@ function SingleService() {
                   name="image"
                 />
 
-                {/* <input
+                <input
                   required
                   className="hidden"
-                  type="text"
-                  value={}
+                  type="number"
+                  value={parseInt(eventPrice) + parseInt(selectVenue?.price)}
                   name="totalPrice"
-                /> */}
+                />
 
                 <input
                   required

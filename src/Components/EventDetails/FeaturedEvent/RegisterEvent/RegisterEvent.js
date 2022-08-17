@@ -6,6 +6,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../Firebase/firebase.init';
 import axios from 'axios';
 import useRefetch from '../../../Hooks/useRefetch';
+import { toast } from 'react-toastify';
 
 const RegisterEvent = ({ eventDetailsData }) => {
    const enterpriseSelection = useRef();
@@ -13,7 +14,6 @@ const RegisterEvent = ({ eventDetailsData }) => {
    const standardSelection = useRef();
 
    const [user] = useAuthState(auth);
-   const [fetchCount, setFetchCount] = useState(true);
    const [ticket, setTicket] = useState({
       standard: 0,
       professional: 0,
@@ -108,6 +108,7 @@ const RegisterEvent = ({ eventDetailsData }) => {
       axios.put(`https://fathomless-hamlet-59180.herokuapp.com/ticket-booking/${user?.uid + ':' + eventDetailsData?._id}`, {
          booking: booked,
       }).then(({ data }) => {
+         data?.success && toast.success('Ticket booked successfully', { theme: "colored" });
          data?.success && refetch();
          setTicket({
             standard: 0,

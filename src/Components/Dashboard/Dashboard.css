@@ -31,3 +31,11 @@
    --tw-text-opacity: 1;
    color: hsl(var(--pc) / var(--tw-text-opacity));
 }
+#sidebar_User_profile{
+   background-image: url('../../asset/userProfileSvg/wave.svg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   padding: 1rem 0rem ;
+   width: 100%;
+   height: 250px;
+}

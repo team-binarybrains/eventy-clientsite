@@ -50,7 +50,7 @@ const UpdateUser = () => {
                   image: img,
                };
 
-               fetch(`https://fathomless-hamlet-59180.herokuapp.com/user/${email}`, {
+               fetch(`https://fathomless-hamlet-59180.herokuapp.com/user-update/${email}`, {
                   method: "PUT",
                   headers: {
                      "content-type": "application/json",
@@ -59,7 +59,7 @@ const UpdateUser = () => {
                })
                   .then((res) => res.json())
                   .then((inserted) => {
-                     if (inserted.result) {
+                     if (inserted) {
                         toast.success("updated");
                         navigate('/manage-profile')
                         reset();

@@ -1,9 +1,20 @@
-import React from 'react';
+/* eslint-disable no-unused-vars */
+import React, { useState } from 'react';
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import auth from "../../../../Firebase/firebase.init";
-const WriteAComment = () => {
+import useRefetch from '../../../Hooks/useRefetch'
+
+
+const WriteAComment = ({ refetch, blogId }) => {
+  const [stars, setStars] = useState(5);
+
+  const countStars = (e) => {
+    setStars(parseInt(e.target.value));
+    // console.log(parseInt(e.target.value));
+  }
+
   const {
     register,
     formState: { errors },
@@ -13,17 +24,24 @@ const WriteAComment = () => {
 
   const [user] = useAuthState(auth);
 
+  const [userComment, , userCommentRefetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/my-comment/${user?.uid + ':' + blogId}`)
+
   const handleAdddetail = (data) => {
     const inputdetail = {
-
-      name: data?.name,
-      phoneNumber: data?.phoneNumber,
-      detail: data.detail,
-      email: data.email,
+      commentId: `${user?.uid}:${blogId}`,
+      blogId: blogId,
+      uid: user?.uid,
+      name: user?.displayName,
+      img: user?.photoURL,
+      detail: data?.detail,
+      email: user?.email,
+      rating: stars
     };
 
+
+
     fetch("https://fathomless-hamlet-59180.herokuapp.com/comment", {
-      method: "POST",
+      method: "PUT",
       headers: {
         "content-type": "application/json",
         // authorization: Bearer ${localStorage.getItem('accessToken')}
@@ -31,11 +49,14 @@ const WriteAComment = () => {
       body: JSON.stringify(inputdetail),
     })
       .then((res) => res.json())
-      .then((addeddetail) => {
-        console.log(addeddetail);
-        if (addeddetail.insertedId) {
+      .then(({ success }) => {
+        // console.log(addeddetail);
+        if (success) {
           toast.success("Your detail added successfully");
+          refetch();
+          userCommentRefetch();
           reset();
+          setStars(5);
         } else {
           toast.error("Faild to add your detail. Please try again.");
         }
@@ -43,119 +64,19 @@ const WriteAComment = () => {
   };
 
   return (
-    <div>
+    <div className="mb-5">
       <h1 className="text-[36px]">Write A <strong>Comment</strong></h1>
       <div>
         <form onSubmit={handleSubmit(handleAdddetail)}>
           <div className=" md:flex gap-5 ">
 
-
-            <div className="form-control w-full md:w-[280px] lg:w-[280px] max-w-xs">
-              <input
-                type="text"
-                placeholder="Name"
-                name="name"
-                className="  w-full max-w-xs bg-[#f7f7f7] py-3 px-3 outline-amber-300"
-                {...register("name", {
-                  required: {
-                    value: true,
-                    message: "name is required",
-                  },
-                  pattern: {
-                    value: /[A-z]/,
-                    message: "your name is required",
-                  },
-                })}
-              />
-              <label className="label">
-                {errors.name?.type === "required" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.name.message}
-                  </span>
-                )}
-                {errors.phoneNumber?.type === "pattern" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.name.message}
-                  </span>
-                )}
-              </label>
-            </div>
-
-
-
-            <div className="form-control w-full md:w-[280px] lg:w-[280px] max-w-xs">
-              <input
-                type="email"
-                placeholder="Email"
-                name="email"
-                className="  w-full max-w-xs bg-[#f7f7f7] py-3 px-3 outline-amber-300"
-                {...register("email", {
-                  required: {
-                    value: true,
-                    message: "email is required",
-                  },
-                  pattern: {
-                    value: /[A-Za-z]/,
-                    message: "your email is required",
-                  },
-                })}
-              />
-              <label className="label">
-                {errors.email?.type === "required" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.email.message}
-                  </span>
-                )}
-                {errors.email?.type === "pattern" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.email.message}
-                  </span>
-                )}
-              </label>
-            </div>
-
-
-
-            <div className="form-control w-full md:w-[280px] lg:w-[280px] max-w-xs">
-              <input
-                type="text"
-                placeholder="Phone Number"
-                name="phoneNumber"
-                className="  w-full max-w-xs bg-[#f7f7f7] py-3 px-3 outline-amber-300"
-                {...register("phoneNumber", {
-                  required: {
-                    value: true,
-                    message: "phoneNumber is required",
-                  },
-                  pattern: {
-                    value: /[0-9]/,
-                    message: "your phoneNumber is required",
-                  },
-                })}
-              />
-              <label className="label">
-                {errors.phoneNumber?.type === "required" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.phoneNumber.message}
-                  </span>
-                )}
-                {errors.phoneNumber?.type === "pattern" && (
-                  <span className="label-text-alt text-red-500">
-                    {errors.phoneNumber.message}
-                  </span>
-                )}
-              </label>
-            </div>
-
           </div>
-          {/* <textarea className='w-full md:w-[760px] mt-5 h-[150px] outline-amber-300 bg-[#f7f7f7]'></textarea> */}
           <div className="form-control md:w-[880px] lg:w-[880px]">
-
             <textarea
               type="text"
-              placeholder="detail"
+              placeholder="Detail"
               name="detail"
-              className="outline-amber-300 h-[150px] px-5 bg-[#f7f7f7] w-full "
+              className="outline-amber-300 overflow-auto min-h-[150px] max-h-[150px] p-2 bg-[#f7f7f7] w-full placeholder:tracking-wide"
               {...register("detail", {
                 required: {
                   value: true,
@@ -180,27 +101,26 @@ const WriteAComment = () => {
               )}
             </label>
           </div>
-          <p className="font-bold py-3">reding</p>
-          <div class=" rating">
 
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" checked />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-            <input type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" />
-          </div>
+          <section className='flex gap-2'>
+            <p className="font-bold">Rating :</p>
+
+            <div class=" rating">
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={1} />
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={2} />
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={3} />
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={4} />
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={5} />
+            </div>
+          </section>
 
           <br />
-          <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10'> Submit Now</button>
+          {userComment?.length > 0 ?
+            <button className='bg-gradient-to-r from-red-500 to-amber-600 opacity-60 px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer' disabled> Submit Now</button> :
+            <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer'> Submit Now</button>}
         </form>
       </div>
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
 
     </div>
   );

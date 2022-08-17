@@ -103,7 +103,7 @@ function MyBooking() {
                 <div
                     className={toggleState === 1 ? "content  active-content" : "content"}
                 >
-                    <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-y-5 gap-x-10 lg:p-10'>
+                    <div className='grid lg:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-y-5 gap-x-10 lg:p-10'>
 
                         {
                             [...myBookingServices].reverse().map(booking => <DisplayMyBooking
@@ -119,7 +119,7 @@ function MyBooking() {
                 <div
                     className={toggleState === 2 ? "content  active-content" : "content"}
                 >
-                    <div className='flex flex-wrap gap-5 p-3 lg:p-10'>
+                    <div className='flex flex-wrap gap-3 justify-center'>
                         {
                             tickets?.map((ticket) => <DisplayMyTickets key={ticket?.eventId} ticket={ticket} refetch={refetch} />)
                         }
