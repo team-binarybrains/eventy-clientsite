@@ -146,22 +146,30 @@ function App() {
         {/* blog */}
         <Route
           path="/blogs-details"
-          element={<BlogDetails></BlogDetails>}
+          element={<RequireAuth>
+            <BlogDetails></BlogDetails>
+          </RequireAuth>}
         ></Route>
         <Route
           path="/blogs-details/:blogId"
-          element={<BlogDetails></BlogDetails>}
+          element={<RequireAuth>
+            <BlogDetails></BlogDetails>
+          </RequireAuth>}
         ></Route>
         <Route path="/blogs" element={<MainBlogs />}></Route>
 
         {/* booking  */}
         <Route
           path="/event-booking"
-          element={<EventBooking></EventBooking>}
+          element={<RequireAuth>
+            <EventBooking></EventBooking>
+          </RequireAuth>}
         ></Route>
         <Route
           path="/event-booking/:id"
-          element={<SingleEventBooking></SingleEventBooking>}
+          element={<RequireAuth>
+            <SingleEventBooking></SingleEventBooking>
+          </RequireAuth>}
         ></Route>
 
         {/* event */}
@@ -170,28 +178,21 @@ function App() {
           element={<EventListDetailsMain></EventListDetailsMain>}
         ></Route>
         <Route path="/event" element={<DayOne></DayOne>}></Route>
-        <Route
-          path="/event-details"
-          element={<EventDetails></EventDetails>}
-        ></Route>
-        <Route
-          path="/event-details/:id"
-          element={<EventDetails></EventDetails>}
-        ></Route>
 
         {/* details */}
         <Route
           path="/service-details"
-          element={<SingleService></SingleService>}
+          element={<RequireAuth>
+            <SingleService></SingleService>
+          </RequireAuth>}
         ></Route>
         <Route
           path="/service-details/:id"
-          element={<SingleService></SingleService>}
+          element={<RequireAuth>
+            <SingleService></SingleService>
+          </RequireAuth>}
         ></Route>
-        <Route
-          path="/event-details/:id"
-          element={<EventDetails></EventDetails>}
-        ></Route>
+        
 
         {/* nornal routes */}
         <Route path="/manage-profile" element={<RequireAuth><UserProfile /></RequireAuth>} ></Route>
@@ -203,11 +204,15 @@ function App() {
         <Route path="/map" element={<Map></Map>}></Route>
         <Route
           path="/event-booking"
-          element={<EventBooking></EventBooking>}
+          element={<RequireAuth>
+            <EventBooking></EventBooking>
+          </RequireAuth>}
         ></Route>
         <Route
           path="/event-booking/:id"
-          element={<SingleEventBooking></SingleEventBooking>}
+          element={<RequireAuth>
+            <SingleEventBooking></SingleEventBooking>
+          </RequireAuth>}
         ></Route>
         <Route
           path="/eventlist"
@@ -216,11 +221,15 @@ function App() {
         <Route path="/event" element={<DayOne></DayOne>}></Route>
         <Route
           path="/event-details"
-          element={<EventDetails></EventDetails>}
+          element={<RequireAuth>
+            <EventDetails></EventDetails>
+          </RequireAuth>}
         ></Route>
         <Route
           path="/event-details/:id"
-          element={<EventDetails></EventDetails>}
+          element={<RequireAuth>
+            <EventDetails></EventDetails>
+          </RequireAuth>}
         ></Route>
         <Route
           path="/service-details"
@@ -230,10 +239,7 @@ function App() {
           path="/service-details/:id"
           element={<SingleService></SingleService>}
         ></Route>
-        {/* <Route
-          path="/event-details/:id"
-          element={<EventDetails></EventDetails>}
-        ></Route> */}
+        
 
         <Route path="faq" element={<Faq></Faq>}></Route>
 
