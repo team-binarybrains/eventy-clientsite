@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { AiOutlineUser } from "react-icons/ai";
 import {
   faChartBar,
   faChevronRight,
@@ -17,7 +18,13 @@ import useAdmin from "../Hooks/useAdmin";
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
   const [admin, adminLoading] = useAdmin(user);
-
+  const [currentUser, setCurrentUser] = useState([]);
+  const email = user?.email;
+  useEffect(() => {
+    fetch(`http://localhost:5000/single-user/${email}`)
+      .then(res => res.json())
+      .then(data => setCurrentUser(data))
+  }, [email]);
   return (
     <div className="mx-auto px-2 lg:px-0 route">
       <div class="drawer drawer-mobile">
@@ -51,8 +58,28 @@ const Dashboard = () => {
             htmlFor="open-dashboard-menu"
             className="drawer-overlay"
           ></label>
-          <ul className="menu px-2 overflow-y-auto  bg-[#1e293b] border-r-1 shadow-lg  ">
+          <ul className="menu overflow-y-auto  bg-[#1e293b] border-r-1 shadow-lg  ">
             {/* <!-- Sidebar content here --> */}
+            <div className="" id="user_profile">
+              <div className="">
+                <div id="user_profile_photo">
+                  
+                  {currentUser?.image && (
+                          <img className="w-[75px] h-[75px] rounded-full m-auto" src={currentUser?.image} alt="" />
+                        )}
+
+                        {!currentUser?.image  && (
+                          <span className="">
+                            <AiOutlineUser className="w-[75px] h-[75px] border-2  text-slate-800 m-auto bg-white bg-opacity-50 text-4xl rounded-full" />
+                          </span>
+                        )}
+                </div>
+                <div id="user_content" className="pt-2">
+                  <h1 className="text-white text-center text-sm">{currentUser?.displayName}</h1>
+                  <h1 className="text-white text-center text-xs">{currentUser?.email}</h1>
+                </div>
+              </div>
+            </div>
             {admin ||
               <li className="text-lg hover:bg-[#0f172a]  rounded">
                 <CustomLink
@@ -68,7 +95,7 @@ const Dashboard = () => {
               </li>
             }
             {admin &&
-              <li className="text-lg hover:bg-[#0f172a]  rounded">
+              <li className="text-lg hover:bg-[#0f172a]  rounded px-2">
                 <CustomLink
                   className="flex justify-center items-center gap-2"
                   to={"/dashboard/allusers"}
@@ -84,7 +111,7 @@ const Dashboard = () => {
 
             {/* booking info for admin */}
             {admin &&
-              <li className="text-lg hover:bg-[#0f172a]  rounded">
+              <li className="text-lg hover:bg-[#0f172a]  rounded px-2">
                 <CustomLink
                   className="flex justify-center items-center gap-2"
                   to={"/dashboard/all-booking"}
@@ -96,7 +123,7 @@ const Dashboard = () => {
 
             {/* booking info for user */}
             {!admin &&
-              <li className="text-lg hover:bg-[#0f172a]  rounded">
+              <li className="text-lg hover:bg-[#0f172a]  rounded px-2">
                 <CustomLink
                   className="flex justify-center items-center gap-2 "
                   to={"/dashboard/my-booking"}
@@ -107,7 +134,7 @@ const Dashboard = () => {
               </li>
             }
             {!admin &&
-              <li className="text-lg hover:bg-[#0f172a]  rounded">
+              <li className="text-lg hover:bg-[#0f172a]  rounded px-2">
                 <CustomLink
                   className="flex justify-center items-center gap-2 "
                   to={"/dashboard/add-event"}
@@ -117,7 +144,7 @@ const Dashboard = () => {
                 </CustomLink>
               </li>
             }
-          </ul> 
+          </ul>
         </div>
       </div>
     </div>
