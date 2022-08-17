@@ -60,7 +60,7 @@ const Dashboard = () => {
           ></label>
           <ul className="menu overflow-y-auto  bg-[#1e293b] border-r-1 shadow-lg  ">
             {/* <!-- Sidebar content here --> */}
-            <div className="" id="user_profile">
+            <div className="" id="sidebar_User_profile">
               <div className="">
                 <div id="user_profile_photo">
                   

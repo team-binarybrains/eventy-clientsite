@@ -31,7 +31,7 @@
    --tw-text-opacity: 1;
    color: hsl(var(--pc) / var(--tw-text-opacity));
 }
-#user_profile{
+#sidebar_User_profile{
    background-image: url('../../asset/userProfileSvg/wave.svg');
    background-repeat: no-repeat;
    background-size: cover;
