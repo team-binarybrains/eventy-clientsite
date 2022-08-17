@@ -63,16 +63,16 @@ const Dashboard = () => {
             <div className="" id="sidebar_User_profile">
               <div className="">
                 <div id="user_profile_photo">
-                  
-                  {currentUser?.image && (
-                          <img className="w-[75px] h-[75px] rounded-full m-auto" src={currentUser?.image} alt="" />
-                        )}
 
-                        {!currentUser?.image  && (
-                          <span className="">
-                            <AiOutlineUser className="w-[75px] h-[75px] border-2  text-slate-800 m-auto bg-white bg-opacity-50 text-4xl rounded-full" />
-                          </span>
-                        )}
+                  {currentUser?.image && (
+                    <img className="w-[75px] h-[75px] rounded-full m-auto" src={currentUser?.image} alt="" />
+                  )}
+
+                  {!currentUser?.image && (
+                    <span className="">
+                      <AiOutlineUser className="w-[75px] h-[75px] border-2  text-slate-800 m-auto bg-white bg-opacity-50 text-4xl rounded-full" />
+                    </span>
+                  )}
                 </div>
                 <div id="user_content" className="pt-2">
                   <h1 className="text-white text-center text-sm">{currentUser?.displayName}</h1>

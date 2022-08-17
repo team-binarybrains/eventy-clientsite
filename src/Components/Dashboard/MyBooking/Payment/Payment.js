@@ -16,14 +16,6 @@ const Payment = () => {
 
   const url = `http://localhost:5000/payment/${Id}`
 
-  // axios.get(url)
-  // .then(res =>{
-  //   const {data} = res
-  //   console.log(data);
-  //   setProduct(data)
-  // })
-
-
   const { data: product, isLoading } = useQuery(['payment', Id], () => fetch(url, {
     method: 'GET',
     // headers: {

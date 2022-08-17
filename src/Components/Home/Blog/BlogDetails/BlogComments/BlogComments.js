@@ -5,19 +5,19 @@ import Loading from '../../../../Share/Loading/Loading'
 import "./BlogComment.s.css";
 import Comment from "./Comment";
 
-const BlogComments = ({blogId}) => {
-  const [comments,loading,refetch] = useRefetch(`http://localhost:5000/comment/${blogId}`,[]);
+const BlogComments = ({ blogId }) => {
+  const [comments, loading, refetch] = useRefetch(`http://localhost:5000/comment/${blogId}`, []);
 
   return (
     <section className="max-w-7xl mx-auto px-5  ">
       {
-        comments?.length ? 
-        <h1 className="text-[36px] ">
-        Blog <strong>Comments</strong>
-      </h1>:''
+        comments?.length ?
+          <h1 className="text-[36px] ">
+            Blog <strong>Comments</strong>
+          </h1> : ''
       }
       {
-        loading && <Loading/>
+        loading && <Loading />
       }
       <div className="max-w-3xl">
         {[...comments]
