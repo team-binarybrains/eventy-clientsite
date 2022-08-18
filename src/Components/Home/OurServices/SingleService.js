@@ -46,7 +46,7 @@ function SingleService() {
       address: e.target.address.value,
       message: e.target.message.value,
       code: e.target.code.value,
-      totalPrice:e.target.totalPrice.value,
+      totalPrice: e.target.totalPrice.value,
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,

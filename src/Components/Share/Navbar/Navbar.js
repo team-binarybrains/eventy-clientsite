@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 import { BiUser } from "react-icons/bi";
 import { AiOutlineUser } from "react-icons/ai";
@@ -13,7 +13,7 @@ import { useEffect } from "react";
 const Navbar = ({ location }) => {
   const { pathname } = location;
   const routeName = pathname.slice("1");
-  // console.dir(location);
+  const navigate = useNavigate()
 
   const [navbarBg, setNavbar] = useState(false);
   const changeBg = () => {
@@ -28,6 +28,7 @@ const Navbar = ({ location }) => {
   const handleSignOut = () => {
     signOut(auth);
     localStorage.removeItem("accessToken");
+    navigate('/')
   };
   const [user] = useAuthState(auth);
 
@@ -44,7 +45,7 @@ const Navbar = ({ location }) => {
   };
 
   // profile photos load
-  const [currentUser , setCurrentUser] = useState([]); 
+  const [currentUser, setCurrentUser] = useState([]);
   const email = user?.email
   useEffect(() => {
     fetch(`http://localhost:5000/single-user/${email}`)
@@ -424,7 +425,7 @@ const Navbar = ({ location }) => {
                           />
                         )}
 
-                        {!currentUser?.image  && (
+                        {!currentUser?.image && (
                           <span className="">
                             <AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full" />
                           </span>
@@ -446,7 +447,7 @@ const Navbar = ({ location }) => {
                                 />
                               )}
 
-                              {!currentUser?.image  && (
+                              {!currentUser?.image && (
                                 <span className="">
                                   <AiOutlineUser className="text-black border-2 border-black bg-white text-5xl rounded-full" />
                                 </span>

@@ -7,61 +7,61 @@ import auth from "../../../../Firebase/firebase.init";
 import useRefetch from '../../../Hooks/useRefetch'
 
 
-const WriteAComment = ({refetch,blogId}) => {
+const WriteAComment = ({ refetch, blogId }) => {
   const [stars, setStars] = useState(5);
 
   const countStars = (e) => {
-      setStars(parseInt(e.target.value));
-      // console.log(parseInt(e.target.value));
+    setStars(parseInt(e.target.value));
+    // console.log(parseInt(e.target.value));
   }
 
-    const {
-        register,
-        formState: { errors },
-        handleSubmit,
-        reset,
-      } = useForm();
-    
-      const [user] = useAuthState(auth);
+  const {
+    register,
+    formState: { errors },
+    handleSubmit,
+    reset,
+  } = useForm();
 
-      const [userComment,,userCommentRefetch] = useRefetch(`http://localhost:5000/my-comment/${user?.uid+':'+blogId}`)
+  const [user] = useAuthState(auth);
 
-      const handleAdddetail = (data) => {
-        const inputdetail = {
-          commentId:`${user?.uid}:${blogId}`,
-          blogId:blogId,
-          uid:user?.uid,
-          name:user?.displayName,
-          img:user?.photoURL,
-          detail: data?.detail,
-          email: user?.email,
-          rating: stars
-        };
-    
+  const [userComment, , userCommentRefetch] = useRefetch(`http://localhost:5000/my-comment/${user?.uid + ':' + blogId}`)
+
+  const handleAdddetail = (data) => {
+    const inputdetail = {
+      commentId: `${user?.uid}:${blogId}`,
+      blogId: blogId,
+      uid: user?.uid,
+      name: user?.displayName,
+      img: user?.photoURL,
+      detail: data?.detail,
+      email: user?.email,
+      rating: stars
+    };
 
 
-        fetch("http://localhost:5000/comment", {
-          method: "PUT",
-          headers: {
-            "content-type": "application/json",
-            // authorization: Bearer ${localStorage.getItem('accessToken')}
-          },
-          body: JSON.stringify(inputdetail),
-        })
-          .then((res) => res.json())
-          .then(({success}) => {
-            // console.log(addeddetail);
-            if (success) {
-              toast.success("Your detail added successfully");
-              refetch();
-              userCommentRefetch();
-              reset();
-              setStars(5);
-            } else {
-              toast.error("Faild to add your detail. Please try again.");
-            }
-          });
-      };
+
+    fetch("http://localhost:5000/comment", {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        // authorization: Bearer ${localStorage.getItem('accessToken')}
+      },
+      body: JSON.stringify(inputdetail),
+    })
+      .then((res) => res.json())
+      .then(({ success }) => {
+        // console.log(addeddetail);
+        if (success) {
+          toast.success("Your detail added successfully");
+          refetch();
+          userCommentRefetch();
+          reset();
+          setStars(5);
+        } else {
+          toast.error("Faild to add your detail. Please try again.");
+        }
+      });
+  };
 
   return (
     <div className="mb-5">
@@ -101,7 +101,7 @@ const WriteAComment = ({refetch,blogId}) => {
               )}
             </label>
           </div>
-          
+
           <section className='flex gap-2'>
             <p className="font-bold">Rating :</p>
 
@@ -115,12 +115,12 @@ const WriteAComment = ({refetch,blogId}) => {
           </section>
 
           <br />
-          {userComment?.length > 0?
-          <button className='bg-gradient-to-r from-red-500 to-amber-600 opacity-60 px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer' disabled> Submit Now</button>:
-          <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer'> Submit Now</button>}
+          {userComment?.length > 0 ?
+            <button className='bg-gradient-to-r from-red-500 to-amber-600 opacity-60 px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer' disabled> Submit Now</button> :
+            <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer'> Submit Now</button>}
         </form>
       </div>
-    
+
 
     </div>
   );
