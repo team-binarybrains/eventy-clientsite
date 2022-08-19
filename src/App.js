@@ -49,6 +49,8 @@ import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
 import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
 import AddEvent from "./Components/Dashboard/AddEvent/AddEvent";
 
+
+
 function App() {
   const location = useLocation();
   const { pathname } = location;
