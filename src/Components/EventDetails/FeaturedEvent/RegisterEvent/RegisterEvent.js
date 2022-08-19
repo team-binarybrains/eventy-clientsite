@@ -108,7 +108,7 @@ const RegisterEvent = ({ eventDetailsData }) => {
       axios.put(`http://localhost:5000/ticket-booking/${user?.uid + ':' + eventDetailsData?._id}`, {
          booking: booked,
       }).then(({ data }) => {
-         data?.success && toast.success('Ticket booked successfully',{theme:"colored"});
+         data?.success && toast.success('Ticket booked successfully', { theme: "colored" });
          data?.success && refetch();
          setTicket({
             standard: 0,

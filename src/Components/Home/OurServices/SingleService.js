@@ -9,9 +9,34 @@ import { useEffect, useRef, useState } from "react";
 import "./SingleService.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/firebase.init";
-// import style from '../Venues/venue.module.css'
+import { DayPicker } from 'react-day-picker';
+import { format } from 'date-fns';
+import 'react-day-picker/dist/style.css';
+
+const css = `
+        .my-selected:not([disabled]) { 
+            font-weight: bold;
+            color: #05a962; 
+            border: 2px solid #05a962;
+          }
+          .my-selected:hover:not([disabled]) { 
+            border-color: #05a962;
+            color: #05a962;
+          }
+          .my-today {
+              padding-right: 3px;
+              padding-left: 3px;
+            font-size: 130%; 
+            color: #05a962;
+          }
+    `
+
 
 function SingleService() {
+
+  const [date, setDate] = useState(new Date())
+  console.log(date)
+  const formatedDate = format(date, 'PPPP')
 
   const venueForm = useRef()
 
@@ -20,21 +45,17 @@ function SingleService() {
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
   const [selectVenue, setSelectVenue] = useState('')
-  // const [serviceDetails, setServiceDetails] = useState({})
-  // console.log(serviceDetails);
+
   const details = useFetch(`http://localhost:5000/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
-  // const { price } = venues
-  // console.log(price);
-  // console.log(eventName.split(' '));
 
   const name = eventName?.split(" ");
   console.log(name);
 
-  // const handleBooking = () => {
 
-  // }
+
+
 
   const submission = (e) => {
     e.preventDefault();
@@ -46,7 +67,7 @@ function SingleService() {
       address: e.target.address.value,
       message: e.target.message.value,
       code: e.target.code.value,
-      totalPrice:e.target.totalPrice.value,
+      totalPrice: e.target.totalPrice.value,
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,
@@ -86,7 +107,6 @@ function SingleService() {
     e.target.reset();
   };
 
-  // const {venueCode} = venues
   useEffect(() => {
     axios.get(`http://localhost:5000/venues`).then((res) => {
       setVenues(res?.data);
@@ -219,27 +239,52 @@ function SingleService() {
               <p className="text-base text-gray-600 text-paragraph max-w-lg mx-auto"></p>
             </div>
             <div className="lg:flex flex-row justify-between sm:justify-center gap-x-10 gap-y-5 flex-wrap items-start">
-              <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white">
-                <div className="text-[#ffbe30] rounded-sm text-2xl bounce mt-0.5">
-                  <FiMail />
+
+              <div>
+                <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white">
+                  <div className="text-[#ffbe30] rounded-sm text-2xl bounce mt-0.5">
+                    <FiMail />
+                  </div>
+                  <div className="space-y-1 pt-5">
+                    <h4 className="font-body text-xl">
+                      Add your information For place your booking.
+                    </h4>
+                    <p className="text-paragraph"></p>
+                    <p className=" font-normal">
+                      We will contact with you for confirm your booking
+                    </p>
+                    <p className=" font-semibold"> As soon as possible. </p>
+                  </div>
                 </div>
-                <div className="space-y-1 pt-5">
-                  <h4 className="font-body text-xl">
-                    Add your information For place your booking.
-                  </h4>
-                  <p className="text-paragraph"></p>
-                  <p className=" font-normal">
-                    {" "}
-                    We will contact with you for confirm your booking
-                  </p>
-                  <p className=" font-semibold"> As soon as possible. </p>
+
+                {/* calender */}
+                <div className=' shadow-2xl rounded-xl w-80 h-72 flex justify-center items-center'>
+                  <style>{css}</style>
+                  <DayPicker
+                    className='w-80 h-72 flex justify-center items-center'
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    modifiersClassNames={{
+                      selected: 'my-selected',
+                      today: 'my-today'
+                    }}
+                  />
+
                 </div>
+
+                <p className=' text-lg lg:text-2xl md:text-2xl font-semibold uppercase border-b mb-5'>{format(date, 'PPPP')}</p>
+
+                {/* ---------------------- */}
               </div>
+
               <form
                 onSubmit={submission}
                 className="lg:space-y-8 w-full max-w-[780px] mt-5 scroll-mt-52"
                 ref={venueForm}
               >
+
+
                 <div className="lg:flex lg:gap-8">
                   <input
                     required

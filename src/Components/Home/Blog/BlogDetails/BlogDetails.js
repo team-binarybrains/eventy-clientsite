@@ -10,6 +10,7 @@ const BlogDetails = () => {
 
   const [blog, setBlog] = useState([]);
   const { blogId } = useParams();
+
   useEffect(() => {
     fetch(`http://localhost:5000/blogsdetail/${blogId}`)
       .then((res) => res.json())
@@ -49,7 +50,7 @@ const BlogDetails = () => {
       </div>
       <div>
         <FeaturedEvent blog={blog}></FeaturedEvent>
-        <BlogComments blogId={blogId}/>
+        <BlogComments blogId={blogId} />
       </div>
     </div>
   );

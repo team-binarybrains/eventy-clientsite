@@ -48,7 +48,7 @@ const FrequentlyMainBlogs = () => {
                       />
 
                       <p className="absolute -top-2 -left-2  text-gray-700 font-semibold bg-gradient-to-b from-amber-300 to-amber-500 px-5 py-3 rounded-sm uppercase">
-                        {blog?.date?.split(',')[0]} {blog?.date?.split(',')[1]?.slice(0,3)} {blog?.date?.split(',')[2]}
+                        {blog?.date?.split(',')[0]} {blog?.date?.split(',')[1]?.slice(0, 3)} {blog?.date?.split(',')[2]}
                       </p>
                     </div>
 

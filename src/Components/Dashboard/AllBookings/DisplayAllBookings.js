@@ -2,7 +2,7 @@ import React from 'react'
 
 function DisplayAllBookings({booking, handleBookingCancle}) {
 
-    const { _id, user_name, user_email, phone, address, message, code, eventName, eventPrice, image, img, venueName, seats, price, location } = booking
+    const { _id, user_name, user_email, phone, address, message, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
 
 
     return (
