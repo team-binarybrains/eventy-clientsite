@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 
 function DisplayMyBooking({ booking, handleBookingCancle }) {
 
-    const { _id, user_name, user_email, phone, address, message, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
+    const { _id, date, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
 
 
     const navigate = useNavigate()
@@ -15,11 +15,11 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
 
             <div className='bg-black/60 shadow-xl  flex items-center justify-around flex-col sm:flex-row py-8 px-5 sm:px-0  relative overflow-hidden'>
                 <div className='z-10 text-white '>
+                    <p>{date}</p>
                     <p class=" text-2xl openSans text-amber-500">{eventName}</p>
                     <p class="text-2xl openSans text-amber-500">Venue : {venueName}</p>
                     <p>{location}</p>
                 </div>
-
 
 
                 <div className='space-y-3 z-10'>

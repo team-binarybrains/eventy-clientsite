@@ -41,14 +41,14 @@ const Dashboard = () => {
               <FontAwesomeIcon icon={faChevronRight} /> </span></label>
           </div>
           <div className="text-center ">
-            <div id="header" className='py-6'>
+            <div id="header" className=''>
             </div>
             <div className="text-left px-3">
               <Outlet></Outlet>
             </div>
           </div>
         </div>
-        <div className="drawer-side w-[100%] lg:w-[250px]">
+        <div className="drawer-side w-[100%] lg:w-[260px]">
           <label htmlFor="open-dashboard-menu" className="drawer-overlay "></label>
           <ul className="menu overflow-y-auto  bg-[#1e293b] border-r-1 w-[70%] lg:w-[100%] border-r-1 shadow-lg  text-white">
             {/* <!-- Sidebar content here --> */}
