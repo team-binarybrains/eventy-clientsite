@@ -1,20 +1,22 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { AiOutlineUser } from "react-icons/ai";
+import { AiOutlineUser, AiOutlineAppstoreAdd } from "react-icons/ai";
+import { TiThSmall } from "react-icons/ti";
+import { IoTicket } from "react-icons/io5";
+import { FaUsers } from "react-icons/fa";
 import {
   faChartBar,
   faChevronRight,
-  faUser,
 } from "@fortawesome/free-solid-svg-icons";
 import "./Dashboard.css";
-import { Link, Outlet } from "react-router-dom";
-import { FaChartBar, FaChartLine } from "react-icons/fa";
+import { Outlet } from "react-router-dom";
 // import "./Dashboard.css"
 import CustomLink from "../Share/CustomLink/CustomLink";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/firebase.init";
 import useAdmin from "../Hooks/useAdmin";
+import Loading from "../Share/Loading/Loading";
 const Dashboard = () => {
   const [user, loading] = useAuthState(auth);
   const [admin, adminLoading] = useAdmin(user);
@@ -25,6 +27,9 @@ const Dashboard = () => {
       .then(res => res.json())
       .then(data => setCurrentUser(data))
   }, [email]);
+  if(loading){
+    return <Loading/>
+  }
   return (
     <div className="mx-auto px-2 lg:px-0 route">
       <div className="drawer drawer-mobile pt-0">
@@ -68,7 +73,7 @@ const Dashboard = () => {
               </div>
             </div>
             {admin ||
-              <li className="text-lg hover:bg-[#0f172a]  rounded">
+              <li className="text-base hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2 "
                   to={"/dashboard"}
@@ -82,15 +87,12 @@ const Dashboard = () => {
               </li>
             }
             {admin &&
-              <li className="text-lg hover:bg-[#0f172a]  rounded px-2">
+              <li className="text-base hover:bg-[#0f172a]  rounded px-2">
                 <CustomLink
                   className="flex justify-center items-center gap-2"
                   to={"/dashboard/allusers"}
                 >
-                  <FontAwesomeIcon
-                    className=""
-                    icon={faUser}
-                  ></FontAwesomeIcon>{" "}
+                  <FaUsers className="text-xl"/>
                   <span className=" font-bold"> ALL USERS</span>
                 </CustomLink>
               </li>
@@ -98,11 +100,12 @@ const Dashboard = () => {
 
             {/* booking info for admin */}
             {admin &&
-              <li className="text-lg hover:bg-[#0f172a]  rounded px-2">
+              <li className="text-base hover:bg-[#0f172a]  rounded px-2">
                 <CustomLink
                   className="flex justify-center items-center gap-2"
                   to={"/dashboard/all-booking"}
                 >
+                  <TiThSmall className="text-xl"/>
                   <span className=" font-bold"> ALL BOOKINGS</span>
                 </CustomLink>
               </li>
@@ -110,23 +113,23 @@ const Dashboard = () => {
 
             {/* booking info for user */}
             {!admin &&
-              <li className="text-lg hover:bg-[#0f172a]  rounded px-2">
+              <li className="text-base hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2 "
                   to={"/dashboard/my-booking"}
                 >
-
+                  <IoTicket className="text-xl" />
                   <span className="font-bold">MY BOOKING</span>
                 </CustomLink>
               </li>
             }
             {!admin &&
-              <li className="text-lg hover:bg-[#0f172a]  rounded px-2">
+              <li className="text-base hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2 "
                   to={"/dashboard/add-event"}
                 >
-
+                  <AiOutlineAppstoreAdd className="text-xl" />
                   <span className="font-bold">ADD EVENT</span>
                 </CustomLink>
               </li>
