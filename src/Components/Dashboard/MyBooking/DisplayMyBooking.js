@@ -22,7 +22,6 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
                 </div>
 
 
-
                 <div className='space-y-3 z-10'>
 
                     <h2 className='text-2xl border-b border-gray-400 text-white font-medium openSans'>Cost & Capacity</h2>
