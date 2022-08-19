@@ -63,3 +63,9 @@ code {
     @apply  border-4 border-black;
   }
 }
+
+
+.rdp-cell{
+  height: 100%;
+  padding:10px !important; 
+}
