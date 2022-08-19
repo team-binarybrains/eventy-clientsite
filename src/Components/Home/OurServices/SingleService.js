@@ -16,18 +16,16 @@ import 'react-day-picker/dist/style.css';
 const css = `
         .my-selected:not([disabled]) { 
             font-weight: bold;
-            color: #05a962; 
-            border: 2px solid #05a962;
+            color: #ffbe30; 
           }
           .my-selected:hover:not([disabled]) { 
-            border-color: #05a962;
-            color: #05a962;
+            color: #ffbe30;
           }
           .my-today {
               padding-right: 3px;
               padding-left: 3px;
             font-size: 130%; 
-            color: #05a962;
+            color: #ffbe30;
           }
     `
 
@@ -36,7 +34,7 @@ function SingleService() {
 
   const [date, setDate] = useState(new Date())
   console.log(date)
-  const formatedDate = format(date, 'PPPP')
+  // const formatedDate = format(date, 'PPPP')
 
   const venueForm = useRef()
 
@@ -68,6 +66,7 @@ function SingleService() {
       message: e.target.message.value,
       code: e.target.code.value,
       totalPrice: e.target.totalPrice.value,
+      date: e.target.date.value,
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,
@@ -258,10 +257,10 @@ function SingleService() {
                 </div>
 
                 {/* calender */}
-                <div className=' shadow-2xl rounded-xl w-80 h-72 flex justify-center items-center'>
+                <div className=' shadow-2xl rounded-xl h-[400px]  flex justify-center items-center'>
                   <style>{css}</style>
                   <DayPicker
-                    className='w-80 h-72 flex justify-center items-center'
+                    className='w-full h-full flex justify-center items-center'
                     mode="single"
                     selected={date}
                     onSelect={setDate}
@@ -272,8 +271,6 @@ function SingleService() {
                   />
 
                 </div>
-
-                <p className=' text-lg lg:text-2xl md:text-2xl font-semibold uppercase border-b mb-5'>{format(date, 'PPPP')}</p>
 
                 {/* ---------------------- */}
               </div>
@@ -322,6 +319,15 @@ function SingleService() {
                     name="phone"
                   />
                 </div>
+
+                <input
+                  required
+                  className="text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md text-gray-500 focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
+                  value={format(date, 'PPPP')}
+                  type="text"
+                  placeholder="Select your date"
+                  name="date"
+                />
 
                 <input
                   required
