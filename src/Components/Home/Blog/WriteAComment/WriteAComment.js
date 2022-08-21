@@ -24,7 +24,7 @@ const WriteAComment = ({ refetch, blogId }) => {
 
   const [user] = useAuthState(auth);
 
-  const [userComment, , userCommentRefetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/my-comment/${user?.uid + ':' + blogId}`)
+  const [userComment, , userCommentRefetch] = useRefetch(`http://localhost:5000/my-comment/${user?.uid + ':' + blogId}`)
 
   const handleAdddetail = (data) => {
     const inputdetail = {
@@ -40,7 +40,7 @@ const WriteAComment = ({ refetch, blogId }) => {
 
 
 
-    fetch("https://fathomless-hamlet-59180.herokuapp.com/comment", {
+    fetch("http://localhost:5000/comment", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

@@ -20,7 +20,7 @@ const CheckoutForm = ({ product }) => {
     console.log(eventPrice)
 
     useEffect(() => {
-        fetch('https://fathomless-hamlet-59180.herokuapp.com/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -94,7 +94,7 @@ const CheckoutForm = ({ product }) => {
                 email: email,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://fathomless-hamlet-59180.herokuapp.com/myaddedorders/${_id}`, {
+            fetch(`http://localhost:5000/myaddedorders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
