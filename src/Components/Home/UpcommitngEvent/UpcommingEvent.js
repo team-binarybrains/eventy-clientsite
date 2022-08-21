@@ -78,7 +78,7 @@ const UpcommingEvent = () => {
       {isSuccess &&
         <div className="container mx-auto px-10 pt-16"
           data-aos="zoom-in"
-          data-aos-duration="1000"
+          data-aos-duration="2000"
         >
           <div className="space-y-3">
             <h1 className="text-center uppercase text-gray-400 text-[18px] tracking-[10px]">
