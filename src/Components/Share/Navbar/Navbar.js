@@ -53,7 +53,9 @@ const Navbar = ({ location }) => {
       .then(data => setCurrentUser(data))
   }, [email]);
   return (
-    <div>
+    <div 
+ 
+    >
       <section className={`${routeName ? anotherRoute : homeRoute} bg-white`}>
         {routeName && <TopnavBar></TopnavBar>}
         <div
@@ -229,6 +231,7 @@ const Navbar = ({ location }) => {
                 </li>
               </ul>
             </div>
+
 
             {/* logo */}
             <div className="flex items-end justify-center">

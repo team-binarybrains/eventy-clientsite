@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import logo from "./logo.svg";
 import "./App.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -57,6 +59,8 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
+  AOS.init();
 
   return (
     <div className="overflow-x-hidden">
@@ -194,7 +198,7 @@ function App() {
             <SingleService></SingleService>
           </RequireAuth>}
         ></Route>
-        
+
 
         {/* nornal routes */}
         <Route path="/manage-profile" element={<RequireAuth><UserProfile /></RequireAuth>} ></Route>
@@ -241,7 +245,7 @@ function App() {
           path="/service-details/:id"
           element={<SingleService></SingleService>}
         ></Route>
-        
+
 
         <Route path="faq" element={<Faq></Faq>}></Route>
 

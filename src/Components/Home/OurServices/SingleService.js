@@ -43,7 +43,8 @@ function SingleService() {
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
   const [selectVenue, setSelectVenue] = useState('')
-
+  // const [serviceDetails, setServiceDetails] = useState({})
+  // console.log(serviceDetails);
   const details = useFetch(`http://localhost:5000/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
@@ -105,6 +106,8 @@ function SingleService() {
     setSelectVenue(null)
     e.target.reset();
   };
+
+
 
   useEffect(() => {
     axios.get(`http://localhost:5000/venues`).then((res) => {

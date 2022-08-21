@@ -10,7 +10,10 @@ const Singleblog = ({ item }) => {
   };
 
   return (
-    <div className="bg-white lg:mt-5 p-4  lg:p-5 lg:max-w-2xl shadow-sm gap-4 flex flex-col items-center  lg:flex-row ">
+    <div className="bg-white lg:mt-5 p-4  lg:p-5 lg:max-w-2xl shadow-sm gap-4 flex flex-col items-center  lg:flex-row "
+      data-aos="flip-down"
+      data-aos-duration="2600"
+    >
       <div className="blog-image   lg:w-[300px] relative hvr">
         <img
           className="lg:h-[200px] lg:w-[300px] object-cover"

@@ -27,8 +27,8 @@ const Dashboard = () => {
       .then(res => res.json())
       .then(data => setCurrentUser(data))
   }, [email]);
-  if(loading){
-    return <Loading/>
+  if (loading) {
+    return <Loading />
   }
   return (
     <div className="mx-auto px-2 lg:px-0 route">
@@ -92,7 +92,7 @@ const Dashboard = () => {
                   className="flex justify-center items-center gap-2"
                   to={"/dashboard/allusers"}
                 >
-                  <FaUsers className="text-xl"/>
+                  <FaUsers className="text-xl" />
                   <span className=" font-bold"> ALL USERS</span>
                 </CustomLink>
               </li>
@@ -105,7 +105,7 @@ const Dashboard = () => {
                   className="flex justify-center items-center gap-2"
                   to={"/dashboard/all-booking"}
                 >
-                  <TiThSmall className="text-xl"/>
+                  <TiThSmall className="text-xl" />
                   <span className=" font-bold"> ALL BOOKINGS</span>
                 </CustomLink>
               </li>

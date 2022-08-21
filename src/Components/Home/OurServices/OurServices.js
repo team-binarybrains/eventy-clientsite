@@ -1,23 +1,14 @@
 /* eslint-disable no-unused-vars */
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import { BiLeftArrow, BiRightArrow } from "react-icons/bi";
 import { BsPlusLg } from "react-icons/bs";
-import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import Slider from "react-slick";
-import axios from "axios";
 import "./OurServices.css";
 import { useNavigate } from "react-router-dom";
 import useFetch from "./Hook/useFetch";
 
 export default function OurServices() {
   const serviceInfo = useFetch("http://localhost:5000/services-get");
-  // console.log(serviceInfo);
-
-  // axios.get('http://localhost:5000/services-get')
-  //     .then(res => {
-  //         const { data } = res
-  //         setServiceInfo(data)
-  //     })
 
   const navigate = useNavigate();
   const navigateToDetails = (id) => {
@@ -65,10 +56,16 @@ export default function OurServices() {
   return (
     <div className="lg:px-[270px] pt-20 pb-32 bg-gray-100">
       <div className="mt-6 mb-14">
-        <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]">
+        <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]"
+        data-aos="fade-right"
+        data-aos-duration="3000"
+        >
           our services
         </h1>
-        <p className="text-4xl tracking-wider text-center">
+        <p className="text-4xl tracking-wider text-center"
+        data-aos="fade-left"
+        data-aos-duration="3000"
+        >
           Eventy <span className="font-bold">Expertise</span>
         </p>
       </div>
@@ -78,7 +75,10 @@ export default function OurServices() {
           {serviceInfo.map((service, index) => (
             <div key={service.index} className="relative hvr ">
               <div className="cursor-pointer">
-                <div className="flex justify-center relative">
+                <div className="flex justify-center relative" 
+                data-aos="flip-right"
+                data-aos-duration="2500"
+                >
                   <img src={service.image} alt="" className="" />
                   <div className="absolute top-0 left-[1.8rem] right-[1.8rem] bottom-0 bg-transparent cld ">
                     <BsPlusLg
@@ -88,7 +88,10 @@ export default function OurServices() {
                   </div>
                 </div>
 
-                <div className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-3">
+                <div className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-3"
+                data-aos="fade-up"
+                data-aos-duration="2700"
+                >
                   <div className="bg-white w-72 h-28 grid items-center justify-center">
                     <div className="text-center">
                       <p className="font-bold">{service.eventName}</p>
