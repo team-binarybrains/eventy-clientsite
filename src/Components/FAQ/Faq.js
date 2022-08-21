@@ -23,16 +23,44 @@ const Faq = () => {
     return (
         <div className='route'>
             <div className="py-20 bg-[url('/src/asset/12tmag-switzerland-slide-E5KB-superJumbo.jpg')] bg-fixed bg-no-repeat bg-cover text-center">
-                <h4 style={{ wordSpacing: "4px", letterSpacing: "5px" }} className='font-semibold text-lg text-white'>EVENTY EVENT MANAGEMENT</h4>
-                <h2 className='text-5xl font-semibold mt-5 text-white'>EVENTY <span className='font-bold text-amber-400'>FAQ</span></h2>
-                <p className='text-white mt-12 font-bold'><span className='pr-8 border-r-2'>Home</span><span className='pl-8 font-medium'>Frequently Ask Qusetion</span></p>
+
+                <div
+                    data-aos="zoom-in"
+                    data-aos-duration="2000"
+                >
+                    <h4 style={{ wordSpacing: "4px", letterSpacing: "5px" }} className='font-semibold text-lg text-white'>EVENTY EVENT MANAGEMENT</h4>
+                    <h2 className='text-5xl font-semibold mt-5 text-white'>EVENTY <span className='font-bold text-amber-400'>FAQ</span></h2>
+                </div>
+
+                <div className='text-white mt-12 font-bold flex justify-center'>
+                    <p className='pr-8 border-r-2'
+                        data-aos="fade-right"
+                        data-aos-duration="2000"
+                    >
+                        Home
+                    </p>
+
+                    <p className='pl-8 font-medium'
+                        data-aos="fade-left"
+                        data-aos-duration="2000"
+                    >
+                        Frequently Ask Qusetion
+                    </p>
+                </div>
             </div>
+
             <div className='px-5 sm:px-20 mb-28 2xl:max-w-7xl mx-auto'>
                 <div className='grid grid-cols-6 mt-24 mb-12'>
-                    <div className="col-span-6 sm:col-span-4">
+                    <div className="col-span-6 sm:col-span-4"
+                        data-aos="fade-right"
+                        data-aos-duration="2000"
+                    >
                         <h1 className='text-4xl sm:text-5xl font-normal'>1. About <span className='font-bold'>Account</span> </h1>
                     </div>
-                    <div className='col-span-6 sm:col-span-2 text-center sm:text-right mt-10 sm:mt-0'>
+                    <div className='col-span-6 sm:col-span-2 text-center sm:text-right mt-10 sm:mt-0'
+                        data-aos="fade-left"
+                        data-aos-duration="2000"
+                    >
                         <label onClick={() => setQuestion("")} for="my-modal-6" className='py-3.5 px-9 custom-btn rounded-full uppercase font-semibold text-white'>Make A Question</label>
                     </div>
 
@@ -42,7 +70,8 @@ const Faq = () => {
                             <label for="my-modal-6" class="btn btn-sm btn-circle absolute right-3 top-3">✕</label>
                             <h3 class="font-bold text-2xl mb-3">Ask Question ?</h3>
 
-                            <div class="form-control">
+                            <div class="form-control"
+                            >
                                 <label class="label">
                                     <span class="label-text font-medium">Please Enter Your Question</span>
                                 </label>
