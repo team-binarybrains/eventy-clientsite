@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./EventListing.css";
 import {
   faMicrophone,
-  faMicrophoneAlt,
-  faCakeCandles,
+  // faMicrophoneAlt,
+  // faCakeCandles,
   faMusic,
-  faSquareCheck,
+  // faSquareCheck,
   faShirt,
 } from "@fortawesome/free-solid-svg-icons";
 import ConferenceEvent from "./ConferenceEvent";
 import MusicEvent from "./MusicEvent";
 import FashionEvent from "./FashionEvent";
 import { useNavigate } from "react-router-dom";
-import TopBanner from "../../EventDetails/TopBanner";
+// import TopBanner from "../../EventDetails/TopBanner";
 const EventListing = () => {
   const navigate = useNavigate();
   const handleEventListing = () => {
     navigate("/eventlist");
   };
   return (
-    <div className="mt-20 min-h-[50vh] bg-[#fff]">
+    <section id="event-listing" className="mt-20 min-h-[50vh] bg-[#fff]">
       <div className=" mx-auto h-1 w-24 bg-[#FD1D1D]  lg:ml-[320px] lg:mb-6"></div>
       <div className=" text-center lg:text-start lg:ml-96 ">
 
@@ -117,7 +117,7 @@ const EventListing = () => {
           See More
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

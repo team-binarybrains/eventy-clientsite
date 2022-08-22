@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from '../../../asset/logo/1.site-logo.png'
+// import logo from '../../../asset/logo/1.site-logo.png'
 // react icon
 import { HiOutlineMail } from 'react-icons/hi'
 import { FaPhone } from 'react-icons/fa'
@@ -54,14 +54,14 @@ const Footer = () => {
                         useful <strong className='text-[#ff960d]'>links</strong>
                      </h3>
                      <ul className='py-6'>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/about' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> About Eventy</Link></li>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Disclaimer</Link></li>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Contact us</Link></li>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Events Schedule</Link></li>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Sponsors</Link></li>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Venues</Link></li>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Tickets</Link></li>
-                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><Link to='/' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333]' /> Pricing Plans</Link></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><a href='/about' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333] ' /> About Eventy</a></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><a href='#event-listing' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333] ' /> Event Listing</a></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><a href='/contact-us' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333] ' /> Contact us</a></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><a href='#upcoming-event' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333] ' />Upcoming Events</a></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><a href='#partner-client' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333] ' /> Partners & Clients</a></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><a href='#venues' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333] ' /> Venues</a></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><a href='#upcoming-event' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333] ' /> Tickets</a></li>
+                        <li className='text-base flex items-center gap-2  border-b border-slate-500 py-2 '><a href='#ask-questions' id='usefulHover' className='flex gap-2 items-center'><BiRightArrowAlt className='bg-zinc-500 w-5 h-5 rounded-full text-[#333333] ' /> Ask & Questions</a></li>
                      </ul>
 
                   </div>

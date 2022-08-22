@@ -67,6 +67,7 @@ function App() {
       <Navbar location={location}></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
 
         {/* services */}
         <Route path="/services" element={<Services></Services>}></Route>
