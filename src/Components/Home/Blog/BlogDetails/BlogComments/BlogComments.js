@@ -12,7 +12,10 @@ const BlogComments = ({ blogId }) => {
     <section className="max-w-7xl mx-auto px-5  ">
       {
         comments?.length ?
-          <h1 className="text-[36px] ">
+          <h1 className="text-[36px] "
+            data-aos="fade-right"
+            data-aos-duration="2500"
+          >
             Blog <strong>Comments</strong>
           </h1> : ''
       }

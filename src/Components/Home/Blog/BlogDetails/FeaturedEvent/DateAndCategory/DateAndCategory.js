@@ -7,7 +7,10 @@ const DateAndCategory = ({ blog }) => {
     <div className="mt-4">
       <div>
         <div className="md:flex  gap-3 items-center">
-          <div className="flex DateAndTime rounded-md">
+          <div className="flex DateAndTime rounded-md"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+          >
             <span className="text-2xl inline-block bg-[#ffbe30]   text-white p-3 rounded-full">
               <MdDateRange className="" />{" "}
             </span>
@@ -17,7 +20,10 @@ const DateAndCategory = ({ blog }) => {
             </p>
           </div>
 
-          <div className="flex DateAndTime rounded-md ">
+          <div className="flex DateAndTime rounded-md "
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+          >
             <span className="text-2xl inline-block bg-[#ffbe30]   text-white p-3 rounded-full">
               <GoLocation className="" />{" "}
             </span>
@@ -29,7 +35,10 @@ const DateAndCategory = ({ blog }) => {
         </div>
 
         {/* blogs */}
-        <div className="mt-7">
+        <div className="mt-7"
+        data-aos="flip-right"
+        data-aos-duration="2000"
+        >
           <p className="text-[16px]">
             {blog.details?.slice(0, 200)}
             <br />
