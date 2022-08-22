@@ -31,3 +31,41 @@
    --tw-text-opacity: 1;
    color: hsl(var(--pc) / var(--tw-text-opacity));
 }
+#sidebar_User_profile{
+   background-image: url('../../asset/userProfileSvg/wave.svg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   width: 100%;
+   height: 280px;
+   background-position: center;
+}
+@media only screen and (max-width:580px){
+   #sidebar_User_profile{
+      background-image: url('../../asset/userProfileSvg/wave.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 280px;
+      background-position: center;
+   }
+}
+@media only screen and (min-width:580px){
+   #sidebar_User_profile{
+      background-image: url('../../asset/userProfileSvg/wave.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 400px;
+      background-position: center;
+   }
+}
+@media only screen and (min-width:1023px){
+   #sidebar_User_profile{
+      background-image: url('../../asset/userProfileSvg/wave.svg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      height: 285px;
+      background-position: center;
+   }
+}

@@ -27,15 +27,19 @@ const Venues = () => {
               <div className="h-[3px] w-[70px] bg-gradient-to-r from-red-500 to-pink-500 mx-auto sm:mx-0 mb-2" />
               <h4
                 className={`${styles.openSans} text-white uppercase tracking-[5px] mb-4`}
+                data-aos="fade-left"
+                data-aos-duration="3000"
               >
                 Eventy Venues
               </h4>
-              <h2 className={`${styles.roboto} text-4xl text-white`}>
+              <h2 className={`${styles.roboto} text-4xl text-white`} data-aos="zoom-in" data-aos-duration="3000" >
                 Conference <span className="font-bold">Rooms & Hotels</span>
               </h2>
             </div>
             <div
               className={`h-[424px] max-w-[500px] overflow-y-scroll mt-10 ${styles.section} ml-auto`}
+              data-aos="fade-right"
+              data-aos-duration="2500"
             >
               {venues.map((venue) => {
                 return (
@@ -63,8 +67,10 @@ const Venues = () => {
               })}
             </div>
           </div>
-          <div
-            className={`h-[424px] sm:min-w-[500px] grow basis-[50%] shrink relative ${styles.highlight}`}
+
+          <div className={`h-[424px] sm:min-w-[500px] grow basis-[50%] shrink relative ${styles.highlight}`}
+          data-aos="zoom-in-left"
+          data-aos-duration="2500"
           >
             <img
               src={select.img}

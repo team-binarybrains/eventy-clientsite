@@ -9,9 +9,32 @@ import { useEffect, useRef, useState } from "react";
 import "./SingleService.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/firebase.init";
-// import style from '../Venues/venue.module.css'
+import { DayPicker } from 'react-day-picker';
+import { format } from 'date-fns';
+import 'react-day-picker/dist/style.css';
+
+const css = `
+        .my-selected:not([disabled]) { 
+            font-weight: bold;
+            color: #ffbe30; 
+          }
+          .my-selected:hover:not([disabled]) { 
+            color: #ffbe30;
+          }
+          .my-today {
+              padding-right: 3px;
+              padding-left: 3px;
+            font-size: 130%; 
+            color: #ffbe30;
+          }
+    `
+
 
 function SingleService() {
+
+  const [date, setDate] = useState(new Date())
+  console.log(date)
+  // const formatedDate = format(date, 'PPPP')
 
   const venueForm = useRef()
 
@@ -25,15 +48,13 @@ function SingleService() {
   const details = useFetch(`http://localhost:5000/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
-  const {price} = venues
-  // console.log(eventName.split(' '));
 
   const name = eventName?.split(" ");
   console.log(name);
 
-  // const handleBooking = () => {
 
-  // }
+
+
 
   const submission = (e) => {
     e.preventDefault();
@@ -45,7 +66,8 @@ function SingleService() {
       address: e.target.address.value,
       message: e.target.message.value,
       code: e.target.code.value,
-      // totalPrice: eventPrice + parseInt(price),
+      totalPrice: e.target.totalPrice.value,
+      date: e.target.date.value,
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,
@@ -53,8 +75,7 @@ function SingleService() {
     };
     console.log(bookingInfo);
 
-    axios
-      .post("http://localhost:5000/service-booking", bookingInfo)
+    axios.post("http://localhost:5000/service-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);
@@ -66,6 +87,7 @@ function SingleService() {
           toast.error("Faild to prossed booking. Please try again.");
         }
       });
+
 
     emailjs
       .sendForm(
@@ -81,10 +103,12 @@ function SingleService() {
         }
       );
 
+    setSelectVenue(null)
     e.target.reset();
   };
 
-  // const {venueCode} = venues
+
+
   useEffect(() => {
     axios.get(`http://localhost:5000/venues`).then((res) => {
       setVenues(res?.data);
@@ -196,7 +220,7 @@ function SingleService() {
               <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}
                 onClick={() => {
                   setSelectVenue(select)
-                  venueForm.current.scrollIntoView(0, 20)
+                  venueForm.current.scrollIntoView()
                 }}
 
               >SELECT</button>
@@ -217,27 +241,50 @@ function SingleService() {
               <p className="text-base text-gray-600 text-paragraph max-w-lg mx-auto"></p>
             </div>
             <div className="lg:flex flex-row justify-between sm:justify-center gap-x-10 gap-y-5 flex-wrap items-start">
-              <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white">
-                <div className="text-[#ffbe30] rounded-sm text-2xl bounce mt-0.5">
-                  <FiMail />
+
+              <div>
+                <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white">
+                  <div className="text-[#ffbe30] rounded-sm text-2xl bounce mt-0.5">
+                    <FiMail />
+                  </div>
+                  <div className="space-y-1 pt-5">
+                    <h4 className="font-body text-xl">
+                      Add your information For place your booking.
+                    </h4>
+                    <p className="text-paragraph"></p>
+                    <p className=" font-normal">
+                      We will contact with you for confirm your booking
+                    </p>
+                    <p className=" font-semibold"> As soon as possible. </p>
+                  </div>
                 </div>
-                <div className="space-y-1 pt-5">
-                  <h4 className="font-body text-xl">
-                    Add your information For place your booking.
-                  </h4>
-                  <p className="text-paragraph"></p>
-                  <p className=" font-normal">
-                    {" "}
-                    We will contact with you for confirm your booking
-                  </p>
-                  <p className=" font-semibold"> As soon as possible. </p>
+
+                {/* calender */}
+                <div className=' shadow-2xl rounded-xl h-[400px]  flex justify-center items-center'>
+                  <style>{css}</style>
+                  <DayPicker
+                    className='w-full h-full flex justify-center items-center'
+                    mode="single"
+                    selected={date}
+                    onSelect={setDate}
+                    modifiersClassNames={{
+                      selected: 'my-selected',
+                      today: 'my-today'
+                    }}
+                  />
+
                 </div>
+
+                {/* ---------------------- */}
               </div>
+
               <form
                 onSubmit={submission}
-                className="lg:space-y-8 w-full max-w-[780px] mt-5"
+                className="lg:space-y-8 w-full max-w-[780px] mt-5 scroll-mt-52"
                 ref={venueForm}
               >
+
+
                 <div className="lg:flex lg:gap-8">
                   <input
                     required
@@ -278,6 +325,15 @@ function SingleService() {
 
                 <input
                   required
+                  className="text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md text-gray-500 focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
+                  value={format(date, 'PPPP')}
+                  type="text"
+                  placeholder="Select your date"
+                  name="date"
+                />
+
+                <input
+                  required
                   className="resize-none w-full outline-none p-6 rounded-md h-[7
                     0px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
                   placeholder="Your Address"
@@ -297,14 +353,14 @@ function SingleService() {
                   value={image}
                   name="image"
                 />
-                
-                {/* <input
+
+                <input
                   required
                   className="hidden"
-                  type="text"
-                  value={}
+                  type="number"
+                  value={parseInt(eventPrice) + parseInt(selectVenue?.price)}
                   name="totalPrice"
-                /> */}
+                />
 
                 <input
                   required

@@ -1,59 +1,58 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 function DisplayMyBooking({ booking, handleBookingCancle }) {
 
-    const { _id, user_name, user_email, phone, address, message, code, eventName, eventPrice, image, img, venueName, seats, price, location } = booking
+    const { _id, date, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
+
+
+    const navigate = useNavigate()
 
     return (
-        <div>
-            <div class="card card-side bg-base-100 shadow-xl">
-                {/* <figure><img src={image} alt="" className='h-80' /></figure> */}
-                <div class="card-body">
-                    <div className='grid gap-y-6'>
-                        <div className='flex lg:flex-col flex-col-reverse'>
+        <div class=" bg-no-repeat bg-center bg-cover rounded-lg overflow-hidden"
+            style={{ backgroundImage: `url(${image})` }}>
 
-                            <div>
-                                <p className=' text-2xl operator italic'>User Information</p>
-                                <p className='grid'>
-                                    <span>Name : {user_name}</span>
-                                    {/* <span>Phone : {phone}</span> */}
-                                    <span>Email : {user_email}</span>
-                                    {/* <span>Address : {address}</span> */}
-                                </p>
-                            </div>
 
-                            <div className='mt-4 lg:mt-3'>
-                                <p class=" text-2xl operator italic"> Event : {eventName}</p>
-                                <span>Price : ${eventPrice}</span>
-                            </div>
-
-                        </div>
-
-                        <div className=''>
-                            <p class="text-2xl operator italic">Venue : {venueName}</p>
-                            <p className=''>
-                                <span>Price : ${price}</span> <br />
-                                <span>Venue code : {code}</span> <br />
-                                <span>Capacity : {seats} Seats</span> <br />
-                                <span>Location : {location}</span><br />
-                            </p>
-                        </div>
-                    </div>
-
-<hr />
-
-                    <div className='text-start'>
-                        <p className='uppercase text-lg font-semibold'>Total Amount = ${parseInt(eventPrice) + parseInt(price)} </p>
-                    </div>
-
-                    <div class="card-actions justify-end ">
-                        <button onClick={() => handleBookingCancle(_id)} class="px-6 py-2 rounded-full bg bg-amber-400">Cancle</button>
-                        <Link to='/dashboard/payment/${_id}' class="px-6 py-2 rounded-full bg bg-amber-400">Pay</Link>
-                    </div>
+            <div className='bg-black/60 shadow-xl  flex items-center justify-around flex-col sm:flex-row py-8 px-5 sm:px-0  relative overflow-hidden'>
+                <div className='z-10 text-white '>
+                    <p>{date}</p>
+                    <p class=" text-2xl openSans text-amber-500">{eventName}</p>
+                    <p class="text-2xl openSans text-amber-500">Venue : {venueName}</p>
+                    <p>{location}</p>
                 </div>
+
+
+                <div className='space-y-3 z-10'>
+
+                    <h2 className='text-2xl border-b border-gray-400 text-white font-medium openSans'>Cost & Capacity</h2>
+                    <div className='space-y-2 border-b border-gray-400 text-white pb-2'>
+                        <p>Event Cost : ${eventPrice}</p>
+                        <p>Venue Cost : ${price}</p>
+                        <p>Venue code : {code}</p>
+                        <p>Capacity : {seats} Seats</p>
+                    </div>
+
+
+                    <p className='uppercase text-lg text-white font-semibold'>Total Amount = ${totalPrice} </p>
+
+                    {/* <div class="card-actions justify-end ">
+                        <button onClick={() => handleBookingCancle(_id)} class="btn btn-error text-white">Cancle</button>
+
+                        <Link to={`/dashboard/payment/${_id}`} class="btn btn-success">Pay</Link>
+                    </div> */}
+
+                    <div class="flex justify-end gap-5 px-5 pt-5">
+                        <button onClick={() => handleBookingCancle(_id)} class={`border-4 border-red-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-red-500 font-extrabold hover:shadow-[0_0_35px_rgb(236,68,68)] hover:bg-red-500 hover:text-gray-900 text-lg duration-300`}>Cancel</button>
+                        <button onClick={()=> navigate(`/dashboard/payment/${_id}`)} class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
+                    </div>
+
+                </div>
+
             </div>
+
+
         </div>
+
     )
 }
 

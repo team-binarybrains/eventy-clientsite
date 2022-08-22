@@ -3,15 +3,20 @@ import { Link, useParams } from "react-router-dom";
 import BlogComments from "./BlogComments/BlogComments";
 import "./BlogDetails.css";
 import FeaturedEvent from "./FeaturedEvent/FeaturedEvent";
+
+
 const BlogDetails = () => {
+
+
   const [blog, setBlog] = useState([]);
   const { blogId } = useParams();
+
   useEffect(() => {
     fetch(`http://localhost:5000/blogsdetail/${blogId}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [blogId]);
-  console.log(blog);
+
   return (
     <div className="route">
       <div className="banner-background">
@@ -45,7 +50,7 @@ const BlogDetails = () => {
       </div>
       <div>
         <FeaturedEvent blog={blog}></FeaturedEvent>
-        <BlogComments />
+        <BlogComments blogId={blogId} />
       </div>
     </div>
   );

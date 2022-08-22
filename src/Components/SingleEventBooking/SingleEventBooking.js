@@ -10,7 +10,7 @@ import auth from "../../Firebase/firebase.init";
 
 const SingleEventBooking = () => {
 
-  const [user]=useAuthState(auth)
+  const [user] = useAuthState(auth)
   const { id } = useParams();
 
   const event = useFetch(`http://localhost:5000/venue/${id}`, {});

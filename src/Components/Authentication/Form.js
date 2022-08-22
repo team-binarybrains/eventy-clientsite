@@ -48,9 +48,9 @@ const Form = () => {
     signUpError,
   ] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-   // sign In funcitonality below
-   const [signInWithEmailAndPassword, signInUser, signInLoading, signInError] =
-   useSignInWithEmailAndPassword(auth);
+  // sign In funcitonality below
+  const [signInWithEmailAndPassword, signInUser, signInLoading, signInError] =
+    useSignInWithEmailAndPassword(auth);
 
   const [updateProfile, updating, updateerror] = useUpdateProfile(auth);
 

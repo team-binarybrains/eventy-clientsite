@@ -5,7 +5,10 @@ function PurchaseEvent() {
         <div className=" p-3 bg-image"
             style={{ backgroundImage: "url('https://i.ibb.co/DLQD5bZ/special-offer-bg.png')", backgroundSize: 'cover' }} >
 
-            <div className='my-10'>
+            <div className='my-10'
+             data-aos="fade-up"
+             data-aos-duration="2000"
+            >
                 <div className='text-center -mt-8'>
                     <p className='lg:text-3xl text-xl text-white uppercase'>
                         <span>Are You Ready To Make</span>

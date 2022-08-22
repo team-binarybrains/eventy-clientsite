@@ -8,7 +8,7 @@ const MainChart = () => {
   return (
     <div className="grid justify-center">
       <div className="text-left">
-        <div className="bg-amber-400 h-[500px] lg:-mr-3 lg:w-[1650px]">
+        <div className="bg-amber-400 h-[500px] lg:-mr-3 lg:w-[1640px]">
           <div className="lg:pt-20 pt-3 flex justify-center">
             <Count />
           </div>

@@ -11,7 +11,7 @@ const DayOne = ({ data }) => {
       <div className="flex flex-wrap-reverse gap-2 route">
          <div className='basis-[320px] grow '>
             <div className="">
-               <h1 className='text-2xl text-slate-700 '>{data?.title}</h1>
+               <h1 className='text-2xl text-slate-700 capitalize'>{data?.title}</h1>
                <p className='text-slate-700 py-4'></p>
             </div>
             <div className="">

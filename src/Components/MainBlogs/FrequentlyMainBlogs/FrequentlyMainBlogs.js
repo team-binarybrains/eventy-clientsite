@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsBookmarkFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
-import "./FrequentlyMainBlogs.css";
+import style from './blog.module.css'
 
 const FrequentlyMainBlogs = () => {
   const [show, setShow] = useState(false);
@@ -39,16 +39,16 @@ const FrequentlyMainBlogs = () => {
 
               <div className="grid md:grid-cols-2 gap-7 p-5  lg:grid-cols-2 ">
                 {blogs.map((blog) => (
-                  <div blog={blog} className="hover:border-amber-600 border h-[500px] flex flex-col pb-5  bg-[#f7f7f7]">
+                  <div blog={blog} className={`h-[500px] flex flex-col pb-5  bg-[#f7f7f7] transition-transform ${style.blogCard}`}>
                     <div className="relative">
                       <img
-                        className="w-full h-[202px]"
-                        src={blog.image}
+                        className={`w-full h-[202px] object-cover ${style.blogImg} overflow-hidden`}
+                        src={blog?.image}
                         alt=""
                       />
 
-                      <p className="absolute top-5 left-5  text-white font-semibold">
-                        {blog.date}
+                      <p className="absolute -top-2 -left-2  text-gray-700 font-semibold bg-gradient-to-b from-amber-300 to-amber-500 px-5 py-3 rounded-sm uppercase">
+                        {blog?.date?.split(',')[0]} {blog?.date?.split(',')[1]?.slice(0, 3)} {blog?.date?.split(',')[2]}
                       </p>
                     </div>
 
@@ -66,7 +66,7 @@ const FrequentlyMainBlogs = () => {
                     <div className="self-start grow flex px-5">
                       <button
                         onClick={() => handleBlogsDetails(blog._id)}
-                        className="px-10 py-3 rounded-md font-bold text-[#878787]   hover:text-white bg-white red-more self-end"
+                        className="px-10 py-3 rounded-md font-bold text-[#878787]  hover:text-white bg-white transition hover:bg-gradient-to-r from-orange-500 to-amber-500 self-end"
                       >
                         Read More
                       </button>

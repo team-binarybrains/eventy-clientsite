@@ -19,7 +19,7 @@ const SingleUser = ({ allUser, handleDeleteUser }) => {
           //   src={userIcon}
           //   alt="f"
           // />
-          <BiUserCircle className="text-3xl text-slate-600"></BiUserCircle>
+          <BiUserCircle  className="text-4xl text-slate-600"></BiUserCircle>
         )}
       </td>
       <td>

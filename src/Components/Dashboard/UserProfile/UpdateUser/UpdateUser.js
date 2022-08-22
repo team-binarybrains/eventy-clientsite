@@ -22,8 +22,8 @@ const UpdateUser = () => {
       fetch(`http://localhost:5000/single-user/${email}`, {
          method: "GET",
       })
-      .then(res=>res.json())
-      .then(data=>setUserData(data))
+         .then(res => res.json())
+         .then(data => setUserData(data))
    }, [email]);
 
    const onSubmit = (data) => {
@@ -50,7 +50,7 @@ const UpdateUser = () => {
                   image: img,
                };
 
-               fetch(`http://localhost:5000/user/${email}`, {
+               fetch(`http://localhost:5000/user-update/${email}`, {
                   method: "PUT",
                   headers: {
                      "content-type": "application/json",
@@ -59,7 +59,7 @@ const UpdateUser = () => {
                })
                   .then((res) => res.json())
                   .then((inserted) => {
-                     if (inserted.result) {
+                     if (inserted) {
                         toast.success("updated");
                         navigate('/manage-profile')
                         reset();
@@ -77,7 +77,7 @@ const UpdateUser = () => {
    if (error) {
       console.log(error);
    }
-   
+
    return (
       <section className="route my-10 container mx-auto px-4">
          <div className="rounded bg-white shadow-2xl" id="profile_container">
@@ -292,7 +292,7 @@ const UpdateUser = () => {
                            Update Photos
                         </label>
                         <input
-                        
+
                            id="image"
                            name="image"
                            type="file"

@@ -16,7 +16,7 @@ const CheckoutForm = ({ product }) => {
 
     // console.log(clientSecret);
 
-    const { _id, eventPrice, email, name } = product
+    const { _id, eventPrice, email, name, price, totalPrice } = product
     console.log(eventPrice)
 
     useEffect(() => {
@@ -26,7 +26,7 @@ const CheckoutForm = ({ product }) => {
                 'content-type': 'application/json',
                 // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
-            body: JSON.stringify({ eventPrice })
+            body: JSON.stringify({ totalPrice })
         })
             .then(res => res.json())
             .then(data => {
@@ -35,7 +35,7 @@ const CheckoutForm = ({ product }) => {
                 }
             });
 
-    }, [eventPrice])
+    }, [totalPrice])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -112,7 +112,7 @@ const CheckoutForm = ({ product }) => {
 
     }
 
-
+    console.log(transactionId);
     return (
         <>
 
