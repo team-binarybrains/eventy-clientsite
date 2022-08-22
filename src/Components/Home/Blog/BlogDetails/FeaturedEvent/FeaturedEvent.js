@@ -10,9 +10,16 @@ const FeaturedEvent = ({ blog }) => {
   return (
     <div>
       <div className=" 2xl:container 2xl:mx-auto md:py-12 lg:px-20 md:px-6 py-9 px-4">
-        <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">
+        <h2 className=" font-semibold lg:text-4xl text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800"
+          data-aos="fade-right"
+          data-aos-duration="2000"
+        >
           {" "}
-          <span className=" text-[#ffbe30]">
+          <span className=" text-[#ffbe30]"
+            data-aos="fade-right"
+            data-aos-delay="400"
+            data-aos-duration="2500"
+          >
             <BsBookmarkFill className="inline-block" />
           </span>{" "}
           Featured Event
@@ -20,13 +27,19 @@ const FeaturedEvent = ({ blog }) => {
         <div className="mt-4 flex md:justify-between md:items-start md:flex-row flex-col justify-start items-start">
           <div className=" ">
             {/* <p className=" font-normal text-base leading-6 text-gray-600 lg:w-8/12 md:w-9/12 ">Here are few of the most frequently asked questions by our valueable customers</p> */}
-            <h1 className="resent-post-section-title">
+            <h1 className="resent-post-section-title"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+            >
               <strong>{blog?.tittle}</strong>{" "}
             </h1>
           </div>
 
           <div className=" border-gray-200 pb-2 flex justify-center items-center md:mt-0 mt-10 md:w-auto w-full ">
-            <h1 className="resent-post-section-title pr-52 -mb-[48px]">
+            <h1 className="resent-post-section-title pr-52 -mb-[48px]"
+              data-aos="fade-left"
+              data-aos-duration="2000"
+            >
               Recent <span className="font-bold"> Post</span>
             </h1>
           </div>
@@ -37,14 +50,19 @@ const FeaturedEvent = ({ blog }) => {
               src="https://i.ibb.co/XFgcQmg/event-details-1-1.jpg"
               alt="Img of Glass bottle"
               className="w-full md:block hidden"
+              data-aos="flip-up"
+              data-aos-duration="2000"
             />
-          
+
             <DateAndCategory blog={blog}></DateAndCategory>
           </div>
           <div className=" md:w-5/12 lg:w-4/12 w-full md:mt-0 sm:mt-14 mt-10">
             {/* <!-- Shipping Section --> */}
             <div>
-              <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md">
+              <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
+                data-aos="fade-left"
+                data-aos-duration="2500"
+              >
                 <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30]  ">
                   How to join this event?
                 </h3>
@@ -96,7 +114,10 @@ const FeaturedEvent = ({ blog }) => {
             {/* <!-- Returns Section --> */}
 
             <div>
-              <div className="py-7 px-3  flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md ">
+              <div className="py-7 px-3  flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md "
+                data-aos="fade-left"
+                data-aos-duration="2500"
+              >
                 <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30] ">
                   How to make new event?
                 </h3>
@@ -148,7 +169,11 @@ const FeaturedEvent = ({ blog }) => {
             {/* <!-- Exchange Section --> */}
 
             <div>
-              <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md">
+              <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
+                data-aos="fade-left"
+                data-aos-delay="500"
+                data-aos-duration="2500"
+              >
                 <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30] ">
                   Exchange
                 </h3>
@@ -200,7 +225,11 @@ const FeaturedEvent = ({ blog }) => {
             {/* Tracking Section */}
 
             <div>
-              <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md">
+              <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
+                data-aos="fade-left"
+                data-aos-delay="800"
+                data-aos-duration="2500"
+              >
                 <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30] ">
                   Tracking
                 </h3>
@@ -248,8 +277,15 @@ const FeaturedEvent = ({ blog }) => {
             </div>
 
             {/* <hr className=" my-7 bg-gray-200" /> */}
-            <div className="sitebanner flex  justify-center mt-32 ">
-              <div className="text-center">
+            <div className="sitebanner flex  justify-center mt-32 "
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+            >
+              <div className="text-center"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              data-aos-duration="2500"
+              >
                 <h1 className="text-white text-[17px] mt-16">
                   26 DECEMBER 2018
                 </h1>

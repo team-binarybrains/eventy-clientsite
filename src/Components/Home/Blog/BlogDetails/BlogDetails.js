@@ -22,8 +22,15 @@ const BlogDetails = () => {
       <div className="banner-background">
         <div className="flex justify-center items-center py-20">
           <div className="text-center">
-            <h1 className="breadcrumb-section font-bold">BLOG SINGLE</h1>
-            <h1 className="big-title">
+            <h1 className="breadcrumb-section font-bold"
+             data-aos="zoom-in"
+             data-aos-duration="2000"
+            >BLOG SINGLE</h1>
+
+            <h1 className="big-title"
+             data-aos="zoom-in"
+             data-aos-duration="2000"
+            >
               Eventy
               <br />
               <strong className="text-[#ffbe30]">BLOG DETAILS</strong>
@@ -32,16 +39,23 @@ const BlogDetails = () => {
               <Link
                 to="/"
                 className="text-[16px] font-bold hover:text-[#ffbe30] text-white border-r-4 pr-3"
+                data-aos="fade-right"
+                data-aos-duration="2000"
               >
                 Home
               </Link>
               <Link
                 to="/"
                 className="text-[16px] font-bold hover:text-[#ffbe30] text-white border-r-4 pl-3 pr-3"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
               >
                 Blogs
               </Link>
-              <p className="text-[16px] font-bold text-white inline-block  pl-2">
+              <p className="text-[16px] font-bold text-white inline-block  pl-2"
+               data-aos="fade-left"
+               data-aos-duration="2000"
+              >
                 Blog Details
               </p>
             </div>
