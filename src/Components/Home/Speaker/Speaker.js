@@ -7,6 +7,7 @@ import styles from "./speaker.module.css";
 import SpeakerBanner from "./SpeakerBanner";
 import { BsFacebook, BsLinkedin, BsTwitter } from 'react-icons/bs';
 import { AiFillInstagram } from 'react-icons/ai';
+import PurchaseEvent from "../PurchaseEvent/PurchaseEvent";
 // import TopBanner from "../../EventDetails/TopBanner";
 
 const Speaker = () => {
@@ -78,6 +79,7 @@ return (
         </div>
       </div>
     </section>
+    <PurchaseEvent/>
   </>
 );
 };
