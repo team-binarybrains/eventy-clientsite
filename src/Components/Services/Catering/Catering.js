@@ -15,7 +15,10 @@ function Catering() {
             {/* catering banner */}
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
                 <div className="flex justify-center items-center h-full lg:-mt-8">
-                    <div className="text-white text-center">
+                    <div className="text-white text-center"
+                    data-aos="zoom-in"
+                    data-aos-duration="2500"
+                    >
                         <p className="tracking-[8px]">ALL YOU NEED TO KNOW</p>
                         <p className="text-4xl text-center font-bold my-3">
                             <span className="text-[#ffbe30] mr-2">CATERING</span>
@@ -25,11 +28,17 @@ function Catering() {
                 </div>
 
                 <div className="flex justify-center items-center gap-x-3 lg:-mt-16 -mt-10 text-white ">
-                    <Link to="/" className="text-lg">
+                    <Link to="/" className="text-lg"
+                    data-aos="fade-right"
+                    data-aos-duration="2500"
+                    >
                         Home
                     </Link>
                     <span>|</span>
-                    <Link to="/contact-us" className="text-lg">
+                    <Link to="/contact-us" className="text-lg"
+                    data-aos="fade-left"
+                    data-aos-duration="2500"
+                    >
                         Contact Us
                     </Link>
                 </div>
