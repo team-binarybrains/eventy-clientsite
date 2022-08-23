@@ -43,8 +43,14 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
     return (
         <div className={`shadow-xl rounded-md bg-slate-200 basis-[35rem] shrink relative overflow-hidden bg-no-repeat bg-center bg-cover`} style={{
             backgroundImage: `url(${event?.image})`
-        }}>
-            <section className='py-5 px-3 gap-x-3 gap-y-10 flex flex-wrap items-center justify-center text-white backdrop-blur-[3px] bg-black/80'>
+        }}
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+        >
+            <section className='py-5 px-3 gap-x-3 gap-y-10 flex flex-wrap items-center justify-center text-white backdrop-blur-[3px] bg-black/80'
+            data-aos="flip-up"
+            data-aos-duration="2000"
+            >
                 <div className='space-y-2 basis-[15rem] shrink flex flex-col justify-center items-center'>
                     <h3 className='font-medium text-white'>{event?.date?.split(',')?.join(' ')}</h3>
 

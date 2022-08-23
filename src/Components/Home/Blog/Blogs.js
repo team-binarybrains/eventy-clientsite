@@ -1,17 +1,17 @@
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, {useState } from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-  faMicrophone,
-  faMicrophoneAlt,
-  faCakeCandles,
-  faMusic,
-  faSquareCheck,
-  faClock,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
-import { BsPlusLg } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+// import {
+//   faMicrophone,
+//   faMicrophoneAlt,
+//   faCakeCandles,
+//   faMusic,
+//   faSquareCheck,
+//   faClock,
+//   faLocationDot,
+// } from "@fortawesome/free-solid-svg-icons";
+// import { BsPlusLg } from "react-icons/bs";
+// import { useNavigate } from "react-router-dom";
 import Singleblog from "./SingleBlog/Singleblog";
 import useBlogs from "../../Hooks/useBlogs";
 const 
@@ -20,10 +20,10 @@ Blogs = () => {
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
   const [show4, setShow4] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [blogs] = useBlogs();
   return (
-    <div className="bg-gray-100">
+    <section id="ask-questions" className="bg-gray-100">
       <div className=" lg:max-w-7xl lg:mx-auto   lg:pt-20  ">
         <div className=" flex flex-col lg:max-w-7xl lg:mx-auto lg:gap-x-20   lg:flex-row   pb-20">
           <div className="  2xl:mx-auto  px-4 lg:px-20  md:px-6 ">
@@ -305,7 +305,7 @@ Blogs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

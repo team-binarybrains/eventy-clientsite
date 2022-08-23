@@ -53,7 +53,10 @@ const data = [
 
 export default function LineChar() {
   return (
-    <div className=" h-[400px] w-[90vw] lg:ml-5 lg:mt-72 bg-white rounded-md lg:h-[500px] lg:w-[40%]  ">
+    <div className=" h-[400px] w-[90vw] lg:ml-5 lg:mt-72 bg-white rounded-md lg:h-[500px] lg:w-[40%] "
+    data-aos="flip-down"
+    data-aos-duration="2000"
+    >
       <div className="pt-2 pl-5">
         <h1 className="text-gray-500 text-sm">Performance</h1>
         <h1 className="text-black text-xl ">Total Orders</h1>

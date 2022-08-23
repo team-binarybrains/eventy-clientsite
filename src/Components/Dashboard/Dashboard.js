@@ -54,7 +54,10 @@ const Dashboard = () => {
             {/* <!-- Sidebar content here --> */}
             <div className="" id="sidebar_User_profile">
               <div className="pt-5">
-                <div id="user_profile_photo">
+                <div id="user_profile_photo"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+                >
 
                   {currentUser?.image && (
                     <img className="w-[75px] h-[75px] rounded-full m-auto" src={currentUser?.image} alt="" />
@@ -67,8 +70,14 @@ const Dashboard = () => {
                   )}
                 </div>
                 <div id="user_content" className="pt-2">
-                  <h1 className="text-white text-center text-sm capitalize">{currentUser?.displayName}</h1>
-                  <h1 className="text-white text-center text-sm">{currentUser?.email}</h1>
+                  <h1 className="text-white text-center text-sm capitalize"
+                  data-aos="zoom-out"
+                  data-aos-duration="2000"
+                  >{currentUser?.displayName}</h1>
+                  <h1 className="text-white text-center text-sm"
+                  data-aos="zoom-out"
+                  data-aos-duration="2000"
+                  >{currentUser?.email}</h1>
                 </div>
               </div>
             </div>

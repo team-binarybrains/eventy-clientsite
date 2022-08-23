@@ -42,7 +42,10 @@ function AllBookings() {
         <div className='grid lg:grid-cols-1 grid-rows-none grid-cols-none gap-y-5 gap-x-20 lg:p-20'>
 
             <div className='flex justify-center border-b-2 lg:mb-5'>
-                <p className='text-3xl font-bold '>
+                <p className='text-3xl font-bold '
+                data-aos="zoom-in"
+                data-aos-duration="2500"
+                >
                     ALL
                     <span className='text-amber-400 tracking-widest mx-2'>BOOKING</span>
                     INFORMATION

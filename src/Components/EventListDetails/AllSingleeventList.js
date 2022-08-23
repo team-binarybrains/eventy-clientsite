@@ -27,7 +27,10 @@ const AllSingleeventList = ({ item }) => {
   return (
     <div
       className="  border-[1px] p-2 border-white transition-all lg:h-[282px] shadow-md hover:border-orange-400 flex flex-col  lg:flex-row lg:justify-center
-      lg:items-center lg:p-5 lg:gap-6  "
+      lg:items-center lg:p-5 lg:gap-6 "
+
+      data-aos="flip-down"
+      data-aos-duration="2000"
     >
       <div className="event-image flex justify-center">
         <div className="image relative lg:h-[270px] lg:w-[270px]">

@@ -50,6 +50,7 @@ import MyBooking from "./Components/Dashboard/MyBooking/MyBooking";
 import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
 import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
 import AddEvent from "./Components/Dashboard/AddEvent/AddEvent";
+import Speaker from "./Components/Home/Speaker/Speaker";
 
 
 
@@ -67,6 +68,7 @@ function App() {
       <Navbar location={location}></Navbar>
       <Routes>
         <Route path="/" element={<Home></Home>}></Route>
+        <Route path="/home" element={<Home></Home>}></Route>
 
         {/* services */}
         <Route path="/services" element={<Services></Services>}></Route>
@@ -95,6 +97,11 @@ function App() {
         <Route
           path="/photography"
           element={<Photography></Photography>}
+        ></Route>
+        {/* speaker */}
+        <Route
+          path="/speaker"
+          element={<Speaker></Speaker>}
         ></Route>
 
         {/* dashboard */}

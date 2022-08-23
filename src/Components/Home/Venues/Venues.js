@@ -19,7 +19,7 @@ const Venues = () => {
   };
 
   return (
-    <section className={`${styles.bgImage}`}>
+    <section id="venues" className={`${styles.bgImage}`}>
       <section className="bg-[#333333c7]">
         <div className="py-[100px] flex sm:flex-row flex-col sm:items-end sm:justify-center gap-x-[1%] gap-y-5 flex-wrap container mx-auto">
           <div className="basis-[49%] shrink px-3">

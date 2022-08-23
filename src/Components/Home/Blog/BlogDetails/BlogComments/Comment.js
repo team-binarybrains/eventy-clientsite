@@ -18,22 +18,26 @@ const Comment = ({ comment }) => {
 
   const showStars = (star) => {
     if (star > 1) {
-        return <>
-            <AiTwotoneStar className="text-xl" />
-            {showStars(star - 1)}
-        </>
+      return <>
+        <AiTwotoneStar className="text-xl" />
+        {showStars(star - 1)}
+      </>
     }
     if (star === 1) {
-        return <AiTwotoneStar className="text-xl" />;
+      return <AiTwotoneStar className="text-xl" />;
     }
   }
 
   return (
     <>
-    <div className="py-10 flex gap-3 flex-col sm:flex-row items-center sm:items-stretch">
+      <div className="py-10 flex gap-3 flex-col sm:flex-row items-center sm:items-stretch">
 
-      {/* user image */}
-        <section className="w-10">
+        {/* user image */}
+        <section className="w-10"
+        data-aos="fade-right"
+        data-aos-delay="600"
+        data-aos-duration="2000"
+        >
           {comment.img && (
             <img
               src={comment.img}
@@ -47,19 +51,28 @@ const Comment = ({ comment }) => {
               <AiOutlineUser className="border-2 border-black text-black bg-white bg-opacity-50 text-4xl rounded-full" /> </span>)}
         </section>
 
-      {/* comment body */}
-      <section className="space-y-3 flex flex-wrap grow">
+        {/* comment body */}
+        <section className="space-y-3 flex flex-wrap grow">
 
           {/* user name with rating */}
           <div className="basis-full flex flex-col items-center sm:block">
-            <h1 className="text-lg font-bold">{comment.name}</h1>
-            <div className="flex text-[#ffbe30]">
+            <h1 className="text-lg font-bold"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            >{comment.name}</h1>
+            <div className="flex text-[#ffbe30]"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+            >
               {showStars(comment?.rating)}
             </div>
           </div>
 
           {/* comment text*/}
-          <p className="text-sm h-28 basis-full grow overflow-auto">
+          <p className="text-sm h-28 basis-full grow overflow-auto"
+          data-aos="flip-up"
+          data-aos-duration="2000"
+          >
             {comment.detail}
           </p>
 
@@ -69,12 +82,18 @@ const Comment = ({ comment }) => {
             {/* helpful indicator */}
             <div className="space-y-5">
 
-              <div className="flex gap-2 text-[#878787]">
+              <div className="flex gap-2 text-[#878787]"
+                data-aos="zoom-in"
+                data-aos-duration="2000"
+              >
                 <GiSelfLove className="text-3xl inline-block" />
                 <h1 className=" font-bold text-lg">Helpful?</h1>
               </div>
 
-              <div className="flex flex-col sm:flex-row">
+              <div className="flex flex-col sm:flex-row"
+                data-aos="fade-left"
+                data-aos-duration="2000"
+              >
                 <button
                   onClick={yes}
                   className={`${helpful === "helpful"
@@ -98,15 +117,18 @@ const Comment = ({ comment }) => {
             </div>
 
             {/* reply and share btn */}
-            <div className="flex flex-col sm:flex-row">
+            <div className="flex flex-col sm:flex-row"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            >
 
               <button className="py-3 w-28 border-2 border-r text-[#878787] font-bold hover:text-gray-700">
-                  <FaReplyAll className="inline-block mr-2" />
+                <FaReplyAll className="inline-block mr-2" />
                 Reply
               </button>
 
               <button className="py-3 w-28 border-2 border-l text-[#878787] font-bold hover:text-gray-700">
-                  <FaShareSquare className="inline-block mr-2" />
+                <FaShareSquare className="inline-block mr-2" />
                 Share
               </button>
 
@@ -114,10 +136,13 @@ const Comment = ({ comment }) => {
 
           </section>
 
-      </section>
+        </section>
 
-    </div>
-    <div className="py-[2px] rounded-full bg-gray-400/60"/>
+      </div>
+      <div className="py-[1px] rounded-full bg-gray-400/60" 
+      data-aos="zoom-in"
+      data-aos-duration="2000"
+      />
     </>
   );
 };
