@@ -54,7 +54,6 @@ import Speaker from "./Components/Home/Speaker/Speaker";
 import useLoading from "./Components/Hooks/useLoading";
 
 
-
 function App() {
   const location = useLocation();
   const { pathname } = location;

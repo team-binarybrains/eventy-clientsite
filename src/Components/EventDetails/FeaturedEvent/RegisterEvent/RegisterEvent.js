@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable eqeqeq */
 import React, { useEffect, useRef, useState } from 'react';
 import './RegisterEvent.css'
@@ -90,6 +91,7 @@ const RegisterEvent = ({ eventDetailsData }) => {
          bookingId: user?.uid + ':' + eventDetailsData?._id,
          userId: user?.uid,
          eventId: eventDetailsData?._id,
+         eventName: eventDetailsData?.title,
          enterprise: {
             ticket: enterprise,
             price: parseInt(enterprise) * 99
