@@ -53,7 +53,6 @@ import AddEvent from "./Components/Dashboard/AddEvent/AddEvent";
 import Speaker from "./Components/Home/Speaker/Speaker";
 
 
-
 function App() {
   const location = useLocation();
   const { pathname } = location;
