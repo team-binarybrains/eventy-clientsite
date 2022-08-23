@@ -21,7 +21,6 @@ const CheckoutForm = ({ product }) => {
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
-    // console.log(clientSecret);
 
     const { _id, eventPrice, name, price, totalPrice,  eventName, total, bookingId } = product
     console.log(name)
