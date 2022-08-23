@@ -11,7 +11,10 @@ function LinenRentals() {
         <div className='route'>
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
                 <div className="flex justify-center items-center h-full lg:-mt-8">
-                    <div className="text-white text-center">
+                    <div className="text-white text-center"
+                        data-aos="zoom-in"
+                        data-aos-duration="2500"
+                    >
                         <p className="tracking-[8px]">ALL YOU NEED TO KNOW</p>
                         <p className="text-4xl text-center font-bold my-3">
                             <span className="text-[#ffbe30] mr-2">EVENT LINEN RENTALS</span>
@@ -21,11 +24,17 @@ function LinenRentals() {
                 </div>
 
                 <div className="flex justify-center items-center gap-x-3 lg:-mt-16 -mt-10 text-white ">
-                    <Link to="/" className="text-lg">
+                    <Link to="/" className="text-lg"
+                        data-aos="fade-right"
+                        data-aos-duration="2500"
+                    >
                         Home
                     </Link>
                     <span>|</span>
-                    <Link to="/contact-us" className="text-lg">
+                    <Link to="/contact-us" className="text-lg"
+                        data-aos="fade-left"
+                        data-aos-duration="2500"
+                    >
                         Contact Us
                     </Link>
                 </div>
@@ -37,17 +46,30 @@ function LinenRentals() {
                 <div className='grid lg:flex justify-center gap-x-6'>
 
                     <div className='lg:w-4/12 flex justify-center items-center'>
-                        <img src="https://i.ibb.co/X3p2bgj/reserved-186321-1920-500x550.jpg" alt="" className='h-96' />
+                        <img src="https://i.ibb.co/X3p2bgj/reserved-186321-1920-500x550.jpg" alt="" className='h-96'
+                            data-aos="flip-down"
+                            data-aos-duration="2000"
+                        />
                     </div>
 
                     <div className='lg:w-4/12 px-3 lg:px-0 py-10 lg:py-0'>
-                        <p className='uppercase text-3xl font-semibold'>EVENT <span className='text-amber-400 tracking-widest'>LINENS AND TABLEWARE</span></p>
-                        <p className='py-8'>
+                        <p className='uppercase text-3xl font-semibold'
+                            data-aos="fade-left"
+                            data-aos-duration="2000"
+                        >EVENT <span className='text-amber-400 tracking-widest'>LINENS AND TABLEWARE</span></p>
+                        <p className='py-8'
+                            data-aos="fade-left"
+                            data-aos-delay="200"
+                            data-aos-duration="2000"
+                        >
 
                             We have a wide variety of linens available to suit any event.  Our basic linen stock is extensive in both size and color.  We also carry a good range of specialty linens to suit different tastes.   In addition to linens, we offer some basic items of glassware, chargers and plates for rental. We do not hold a large stock of these table items so we are more suited to catering for small events. We have party linens, tablecloths, chair covers, standard fabrics, deluxe fabrics, silks, satin, cotton and more.  Select Your Linens for your Next Event. Rentals as low as $25.00. You can purchase linens in our online store Gifted Chocolate along with other event decor, tableware, gifts and party favors.
                         </p>
                         <div className='flex justify-end'>
-                            <img src="https://i.ibb.co/MRXgQwx/eventy-signature.png" alt="" className='' />
+                            <img src="https://i.ibb.co/MRXgQwx/eventy-signature.png" alt="" className=''
+                                data-aos="flip-down"
+                                data-aos-duration="2000"
+                            />
                         </div>
                     </div>
                 </div>
