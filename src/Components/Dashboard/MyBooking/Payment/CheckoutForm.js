@@ -4,7 +4,7 @@ import Loading from '../../../Share/Loading/Loading';
 
 
 const CheckoutForm = ({ product }) => {
-    console.log(product);
+    // console.log(product);
 
     const stripe = useStripe()
     const elements = useElements()
@@ -17,7 +17,7 @@ const CheckoutForm = ({ product }) => {
     // console.log(clientSecret);
 
     const { _id, eventPrice, email, name, price, totalPrice } = product
-    console.log(eventPrice)
+    console.log(email)
 
     useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
