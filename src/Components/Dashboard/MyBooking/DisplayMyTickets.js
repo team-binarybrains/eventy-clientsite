@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -80,7 +81,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
 
                     <div class="flex justify-end gap-5 px-5 pt-5">
                         <button onClick={() => handleBookingCancle(eventId)} class={`border-4 border-red-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-red-500 font-extrabold hover:shadow-[0_0_35px_rgb(236,68,68)] hover:bg-red-500 hover:text-gray-900 text-lg duration-300`}>Cancel</button>
-                        <button onClick={() => navigate(`/dashboard/payment/${_id}`)} class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
+                        <button onClick={() => navigate(`/dashboard/payment/${bookingId}`)} class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
                     </div>
                 </div>
             </section>
