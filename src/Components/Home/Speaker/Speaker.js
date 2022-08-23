@@ -15,7 +15,6 @@ const Speaker = () => {
   useEffect(() => {
     axios.get(`http://localhost:5000/employed/${profession}`).then((res) => setSpeaker(res.data));
   }, []);
-console.log(speaker);
 const settings = {
   fade: true,
   dots: false,
