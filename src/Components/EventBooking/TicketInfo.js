@@ -110,7 +110,7 @@ const TicketInfo = () => {
                 <div className='grid grid-cols-12'>
                     <div className='col-span-2 flex flex-col justify-center'
                     data-aos="zoom-in"
-                    data-aos-delay="600"
+                    data-aos-delay="700"
                     data-aos-duration="2000"
                     >
                         <FaLink className='text-5xl bg-amber-400 p-3 text-white rounded-full' />

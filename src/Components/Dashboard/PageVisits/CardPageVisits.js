@@ -5,7 +5,10 @@ import React from "react";
 export default function CardPageVisits() {
   return (
     <>
-      <div className="mt-20 relative flex flex-col w-[340px] lg:w-[59%] break-words bg-white  mb-6 shadow-lg rounded">
+      <div className="mt-20 relative flex flex-col w-[340px] lg:w-[59%] break-words bg-white  mb-6 shadow-lg rounded"
+      data-aos="flip-down"
+      data-aos-duration="2000"
+      >
         <div className="rounded-t mb-0 px-4 py-3 border-0">
           <div className="flex flex-wrap items-center">
             <div className="relative w-full px-4 max-w-full flex-grow flex-1">

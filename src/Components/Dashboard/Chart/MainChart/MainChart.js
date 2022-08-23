@@ -15,7 +15,7 @@ const MainChart = () => {
         </div>
       </div>
 
-      <div className="lg:-mt-[450px] mt-3 lg:px-7">
+      <div className="lg:-mt-[450px] mt-3 lg:px-7" >
         <Chart />
         <div className="grid lg:flex justify-center gap-2 overflow-x-hidden">
           <CardPageVisits />

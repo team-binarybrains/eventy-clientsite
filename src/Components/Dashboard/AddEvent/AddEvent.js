@@ -162,53 +162,112 @@ const AddEvent = () => {
         <div style={{ background: "#f4f7fc" }}>
             {loading && <Loading></Loading>}
             <div className='2xl:max-w-7xl mx-auto'>
-                <h2 className='pt-5 pb-3 text-2xl font-bold text-center'>Add Event</h2>
+                <h2 className='pt-5 pb-3 text-2xl font-bold text-center'
+                    data-aos="zoom-in"
+                    data-aos-duration="2000"
+                >Add Event</h2>
                 <div className="max-h-fit py-2 pb-12">
                     <div className='ml-8 sm:ml-5 mr-10 bg-white p-5 rounded-none sm:rounded-2xl'>
-                        <h2 className='text-2xl'>Event Information</h2>
+                        <h2 className='text-2xl'
+                            data-aos="fade-left"
+                            data-aos-duration="2000"
+                        >Event Information</h2>
+
                         <form onSubmit={handleEventAdd}>
                             <div className='sm:flex md:flex-none'>
                                 <div className='grid grid-cols-1 gap-3 sm:w-1/2 mt-5'>
                                     <div className="form-control">
-                                        <input type="text" name='title' placeholder="Event Title" className="input input-bordered inputDegine" />
+                                        <input type="text" name='title' placeholder="Event Title" className="input input-bordered inputDegine"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        />
                                     </div>
                                     <div className="form-control">
-                                        <input type="text" name='venue' placeholder="Event venue Name" className="input input-bordered inputDegine" />
+                                        <input type="text" name='venue' placeholder="Event venue Name" className="input input-bordered inputDegine"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        />
                                     </div>
                                     <div className="form-control">
-                                        <input type="text" name='type' placeholder="Event Type" className="input input-bordered inputDegine" />
+                                        <input type="text" name='type' placeholder="Event Type" className="input input-bordered inputDegine"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        />
                                     </div>
                                     <div className="form-control grid grid-cols-12 items-center ml-1">
-                                        <p className='col-span-5 inputFontSize font-semibold'>Event Beginning Date <span className='font-bold ml-3'>:</span></p>
-                                        <input type="date" onChange={(e) => handleEventStartDate(e)} name='date' placeholder="Event Beginning Date" className="input input-bordered col-span-7 inputDegine" />
+                                        <p className='col-span-5 inputFontSize font-semibold'
+                                            data-aos="zoom-in"
+                                            data-aos-duration="2000"
+                                        >Event Beginning Date <span className='font-bold ml-3'>:</span></p>
+                                        <input type="date" onChange={(e) => handleEventStartDate(e)} name='date' placeholder="Event Beginning Date" className="input input-bordered col-span-7 inputDegine"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        />
                                     </div>
                                     <div className="form-control grid grid-cols-12 items-center ml-1">
-                                        <p className='col-span-5 inputFontSize font-semibold'>Event Conclusion Date <span className='font-bold ml-3'>:</span></p>
-                                        <input type="date" onChange={(e) => handleEventEndDate(e)} name='endDate' placeholder="Event Conclusion Date" className="input input-bordered col-span-7 inputDegine" />
+                                        <p className='col-span-5 inputFontSize font-semibold'
+                                            data-aos="zoom-in"
+                                            data-aos-duration="2000"
+                                        >Event Conclusion Date <span className='font-bold ml-3'>:</span></p>
+                                        <input type="date" onChange={(e) => handleEventEndDate(e)} name='endDate' placeholder="Event Conclusion Date" className="input input-bordered col-span-7 inputDegine"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        />
                                     </div>
                                     <div className="form-control grid grid-cols-12 items-center ml-1">
-                                        <p className='col-span-5 inputFontSize font-semibold'>Event Start Time <span className='font-bold ml-3'>:</span></p>
-                                        <input type="time" name='starttime' placeholder="Event Start Time" className="input input-bordered col-span-7 inputDegine" />
+                                        <p className='col-span-5 inputFontSize font-semibold'
+                                            data-aos="zoom-in"
+                                            data-aos-duration="2000"
+                                        >Event Start Time <span className='font-bold ml-3'>:</span></p>
+                                        <input type="time" name='starttime' placeholder="Event Start Time" className="input input-bordered col-span-7 inputDegine"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        />
                                     </div>
                                     <div className="form-control grid grid-cols-12 items-center ml-1">
-                                        <p className='col-span-5 inputFontSize font-semibold'>Event End Time <span className='font-bold ml-3'>:</span></p>
-                                        <input type="time" name='endtime' placeholder="Event End Time" className="input input-bordered col-span-7 inputDegine" />
+                                        <p className='col-span-5 inputFontSize font-semibold'
+                                            data-aos="zoom-in"
+                                            data-aos-duration="2000"
+                                        >Event End Time <span className='font-bold ml-3'>:</span></p>
+                                        <input type="time" name='endtime' placeholder="Event End Time" className="input input-bordered col-span-7 inputDegine"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        />
                                     </div>
                                     <div className="form-control">
-                                        <input type="number" name='price' placeholder="Event Ticket Price (only Digit type)" className="input input-bordered inputDegine" />
+                                        <input type="number" name='price' placeholder="Event Ticket Price (only Digit type)" className="input input-bordered inputDegine"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        />
                                     </div>
                                     <div className="form-control">
-                                        <input type="text" name='address' placeholder="Event Location" className="input input-bordered inputDegine" />
+                                        <input type="text" name='address' placeholder="Event Location" className="input input-bordered inputDegine"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        />
                                     </div>
                                     <div className="form-control">
-                                        <textarea name='eventDescription' className="textarea textarea-bordered h-32 inputDegine" placeholder="About Tell Us Event" ></textarea>
+                                        <textarea name='eventDescription' className="textarea textarea-bordered h-32 inputDegine" placeholder="About Tell Us Event"
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        ></textarea>
                                     </div>
                                 </div>
                                 <div className='sm:pl-14 mt-3'>
                                     <div>
-                                        <p className='text-xl font-semibold mb-4 2xl:mb-6'>Event Image 3 Minimum Include</p>
-                                        <p className='label-text font-medium mb-1'>Event Image 1</p>
-                                        <div className='w-[294px] pr-7 bg-amber-400 relative rounded-md'>
+                                        <p className='text-xl font-semibold mb-4 2xl:mb-6'
+                                            data-aos="fade-left"
+                                            data-aos-duration="2500"
+                                        >Event Image 3 Minimum Include</p>
+
+                                        <p className='label-text font-medium mb-1'
+                                            data-aos="fade-left"
+                                            data-aos-duration="2500"
+                                        >Event Image 1</p>
+                                        <div className='w-[294px] pr-7 bg-amber-400 relative rounded-md'
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        >
                                             <FontAwesomeIcon className='absolute top-1/3 left-6 text-white' icon={faCloudArrowUp}></FontAwesomeIcon>
                                             <label class="block">
                                                 <input type="file" class="block w-full text-base text-gray-100 rounded-md file:mr-4 file:py-2 file:pr-0 file:pl-12 file:border-0 file:text-base file:font-semibold
@@ -218,8 +277,15 @@ const AddEvent = () => {
                                         </div>
                                     </div>
                                     <div className='2xl:mt-5'>
-                                        <p className='label-text font-medium mb-1 mt-3'>Event Image 2</p>
-                                        <div className='w-[294px] pr-7 bg-amber-400 relative rounded-md'>
+                                        <p className='label-text font-medium mb-1 mt-3'
+                                            data-aos="fade-left"
+                                            data-aos-duration="2500"
+                                        >Event Image 2</p>
+
+                                        <div className='w-[294px] pr-7 bg-amber-400 relative rounded-md'
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        >
                                             <FontAwesomeIcon className='absolute top-1/3 left-6 text-white' icon={faCloudArrowUp}></FontAwesomeIcon>
                                             <label class="block">
                                                 <input type="file" class="block w-full text-base text-gray-100 rounded-md file:mr-4 file:py-2 file:pr-0 file:pl-12 file:border-0 file:text-base file:font-semibold
@@ -229,8 +295,15 @@ const AddEvent = () => {
                                         </div>
                                     </div>
                                     <div className='2xl:mt-5'>
-                                        <p className='label-text font-medium mb-1 mt-3'>Event Image 3</p>
-                                        <div className='w-[294px] pr-7 bg-amber-400 relative rounded-md'>
+                                        <p className='label-text font-medium mb-1 mt-3'
+                                            data-aos="fade-left"
+                                            data-aos-duration="2500"
+                                        >Event Image 3</p>
+
+                                        <div className='w-[294px] pr-7 bg-amber-400 relative rounded-md'
+                                            data-aos="flip-down"
+                                            data-aos-duration="2500"
+                                        >
                                             <FontAwesomeIcon className='absolute top-1/3 left-6 text-white' icon={faCloudArrowUp}></FontAwesomeIcon>
                                             <label class="block">
                                                 <input type="file" class="block w-full text-base text-gray-100 rounded-md file:mr-4 file:py-2 file:pr-0 file:pl-12 file:border-0 file:text-base file:font-semibold
@@ -290,7 +363,10 @@ const AddEvent = () => {
                                 </div>
                             </>
                             )}
-                            <div className='text-center py-8'>
+                            <div className='text-center py-8'
+                                data-aos="zoom-in"
+                                data-aos-duration="2500"
+                            >
                                 <input className='custom-btn rounded text-lg font-semibold w-full sm:w-96 py-4 sm:px-16 mt-0 sm:mt-5 text-white' type="submit" value="Add Event" />
                             </div>
                         </form>
