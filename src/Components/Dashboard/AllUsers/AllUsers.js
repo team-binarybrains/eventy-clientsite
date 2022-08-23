@@ -32,18 +32,30 @@ const AllUsers = () => {
       <table class="max-w-5xl mx-auto table-auto border">
         <thead class="justify-between">
           <tr class="bg-green-600">
-            <th class="text-center py-2">
+            <th class="text-center py-2"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+            >
               <span class="text-gray-100 font-semibold">Avatar</span>
             </th>
-            <th class="text-center py-2 ">
+            <th class="text-center py-2 "
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+            >
               <span class="text-gray-100 font-semibold">Name</span>
             </th>
 
-            <th class="text-center py-2">
+            <th class="text-center py-2"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+            >
               <span class="text-gray-100 font-semibold">Email</span>
             </th>
 
-            <th class="text-center py-2">
+            <th class="text-center py-2"
+            data-aos="zoom-in"
+            data-aos-duration="2500"
+            >
               <span class="text-gray-100 font-semibold">Setting</span>
             </th>
           </tr>

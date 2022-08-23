@@ -84,7 +84,7 @@ const CheckoutForm = ({ product }) => {
             setCardError('')
             setTransactionId(paymentIntent.id)
             console.log(paymentIntent)
-            setSuccess('Congrats! Your payment is done successfully.')
+            setSuccess('Congrats! Payment is done.')
 
 
             // store payment info in database
@@ -116,7 +116,10 @@ const CheckoutForm = ({ product }) => {
     return (
         <>
 
-            <form onSubmit={handleSubmit} className='py-4'>
+            <form onSubmit={handleSubmit} className=' flex flex-col justify-between lg:h-48'
+            data-aos="flip-down"
+            data-aos-duration="2500"
+            >
                 <CardElement
                     options={{
                         style: {
@@ -134,19 +137,33 @@ const CheckoutForm = ({ product }) => {
                     }}
                 />
 
-                <div className='flex justify-end w-full mt-5'>
-                    <button type="submit" disabled={!stripe || !clientSecret} className="btn btn-outline px-16 rounded-full hover:bg-transparent hover:text-black"> PAY </button>
+                <div>
+                    <div>
+                        <h2 className="card-title">Please pay for : {product?.eventName}</h2>
+                        <p className='text-lg'> Amount : ${product.totalPrice}</p>
+                    </div>
+
+                    <div className='grid lg:flex lg:justify-between lg:items-end'>
+
+                        <div className=''>
+                            {
+                                cardError && <p className='text-red-500'>{cardError}</p>
+                            }
+                            {success && <div className='text-stone-800 '>
+                                <p className='text-green-800'>{success}  </p>
+                                <p className='text-lg '>Transaction Id : <span className="font-bold">{transactionId}</span> </p>
+                            </div>
+                            }
+                        </div>
+
+                        <div className='flex justify-end mt-5'>
+                            <button type="submit" disabled={!stripe || !clientSecret} className="btn btn-outline px-16 rounded-full hover:bg-transparent hover:text-black"> PAY </button>
+                        </div>
+                    </div>
                 </div>
             </form>
 
-            {
-                cardError && <p className='text-red-500'>{cardError}</p>
-            }
-            {success && <div className='text-stone-800 '>
-                <p className='text-green-800'>{success}  </p>
-                <p className='text-lg '>Your Transaction Id : <span className="font-bold">{transactionId}</span> </p>
-            </div>
-            }
+
         </>
     );
 };

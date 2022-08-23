@@ -5,7 +5,10 @@ import { BiUserCircle } from 'react-icons/bi';
 const SingleUser = ({ allUser, handleDeleteUser }) => {
   const { _id, email } = allUser;
   return (
-    <tr class="bg-white border-b-2 border-gray-200">
+    <tr class="bg-white border-b-2 border-gray-200"
+      data-aos="flip-down"
+      data-aos-duration="2500"
+    >
       <td class="px-16 py-2 flex flex-row items-center">
         {allUser?.image ? (
           <img
@@ -14,12 +17,7 @@ const SingleUser = ({ allUser, handleDeleteUser }) => {
             alt=""
           />
         ) : (
-          // <img
-          //   class=" w-7 h-7 rounded-full object-cover "
-          //   src={userIcon}
-          //   alt="f"
-          // />
-          <BiUserCircle  className="text-4xl text-slate-600"></BiUserCircle>
+          <BiUserCircle className="text-4xl text-slate-600"></BiUserCircle>
         )}
       </td>
       <td>

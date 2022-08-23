@@ -58,7 +58,10 @@ const data = [
 
 export default function Chart() {
   return (
-    <div className="lg:flex grid ">
+    <div className="lg:flex grid "
+    data-aos="flip-down"
+    data-aos-duration="2000"
+    >
       <div
         className="h-[400px] w-[90vw] bg-[#334155] lg:ml-5 lg:mt-72 rounded-md 
       lg:w-[56%] lg:h-[500px] "
