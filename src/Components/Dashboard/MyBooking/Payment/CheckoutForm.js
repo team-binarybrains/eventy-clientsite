@@ -124,10 +124,10 @@ const CheckoutForm = ({ product }) => {
                     options={{
                         style: {
                             base: {
-                                fontSize: '16px',
+                                fontSize: '18px',
                                 color: '#322d27',
                                 '::placeholder': {
-                                    color: '#322d27',
+                                    color: '#52d27',
                                 },
                             },
                             invalid: {
@@ -157,7 +157,7 @@ const CheckoutForm = ({ product }) => {
                         </div>
 
                         <div className='flex justify-end mt-5'>
-                            <button type="submit" disabled={!stripe || !clientSecret} className="btn btn-outline px-16 rounded-full hover:bg-transparent hover:text-black"> PAY </button>
+                            <button type="submit" disabled={!stripe || !clientSecret} className="btn btn-outline px-16 rounded-full hover:bg-transparent hover:bg-black hover:text-white transition-all duration-700"> PAY </button>
                         </div>
                     </div>
                 </div>
