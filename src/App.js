@@ -52,6 +52,7 @@ import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
 import AddEvent from "./Components/Dashboard/AddEvent/AddEvent";
 import Speaker from "./Components/Home/Speaker/Speaker";
 import useLoading from "./Components/Hooks/useLoading";
+import Loading from "./Components/Share/Loading/Loading";
 
 
 function App() {
@@ -70,8 +71,7 @@ function App() {
     <div>
       {
         loading ?
-          <>
-          </>
+          <Loading/>
           :
           <div className="overflow-x-hidden">
             <Navbar location={location}></Navbar>
