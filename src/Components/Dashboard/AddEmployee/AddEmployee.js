@@ -62,7 +62,7 @@ const AddEmployed = () => {
                   .then((res) => res.json())
                   .then((inserted) => {
                      if (inserted) {
-                        toast.success("Data inserted Successful");
+                        toast.success("Data Inserted Successful");
                         reset();
                      }
                   });
@@ -80,7 +80,7 @@ const AddEmployed = () => {
    }
 
    return (
-      <section className="my-10 container mx-auto px-4">
+      <section className="my-7 container mx-auto px-4">
          <div className="rounded bg-white shadow-2xl" id="profile_container">
             <div className="text-start">
                <h1 className="text-2xl pt-4 font-semibold py-6 text-slate-700 pl-9">

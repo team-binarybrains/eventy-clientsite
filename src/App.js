@@ -51,13 +51,10 @@ import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
 import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
 import AddEvent from "./Components/Dashboard/AddEvent/AddEvent";
 import Speaker from "./Components/Home/Speaker/Speaker";
-<<<<<<< HEAD
 import AddEmployed from "./Components/Dashboard/AddEmployee/AddEmployee";
 
-=======
 import useLoading from "./Components/Hooks/useLoading";
 import Loading from "./Components/Share/Loading/Loading";
->>>>>>> a49d6741bdfc25889473321faa414e8032eb4142
 
 
 function App() {
@@ -76,7 +73,7 @@ function App() {
     <div>
       {
         loading ?
-          <Loading/>
+          <Loading />
           :
           <div className="overflow-x-hidden">
             <Navbar location={location}></Navbar>
@@ -161,28 +158,18 @@ function App() {
                   }
                 ></Route>
 
-<<<<<<< HEAD
-          <Route
-            path="/dashboard/add-event"
-            element={
-              <AddEvent></AddEvent>
-            }
-          ></Route>
-          <Route
-            path="/dashboard/add-employed"
-            element={
-              <AddEmployed></AddEmployed>
-            }
-          ></Route>
-=======
                 <Route
                   path="/dashboard/add-event"
                   element={
                     <AddEvent></AddEvent>
                   }
                 ></Route>
->>>>>>> a49d6741bdfc25889473321faa414e8032eb4142
-
+                <Route
+                  path="/dashboard/add-employed"
+                  element={
+                    <AddEmployed></AddEmployed>
+                  }
+                ></Route>
               </Route>
 
               {/* blog */}
