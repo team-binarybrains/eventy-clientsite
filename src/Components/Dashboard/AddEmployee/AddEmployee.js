@@ -378,7 +378,7 @@ const AddEmployed = () => {
                            htmlFor="employeeProfession"
                            className="text-slate-500 font-semibold w-1/2 "
                         >
-                           Employee's Profession
+                           Employee's Profession 
                         </label>
                         <select
                            name="employeeProfession"
