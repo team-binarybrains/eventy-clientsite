@@ -55,6 +55,7 @@ import AddEmployed from "./Components/Dashboard/AddEmployee/AddEmployee";
 
 import useLoading from "./Components/Hooks/useLoading";
 import Loading from "./Components/Share/Loading/Loading";
+import AllEmployee from "./Components/Dashboard/AllEmployed/AllEmployed";
 
 
 function App() {
@@ -168,6 +169,12 @@ function App() {
                   path="/dashboard/add-employed"
                   element={
                     <AddEmployed></AddEmployed>
+                  }
+                ></Route>
+                <Route
+                  path="/dashboard/all-employee"
+                  element={
+                    <AllEmployee></AllEmployee>
                   }
                 ></Route>
               </Route>
