@@ -1,9 +1,16 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import Loading from '../../../Share/Loading/Loading';
+import { useId } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../../Firebase/firebase.init';
 
 
 const CheckoutForm = ({ product }) => {
+    const [user] = useAuthState(auth);
+    const {email, uid} = user;
+
     console.log(product);
 
     const stripe = useStripe()
@@ -14,10 +21,9 @@ const CheckoutForm = ({ product }) => {
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
-    // console.log(clientSecret);
 
-    const { _id, eventPrice, email, name, price, totalPrice } = product
-    console.log(eventPrice)
+    const { _id, eventPrice, name, price, totalPrice,  eventName, total, bookingId } = product
+    console.log(name)
 
     useEffect(() => {
         fetch('http://localhost:5000/create-payment-intent', {
@@ -26,7 +32,7 @@ const CheckoutForm = ({ product }) => {
                 'content-type': 'application/json',
                 // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
-            body: JSON.stringify({ totalPrice })
+            body: JSON.stringify({ totalPrice } || { total })
         })
             .then(res => res.json())
             .then(data => {
@@ -35,7 +41,7 @@ const CheckoutForm = ({ product }) => {
                 }
             });
 
-    }, [totalPrice])
+    }, [totalPrice,total])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -140,7 +146,7 @@ const CheckoutForm = ({ product }) => {
                 <div>
                     <div>
                         <h2 className="card-title">Please pay for : {product?.eventName}</h2>
-                        <p className='text-lg'> Amount : ${product.totalPrice}</p>
+                        <p className='text-lg'> Amount : ${product?.totalPrice || product?.total}</p>
                     </div>
 
                     <div className='grid lg:flex lg:justify-between lg:items-end'>

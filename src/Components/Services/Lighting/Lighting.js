@@ -11,7 +11,10 @@ function Lighting() {
         <div className='route'>
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
                 <div className="flex justify-center items-center h-full lg:-mt-8">
-                    <div className="text-white text-center">
+                    <div className="text-white text-center"
+                        data-aos="zoom-in"
+                        data-aos-duration="2500"
+                    >
                         <p className="tracking-[8px]">ALL YOU NEED TO KNOW</p>
                         <p className="text-4xl text-center font-bold my-3">
                             <span className="text-[#ffbe30] mr-2">SOUND AND LIGHTING</span>
@@ -21,11 +24,17 @@ function Lighting() {
                 </div>
 
                 <div className="flex justify-center items-center gap-x-3 lg:-mt-16 -mt-10 text-white ">
-                    <Link to="/" className="text-lg">
+                    <Link to="/" className="text-lg"
+                        data-aos="fade-right"
+                        data-aos-duration="2500"
+                    >
                         Home
                     </Link>
                     <span>|</span>
-                    <Link to="/contact-us" className="text-lg">
+                    <Link to="/contact-us" className="text-lg"
+                        data-aos="fade-left"
+                        data-aos-duration="2500"
+                    >
                         Contact Us
                     </Link>
                 </div>
@@ -34,18 +43,22 @@ function Lighting() {
 
             <div className='lg:py-20'>
                 <div className='flex justify-center lg:-mb-5'>
-                    <p className='text-3xl font-bold '>
+                    <p className='text-3xl font-bold '
+                        data-aos="zoom-in"
+                        data-aos-duration="2000"
+                    >
                         LET
-                        <span className='text-amber-400 tracking-widest mx-2'>EVENTY</span>
-                        PLAN YOUR THEME
-
+                        <span className='text-amber-400 tracking-widest mx-2'>EVENTY</span>PLAN YOUR THEME
                     </p>
 
                 </div>
 
                 <div className='grid lg:grid-cols-3 grid-cols-1 gap-y-20 lg:py-20 py-6 lg:mx-40'>
                     {
-                        soundLighting.map((service, index) => <div key={index} className='flex justify-center relative hvr'>
+                        soundLighting.map((service, index) => <div key={index} className='flex justify-center relative hvr'
+                            data-aos="flip-right"
+                            data-aos-duration="2000"
+                        >
 
                             <div class="w-72 max-w-full bg-white cursor-pointer">
                                 <div class="w-full h-48">
@@ -86,16 +99,29 @@ function Lighting() {
                 <div className='grid lg:flex justify-center gap-x-6'>
 
                     <div className='lg:w-4/12 flex justify-center items-center'>
-                        <img src="https://i.ibb.co/p3c7zJf/Sound-Lighting-System-both.jpg" alt="" className='h-80' />
+                        <img src="https://i.ibb.co/p3c7zJf/Sound-Lighting-System-both.jpg" alt="" className='h-80'
+                            data-aos="flip-down"
+                            data-aos-duration="2000"
+                        />
                     </div>
 
                     <div className='lg:w-4/12 px-3 lg:px-0 py-10 lg:py-0'>
-                        <p className='uppercase text-3xl font-semibold'> <span className='text-amber-400 tracking-widest'>eventy</span> SOUND AND LIGHTING</p>
-                        <p className='py-8'>
+                        <p className='uppercase text-3xl font-semibold'
+                            data-aos="fade-left"
+                            data-aos-duration="2000"
+                        > <span className='text-amber-400 tracking-widest'>eventy</span> SOUND AND LIGHTING</p>
+                        <p className='py-8'
+                            data-aos="fade-left"
+                            data-aos-delay="200"
+                            data-aos-duration="2000"
+                        >
                             We used many types of different lighting to deliver a top notch event. We incorporated the country flag throughout the theme. We also used stage lighting for the musical performances, dance floor and dining areas. For sound, we prepare for live music and speech delivery.
                         </p>
                         <div className='flex justify-end'>
-                            <img src="https://i.ibb.co/MRXgQwx/eventy-signature.png" alt="" className='' />
+                            <img src="https://i.ibb.co/MRXgQwx/eventy-signature.png" alt="" className=''
+                                data-aos="flip-down"
+                                data-aos-duration="2000"
+                            />
                         </div>
                     </div>
                 </div>
@@ -106,7 +132,10 @@ function Lighting() {
             <div className='py-10 lg:pt-24'>
 
                 <div className='flex justify-center lg:-mb-5'>
-                    <p className='text-3xl font-bold '>
+                    <p className='text-3xl font-bold '
+                        data-aos="zoom-in"
+                        data-aos-duration="2000"
+                    >
                         <span className='text-amber-400 tracking-widest'>SPECIALTY </span>
                         <span className=''> LIGHTING</span>
                     </p>
@@ -115,13 +144,28 @@ function Lighting() {
 
                 <div className='lg:flex justify-center items-center gap-x-7 lg:h-80'>
                     <div className='lg:w-4/12 px-3 lg:px-0'>
-                        <p className='lg:tracking-[5px] font-semibold'>SPECIAL EVENT LIGHTING SERVICES</p>
-                        <p className='mt-5'>Not all lighting is the same. Our expert team is available to asses voltage requirements and when necessary, we staff a Master Electrician who can remain on-site throughout your event. Many museums and private venues in and around DC require an on-site electrician. For many large scale lighting, a permit may be required. No worries, we are well connected when it comes to getting the right permits at the last minute.</p>
+                        <p className='lg:tracking-[5px] font-semibold'
+                            data-aos="zoom-in"
+                            data-aos-duration="2000"
+                        >SPECIAL EVENT LIGHTING SERVICES</p>
+                        <p className='mt-5'
+                            data-aos="zoom-in"
+                            data-aos-duration="2000"
+                        >Not all lighting is the same. Our expert team is available to asses voltage requirements and when necessary, we staff a Master Electrician who can remain on-site throughout your event. Many museums and private venues in and around DC require an on-site electrician. For many large scale lighting, a permit may be required. No worries, we are well connected when it comes to getting the right permits at the last minute.</p>
                     </div>
                     <div className='grid gap-y-3 lg:w-4/12 mt-6 lg:mt-0 px-3 lg:px-0'>
-                        <p className='bg-amber-400 p-2 text-gray-600'>BACKGROUNDS & FAUX SCENERY</p>
-                        <p className='bg-amber-400 p-2 text-gray-600'>LIVE TICKET EVENTS LIGHTING</p>
-                        <p className='bg-amber-400 p-2 text-gray-600'>SKYTRACKER SERVICES AND PERMITS</p>
+                        <p className='bg-amber-400 p-2 text-gray-600'
+                            data-aos="flip-down"
+                            data-aos-duration="2000"
+                        >BACKGROUNDS & FAUX SCENERY</p>
+                        <p className='bg-amber-400 p-2 text-gray-600'
+                            data-aos="flip-down"
+                            data-aos-duration="2000"
+                        >LIVE TICKET EVENTS LIGHTING</p>
+                        <p className='bg-amber-400 p-2 text-gray-600'
+                            data-aos="flip-down"
+                            data-aos-duration="2000"
+                        >SKYTRACKER SERVICES AND PERMITS</p>
                     </div>
                 </div>
             </div>
