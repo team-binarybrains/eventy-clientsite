@@ -18,7 +18,7 @@ const Speaker = () => {
   }, []);
   console.log(speaker);
   const settings = {
-    fade: true,
+    fade: false,
     dots: false,
     infinite: true,
     speed: 2000,

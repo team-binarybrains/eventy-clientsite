@@ -51,7 +51,7 @@ const AddEmployed = () => {
                   email: data.email,
                   image: img,
                };
-               console.log(employee);
+               // console.log(employee);
                fetch(`http://localhost:5000/employee`, {
                   method: "POST",
                   headers: {
@@ -62,7 +62,7 @@ const AddEmployed = () => {
                   .then((res) => res.json())
                   .then((inserted) => {
                      if (inserted) {
-                        toast.success("Data Add Successful");
+                        toast.success("Data inserted Successful");
                         reset();
                      }
                   });
