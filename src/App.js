@@ -51,6 +51,7 @@ import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
 import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
 import AddEvent from "./Components/Dashboard/AddEvent/AddEvent";
 import Speaker from "./Components/Home/Speaker/Speaker";
+import AddEmployed from "./Components/Dashboard/AddEmployee/AddEmployee";
 
 
 
@@ -151,6 +152,12 @@ function App() {
             path="/dashboard/add-event"
             element={
               <AddEvent></AddEvent>
+            }
+          ></Route>
+          <Route
+            path="/dashboard/add-employed"
+            element={
+              <AddEmployed></AddEmployed>
             }
           ></Route>
 

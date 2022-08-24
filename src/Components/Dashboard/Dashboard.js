@@ -149,10 +149,10 @@ const Dashboard = () => {
               <li className="text-base hover:bg-[#0f172a]  rounded">
                 <CustomLink
                   className="flex justify-center items-center gap-2 "
-                  to={"/dashboard/add-event"}
+                  to={"/dashboard/add-employed"}
                 >
-                  <IoMdPersonAdd className="text-xl" />
-                  <span className="font-bold uppercase">ADD speaker</span>
+                  <IoMdPersonAdd className="text-xl ml-2" />
+                  <span className="font-bold uppercase">ADD Employee</span>
                 </CustomLink>
               </li>
             }
