@@ -380,22 +380,10 @@ const AddEmployed = () => {
                         >
                            Employee's Profession
                         </label>
-                        {/* <input
-                           id="employeeProfession"
-                           name="employeeProfession"
-                           type="text"
-                           className="mt-2 appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
-                           placeholder="Employee's Profession "
-                           {...register("employeeProfession", {
-                              required: {
-                                 value: true,
-                                 message: "Enter employee's Profession",
-                              },
-                           })}
-                        /> */}
                         <select
                            name="employeeProfession"
                            id="employeeProfession"
+                           className="select mt-2 appearance-none rounded-none relative block w-full px-3 border border-gray-300 placeholder-gray-500 text-gray-500 rounded-t-md focus:outline-none focus:ring-green-500 focus:border-green-500 focus:z-10 sm:text-sm"
                            {...register("employeeProfession", {
                               required: {
                                  value: true,
@@ -403,6 +391,7 @@ const AddEmployed = () => {
                               },
                            })}
                         >
+                           <option disabled selected>Select Employee's Profession</option>
                            <option value="speaker">Speaker</option>
                            <option value="planner">Event planner</option>
                         </select>
