@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiOutlineUser, AiOutlineAppstoreAdd } from "react-icons/ai";
 import { TiThSmall } from "react-icons/ti";
 import { IoTicket } from "react-icons/io5";
+import { IoMdPersonAdd } from "react-icons/io";
 import { FaUsers } from "react-icons/fa";
 import {
   faChartBar,
@@ -140,6 +141,18 @@ const Dashboard = () => {
                 >
                   <AiOutlineAppstoreAdd className="text-xl" />
                   <span className="font-bold">ADD EVENT</span>
+                </CustomLink>
+              </li>
+            }
+            {/* speaker */}
+            {admin &&
+              <li className="text-base hover:bg-[#0f172a]  rounded">
+                <CustomLink
+                  className="flex justify-center items-center gap-2 "
+                  to={"/dashboard/add-event"}
+                >
+                  <IoMdPersonAdd className="text-xl" />
+                  <span className="font-bold uppercase">ADD speaker</span>
                 </CustomLink>
               </li>
             }
