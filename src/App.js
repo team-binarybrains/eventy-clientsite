@@ -71,7 +71,7 @@ function App() {
     <div>
       {
         loading ?
-          <Loading/>
+          <Loading />
           :
           <div className="overflow-x-hidden">
             <Navbar location={location}></Navbar>
