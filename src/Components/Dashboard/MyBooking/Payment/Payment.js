@@ -14,10 +14,10 @@ const stripePromise = loadStripe('pk_test_51L0gDbJT4xjXTU74z66wNjkphxp6HCRQGImcS
 const Payment = () => {
   const { Id } = useParams()
 
-  const [ ticket,loading,refetch ] = useRefetch(`http://localhost:5000/ticket-booking/${Id}`,{})
+  const [ticket, loading, refetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/ticket-booking/${Id}`, {})
 
 
-  const { data: product, isLoading } = useQuery(['payment', Id], () => fetch(`http://localhost:5000/payment/${Id}`, {
+  const { data: product, isLoading } = useQuery(['payment', Id], () => fetch(`https://fathomless-hamlet-59180.herokuapp.com/payment/${Id}`, {
     method: 'GET',
     // headers: {
     //   'authorization': `bearer ${localStorage.getItem('accessToken')}`
@@ -31,10 +31,10 @@ const Payment = () => {
     <div className='w-full mt-20'>
 
       {product &&
-      <div className="hero w-full">
-        <div className="grid gap-y-5 mx-2">
+        <div className="hero w-full">
+          <div className="grid gap-y-5 mx-2">
 
-          {/* <div className="card shadow-2xl bg-transparent">
+            {/* <div className="card shadow-2xl bg-transparent">
             <div className="card-body ">
               <h2 className="card-title">Please pay for : {product?.eventName}</h2>
               <p> Please Pay : ${product.totalPrice}</p>
@@ -42,20 +42,20 @@ const Payment = () => {
             </div>
           </div> */}
 
-          <div className="lg:h-60 lg:w-[500px] rounded-lg shadow-2xl bg-amber-400 " 
-          data-aos="zoom-in"
-          data-aos-duration="1500"
-          >
-            <div className="card-body">
+            <div className="lg:h-60 lg:w-[500px] rounded-lg shadow-2xl bg-amber-400 "
+              data-aos="zoom-in"
+              data-aos-duration="1500"
+            >
+              <div className="card-body">
 
-              <Elements stripe={stripePromise}>
-                <CheckoutForm product={product} />
-              </Elements>
+                <Elements stripe={stripePromise}>
+                  <CheckoutForm product={product} />
+                </Elements>
 
+              </div>
             </div>
           </div>
-        </div>
-      </div>}
+        </div>}
 
 
       {ticket?.bookingId &&

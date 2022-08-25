@@ -12,7 +12,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
     const navigate = useNavigate()
     const { _id, enterprise, eventId, professional, standard, total, userId, bookingId } = ticket;
 
-    const [event] = useRefetch(`http://localhost:5000/event-details/${ticket?.eventId}`, {})
+    const [event] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${ticket?.eventId}`, {})
     // cancle order
     const handleBookingCancle = id => {
         console.log(id);
@@ -20,7 +20,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
         const proceed = window.confirm("Are you sure?");
 
         if (proceed) {
-            axios.delete(`http://localhost:5000/delete-booked-ticket/${id}`)
+            axios.delete(`https://fathomless-hamlet-59180.herokuapp.com/delete-booked-ticket/${id}`)
                 .then(({ data }) => data?.acknowledged && refetch())
         }
     }
@@ -48,8 +48,8 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
             data-aos-duration="2000"
         >
             <section className='py-5 px-3 gap-x-3 gap-y-10 flex flex-wrap items-center justify-center text-white backdrop-blur-[3px] bg-black/80'
-            data-aos="flip-up"
-            data-aos-duration="2000"
+                data-aos="flip-up"
+                data-aos-duration="2000"
             >
                 <div className='space-y-2 basis-[15rem] shrink flex flex-col justify-center items-center'>
                     <h3 className='font-medium text-white'>{event?.date?.split(',')?.join(' ')}</h3>

@@ -5,9 +5,9 @@ import useFetch from '../../Home/OurServices/Hook/useFetch'
 
 function Logistics() {
 
-    const logisticServices = useFetch(`http://localhost:5000/get-sub-services/logistic`)
+    const logisticServices = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/get-sub-services/logistic`)
 
-    const promotionServices = useFetch(`http://localhost:5000/get-sub-services/promotion`)
+    const promotionServices = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/get-sub-services/promotion`)
 
     return (
         <div className='route'>

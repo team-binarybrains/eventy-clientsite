@@ -137,7 +137,7 @@ const AddEvent = () => {
 
         const eventInformation = { title, venue, type, date, endDate, starttime, endtime, ticketprice, address, description, day, img, image }
 
-        fetch('http://localhost:5000/addEventRequest', {
+        fetch('https://fathomless-hamlet-59180.herokuapp.com/addEventRequest', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

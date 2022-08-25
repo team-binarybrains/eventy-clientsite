@@ -8,7 +8,7 @@ const Venues = () => {
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
   useEffect(() => {
-    axios.get(`http://localhost:5000/venues`).then((res) => {
+    axios.get(`https://fathomless-hamlet-59180.herokuapp.com/venues`).then((res) => {
       setVenues(res?.data);
       setSelect(res?.data[0]);
     });
@@ -69,8 +69,8 @@ const Venues = () => {
           </div>
 
           <div className={`h-[424px] sm:min-w-[500px] grow basis-[50%] shrink relative ${styles.highlight}`}
-          data-aos="zoom-in-left"
-          data-aos-duration="2500"
+            data-aos="zoom-in-left"
+            data-aos-duration="2500"
           >
             <img
               src={select.img}
