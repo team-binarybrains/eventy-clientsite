@@ -1,43 +1,54 @@
-import React, { useEffect, useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import React, {useState } from "react";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-import {
-  faMicrophone,
-  faMicrophoneAlt,
-  faCakeCandles,
-  faMusic,
-  faSquareCheck,
-  faClock,
-  faLocationDot,
-} from "@fortawesome/free-solid-svg-icons";
-import { BsPlusLg } from "react-icons/bs";
-import { useNavigate } from "react-router-dom";
+// import {
+//   faMicrophone,
+//   faMicrophoneAlt,
+//   faCakeCandles,
+//   faMusic,
+//   faSquareCheck,
+//   faClock,
+//   faLocationDot,
+// } from "@fortawesome/free-solid-svg-icons";
+// import { BsPlusLg } from "react-icons/bs";
+// import { useNavigate } from "react-router-dom";
 import Singleblog from "./SingleBlog/Singleblog";
 import useBlogs from "../../Hooks/useBlogs";
-const Blogs = () => {
+const 
+Blogs = () => {
   const [show, setShow] = useState(false);
   const [show2, setShow2] = useState(false);
   const [show3, setShow3] = useState(false);
   const [show4, setShow4] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [blogs] = useBlogs();
   return (
-    <div className="bg-gray-100">
+    <section id="ask-questions" className="bg-gray-100">
       <div className=" lg:max-w-7xl lg:mx-auto   lg:pt-20  ">
         <div className=" flex flex-col lg:max-w-7xl lg:mx-auto lg:gap-x-20   lg:flex-row   pb-20">
           <div className="  2xl:mx-auto  px-4 lg:px-20  md:px-6 ">
             <div className="mx-auto lg:mx-0 h-[3px] w-[70px] bg-[#ffbe30] mb-5 pr-5"></div>
-            <h2 className=" font-semibold lg:text-[18px] text-3xl lg:ml-5 lg:leading-9 md:leading-7 leading-9 text-[#878787]">
+            <h2 className=" font-semibold lg:text-[18px] text-3xl lg:ml-5 lg:leading-9 md:leading-7 leading-9 text-[#878787]"
+            data-aos="fade-right"
+            data-aos-duration="3000"
+            >
               FIND YOUR ANSWER
             </h2>
-            <h2 className="mt-5 font-semibold lg:text-[48px] text-3xl lg:ml-5 lg:leading-9 md:leading-7 leading-9 text-gray-800">
+            <h2 className="mt-5 font-semibold lg:text-[48px] text-3xl lg:ml-5 lg:leading-9 md:leading-7 leading-9 text-gray-800"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+            >
               Ask & Questions
             </h2>
             <div className="mt-4 flex md:justify-between md:items-start md:flex-row flex-col justify-start items-start"></div>
             <div className=" flex justify-center md:flex-row flex-col md:space-x-8 md:mt-16 mt-8">
               <div className=" md:w-7/12 lg:w-6/12 w-full md:mt-0 sm:mt-14 mt-10">
                 {/* <!-- Shipping Section --> */}
-                <div className="lg:w-[420px]">
+                <div className="lg:w-[420px]" 
+                 data-aos="fade-right"
+                 data-aos-delay="200"
+                 data-aos-duration="2500"
+                >
                   <div className=" flex justify-between items-center cursor-pointer">
                     <h3 className=" font-semibold text-xl leading-5 text-gray-800">
                       How to join Eventy Event Management?
@@ -93,7 +104,11 @@ const Blogs = () => {
 
                 {/* <!-- Returns Section --> */}
 
-                <div className="lg:w-[420px]">
+                <div className="lg:w-[420px]"
+                 data-aos="fade-right"
+                 data-aos-delay="700"
+                 data-aos-duration="2500"
+                >
                   <div className="  flex justify-between items-center cursor-pointer">
                     <h3 className=" font-semibold text-xl leading-5 text-gray-800">
                       How to make my own event?
@@ -148,7 +163,11 @@ const Blogs = () => {
 
                 {/* <!-- Exchange Section --> */}
 
-                <div className="lg:w-[420px]">
+                <div className="lg:w-[420px]"
+                 data-aos="fade-right"
+                 data-aos-delay="1200"
+                 data-aos-duration="2500"
+                >
                   <div className=" flex justify-between items-center cursor-pointer">
                     <h3 className=" font-semibold text-xl leading-5 text-gray-800">
                       About the price to make new event?
@@ -203,7 +222,11 @@ const Blogs = () => {
 
                 {/* Tracking Section */}
 
-                <div className="lg:w-[420px]">
+                <div className="lg:w-[420px]"
+                 data-aos="fade-right"
+                 data-aos-delay="1800"
+                 data-aos-duration="2500"
+                >
                   <div className=" flex justify-between items-center cursor-pointer">
                     <h3 className=" font-semibold text-xl leading-5 text-gray-800">
                       About the price to make new event?
@@ -261,10 +284,16 @@ const Blogs = () => {
           <div className=" md:w-5/12 lg:w-1/2 w-full ">
             <div>
               <div className="mx-auto lg:mx-0 h-[3px] w-[70px] bg-[#ffbe30] mb-5 lg:mr-[-6px]"></div>
-              <h2 className="text-center lg:text-start lg:ml-5 font-semibold lg:text-[18px] text-3xl lg:leading-9 md:leading-7 leading-9 text-[#878787]">
+              <h2 className="text-center lg:text-start lg:ml-5 font-semibold lg:text-[18px] text-3xl lg:leading-9 md:leading-7 leading-9 text-[#878787]"
+              data-aos="fade-right"
+              data-aos-duration="3000"
+              >
                 OUR BLOG
               </h2>
-              <h2 className="text-center mt-5 font-semibold lg:ml-5 lg:text-start lg:text-[48px] text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800">
+              <h2 className="text-center mt-5 font-semibold lg:ml-5 lg:text-start lg:text-[48px] text-3xl lg:leading-9 md:leading-7 leading-9 text-gray-800"
+              data-aos="fade-left"
+              data-aos-duration="3000"
+              >
                 Latest News
               </h2>
             </div>
@@ -276,7 +305,7 @@ const Blogs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,9 +1,16 @@
+/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from 'react'
 import { CardElement, useStripe, useElements } from '@stripe/react-stripe-js'
 import Loading from '../../../Share/Loading/Loading';
+import { useId } from 'react';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../../Firebase/firebase.init';
 
 
 const CheckoutForm = ({ product }) => {
+    const [user] = useAuthState(auth);
+    const {email, uid} = user;
+
     console.log(product);
 
     const stripe = useStripe()
@@ -14,19 +21,18 @@ const CheckoutForm = ({ product }) => {
     const [transactionId, setTransactionId] = useState('');
     const [clientSecret, setClientSecret] = useState('');
 
-    // console.log(clientSecret);
 
-    const { _id, eventPrice, email, name, price, totalPrice } = product
-    console.log(eventPrice)
+    const { _id, eventPrice, name, price, totalPrice,  eventName, total, bookingId } = product
+    console.log(name)
 
     useEffect(() => {
-        fetch('https://fathomless-hamlet-59180.herokuapp.com/create-payment-intent', {
+        fetch('http://localhost:5000/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
                 // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
-            body: JSON.stringify({ totalPrice })
+            body: JSON.stringify({ totalPrice } || { total })
         })
             .then(res => res.json())
             .then(data => {
@@ -35,7 +41,7 @@ const CheckoutForm = ({ product }) => {
                 }
             });
 
-    }, [totalPrice])
+    }, [totalPrice,total])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -84,7 +90,7 @@ const CheckoutForm = ({ product }) => {
             setCardError('')
             setTransactionId(paymentIntent.id)
             console.log(paymentIntent)
-            setSuccess('Congrats! Your payment is done successfully.')
+            setSuccess('Congrats! Payment is done.')
 
 
             // store payment info in database
@@ -94,7 +100,7 @@ const CheckoutForm = ({ product }) => {
                 email: email,
                 transactionId: paymentIntent.id
             }
-            fetch(`https://fathomless-hamlet-59180.herokuapp.com/myaddedorders/${_id}`, {
+            fetch(`http://localhost:5000/myaddedorders/${_id}`, {
                 method: 'PATCH',
                 headers: {
                     'content-type': 'application/json',
@@ -116,15 +122,18 @@ const CheckoutForm = ({ product }) => {
     return (
         <>
 
-            <form onSubmit={handleSubmit} className='py-4'>
+            <form onSubmit={handleSubmit} className=' flex flex-col justify-between lg:h-48'
+            data-aos="flip-down"
+            data-aos-duration="2500"
+            >
                 <CardElement
                     options={{
                         style: {
                             base: {
-                                fontSize: '16px',
+                                fontSize: '18px',
                                 color: '#322d27',
                                 '::placeholder': {
-                                    color: '#322d27',
+                                    color: '#52d27',
                                 },
                             },
                             invalid: {
@@ -134,19 +143,33 @@ const CheckoutForm = ({ product }) => {
                     }}
                 />
 
-                <div className='flex justify-end w-full mt-5'>
-                    <button type="submit" disabled={!stripe || !clientSecret} className="btn btn-outline px-16 rounded-full hover:bg-transparent hover:text-black"> PAY </button>
+                <div>
+                    <div>
+                        <h2 className="card-title">Please pay for : {product?.eventName}</h2>
+                        <p className='text-lg'> Amount : ${product?.totalPrice || product?.total}</p>
+                    </div>
+
+                    <div className='grid lg:flex lg:justify-between lg:items-end'>
+
+                        <div className=''>
+                            {
+                                cardError && <p className='text-red-500'>{cardError}</p>
+                            }
+                            {success && <div className='text-stone-800 '>
+                                <p className='text-green-800'>{success}  </p>
+                                <p className='text-lg '>Transaction Id : <span className="font-bold">{transactionId}</span> </p>
+                            </div>
+                            }
+                        </div>
+
+                        <div className='flex justify-end mt-5'>
+                            <button type="submit" disabled={!stripe || !clientSecret} className="btn btn-outline px-16 rounded-full hover:bg-transparent hover:bg-black hover:text-white transition-all duration-700"> PAY </button>
+                        </div>
+                    </div>
                 </div>
             </form>
 
-            {
-                cardError && <p className='text-red-500'>{cardError}</p>
-            }
-            {success && <div className='text-stone-800 '>
-                <p className='text-green-800'>{success}  </p>
-                <p className='text-lg '>Your Transaction Id : <span className="font-bold">{transactionId}</span> </p>
-            </div>
-            }
+
         </>
     );
 };

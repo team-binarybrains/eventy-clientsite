@@ -13,7 +13,10 @@ const SingleConferenceEventList = ({ item }) => {
   };
 
   return (
-    <div className=" mt-10 flex flex-col mx-auto justify-center lg:flex-row gap-5 ">
+    <div className=" mt-10 flex flex-col mx-auto justify-center lg:flex-row gap-5 " 
+    data-aos="flip-down"
+    data-aos-duration="2500"
+    >
       <div className="w-[90vw] p-[15px] lg:w-[570px] flex flex-col items-center mx-auto   lg:flex lg:flex-row lg:justify-center lg:text-start  border-[1px] border-base-100 shadow-md hover:border-[1px] hover:border-orange-400 transition-all lg:p-[10px]">
         <div className="image ">
           <div className="bg-gradient-to-r from-purple-500 to-pink-500 w-[70px] h-[70px] text-center  z-10 absolute ">

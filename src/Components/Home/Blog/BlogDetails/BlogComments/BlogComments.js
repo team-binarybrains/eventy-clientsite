@@ -6,13 +6,16 @@ import "./BlogComment.s.css";
 import Comment from "./Comment";
 
 const BlogComments = ({ blogId }) => {
-  const [comments, loading, refetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/comment/${blogId}`, []);
+  const [comments, loading, refetch] = useRefetch(`http://localhost:5000/comment/${blogId}`, []);
 
   return (
     <section className="max-w-7xl mx-auto px-5  ">
       {
         comments?.length ?
-          <h1 className="text-[36px] ">
+          <h1 className="text-[36px] "
+            data-aos="fade-right"
+            data-aos-duration="2500"
+          >
             Blog <strong>Comments</strong>
           </h1> : ''
       }

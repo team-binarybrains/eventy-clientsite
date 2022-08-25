@@ -34,7 +34,10 @@ const ContactUs = () => {
 
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
                 <div className="flex justify-center items-center h-full lg:-mt-8">
-                    <div className="text-white text-center">
+                    <div className="text-white text-center"
+                        data-aos="zoom-in"
+                        data-aos-duration="2000"
+                    >
                         <p className="tracking-[8px]">CONTACT US NOW</p>
                         <p className="text-4xl text-center font-bold my-3">
                             <span className="font-normal tracking-wide mr-3">KEEP</span>
@@ -44,9 +47,15 @@ const ContactUs = () => {
                 </div>
 
                 <div className='flex justify-center items-center gap-x-3 lg:-mt-16 -mt-10 text-white '>
-                    <Link to='/' className='text-lg font-semibold'>Home</Link>
+                    <Link to='/' className='text-lg font-semibold'
+                        data-aos="fade-right"
+                        data-aos-duration="2000"
+                    >Home</Link>
                     <span>|</span>
-                    <p className='text-lg'>Contact Us</p>
+                    <p className='text-lg'
+                        data-aos="fade-left"
+                        data-aos-duration="2000"
+                    >Contact Us</p>
                 </div>
             </div>
 
@@ -56,14 +65,23 @@ const ContactUs = () => {
 
                     <div className="flex justify-around">
                         <div className="grid justify-center">
-                            <p className="tracking-[6px]">CONTACT US</p>
-                            <p className="text-5xl">
+                            <p className="tracking-[6px]"
+                                data-aos="fade-right"
+                                data-aos-duration="2500"
+                            >CONTACT US</p>
+                            <p className="text-5xl"
+                                data-aos="fade-left"
+                                data-aos-duration="2500"
+                            >
                                 <span>Keep In Touch </span>
                                 <span className="font-bold">With Eventy</span>
                             </p>
                         </div>
 
-                        <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white">
+                        <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white"
+                            data-aos="zoom-in-up"
+                            data-aos-duration="2500"
+                        >
                             <div className="text-amber-400 rounded-sm text-2xl bounce mt-0.5">
                                 <FiMail />
                             </div>
@@ -93,6 +111,8 @@ const ContactUs = () => {
                                     type="text"
                                     placeholder="Your name"
                                     name="user_name"
+                                    data-aos="fade-right"
+                                    data-aos-duration="2500"
                                 />
                                 <input
                                     required
@@ -100,6 +120,8 @@ const ContactUs = () => {
                                     type="email"
                                     placeholder="Your email"
                                     name="user_email"
+                                    data-aos="fade-left"
+                                    data-aos-duration="2500"
                                 />
                             </div>
                             <input
@@ -108,12 +130,16 @@ const ContactUs = () => {
                                 type="text"
                                 placeholder="Subject"
                                 name="subject"
+                                data-aos="zoom-in"
+                                data-aos-duration="1550"
                             />
                             <textarea
                                 required
                                 className="bg-gray-100 resize-none w-full outline-none p-6 rounded-md h-[170px] focus:outline focus:outline-1 focus:outline-[#ffbe30] placeholder:text-gray-900/50"
                                 placeholder="Your message"
                                 name="message"
+                                data-aos="flip-down"
+                                data-aos-duration="1550"
                             ></textarea>
 
                             <div className='flex justify-center'>
@@ -121,6 +147,9 @@ const ContactUs = () => {
                                     type="submit"
                                     className='text-sm space-x-10 px-11 py-4 bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:bg-amber-500 rounded-full text-white uppercase font-bold mt-6 transition-all duration-500'
                                     value="SEND MAIL"
+
+                                    data-aos="zoom-in"
+                                    data-aos-duration="1500"
                                 ></input>
                             </div>
                         </form>

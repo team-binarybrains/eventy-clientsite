@@ -12,7 +12,10 @@ function Gallery() {
             <div className=" p-3 bg-image lg:h-[340px] h-[200px] banner-background">
 
                 <div className='flex justify-center items-center h-full lg:-mt-8'>
-                    <div className='text-white text-center '>
+                    <div className='text-white text-center '
+                      data-aos="zoom-in"
+                      data-aos-duration="2000"
+                    >
                         <p className='tracking-[8px] uppercase'>Eventy gallery</p>
                         <p className='text-4xl text-center font-bold my-3'>
                             <span className='font-normal tracking-wide mr-2'>EVENTY</span>
@@ -22,9 +25,15 @@ function Gallery() {
                 </div>
 
                 <div className='flex justify-center items-center gap-x-3 lg:-mt-16 -mt-10 text-white '>
-                    <Link to='/' className='text-lg' >Home</Link>
+                    <Link to='/' className='text-lg' 
+                    data-aos="fade-right"
+                    data-aos-duration="2000"
+                    >Home</Link>
                     <span>|</span>
-                    <p className='text-lg'>Eventy Gallery</p>
+                    <p className='text-lg'
+                    data-aos="fade-left"
+                    data-aos-duration="2000"
+                    >Eventy Gallery</p>
                 </div>
 
             </div>

@@ -3,7 +3,10 @@ import CountUp from "react-countup";
 
 function Count() {
   return (
-    <div>
+    <div
+    data-aos="flip-down"
+    data-aos-duration="2000"
+    >
       <div className="stats stats-vertical lg:stats-horizontal shadow lg:h-32 gap-x-16 lg:mx-36">
         <div className="stat lg:w-72">
           <div className="stat-title text-xl font-semibold flex">Traffic </div>
@@ -21,7 +24,7 @@ function Count() {
 
         <div className="stat lg:w-72">
           <div className="stat-title text-xl font-semibold flex">
-            New Coustomers{" "}
+            New Coustomers
           </div>
 
           <CountUp

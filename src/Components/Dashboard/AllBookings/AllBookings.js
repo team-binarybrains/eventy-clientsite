@@ -8,7 +8,7 @@ function AllBookings() {
 
     useEffect(() => {
 
-        axios.get('https://fathomless-hamlet-59180.herokuapp.com/get-all-booking-info')
+        axios.get('http://localhost:5000/get-all-booking-info')
             .then(res => {
                 const { data } = res
                 setAllBooking(data)
@@ -25,7 +25,7 @@ function AllBookings() {
         const proceed = window.confirm("Are you sure?");
 
         if (proceed) {
-            fetch(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${id}`, {
+            fetch(`http://localhost:5000/delete-booking/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -42,7 +42,10 @@ function AllBookings() {
         <div className='grid lg:grid-cols-1 grid-rows-none grid-cols-none gap-y-5 gap-x-20 lg:p-20'>
 
             <div className='flex justify-center border-b-2 lg:mb-5'>
-                <p className='text-3xl font-bold '>
+                <p className='text-3xl font-bold '
+                data-aos="zoom-in"
+                data-aos-duration="2500"
+                >
                     ALL
                     <span className='text-amber-400 tracking-widest mx-2'>BOOKING</span>
                     INFORMATION

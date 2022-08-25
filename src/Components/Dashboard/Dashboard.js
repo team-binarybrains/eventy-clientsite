@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiOutlineUser, AiOutlineAppstoreAdd } from "react-icons/ai";
 import { TiThSmall } from "react-icons/ti";
 import { IoTicket } from "react-icons/io5";
+import { IoMdPersonAdd } from "react-icons/io";
 import { FaUsers } from "react-icons/fa";
 import {
   faChartBar,
@@ -23,12 +24,12 @@ const Dashboard = () => {
   const [currentUser, setCurrentUser] = useState([]);
   const email = user?.email;
   useEffect(() => {
-    fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`)
+    fetch(`http://localhost:5000/single-user/${email}`)
       .then(res => res.json())
       .then(data => setCurrentUser(data))
   }, [email]);
-  if(loading){
-    return <Loading/>
+  if (loading) {
+    return <Loading />
   }
   return (
     <div className="mx-auto px-2 lg:px-0 route">
@@ -54,7 +55,10 @@ const Dashboard = () => {
             {/* <!-- Sidebar content here --> */}
             <div className="" id="sidebar_User_profile">
               <div className="pt-5">
-                <div id="user_profile_photo">
+                <div id="user_profile_photo"
+                  data-aos="zoom-in"
+                  data-aos-duration="2000"
+                >
 
                   {currentUser?.image && (
                     <img className="w-[75px] h-[75px] rounded-full m-auto" src={currentUser?.image} alt="" />
@@ -67,8 +71,14 @@ const Dashboard = () => {
                   )}
                 </div>
                 <div id="user_content" className="pt-2">
-                  <h1 className="text-white text-center text-sm capitalize">{currentUser?.displayName}</h1>
-                  <h1 className="text-white text-center text-sm">{currentUser?.email}</h1>
+                  <h1 className="text-white text-center text-sm capitalize"
+                    data-aos="zoom-out"
+                    data-aos-duration="2000"
+                  >{currentUser?.displayName}</h1>
+                  <h1 className="text-white text-center text-sm"
+                    data-aos="zoom-out"
+                    data-aos-duration="2000"
+                  >{currentUser?.email}</h1>
                 </div>
               </div>
             </div>
@@ -92,7 +102,7 @@ const Dashboard = () => {
                   className="flex justify-center items-center gap-2"
                   to={"/dashboard/allusers"}
                 >
-                  <FaUsers className="text-xl"/>
+                  <FaUsers className="text-xl" />
                   <span className=" font-bold"> ALL USERS</span>
                 </CustomLink>
               </li>
@@ -105,12 +115,22 @@ const Dashboard = () => {
                   className="flex justify-center items-center gap-2"
                   to={"/dashboard/all-booking"}
                 >
-                  <TiThSmall className="text-xl"/>
+                  <TiThSmall className="text-xl" />
                   <span className=" font-bold"> ALL BOOKINGS</span>
                 </CustomLink>
               </li>
             }
-
+            {admin &&
+              <li className="text-base hover:bg-[#0f172a]  rounded px-2">
+                <CustomLink
+                  className="flex justify-center items-center gap-2"
+                  to={"/dashboard/all-employee"}
+                >
+                  <FaUsers className="text-xl" />
+                  <span className=" font-bold"> ALL EMPLOYEE</span>
+                </CustomLink>
+              </li>
+            }
             {/* booking info for user */}
             {!admin &&
               <li className="text-base hover:bg-[#0f172a]  rounded">
@@ -131,6 +151,18 @@ const Dashboard = () => {
                 >
                   <AiOutlineAppstoreAdd className="text-xl" />
                   <span className="font-bold">ADD EVENT</span>
+                </CustomLink>
+              </li>
+            }
+            {/* speaker */}
+            {admin &&
+              <li className="text-base hover:bg-[#0f172a]  rounded">
+                <CustomLink
+                  className="flex justify-center items-center gap-2 "
+                  to={"/dashboard/add-employed"}
+                >
+                  <IoMdPersonAdd className="text-xl ml-2" />
+                  <span className="font-bold uppercase">ADD Employee</span>
                 </CustomLink>
               </li>
             }

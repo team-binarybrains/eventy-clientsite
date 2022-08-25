@@ -1,6 +1,8 @@
 /* eslint-disable no-unused-vars */
 import logo from "./logo.svg";
 import "./App.css";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { Route, Routes, useLocation } from "react-router-dom";
@@ -48,7 +50,13 @@ import MyBooking from "./Components/Dashboard/MyBooking/MyBooking";
 import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
 import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
 import AddEvent from "./Components/Dashboard/AddEvent/AddEvent";
+import AddEmployed from "./Components/Dashboard/AddEmployee/AddEmployee";
 
+import useLoading from "./Components/Hooks/useLoading";
+import Loading from "./Components/Share/Loading/Loading";
+import AllEmployee from "./Components/Dashboard/AllEmployed/AllEmployed";
+import UpdateEmployee from "./Components/Dashboard/AllEmployed/UpdateEmployee";
+import Employee from "./Components/Home/Employee/Employee";
 
 
 function App() {
@@ -58,207 +66,241 @@ function App() {
     window.scrollTo(0, 0);
   }, [pathname]);
 
+  // aos
+  AOS.init();
+
+  const [loading] = useLoading()
+
   return (
-    <div className="overflow-x-hidden">
-      <Navbar location={location}></Navbar>
-      <Routes>
-        <Route path="/" element={<Home></Home>}></Route>
+    <div>
+      {
+        loading ?
+          <Loading />
+          :
+          <div className="overflow-x-hidden">
+            <Navbar location={location}></Navbar>
+            <Routes>
+              <Route path="/" element={<Home></Home>}></Route>
+              <Route path="/home" element={<Home></Home>}></Route>
 
-        {/* services */}
-        <Route path="/services" element={<Services></Services>}></Route>
-        <Route path="/catering" element={<Catering></Catering>}></Route>
-        <Route
-          path="/audiovisual"
-          element={<Audiovisual></Audiovisual>}
-        ></Route>
-        <Route path="/sound-lighting" element={<Lighting></Lighting>}></Route>
-        <Route
-          path="/event-linen"
-          element={<LinenRentals></LinenRentals>}
-        ></Route>
-        <Route
-          path="/destination"
-          element={<Destination></Destination>}
-        ></Route>
-        <Route
-          path="/logistics-registration"
-          element={<Logistics></Logistics>}
-        ></Route>
-        <Route
-          path="/venue-facility"
-          element={<VenueFacility></VenueFacility>}
-        ></Route>
-        <Route
-          path="/photography"
-          element={<Photography></Photography>}
-        ></Route>
+              {/* services */}
+              <Route path="/services" element={<Services></Services>}></Route>
+              <Route path="/catering" element={<Catering></Catering>}></Route>
+              <Route
+                path="/audiovisual"
+                element={<Audiovisual></Audiovisual>}
+              ></Route>
+              <Route path="/sound-lighting" element={<Lighting></Lighting>}></Route>
+              <Route
+                path="/event-linen"
+                element={<LinenRentals></LinenRentals>}
+              ></Route>
+              <Route
+                path="/destination"
+                element={<Destination></Destination>}
+              ></Route>
+              <Route
+                path="/logistics-registration"
+                element={<Logistics></Logistics>}
+              ></Route>
+              <Route
+                path="/venue-facility"
+                element={<VenueFacility></VenueFacility>}
+              ></Route>
+              <Route
+                path="/photography"
+                element={<Photography></Photography>}
+              ></Route>
+              {/* speaker */}
+              <Route
+                path="/speaker"
+                element={<Employee></Employee>}
+              ></Route>
 
-        {/* dashboard */}
-        <Route
-          path="/dashboard"
-          element={
-            <RequireAuth>
-              <Dashboard></Dashboard>
-            </RequireAuth>
-          }
-        >
-          <Route index path="/dashboard" element={<MainChart />}></Route>
-          <Route
-            index
-            path="/dashboard/allusers"
-            element={
-              <RequireAdmin>
-                <AllUsers />
-              </RequireAdmin>
-            }
-          ></Route>
+              {/* dashboard */}
+              <Route
+                path="/dashboard"
+                element={
+                  <RequireAuth>
+                    <Dashboard></Dashboard>
+                  </RequireAuth>
+                }
+              >
+                <Route index path="/dashboard" element={<MainChart />}></Route>
+                <Route
+                  index
+                  path="/dashboard/allusers"
+                  element={
+                    <RequireAdmin>
+                      <AllUsers />
+                    </RequireAdmin>
+                  }
+                ></Route>
 
-          <Route
-            path="/dashboard/my-booking"
-            element={
-              <MyBooking />
-            }
-          ></Route>
+                <Route
+                  path="/dashboard/my-booking"
+                  element={
+                    <MyBooking />
+                  }
+                ></Route>
 
-          <Route
-            path="/dashboard/payment/:Id"
-            element={
-              <Payment />
-            }
-          ></Route>
+                <Route
+                  path="/dashboard/payment/:Id"
+                  element={
+                    <Payment />
+                  }
+                ></Route>
 
-          <Route
-            path="/dashboard/all-booking"
-            element={
-              <RequireAdmin>
-                <AllBookings />
-              </RequireAdmin>
-            }
-          ></Route>
+                <Route
+                  path="/dashboard/all-booking"
+                  element={
+                    <RequireAdmin>
+                      <AllBookings />
+                    </RequireAdmin>
+                  }
+                ></Route>
 
-          <Route
-            path="/dashboard/add-event"
-            element={
-              <AddEvent></AddEvent>
-            }
-          ></Route>
+                <Route
+                  path="/dashboard/add-event"
+                  element={
+                    <AddEvent></AddEvent>
+                  }
+                ></Route>
+                <Route
+                  path="/dashboard/add-employed"
+                  element={
+                    <AddEmployed></AddEmployed>
+                  }
+                ></Route>
+                <Route
+                  path="/dashboard/all-employee"
+                  element={
+                    <AllEmployee></AllEmployee>
+                  }
+                ></Route>
+                <Route
+                  path="/dashboard/update-employee/:id"
+                  element={
+                    <UpdateEmployee></UpdateEmployee>
+                  }
+                ></Route>
+              </Route>
+              {/* blog */}
+              <Route
+                path="/blogs-details"
+                element={<RequireAuth>
+                  <BlogDetails></BlogDetails>
+                </RequireAuth>}
+              ></Route>
+              <Route
+                path="/blogs-details/:blogId"
+                element={<RequireAuth>
+                  <BlogDetails></BlogDetails>
+                </RequireAuth>}
+              ></Route>
+              <Route path="/blogs" element={<MainBlogs />}></Route>
 
-        </Route>
+              {/* booking  */}
+              <Route
+                path="/event-booking"
+                element={<RequireAuth>
+                  <EventBooking></EventBooking>
+                </RequireAuth>}
+              ></Route>
+              <Route
+                path="/event-booking/:id"
+                element={<RequireAuth>
+                  <SingleEventBooking></SingleEventBooking>
+                </RequireAuth>}
+              ></Route>
 
-        {/* blog */}
-        <Route
-          path="/blogs-details"
-          element={<RequireAuth>
-            <BlogDetails></BlogDetails>
-          </RequireAuth>}
-        ></Route>
-        <Route
-          path="/blogs-details/:blogId"
-          element={<RequireAuth>
-            <BlogDetails></BlogDetails>
-          </RequireAuth>}
-        ></Route>
-        <Route path="/blogs" element={<MainBlogs />}></Route>
+              {/* event */}
+              <Route
+                path="/eventlist"
+                element={<EventListDetailsMain></EventListDetailsMain>}
+              ></Route>
+              <Route path="/event" element={<DayOne></DayOne>}></Route>
 
-        {/* booking  */}
-        <Route
-          path="/event-booking"
-          element={<RequireAuth>
-            <EventBooking></EventBooking>
-          </RequireAuth>}
-        ></Route>
-        <Route
-          path="/event-booking/:id"
-          element={<RequireAuth>
-            <SingleEventBooking></SingleEventBooking>
-          </RequireAuth>}
-        ></Route>
+              {/* details */}
+              <Route
+                path="/service-details"
+                element={<RequireAuth>
+                  <SingleService></SingleService>
+                </RequireAuth>}
+              ></Route>
+              <Route
+                path="/service-details/:id"
+                element={<RequireAuth>
+                  <SingleService></SingleService>
+                </RequireAuth>}
+              ></Route>
 
-        {/* event */}
-        <Route
-          path="/eventlist"
-          element={<EventListDetailsMain></EventListDetailsMain>}
-        ></Route>
-        <Route path="/event" element={<DayOne></DayOne>}></Route>
 
-        {/* details */}
-        <Route
-          path="/service-details"
-          element={<RequireAuth>
-            <SingleService></SingleService>
-          </RequireAuth>}
-        ></Route>
-        <Route
-          path="/service-details/:id"
-          element={<RequireAuth>
-            <SingleService></SingleService>
-          </RequireAuth>}
-        ></Route>
-        
+              {/* nornal routes */}
+              <Route path="/manage-profile" element={<RequireAuth><UserProfile /></RequireAuth>} ></Route>
+              <Route path="/update/user-profile" element={<RequireAuth><UpdateUser /></RequireAuth>} ></Route>
+              <Route path="/authentication" element={<Form></Form>}></Route>
+              <Route path="/ourteam" element={<OurTeam />}></Route>
+              <Route path="/about" element={<AboutUs></AboutUs>}></Route>
+              <Route path="/gallery" element={<Gallery></Gallery>}></Route>
+              <Route path="/map" element={<Map></Map>}></Route>
+              <Route
+                path="/event-booking"
+                element={<RequireAuth>
+                  <EventBooking></EventBooking>
+                </RequireAuth>}
+              ></Route>
+              <Route
+                path="/event-booking/:id"
+                element={<RequireAuth>
+                  <SingleEventBooking></SingleEventBooking>
+                </RequireAuth>}
+              ></Route>
+              <Route
+                path="/eventlist"
+                element={<EventListDetailsMain></EventListDetailsMain>}
+              ></Route>
+              <Route path="/event" element={<DayOne></DayOne>}></Route>
+              <Route
+                path="/event-details"
+                element={<RequireAuth>
+                  <EventDetails></EventDetails>
+                </RequireAuth>}
+              ></Route>
+              <Route
+                path="/event-details/:id"
+                element={<RequireAuth>
+                  <EventDetails></EventDetails>
+                </RequireAuth>}
+              ></Route>
+              <Route
+                path="/service-details"
+                element={<SingleService></SingleService>}
+              ></Route>
+              <Route
+                path="/service-details/:id"
+                element={<SingleService></SingleService>}
+              ></Route>
 
-        {/* nornal routes */}
-        <Route path="/manage-profile" element={<RequireAuth><UserProfile /></RequireAuth>} ></Route>
-        <Route path="/update/user-profile" element={<RequireAuth><UpdateUser /></RequireAuth>} ></Route>
-        <Route path="/authentication" element={<Form></Form>}></Route>
-        <Route path="/ourteam" element={<OurTeam />}></Route>
-        <Route path="/about" element={<AboutUs></AboutUs>}></Route>
-        <Route path="/gallery" element={<Gallery></Gallery>}></Route>
-        <Route path="/map" element={<Map></Map>}></Route>
-        <Route
-          path="/event-booking"
-          element={<RequireAuth>
-            <EventBooking></EventBooking>
-          </RequireAuth>}
-        ></Route>
-        <Route
-          path="/event-booking/:id"
-          element={<RequireAuth>
-            <SingleEventBooking></SingleEventBooking>
-          </RequireAuth>}
-        ></Route>
-        <Route
-          path="/eventlist"
-          element={<EventListDetailsMain></EventListDetailsMain>}
-        ></Route>
-        <Route path="/event" element={<DayOne></DayOne>}></Route>
-        <Route
-          path="/event-details"
-          element={<RequireAuth>
-            <EventDetails></EventDetails>
-          </RequireAuth>}
-        ></Route>
-        <Route
-          path="/event-details/:id"
-          element={<RequireAuth>
-            <EventDetails></EventDetails>
-          </RequireAuth>}
-        ></Route>
-        <Route
-          path="/service-details"
-          element={<SingleService></SingleService>}
-        ></Route>
-        <Route
-          path="/service-details/:id"
-          element={<SingleService></SingleService>}
-        ></Route>
-        
 
-        <Route path="faq" element={<Faq></Faq>}></Route>
+              <Route path="faq" element={<Faq></Faq>}></Route>
 
-        <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
+              <Route path="/contact-us" element={<ContactUs></ContactUs>}></Route>
 
-        {/* not found */}
-        <Route path="*" element={<NotFound></NotFound>}></Route>
-      </Routes>
+              {/* not found */}
+              <Route path="*" element={<NotFound></NotFound>}></Route>
+            </Routes>
 
-      <Footer></Footer>
-      <BackTopBtn></BackTopBtn>
-      <MessengerCustomerChat
-        pageId="103025519179972"
-        appId="1257335411675093"
-      />
+            <Footer></Footer>
+            <BackTopBtn></BackTopBtn>
+            <MessengerCustomerChat
+              pageId="103025519179972"
+              appId="1257335411675093"
+            />
 
-      <ToastContainer />
+            <ToastContainer />
+          </div>
+      }
     </div>
   );
 }

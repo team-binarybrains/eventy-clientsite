@@ -21,10 +21,16 @@ function Advantage() {
 
         <div className="lg:-mt-12 lg:flex lg:justify-around">
           <div className="mt-12 lg:-ml-28 text-center lg:text-start">
-            <h1 className=" uppercase my-5 text-gray-400 lg:text-[20px] text-[15px] tracking-[10px]">
+            <h1 className=" uppercase my-5 text-gray-400 lg:text-[20px] text-[15px] tracking-[10px]"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            >
               WHY CHOOSE US
             </h1>
-            <h1 className="lg:text-4xl text-2xl  uppercase title_line">
+            <h1 className="lg:text-4xl text-2xl  uppercase title_line"
+            data-aos="fade-right"
+            data-aos-duration="2000"
+            >
               <span className="mr-4">Eventy</span>{" "}
               <span className="font-bold -ml-2">Advantages</span>
             </h1>
@@ -33,7 +39,10 @@ function Advantage() {
           <div className="flex items-end justify-center lg:-mr-28 ">
             <Link to="/ourteam">
               {" "}
-              <div className="">
+              <div className=""
+              data-aos="fade-left"
+              data-aos-duration="2000"
+              >
                 <button className="uppercase bg-gradient-to-r from-[#ffbe30] to-amber-600 px-6 py-3 text-white font-semibold tracking-wider rounded-full lg:-ml-40 mt-10 lg:mt-0 mb-5 lg:mb-0">
                   meet my team
                 </button>
@@ -45,7 +54,11 @@ function Advantage() {
 
       <div className="grid justify-center pb-10 lg:py-20 lg:-mt-14">
         <div className="lg:flex">
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
+
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white"
+          data-aos="flip-right"
+          data-aos-duration="2000"
+          >
             <p className={`flex justify-center`}>
               <GiShakingHands
                 className={`text-5xl text-[#ffbe30] hover:text-white `}
@@ -58,7 +71,11 @@ function Advantage() {
               </p>
             </div>
           </div>
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
+
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white"
+          data-aos="flip-right"
+          data-aos-duration="2000"
+          >
             <p className="flex justify-center">
               <GiBalloons className="text-5xl text-[#ffbe30]" />
             </p>
@@ -69,7 +86,11 @@ function Advantage() {
               </p>
             </div>
           </div>
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
+
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white"
+          data-aos="flip-right"
+          data-aos-duration="2000"
+          >
             <p className="flex justify-center">
               <FaGlassCheers className="text-5xl text-[#ffbe30]" />
             </p>
@@ -81,7 +102,10 @@ function Advantage() {
             </div>
           </div>
 
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white"
+          data-aos="flip-right"
+          data-aos-duration="2000"
+          >
             <p className="flex justify-center">
               <BsLayoutTextWindowReverse className="text-5xl text-[#ffbe30]" />
             </p>
@@ -95,7 +119,10 @@ function Advantage() {
         </div>
 
         <div className="lg:flex">
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white"
+          data-aos="flip-right"
+          data-aos-duration="2000"
+          >
             <p className="flex justify-center">
               <FiFilm className="text-5xl text-[#ffbe30] hover:text-white" />
             </p>
@@ -108,7 +135,11 @@ function Advantage() {
               </p>
             </div>
           </div>
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
+
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white"
+          data-aos="flip-right"
+          data-aos-duration="2000"
+          >
             <p className=" flex justify-center">
               <FiPhoneCall className="text-5xl text-[#ffbe30] hover:text-white" />
             </p>
@@ -121,7 +152,11 @@ function Advantage() {
               </p>
             </div>
           </div>
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
+
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white"
+          data-aos="flip-right"
+          data-aos-duration="2000"
+          >
             <p className="flex justify-center">
               <HiLightBulb className="text-5xl text-[#ffbe30] hover:text-white" />
             </p>
@@ -133,7 +168,10 @@ function Advantage() {
             </div>
           </div>
 
-          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white">
+          <div className="h-[280px] w-[320px] border grid items-center justify-center bg-white hover:bg-gradient-to-r from-[#ffbe30] to-[#ff3e00] hover:text-white"
+          data-aos="flip-right"
+          data-aos-duration="2000"
+          >
             <p className="flex justify-center">
               <FaUserFriends className="text-5xl text-[#ffbe30]" />
             </p>

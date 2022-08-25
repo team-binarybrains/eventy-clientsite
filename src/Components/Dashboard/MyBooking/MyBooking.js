@@ -20,12 +20,12 @@ function MyBooking() {
     const [user] = useAuthState(auth);
     const [myBookingServices, setMyBookingServices] = useState([]);
 
-    const [tickets, loading, refetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/user-booked-ticket/${user?.uid}`, [])
+    const [tickets, loading, refetch] = useRefetch(`http://localhost:5000/user-booked-ticket/${user?.uid}`, [])
 
     useEffect(() => {
         const email = user.email;
 
-        axios.get(`https://fathomless-hamlet-59180.herokuapp.com/booking-info/${email}`, {
+        axios.get(`http://localhost:5000/booking-info/${email}`, {
             headers: {
                 authorization: ` Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -45,7 +45,7 @@ function MyBooking() {
         const proceed = window.confirm("Are you sure?");
 
         if (proceed) {
-            fetch(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${id}`, {
+            fetch(`http://localhost:5000/delete-booking/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())

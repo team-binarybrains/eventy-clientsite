@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from 'axios';
 import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
@@ -11,7 +12,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
     const navigate = useNavigate()
     const { _id, enterprise, eventId, professional, standard, total, userId, bookingId } = ticket;
 
-    const [event] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${ticket?.eventId}`, {})
+    const [event] = useRefetch(`http://localhost:5000/event-details/${ticket?.eventId}`, {})
     // cancle order
     const handleBookingCancle = id => {
         console.log(id);
@@ -19,7 +20,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
         const proceed = window.confirm("Are you sure?");
 
         if (proceed) {
-            axios.delete(`https://fathomless-hamlet-59180.herokuapp.com/delete-booked-ticket/${id}`)
+            axios.delete(`http://localhost:5000/delete-booked-ticket/${id}`)
                 .then(({ data }) => data?.acknowledged && refetch())
         }
     }
@@ -42,8 +43,14 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
     return (
         <div className={`shadow-xl rounded-md bg-slate-200 basis-[35rem] shrink relative overflow-hidden bg-no-repeat bg-center bg-cover`} style={{
             backgroundImage: `url(${event?.image})`
-        }}>
-            <section className='py-5 px-3 gap-x-3 gap-y-10 flex flex-wrap items-center justify-center text-white backdrop-blur-[3px] bg-black/80'>
+        }}
+            data-aos="zoom-in"
+            data-aos-duration="2000"
+        >
+            <section className='py-5 px-3 gap-x-3 gap-y-10 flex flex-wrap items-center justify-center text-white backdrop-blur-[3px] bg-black/80'
+            data-aos="flip-up"
+            data-aos-duration="2000"
+            >
                 <div className='space-y-2 basis-[15rem] shrink flex flex-col justify-center items-center'>
                     <h3 className='font-medium text-white'>{event?.date?.split(',')?.join(' ')}</h3>
 
@@ -80,7 +87,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
 
                     <div class="flex justify-end gap-5 px-5 pt-5">
                         <button onClick={() => handleBookingCancle(eventId)} class={`border-4 border-red-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-red-500 font-extrabold hover:shadow-[0_0_35px_rgb(236,68,68)] hover:bg-red-500 hover:text-gray-900 text-lg duration-300`}>Cancel</button>
-                        <button onClick={() => navigate(`/dashboard/payment/${_id}`)} class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
+                        <button onClick={() => navigate(`/dashboard/payment/${bookingId}`)} class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
                     </div>
                 </div>
             </section>

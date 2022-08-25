@@ -24,7 +24,7 @@ const WriteAComment = ({ refetch, blogId }) => {
 
   const [user] = useAuthState(auth);
 
-  const [userComment, , userCommentRefetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/my-comment/${user?.uid + ':' + blogId}`)
+  const [userComment, , userCommentRefetch] = useRefetch(`http://localhost:5000/my-comment/${user?.uid + ':' + blogId}`)
 
   const handleAdddetail = (data) => {
     const inputdetail = {
@@ -40,7 +40,7 @@ const WriteAComment = ({ refetch, blogId }) => {
 
 
 
-    fetch("https://fathomless-hamlet-59180.herokuapp.com/comment", {
+    fetch("http://localhost:5000/comment", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -65,7 +65,10 @@ const WriteAComment = ({ refetch, blogId }) => {
 
   return (
     <div className="mb-5">
-      <h1 className="text-[36px]">Write A <strong>Comment</strong></h1>
+      <h1 className="text-[36px]"
+        data-aos="fade-right"
+        data-aos-duration="2000"
+      >Write A <strong>Comment</strong></h1>
       <div>
         <form onSubmit={handleSubmit(handleAdddetail)}>
           <div className=" md:flex gap-5 ">
@@ -77,6 +80,8 @@ const WriteAComment = ({ refetch, blogId }) => {
               placeholder="Detail"
               name="detail"
               className="outline-amber-300 overflow-auto min-h-[150px] max-h-[150px] p-2 bg-[#f7f7f7] w-full placeholder:tracking-wide"
+              data-aos="flip-down"
+              data-aos-duration="2000"
               {...register("detail", {
                 required: {
                   value: true,
@@ -103,21 +108,51 @@ const WriteAComment = ({ refetch, blogId }) => {
           </div>
 
           <section className='flex gap-2'>
-            <p className="font-bold">Rating :</p>
+            <p className="font-bold"
+              data-aos="fade-right"
+              data-aos-delay="1000"
+              data-aos-duration="2000"
+            >Rating :</p>
 
             <div class=" rating">
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={1} />
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={2} />
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={3} />
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={4} />
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={5} />
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={1}
+                data-aos="fade-right"
+                data-aos-delay="800"
+                data-aos-duration="2000"
+              />
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={2}
+                data-aos="fade-right"
+                data-aos-delay="600"
+                data-aos-duration="2000"
+              />
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={3}
+                data-aos="fade-right"
+                data-aos-delay="400"
+                data-aos-duration="2000"
+              />
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={4}
+                data-aos="fade-right"
+                data-aos-delay="200"
+                data-aos-duration="2000"
+              />
+              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={5}
+                data-aos="fade-right"
+                data-aos-duration="2000"
+              />
             </div>
           </section>
 
           <br />
           {userComment?.length > 0 ?
-            <button className='bg-gradient-to-r from-red-500 to-amber-600 opacity-60 px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer' disabled> Submit Now</button> :
-            <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer'> Submit Now</button>}
+            <button className='bg-gradient-to-r from-red-500 to-amber-600 opacity-60 px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer' disabled
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+            > Submit Now</button>
+            :
+            <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer'
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+            > Submit Now</button>}
         </form>
       </div>
 

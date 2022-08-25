@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import  "./Banner.css";
+import "./Banner.css";
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper";
 
@@ -55,16 +55,34 @@ const Banner = () => {
 										<img src={banner?.img} alt="" />
 									</div>
 									<div className="" id="slider_bg">
+										
 										<div id="banner_content">
 											<div className="banner_text">
-												<h2 className="text-white text-xl md:text-5xl ">{banner?.header1}</h2>
-												<h1 className="text-white text-3xl md:text-5xl lg:text-7xl py-8 font-semibold">{banner?.header2}</h1>
-												<h4 className="text-white text-xs md:text-base md:tracking-[.4rem] tracking-[1px] ">{banner?.header3}</h4>
+												<h2 className="text-white text-xl md:text-5xl "
+												data-aos="fade-down"
+												data-aos-duration="3000"
+												>{banner?.header1}</h2>
+												<h1 className="text-white text-3xl md:text-5xl lg:text-7xl py-8 font-semibold"
+												data-aos="fade-down"
+												data-aos-duration="3000"
+												>{banner?.header2}</h1>
+												<h4 className="text-white text-xs md:text-base md:tracking-[.4rem] tracking-[1px] "
+												data-aos="zoom-in"
+												data-aos-duration="3000"
+												>{banner?.header3}</h4>
 											</div>
 
 											<div className="banner_button pt-14">
-												<Link to='/about'  className="text-white  text-xs md:text-base py-3 px-6 md:px-14 capitalize font-semibold rounded-full transition-all ease-in-out duration-500" id="bannerAboutBtn">{banner?.aboutBtn}</Link>
-												<button id="bannerStartedBtn" className="text-white text-xs md:text-base outline outline-[#FFBE30] ml-6 p-2  rounded-full px-2 md:px-8 hover:bg-[#FFBE30] transition-all ease-in-out duration-300 text-center capitalize font-semibold">{banner?.startedBtn}</button>
+												<Link to='/about' className="text-white  text-xs md:text-base py-3 px-6 md:px-14 capitalize font-semibold rounded-full transition-all ease-in-out duration-500" id="bannerAboutBtn" 
+												data-aos="fade-right"
+												data-aos-duration="3000"
+												>{banner?.aboutBtn}</Link>
+												
+
+												<button id="bannerStartedBtn" className="text-white text-xs md:text-base outline outline-[#FFBE30] ml-6 p-2  rounded-full px-2 md:px-8 hover:bg-[#FFBE30] transition-all ease-in-out duration-300 text-center capitalize font-semibold"
+												data-aos="fade-left"
+												data-aos-duration="3000"
+												>{banner?.startedBtn}</button>
 											</div>
 										</div>
 									</div>

@@ -76,7 +76,11 @@ const UpcommingEvent = () => {
       {isLoading && <Loading></Loading>}
       {isError && error.message}
       {isSuccess &&
-        <div className="container mx-auto px-10 pt-16">
+        <div className="container mx-auto px-10 pt-16"
+          data-aos="zoom-in"
+          data-aos-duration="2000"
+          id="upcoming-event"
+        >
           <div className="space-y-3">
             <h1 className="text-center uppercase text-gray-400 text-[18px] tracking-[10px]">
               UPCOMMING EVENTS

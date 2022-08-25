@@ -1,39 +1,51 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import "./EventListing.css";
 import {
   faMicrophone,
-  faMicrophoneAlt,
-  faCakeCandles,
+  // faMicrophoneAlt,
+  // faCakeCandles,
   faMusic,
-  faSquareCheck,
+  // faSquareCheck,
   faShirt,
 } from "@fortawesome/free-solid-svg-icons";
 import ConferenceEvent from "./ConferenceEvent";
 import MusicEvent from "./MusicEvent";
 import FashionEvent from "./FashionEvent";
 import { useNavigate } from "react-router-dom";
-import TopBanner from "../../EventDetails/TopBanner";
+// import TopBanner from "../../EventDetails/TopBanner";
 const EventListing = () => {
   const navigate = useNavigate();
   const handleEventListing = () => {
     navigate("/eventlist");
   };
   return (
-    <div className="mt-20 min-h-[50vh] bg-[#fff]">
+    <section id="event-listing" className="mt-20 min-h-[50vh] bg-[#fff]">
       <div className=" mx-auto h-1 w-24 bg-[#FD1D1D]  lg:ml-[320px] lg:mb-6"></div>
       <div className=" text-center lg:text-start lg:ml-96 ">
-        <h1 className="text-[20px] text-[#878787] uppercase">Eventy</h1>
-        <h1 className="text-[48px]">
+
+        <h1 className="text-[20px] text-[#878787] uppercase"
+          data-aos="fade-left"
+          data-aos-duration="3000"
+        >Eventy</h1>
+
+        <h1 className="text-[48px]" 
+        data-aos="zoom-in" 
+        data-aos-duration="3000"
+        >
           <span className="font-bold">Event</span> Listing
         </h1>
       </div>
+
       <div className="mt-5  lg:flex lg:justify-center  lg:text-center">
-        <Tabs className=" border-none ">
+        <Tabs className=" border-none" >
           <TabList className=" border-none">
-            <Tab>
+            <Tab 
+            data-aos="zoom-out-up"
+            data-aos-duration="2000"
+            >
               <h1 className="text-[18px] ">
                 {" "}
                 <span className="font-bold  ">
@@ -46,7 +58,10 @@ const EventListing = () => {
                 <span className="text-gray-700 ">Event</span>
               </h1>
             </Tab>
-            <Tab>
+            <Tab 
+            data-aos="zoom-out-up"
+            data-aos-duration="2000"
+            >
               <h1 className="text-[18px] ">
                 {" "}
                 <span className="font-bold  ">
@@ -59,7 +74,10 @@ const EventListing = () => {
                 <span className="text-gray-700 ">Event</span>
               </h1>
             </Tab>
-            <Tab>
+            <Tab 
+            data-aos="zoom-out-up"
+            data-aos-duration="2000"
+            >
               <h1 className="text-[18px] ">
                 {" "}
                 <span className="font-bold ">
@@ -93,11 +111,13 @@ const EventListing = () => {
         <button
           onClick={handleEventListing}
           className="custom-btn px-10 font-bold py-3 rounded-full text-white "
+          data-aos="zoom-in"
+          data-aos-duration="2500"  
         >
           See More
         </button>
       </div>
-    </div>
+    </section>
   );
 };
 

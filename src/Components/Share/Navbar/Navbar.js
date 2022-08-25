@@ -48,12 +48,14 @@ const Navbar = ({ location }) => {
   const [currentUser, setCurrentUser] = useState([]);
   const email = user?.email
   useEffect(() => {
-    fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`)
+    fetch(`http://localhost:5000/single-user/${email}`)
       .then(res => res.json())
       .then(data => setCurrentUser(data))
   }, [email]);
   return (
-    <div>
+    <div 
+ 
+    >
       <section className={`${routeName ? anotherRoute : homeRoute} bg-white`}>
         {routeName && <TopnavBar></TopnavBar>}
         <div
@@ -135,11 +137,11 @@ const Navbar = ({ location }) => {
                         event list
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="uppercase" to="/event-grid">
                         event grid
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link className="uppercase" to="/event-booking">
                         event Booking
@@ -230,6 +232,7 @@ const Navbar = ({ location }) => {
               </ul>
             </div>
 
+
             {/* logo */}
             <div className="flex items-end justify-center">
               <img
@@ -296,11 +299,11 @@ const Navbar = ({ location }) => {
                       event list
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link className="uppercase" to="/event-grid">
                       event grid
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link className="uppercase" to="/event-booking">
                       event Booking

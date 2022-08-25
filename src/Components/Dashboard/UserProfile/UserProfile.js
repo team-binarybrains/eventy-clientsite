@@ -14,7 +14,8 @@ import Loading from "../../Share/Loading/Loading";
 import "./UserProfile.css";
 
 const fileTypes = ["JPG", "PNG", "GIF"];
-const UserProfile = () => {
+const 
+UserProfile = () => {
   const [user, loading, error] = useAuthState(auth);
   const [currentUser, setCurrentUser] = useState([]);
   const [open, SetOpen] = useState(false);
@@ -52,7 +53,7 @@ const UserProfile = () => {
             image: img,
           };
 
-          fetch(`https://fathomless-hamlet-59180.herokuapp.com/user-update/${email}`, {
+          fetch(`http://localhost:5000/user-update/${email}`, {
             method: "PUT",
             headers: {
               "content-type": "application/json",
@@ -74,7 +75,7 @@ const UserProfile = () => {
   }
   // 
   useEffect(() => {
-    fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`)
+    fetch(`http://localhost:5000/single-user/${email}`)
       .then(res => res.json())
       .then(data => setCurrentUser(data))
   }, [file, email]);
@@ -97,7 +98,10 @@ const UserProfile = () => {
         <div className="px-6">
           <div className="flex flex-wrap justify-center">
             <div className="w-full px-4 flex justify-center">
-              <div id="user_profile" >
+              <div id="user_profile" 
+              data-aos="zoom-in"
+              data-aos-duration="2000"
+              >
 
                 {currentUser?.image ? <>
                   <img
