@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.bg{
+    /* background-image: url('../../../asset/backgrounds/employee.jpg'); */
+    /* background-image: url('../../../staff_bg_image/staffs_bg_1.jpg'); */
+    /* background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; */
+    background-color: rgb(241, 241, 241);
+}
+
+.bgLayer{
+    background-image: radial-gradient(rgba(0, 16, 240, 0),rgba(250, 18, 18, 0),rgba(255, 255, 255, 0));
+    /* background-image: linear-gradient(transparent,transparent); */
+}
+
+.slide{
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/*  */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.openSans{
+    font-family: 'Open Sans', sans-serif;
+}
+
+.roboto{
+    font-family: 'Roboto', sans-serif;
+}
+
+.highlight{
+    background: -webkit-linear-gradient(5deg,rgb(252, 127, 38),rgb(252, 127, 38), orange,orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.topBanner{
+    background-image: url('../../../asset/backgrounds/eventDetails.jpg');
+    background-position: top;
+    background-size: 100vw 526px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.child{
+    padding: 0 30px;
+}
+.child:not(:last-child){
+    border-right: 2px solid white;
+}
+
+.leftBgimage {
+    background-image: url("https://i.ibb.co/tH7hrhZ/5.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+}
