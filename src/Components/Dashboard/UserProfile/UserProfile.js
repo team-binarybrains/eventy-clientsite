@@ -99,8 +99,8 @@ UserProfile = () => {
           <div className="flex flex-wrap justify-center">
             <div className="w-full px-4 flex justify-center">
               <div id="user_profile" 
-              data-aos="zoom-in"
-              data-aos-duration="2000"
+              // data-aos="zoom-in"
+              // data-aos-duration="2000"
               >
 
                 {currentUser?.image ? <>
