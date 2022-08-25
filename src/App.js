@@ -56,6 +56,7 @@ import AddEmployed from "./Components/Dashboard/AddEmployee/AddEmployee";
 import useLoading from "./Components/Hooks/useLoading";
 import Loading from "./Components/Share/Loading/Loading";
 import AllEmployee from "./Components/Dashboard/AllEmployed/AllEmployed";
+import UpdateEmployee from "./Components/Dashboard/AllEmployed/UpdateEmployee";
 
 
 function App() {
@@ -177,8 +178,13 @@ function App() {
                     <AllEmployee></AllEmployee>
                   }
                 ></Route>
+                <Route
+                  path="/dashboard/update-employee/:id"
+                  element={
+                    <UpdateEmployee></UpdateEmployee>
+                  }
+                ></Route>
               </Route>
-
               {/* blog */}
               <Route
                 path="/blogs-details"

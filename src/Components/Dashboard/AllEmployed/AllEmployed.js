@@ -16,7 +16,7 @@ const AllEmployee = () => {
    const handleDeleteUser = (id) => {
       const proceed = window.confirm("Are you sure?");
       if (proceed) {
-         const url = `http://localhost:5000/delete-user/${id}`;
+         const url = `http://localhost:5000/delete-employee/${id}`;
          fetch(url, {
             method: "DELETE",
          })
@@ -91,7 +91,7 @@ const AllEmployee = () => {
                         {/* <td> <Link to={''}></Link> </td> */}
                         <td class="px-16 py-2 ">
                            <span class="text-yellow-500 flex justify-center px-2">
-                              <Link to={`employee/${employee._id}`}> <svg
+                              <Link to={`/dashboard/update-employee/${employee._id}`}> <svg
                                  xmlns="http://www.w3.org/2000/svg"
                                  class="h-5 w-5 text-green-700 mx-2"
                                  viewBox="0 0 20 20"
