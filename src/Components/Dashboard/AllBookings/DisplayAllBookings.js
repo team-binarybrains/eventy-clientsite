@@ -49,7 +49,7 @@ function DisplayAllBookings({ booking, handleBookingCancle }) {
                         <button
                             onClick={() => handleBookingCancle(_id)}
                             class="px-6 py-2 rounded-full bg bg-amber-400">Cancle</button>
-                        <button class="px-6 py-2 rounded-full bg bg-amber-400">Confirm</button>
+                        {/* <button class="px-6 py-2 rounded-full bg bg-amber-400">Confirm</button> */}
                     </div>
                 </div>
             </div>

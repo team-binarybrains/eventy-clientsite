@@ -137,11 +137,11 @@ const Navbar = ({ location }) => {
                         event list
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link className="uppercase" to="/event-grid">
                         event grid
                       </Link>
-                    </li>
+                    </li> */}
                     <li>
                       <Link className="uppercase" to="/event-booking">
                         event Booking
@@ -299,11 +299,11 @@ const Navbar = ({ location }) => {
                       event list
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link className="uppercase" to="/event-grid">
                       event grid
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link className="uppercase" to="/event-booking">
                       event Booking
