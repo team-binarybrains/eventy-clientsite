@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiOutlineUser, AiOutlineAppstoreAdd } from "react-icons/ai";
 import { TiThSmall } from "react-icons/ti";
 import { IoTicket } from "react-icons/io5";
+import { IoMdPersonAdd } from "react-icons/io";
 import { FaUsers } from "react-icons/fa";
 import {
   faChartBar,
@@ -55,8 +56,8 @@ const Dashboard = () => {
             <div className="" id="sidebar_User_profile">
               <div className="pt-5">
                 <div id="user_profile_photo"
-                data-aos="zoom-in"
-                data-aos-duration="2000"
+                  data-aos="zoom-in"
+                  data-aos-duration="2000"
                 >
 
                   {currentUser?.image && (
@@ -71,12 +72,12 @@ const Dashboard = () => {
                 </div>
                 <div id="user_content" className="pt-2">
                   <h1 className="text-white text-center text-sm capitalize"
-                  data-aos="zoom-out"
-                  data-aos-duration="2000"
+                    data-aos="zoom-out"
+                    data-aos-duration="2000"
                   >{currentUser?.displayName}</h1>
                   <h1 className="text-white text-center text-sm"
-                  data-aos="zoom-out"
-                  data-aos-duration="2000"
+                    data-aos="zoom-out"
+                    data-aos-duration="2000"
                   >{currentUser?.email}</h1>
                 </div>
               </div>
@@ -119,7 +120,17 @@ const Dashboard = () => {
                 </CustomLink>
               </li>
             }
-
+            {admin &&
+              <li className="text-base hover:bg-[#0f172a]  rounded px-2">
+                <CustomLink
+                  className="flex justify-center items-center gap-2"
+                  to={"/dashboard/all-employee"}
+                >
+                  <FaUsers className="text-xl" />
+                  <span className=" font-bold"> ALL EMPLOYEE</span>
+                </CustomLink>
+              </li>
+            }
             {/* booking info for user */}
             {!admin &&
               <li className="text-base hover:bg-[#0f172a]  rounded">
@@ -140,6 +151,18 @@ const Dashboard = () => {
                 >
                   <AiOutlineAppstoreAdd className="text-xl" />
                   <span className="font-bold">ADD EVENT</span>
+                </CustomLink>
+              </li>
+            }
+            {/* speaker */}
+            {admin &&
+              <li className="text-base hover:bg-[#0f172a]  rounded">
+                <CustomLink
+                  className="flex justify-center items-center gap-2 "
+                  to={"/dashboard/add-employed"}
+                >
+                  <IoMdPersonAdd className="text-xl ml-2" />
+                  <span className="font-bold uppercase">ADD Employee</span>
                 </CustomLink>
               </li>
             }

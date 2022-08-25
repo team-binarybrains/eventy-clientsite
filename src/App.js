@@ -50,9 +50,13 @@ import MyBooking from "./Components/Dashboard/MyBooking/MyBooking";
 import AllBookings from "./Components/Dashboard/AllBookings/AllBookings";
 import Payment from "./Components/Dashboard/MyBooking/Payment/Payment";
 import AddEvent from "./Components/Dashboard/AddEvent/AddEvent";
-import Speaker from "./Components/Home/Speaker/Speaker";
+import AddEmployed from "./Components/Dashboard/AddEmployee/AddEmployee";
+
 import useLoading from "./Components/Hooks/useLoading";
 import Loading from "./Components/Share/Loading/Loading";
+import AllEmployee from "./Components/Dashboard/AllEmployed/AllEmployed";
+import UpdateEmployee from "./Components/Dashboard/AllEmployed/UpdateEmployee";
+import Employee from "./Components/Home/Employee/Employee";
 
 
 function App() {
@@ -110,7 +114,7 @@ function App() {
               {/* speaker */}
               <Route
                 path="/speaker"
-                element={<Speaker></Speaker>}
+                element={<Employee></Employee>}
               ></Route>
 
               {/* dashboard */}
@@ -162,9 +166,25 @@ function App() {
                     <AddEvent></AddEvent>
                   }
                 ></Route>
-
+                <Route
+                  path="/dashboard/add-employed"
+                  element={
+                    <AddEmployed></AddEmployed>
+                  }
+                ></Route>
+                <Route
+                  path="/dashboard/all-employee"
+                  element={
+                    <AllEmployee></AllEmployee>
+                  }
+                ></Route>
+                <Route
+                  path="/dashboard/update-employee/:id"
+                  element={
+                    <UpdateEmployee></UpdateEmployee>
+                  }
+                ></Route>
               </Route>
-
               {/* blog */}
               <Route
                 path="/blogs-details"
