@@ -2,11 +2,12 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { BiUserCircle } from 'react-icons/bi';
 import { Link } from "react-router-dom";
+import Swal from 'sweetalert2'
 // import SingleUser from "../SingleUser/SingleUser";
 
 const AllEmployee = () => {
    const [employee, setEmployee] = useState([]);
-   console.log(employee);
+   // console.log(employee);
    useEffect(() => {
       axios.get("http://localhost:5000/employee").then((res) => {
          const { data } = res;
@@ -14,22 +15,52 @@ const AllEmployee = () => {
       });
    }, []);
    const handleDeleteUser = (id) => {
-      const proceed = window.confirm("Are you sure?");
-      if (proceed) {
-         const url = `http://localhost:5000/delete-employee/${id}`;
-         fetch(url, {
-            method: "DELETE",
-         })
-            .then((res) => res.json())
-            .then((data) => {
-               const remaining = employee.filter((toDo) => toDo._id !== id);
-               setEmployee(remaining);
-            });
-      }
+      // const proceed = window.confirm("Are you sure?");
+
+      // if (proceed) {
+      //    const url = `http://localhost:5000/delete-employee/${id}`;
+      //    fetch(url, {
+      //       method: "DELETE",
+      //    })
+      //       .then((res) => res.json())
+      //       .then((data) => {
+      //          const remaining = employee.filter((toDo) => toDo._id !== id);
+      //          setEmployee(remaining);
+      //       });
+      // }
+      Swal.fire({
+         title: 'Are you sure?',
+         text: "You are sure to delete employee information",
+         icon: 'warning',
+         showCancelButton: true,
+         confirmButtonColor: '#3085d6',
+         cancelButtonColor: '#d33',
+         confirmButtonText: 'Yes, delete it !'
+      }).then((result) => {
+         if (result.isConfirmed) {
+            const url = `http://localhost:5000/delete-employee/${id}`;
+            fetch(url, {
+               method: "DELETE",
+            })
+               .then((res) => res.json())
+               .then((data) => {
+                  const remaining = employee.filter((toDo) => toDo._id !== id);
+                  setEmployee(remaining);
+               });
+            Swal.fire(
+               'Deleted!',
+               'Employee information has been deleted.',
+               'success'
+            )
+         } else {
+            // console.log("no delete");
+            return
+         }
+      })
    };
 
    return (
-      <div class="mt-10 ">
+      <div class="my-12">
          <div className="overflow-x-visible ">
             <table class="max-w-5xl w-full mx-auto table-auto border">
                <thead class="justify-between">
