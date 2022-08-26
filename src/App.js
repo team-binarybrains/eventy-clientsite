@@ -111,9 +111,9 @@ function App() {
                 path="/photography"
                 element={<Photography></Photography>}
               ></Route>
-              {/* speaker */}
+              {/* employee */}
               <Route
-                path="/speaker"
+                path="/employee"
                 element={<Employee></Employee>}
               ></Route>
 
