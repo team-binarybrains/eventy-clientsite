@@ -30,7 +30,7 @@ const AllUsers = () => {
   const handleDeleteUser = (id) => {
     Swal.fire({
        title: 'Are you sure?',
-       text: "You are sure to delete employee information",
+       text: "You are sure to delete user information",
        icon: 'warning',
        showCancelButton: true,
        confirmButtonColor: '#3085d6',
@@ -49,7 +49,7 @@ const AllUsers = () => {
              });
           Swal.fire(
              'Deleted!',
-             'Employee information has been deleted.',
+             'User information has been deleted.',
              'success'
           )
        } else {
