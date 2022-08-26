@@ -8,7 +8,7 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "./Hook/useFetch";
 
 export default function OurServices() {
-  const serviceInfo = useFetch("http://localhost:5000/services-get");
+  const serviceInfo = useFetch("https://fathomless-hamlet-59180.herokuapp.com/services-get");
 
   const navigate = useNavigate();
   const navigateToDetails = (id) => {

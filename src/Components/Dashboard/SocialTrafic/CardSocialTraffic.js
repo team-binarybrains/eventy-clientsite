@@ -6,8 +6,8 @@ export default function CardSocialTraffic() {
   return (
     <>
       <div className=" h-96  mt-20 relative flex flex-col lg:w-[38%] break-words bg-white mb-6 shadow-lg rounded"
-      data-aos="flip-down"
-      data-aos-duration="2000"
+      // data-aos="flip-down"
+      // data-aos-duration="2000"
       >
         <div className="rounded-t mb-0 px-4 pt-5 border-0">
           <div className="flex flex-wrap items-center">

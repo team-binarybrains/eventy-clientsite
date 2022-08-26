@@ -137,7 +137,7 @@ const AddEvent = () => {
 
         const eventInformation = { title, venue, type, date, endDate, starttime, endtime, ticketprice, address, description, day, img, image }
 
-        fetch('http://localhost:5000/addEventRequest', {
+        fetch('https://fathomless-hamlet-59180.herokuapp.com/addEventRequest', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -248,8 +248,8 @@ const AddEvent = () => {
                                     </div>
                                     <div className="form-control">
                                         <textarea name='eventDescription' className="textarea textarea-bordered h-32 inputDegine" placeholder="About Tell Us Event"
-                                            // data-aos="flip-down"
-                                            // data-aos-duration="2500"
+                                        // data-aos="flip-down"
+                                        // data-aos-duration="2500"
                                         ></textarea>
                                     </div>
                                 </div>
@@ -364,8 +364,8 @@ const AddEvent = () => {
                             </>
                             )}
                             <div className='text-center py-8'
-                                // data-aos="zoom-in"
-                                // data-aos-duration="2500"
+                            // data-aos="zoom-in"
+                            // data-aos-duration="2500"
                             >
                                 <input className='custom-btn rounded text-lg font-semibold w-full sm:w-96 py-4 sm:px-16 mt-0 sm:mt-5 text-white' type="submit" value="Add Event" />
                             </div>

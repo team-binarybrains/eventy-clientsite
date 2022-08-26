@@ -12,7 +12,7 @@ const BlogDetails = () => {
   const { blogId } = useParams();
 
   useEffect(() => {
-    fetch(`http://localhost:5000/blogsdetail/${blogId}`)
+    fetch(`https://fathomless-hamlet-59180.herokuapp.com/blogsdetail/${blogId}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [blogId]);
