@@ -1,5 +1,6 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
+import Swal from "sweetalert2";
 import SingleUser from "../SingleUser/SingleUser";
 
 const AllUsers = () => {
@@ -12,23 +13,53 @@ const AllUsers = () => {
       setAllUsers(data);
     });
   }, []);
+  // const handleDeleteUser = (id) => {
+  //   const proceed = window.confirm("Are you sure?");
+  //   if (proceed) {
+  //     const url = `http://localhost:5000/delete-user/${id}`;
+  //     fetch(url, {
+  //       method: "DELETE",
+  //     })
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         const remaining = allUsers.filter((toDo) => toDo._id !== id);
+  //         setAllUsers(remaining);
+  //       });
+  //   }
+  // };
   const handleDeleteUser = (id) => {
-    const proceed = window.confirm("Are you sure?");
-    if (proceed) {
-      const url = `http://localhost:5000/delete-user/${id}`;
-      fetch(url, {
-        method: "DELETE",
-      })
-        .then((res) => res.json())
-        .then((data) => {
-          const remaining = allUsers.filter((toDo) => toDo._id !== id);
-          setAllUsers(remaining);
-        });
-    }
-  };
-
+    Swal.fire({
+       title: 'Are you sure?',
+       text: "You are sure to delete employee information",
+       icon: 'warning',
+       showCancelButton: true,
+       confirmButtonColor: '#3085d6',
+       cancelButtonColor: '#d33',
+       confirmButtonText: 'Yes, delete it !'
+    }).then((result) => {
+       if (result.isConfirmed) {
+          const url = `http://localhost:5000/delete-user/${id}`;
+          fetch(url, {
+             method: "DELETE",
+          })
+             .then((res) => res.json())
+             .then((data) => {
+                const remaining = allUsers.filter((toDo) => toDo._id !== id);
+                setAllUsers(remaining);
+             });
+          Swal.fire(
+             'Deleted!',
+             'Employee information has been deleted.',
+             'success'
+          )
+       } else {
+          // console.log("no delete");
+          return
+       }
+    })
+ };
   return (
-    <div class="mt-10">
+    <div class="my-12">
       <table class="max-w-5xl mx-auto table-auto border">
         <thead class="justify-between">
           <tr class="bg-green-600">

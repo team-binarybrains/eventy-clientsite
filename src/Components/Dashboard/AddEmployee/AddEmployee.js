@@ -63,6 +63,7 @@ const AddEmployed = () => {
                      if (inserted) {
                         toast.success("Data Inserted Successful");
                         reset();
+                        navigate('/dashboard/all-employee')
                      }
                   });
             }
@@ -393,7 +394,7 @@ const AddEmployed = () => {
                      >
                         <option disabled selected>Select Employee's Profession</option>
                         <option value="speaker">Speaker</option>
-                        <option value="planner">Event planner</option>
+                        <option value="event planner">Event planner</option>
                      </select>
                   </div>
                   <label className="text-left sm:text-start block">
