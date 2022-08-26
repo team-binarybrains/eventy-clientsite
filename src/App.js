@@ -69,7 +69,7 @@ function App() {
   // aos
   AOS.init();
 
-  const [loading] = useLoading()
+  // const [loading] = useLoading()
 
   return (
     <div>
