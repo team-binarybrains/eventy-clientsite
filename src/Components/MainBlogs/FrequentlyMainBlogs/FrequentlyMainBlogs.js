@@ -29,8 +29,8 @@ const FrequentlyMainBlogs = () => {
             <div className=" border-gray-200   md:w-auto w-full ">
               {/* <input placeholder="Search" type="text" aria-label="Search" className="lg:w-96 md:w-72 w-full focus:outline-none placeholder-gray-600 text-base font-normal text-gray-600 leading-4 " /> */}
               <h1 className="resent-post-section-title pr-52 -mb-[48px]"
-              data-aos="fade-left"
-              data-aos-duration="2000"
+                data-aos="fade-left"
+                data-aos-duration="2000"
               >
                 Recent <span className="font-bold"> Post</span>
               </h1>
@@ -43,8 +43,8 @@ const FrequentlyMainBlogs = () => {
               <div className="grid md:grid-cols-2 gap-7 p-5  lg:grid-cols-2 ">
                 {blogs.map((blog) => (
                   <div blog={blog} className={`h-[500px] flex flex-col pb-5  bg-[#f7f7f7] transition-transform ${style.blogCard}`}
-                  data-aos="flip-left"
-                  data-aos-duration="2000"
+                    data-aos="flip-left"
+                    data-aos-duration="2000"
                   >
                     <div className="relative">
                       <img
@@ -54,8 +54,8 @@ const FrequentlyMainBlogs = () => {
                       />
 
                       <p className="absolute -top-2 -left-2  text-gray-700 font-semibold bg-gradient-to-b from-amber-300 to-amber-500 px-5 py-3 rounded-sm uppercase"
-                      data-aos="fade-down"
-                      data-aos-duration="2000"
+                        data-aos="fade-down"
+                        data-aos-duration="2000"
                       >
                         {blog?.date?.split(',')[0]} {blog?.date?.split(',')[1]?.slice(0, 3)} {blog?.date?.split(',')[2]}
                       </p>
@@ -73,8 +73,8 @@ const FrequentlyMainBlogs = () => {
                     <p className="text-[18px] px-5">{blog.details.slice(0, 50)}</p>
 
                     <div className="self-start grow flex px-5"
-                    data-aos="zoom-in"
-                    data-aos-duration="1500"
+                      data-aos="zoom-in"
+                      data-aos-duration="1500"
                     >
                       <button
                         onClick={() => handleBlogsDetails(blog._id)}
@@ -96,8 +96,8 @@ const FrequentlyMainBlogs = () => {
               {/* <!-- Shipping Section --> */}
               <div>
                 <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
-                 data-aos="fade-left"
-                 data-aos-duration="2500"
+                  data-aos="fade-left"
+                  data-aos-duration="2500"
                 >
                   <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30]  ">
                     How to join this event?
@@ -151,9 +151,9 @@ const FrequentlyMainBlogs = () => {
 
               <div>
                 <div className="py-7 px-3  flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md "
-                data-aos="fade-left"
-                data-aos-delay="700"
-                data-aos-duration="2500"
+                  data-aos="fade-left"
+                  data-aos-delay="700"
+                  data-aos-duration="2500"
                 >
                   <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30] ">
                     How to make new event?
@@ -207,8 +207,8 @@ const FrequentlyMainBlogs = () => {
 
               <div>
                 <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
-                data-aos="fade-left"
-                data-aos-duration="2500"
+                  data-aos="fade-left"
+                  data-aos-duration="2500"
                 >
                   <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30] ">
                     Exchange
@@ -262,8 +262,8 @@ const FrequentlyMainBlogs = () => {
 
               <div>
                 <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
-                data-aos="fade-left"
-                data-aos-duration="2500"
+                  data-aos="fade-left"
+                  data-aos-duration="2500"
                 >
                   <h3 className=" font-extrabold  text-[18px] leading-5 hover:text-[#ffbe30] ">
                     Tracking
@@ -317,9 +317,9 @@ const FrequentlyMainBlogs = () => {
                 data-aos-duration="2500"
               >
                 <div className="text-center"
-                data-aos="zoom-in"
-                data-aos-delay="500"
-                data-aos-duration="2500"
+                  data-aos="zoom-in"
+                  data-aos-delay="500"
+                  data-aos-duration="2500"
                 >
                   <h1 className="text-white text-[17px] mt-16">
                     26 DECEMBER 2018

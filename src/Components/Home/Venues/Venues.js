@@ -69,8 +69,8 @@ const Venues = () => {
           </div>
 
           <div className={`h-[424px] sm:min-w-[500px] grow basis-[50%] shrink relative ${styles.highlight}`}
-          data-aos="zoom-in-left"
-          data-aos-duration="2500"
+            data-aos="zoom-in-left"
+            data-aos-duration="2500"
           >
             <img
               src={select.img}

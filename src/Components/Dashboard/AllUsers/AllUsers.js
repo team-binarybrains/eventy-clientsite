@@ -29,63 +29,63 @@ const AllUsers = () => {
   // };
   const handleDeleteUser = (id) => {
     Swal.fire({
-       title: 'Are you sure?',
-       text: "You are sure to delete user information",
-       icon: 'warning',
-       showCancelButton: true,
-       confirmButtonColor: '#3085d6',
-       cancelButtonColor: '#d33',
-       confirmButtonText: 'Yes, delete it !'
+      title: 'Are you sure?',
+      text: "You are sure to delete user information",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: '#3085d6',
+      cancelButtonColor: '#d33',
+      confirmButtonText: 'Yes, delete it !'
     }).then((result) => {
-       if (result.isConfirmed) {
-          const url = `http://localhost:5000/delete-user/${id}`;
-          fetch(url, {
-             method: "DELETE",
-          })
-             .then((res) => res.json())
-             .then((data) => {
-                const remaining = allUsers.filter((toDo) => toDo._id !== id);
-                setAllUsers(remaining);
-             });
-          Swal.fire(
-             'Deleted!',
-             'User information has been deleted.',
-             'success'
-          )
-       } else {
-          // console.log("no delete");
-          return
-       }
+      if (result.isConfirmed) {
+        const url = `http://localhost:5000/delete-user/${id}`;
+        fetch(url, {
+          method: "DELETE",
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            const remaining = allUsers.filter((toDo) => toDo._id !== id);
+            setAllUsers(remaining);
+          });
+        Swal.fire(
+          'Deleted!',
+          'User information has been deleted.',
+          'success'
+        )
+      } else {
+        // console.log("no delete");
+        return
+      }
     })
- };
+  };
   return (
     <div class="my-12">
       <table class="max-w-5xl mx-auto table-auto border">
         <thead class="justify-between">
           <tr class="bg-green-600">
             <th class="text-center py-2"
-            data-aos="zoom-in"
-            data-aos-duration="2500"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
             >
               <span class="text-gray-100 font-semibold">Avatar</span>
             </th>
             <th class="text-center py-2 "
-            data-aos="zoom-in"
-            data-aos-duration="2500"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
             >
               <span class="text-gray-100 font-semibold">Name</span>
             </th>
 
             <th class="text-center py-2"
-            data-aos="zoom-in"
-            data-aos-duration="2500"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
             >
               <span class="text-gray-100 font-semibold">Email</span>
             </th>
 
             <th class="text-center py-2"
-            data-aos="zoom-in"
-            data-aos-duration="2500"
+              data-aos="zoom-in"
+              data-aos-duration="2500"
             >
               <span class="text-gray-100 font-semibold">Setting</span>
             </th>

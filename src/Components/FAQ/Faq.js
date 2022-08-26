@@ -88,8 +88,8 @@ const Faq = () => {
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-10'>
                     <div>
                         {firstAccountQuestion.map(faq => <div key={faq.questionNumber} tabindex="0" class="collapse collapse-arrow bg-base-100"
-                        data-aos="fade-right"
-                        data-aos-duration="2500"
+                            data-aos="fade-right"
+                            data-aos-duration="2500"
                         >
                             <input type="checkbox" className='peer duration-1000' />
                             <div class="collapse-title text-lg font-bold bg-white border-b-[1px] border-l-[3px] border-l-white peer-checked:border-l-[3px] peer-checked:border-l-amber-400 peer-checked:border-b-white peer-checked:bg-stone-100">
@@ -106,8 +106,8 @@ const Faq = () => {
 
                     <div>
                         {firstAccountQuestion.map(faq => <div key={faq.questionNumber} tabindex="0" class="collapse collapse-arrow bg-base-100"
-                        data-aos="fade-left"
-                        data-aos-duration="2500"
+                            data-aos="fade-left"
+                            data-aos-duration="2500"
                         >
                             <input type="checkbox" className='peer' />
                             <div class="collapse-title text-lg font-bold bg-white border-b-[1px] border-l-[3px] border-l-white peer-checked:border-l-[3px] peer-checked:border-l-amber-400 peer-checked:border-b-white peer-checked:bg-stone-100">
@@ -126,13 +126,13 @@ const Faq = () => {
                 <div className='grid grid-cols-6 mt-20 mb-12'>
                     <div className="col-span-6 sm:col-span-4">
                         <h1 className='text-4xl sm:text-5xl font-normal'
-                        data-aos="fade-right"
-                        data-aos-duration="2000"
+                            data-aos="fade-right"
+                            data-aos-duration="2000"
                         >2. About<span className='font-bold'> Our Events </span> </h1>
                     </div>
                     <div className='col-span-6 sm:col-span-2 text-center sm:text-right mt-10 sm:mt-0'
-                    data-aos="fade-left"
-                    data-aos-duration="2000"
+                        data-aos="fade-left"
+                        data-aos-duration="2000"
                     >
                         <label onClick={() => setQuestion("")} for="my-modal-6" className='py-3.5 px-9 custom-btn rounded-full uppercase font-semibold text-white'>Make A Question</label>
                     </div>
@@ -140,8 +140,8 @@ const Faq = () => {
                 <div className='grid grid-cols-1 sm:grid-cols-2 gap-0 sm:gap-10'>
                     <div>
                         {firstAccountQuestion.map(faq => <div key={faq.questionNumber} tabindex="0" class="collapse collapse-arrow bg-base-100"
-                        data-aos="fade-right"
-                        data-aos-duration="2500"
+                            data-aos="fade-right"
+                            data-aos-duration="2500"
                         >
                             <input type="checkbox" className='peer' />
                             <div class="collapse-title text-lg font-bold bg-white border-b-[1px] border-l-[3px] border-l-white peer-checked:border-l-[3px] peer-checked:border-l-amber-400 peer-checked:border-b-white peer-checked:bg-stone-100">
@@ -158,8 +158,8 @@ const Faq = () => {
 
                     <div>
                         {firstAccountQuestion.map(faq => <div key={faq.questionNumber} tabindex="0" class="collapse collapse-arrow bg-base-100"
-                        data-aos="fade-left"
-                        data-aos-duration="2500"
+                            data-aos="fade-left"
+                            data-aos-duration="2500"
                         >
                             <input type="checkbox" className='peer' />
                             <div class="collapse-title text-lg font-bold bg-white border-b-[1px] border-l-[3px] border-l-white peer-checked:border-l-[3px] peer-checked:border-l-amber-400 peer-checked:border-b-white peer-checked:bg-stone-100">

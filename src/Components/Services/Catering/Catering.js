@@ -140,8 +140,8 @@ function Catering() {
                 <div className='lg:flex justify-center items-center gap-x-7 lg:h-80 pt-5 lg:pt-0'>
                     <div className='lg:w-4/12 px-3 lg:px-0'>
                         <p className='lg:tracking-[5px] font-semibold'
-                             data-aos="zoom-in"
-                             data-aos-duration="2000"
+                            data-aos="zoom-in"
+                            data-aos-duration="2000"
                         >VEGETARIAN AND VEGAN MEAL PREPARATION</p>
                         <p className='mt-5'
                             data-aos="zoom-in"

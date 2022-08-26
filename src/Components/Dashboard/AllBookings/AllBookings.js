@@ -43,8 +43,8 @@ function AllBookings() {
 
             <div className='flex justify-center border-b-2 lg:mb-5'>
                 <p className='text-3xl font-bold '
-                data-aos="zoom-in"
-                data-aos-duration="2500"
+                    data-aos="zoom-in"
+                    data-aos-duration="2500"
                 >
                     ALL
                     <span className='text-amber-400 tracking-widest mx-2'>BOOKING</span>

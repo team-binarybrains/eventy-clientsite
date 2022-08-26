@@ -57,14 +57,14 @@ export default function OurServices() {
     <div className="lg:px-[270px] pt-20 pb-32 bg-gray-100">
       <div className="mt-6 mb-14">
         <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]"
-        data-aos="fade-right"
-        data-aos-duration="3000"
+          data-aos="fade-right"
+          data-aos-duration="3000"
         >
           our services
         </h1>
         <p className="text-4xl tracking-wider text-center"
-        data-aos="fade-left"
-        data-aos-duration="3000"
+          data-aos="fade-left"
+          data-aos-duration="3000"
         >
           Eventy <span className="font-bold">Expertise</span>
         </p>
@@ -75,9 +75,9 @@ export default function OurServices() {
           {serviceInfo.map((service, index) => (
             <div key={service.index} className="relative hvr ">
               <div className="cursor-pointer">
-                <div className="flex justify-center relative" 
-                data-aos="flip-right"
-                data-aos-duration="2500"
+                <div className="flex justify-center relative"
+                  data-aos="flip-right"
+                  data-aos-duration="2500"
                 >
                   <img src={service.image} alt="" className="" />
                   <div className="absolute top-0 left-[1.8rem] right-[1.8rem] bottom-0 bg-transparent cld ">
@@ -89,8 +89,8 @@ export default function OurServices() {
                 </div>
 
                 <div className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-3"
-                data-aos="fade-up"
-                data-aos-duration="2700"
+                  data-aos="fade-up"
+                  data-aos-duration="2700"
                 >
                   <div className="bg-white w-72 h-28 grid items-center justify-center">
                     <div className="text-center">

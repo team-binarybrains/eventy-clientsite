@@ -9,7 +9,7 @@ import auth from '../../../../Firebase/firebase.init';
 
 const CheckoutForm = ({ product }) => {
     const [user] = useAuthState(auth);
-    const {email, uid} = user;
+    const { email, uid } = user;
 
     console.log(product);
 
@@ -22,7 +22,7 @@ const CheckoutForm = ({ product }) => {
     const [clientSecret, setClientSecret] = useState('');
 
 
-    const { _id, eventPrice, name, price, totalPrice,  eventName, total, bookingId } = product
+    const { _id, eventPrice, name, price, totalPrice, eventName, total, bookingId } = product
     console.log(name)
 
     useEffect(() => {
@@ -41,7 +41,7 @@ const CheckoutForm = ({ product }) => {
                 }
             });
 
-    }, [totalPrice,total])
+    }, [totalPrice, total])
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -123,8 +123,8 @@ const CheckoutForm = ({ product }) => {
         <>
 
             <form onSubmit={handleSubmit} className=' flex flex-col justify-between lg:h-48'
-            data-aos="flip-down"
-            data-aos-duration="2500"
+                data-aos="flip-down"
+                data-aos-duration="2500"
             >
                 <CardElement
                     options={{

@@ -77,8 +77,8 @@ function Audiovisual() {
             <div className='lg:py-20'>
                 <div className='flex justify-center lg:-mb-5'>
                     <p className='text-3xl font-bold '
-                    data-aos="zoom-in"
-                    data-aos-duration="2000"
+                        data-aos="zoom-in"
+                        data-aos-duration="2000"
                     >
                         <span className='text-amber-400 tracking-widest mr-2'>EVENTY</span>
                         AUDIOVISUAL SERVICES

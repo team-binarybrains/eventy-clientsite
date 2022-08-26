@@ -23,13 +23,13 @@ const BlogDetails = () => {
         <div className="flex justify-center items-center py-20">
           <div className="text-center">
             <h1 className="breadcrumb-section font-bold"
-             data-aos="zoom-in"
-             data-aos-duration="2000"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
             >BLOG SINGLE</h1>
 
             <h1 className="big-title"
-             data-aos="zoom-in"
-             data-aos-duration="2000"
+              data-aos="zoom-in"
+              data-aos-duration="2000"
             >
               Eventy
               <br />
@@ -53,8 +53,8 @@ const BlogDetails = () => {
                 Blogs
               </Link>
               <p className="text-[16px] font-bold text-white inline-block  pl-2"
-               data-aos="fade-left"
-               data-aos-duration="2000"
+                data-aos="fade-left"
+                data-aos-duration="2000"
               >
                 Blog Details
               </p>

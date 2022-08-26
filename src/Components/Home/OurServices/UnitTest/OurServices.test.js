@@ -10,7 +10,7 @@ const server = setupServer(
     rest.get("http://localhost:5000/services-get", (req, res, ctx) => {
         return res(
             ctx.status(200),
-            ctx.json([{eventName : "Wedding Party"}])
+            ctx.json([{ eventName: "Wedding Party" }])
         )
     })
 )
