@@ -53,8 +53,8 @@ const Navbar = ({ location }) => {
       .then(data => setCurrentUser(data))
   }, [email]);
   return (
-    <div 
- 
+    <div
+
     >
       <section className={`${routeName ? anotherRoute : homeRoute} bg-white`}>
         {routeName && <TopnavBar></TopnavBar>}
@@ -221,7 +221,7 @@ const Navbar = ({ location }) => {
                   <Link to="/gallery">GALLERY</Link>
                 </li>
                 <li>
-                  <Link to="/speaker">SPEAKER</Link>
+                  <Link to="/employee">EMPLOYEE</Link>
                 </li>
                 <li>
                   <Link to="/dashboard">DASHBOARD</Link>
@@ -381,8 +381,8 @@ const Navbar = ({ location }) => {
                 </NavLink>
               </li>
               <li>
-                <NavLink to="/speaker" className={navStyle}>
-                  SPEAKER
+                <NavLink to="/employee" className={navStyle}>
+                  EMPLOYEE
                 </NavLink>
               </li>
               <li>
