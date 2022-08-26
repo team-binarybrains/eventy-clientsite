@@ -73,10 +73,10 @@ function App() {
 
   return (
     <div>
-      {
+      {/* {
         loading ?
           <Loading />
-          :
+          : */}
           <div className="overflow-x-hidden">
             <Navbar location={location}></Navbar>
             <Routes>
@@ -299,7 +299,7 @@ function App() {
 
             <ToastContainer />
           </div>
-      }
+      {/* } */}
     </div>
   );
 }
