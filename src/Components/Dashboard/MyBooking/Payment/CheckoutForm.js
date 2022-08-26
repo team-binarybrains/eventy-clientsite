@@ -32,7 +32,7 @@ const CheckoutForm = ({ product }) => {
                 'content-type': 'application/json',
                 // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
             },
-            body: JSON.stringify({ totalPrice } || { total })
+            body: JSON.stringify({ totalPrice: totalPrice || total })
         })
             .then(res => res.json())
             .then(data => {
