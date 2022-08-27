@@ -5,6 +5,7 @@ import Loading from '../../../Share/Loading/Loading';
 import { useId } from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import auth from '../../../../Firebase/firebase.init';
+import axios from 'axios';
 
 
 const CheckoutForm = ({ product }) => {
@@ -22,7 +23,7 @@ const CheckoutForm = ({ product }) => {
     const [clientSecret, setClientSecret] = useState('');
 
 
-    const { _id, eventPrice, name, price, totalPrice, eventName, total, bookingId } = product
+    const { _id, user_email, eventPrice, name, price, totalPrice, eventName, venueName, total, bookingId } = product
     console.log(name)
 
     useEffect(() => {
@@ -96,22 +97,17 @@ const CheckoutForm = ({ product }) => {
             // store payment info in database
             const payment = {
                 productId: _id,
-                productName: name,
-                email: email,
-                transactionId: paymentIntent.id
+                transactionId: paymentIntent.id,
+                email: user_email,
+                productName: eventName,
+                venueName: venueName,
+                paidAmount : totalPrice,
             }
-            fetch(`http://localhost:5000/myaddedorders/${_id}`, {
-                method: 'PATCH',
-                headers: {
-                    'content-type': 'application/json',
-                    'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-                },
-                body: JSON.stringify(payment)
-            }).then(res => res.json())
-                .then(data => {
-                    setProcessing(false);
-                    console.log(data);
-                })
+          axios.post('http://localhost:5000/payment-info', payment)
+          .then(res => {
+            const {data} = res
+            console.log(data);
+          })
 
         }
 
