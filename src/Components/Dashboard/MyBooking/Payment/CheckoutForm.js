@@ -110,8 +110,6 @@ const CheckoutForm = ({ product }) => {
           })
 
         }
-
-
     }
 
     console.log(transactionId);

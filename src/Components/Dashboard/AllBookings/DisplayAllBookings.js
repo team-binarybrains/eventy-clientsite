@@ -1,15 +1,26 @@
-import React from 'react'
+import axios from 'axios'
+import React, { useEffect, useState } from 'react'
 
 function DisplayAllBookings({ booking, handleBookingCancle }) {
 
     const { _id, user_name, user_email, phone, address, message, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
 
+    const [paymentInfo, setPaymentInfo] = useState({})
+
+    useEffect(() => {
+        axios.get('http://localhost:5000/get-payment')
+            .then(res => {
+                const { data } = res
+                console.log(data);
+                setPaymentInfo(data)
+            })
+    }, [])
 
     return (
         <div>
             <div class="card card-side bg-base-100 shadow-xl"
-            data-aos="flip-down"
-            data-aos-duration="2500"
+                data-aos="flip-down"
+                data-aos-duration="2500"
             >
                 {/* <figure><img src={image} alt="" className='h-80' /></figure> */}
                 <div class="card-body">
@@ -42,7 +53,15 @@ function DisplayAllBookings({ booking, handleBookingCancle }) {
                     </div>
 
                     <div className='text-center'>
-                        <p className='uppercase text-lg font-semibold'>Total Amount = ${parseInt(eventPrice) + parseInt(price)} </p>
+                        <p className='uppercase text-lg font-semibold'>Total Amount = {totalPrice} </p>
+
+                        {
+                            paymentInfo[0]?.productId == _id &&
+                            <div>
+                                <p className='uppercase text-lg font-semibold'>Paid Amount: {paymentInfo[0]?.paidAmount}</p>
+                                <p className='text-black pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {paymentInfo[0]?.transactionId}</p>
+                            </div>
+                        }
                     </div>
 
                     <div class="card-actions justify-center lg:my-4">
