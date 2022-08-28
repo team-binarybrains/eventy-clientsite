@@ -5,7 +5,7 @@ function DisplayAllBookings({ booking, handleBookingCancle }) {
 
     const { _id, user_name, user_email, phone, address, message, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
 
-    const [paymentInfo, setPaymentInfo] = useState({})
+    const [paymentInfo, setPaymentInfo] = useState([])
 
     useEffect(() => {
         axios.get('http://localhost:5000/get-payment')
@@ -55,20 +55,27 @@ function DisplayAllBookings({ booking, handleBookingCancle }) {
                     <div className='text-center'>
                         <p className='uppercase text-lg font-semibold'>Total Amount = {totalPrice} </p>
 
-                        {
-                            paymentInfo[0]?.productId == _id &&
-                            <div>
-                                <p className='uppercase text-lg font-semibold'>Paid Amount: {paymentInfo[0]?.paidAmount}</p>
-                                <p className='text-black pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {paymentInfo[0]?.transactionId}</p>
-                            </div>
-                        }
+                        <div>
+                            {
+                                paymentInfo.map(paid => <div>
+                                    {
+                                        paid?.productId == _id &&
+                                        <div>
+                                            <p className='uppercase text-lg font-semibold'>Paid Amount: {paid?.paidAmount}</p>
+                                            <p className='text-black pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {paid?.transactionId}</p>
+                                        </div>
+                                    }
+                                </div>
+                                )
+                            }
+                        </div>
                     </div>
 
                     <div class="card-actions justify-center lg:my-4">
                         <button
                             onClick={() => handleBookingCancle(_id)}
                             class="px-6 py-2 rounded-full bg bg-amber-400">Cancle</button>
-                        {/* <button class="px-6 py-2 rounded-full bg bg-amber-400">Confirm</button> */}
+                        <button class="px-6 py-2 rounded-full bg bg-amber-400">Confirm</button>
                     </div>
                 </div>
             </div>
