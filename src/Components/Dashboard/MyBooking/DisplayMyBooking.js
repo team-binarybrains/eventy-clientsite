@@ -63,18 +63,17 @@ function DisplayMyBooking({ booking, paid, handleBookingCancle }) {
                     </div> */}
 
                     <div class="flex justify-end gap-5 px-5 pt-5">
-                        {/* <div>
+                        <div>
                             {
                                 paymentInfo.map(paid => <div>
                                     {
-                                        paid?.productId == _id ?
-                                            <p className='text-white pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {paid?.transactionId}</p>
-                                            :
+                                        paid?.productId === _id &&
+                                            <p className='text-white pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {paid?.transactionId}</p>       
                                     }
                                 </div>
                                 )
                             }
-                        </div> */}
+                        </div>
 
                         <>
                             <button onClick={() => handleBookingCancle(_id)} class={`border-4 border-red-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-red-500 font-extrabold hover:shadow-[0_0_35px_rgb(236,68,68)] hover:bg-red-500 hover:text-gray-900 text-lg duration-300`}>Cancel</button>

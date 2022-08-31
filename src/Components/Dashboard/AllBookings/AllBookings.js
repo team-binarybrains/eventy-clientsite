@@ -54,13 +54,15 @@ function AllBookings() {
 
             </div>
 
-            {
-                [...allBooking].reverse().map(booking => <DisplayAllBookings
-                    key={booking._id}
-                    booking={booking}
-                    handleBookingCancle={handleBookingCancle}
-                />)
-            }
+     
+                {
+                    [...allBooking].reverse().map(booking => <DisplayAllBookings
+                        key={booking._id}
+                        booking={booking}
+                        handleBookingCancle={handleBookingCancle}
+                    />)
+                }
+        
         </div>
     )
 }
