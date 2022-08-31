@@ -98,6 +98,7 @@ const CheckoutForm = ({ product }) => {
             // store payment info in database
             const payment = {
                 uniqueId: uid + ':' + _id,
+                uid: uid,
                 productId: _id,
                 transactionId: paymentIntent.id,
                 user_name: user_name,
@@ -127,7 +128,7 @@ const CheckoutForm = ({ product }) => {
 
             await axios.delete(`http://localhost:5000/delete-booking/${_id}`)
                 .then(res => {
-                    const {data} = res
+                    const { data } = res
                     console.log(data);
                 })
 

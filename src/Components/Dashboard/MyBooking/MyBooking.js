@@ -7,6 +7,7 @@ import auth from "../../../Firebase/firebase.init";
 import axios from "axios";
 import DisplayMyBooking from "./DisplayMyBooking";
 import DisplayMyTickets from "./DisplayMyTickets";
+import usePayment from "./PaymentInfoHook/usePayment";
 
 function MyBooking() {
 
@@ -22,7 +23,8 @@ function MyBooking() {
     const { email, uid } = user;
     const [myBookingServices, setMyBookingServices] = useState([]);
 
-
+    const paymentInfo = usePayment(uid)
+    console.log(paymentInfo)
 
     const [tickets, loading, refetch] = useRefetch(`http://localhost:5000/user-booked-ticket/${user?.uid}`, [])
 
@@ -116,6 +118,13 @@ function MyBooking() {
                                 key={booking._id}
                                 booking={booking}
                                 handleBookingCancle={handleBookingCancle}
+                            />)
+                        }
+
+                        {
+                            [...paymentInfo].reverse().map(booking => <DisplayMyBooking
+                                key={booking._id}
+                                booking={booking}
                             />)
                         }
                     </div>
