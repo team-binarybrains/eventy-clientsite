@@ -14,7 +14,7 @@ import CountDown from "../CountDown/CountDown";
 import Address from "../../AboutUs/Address";
 import Event from "./Event";
 import Loading from "../../Share/Loading/Loading";
-import { useGetUsersQuery } from "../../../Features/AllEventListingApi";
+import { useGetUpcomingEventQuery } from "../../../Features/AllUpcomingEvent";
 
 const UpcommingEvent = () => {
   // const events = [astronaut, celebrating, education];
@@ -36,7 +36,7 @@ const UpcommingEvent = () => {
 
   const [imageIndex, setImageIndex] = useState(0);
 
-  const { data, error, isLoading, isSuccess, isError } = useGetUsersQuery();
+  const { data, error, isLoading, isSuccess, isError } = useGetUpcomingEventQuery();
 
 
   const upComingSettings = {
