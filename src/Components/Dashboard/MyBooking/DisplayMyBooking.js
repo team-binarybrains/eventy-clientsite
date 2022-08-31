@@ -2,25 +2,24 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import usePayment from './PaymentInfoHook/usePayment';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../Firebase/firebase.init';
 
-function DisplayMyBooking({ booking, paid, handleBookingCancle }) {
-    
+function DisplayMyBooking({ booking, handleBookingCancle }) {
+
+    const [user] = useAuthState(auth);
+    const { email, uid } = user;
 
     const { _id, date, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
 
-    const [paymentInfo, setPaymentInfo] = useState([])
     const navigate = useNavigate()
 
 
-    // payment info 
-    useEffect(() => {
-        axios.get('http://localhost:5000/get-payment')
-            .then(res => {
-                const { data } = res
-                console.log(data);
-                setPaymentInfo(data)
-            })
-    }, [])
+    const paymentInfo = usePayment(`${uid}:${_id}`)
+    console.log(paymentInfo)
+
+
 
 
     return (
@@ -63,22 +62,16 @@ function DisplayMyBooking({ booking, paid, handleBookingCancle }) {
                     </div> */}
 
                     <div class="flex justify-end gap-5 px-5 pt-5">
-                        <div>
-                            {
-                                paymentInfo.map(paid => <div>
-                                    {
-                                        paid?.productId === _id &&
-                                            <p className='text-white pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {paid?.transactionId}</p>       
-                                    }
-                                </div>
-                                )
-                            }
-                        </div>
 
-                        <>
-                            <button onClick={() => handleBookingCancle(_id)} class={`border-4 border-red-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-red-500 font-extrabold hover:shadow-[0_0_35px_rgb(236,68,68)] hover:bg-red-500 hover:text-gray-900 text-lg duration-300`}>Cancel</button>
-                            <button onClick={() => navigate(`/dashboard/payment/${_id}`)} class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
-                        </>
+                        {
+                            paymentInfo?.status ?
+                                <p className='text-white pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {paymentInfo?.transactionId}</p>    
+                                :
+                                <>
+                                    <button onClick={() => handleBookingCancle(_id)} class={`border-4 border-red-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-red-500 font-extrabold hover:shadow-[0_0_35px_rgb(236,68,68)] hover:bg-red-500 hover:text-gray-900 text-lg duration-300`}>Cancel</button>
+                                    <button onClick={() => navigate(`/dashboard/payment/${_id}`)} class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
+                                </>
+                        }
 
                     </div>
 

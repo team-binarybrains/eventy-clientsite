@@ -23,7 +23,8 @@ const CheckoutForm = ({ product }) => {
     const [clientSecret, setClientSecret] = useState('');
 
 
-    const { _id, user_email, eventPrice, name, price, totalPrice, eventName, venueName, total, bookingId } = product
+    const { _id, user_email, user_name, phone, address, code, eventName, eventPrice, name, price, totalPrice, venueName, total, bookingId, seats, location, message, date, image, star
+    } = product
     console.log(name)
 
     useEffect(() => {
@@ -96,18 +97,39 @@ const CheckoutForm = ({ product }) => {
 
             // store payment info in database
             const payment = {
+                uniqueId: uid + ':' + _id,
                 productId: _id,
                 transactionId: paymentIntent.id,
+                user_name: user_name,
                 email: user_email,
+                eventName: eventName,
+                eventPrice: eventPrice,
                 productName: eventName,
                 venueName: venueName,
-                paidAmount : totalPrice,
+                code: code,
+                seats: seats,
+                price: price,
+                star: star,
+                location: location,
+                image: image,
+                date: date,
+                phone: phone,
+                address: address,
+                message: message,
+                totalPrice: totalPrice,
+                paidAmount: totalPrice,
             }
-          axios.post('http://localhost:5000/payment-info', payment)
-          .then(res => {
-            const {data} = res
-            console.log(data);
-          })
+            await axios.post('http://localhost:5000/payment-info', payment)
+                .then(res => {
+                    const { data } = res
+                    console.log(data);
+                })
+
+            await axios.delete(`http://localhost:5000/delete-booking/${_id}`)
+                .then(res => {
+                    const {data} = res
+                    console.log(data);
+                })
 
         }
     }

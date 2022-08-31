@@ -14,7 +14,7 @@
 
 
 import React from "react";
-import { render, cleanup, waitForElement } from '@testing-library/react'
+import { render, screen, cleanup, waitForElement } from '@testing-library/react'
 // import 'jest-dom/extend-expect'
 import axiosMock from 'axios'
 import AllBookings from '../AllBookings'
@@ -27,4 +27,5 @@ it("fetch and display data", async () => {
     const url = 'http://localhost:5000/get-all-booking-info'
     const { getByTestId } = render(<AllBookings url={url} />)
 
+    expect(screen.getByTestId("booking")).toHaveTextContent("BOOKING")
 });

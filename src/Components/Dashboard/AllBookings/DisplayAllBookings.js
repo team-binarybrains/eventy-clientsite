@@ -1,20 +1,20 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../Firebase/firebase.init';
+import usePayment from '../MyBooking/PaymentInfoHook/usePayment';
 
 function DisplayAllBookings({ booking, handleBookingCancle }) {
 
+    const [user] = useAuthState(auth);
+    const { email, uid } = user;
+
+
     const { _id, user_name, user_email, phone, address, message, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
 
-    const [paymentInfo, setPaymentInfo] = useState([])
+    const paymentInfo = usePayment(`${uid}:${_id}`)
+    console.log(paymentInfo)
 
-    useEffect(() => {
-        axios.get('http://localhost:5000/get-payment')
-            .then(res => {
-                const { data } = res
-                console.log(data);
-                setPaymentInfo(data)
-            })
-    }, [])
 
     return (
         <div>
@@ -56,25 +56,14 @@ function DisplayAllBookings({ booking, handleBookingCancle }) {
                         <p className='uppercase text-lg font-semibold'>Total Amount = {totalPrice} </p>
 
                         <div>
-                            {
-                                paymentInfo.map(paid => <div>
-                                    {
-                                        paid?.productId == _id &&
-                                        <div>
-                                            <p className='uppercase text-lg font-semibold'>Paid Amount: {paid?.paidAmount}</p>
-                                            <p className='text-black pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {paid?.transactionId}</p>
-                                        </div>
-                                    }
-                                </div>
-                                )
-                            }
+                        <p className='text-white pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {paymentInfo?.transactionId}</p> 
                         </div>
                     </div>
 
                     <div class="card-actions justify-center lg:my-4">
                         <button
                             onClick={() => handleBookingCancle(_id)}
-                            class="px-6 py-2 rounded-full bg bg-amber-400">Cancle</button>
+                            class="px-6 py-2 rounded-full bg bg-amber-400">Cancel</button>
                         <button class="px-6 py-2 rounded-full bg bg-amber-400">Confirm</button>
                     </div>
                 </div>

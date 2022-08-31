@@ -10,6 +10,7 @@ import DisplayMyTickets from "./DisplayMyTickets";
 
 function MyBooking() {
 
+
     const [toggleState, setToggleState] = useState(1);
 
     const toggleTab = (index) => {
@@ -18,8 +19,10 @@ function MyBooking() {
 
 
     const [user] = useAuthState(auth);
+    const { email, uid } = user;
     const [myBookingServices, setMyBookingServices] = useState([]);
-    
+
+
 
     const [tickets, loading, refetch] = useRefetch(`http://localhost:5000/user-booked-ticket/${user?.uid}`, [])
 
@@ -40,13 +43,13 @@ function MyBooking() {
     }, [user])
 
     // cancle order
-    const handleBookingCancle = id => {
+    const handleBookingCancle = async (id) => {
         console.log(id);
 
         const proceed = window.confirm("Are you sure?");
 
         if (proceed) {
-            fetch(`http://localhost:5000/delete-booking/${id}`, {
+            await fetch(`http://localhost:5000/delete-booking/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -56,10 +59,9 @@ function MyBooking() {
                     )
                     setMyBookingServices(remaining);
                 })
+
         }
     }
-
- 
 
 
     return (
