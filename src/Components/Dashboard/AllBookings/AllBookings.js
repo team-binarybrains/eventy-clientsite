@@ -6,20 +6,45 @@ import DisplayAllBookings from './DisplayAllBookings'
 function AllBookings() {
 
     // const [allBooking, setAllBooking] = useState([])
-    
-    const [allBooking, loading , refetch] = useRefetch('http://localhost:5000/get-all-booking-info', []) 
+
+    const [allBooking, loading, refetch] = useRefetch('http://localhost:5000/get-all-booking-info', [])
     console.log(allBooking);
 
-    // useEffect(() => {
 
-    //     axios.get('http://localhost:5000/get-all-booking-info')
-    //         .then(res => {
-    //             const { data } = res
-    //             setAllBooking(data)
-    //             console.log(data);
-    //         })
+    const [allPaidBooking, paidLoading, paidRefetch] = useRefetch('http://localhost:5000/get-payment', [])
+    console.log(allPaidBooking);
 
-    // }, [])
+
+    const handleBookingDelete = (id) => {
+        const confirmation = window.confirm('Are you sure to cancel the booking ?')
+
+        if (confirmation) {
+            axios.delete(`http://localhost:5000/delete-booking/${id}`)
+                .then(res => {
+                    console.log(res?.data);
+                    refetch()
+                })
+        }
+        else {
+            return
+        }
+    }
+
+
+    const handlePaidBookingDelete = (id) => {
+        const confirmation = window.confirm('Are you sure to cancel the booking ?')
+
+        if (confirmation) {
+            axios.delete(`http://localhost:5000/delete-payment-info/${id}`)
+                .then(res => {
+                    console.log(res?.data);
+                    paidRefetch()
+                })
+        }
+        else {
+            return
+        }
+    }
 
 
     return (
@@ -43,7 +68,15 @@ function AllBookings() {
                 [...allBooking].reverse().map(booking => <DisplayAllBookings
                     key={booking._id}
                     booking={booking}
-                    // handleBookingCancle={handleBookingCancle}
+                    handleBookingDelete={handleBookingDelete}
+                />)
+            }
+
+            {
+                [...allPaidBooking].reverse().map(booking => <DisplayAllBookings
+                    key={booking._id}
+                    booking={booking}
+                    handlePaidBookingDelete={handlePaidBookingDelete}
                 />)
             }
 

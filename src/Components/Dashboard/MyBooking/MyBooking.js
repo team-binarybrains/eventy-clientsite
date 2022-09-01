@@ -48,7 +48,7 @@ function MyBooking() {
     const handleBookingCancle = async (id) => {
         console.log(id);
 
-        const proceed = window.confirm("Are you sure?");
+        const proceed = window.confirm("Are you sure to cancel the booking ?");
 
         if (proceed) {
             await fetch(`http://localhost:5000/delete-booking/${id}`, {

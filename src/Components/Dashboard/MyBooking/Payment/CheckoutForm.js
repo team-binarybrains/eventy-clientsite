@@ -47,6 +47,7 @@ const CheckoutForm = ({ product }) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault()
+        setProcessing(true)
         if (!stripe || !elements) {
             return
         }
@@ -64,7 +65,9 @@ const CheckoutForm = ({ product }) => {
         });
         setCardError(error?.message || '')
         setSuccess('');
-        setProcessing(true);
+        if(error){
+            setProcessing(false)
+        }
 
         // card payment confirmation
         const { paymentIntent, error: intentError } = await stripe.confirmCardPayment(
@@ -80,9 +83,9 @@ const CheckoutForm = ({ product }) => {
 
             });
 
-        if (processing) {
-            return <Loading></Loading>
-        }
+        // if (processing) {
+        //     return <Loading></Loading>
+        // }
 
         if (intentError) {
             setCardError(intentError?.message);
@@ -130,6 +133,7 @@ const CheckoutForm = ({ product }) => {
                 .then(res => {
                     const { data } = res
                     console.log(data);
+                    setProcessing(false)
                 })
 
         }
@@ -138,7 +142,6 @@ const CheckoutForm = ({ product }) => {
     console.log(transactionId);
     return (
         <>
-
             <form onSubmit={handleSubmit} className=' flex flex-col justify-between lg:h-48'
                 data-aos="flip-down"
                 data-aos-duration="2500"
@@ -179,9 +182,21 @@ const CheckoutForm = ({ product }) => {
                             }
                         </div>
 
-                        <div className='flex justify-end mt-5'>
-                            <button type="submit" disabled={!stripe || !clientSecret} className="btn btn-outline px-16 rounded-full hover:bg-transparent hover:bg-black hover:text-white transition-all duration-700"> PAY </button>
-                        </div>
+                        {
+                            processing ?
+                                <div className='flex justify-end mt-5'>
+                                    <button className="btn loading px-8 rounded-full hover:bg-transparent bg-black transition-all duration-700"> 
+                                    Loading
+                                     </button>
+                                </div>
+                                :
+                                <div className='flex justify-end mt-5'>
+                                    {!transactionId &&
+                                        <button type="submit" disabled={!stripe || !clientSecret} className="btn btn-outline px-16 rounded-full hover:bg-transparent hover:bg-black hover:text-white transition-all duration-700"> PAY </button>
+                                    }
+                                </div>
+                        }
+
                     </div>
                 </div>
             </form>

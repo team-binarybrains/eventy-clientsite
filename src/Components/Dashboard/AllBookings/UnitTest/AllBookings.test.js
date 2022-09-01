@@ -13,11 +13,14 @@
 // it('should show initial number of services if api fails', () => { });
 
 
+// import 'jest-dom/extend-expect'
+// import axiosMock from 'axios'
+
+
 import React from "react";
 import { render, screen, cleanup, waitForElement } from '@testing-library/react'
-// import 'jest-dom/extend-expect'
-import axiosMock from 'axios'
 import AllBookings from '../AllBookings'
+
 
 
 afterEach(cleanup)
