@@ -1,42 +1,51 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
+import useRefetch from '../../Hooks/useRefetch';
 import DisplayAllBookings from './DisplayAllBookings'
 
 function AllBookings() {
 
-    const [allBooking, setAllBooking] = useState([])
+    // const [allBooking, setAllBooking] = useState([])
 
-    useEffect(() => {
-
-        axios.get('https://fathomless-hamlet-59180.herokuapp.com/get-all-booking-info')
-            .then(res => {
-                const { data } = res
-                setAllBooking(data)
-                console.log(data);
-            })
-
-    }, [])
+    const [allBooking, loading, refetch] = useRefetch('http://localhost:5000/get-all-booking-info', [])
+    console.log(allBooking);
 
 
-    // cancle order
-    const handleBookingCancle = id => {
-        console.log(id);
+    const [allPaidBooking, paidLoading, paidRefetch] = useRefetch('http://localhost:5000/get-payment', [])
+    console.log(allPaidBooking);
 
-        const proceed = window.confirm("Are you sure?");
 
-        if (proceed) {
-            fetch(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${id}`, {
-                method: "DELETE",
-            })
-                .then((res) => res.json())
-                .then((data) => {
-                    const remaining = allBooking.filter(
-                        (bookingItems) => bookingItems._id !== id
-                    )
-                    setAllBooking(remaining);
+    const handleBookingDelete = (id) => {
+        const confirmation = window.confirm('Are you sure to cancel the booking ?')
+
+        if (confirmation) {
+            axios.delete(`http://localhost:5000/delete-booking/${id}`)
+                .then(res => {
+                    console.log(res?.data);
+                    refetch()
                 })
         }
+        else {
+            return
+        }
     }
+
+
+    const handlePaidBookingDelete = (id) => {
+        const confirmation = window.confirm('Are you sure to cancel the booking ?')
+
+        if (confirmation) {
+            axios.delete(`http://localhost:5000/delete-payment-info/${id}`)
+                .then(res => {
+                    console.log(res?.data);
+                    paidRefetch()
+                })
+        }
+        else {
+            return
+        }
+    }
+
 
     return (
         <div className='grid lg:grid-cols-1 grid-rows-none grid-cols-none gap-y-5 gap-x-20 lg:p-20'>
@@ -47,20 +56,30 @@ function AllBookings() {
                     data-aos-duration="2500"
                 >
                     ALL
-                    <span className='text-amber-400 tracking-widest mx-2'>BOOKING</span>
+                    <span className='text-amber-400 tracking-widest mx-2' data-testid="booking">BOOKING</span>
                     INFORMATION
 
                 </p>
 
             </div>
 
+
             {
                 [...allBooking].reverse().map(booking => <DisplayAllBookings
                     key={booking._id}
                     booking={booking}
-                    handleBookingCancle={handleBookingCancle}
+                    handleBookingDelete={handleBookingDelete}
                 />)
             }
+
+            {
+                [...allPaidBooking].reverse().map(booking => <DisplayAllBookings
+                    key={booking._id}
+                    booking={booking}
+                    handlePaidBookingDelete={handlePaidBookingDelete}
+                />)
+            }
+
         </div>
     )
 }

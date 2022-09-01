@@ -1,20 +1,20 @@
 /* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import Slider from "react-slick";
-import astronaut from "./Image/banner-1.jpg";
-import celebrating from "./Image/banner-2.jpg";
-import education from "./Image/banner-3.jpg";
+// import astronaut from "./Image/banner-1.jpg";
+// import celebrating from "./Image/banner-2.jpg";
+// import education from "./Image/banner-3.jpg";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { FaArrowRight, FaArrowLeft } from "react-icons/fa";
-import { AiOutlineClockCircle } from "react-icons/ai";
-import { GoLocation } from "react-icons/go";
+// import { AiOutlineClockCircle } from "react-icons/ai";
+// import { GoLocation } from "react-icons/go";
 import "./upcommingevent.css";
-import CountDown from "../CountDown/CountDown";
-import Address from "../../AboutUs/Address";
+// import CountDown from "../CountDown/CountDown";
+// import Address from "../../AboutUs/Address";
 import Event from "./Event";
 import Loading from "../../Share/Loading/Loading";
-import { useGetUsersQuery } from "../../../Features/AllEventListingApi";
+import { useGetUpcomingEventQuery } from "../../../Features/AllUpcomingEvent";
 
 const UpcommingEvent = () => {
   // const events = [astronaut, celebrating, education];
@@ -36,7 +36,7 @@ const UpcommingEvent = () => {
 
   const [imageIndex, setImageIndex] = useState(0);
 
-  const { data, error, isLoading, isSuccess, isError } = useGetUsersQuery();
+  const { data, error, isLoading, isSuccess, isError } = useGetUpcomingEventQuery();
 
 
   const upComingSettings = {

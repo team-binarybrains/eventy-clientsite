@@ -87,8 +87,8 @@ const AddEmployed = () => {
                   Add Employee Information
                </h1>
             </div>
-            <form onSubmit={handleSubmit(onSubmit)}>
-               <div className="p-4">
+            <form onSubmit={handleSubmit(onSubmit)} className="p-4">
+               <div>
                   <div className="block sm:flex gap-3 mt-4">
                      <div className="w-full">
                         <div className="">

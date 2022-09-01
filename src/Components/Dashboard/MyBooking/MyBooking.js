@@ -7,8 +7,10 @@ import auth from "../../../Firebase/firebase.init";
 import axios from "axios";
 import DisplayMyBooking from "./DisplayMyBooking";
 import DisplayMyTickets from "./DisplayMyTickets";
+import usePayment from "./PaymentInfoHook/usePayment";
 
 function MyBooking() {
+
 
     const [toggleState, setToggleState] = useState(1);
 
@@ -18,9 +20,13 @@ function MyBooking() {
 
 
     const [user] = useAuthState(auth);
+    const { email, uid } = user;
     const [myBookingServices, setMyBookingServices] = useState([]);
 
-    const [tickets, loading, refetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/user-booked-ticket/${user?.uid}`, [])
+    const paymentInfo = usePayment(uid)
+    console.log(paymentInfo)
+
+    const [tickets, loading, refetch] = useRefetch(`http://localhost:5000/user-booked-ticket/${user?.uid}`, [])
 
     useEffect(() => {
         const email = user.email;
@@ -39,13 +45,13 @@ function MyBooking() {
     }, [user])
 
     // cancle order
-    const handleBookingCancle = id => {
+    const handleBookingCancle = async (id) => {
         console.log(id);
 
-        const proceed = window.confirm("Are you sure?");
+        const proceed = window.confirm("Are you sure to cancel the booking ?");
 
         if (proceed) {
-            fetch(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${id}`, {
+            await fetch(`http://localhost:5000/delete-booking/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())
@@ -55,8 +61,10 @@ function MyBooking() {
                     )
                     setMyBookingServices(remaining);
                 })
+
         }
     }
+
 
     return (
         <div className="tabContainer">
@@ -112,6 +120,13 @@ function MyBooking() {
                                 handleBookingCancle={handleBookingCancle}
                             />)
                         }
+
+                        {
+                            [...paymentInfo].reverse().map(booking => <DisplayMyBooking
+                                key={booking._id}
+                                booking={booking}
+                            />)
+                        }
                     </div>
                 </div>
 
@@ -125,6 +140,7 @@ function MyBooking() {
                         }
                     </div>
                 </div>
+
 
                 {/* <div
                     className={toggleState === 3 ? "content  active-content" : "content"}

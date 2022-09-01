@@ -1,11 +1,17 @@
 /* eslint-disable no-unused-vars */
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
+import axios from 'axios'
+import usePayment from './PaymentInfoHook/usePayment';
+import { useAuthState } from 'react-firebase-hooks/auth';
+import auth from '../../../Firebase/firebase.init';
 
 function DisplayMyBooking({ booking, handleBookingCancle }) {
 
-    const { _id, date, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
+    const [user] = useAuthState(auth);
+    const { email, uid } = user;
 
+    const { _id, date, code, eventName, eventPrice, image, img, venueName, seats, price, location, totalPrice } = booking
 
     const navigate = useNavigate()
 
@@ -18,8 +24,8 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
 
 
             <div className='bg-black/60 shadow-xl  flex items-center justify-around flex-col sm:flex-row py-8 px-5 sm:px-0  relative overflow-hidden'
-            data-aos="flip-up"
-            data-aos-duration="2000"
+                data-aos="flip-up"
+                data-aos-duration="2000"
             >
                 <div className='z-10 text-white '>
                     <p>{date}</p>
@@ -49,8 +55,17 @@ function DisplayMyBooking({ booking, handleBookingCancle }) {
                     </div> */}
 
                     <div class="flex justify-end gap-5 px-5 pt-5">
-                        <button onClick={() => handleBookingCancle(_id)} class={`border-4 border-red-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-red-500 font-extrabold hover:shadow-[0_0_35px_rgb(236,68,68)] hover:bg-red-500 hover:text-gray-900 text-lg duration-300`}>Cancel</button>
-                        <button onClick={() => navigate(`/dashboard/payment/${_id}`)} class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
+
+                        {
+                            booking?.transactionId ?
+                                <p className='text-white pb-5 text-lg'> <span className='text-amber-500'>Transaction Id:</span> {booking?.transactionId}</p>
+                                :
+                                <>
+                                    <button onClick={() => handleBookingCancle(_id)} class={`border-4 border-red-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-red-500 font-extrabold hover:shadow-[0_0_35px_rgb(236,68,68)] hover:bg-red-500 hover:text-gray-900 text-lg duration-300`}>Cancel</button>
+                                    <button onClick={() => navigate(`/dashboard/payment/${_id}`)} class={`border-4 border-sky-500 inline-block w-28 h-12 openSans uppercase tracking-wider transition-all text-sky-500 font-extrabold hover:shadow-[0_0_35px_rgb(14,165,233)] hover:bg-sky-500 hover:text-gray-900 text-lg duration-300`}>Pay</button>
+                                </>
+                        }
+
                     </div>
 
                 </div>

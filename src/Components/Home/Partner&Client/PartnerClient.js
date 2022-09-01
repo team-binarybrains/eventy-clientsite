@@ -1,13 +1,14 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import sponser from "../../../asset/Client/image1.png";
 import "./PartnerClient.css";
 import Slider from "react-slick";
+import { useGetTestimonialQuery } from '../../../Features/AllTestimonialApi';
+import Loading from '../../Share/Loading/Loading';
 
 const PartnerClient = () => {
 
     const singleSponser = [0, 1, 2, 3, 4, 5]
     const sponserCount = [0, 1, 2];
-    const [testimonial, setTestimonial] = useState([]);
     const [current, setCurrent] = useState([]);
 
     const settings = {
@@ -35,13 +36,7 @@ const PartnerClient = () => {
         }
     };
 
-    // console.log(current);
-
-    useEffect(() => {
-        fetch("testimonial.json")
-            .then(res => res.json())
-            .then(data => setTestimonial(data))
-    }, [])
+    const { data, error, isLoading, isSuccess, isError } = useGetTestimonialQuery();
 
     return (
         <div id='partner-client' className='mb-20 2xl:max-w-7xl mx-auto'>
@@ -86,15 +81,19 @@ const PartnerClient = () => {
                 >
                     <h4 style={{ letterSpacing: "4px" }} className='mt-9 mb-4 text-lg text-amber-400 text-center'>TESTIMONIAL</h4>
                     <h1 className='text-center text-5xl text-white'>Client <span className='font-bold'>Says</span></h1>
-                    <Slider {...settings1}>
-                        {testimonial.map((t, i) =>
-                            <div className={`mt-16 ${current === i ? 'noSkew' : 'skew'}`}>
-                                <p className='px-10 text-center text-white'>{t.description.slice(0, 180) + "..."}</p>
-                                <h2 className='text-center mt-7 text-amber-400 font-semibold text-lg'>{t.name}</h2>
-                                <h3 className='text-center mt-2 text-gray-300 mb-10 sm:mb-0 '>{t.profession}</h3>
-                            </div>
-                        )}
-                    </Slider>
+                    {isLoading && <Loading></Loading>}
+                    {isError && error.message}
+                    {isSuccess &&
+                        <Slider {...settings1}>
+                            {data.map((t, i) =>
+                                <div className={`mt-16 ${current === i ? 'noSkew' : 'skew'}`}>
+                                    <p className='px-10 text-center text-white'>{t.description.slice(0, 180) + "..."}</p>
+                                    <h2 className='text-center mt-7 text-amber-400 font-semibold text-lg'>{t.name}</h2>
+                                    <h3 className='text-center mt-2 text-gray-300 mb-10 sm:mb-0 '>{t.profession}</h3>
+                                </div>
+                            )}
+                        </Slider>
+                    }
                 </div>
             </div>
         </div>
