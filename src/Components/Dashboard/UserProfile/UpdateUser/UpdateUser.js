@@ -27,44 +27,67 @@ const UpdateUser = () => {
    }, [email]);
 
    const onSubmit = (data) => {
-      const imgbbAPIKey = "e32b2607a3f00cb963832ebb13d8a672";
-      const image = data.image[0];
-      const formData = new FormData();
-      formData.append("image", image);
-      const url = `https://api.imgbb.com/1/upload?key=${imgbbAPIKey}`;
-      fetch(url, {
-         method: "POST",
-         body: formData,
+      // const imgbbAPIKey = "e32b2607a3f00cb963832ebb13d8a672";
+      // const image = data.image[0];
+      // const formData = new FormData();
+      // formData.append("image", image);
+      // const url = `https://api.imgbb.com/1/upload?key=${imgbbAPIKey}`;
+      // fetch(url, {
+      //    method: "POST",
+      //    body: formData,
+      // })
+      //    .then((res) => res.json())
+      //    .then((result) => {
+      //       if (result.success) {
+      //          const img = result?.data?.url;
+      //          const user = {
+      //             displayName: data.displayName,
+      //             country: data.country,
+      //             city: data.city,
+      //             aboutMe: data.aboutMe,
+      //             address: data.address,
+      //             email: data.email,
+      //             image: img,
+      //          };
+
+      // fetch(`http://localhost:5000/user-update/${email}`, {
+      //    method: "PUT",
+      //    headers: {
+      //       "content-type": "application/json",
+      //    },
+      //    body: JSON.stringify(user),
+      // })
+      //    .then((res) => res.json())
+      //    .then((inserted) => {
+      //       if (inserted) {
+      //          toast.success("updated");
+      //          navigate('/manage-profile')
+      //          reset();
+      //       }
+      //    });
+      //    }
+      // });
+      const user = {
+         displayName: data.displayName,
+         country: data.country,
+         city: data.city,
+         aboutMe: data.aboutMe,
+         address: data.address,
+         email: data.email,
+      };
+      fetch(`http://localhost:5000/user-update/${email}`, {
+         method: "PUT",
+         headers: {
+            "content-type": "application/json",
+         },
+         body: JSON.stringify(user),
       })
          .then((res) => res.json())
-         .then((result) => {
-            if (result.success) {
-               const img = result?.data?.url;
-               const user = {
-                  displayName: data.displayName,
-                  country: data.country,
-                  city: data.city,
-                  aboutMe: data.aboutMe,
-                  address: data.address,
-                  email: data.email,
-                  image: img,
-               };
-
-               fetch(`http://localhost:5000/user-update/${email}`, {
-                  method: "PUT",
-                  headers: {
-                     "content-type": "application/json",
-                  },
-                  body: JSON.stringify(user),
-               })
-                  .then((res) => res.json())
-                  .then((inserted) => {
-                     if (inserted) {
-                        toast.success("updated");
-                        navigate('/manage-profile')
-                        reset();
-                     }
-                  });
+         .then((inserted) => {
+            if (inserted) {
+               toast.success("updated");
+               navigate('/manage-profile')
+               reset();
             }
          });
 
@@ -283,9 +306,7 @@ const UpdateUser = () => {
                         )}
                      </label>
                   </div>
-
-
-                  <div className="pb-4">
+                  {/* <div className="pb-4">
                      <div className="">
                         <label
                            htmlFor="image"
@@ -315,9 +336,7 @@ const UpdateUser = () => {
                            </span>
                         )}
                      </label>
-                  </div>
-
-
+                  </div> */}
                </div>
                <button className="uppercase transition-all bg-green-500 w-full py-2 text-white hover:bg-green-600 rounded-b">
                   Update
