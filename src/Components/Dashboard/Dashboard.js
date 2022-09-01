@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AiOutlineUser, AiOutlineAppstoreAdd } from "react-icons/ai";
@@ -24,7 +23,7 @@ const Dashboard = () => {
   const [currentUser, setCurrentUser] = useState([]);
   const email = user?.email;
   useEffect(() => {
-    fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`)
+    fetch(`http://localhost:5000/single-user/${email}`)
       .then(res => res.json())
       .then(data => setCurrentUser(data))
   }, [email]);

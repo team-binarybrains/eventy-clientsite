@@ -19,7 +19,7 @@ const UpdateUser = () => {
    } = useForm();
 
    useEffect(() => {
-      fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`, {
+      fetch(`http://localhost:5000/single-user/${email}`, {
          method: "GET",
       })
          .then(res => res.json())
@@ -50,7 +50,7 @@ const UpdateUser = () => {
                   image: img,
                };
 
-               fetch(`https://fathomless-hamlet-59180.herokuapp.com/user-update/${email}`, {
+               fetch(`http://localhost:5000/user-update/${email}`, {
                   method: "PUT",
                   headers: {
                      "content-type": "application/json",
@@ -283,6 +283,8 @@ const UpdateUser = () => {
                         )}
                      </label>
                   </div>
+
+
                   <div className="pb-4">
                      <div className="">
                         <label
@@ -314,6 +316,8 @@ const UpdateUser = () => {
                         )}
                      </label>
                   </div>
+
+
                </div>
                <button className="uppercase transition-all bg-green-500 w-full py-2 text-white hover:bg-green-600 rounded-b">
                   Update
