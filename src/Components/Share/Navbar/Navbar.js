@@ -47,7 +47,7 @@ const Navbar = ({ location }) => {
   const [currentUser, setCurrentUser] = useState([]);
   const email = user?.email
   useEffect(() => {
-    fetch(`http://localhost:5000/single-user/${email}`)
+    fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`)
       .then(res => res.json())
       .then(data => setCurrentUser(data))
   }, [email]);

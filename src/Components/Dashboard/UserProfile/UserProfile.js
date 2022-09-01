@@ -53,7 +53,7 @@ const
               image: img,
             };
 
-            fetch(`http://localhost:5000/user-update/${email}`, {
+            fetch(`https://fathomless-hamlet-59180.herokuapp.com/user-update/${email}`, {
               method: "PUT",
               headers: {
                 "content-type": "application/json",
@@ -75,7 +75,7 @@ const
     }
     // 
     useEffect(() => {
-      fetch(`http://localhost:5000/single-user/${email}`)
+      fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`)
         .then(res => res.json())
         .then(data => setCurrentUser(data))
     }, [file, email]);

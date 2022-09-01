@@ -27,7 +27,7 @@ afterEach(cleanup)
 
 it("fetch and display data", async () => {
 
-    const url = 'http://localhost:5000/get-all-booking-info'
+    const url = 'https://fathomless-hamlet-59180.herokuapp.com/get-all-booking-info'
     const { getByTestId } = render(<AllBookings url={url} />)
 
     expect(screen.getByTestId("booking")).toHaveTextContent("BOOKING")

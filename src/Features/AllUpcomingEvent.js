@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react'
 // Define a service using a base URL and expected endpoints
 export const allUpcomingEvent = createApi({
   reducerPath: 'allUpcomingEvent',
-  baseQuery: fetchBaseQuery({ baseUrl: 'http://localhost:5000/' }),
+  baseQuery: fetchBaseQuery({ baseUrl: 'https://fathomless-hamlet-59180.herokuapp.com/' }),
   endpoints: (builder) => ({
     getUpcomingEvent: builder.query({
       query: () => `alleventlisting`,

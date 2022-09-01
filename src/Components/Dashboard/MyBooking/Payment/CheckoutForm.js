@@ -65,7 +65,7 @@ const CheckoutForm = ({ product }) => {
         });
         setCardError(error?.message || '')
         setSuccess('');
-        if(error){
+        if (error) {
             setProcessing(false)
         }
 
@@ -123,13 +123,13 @@ const CheckoutForm = ({ product }) => {
                 totalPrice: totalPrice,
                 paidAmount: totalPrice,
             }
-            await axios.post('http://localhost:5000/payment-info', payment)
+            await axios.post('https://fathomless-hamlet-59180.herokuapp.com/payment-info', payment)
                 .then(res => {
                     const { data } = res
                     console.log(data);
                 })
 
-            await axios.delete(`http://localhost:5000/delete-booking/${_id}`)
+            await axios.delete(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${_id}`)
                 .then(res => {
                     const { data } = res
                     console.log(data);
@@ -185,9 +185,9 @@ const CheckoutForm = ({ product }) => {
                         {
                             processing ?
                                 <div className='flex justify-end mt-5'>
-                                    <button className="btn loading px-8 rounded-full hover:bg-transparent bg-black transition-all duration-700"> 
-                                    Loading
-                                     </button>
+                                    <button className="btn loading px-8 rounded-full hover:bg-transparent bg-black transition-all duration-700">
+                                        Loading
+                                    </button>
                                 </div>
                                 :
                                 <div className='flex justify-end mt-5'>
