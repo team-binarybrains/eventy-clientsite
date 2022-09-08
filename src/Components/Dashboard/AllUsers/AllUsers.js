@@ -8,7 +8,7 @@ const AllUsers = () => {
   // console.log(allUsers);
 
   useEffect(() => {
-    axios.get("https://fathomless-hamlet-59180.herokuapp.com/allusers").then((res) => {
+    axios.get("https://eventy-server.onrender.com/allusers").then((res) => {
       const { data } = res;
       setAllUsers(data);
     });
@@ -16,7 +16,7 @@ const AllUsers = () => {
   // const handleDeleteUser = (id) => {
   //   const proceed = window.confirm("Are you sure?");
   //   if (proceed) {
-  //     const url = `https://fathomless-hamlet-59180.herokuapp.com/delete-user/${id}`;
+  //     const url = `https://eventy-server.onrender.com/delete-user/${id}`;
   //     fetch(url, {
   //       method: "DELETE",
   //     })
@@ -38,7 +38,7 @@ const AllUsers = () => {
       confirmButtonText: 'Yes, delete it !'
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `https://fathomless-hamlet-59180.herokuapp.com/delete-user/${id}`;
+        const url = `https://eventy-server.onrender.com/delete-user/${id}`;
         fetch(url, {
           method: "DELETE",
         })

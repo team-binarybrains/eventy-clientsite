@@ -12,7 +12,7 @@ import EmployeeBanner from "./EmployeeBanner";
 const Employee = () => {
   const [employeeInfo, setEmployeeInfo] = useState([]);
   useEffect(() => {
-    axios.get(`https://fathomless-hamlet-59180.herokuapp.com/employee`).then((res) => setEmployeeInfo(res.data));
+    axios.get(`https://eventy-server.onrender.com/employee`).then((res) => setEmployeeInfo(res.data));
   }, []);
   // console.log(employeeInfo);
 

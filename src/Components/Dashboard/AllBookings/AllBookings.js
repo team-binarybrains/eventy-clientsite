@@ -7,11 +7,11 @@ function AllBookings() {
 
     // const [allBooking, setAllBooking] = useState([])
 
-    const [allBooking, loading, refetch] = useRefetch('https://fathomless-hamlet-59180.herokuapp.com/get-all-booking-info', [])
+    const [allBooking, loading, refetch] = useRefetch('https://eventy-server.onrender.com/get-all-booking-info', [])
     console.log(allBooking);
 
 
-    const [allPaidBooking, paidLoading, paidRefetch] = useRefetch('https://fathomless-hamlet-59180.herokuapp.com/get-payment', [])
+    const [allPaidBooking, paidLoading, paidRefetch] = useRefetch('https://eventy-server.onrender.com/get-payment', [])
     console.log(allPaidBooking);
 
 
@@ -19,7 +19,7 @@ function AllBookings() {
         const confirmation = window.confirm('Are you sure to cancel the booking ?')
 
         if (confirmation) {
-            axios.delete(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${id}`)
+            axios.delete(`https://eventy-server.onrender.com/delete-booking/${id}`)
                 .then(res => {
                     console.log(res?.data);
                     refetch()
@@ -35,7 +35,7 @@ function AllBookings() {
         const confirmation = window.confirm('Are you sure to cancel the booking ?')
 
         if (confirmation) {
-            axios.delete(`https://fathomless-hamlet-59180.herokuapp.com/delete-payment-info/${id}`)
+            axios.delete(`https://eventy-server.onrender.com/delete-payment-info/${id}`)
                 .then(res => {
                     console.log(res?.data);
                     paidRefetch()

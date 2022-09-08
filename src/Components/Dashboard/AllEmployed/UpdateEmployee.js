@@ -19,7 +19,7 @@ const UpdateEmployee = () => {
       formState: { errors },
    } = useForm();
    useEffect(() => {
-      fetch(`https://fathomless-hamlet-59180.herokuapp.com/update-employee/${id}`, {
+      fetch(`https://eventy-server.onrender.com/update-employee/${id}`, {
          method: "GET",
       })
          .then(res => res.json())
@@ -51,7 +51,7 @@ const UpdateEmployee = () => {
                   image: img,
                };
                // console.log(employee);
-               fetch(`https://fathomless-hamlet-59180.herokuapp.com/update-employee/${id}`, {
+               fetch(`https://eventy-server.onrender.com/update-employee/${id}`, {
                   method: "PUT",
                   headers: {
                      "content-type": "application/json",

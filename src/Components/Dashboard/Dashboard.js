@@ -23,7 +23,7 @@ const Dashboard = () => {
   const [currentUser, setCurrentUser] = useState([]);
   const email = user?.email;
   useEffect(() => {
-    fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`)
+    fetch(`https://eventy-server.onrender.com/single-user/${email}`)
       .then(res => res.json())
       .then(data => setCurrentUser(data))
   }, [email]);

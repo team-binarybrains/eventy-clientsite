@@ -19,7 +19,7 @@ const UpdateUser = () => {
    } = useForm();
 
    useEffect(() => {
-      fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`, {
+      fetch(`https://eventy-server.onrender.com/single-user/${email}`, {
          method: "GET",
       })
          .then(res => res.json())
@@ -50,7 +50,7 @@ const UpdateUser = () => {
       //             image: img,
       //          };
 
-      // fetch(`https://fathomless-hamlet-59180.herokuapp.com/user-update/${email}`, {
+      // fetch(`https://eventy-server.onrender.com/user-update/${email}`, {
       //    method: "PUT",
       //    headers: {
       //       "content-type": "application/json",
@@ -75,7 +75,7 @@ const UpdateUser = () => {
          address: data.address,
          email: data.email,
       };
-      fetch(`https://fathomless-hamlet-59180.herokuapp.com/user-update/${email}`, {
+      fetch(`https://eventy-server.onrender.com/user-update/${email}`, {
          method: "PUT",
          headers: {
             "content-type": "application/json",

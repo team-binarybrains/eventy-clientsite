@@ -19,7 +19,7 @@ const AddEmployed = () => {
    } = useForm();
 
    // useEffect(() => {
-   //    fetch(`https://fathomless-hamlet-59180.herokuapp.com/single-user/${email}`, {
+   //    fetch(`https://eventy-server.onrender.com/single-user/${email}`, {
    //       method: "GET",
    //    })
    //       .then(res => res.json())
@@ -51,7 +51,7 @@ const AddEmployed = () => {
                   image: img,
                };
                // console.log(employee);
-               fetch(`https://fathomless-hamlet-59180.herokuapp.com/employee`, {
+               fetch(`https://eventy-server.onrender.com/employee`, {
                   method: "POST",
                   headers: {
                      "content-type": "application/json",

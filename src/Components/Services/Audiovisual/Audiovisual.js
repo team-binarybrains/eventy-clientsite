@@ -5,7 +5,7 @@ import useFetch from '../../Home/OurServices/Hook/useFetch'
 
 function Audiovisual() {
 
-    const visual = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/get-sub-services/audiovisual`)
+    const visual = useFetch(`https://eventy-server.onrender.com/get-sub-services/audiovisual`)
 
     return (
         <div className='route'>

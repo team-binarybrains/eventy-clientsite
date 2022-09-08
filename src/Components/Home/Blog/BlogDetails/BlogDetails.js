@@ -12,7 +12,7 @@ const BlogDetails = () => {
   const { blogId } = useParams();
 
   useEffect(() => {
-    fetch(`https://fathomless-hamlet-59180.herokuapp.com/blogsdetail/${blogId}`)
+    fetch(`https://eventy-server.onrender.com/blogsdetail/${blogId}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [blogId]);

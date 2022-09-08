@@ -19,10 +19,10 @@ const EventDetails = () => {
   console.log(id);
   const [eventDetailsData, setEventDetailsData] = useState({});
   useEffect(() => {
-    axios.get(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${id}`)
+    axios.get(`https://eventy-server.onrender.com/event-details/${id}`)
       .then((data) => setEventDetailsData(data.data));
   }, [id])
-  // const eventDetailsData = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${id}`,{})
+  // const eventDetailsData = useFetch(`https://eventy-server.onrender.com/event-details/${id}`,{})
   // setEventDetailsData({name:'noName'})
   // console.log(eventDetailsData);
 

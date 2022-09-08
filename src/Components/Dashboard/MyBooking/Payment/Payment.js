@@ -14,10 +14,10 @@ const stripePromise = loadStripe('pk_test_51L0gDbJT4xjXTU74z66wNjkphxp6HCRQGImcS
 const Payment = () => {
   const { Id } = useParams()
 
-  const [ticket, loading, refetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/ticket-booking/${Id}`, {})
+  const [ticket, loading, refetch] = useRefetch(`https://eventy-server.onrender.com/ticket-booking/${Id}`, {})
 
 
-  const { data: product, isLoading } = useQuery(['payment', Id], () => fetch(`https://fathomless-hamlet-59180.herokuapp.com/payment/${Id}`, {
+  const { data: product, isLoading } = useQuery(['payment', Id], () => fetch(`https://eventy-server.onrender.com/payment/${Id}`, {
     method: 'GET',
     // headers: {
     //   'authorization': `bearer ${localStorage.getItem('accessToken')}`

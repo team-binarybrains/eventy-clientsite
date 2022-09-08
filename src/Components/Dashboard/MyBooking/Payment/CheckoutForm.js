@@ -28,7 +28,7 @@ const CheckoutForm = ({ product }) => {
     console.log(name)
 
     useEffect(() => {
-        fetch('https://fathomless-hamlet-59180.herokuapp.com/create-payment-intent', {
+        fetch('https://eventy-server.onrender.com/create-payment-intent', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json',
@@ -123,13 +123,13 @@ const CheckoutForm = ({ product }) => {
                 totalPrice: totalPrice,
                 paidAmount: totalPrice,
             }
-            await axios.post('https://fathomless-hamlet-59180.herokuapp.com/payment-info', payment)
+            await axios.post('https://eventy-server.onrender.com/payment-info', payment)
                 .then(res => {
                     const { data } = res
                     console.log(data);
                 })
 
-            await axios.delete(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${_id}`)
+            await axios.delete(`https://eventy-server.onrender.com/delete-booking/${_id}`)
                 .then(res => {
                     const { data } = res
                     console.log(data);

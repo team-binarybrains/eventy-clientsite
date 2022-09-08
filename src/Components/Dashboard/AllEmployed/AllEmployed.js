@@ -9,7 +9,7 @@ const AllEmployee = () => {
    const [employee, setEmployee] = useState([]);
    // console.log(employee);
    useEffect(() => {
-      axios.get("https://fathomless-hamlet-59180.herokuapp.com/employee").then((res) => {
+      axios.get("https://eventy-server.onrender.com/employee").then((res) => {
          const { data } = res;
          setEmployee(data);
       });
@@ -18,7 +18,7 @@ const AllEmployee = () => {
       // const proceed = window.confirm("Are you sure?");
 
       // if (proceed) {
-      //    const url = `https://fathomless-hamlet-59180.herokuapp.com/delete-employee/${id}`;
+      //    const url = `https://eventy-server.onrender.com/delete-employee/${id}`;
       //    fetch(url, {
       //       method: "DELETE",
       //    })
@@ -38,7 +38,7 @@ const AllEmployee = () => {
          confirmButtonText: 'Yes, delete it !'
       }).then((result) => {
          if (result.isConfirmed) {
-            const url = `https://fathomless-hamlet-59180.herokuapp.com/delete-employee/${id}`;
+            const url = `https://eventy-server.onrender.com/delete-employee/${id}`;
             fetch(url, {
                method: "DELETE",
             })

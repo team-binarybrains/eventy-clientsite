@@ -10,7 +10,7 @@ const FrequentlyMainBlogs = () => {
   const [show4, setShow4] = useState(false);
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    fetch("https://fathomless-hamlet-59180.herokuapp.com/blogs")
+    fetch("https://eventy-server.onrender.com/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);

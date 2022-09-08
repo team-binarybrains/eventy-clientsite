@@ -5,7 +5,7 @@ import useFetch from '../../Home/OurServices/Hook/useFetch'
 
 function LinenRentals() {
 
-    const linen = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/get-sub-services/linen`)
+    const linen = useFetch(`https://eventy-server.onrender.com/get-sub-services/linen`)
 
     return (
         <div className='route'>

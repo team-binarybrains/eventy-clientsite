@@ -137,7 +137,7 @@ const AddEvent = () => {
 
         const eventInformation = { title, venue, type, date, endDate, starttime, endtime, ticketprice, address, description, day, img, image }
 
-        fetch('https://fathomless-hamlet-59180.herokuapp.com/addEventRequest', {
+        fetch('https://eventy-server.onrender.com/addEventRequest', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

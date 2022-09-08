@@ -43,8 +43,8 @@ const EventListing = () => {
         <Tabs className=" border-none" >
           <TabList className=" border-none">
             <Tab 
-            data-aos="zoom-out-up"
-            data-aos-duration="2000"
+            // data-aos="zoom-out-up"
+            // data-aos-duration="2000"
             >
               <h1 className="text-[18px] ">
                 {" "}
@@ -59,8 +59,8 @@ const EventListing = () => {
               </h1>
             </Tab>
             <Tab 
-            data-aos="zoom-out-up"
-            data-aos-duration="2000"
+            // data-aos="zoom-out-up"
+            // data-aos-duration="2000"
             >
               <h1 className="text-[18px] ">
                 {" "}
@@ -75,8 +75,8 @@ const EventListing = () => {
               </h1>
             </Tab>
             <Tab 
-            data-aos="zoom-out-up"
-            data-aos-duration="2000"
+            // data-aos="zoom-out-up"
+            // data-aos-duration="2000"
             >
               <h1 className="text-[18px] ">
                 {" "}

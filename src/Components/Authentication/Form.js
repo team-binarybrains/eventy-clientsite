@@ -72,7 +72,7 @@ const Form = () => {
       email: email,
     };
 
-    await fetch(`https://fathomless-hamlet-59180.herokuapp.com/user/${email}`, {
+    await fetch(`https://eventy-server.onrender.com/user/${email}`, {
       method: "PUT",
       headers: {
         "content-type": "application/json",

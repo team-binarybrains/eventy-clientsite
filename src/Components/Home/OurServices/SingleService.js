@@ -45,7 +45,7 @@ function SingleService() {
   const [selectVenue, setSelectVenue] = useState('')
   // const [serviceDetails, setServiceDetails] = useState({})
   // console.log(serviceDetails);
-  const details = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/single-service/${id}`, {});
+  const details = useFetch(`https://eventy-server.onrender.com/single-service/${id}`, {});
 
   const { eventName, image, description, eventPrice } = details;
 
@@ -73,7 +73,7 @@ function SingleService() {
     };
     console.log(bookingInfo);
 
-    axios.post("https://fathomless-hamlet-59180.herokuapp.com/service-booking", bookingInfo)
+    axios.post("https://eventy-server.onrender.com/service-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);
@@ -108,7 +108,7 @@ function SingleService() {
 
 
   useEffect(() => {
-    axios.get(`https://fathomless-hamlet-59180.herokuapp.com/venues`).then((res) => {
+    axios.get(`https://eventy-server.onrender.com/venues`).then((res) => {
       setVenues(res?.data);
       setSelect(res?.data[0]);
     });

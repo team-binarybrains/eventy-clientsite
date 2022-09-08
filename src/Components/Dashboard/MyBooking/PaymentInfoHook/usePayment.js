@@ -7,7 +7,7 @@ const usePayment = (uid) => {
     // payment info
 
     useEffect(() => {
-        axios.get(`https://fathomless-hamlet-59180.herokuapp.com/get-payment/${uid}`)
+        axios.get(`https://eventy-server.onrender.com/get-payment/${uid}`)
             .then(res => {
                 const { data } = res
                 console.log(data);

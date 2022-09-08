@@ -6,7 +6,7 @@ import '../Services.css'
 
 function Catering() {
 
-    const catering = useFetch(`https://fathomless-hamlet-59180.herokuapp.com/get-sub-services/catering`)
+    const catering = useFetch(`https://eventy-server.onrender.com/get-sub-services/catering`)
     console.log(catering);
 
 

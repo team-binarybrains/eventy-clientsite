@@ -52,7 +52,7 @@ const RegisterEvent = ({ eventDetailsData }) => {
    }
 
    /* useEffect(()=> {
-      axios.get(`https://fathomless-hamlet-59180.herokuapp.com/ticket-booking/${user?.uid}`)
+      axios.get(`https://eventy-server.onrender.com/ticket-booking/${user?.uid}`)
       .then(data=> {
          selecting(data?.data);
          setTicket({
@@ -63,7 +63,7 @@ const RegisterEvent = ({ eventDetailsData }) => {
       })
    },[fetchCount,user?.uid]); */
 
-   const [data, loading, refetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/ticket-booking/${user?.uid + ':' + eventDetailsData?._id}`, {}, (data) => {
+   const [data, loading, refetch] = useRefetch(`https://eventy-server.onrender.com/ticket-booking/${user?.uid + ':' + eventDetailsData?._id}`, {}, (data) => {
       selecting(data);
       setTicket({
          enterprise: (data?.enterprise?.ticket || 0),
@@ -107,7 +107,7 @@ const RegisterEvent = ({ eventDetailsData }) => {
          total: enterprise * 99 + professional * 59 + standard * 19
       }
 
-      axios.put(`https://fathomless-hamlet-59180.herokuapp.com/ticket-booking/${user?.uid + ':' + eventDetailsData?._id}`, {
+      axios.put(`https://eventy-server.onrender.com/ticket-booking/${user?.uid + ':' + eventDetailsData?._id}`, {
          booking: booked,
       }).then(({ data }) => {
          data?.success && toast.success('Ticket booked successfully', { theme: "colored" });

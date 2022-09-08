@@ -26,12 +26,12 @@ function MyBooking() {
     const paymentInfo = usePayment(uid)
     console.log(paymentInfo)
 
-    const [tickets, loading, refetch] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/user-booked-ticket/${user?.uid}`, [])
+    const [tickets, loading, refetch] = useRefetch(`https://eventy-server.onrender.com/user-booked-ticket/${user?.uid}`, [])
 
     useEffect(() => {
         const email = user.email;
 
-        axios.get(`https://fathomless-hamlet-59180.herokuapp.com/booking-info/${email}`, {
+        axios.get(`https://eventy-server.onrender.com/booking-info/${email}`, {
             headers: {
                 authorization: ` Bearer ${localStorage.getItem('accessToken')}`
             }
@@ -51,7 +51,7 @@ function MyBooking() {
         const proceed = window.confirm("Are you sure to cancel the booking ?");
 
         if (proceed) {
-            await fetch(`https://fathomless-hamlet-59180.herokuapp.com/delete-booking/${id}`, {
+            await fetch(`https://eventy-server.onrender.com/delete-booking/${id}`, {
                 method: "DELETE",
             })
                 .then((res) => res.json())

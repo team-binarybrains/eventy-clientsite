@@ -12,7 +12,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
     const navigate = useNavigate()
     const { _id, enterprise, eventId, professional, standard, total, userId, bookingId } = ticket;
 
-    const [event] = useRefetch(`https://fathomless-hamlet-59180.herokuapp.com/event-details/${ticket?.eventId}`, {})
+    const [event] = useRefetch(`https://eventy-server.onrender.com/event-details/${ticket?.eventId}`, {})
     // cancle order
     const handleBookingCancle = id => {
         console.log(id);
@@ -20,7 +20,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
         const proceed = window.confirm("Are you sure?");
 
         if (proceed) {
-            axios.delete(`https://fathomless-hamlet-59180.herokuapp.com/delete-booked-ticket/${id}`)
+            axios.delete(`https://eventy-server.onrender.com/delete-booked-ticket/${id}`)
                 .then(({ data }) => data?.acknowledged && refetch())
         }
     }

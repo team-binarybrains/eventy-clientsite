@@ -8,7 +8,7 @@ const Venues = () => {
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
   useEffect(() => {
-    axios.get(`https://fathomless-hamlet-59180.herokuapp.com/venues`).then((res) => {
+    axios.get(`https://eventy-server.onrender.com/venues`).then((res) => {
       setVenues(res?.data);
       setSelect(res?.data[0]);
     });

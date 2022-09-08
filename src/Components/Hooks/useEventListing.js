@@ -4,7 +4,7 @@ const useEventListing = (type) => {
   // console.log(type);
   const [eventLists, setEventLists] = useState([]);
   useEffect(() => {
-    const url = `https://fathomless-hamlet-59180.herokuapp.com/eventlisting/?catagory=${type}`;
+    const url = `https://eventy-server.onrender.com/eventlisting/?catagory=${type}`;
     if (type) {
       fetch(url)
         .then((res) => res.json())
