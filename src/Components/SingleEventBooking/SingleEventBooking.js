@@ -9,11 +9,13 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/firebase.init";
 
 const SingleEventBooking = () => {
-
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
   const { id } = useParams();
 
-  const event = useFetch(`https://eventy-server.onrender.com/venue/${id}`, {});
+  const event = useFetch(
+    `https://eventy-serversite-production.up.railway.app/venue/${id}`,
+    {}
+  );
   console.log(event);
 
   const { venueName, seats, price, code, star, img, location } = event;
@@ -38,7 +40,10 @@ const SingleEventBooking = () => {
     console.log(bookingInfo);
 
     axios
-      .post("https://eventy-server.onrender.com/venue-booking", bookingInfo)
+      .post(
+        "https://eventy-serversite-production.up.railway.app/venue-booking",
+        bookingInfo
+      )
       .then((res) => {
         const { data } = res;
         console.log(data);

@@ -10,7 +10,7 @@ import AllSingleeventList from "./AllSingleeventList";
 const AllEventList = () => {
   const [eventLists, setEventLists] = useState([]);
   useEffect(() => {
-    fetch("https://eventy-server.onrender.com/alleventlisting")
+    fetch("https://eventy-serversite-production.up.railway.app/alleventlisting")
       .then((res) => res.json())
       .then((data) => setEventLists(data));
   }, []);
@@ -18,7 +18,8 @@ const AllEventList = () => {
     <div>
       <div className="gap-20 flex flex-col lg:flex-row lg:gap-20 parant max-w-7xl mx-auto px-12 mt-24 mb-20">
         <div className="left-eventdetail w-[300px]">
-          <button className=" p-2  border-2 border-gray-200 h-[42px] w-[176.922px]   text-[#000000] text-[16px]"
+          <button
+            className=" p-2  border-2 border-gray-200 h-[42px] w-[176.922px]   text-[#000000] text-[16px]"
             data-aos="fade-right"
             data-aos-duration="2000"
           >
@@ -26,11 +27,13 @@ const AllEventList = () => {
             Calender
           </button>
 
-          <div className=" mt-20 flex justify-center  lg:mt-[100px] left-bgimage"
+          <div
+            className=" mt-20 flex justify-center  lg:mt-[100px] left-bgimage"
             data-aos="zoom-in"
             data-aos-duration="2000"
           >
-            <div className="text-center "
+            <div
+              className="text-center "
               data-aos="zoom-in"
               data-aos-delay="300"
               data-aos-duration="2000"

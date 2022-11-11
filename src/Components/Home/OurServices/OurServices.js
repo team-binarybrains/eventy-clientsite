@@ -8,7 +8,9 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "./Hook/useFetch";
 
 export default function OurServices() {
-  const serviceInfo = useFetch("https://eventy-server.onrender.com/services-get");
+  const serviceInfo = useFetch(
+    "https://eventy-serversite-production.up.railway.app/services-get"
+  );
 
   const navigate = useNavigate();
   const navigateToDetails = (id) => {
@@ -56,13 +58,15 @@ export default function OurServices() {
   return (
     <div className="lg:px-[270px] pt-20 pb-32 bg-gray-100">
       <div className="mt-6 mb-14">
-        <h1 className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]"
+        <h1
+          className="text-center uppercase my-5 text-gray-400 text-[18px] tracking-[10px]"
           data-aos="fade-right"
           data-aos-duration="3000"
         >
           our services
         </h1>
-        <p className="text-4xl tracking-wider text-center"
+        <p
+          className="text-4xl tracking-wider text-center"
           data-aos="fade-left"
           data-aos-duration="3000"
         >
@@ -75,7 +79,8 @@ export default function OurServices() {
           {serviceInfo.map((service, index) => (
             <div key={service.index} className="relative hvr ">
               <div className="cursor-pointer">
-                <div className="flex justify-center relative"
+                <div
+                  className="flex justify-center relative"
                   data-aos="flip-right"
                   data-aos-duration="2500"
                 >
@@ -88,7 +93,8 @@ export default function OurServices() {
                   </div>
                 </div>
 
-                <div className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-3"
+                <div
+                  className="flex justify-center absolute left-[calc(50%-9rem)] -bottom-3"
                   data-aos="fade-up"
                   data-aos-duration="2700"
                 >

@@ -69,14 +69,14 @@ function App() {
   // aos
   AOS.init();
 
-  // const [loading] = useLoading()
+  const [loading] = useLoading()
 
   return (
     <div>
-      {/* {
+      {
         loading ?
           <Loading />
-          : */}
+          :
           <div className="overflow-x-hidden">
             <Navbar location={location}></Navbar>
             <Routes>
@@ -299,7 +299,7 @@ function App() {
 
             <ToastContainer />
           </div>
-      {/* } */}
+       } 
     </div>
   );
 }

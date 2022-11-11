@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { BsBookmarkFill } from "react-icons/bs";
 import { useNavigate } from "react-router-dom";
-import style from './blog.module.css'
+import style from "./blog.module.css";
 
 const FrequentlyMainBlogs = () => {
   const [show, setShow] = useState(false);
@@ -10,7 +10,7 @@ const FrequentlyMainBlogs = () => {
   const [show4, setShow4] = useState(false);
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    fetch("https://eventy-server.onrender.com/blogs")
+    fetch("https://eventy-serversite-production.up.railway.app/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);
@@ -28,7 +28,8 @@ const FrequentlyMainBlogs = () => {
 
             <div className=" border-gray-200   md:w-auto w-full ">
               {/* <input placeholder="Search" type="text" aria-label="Search" className="lg:w-96 md:w-72 w-full focus:outline-none placeholder-gray-600 text-base font-normal text-gray-600 leading-4 " /> */}
-              <h1 className="resent-post-section-title pr-52 -mb-[48px]"
+              <h1
+                className="resent-post-section-title pr-52 -mb-[48px]"
                 data-aos="fade-left"
                 data-aos-duration="2000"
               >
@@ -42,7 +43,9 @@ const FrequentlyMainBlogs = () => {
 
               <div className="grid md:grid-cols-2 gap-7 p-5  lg:grid-cols-2 ">
                 {blogs.map((blog) => (
-                  <div blog={blog} className={`h-[500px] flex flex-col pb-5  bg-[#f7f7f7] transition-transform ${style.blogCard}`}
+                  <div
+                    blog={blog}
+                    className={`h-[500px] flex flex-col pb-5  bg-[#f7f7f7] transition-transform ${style.blogCard}`}
                     data-aos="flip-left"
                     data-aos-duration="2000"
                   >
@@ -53,26 +56,31 @@ const FrequentlyMainBlogs = () => {
                         alt=""
                       />
 
-                      <p className="absolute -top-2 -left-2  text-gray-700 font-semibold bg-gradient-to-b from-amber-300 to-amber-500 px-5 py-3 rounded-sm uppercase"
+                      <p
+                        className="absolute -top-2 -left-2  text-gray-700 font-semibold bg-gradient-to-b from-amber-300 to-amber-500 px-5 py-3 rounded-sm uppercase"
                         data-aos="fade-down"
                         data-aos-duration="2000"
                       >
-                        {blog?.date?.split(',')[0]} {blog?.date?.split(',')[1]?.slice(0, 3)} {blog?.date?.split(',')[2]}
+                        {blog?.date?.split(",")[0]}{" "}
+                        {blog?.date?.split(",")[1]?.slice(0, 3)}{" "}
+                        {blog?.date?.split(",")[2]}
                       </p>
                     </div>
 
                     {/* <div className=" md:py-5 px-5 "> */}
                     <p className="text-[#ffbe30] text-[14px] px-5 mt-5">
-                      <BsBookmarkFill className="inline-block" /> Musical
-                      Event
+                      <BsBookmarkFill className="inline-block" /> Musical Event
                     </p>
 
                     <h1 className="text-[18px] font-bold py-5 px-5">
                       {blog.tittle}
                     </h1>
-                    <p className="text-[18px] px-5">{blog.details.slice(0, 50)}</p>
+                    <p className="text-[18px] px-5">
+                      {blog.details.slice(0, 50)}
+                    </p>
 
-                    <div className="self-start grow flex px-5"
+                    <div
+                      className="self-start grow flex px-5"
                       data-aos="zoom-in"
                       data-aos-duration="1500"
                     >
@@ -95,7 +103,8 @@ const FrequentlyMainBlogs = () => {
             <div className=" md:w-5/12 lg:w-4/12 w-full md:mt-0 sm:mt-14 mt-10">
               {/* <!-- Shipping Section --> */}
               <div>
-                <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
+                <div
+                  className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
                   data-aos="fade-left"
                   data-aos-duration="2500"
                 >
@@ -150,7 +159,8 @@ const FrequentlyMainBlogs = () => {
               {/* <!-- Returns Section --> */}
 
               <div>
-                <div className="py-7 px-3  flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md "
+                <div
+                  className="py-7 px-3  flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md "
                   data-aos="fade-left"
                   data-aos-delay="700"
                   data-aos-duration="2500"
@@ -206,7 +216,8 @@ const FrequentlyMainBlogs = () => {
               {/* <!-- Exchange Section --> */}
 
               <div>
-                <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
+                <div
+                  className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
                   data-aos="fade-left"
                   data-aos-duration="2500"
                 >
@@ -261,7 +272,8 @@ const FrequentlyMainBlogs = () => {
               {/* Tracking Section */}
 
               <div>
-                <div className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
+                <div
+                  className="py-7 px-3 -none flex justify-between items-center cursor-pointer hover:text-[#ffbe30] bg-[#f7f7f7] mt-3 rounded-md"
                   data-aos="fade-left"
                   data-aos-duration="2500"
                 >
@@ -312,11 +324,13 @@ const FrequentlyMainBlogs = () => {
               </div>
 
               {/* <hr className=" my-7 bg-gray-200" /> */}
-              <div className="sitebanner flex  justify-center mt-32"
+              <div
+                className="sitebanner flex  justify-center mt-32"
                 data-aos="zoom-in"
                 data-aos-duration="2500"
               >
-                <div className="text-center"
+                <div
+                  className="text-center"
                   data-aos="zoom-in"
                   data-aos-delay="500"
                   data-aos-duration="2500"

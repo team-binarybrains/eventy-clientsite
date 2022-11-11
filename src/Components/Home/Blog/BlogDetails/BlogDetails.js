@@ -4,15 +4,14 @@ import BlogComments from "./BlogComments/BlogComments";
 import "./BlogDetails.css";
 import FeaturedEvent from "./FeaturedEvent/FeaturedEvent";
 
-
 const BlogDetails = () => {
-
-
   const [blog, setBlog] = useState([]);
   const { blogId } = useParams();
 
   useEffect(() => {
-    fetch(`https://eventy-server.onrender.com/blogsdetail/${blogId}`)
+    fetch(
+      `https://eventy-serversite-production.up.railway.app/blogsdetail/${blogId}`
+    )
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [blogId]);
@@ -22,12 +21,16 @@ const BlogDetails = () => {
       <div className="banner-background">
         <div className="flex justify-center items-center py-20">
           <div className="text-center">
-            <h1 className="breadcrumb-section font-bold"
+            <h1
+              className="breadcrumb-section font-bold"
               data-aos="zoom-in"
               data-aos-duration="2000"
-            >BLOG SINGLE</h1>
+            >
+              BLOG SINGLE
+            </h1>
 
-            <h1 className="big-title"
+            <h1
+              className="big-title"
               data-aos="zoom-in"
               data-aos-duration="2000"
             >
@@ -52,7 +55,8 @@ const BlogDetails = () => {
               >
                 Blogs
               </Link>
-              <p className="text-[16px] font-bold text-white inline-block  pl-2"
+              <p
+                className="text-[16px] font-bold text-white inline-block  pl-2"
                 data-aos="fade-left"
                 data-aos-duration="2000"
               >

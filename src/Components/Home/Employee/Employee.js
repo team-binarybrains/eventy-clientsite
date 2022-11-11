@@ -12,7 +12,9 @@ import EmployeeBanner from "./EmployeeBanner";
 const Employee = () => {
   const [employeeInfo, setEmployeeInfo] = useState([]);
   useEffect(() => {
-    axios.get(`https://eventy-server.onrender.com/employee`).then((res) => setEmployeeInfo(res.data));
+    axios
+      .get(`https://eventy-serversite-production.up.railway.app/employee`)
+      .then((res) => setEmployeeInfo(res.data));
   }, []);
   // console.log(employeeInfo);
 
@@ -26,14 +28,27 @@ const Employee = () => {
           <div className={`mx-auto container px-3 m-auto`}>
             <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 sm:gap-0   items-center">
               {employeeInfo.map((employee, i) => (
-                <div key={i} className={`sm:mt-6 w-full sm:w-[270px] md:w-[270px] lg:w-[270px] xl:w-[270px] h-auto  m-auto px-2 py-10 bg-[#ffff] shadow-2xl border border-white rounded`}>
+                <div
+                  key={i}
+                  className={`sm:mt-6 w-full sm:w-[270px] md:w-[270px] lg:w-[270px] xl:w-[270px] h-auto  m-auto px-2 py-10 bg-[#ffff] shadow-2xl border border-white rounded`}
+                >
                   <div id="employee_img">
-                    <img className="w-[155px] h-[155px] rounded-full m-auto border border-blue-700 p-[2px]" src={employee?.image} alt="" />
+                    <img
+                      className="w-[155px] h-[155px] rounded-full m-auto border border-blue-700 p-[2px]"
+                      src={employee?.image}
+                      alt=""
+                    />
                   </div>
                   <div id="employee_content" className="text-center pl-4 pt-4">
-                    <h1 className="text-slate-600 capitalize py-2">{employee?.profession}</h1>
-                    <h1 className="text-slate-600 capitalize">{employee?.name}</h1>
-                    <h3 className="text-slate-600 capitalize">{employee?.city} , {employee?.country}</h3>
+                    <h1 className="text-slate-600 capitalize py-2">
+                      {employee?.profession}
+                    </h1>
+                    <h1 className="text-slate-600 capitalize">
+                      {employee?.name}
+                    </h1>
+                    <h3 className="text-slate-600 capitalize">
+                      {employee?.city} , {employee?.country}
+                    </h3>
                   </div>
                 </div>
               ))}

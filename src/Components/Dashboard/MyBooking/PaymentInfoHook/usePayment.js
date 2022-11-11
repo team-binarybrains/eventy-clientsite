@@ -1,21 +1,23 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 
 const usePayment = (uid) => {
+  const [paymentInfo, setPaymentInfo] = useState([]);
+  // payment info
 
-    const [paymentInfo, setPaymentInfo] = useState([])
-    // payment info
+  useEffect(() => {
+    axios
+      .get(
+        `https://eventy-serversite-production.up.railway.app/get-payment/${uid}`
+      )
+      .then((res) => {
+        const { data } = res;
+        console.log(data);
+        setPaymentInfo(data);
+      });
+  }, [uid]);
 
-    useEffect(() => {
-        axios.get(`https://eventy-server.onrender.com/get-payment/${uid}`)
-            .then(res => {
-                const { data } = res
-                console.log(data);
-                setPaymentInfo(data)
-            })
-    }, [uid])
-
-    return paymentInfo
+  return paymentInfo;
 };
 
 export default usePayment;

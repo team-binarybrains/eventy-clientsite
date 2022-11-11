@@ -12,7 +12,7 @@ import { useEffect } from "react";
 const Navbar = ({ location }) => {
   const { pathname } = location;
   const routeName = pathname.slice("1");
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [navbarBg, setNavbar] = useState(false);
   const changeBg = () => {
@@ -27,7 +27,7 @@ const Navbar = ({ location }) => {
   const handleSignOut = () => {
     signOut(auth);
     localStorage.removeItem("accessToken");
-    navigate('/')
+    navigate("/");
   };
   const [user] = useAuthState(auth);
 
@@ -45,21 +45,22 @@ const Navbar = ({ location }) => {
 
   // profile photos load
   const [currentUser, setCurrentUser] = useState([]);
-  const email = user?.email
+  const email = user?.email;
   useEffect(() => {
-    fetch(`https://eventy-server.onrender.com/single-user/${email}`)
-      .then(res => res.json())
-      .then(data => setCurrentUser(data))
+    fetch(
+      `https://eventy-serversite-production.up.railway.app/single-user/${email}`
+    )
+      .then((res) => res.json())
+      .then((data) => setCurrentUser(data));
   }, [email]);
   return (
-    <div
-
-    >
+    <div>
       <section className={`${routeName ? anotherRoute : homeRoute} bg-white`}>
         {routeName && <TopnavBar></TopnavBar>}
         <div
-          className={` ${routeName ? "bg-white text-black" : "bg-transparent text-white"
-            }  flex items-center justify-around flex-wrap grow-0 h-[69px] gap-x-10 z-[999] container mx-auto`}
+          className={` ${
+            routeName ? "bg-white text-black" : "bg-transparent text-white"
+          }  flex items-center justify-around flex-wrap grow-0 h-[69px] gap-x-10 z-[999] container mx-auto`}
           id="navbar"
         >
           {/* navbar icons and logo */}
@@ -230,7 +231,6 @@ const Navbar = ({ location }) => {
                 </li>
               </ul>
             </div>
-
 
             {/* logo */}
             <div className="flex items-end justify-center">

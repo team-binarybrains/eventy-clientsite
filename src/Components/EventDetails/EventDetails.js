@@ -13,16 +13,18 @@ import LocationFaq from "./LocationFaq";
 import Pricing from "./Pricing/Pricing";
 import TopBanner from "./TopBanner";
 
-
 const EventDetails = () => {
   const { id } = useParams();
   console.log(id);
   const [eventDetailsData, setEventDetailsData] = useState({});
   useEffect(() => {
-    axios.get(`https://eventy-server.onrender.com/event-details/${id}`)
+    axios
+      .get(
+        `https://eventy-serversite-production.up.railway.app/event-details/${id}`
+      )
       .then((data) => setEventDetailsData(data.data));
-  }, [id])
-  // const eventDetailsData = useFetch(`https://eventy-server.onrender.com/event-details/${id}`,{})
+  }, [id]);
+  // const eventDetailsData = useFetch(`https://eventy-serversite-production.up.railway.app/event-details/${id}`,{})
   // setEventDetailsData({name:'noName'})
   // console.log(eventDetailsData);
 
@@ -37,19 +39,11 @@ const EventDetails = () => {
         <section className="px-3 flex flex-wrap justify-center container mx-auto max-w-7xl lg:px-16 my-16">
           {/* 2nd row : 1st column (-----Rashid vai-------)*/}
           <div className=" basis-[800px] shrink grow max-w-[52rem]">
-            <FeaturedEvent
-              eventDetailsData={eventDetailsData}
-            ></FeaturedEvent>
-            <FeaturedEventDetails
-              eventDetailsData={eventDetailsData}
-            />
-            <EventSchedule
-              eventDetailsData={eventDetailsData}
-            />
+            <FeaturedEvent eventDetailsData={eventDetailsData}></FeaturedEvent>
+            <FeaturedEventDetails eventDetailsData={eventDetailsData} />
+            <EventSchedule eventDetailsData={eventDetailsData} />
             <Pricing />
-            <RegisterEvent
-              eventDetailsData={eventDetailsData}
-            />
+            <RegisterEvent eventDetailsData={eventDetailsData} />
           </div>
 
           {/* 2nd row : 2nd column */}

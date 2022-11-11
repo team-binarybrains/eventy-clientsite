@@ -8,10 +8,12 @@ const Venues = () => {
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
   useEffect(() => {
-    axios.get(`https://eventy-server.onrender.com/venues`).then((res) => {
-      setVenues(res?.data);
-      setSelect(res?.data[0]);
-    });
+    axios
+      .get(`https://eventy-serversite-production.up.railway.app/venues`)
+      .then((res) => {
+        setVenues(res?.data);
+        setSelect(res?.data[0]);
+      });
   }, []);
 
   const selection = (venue) => {
@@ -32,7 +34,11 @@ const Venues = () => {
               >
                 Eventy Venues
               </h4>
-              <h2 className={`${styles.roboto} text-4xl text-white`} data-aos="zoom-in" data-aos-duration="3000" >
+              <h2
+                className={`${styles.roboto} text-4xl text-white`}
+                data-aos="zoom-in"
+                data-aos-duration="3000"
+              >
                 Conference <span className="font-bold">Rooms & Hotels</span>
               </h2>
             </div>
@@ -44,8 +50,9 @@ const Venues = () => {
               {venues.map((venue) => {
                 return (
                   <div
-                    className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${venue._id === select._id && styles.selected
-                      } `}
+                    className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${
+                      venue._id === select._id && styles.selected
+                    } `}
                     key={venue.id}
                     onClick={() => selection(venue)}
                   >
@@ -68,7 +75,8 @@ const Venues = () => {
             </div>
           </div>
 
-          <div className={`h-[424px] sm:min-w-[500px] grow basis-[50%] shrink relative ${styles.highlight}`}
+          <div
+            className={`h-[424px] sm:min-w-[500px] grow basis-[50%] shrink relative ${styles.highlight}`}
             data-aos="zoom-in-left"
             data-aos-duration="2500"
           >

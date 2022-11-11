@@ -9,9 +9,9 @@ import { useEffect, useRef, useState } from "react";
 import "./SingleService.css";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../../Firebase/firebase.init";
-import { DayPicker } from 'react-day-picker';
-import { format } from 'date-fns';
-import 'react-day-picker/dist/style.css';
+import { DayPicker } from "react-day-picker";
+import { format } from "date-fns";
+import "react-day-picker/dist/style.css";
 
 const css = `
         .my-selected:not([disabled]) { 
@@ -27,32 +27,31 @@ const css = `
             font-size: 130%; 
             color: #ffbe30;
           }
-    `
-
+    `;
 
 function SingleService() {
-
-  const [date, setDate] = useState(new Date())
-  console.log(date)
+  const [date, setDate] = useState(new Date());
+  console.log(date);
   // const formatedDate = format(date, 'PPPP')
 
-  const venueForm = useRef()
+  const venueForm = useRef();
 
-  const [user] = useAuthState(auth)
+  const [user] = useAuthState(auth);
   const { id } = useParams();
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
-  const [selectVenue, setSelectVenue] = useState('')
+  const [selectVenue, setSelectVenue] = useState("");
   // const [serviceDetails, setServiceDetails] = useState({})
   // console.log(serviceDetails);
-  const details = useFetch(`https://eventy-server.onrender.com/single-service/${id}`, {});
+  const details = useFetch(
+    `https://eventy-serversite-production.up.railway.app/single-service/${id}`,
+    {}
+  );
 
   const { eventName, image, description, eventPrice } = details;
 
   const name = eventName?.split(" ");
   console.log(name);
-
-
 
   const submission = (e) => {
     e.preventDefault();
@@ -69,11 +68,15 @@ function SingleService() {
       image: image,
       eventName: eventName,
       eventPrice: eventPrice,
-      ...selectVenue
+      ...selectVenue,
     };
     console.log(bookingInfo);
 
-    axios.post("https://eventy-server.onrender.com/service-booking", bookingInfo)
+    axios
+      .post(
+        "https://eventy-serversite-production.up.railway.app/service-booking",
+        bookingInfo
+      )
       .then((res) => {
         const { data } = res;
         console.log(data);
@@ -86,7 +89,6 @@ function SingleService() {
         }
       });
 
-
     emailjs
       .sendForm(
         "service_6dyxcv9",
@@ -95,23 +97,23 @@ function SingleService() {
         "o9Z3tWsWjPM6vPC1M"
       )
       .then(
-        (result) => { },
+        (result) => {},
         (error) => {
           toast.error(error.text, { theme: "light" });
         }
       );
 
-    setSelectVenue(null)
+    setSelectVenue(null);
     e.target.reset();
   };
 
-
-
   useEffect(() => {
-    axios.get(`https://eventy-server.onrender.com/venues`).then((res) => {
-      setVenues(res?.data);
-      setSelect(res?.data[0]);
-    });
+    axios
+      .get(`https://eventy-serversite-production.up.railway.app/venues`)
+      .then((res) => {
+        setVenues(res?.data);
+        setSelect(res?.data[0]);
+      });
   }, []);
 
   const selection = (venue) => {
@@ -177,8 +179,9 @@ function SingleService() {
                 {venues.map((venue) => {
                   return (
                     <div
-                      className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${venue._id === select._id && "selected"
-                        }`}
+                      className={`h-[141px] max-w-[424.4px] mr-[30px] p-[30px] flex items-center gap-[10%] text-white whitespace-pre cursor-pointer ${
+                        venue._id === select._id && "selected"
+                      }`}
                       key={venue.id}
                       onClick={() => selection(venue)}
                     >
@@ -215,13 +218,15 @@ function SingleService() {
                   {select.star} ⭐ <br /> Hotel
                 </p>
               </div>
-              <button className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}
+              <button
+                className={`absolute bg-gradient-to-r from-red-500 to-pink-500 top-[calc(50%-25px)] right-[calc(50%-69px)] px-5 py-2 pt-3 rounded-full text-white font-bold uppercase z-10 hover:scale-105 transition-transform active:scale-100`}
                 onClick={() => {
-                  setSelectVenue(select)
-                  venueForm.current.scrollIntoView()
+                  setSelectVenue(select);
+                  venueForm.current.scrollIntoView();
                 }}
-
-              >SELECT</button>
+              >
+                SELECT
+              </button>
             </div>
           </div>
         </section>
@@ -239,7 +244,6 @@ function SingleService() {
               <p className="text-base text-gray-600 text-paragraph max-w-lg mx-auto"></p>
             </div>
             <div className="lg:flex flex-row justify-between sm:justify-center gap-x-10 gap-y-5 flex-wrap items-start">
-
               <div>
                 <div className="flex flex-col lg:flex-row gap-x-3 gap-y-1.5 shadow-lg rounded-md px-3 pb-3 bg-white">
                   <div className="text-[#ffbe30] rounded-sm text-2xl bounce mt-0.5">
@@ -258,19 +262,18 @@ function SingleService() {
                 </div>
 
                 {/* calender */}
-                <div className=' shadow-2xl rounded-xl h-[400px]  flex justify-center items-center'>
+                <div className=" shadow-2xl rounded-xl h-[400px]  flex justify-center items-center">
                   <style>{css}</style>
                   <DayPicker
-                    className='w-full h-full flex justify-center items-center'
+                    className="w-full h-full flex justify-center items-center"
                     mode="single"
                     selected={date}
                     onSelect={setDate}
                     modifiersClassNames={{
-                      selected: 'my-selected',
-                      today: 'my-today'
+                      selected: "my-selected",
+                      today: "my-today",
                     }}
                   />
-
                 </div>
 
                 {/* ---------------------- */}
@@ -281,8 +284,6 @@ function SingleService() {
                 className="lg:space-y-8 w-full max-w-[780px] mt-5 scroll-mt-52"
                 ref={venueForm}
               >
-
-
                 <div className="lg:flex lg:gap-8">
                   <input
                     required
@@ -307,7 +308,11 @@ function SingleService() {
                     required
                     className="text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50"
                     readOnly
-                    value={`${selectVenue?.venueName ? selectVenue?.venueName + ' : ' : ''}${selectVenue?.code || ''}`}
+                    value={`${
+                      selectVenue?.venueName
+                        ? selectVenue?.venueName + " : "
+                        : ""
+                    }${selectVenue?.code || ""}`}
                     type="text"
                     placeholder="Venue"
                     name="code"
@@ -324,7 +329,7 @@ function SingleService() {
                 <input
                   required
                   className="text-paragraph h-[50px] outline-none pl-6 w-full font-body text-[15px] rounded-md text-gray-500 focus:outline focus:outline-1 focus:outline-[#ffbe30]  placeholder:text-gray-900/50 my-3 lg:my-0"
-                  value={format(date, 'PPPP')}
+                  value={format(date, "PPPP")}
                   type="text"
                   placeholder="Select your date"
                   name="date"

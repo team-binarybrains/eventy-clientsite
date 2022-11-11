@@ -1,11 +1,10 @@
 /* eslint-disable no-unused-vars */
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { toast } from "react-toastify";
 import auth from "../../../../Firebase/firebase.init";
-import useRefetch from '../../../Hooks/useRefetch'
-
+import useRefetch from "../../../Hooks/useRefetch";
 
 const WriteAComment = ({ refetch, blogId }) => {
   const [stars, setStars] = useState(5);
@@ -13,7 +12,7 @@ const WriteAComment = ({ refetch, blogId }) => {
   const countStars = (e) => {
     setStars(parseInt(e.target.value));
     // console.log(parseInt(e.target.value));
-  }
+  };
 
   const {
     register,
@@ -24,7 +23,11 @@ const WriteAComment = ({ refetch, blogId }) => {
 
   const [user] = useAuthState(auth);
 
-  const [userComment, , userCommentRefetch] = useRefetch(`https://eventy-server.onrender.com/my-comment/${user?.uid + ':' + blogId}`)
+  const [userComment, , userCommentRefetch] = useRefetch(
+    `https://eventy-serversite-production.up.railway.app/my-comment/${
+      user?.uid + ":" + blogId
+    }`
+  );
 
   const handleAdddetail = (data) => {
     const inputdetail = {
@@ -35,12 +38,10 @@ const WriteAComment = ({ refetch, blogId }) => {
       img: user?.photoURL,
       detail: data?.detail,
       email: user?.email,
-      rating: stars
+      rating: stars,
     };
 
-
-
-    fetch("https://eventy-server.onrender.com/comment", {
+    fetch("https://eventy-serversite-production.up.railway.app/comment", {
       method: "PUT",
       headers: {
         "content-type": "application/json",
@@ -65,15 +66,16 @@ const WriteAComment = ({ refetch, blogId }) => {
 
   return (
     <div className="mb-5">
-      <h1 className="text-[36px]"
+      <h1
+        className="text-[36px]"
         data-aos="fade-right"
         data-aos-duration="2000"
-      >Write A <strong>Comment</strong></h1>
+      >
+        Write A <strong>Comment</strong>
+      </h1>
       <div>
         <form onSubmit={handleSubmit(handleAdddetail)}>
-          <div className=" md:flex gap-5 ">
-
-          </div>
+          <div className=" md:flex gap-5 "></div>
           <div className="form-control md:w-[880px] lg:w-[880px]">
             <textarea
               type="text"
@@ -107,35 +109,63 @@ const WriteAComment = ({ refetch, blogId }) => {
             </label>
           </div>
 
-          <section className='flex gap-2'>
-            <p className="font-bold"
+          <section className="flex gap-2">
+            <p
+              className="font-bold"
               data-aos="fade-right"
               data-aos-delay="1000"
               data-aos-duration="2000"
-            >Rating :</p>
+            >
+              Rating :
+            </p>
 
             <div class=" rating">
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={1}
+              <input
+                onClick={countStars}
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+                value={1}
                 data-aos="fade-right"
                 data-aos-delay="800"
                 data-aos-duration="2000"
               />
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={2}
+              <input
+                onClick={countStars}
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+                value={2}
                 data-aos="fade-right"
                 data-aos-delay="600"
                 data-aos-duration="2000"
               />
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={3}
+              <input
+                onClick={countStars}
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+                value={3}
                 data-aos="fade-right"
                 data-aos-delay="400"
                 data-aos-duration="2000"
               />
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={4}
+              <input
+                onClick={countStars}
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+                value={4}
                 data-aos="fade-right"
                 data-aos-delay="200"
                 data-aos-duration="2000"
               />
-              <input onClick={countStars} type="radio" name="rating-2" class="mask mask-star-2 bg-orange-400" value={5}
+              <input
+                onClick={countStars}
+                type="radio"
+                name="rating-2"
+                class="mask mask-star-2 bg-orange-400"
+                value={5}
                 data-aos="fade-right"
                 data-aos-duration="2000"
               />
@@ -143,20 +173,28 @@ const WriteAComment = ({ refetch, blogId }) => {
           </section>
 
           <br />
-          {userComment?.length > 0 ?
-            <button className='bg-gradient-to-r from-red-500 to-amber-600 opacity-60 px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer' disabled
+          {userComment?.length > 0 ? (
+            <button
+              className="bg-gradient-to-r from-red-500 to-amber-600 opacity-60 px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer"
+              disabled
               data-aos="zoom-in"
               data-aos-duration="2000"
-            > Submit Now</button>
-            :
-            <button className='custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer'
+            >
+              {" "}
+              Submit Now
+            </button>
+          ) : (
+            <button
+              className="custom-btn px-10 py-3 rounded-full text-white font-extrabold mt-10 cursor-pointer"
               data-aos="zoom-in"
               data-aos-duration="2000"
-            > Submit Now</button>}
+            >
+              {" "}
+              Submit Now
+            </button>
+          )}
         </form>
       </div>
-
-
     </div>
   );
 };

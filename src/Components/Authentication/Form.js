@@ -30,7 +30,7 @@ const Form = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
   if (user) {
-    navigate(location?.state?.from?.pathname || '/');
+    navigate(location?.state?.from?.pathname || "/");
   }
   const [activePanel, setActivePanel] = useState("right-panel-active");
 
@@ -63,23 +63,25 @@ const Form = () => {
     );
     await updateProfile({ displayName: e.target.name.value });
 
-
     // // for name send backend
-    const email = e.target.email.value
+    const email = e.target.email.value;
     // console.log(signUpUser);
     const currentUser = {
       displayName: e.target.name.value,
       email: email,
     };
 
-    await fetch(`https://eventy-server.onrender.com/user/${email}`, {
-      method: "PUT",
-      headers: {
-        "content-type": "application/json",
-        authorization: `authHeader ${localStorage.getItem('token')}`
-      },
-      body: JSON.stringify(currentUser),
-    })
+    await fetch(
+      `https://eventy-serversite-production.up.railway.app/user/${email}`,
+      {
+        method: "PUT",
+        headers: {
+          "content-type": "application/json",
+          authorization: `authHeader ${localStorage.getItem("token")}`,
+        },
+        body: JSON.stringify(currentUser),
+      }
+    )
       .then((res) => res.json())
       .then((inserted) => {
         if (inserted.acknowledged) {
@@ -90,12 +92,12 @@ const Form = () => {
     e.target.reset();
   };
 
-
-  const [token] = useToken(signUpUser || signInUser || googleUser || facebookUser);
+  const [token] = useToken(
+    signUpUser || signInUser || googleUser || facebookUser
+  );
   if (token) {
     navigate(location?.state?.from?.pathname || "/");
   }
-
 
   const signIn = (e) => {
     e.preventDefault();
