@@ -1,5 +1,12 @@
 # Eventy
 
-## Live Link : https://eventy-bb.web.app/
+An Event Management website using ReactJS, Tailwind CSS, Node, Express, MongoDB and
+Railway where |-
 
-## Server-side Code Link : https://github.com/team-binarybrains/eventy-serversite
+● Full project plan, reusable components. </br>
+● Live chat with admin, Payment system, JWT based auth, and many important features. </br>
+● Handled API requests and created an error-free and user-friendly experience </br>
+
+### Live Link : https://eventy-bb.web.app/
+
+### Server-side Code Link : https://github.com/team-binarybrains/eventy-serversite
