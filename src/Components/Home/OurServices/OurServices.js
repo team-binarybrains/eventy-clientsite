@@ -8,9 +8,7 @@ import { useNavigate } from "react-router-dom";
 import useFetch from "./Hook/useFetch";
 
 export default function OurServices() {
-  const serviceInfo = useFetch(
-    "https://eventy-serversite-production.up.railway.app/services-get"
-  );
+  const serviceInfo = useFetch("https://eventy-server.vercel.app/services-get");
 
   const navigate = useNavigate();
   const navigateToDetails = (id) => {

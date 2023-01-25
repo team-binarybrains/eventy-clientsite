@@ -24,7 +24,7 @@ function MyBooking() {
   console.log(paymentInfo);
 
   const [tickets, loading, refetch] = useRefetch(
-    `https://eventy-serversite-production.up.railway.app/user-booked-ticket/${user?.uid}`,
+    `https://eventy-server.vercel.app/user-booked-ticket/${user?.uid}`,
     []
   );
 
@@ -32,14 +32,11 @@ function MyBooking() {
     const email = user.email;
 
     axios
-      .get(
-        `https://eventy-serversite-production.up.railway.app/booking-info/${email}`,
-        {
-          headers: {
-            authorization: ` Bearer ${localStorage.getItem("accessToken")}`,
-          },
-        }
-      )
+      .get(`https://eventy-server.vercel.app/booking-info/${email}`, {
+        headers: {
+          authorization: ` Bearer ${localStorage.getItem("accessToken")}`,
+        },
+      })
       .then((res) => {
         const { data } = res;
         console.log(data);
@@ -54,12 +51,9 @@ function MyBooking() {
     const proceed = window.confirm("Are you sure to cancel the booking ?");
 
     if (proceed) {
-      await fetch(
-        `https://eventy-serversite-production.up.railway.app/delete-booking/${id}`,
-        {
-          method: "DELETE",
-        }
-      )
+      await fetch(`https://eventy-server.vercel.app/delete-booking/${id}`, {
+        method: "DELETE",
+      })
         .then((res) => res.json())
         .then((data) => {
           const remaining = myBookingServices.filter(

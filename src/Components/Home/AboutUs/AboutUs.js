@@ -13,7 +13,9 @@ function AboutUs() {
         <div className='lg:flex grid justify-around py-20 bg-gray-100'>
             <div className='lg:-mr-96 grid items-center lg:w-96 px-10 lg:px-0'>
 
-                <div data-aos="fade-right" data-aos-duration="2500">
+                <div
+                    data-aos="fade-right"
+                    data-aos-duration="2500">
 
                     <div className='border-t-2 w-[60px] lg:-ml-7 -ml-4 border-[#fd1d1d] '><p className=''></p></div>
 

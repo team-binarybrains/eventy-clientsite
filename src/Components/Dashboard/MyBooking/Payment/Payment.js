@@ -17,12 +17,12 @@ const Payment = () => {
   const { Id } = useParams();
 
   const [ticket, loading, refetch] = useRefetch(
-    `https://eventy-serversite-production.up.railway.app/ticket-booking/${Id}`,
+    `https://eventy-server.vercel.app/ticket-booking/${Id}`,
     {}
   );
 
   const { data: product, isLoading } = useQuery(["payment", Id], () =>
-    fetch(`https://eventy-serversite-production.up.railway.app/payment/${Id}`, {
+    fetch(`https://eventy-server.vercel.app/payment/${Id}`, {
       method: "GET",
       // headers: {
       //   'authorization': `bearer ${localStorage.getItem('accessToken')}`

@@ -9,14 +9,11 @@ const useAdmin = (user) => {
     // console.log(email);
     if (email) {
       axios
-        .get(
-          `https://eventy-serversite-production.up.railway.app/admin/${email}`,
-          {
-            headers: {
-              authorization: `Bearer ${localStorage.getItem("accessToken")}`,
-            },
-          }
-        )
+        .get(`https://eventy-server.vercel.app/admin/${email}`, {
+          headers: {
+            authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+          },
+        })
         .then((data) => {
           setAdmin(data.data.admin);
           setAdminLoading(false);

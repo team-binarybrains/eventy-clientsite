@@ -5,7 +5,7 @@ import useFetch from "../../Home/OurServices/Hook/useFetch";
 
 function Destination() {
   const destinationServics = useFetch(
-    `https://eventy-serversite-production.up.railway.app/get-sub-services/destination`
+    `https://eventy-server.vercel.app/get-sub-services/destination`
   );
 
   return (

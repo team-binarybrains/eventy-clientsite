@@ -13,7 +13,7 @@ const Employee = () => {
   const [employeeInfo, setEmployeeInfo] = useState([]);
   useEffect(() => {
     axios
-      .get(`https://eventy-serversite-production.up.railway.app/employee`)
+      .get(`https://eventy-server.vercel.app/employee`)
       .then((res) => setEmployeeInfo(res.data));
   }, []);
   // console.log(employeeInfo);

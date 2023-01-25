@@ -8,12 +8,10 @@ const Venues = () => {
   const [select, setSelect] = useState({});
   const [venues, setVenues] = useState([]);
   useEffect(() => {
-    axios
-      .get(`https://eventy-serversite-production.up.railway.app/venues`)
-      .then((res) => {
-        setVenues(res?.data);
-        setSelect(res?.data[0]);
-      });
+    axios.get(`https://eventy-server.vercel.app/venues`).then((res) => {
+      setVenues(res?.data);
+      setSelect(res?.data[0]);
+    });
   }, []);
 
   const selection = (venue) => {

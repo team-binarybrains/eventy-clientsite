@@ -5,7 +5,7 @@ import useFetch from "../../Home/OurServices/Hook/useFetch";
 
 function Lighting() {
   const soundLighting = useFetch(
-    `https://eventy-serversite-production.up.railway.app/get-sub-services/lighting`
+    `https://eventy-server.vercel.app/get-sub-services/lighting`
   );
 
   return (

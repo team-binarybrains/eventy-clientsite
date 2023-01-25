@@ -5,11 +5,11 @@ import useFetch from "../../Home/OurServices/Hook/useFetch";
 
 function Logistics() {
   const logisticServices = useFetch(
-    `https://eventy-serversite-production.up.railway.app/get-sub-services/logistic`
+    `https://eventy-server.vercel.app/get-sub-services/logistic`
   );
 
   const promotionServices = useFetch(
-    `https://eventy-serversite-production.up.railway.app/get-sub-services/promotion`
+    `https://eventy-server.vercel.app/get-sub-services/promotion`
   );
 
   return (

@@ -7,13 +7,13 @@ function AllBookings() {
   // const [allBooking, setAllBooking] = useState([])
 
   const [allBooking, loading, refetch] = useRefetch(
-    "https://eventy-serversite-production.up.railway.app/get-all-booking-info",
+    "https://eventy-server.vercel.app/get-all-booking-info",
     []
   );
   console.log(allBooking);
 
   const [allPaidBooking, paidLoading, paidRefetch] = useRefetch(
-    "https://eventy-serversite-production.up.railway.app/get-payment",
+    "https://eventy-server.vercel.app/get-payment",
     []
   );
   console.log(allPaidBooking);
@@ -23,9 +23,7 @@ function AllBookings() {
 
     if (confirmation) {
       axios
-        .delete(
-          `https://eventy-serversite-production.up.railway.app/delete-booking/${id}`
-        )
+        .delete(`https://eventy-server.vercel.app/delete-booking/${id}`)
         .then((res) => {
           console.log(res?.data);
           refetch();
@@ -40,9 +38,7 @@ function AllBookings() {
 
     if (confirmation) {
       axios
-        .delete(
-          `https://eventy-serversite-production.up.railway.app/delete-payment-info/${id}`
-        )
+        .delete(`https://eventy-server.vercel.app/delete-payment-info/${id}`)
         .then((res) => {
           console.log(res?.data);
           paidRefetch();

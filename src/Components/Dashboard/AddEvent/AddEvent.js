@@ -166,16 +166,13 @@ const AddEvent = () => {
       image,
     };
 
-    fetch(
-      "https://eventy-serversite-production.up.railway.app/addEventRequest",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(eventInformation),
-      }
-    )
+    fetch("https://eventy-server.vercel.app/addEventRequest", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(eventInformation),
+    })
       .then((response) => response.json())
       .then((data) => {
         if (data.acknowledged) {

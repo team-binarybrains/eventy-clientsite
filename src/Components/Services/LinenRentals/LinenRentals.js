@@ -5,7 +5,7 @@ import useFetch from "../../Home/OurServices/Hook/useFetch";
 
 function LinenRentals() {
   const linen = useFetch(
-    `https://eventy-serversite-production.up.railway.app/get-sub-services/linen`
+    `https://eventy-server.vercel.app/get-sub-services/linen`
   );
 
   return (

@@ -19,12 +19,9 @@ const UpdateUser = () => {
   } = useForm();
 
   useEffect(() => {
-    fetch(
-      `https://eventy-serversite-production.up.railway.app/single-user/${email}`,
-      {
-        method: "GET",
-      }
-    )
+    fetch(`https://eventy-server.vercel.app/single-user/${email}`, {
+      method: "GET",
+    })
       .then((res) => res.json())
       .then((data) => setUserData(data));
   }, [email]);
@@ -53,7 +50,7 @@ const UpdateUser = () => {
     //             image: img,
     //          };
 
-    // fetch(`https://eventy-serversite-production.up.railway.app/user-update/${email}`, {
+    // fetch(`https://eventy-server.vercel.app/user-update/${email}`, {
     //    method: "PUT",
     //    headers: {
     //       "content-type": "application/json",
@@ -78,16 +75,13 @@ const UpdateUser = () => {
       address: data.address,
       email: data.email,
     };
-    fetch(
-      `https://eventy-serversite-production.up.railway.app/user-update/${email}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-        },
-        body: JSON.stringify(user),
-      }
-    )
+    fetch(`https://eventy-server.vercel.app/user-update/${email}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(user),
+    })
       .then((res) => res.json())
       .then((inserted) => {
         if (inserted) {

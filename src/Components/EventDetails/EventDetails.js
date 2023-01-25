@@ -19,12 +19,10 @@ const EventDetails = () => {
   const [eventDetailsData, setEventDetailsData] = useState({});
   useEffect(() => {
     axios
-      .get(
-        `https://eventy-serversite-production.up.railway.app/event-details/${id}`
-      )
+      .get(`https://eventy-server.vercel.app/event-details/${id}`)
       .then((data) => setEventDetailsData(data.data));
   }, [id]);
-  // const eventDetailsData = useFetch(`https://eventy-serversite-production.up.railway.app/event-details/${id}`,{})
+  // const eventDetailsData = useFetch(`https://eventy-server.vercel.app/event-details/${id}`,{})
   // setEventDetailsData({name:'noName'})
   // console.log(eventDetailsData);
 

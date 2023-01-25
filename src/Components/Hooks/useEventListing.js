@@ -4,7 +4,7 @@ const useEventListing = (type) => {
   // console.log(type);
   const [eventLists, setEventLists] = useState([]);
   useEffect(() => {
-    const url = `https://eventy-serversite-production.up.railway.app/eventlisting/?catagory=${type}`;
+    const url = `https://eventy-server.vercel.app/eventlisting/?catagory=${type}`;
     if (type) {
       fetch(url)
         .then((res) => res.json())

@@ -6,7 +6,7 @@ import "../Services.css";
 
 function Catering() {
   const catering = useFetch(
-    `https://eventy-serversite-production.up.railway.app/get-sub-services/catering`
+    `https://eventy-server.vercel.app/get-sub-services/catering`
   );
   console.log(catering);
 

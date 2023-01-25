@@ -4,7 +4,7 @@ import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 export const allUpcomingEvent = createApi({
   reducerPath: "allUpcomingEvent",
   baseQuery: fetchBaseQuery({
-    baseUrl: "https://eventy-serversite-production.up.railway.app/",
+    baseUrl: "https://eventy-server.vercel.app/",
   }),
   endpoints: (builder) => ({
     getUpcomingEvent: builder.query({

@@ -19,7 +19,7 @@ const AddEmployed = () => {
   } = useForm();
 
   // useEffect(() => {
-  //    fetch(`https://eventy-serversite-production.up.railway.app/single-user/${email}`, {
+  //    fetch(`https://eventy-server.vercel.app/single-user/${email}`, {
   //       method: "GET",
   //    })
   //       .then(res => res.json())
@@ -51,16 +51,13 @@ const AddEmployed = () => {
             image: img,
           };
           // console.log(employee);
-          fetch(
-            `https://eventy-serversite-production.up.railway.app/employee`,
-            {
-              method: "POST",
-              headers: {
-                "content-type": "application/json",
-              },
-              body: JSON.stringify(employee),
-            }
-          )
+          fetch(`https://eventy-server.vercel.app/employee`, {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(employee),
+          })
             .then((res) => res.json())
             .then((inserted) => {
               if (inserted) {

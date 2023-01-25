@@ -20,9 +20,7 @@ const Dashboard = () => {
   const [currentUser, setCurrentUser] = useState([]);
   const email = user?.email;
   useEffect(() => {
-    fetch(
-      `https://eventy-serversite-production.up.railway.app/single-user/${email}`
-    )
+    fetch(`https://eventy-server.vercel.app/single-user/${email}`)
       .then((res) => res.json())
       .then((data) => setCurrentUser(data));
   }, [email]);

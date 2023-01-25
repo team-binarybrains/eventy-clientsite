@@ -21,7 +21,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
   } = ticket;
 
   const [event] = useRefetch(
-    `https://eventy-serversite-production.up.railway.app/event-details/${ticket?.eventId}`,
+    `https://eventy-server.vercel.app/event-details/${ticket?.eventId}`,
     {}
   );
   // cancle order
@@ -32,9 +32,7 @@ const DisplayMyTickets = ({ ticket, refetch }) => {
 
     if (proceed) {
       axios
-        .delete(
-          `https://eventy-serversite-production.up.railway.app/delete-booked-ticket/${id}`
-        )
+        .delete(`https://eventy-server.vercel.app/delete-booked-ticket/${id}`)
         .then(({ data }) => data?.acknowledged && refetch());
     }
   };

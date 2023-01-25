@@ -9,18 +9,16 @@ const AllEmployee = () => {
   const [employee, setEmployee] = useState([]);
   // console.log(employee);
   useEffect(() => {
-    axios
-      .get("https://eventy-serversite-production.up.railway.app/employee")
-      .then((res) => {
-        const { data } = res;
-        setEmployee(data);
-      });
+    axios.get("https://eventy-server.vercel.app/employee").then((res) => {
+      const { data } = res;
+      setEmployee(data);
+    });
   }, []);
   const handleDeleteUser = (id) => {
     // const proceed = window.confirm("Are you sure?");
 
     // if (proceed) {
-    //    const url = `https://eventy-serversite-production.up.railway.app/delete-employee/${id}`;
+    //    const url = `https://eventy-server.vercel.app/delete-employee/${id}`;
     //    fetch(url, {
     //       method: "DELETE",
     //    })
@@ -40,7 +38,7 @@ const AllEmployee = () => {
       confirmButtonText: "Yes, delete it !",
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `https://eventy-serversite-production.up.railway.app/delete-employee/${id}`;
+        const url = `https://eventy-server.vercel.app/delete-employee/${id}`;
         fetch(url, {
           method: "DELETE",
         })

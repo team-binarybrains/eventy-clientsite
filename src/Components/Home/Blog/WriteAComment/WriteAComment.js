@@ -24,9 +24,7 @@ const WriteAComment = ({ refetch, blogId }) => {
   const [user] = useAuthState(auth);
 
   const [userComment, , userCommentRefetch] = useRefetch(
-    `https://eventy-serversite-production.up.railway.app/my-comment/${
-      user?.uid + ":" + blogId
-    }`
+    `https://eventy-server.vercel.app/my-comment/${user?.uid + ":" + blogId}`
   );
 
   const handleAdddetail = (data) => {
@@ -41,7 +39,7 @@ const WriteAComment = ({ refetch, blogId }) => {
       rating: stars,
     };
 
-    fetch("https://eventy-serversite-production.up.railway.app/comment", {
+    fetch("https://eventy-server.vercel.app/comment", {
       method: "PUT",
       headers: {
         "content-type": "application/json",

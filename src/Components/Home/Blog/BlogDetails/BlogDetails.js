@@ -9,9 +9,7 @@ const BlogDetails = () => {
   const { blogId } = useParams();
 
   useEffect(() => {
-    fetch(
-      `https://eventy-serversite-production.up.railway.app/blogsdetail/${blogId}`
-    )
+    fetch(`https://eventy-server.vercel.app/blogsdetail/${blogId}`)
       .then((res) => res.json())
       .then((data) => setBlog(data));
   }, [blogId]);

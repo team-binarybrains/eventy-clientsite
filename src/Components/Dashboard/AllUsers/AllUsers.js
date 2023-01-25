@@ -8,17 +8,15 @@ const AllUsers = () => {
   // console.log(allUsers);
 
   useEffect(() => {
-    axios
-      .get("https://eventy-serversite-production.up.railway.app/allusers")
-      .then((res) => {
-        const { data } = res;
-        setAllUsers(data);
-      });
+    axios.get("https://eventy-server.vercel.app/allusers").then((res) => {
+      const { data } = res;
+      setAllUsers(data);
+    });
   }, []);
   // const handleDeleteUser = (id) => {
   //   const proceed = window.confirm("Are you sure?");
   //   if (proceed) {
-  //     const url = `https://eventy-serversite-production.up.railway.app/delete-user/${id}`;
+  //     const url = `https://eventy-server.vercel.app/delete-user/${id}`;
   //     fetch(url, {
   //       method: "DELETE",
   //     })
@@ -40,7 +38,7 @@ const AllUsers = () => {
       confirmButtonText: "Yes, delete it !",
     }).then((result) => {
       if (result.isConfirmed) {
-        const url = `https://eventy-serversite-production.up.railway.app/delete-user/${id}`;
+        const url = `https://eventy-server.vercel.app/delete-user/${id}`;
         fetch(url, {
           method: "DELETE",
         })

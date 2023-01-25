@@ -44,7 +44,7 @@ function SingleService() {
   // const [serviceDetails, setServiceDetails] = useState({})
   // console.log(serviceDetails);
   const details = useFetch(
-    `https://eventy-serversite-production.up.railway.app/single-service/${id}`,
+    `https://eventy-server.vercel.app/single-service/${id}`,
     {}
   );
 
@@ -73,10 +73,7 @@ function SingleService() {
     console.log(bookingInfo);
 
     axios
-      .post(
-        "https://eventy-serversite-production.up.railway.app/service-booking",
-        bookingInfo
-      )
+      .post("https://eventy-server.vercel.app/service-booking", bookingInfo)
       .then((res) => {
         const { data } = res;
         console.log(data);
@@ -108,12 +105,10 @@ function SingleService() {
   };
 
   useEffect(() => {
-    axios
-      .get(`https://eventy-serversite-production.up.railway.app/venues`)
-      .then((res) => {
-        setVenues(res?.data);
-        setSelect(res?.data[0]);
-      });
+    axios.get(`https://eventy-server.vercel.app/venues`).then((res) => {
+      setVenues(res?.data);
+      setSelect(res?.data[0]);
+    });
   }, []);
 
   const selection = (venue) => {

@@ -19,12 +19,9 @@ const UpdateEmployee = () => {
     formState: { errors },
   } = useForm();
   useEffect(() => {
-    fetch(
-      `https://eventy-serversite-production.up.railway.app/update-employee/${id}`,
-      {
-        method: "GET",
-      }
-    )
+    fetch(`https://eventy-server.vercel.app/update-employee/${id}`, {
+      method: "GET",
+    })
       .then((res) => res.json())
       .then((data) => setEmployeeInfo(data));
   }, [id]);
@@ -54,16 +51,13 @@ const UpdateEmployee = () => {
             image: img,
           };
           // console.log(employee);
-          fetch(
-            `https://eventy-serversite-production.up.railway.app/update-employee/${id}`,
-            {
-              method: "PUT",
-              headers: {
-                "content-type": "application/json",
-              },
-              body: JSON.stringify(employee),
-            }
-          )
+          fetch(`https://eventy-server.vercel.app/update-employee/${id}`, {
+            method: "PUT",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(employee),
+          })
             .then((res) => res.json())
             .then((inserted) => {
               if (inserted) {

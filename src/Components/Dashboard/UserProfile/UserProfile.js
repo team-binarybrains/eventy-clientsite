@@ -52,16 +52,13 @@ const UserProfile = () => {
             image: img,
           };
 
-          fetch(
-            `https://eventy-serversite-production.up.railway.app/user-update/${email}`,
-            {
-              method: "PUT",
-              headers: {
-                "content-type": "application/json",
-              },
-              body: JSON.stringify(user),
-            }
-          )
+          fetch(`https://eventy-server.vercel.app/user-update/${email}`, {
+            method: "PUT",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(user),
+          })
             .then((res) => res.json())
             .then((inserted) => {
               if (inserted) {
@@ -77,9 +74,7 @@ const UserProfile = () => {
   };
   //
   useEffect(() => {
-    fetch(
-      `https://eventy-serversite-production.up.railway.app/single-user/${email}`
-    )
+    fetch(`https://eventy-server.vercel.app/single-user/${email}`)
       .then((res) => res.json())
       .then((data) => setCurrentUser(data));
   }, [file, email]);

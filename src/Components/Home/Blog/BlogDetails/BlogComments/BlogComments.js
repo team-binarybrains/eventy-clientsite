@@ -7,7 +7,7 @@ import Comment from "./Comment";
 
 const BlogComments = ({ blogId }) => {
   const [comments, loading, refetch] = useRefetch(
-    `https://eventy-serversite-production.up.railway.app/comment/${blogId}`,
+    `https://eventy-server.vercel.app/comment/${blogId}`,
     []
   );
 

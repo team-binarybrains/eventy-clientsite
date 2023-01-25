@@ -50,7 +50,7 @@ const RegisterEvent = ({ eventDetailsData }) => {
   };
 
   /* useEffect(()=> {
-      axios.get(`https://eventy-serversite-production.up.railway.app/ticket-booking/${user?.uid}`)
+      axios.get(`https://eventy-server.vercel.app/ticket-booking/${user?.uid}`)
       .then(data=> {
          selecting(data?.data);
          setTicket({
@@ -62,7 +62,7 @@ const RegisterEvent = ({ eventDetailsData }) => {
    },[fetchCount,user?.uid]); */
 
   const [data, loading, refetch] = useRefetch(
-    `https://eventy-serversite-production.up.railway.app/ticket-booking/${
+    `https://eventy-server.vercel.app/ticket-booking/${
       user?.uid + ":" + eventDetailsData?._id
     }`,
     {},
@@ -113,7 +113,7 @@ const RegisterEvent = ({ eventDetailsData }) => {
 
     axios
       .put(
-        `https://eventy-serversite-production.up.railway.app/ticket-booking/${
+        `https://eventy-server.vercel.app/ticket-booking/${
           user?.uid + ":" + eventDetailsData?._id
         }`,
         {

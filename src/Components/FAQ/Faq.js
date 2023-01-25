@@ -6,7 +6,7 @@ const Faq = () => {
   const [question, setQuestion] = useState("");
 
   useEffect(() => {
-    fetch("https://eventy-serversite-production.up.railway.app/allQuestion")
+    fetch("https://eventy-server.vercel.app/allQuestion")
       .then((res) => res.json())
       .then((data) => setFirstAccountQuestion(data));
   }, [question]);

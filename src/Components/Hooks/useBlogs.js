@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const useBlogs = () => {
   const [blogs, setBlogs] = useState([]);
   useEffect(() => {
-    fetch("https://eventy-serversite-production.up.railway.app/blogs")
+    fetch("https://eventy-server.vercel.app/blogs")
       .then((res) => res.json())
       .then((data) => setBlogs(data));
   }, []);

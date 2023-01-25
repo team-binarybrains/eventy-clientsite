@@ -10,7 +10,7 @@ import AllSingleeventList from "./AllSingleeventList";
 const AllEventList = () => {
   const [eventLists, setEventLists] = useState([]);
   useEffect(() => {
-    fetch("https://eventy-serversite-production.up.railway.app/alleventlisting")
+    fetch("https://eventy-server.vercel.app/alleventlisting")
       .then((res) => res.json())
       .then((data) => setEventLists(data));
   }, []);

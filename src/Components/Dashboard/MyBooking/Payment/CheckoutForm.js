@@ -46,17 +46,14 @@ const CheckoutForm = ({ product }) => {
   console.log(name);
 
   useEffect(() => {
-    fetch(
-      "https://eventy-serversite-production.up.railway.app/create-payment-intent",
-      {
-        method: "POST",
-        headers: {
-          "content-type": "application/json",
-          // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-        },
-        body: JSON.stringify({ totalPrice: totalPrice || total }),
-      }
-    )
+    fetch("https://eventy-server.vercel.app/create-payment-intent", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        // 'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+      },
+      body: JSON.stringify({ totalPrice: totalPrice || total }),
+    })
       .then((res) => res.json())
       .then((data) => {
         if (data?.clientSecret) {
@@ -139,19 +136,14 @@ const CheckoutForm = ({ product }) => {
         paidAmount: totalPrice,
       };
       await axios
-        .post(
-          "https://eventy-serversite-production.up.railway.app/payment-info",
-          payment
-        )
+        .post("https://eventy-server.vercel.app/payment-info", payment)
         .then((res) => {
           const { data } = res;
           console.log(data);
         });
 
       await axios
-        .delete(
-          `https://eventy-serversite-production.up.railway.app/delete-booking/${_id}`
-        )
+        .delete(`https://eventy-server.vercel.app/delete-booking/${_id}`)
         .then((res) => {
           const { data } = res;
           console.log(data);

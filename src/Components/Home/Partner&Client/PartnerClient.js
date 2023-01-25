@@ -42,7 +42,7 @@ const PartnerClient = () => {
         <div id='partner-client' className='mb-20 2xl:max-w-7xl mx-auto'>
             <div className='px-5 sm:px-56 text-center pt-20 pb-14'>
                 <h5 style={{ wordSpacing: "4px", letterSpacing: "5px" }} className='text-base sm:text-lg text-gray-500 mb-4'
-                    data-aos="fade-right"
+                    // data-aos="fade-right"
                     data-aos-duration="3000"
                 >WE ARE EVENTY</h5>
                 <h1 className='text-3xl sm:text-5xl mb-5 sm:mb-7'

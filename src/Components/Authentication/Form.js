@@ -71,17 +71,14 @@ const Form = () => {
       email: email,
     };
 
-    await fetch(
-      `https://eventy-serversite-production.up.railway.app/user/${email}`,
-      {
-        method: "PUT",
-        headers: {
-          "content-type": "application/json",
-          authorization: `authHeader ${localStorage.getItem("token")}`,
-        },
-        body: JSON.stringify(currentUser),
-      }
-    )
+    await fetch(`https://eventy-server.vercel.app/user/${email}`, {
+      method: "PUT",
+      headers: {
+        "content-type": "application/json",
+        authorization: `authHeader ${localStorage.getItem("token")}`,
+      },
+      body: JSON.stringify(currentUser),
+    })
       .then((res) => res.json())
       .then((inserted) => {
         if (inserted.acknowledged) {

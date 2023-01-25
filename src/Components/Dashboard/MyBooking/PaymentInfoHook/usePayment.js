@@ -7,9 +7,7 @@ const usePayment = (uid) => {
 
   useEffect(() => {
     axios
-      .get(
-        `https://eventy-serversite-production.up.railway.app/get-payment/${uid}`
-      )
+      .get(`https://eventy-server.vercel.app/get-payment/${uid}`)
       .then((res) => {
         const { data } = res;
         console.log(data);

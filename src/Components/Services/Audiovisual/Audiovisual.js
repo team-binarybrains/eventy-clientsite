@@ -5,7 +5,7 @@ import useFetch from "../../Home/OurServices/Hook/useFetch";
 
 function Audiovisual() {
   const visual = useFetch(
-    `https://eventy-serversite-production.up.railway.app/get-sub-services/audiovisual`
+    `https://eventy-server.vercel.app/get-sub-services/audiovisual`
   );
 
   return (
